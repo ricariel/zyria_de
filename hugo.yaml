@@ -1,0 +1,35 @@
+baseURL: 'https://www.zyria.de/'
+languageCode: de-de
+title: Nix
+theme: ananke
+resourceDir: ../resources
+DefaultContentLanguage: de
+SectionPagesMenu: main
+Paginate: 3
+googleAnalytics: ''
+enableRobotsTXT: true
+toc: true
+languages:
+  de:
+    title: Nix
+    weight: 1
+    contentDir: content/de
+sitemap:
+  changefreq: monthly
+  priority: 0.5
+  filename: sitemap.xml
+params:
+  text_color: ''
+  author: Fabrice Kirchner
+  favicon: ''
+  site_logo: ''
+  description: Diese Seite ist (scheinbar) leer.
+  background_color_class: bg-black
+  recent_posts_number: 3
+  ananke_socials:
+    - name: "github"
+      url: "https://github.com/ricariel"
+    - name: "linkedin"
+      url: "https://www.linkedin.com/in/fabrice-kirchner-bb5408163/"
+    - name: "mastodon"
+      url: "https://kirchner.social/@fabrice"
