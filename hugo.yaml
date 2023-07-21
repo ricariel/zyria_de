@@ -1,8 +1,7 @@
 baseURL: 'https://www.zyria.de/'
 languageCode: de-de
 title: Nix
-theme: ananke
-resourceDir: ../resources
+theme: LoveIt
 DefaultContentLanguage: de
 SectionPagesMenu: main
 Paginate: 3
