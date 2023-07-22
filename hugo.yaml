@@ -34,6 +34,7 @@ module:
   imports:
   - path: github.com/hugo-mods/lazyimg
   - path: github.com/hugomods/images
+  - path: github.com/hugomods/shortcodes
 
 params:
   author: Fabrice Kirchner
