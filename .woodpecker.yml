@@ -1,0 +1,62 @@
+# The HUGO_OUTPUT variable must be set to the build output folder configured in Hugo
+when:
+  branch:
+    exclude: pages
+
+# Recursive cloning is used to fully clone the themes given as Git submodules
+clone:
+  git:
+    image: woodpeckerci/plugin-git
+    settings:
+      recursive: true
+
+steps:
+  # Build hugo static files
+  build:
+    image: klakegg/hugo
+    commands:
+      - hugo --minify
+    when:
+      event: [push, tag, cron, pull_request]
+      branch: main
+
+
+ deploy:
+    image: alpine
+    secrets: [ deploy_key ]
+    commands:
+      - apk add rsync openssh
+      - mkdir ~/.ssh
+      - printf '%s\n' "$${DEPLOY_KEY}" > ~/.ssh/deploy_key
+      - printf "Host *\n\tIdentityFile ~/.ssh/deploy_key\n\tUserKnownHostsFile=/dev/null\n\tStrictHostKeyChecking=no\n" > ~/.ssh/config
+      - chmod -R u=rwX,go= ~/.ssh
+      - rsync -rPvce ssh --chmod=ugo=rwX --no-times public/ fabrice@www.zyria.de:/srv/zyria_de/
+    when:
+      # Only try to deploy if previous step is successful
+      status: success
+      branch:
+        include: [ main ]
+      event: [push, deployment]
+
+#  publish:
+#    image: bitnami/git
+#    # Must be set in Woodpecker configuration
+#    secrets: [ mail, codeberg_token ]
+#    environment:
+#      - HUGO_OUTPUT=public
+#    commands:
+#      # Git configuration
+#      - git config --global user.email $MAIL
+#      - git config --global user.name "Woodpecker CI"
+#      - git clone -b pages https://$CODEBERG_TOKEN@codeberg.org/$CI_REPO.git $CI_REPO_NAME
+#      # Copy build step output to repository folder
+#      - cp -ar $HUGO_OUTPUT/. $CI_REPO_NAME/
+#      # Needed for custom domains
+#      - cp .domains $CI_REPO_NAME || true # Ignore if it doesn't exist
+#      # Commit and push all static files with pipeline started timestamp
+#      - cd $CI_REPO_NAME
+#      - git add .
+#      - git commit -m "Woodpecker CI ${CI_BUILD_CREATED}"
+#      - git push
+#    when:
+#      event: push
