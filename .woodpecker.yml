@@ -29,7 +29,7 @@ steps:
       - echo "$KNOWN_HOSTS">$HOME/.ssh/known_hosts
       - chown 600 $HOME/.ssh/id_ed25519
       - ssh-keygen -R www.zyria.de
-      - rsync -rPvc --delete -e ssh public/ fabrice@www.zyria.de:/srv/zyria_de
+      - rsync -rPvc --delete -e "ssh -6" public/ fabrice@www.zyria.de:/srv/zyria_de
     when:
       status: success
       branch:
