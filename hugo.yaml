@@ -33,13 +33,14 @@ taxonomies:
 module:
   imports:
   - path: github.com/hugo-mods/lazyimg
+  - path: github.com/hugomods/images
 
 params:
   author: Fabrice Kirchner
   info: Diese Seite ist (scheinbar) leer.
   description: Diese Seite ist (scheinbar) leer.
   keywords: 'blog,developer,personal'
-  avatarurl: images/chibi.jpg
+  avatarurl: /images/chibi.jpg
   faviconSVG: /img/favicon.svg
   favicon_32: /img/favicon-32x32.png
   favicon_16: /img/favicon-16x16.png
@@ -64,3 +65,12 @@ params:
       icon: fa fa-mastodon fa-2x
       weight: 3
       url: "https://kirchner.social/@fabrice"
+  images:
+    alignment_center_class_name: d-block text-center
+    alignment_end_class_name: float-end ms-2
+    alignment_start_class_name: float-start me-2
+    class_name: img-fluid
+    figure_caption_class_name: figure-caption
+    figure_class_name: figure
+    figure_image_class_name: figure-img
+    modern_format: webp
