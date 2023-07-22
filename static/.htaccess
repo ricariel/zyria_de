@@ -4,4 +4,12 @@ ErrorDocument 404 /404.html
 AddDefaultCharset UTF-8
 Options +FollowSymlinks -Indexes -MultiViews
 IndexIgnore .ht* *.php i*.py *.ht*
-
+<IfModule mod_expires.c>
+# Expires-Header aktivieren
+  ExpiresActive On
+# Typunabhängige Standard-Ablaufzeit setzen
+  ExpiresDefault "access plus 1 month"
+# Typabhängige Ablaufzeit für JPEG-Dateien (jpeg, jpg, jpe)
+  ExpiresByType image/jpeg "access plus 1 year"
+# Weitere Dateitypen...
+</IfModule>
