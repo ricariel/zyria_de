@@ -44,7 +44,7 @@ params:
   enableTwemoji: true
   colorScheme: auto
   hidecolorschemetoggle: false
-  commit: "https://www.zyria.de/git/pyrox/zyria_de"
+  commit: "https://www.zyria.de/git/pyrox/zyria_de/comit/"
 
   background_color_class: bg-black
   recent_posts_number: 3
