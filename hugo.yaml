@@ -1,7 +1,7 @@
 baseURL: 'https://www.zyria.de/'
 languageCode: de-de
 title: Nix
-theme: hugo-coder
+theme: [ "hugo-notice", "hugo-coder"]
 defaultContentLanguage: de
 SectionPagesMenu: main
 Paginate: 20
@@ -31,6 +31,7 @@ module:
   - path: github.com/hugo-mods/lazyimg
   - path: github.com/hugomods/images
   - path: github.com/hugomods/shortcodes
+  - path: github.com/martignoni/hugo-notice
 
 params:
   author: Fabrice Kirchner

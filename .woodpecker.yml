@@ -12,7 +12,7 @@ steps:
   build:
     image: klakegg/hugo:ext
     commands:
-      - hugo --minify
+      - HUGO_ENV=production hugo --minify
     when:
       event: [push, tag, cron, pull_request]
       branch: main
