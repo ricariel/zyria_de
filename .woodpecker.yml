@@ -27,8 +27,7 @@ steps:
       #- echo "$DEPLOY_KEY" | base64 -d >/root/.ssh/id_ecdsa
       - echo "$SSH_KEY">$HOME/.ssh/id_ed25519
       - echo "$SSH_KNOWN_HOSTS">$HOME/.ssh/known_hosts
-      - chmod 600 $HOME/.ssh/id_ecdsa
-      - ls public
+      - chown 600 $HOME/.ssh/id_ed25519
       - ssh-keygen -R www.zyria.de
       - rsync -rPvc --delete -e ssh public/ fabrice@www.zyria.de:/srv/zyria_de
     when:
