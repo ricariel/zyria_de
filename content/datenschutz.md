@@ -5,7 +5,7 @@ draft: false
 menu: 
     - main
     - footer
-type: page
+aliases: [ datenschutz, dataprotection, datenschutzerklärung ]
 ---
 
 Einleitung
@@ -19,16 +19,7 @@ Stand: 21. Januar 2022
 
 Inhaltsübersicht
 ----------------
-
-*   [Einleitung](#m14)
-*   [Verantwortlicher](#m3)
-*   [Übersicht der Verarbeitungen](#mOverview)
-*   [Maßgebliche Rechtsgrundlagen](#m13)
-*   [Sicherheitsmaßnahmen](#m27)
-*   [Löschung von Daten](#m12)
-*   [Änderung und Aktualisierung der Datenschutzerklärung](#m15)
-*   [Rechte der betroffenen Personen](#m10)
-*   [Begriffsdefinitionen](#m42)
+{{% toc %}}
 
 Verantwortlicher
 ----------------

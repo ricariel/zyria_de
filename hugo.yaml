@@ -2,23 +2,19 @@ baseURL: 'https://www.zyria.de/'
 languageCode: de-de
 title: Nix
 theme: hugo-coder
-DefaultContentLanguage: de
+defaultContentLanguage: de
 SectionPagesMenu: main
 Paginate: 20
 googleAnalytics: ''
 enableRobotsTXT: true
 toc: true
+tableOfContents: true
 enableGitInfo: true
 
 markup:
   highlight:
     style: "github-dark"
 
-languages:
-  de:
-    title: Nix
-    weight: 1
-    contentDir: content/de
 sitemap:
   changefreq: monthly
   priority: 0.5
