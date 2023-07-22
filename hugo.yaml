@@ -30,6 +30,9 @@ taxonomies:
   tag: tags
   author: authors
 
+module:
+  imports:
+  - path: github.com/hugo-mods/lazyimg
 
 params:
   author: Fabrice Kirchner
