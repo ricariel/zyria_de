@@ -1,9 +1,7 @@
-# The HUGO_OUTPUT variable must be set to the build output folder configured in Hugo
 when:
   branch:
     exclude: pages
 
-# Recursive cloning is used to fully clone the themes given as Git submodules
 clone:
   git:
     image: woodpeckerci/plugin-git
@@ -11,7 +9,6 @@ clone:
       recursive: true
 
 steps:
-  # Build hugo static files
   build:
     image: klakegg/hugo
     commands:
@@ -32,7 +29,6 @@ steps:
       - chmod -R u=rwX,go= ~/.ssh
       - rsync -rPvce ssh --chmod=ugo=rwX --no-times public/ fabrice@www.zyria.de:/srv/zyria_de/
     when:
-      # Only try to deploy if previous step is successful
       status: success
       branch:
         include: [ main ]
