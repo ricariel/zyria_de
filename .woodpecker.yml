@@ -10,7 +10,7 @@ clone:
 
 steps:
   build:
-    image: klakegg/hugo
+    image: klakegg/hugo:ext
     commands:
       - hugo --minify
     when:
