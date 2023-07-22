@@ -1,13 +1,18 @@
 baseURL: 'https://www.zyria.de/'
 languageCode: de-de
 title: Nix
-theme: LoveIt
+theme: hugo-coder
 DefaultContentLanguage: de
 SectionPagesMenu: main
-Paginate: 3
+Paginate: 20
 googleAnalytics: ''
 enableRobotsTXT: true
 toc: true
+
+markup:
+  highlight:
+    style: "github-dark"
+
 languages:
   de:
     title: Nix
@@ -17,18 +22,41 @@ sitemap:
   changefreq: monthly
   priority: 0.5
   filename: sitemap.xml
+
+taxonomies:
+  category: categories
+  series: series
+  tag: tags
+  author: authors
+
+
 params:
-  text_color: ''
   author: Fabrice Kirchner
-  favicon: ''
-  site_logo: ''
+  info: Diese Seite ist (scheinbar) leer.
   description: Diese Seite ist (scheinbar) leer.
+  keywords: 'blog,developer,personal'
+  avatarurl: images/chibi.jpg
+  faviconSVG: /img/favicon.svg
+  favicon_32: /img/favicon-32x32.png
+  favicon_16: /img/favicon-16x16.png
+  since: 2003
+  enableTwemoji: true
+  colorScheme: auto
+  hidecolorschemetoggle: false
+  commit: "https://www.zyria.de/git/pyrox/zyria_de.git"
+
   background_color_class: bg-black
   recent_posts_number: 3
-  ananke_socials:
-    - name: "github"
+  social:
+    - name: Github
+      icon: fa fa-github fa-2x
+      weight: 1
       url: "https://github.com/ricariel"
-    - name: "linkedin"
+    - name: Linkedin
+      icon: fa fa-linkedin fa-2x
+      weight: 2
       url: "https://www.linkedin.com/in/fabrice-kirchner-bb5408163/"
-    - name: "mastodon"
+    - name: Mastodon
+      icon: fa fa-mastodon fa-2x
+      weight: 3
       url: "https://kirchner.social/@fabrice"
