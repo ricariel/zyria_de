@@ -21,12 +21,13 @@ steps:
     image: alpine
     secrets: [ deploy_key ]
     commands:
-      - apk add rsync openssh
-      - mkdir ~/.ssh
-      - printf '%s\n' "$${DEPLOY_KEY}" > ~/.ssh/deploy_key
-      - printf "Host *\n\tIdentityFile ~/.ssh/deploy_key\n\tUserKnownHostsFile=/dev/null\n\tStrictHostKeyChecking=no\n" > ~/.ssh/config
-      - chmod -R u=rwX,go= ~/.ssh
-      - rsync -rPvce ssh --chmod=ugo=rwX --no-times public/ fabrice@www.zyria.de:/srv/zyria_de/
+      - apk --update add --no-cache hugo openssh-client rsync
+      - mkdir /root/.ssh
+      - chmod 700 /root/.ssh
+      - echo "$DEPLOY_KEY" | base64 -d >/root/.ssh/id_ecdsa
+      - chmod 600 /root/.ssh/id_ecdsa
+      - rsync -avz --delete -e public/ fabrice@www.zyria.de:/srv/zyria_de/
+      #- rsync -rPvce ssh --chmod=ugo=rwX --no-times public/ fabrice@www.zyria.de:/srv/zyria_de/
     when:
       status: success
       branch:
