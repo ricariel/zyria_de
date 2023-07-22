@@ -8,6 +8,7 @@ Paginate: 20
 googleAnalytics: ''
 enableRobotsTXT: true
 toc: true
+enableGitInfo: true
 
 markup:
   highlight:
