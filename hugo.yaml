@@ -1,4 +1,4 @@
-baseURL: 'https://www.zyria.de/'
+baseURL: 'https://zyria.de/'
 languageCode: de-de
 title: Nix
 theme: [ "hugo-notice", "hugo-coder"]
@@ -36,7 +36,8 @@ module:
 
 params:
   author: Fabrice Kirchner
-  info: Diese Seite ist (scheinbar) leer.
+  info: |
+    Diese Seite ist (scheinbar) leer. 
   description: Diese Seite ist (scheinbar) leer.
   keywords: 'blog,developer,personal'
   avatarurl: /images/chibi.jpg
@@ -56,14 +57,20 @@ params:
       icon: fa fa-github fa-2x
       weight: 1
       url: "https://github.com/ricariel"
+      target: "_blank"
+      rel: "me"
     - name: Linkedin
       icon: fa fa-linkedin fa-2x
       weight: 2
       url: "https://www.linkedin.com/in/fabrice-kirchner-bb5408163/"
+      target: "_blank"
+      rel: "me"
     - name: Mastodon
       icon: fa fa-mastodon fa-2x
       weight: 3
       url: "https://kirchner.social/@fabrice"
+      target: "_blank"
+      rel: "me"
 
   images:
     alignment_center_class_name: d-block text-center
