@@ -65,7 +65,7 @@ params:
       weight: 3
       url: "https://kirchner.social/@fabrice"
     - name: Google
-      icon: fa fa-google fa-ban fa-2x
+      icon: fa fa-google fa-stack-2x fa-ban fa-2x
       weight: 3
       url: "https://zyria.de/"
   images:
