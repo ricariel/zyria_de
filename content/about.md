@@ -18,19 +18,19 @@ menu:
 
 * geboren, aufgewachsen und sozialisiert in Berlin
 * Abstecher nach Bayern
-* jetzt Wohnhaft auf einem Vulkan in Hessen 
+* Wohnhaft auf einem Vulkan in Hessen 
 
 Ausbildung:
-* Studium ohne Abschluss
 * Programmieren für Spiele
 * Selfhosting
 * Selbstständigkeit
+* Studium 
 * Bücher, Internet, Manpages, ausprobieren
-* immer Neugierig und lernwillig
+* immer neugierig und lernwillig
 
 Interessen: 
 * Linux
-* MacOS
+* Apple
 * OpenSource
 * Selfhosting 
 * Heimautomatisierung
