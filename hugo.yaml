@@ -1,7 +1,7 @@
 baseURL: 'https://zyria.de/'
 languageCode: de-de
 title: Nix
-theme: [ "hugo-notice", "hugo-coder"]
+theme: [ "hugo-loremipsum","hugo-notice", "hugo-coder"]
 defaultContentLanguage: de
 SectionPagesMenu: main
 Paginate: 20
@@ -17,6 +17,10 @@ markup:
     style: "github-dark"
     lineNos: true
     lineNumbersInTable: false
+  goldmark:
+    renderer:
+      unsafe: true
+
 
 sitemap:
   changefreq: monthly
@@ -28,13 +32,14 @@ taxonomies:
   series: series
   tag: tags
   author: authors
-
 module:
   imports:
   - path: github.com/hugo-mods/lazyimg
+  - path: github.com/martignoni/hugo-notice
   - path: github.com/hugomods/images
   - path: github.com/hugomods/shortcodes
-  - path: github.com/martignoni/hugo-notice
+  - path: github.com/hugomods/bootstrap
+  - path: github.com/gohugoio/hugo-mod-bootstrap-scss/v5
 
 params:
   hb:

@@ -1,0 +1,45 @@
+---
+title: "Über mich"
+date: 2023-07-24T17:18:44+02:00
+draft: false
+menu: 
+    main:
+        weight: 1
+---
+
+## Fabrice Kirchner 
+{{% bs/clearfix %}}
+{{< bs/container >}}
+{{< bs/col >}}
+![Test Image](/images/chibi.jpg?width=330px&classes=inline#float-end)
+
+{{< /bs/col >}}
+{{< bs/col >}}
+
+* geboren, aufgewachsen und sozialisiert in Berlin
+* Abstecher nach Bayern
+* jetzt Wohnhaft auf einem Vulkan in Hessen 
+
+Ausbildung:
+* Studium ohne Abschluss
+* Programmieren für Spiele
+* Selfhosting
+* Selbstständigkeit
+* Bücher, Internet, Manpages, ausprobieren
+* immer Neugierig und lernwillig
+
+Interessen: 
+* Linux
+* MacOS
+* OpenSource
+* Selfhosting 
+* Heimautomatisierung
+* Cloud Free
+* Ingress
+* Wandern
+* Radfahren
+
+Beruflich betreu ich die IT in einem mittelständischen Unternehmen.
+{{< /bs/col >}}
+{{< /bs/container >}}
+{{% /bs/clearfix %}}
