@@ -64,10 +64,7 @@ params:
       icon: fa fa-mastodon fa-2x
       weight: 3
       url: "https://kirchner.social/@fabrice"
-    - name: Google
-      icon: fa fa-google fa-stack-2x fa-ban fa-2x
-      weight: 3
-      url: "https://zyria.de/"
+
   images:
     alignment_center_class_name: d-block text-center
     alignment_end_class_name: float-end ms-2
