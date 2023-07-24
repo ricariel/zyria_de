@@ -7,4 +7,6 @@ menu: main
 Testseite
 
 [Testlink](https://zyria.de/internal.html)
+![Test Image](/images/chibi.jpg?width=300px&brightness=00#center)
+
 
