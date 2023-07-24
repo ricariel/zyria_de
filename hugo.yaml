@@ -35,9 +35,6 @@ module:
   - path: github.com/hugomods/images
   - path: github.com/hugomods/shortcodes
   - path: github.com/martignoni/hugo-notice
-  - path: github.com/hugomods/code-block-panel
-  - path: github.com/hbstack/back-to-top
-  - path: github.com/hbstack/meta/recommended
 
 params:
   hb:
