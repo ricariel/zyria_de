@@ -13,7 +13,7 @@ steps:
     image: klakegg/hugo:ext
     commands:
       - npm install postcss postcss-cli @fullhuman/postcss-purgecss --save
-      - HUGO_ENV=production hugo --minify
+      - hugo --minify --gc --environment production
     when:
       event: [push, tag, cron, pull_request]
       branch: main
