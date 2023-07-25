@@ -11,10 +11,17 @@
   {{ end }}
   {{ $styles := resources.Get "scss/bootstrap.scss" }}
   {{ $styles = $styles | resources.ToCSS $options }}
+  {{ $styles = $styles | resources.PostCSS $options }}
   {{ if hugo.IsProduction }}
-  {{ $styles = $styles | fingerprint }}
+  {{ $styles = $styles | minify | fingerprint | resources.PostProcess }}
   {{ end }}
-  <link href="{{ $styles.RelPermalink }}" rel="stylesheet" />
+	<link
+  rel="stylesheet"
+  href="{{ $styles.RelPermalink }}"
+  {{ if hugo.IsProduction -}}
+    integrity="{{ $styles.Data.Integrity }}"
+  {{- end }}
+/>
 
    {{/* Load Bootstrap JS. */}}
    {{ $js := resources.Get "js/index.js" }}

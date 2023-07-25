@@ -1,0 +1,16 @@
+{
+  "name": "zyria_de",
+  "version": "1.0.0",
+  "description": "Meine private Seite.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@fullhuman/postcss-purgecss": "^5.0.0",
+    "postcss": "^8.4.27",
+    "postcss-cli": "^10.1.0"
+  }
+}

@@ -1,6 +1,6 @@
 baseURL: 'https://zyria.de/'
 languageCode: de-de
-title: Nix
+title: Private Seite von Fabrice Kirchner
 theme: [ "hugo-loremipsum","hugo-notice", "hugo-coder"]
 defaultContentLanguage: de
 SectionPagesMenu: main
@@ -41,6 +41,8 @@ module:
   - path: github.com/hugomods/bootstrap
   - path: github.com/gohugoio/hugo-mod-bootstrap-scss/v5
 
+build:
+  writeStats: true
 params:
   hb:
     back_to_top:

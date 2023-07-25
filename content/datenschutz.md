@@ -24,13 +24,11 @@ Inhaltsübersicht
 Verantwortlicher
 ----------------
 
-Fabrice Kirchner
-Haingasse 3
-35287 Amöneburg
-
-E-Mail-Adresse:
-
-web_(at)_zyria.de
+Fabrice Kirchner  
+Haingasse 3  
+35287 Amöneburg  
+  
+E-Mail-Adresse: web(at)zyria.de
 
 Übersicht der Verarbeitungen
 ----------------------------
