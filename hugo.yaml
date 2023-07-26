@@ -72,6 +72,25 @@ params:
   background_color_class: bg-black
   recent_posts_number: 3
   social:
+    - name: Forgejo Business
+      icon: fa fa-git fa-2x
+      weight: 1
+      url: "https://www.casa-due-pur.de/git/"
+      target: "_blank"
+      rel: "me"
+    - name: Forgejo private
+      icon: fa fa-git fa-2x
+      weight: 1
+      url: "https://www.zyria.de/git/"
+      target: "_blank"
+      rel: "me"
+    - name: Codeberg
+      icon: fa fa-git fa-2x
+      weight: 1
+      url: "https://codeberg.org/ricariel"
+      target: "_blank"
+      rel: "me"
+
     - name: Github
       icon: fa fa-github fa-2x
       weight: 1
