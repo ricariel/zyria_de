@@ -44,6 +44,16 @@ module:
 build:
   writeStats: true
 params:
+  lazyimg:
+    resizer: auto
+    renderer: lqip-webp
+
+    # Resizer options:
+    lqipSize: "120x Gaussian"
+    maxSize: "1920x"
+    responsiveSizes: ["320x", "640x", "768x", "1024x", "1366x", "1600x", "1920x"]
+    resizeOptions: "Lanczos q95"
+
   hb:
     back_to_top:
       animation: true
@@ -66,6 +76,7 @@ params:
   since: 2003
   enableTwemoji: true
   colorScheme: auto
+  customCSS: ['lazyimg.css']
   hidecolorschemetoggle: false
   commit: "https://www.zyria.de/git/pyrox/zyria_de/commit"
 
