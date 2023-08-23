@@ -55,7 +55,7 @@ steps:
 #      # Commit and push all static files with pipeline started timestamp
 #      - cd $CI_REPO_NAME
 #      - git add .
-#      - git commit -m "Woodpecker CI ${CI_BUILD_CREATED}"
+#      - git commit -m "Woodpecker CI ${CI_PIPELINE_CREATED}"
 #      - git push
 #    when:
 #      event: push
