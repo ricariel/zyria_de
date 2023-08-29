@@ -40,10 +40,26 @@ module:
   - path: github.com/hugomods/shortcodes
   - path: github.com/hugomods/bootstrap
   - path: github.com/gohugoio/hugo-mod-bootstrap-scss/v5
+  - path: github.com/davidsneighbour/hugo-security
 
 build:
   writeStats: true
 params:
+  dnb:
+  security:
+    txt:
+      acknowledgements: ""
+      canonical: "https://www.zyria.de/.well-known/security.txt"
+      contact:
+        - "mailto:fabrice@zyria.de"
+        - "tel:+491605513991"
+      encryption: ""
+      expires: 365
+      hiring: ""
+      intro: Information related to reporting security vulnerabilities of this site.
+      languages: de, en
+      policy: ""
+
   lazyimg:
     resizer: auto
     renderer: lqip-webp
@@ -66,7 +82,7 @@ params:
 
   author: Fabrice Kirchner
   info: |
-    Diese Seite ist (scheinbar) leer. 
+    Diese Seite ist (scheinbar) leer.
   description: Diese Seite ist (scheinbar) leer.
   keywords: 'blog,developer,personal'
   avatarurl: /images/chibi.jpg

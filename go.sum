@@ -1,4 +1,8 @@
 github.com/aFarkas/lazysizes v0.0.0-20210408151554-27c7ceb7d737/go.mod h1:xl3heUINAn0oPowV1biDQ2Pyw1w3x66I7KEbWkaxox0=
+github.com/davidsneighbour/hugo-security v1.1.3 h1:Gv6uqZ/7YUVjkDrpRLF5XuEHTLy6l9adrl9cCNEkAZA=
+github.com/davidsneighbour/hugo-security v1.1.3/go.mod h1:MJvazS6ktIK7tbA+pddZopCTs1Rbw4iq21bv4J7GJ3U=
+github.com/davidsneighbour/hugo-security v1.1.4 h1:MJu/mSz+t2ZiLMWLCJvZUe2pLurIukvQ6zXMM+JwBwo=
+github.com/davidsneighbour/hugo-security v1.1.4/go.mod h1:MJvazS6ktIK7tbA+pddZopCTs1Rbw4iq21bv4J7GJ3U=
 github.com/gohugoio/hugo-mod-bootstrap-scss/v5 v5.20300.20003 h1:pt/JGVD5YYRsVVijOHPZI6YKTUvbR4e0hgV9B0S6rbI=
 github.com/gohugoio/hugo-mod-bootstrap-scss/v5 v5.20300.20003/go.mod h1:mvM05r93HiefwoaxQTaYiJxtJAhTebwQtU1Xh/J+Okk=
 github.com/gohugoio/hugo-mod-jslibs-dist/popperjs/v2 v2.21100.20000/go.mod h1:mFberT6ZtcchrsDtfvJM7aAH2bDKLdOnruUHl0hlapI=
@@ -8,6 +12,8 @@ github.com/hugomods/bootstrap v0.7.2 h1:hb8G5aDp/1tITmpr1N0eI3yO5QgHtcXq/ymWhRyl
 github.com/hugomods/bootstrap v0.7.2/go.mod h1:NVii94xgqDocyD0+aAWamBLPJjNspfMynEdmIOXO3Vs=
 github.com/hugomods/bootstrap v0.8.0 h1:dQjF6M+P7SPxoBjuBub4l+zIRhO3npFdKG/4K9r1Jk4=
 github.com/hugomods/bootstrap v0.8.0/go.mod h1:NVii94xgqDocyD0+aAWamBLPJjNspfMynEdmIOXO3Vs=
+github.com/hugomods/bootstrap v0.10.0 h1:vzMqVNcP/UlRft/jDm6jsjxPKTCfyUrfpku0lFkfOoc=
+github.com/hugomods/bootstrap v0.10.0/go.mod h1:NVii94xgqDocyD0+aAWamBLPJjNspfMynEdmIOXO3Vs=
 github.com/hugomods/icons v0.6.0 h1:G6RU93okhPPRDh/jqcew9gwkcYpSpg0rCBv4S6yUAFw=
 github.com/hugomods/icons v0.6.0/go.mod h1:cIkSvK6W0q6N4U6n9KGz+QfRWQXAW0INd+1P31gPNGg=
 github.com/hugomods/images v0.7.0 h1:NEGgCSrh1YuHGmTAL9wDAKLdXL4WU6Nw4BfkampJxyM=
