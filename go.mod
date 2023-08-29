@@ -3,7 +3,7 @@ module github.com/hugo-mods/lazyimg.git
 go 1.20
 
 require (
-	github.com/davidsneighbour/hugo-security v1.1.3 // indirect
+	github.com/davidsneighbour/hugo-modules/modules/security v0.0.0-20230828131111-cad08d78cbbb // indirect
 	github.com/gohugoio/hugo-mod-bootstrap-scss/v5 v5.20300.20003 // indirect
 	github.com/hugo-mods/lazyimg v0.0.0-20220925161121-72183e14a364 // indirect
 	github.com/hugomods/bootstrap v0.10.0 // indirect

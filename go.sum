@@ -1,4 +1,6 @@
 github.com/aFarkas/lazysizes v0.0.0-20210408151554-27c7ceb7d737/go.mod h1:xl3heUINAn0oPowV1biDQ2Pyw1w3x66I7KEbWkaxox0=
+github.com/davidsneighbour/hugo-modules/modules/security v0.0.0-20230828131111-cad08d78cbbb h1:0m8U4Fr/zF4CesyG92L/rgBr51P32Lfuk5VN3NaiQZc=
+github.com/davidsneighbour/hugo-modules/modules/security v0.0.0-20230828131111-cad08d78cbbb/go.mod h1:5jfP6U9kC9UifhRZmhiW1uQb+a34Y3koCPH9OgKrDJk=
 github.com/davidsneighbour/hugo-security v1.1.3 h1:Gv6uqZ/7YUVjkDrpRLF5XuEHTLy6l9adrl9cCNEkAZA=
 github.com/davidsneighbour/hugo-security v1.1.3/go.mod h1:MJvazS6ktIK7tbA+pddZopCTs1Rbw4iq21bv4J7GJ3U=
 github.com/davidsneighbour/hugo-security v1.1.4 h1:MJu/mSz+t2ZiLMWLCJvZUe2pLurIukvQ6zXMM+JwBwo=
