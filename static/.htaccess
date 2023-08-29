@@ -4,7 +4,6 @@ ErrorDocument 404 /404.html
 AddDefaultCharset UTF-8
 Options +FollowSymlinks -Indexes -MultiViews
 IndexIgnore .ht* *.php i*.py *.ht*
-Header set Content-Security-Policy "default-src 'self' https://www.zyria.de; frame-ancestors 'self'; form-action 'self'; base-uri 'self'; img-src https: data: blob: 'self';"
 <IfModule mod_expires.c>
 # Expires-Header aktivieren
   ExpiresActive On
