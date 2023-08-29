@@ -30,7 +30,7 @@
   <script src="{{ $script.RelPermalink }}" async></script>
   {{ else }}
   {{ $script := resources.Get "js/coder.js" | minify | fingerprint }}
-  <script src="{{ $script.RelPermalink }}" integrity="{{ $script.Data.Integrity }}" nonce=="{{ $script.Data.Integrity }}" async></script>
+  <script src="{{ $script.RelPermalink }}" integrity="{{ $script.Data.Integrity }}" nonce="{{ $script.Data.Integrity }}" async></script>
   {{ end }}
 
   {{ range .Site.Params.customJS }}
@@ -39,7 +39,7 @@
   <script src="{{ $script.RelPermalink }}" async></script>
   {{ else }}
   {{ $script := resources.Get . | minify | fingerprint }}
-  <script src="{{ $script.RelPermalink }}" integrity="{{ $script.Data.Integrity }}" nonce=="{{ $script.Data.Integrity }}" async></script>
+  <script src="{{ $script.RelPermalink }}" integrity="{{ $script.Data.Integrity }}" nonce="{{ $script.Data.Integrity }}" async></script>
   {{ end }}
   {{ end }}
 
@@ -49,7 +49,7 @@
   <script src="{{ $script.RelPermalink }}" async></script>
   {{ else }}
   {{ $script := resources.GetRemote . | minify | fingerprint }}
-  <script src="{{ $script.RelPermalink }}" integrity="{{ $script.Data.Integrity }}" nonce=="{{ $script.Data.Integrity }}" async></script>
+  <script src="{{ $script.RelPermalink }}" integrity="{{ $script.Data.Integrity }}" nonce="{{ $script.Data.Integrity }}" async></script>
   {{ end }}
   {{ end }}
 
