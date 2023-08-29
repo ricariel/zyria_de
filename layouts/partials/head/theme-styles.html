@@ -1,4 +1,7 @@
-<link rel="preload" href="/fonts/forkawesome-webfont.woff2?v=1.2.0" as="font" type="font/woff2" crossorigin>
+  {{ $styles := resources.Get "fonts/forkawesome-webfont.woff2" | fingerprint}}
+  <link rel="preload" href="/fonts/forkawesome-webfont.woff2" integrity="sha256-iBC6NEC/SCztM9L3S3gDu6cR9onY5Mqn2lxq5oRKG0k=" crossorigin="anonymous" as="font" type="font/woff2">
+
+
 
 {{ if .Site.IsServer }}
   {{ $cssOpts := (dict "targetPath" "css/coder.css" "enableSourceMap" true ) }}
