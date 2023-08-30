@@ -2,12 +2,13 @@
 title: "Über mich"
 date: 2023-07-24T17:18:44+02:00
 draft: false
-menu: 
+menu:
     main:
         weight: 1
 ---
 
-## Fabrice Kirchner 
+## Fabrice Kirchner
+
 {{% bs/clearfix %}}
 {{< bs/container >}}
 {{< bs/col >}}
@@ -18,21 +19,23 @@ menu:
 
 * geboren, aufgewachsen und sozialisiert in Berlin
 * Abstecher nach Bayern
-* Wohnhaft auf einem Vulkan in Hessen 
+* Wohnhaft auf einem Vulkan in Hessen
 
 Ausbildung:
+
 * Programmieren für Spiele
 * Selfhosting
 * Selbstständigkeit
-* Studium 
+* Studium
 * Bücher, Internet, Manpages, ausprobieren
 * immer neugierig und lernwillig
 
-Interessen: 
+Interessen:
+
 * Linux
 * Apple
 * OpenSource
-* Selfhosting 
+* Selfhosting
 * Heimautomatisierung
 * Cloud Free
 * Ingress

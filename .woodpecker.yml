@@ -20,42 +20,17 @@ steps:
 
   deploy:
     image: alpine
-    secrets: [ deploy_key, known_hosts ]
+    secrets: [deploy_key, known_hosts]
     commands:
       - apk --update add --no-cache hugo openssh-client rsync
       - mkdir /root/.ssh
       - chmod 700 /root/.ssh
-      #- echo "$DEPLOY_KEY" | base64 -d >/root/.ssh/id_ecdsa
       - echo "$DEPLOY_KEY">$HOME/.ssh/id_ed25519
       - echo "$KNOWN_HOSTS">$HOME/.ssh/known_hosts
       - chown 600 $HOME/.ssh/id_ed25519
-      #- ssh-keygen -6 -R www.zyria.de
       - rsync -rPvc --delete -e "ssh -6" public/ fabrice@www.zyria.de:/srv/zyria_de
     when:
       status: success
       branch:
-        include: [ main ]
+        include: [main]
       event: [push, deployment]
-
-#  publish:
-#    image: bitnami/git
-#    # Must be set in Woodpecker configuration
-#    secrets: [ mail, codeberg_token ]
-#    environment:
-#      - HUGO_OUTPUT=public
-#    commands:
-#      # Git configuration
-#      - git config --global user.email $MAIL
-#      - git config --global user.name "Woodpecker CI"
-#      - git clone -b pages https://$CODEBERG_TOKEN@codeberg.org/$CI_REPO.git $CI_REPO_NAME
-#      # Copy build step output to repository folder
-#      - cp -ar $HUGO_OUTPUT/. $CI_REPO_NAME/
-#      # Needed for custom domains
-#      - cp .domains $CI_REPO_NAME || true # Ignore if it doesn't exist
-#      # Commit and push all static files with pipeline started timestamp
-#      - cd $CI_REPO_NAME
-#      - git add .
-#      - git commit -m "Woodpecker CI ${CI_PIPELINE_CREATED}"
-#      - git push
-#    when:
-#      event: push

@@ -1,7 +1,7 @@
 {{ if or (eq .Site.Params.colorScheme "auto") (eq .Site.Params.colorScheme "dark") }}
   {{ if .Site.IsServer }}
 
-		{{ $cssOpts := (dict "targetPath" "css/coder-dark.css" "enableSourceMap" true ) }}
+    {{ $cssOpts := (dict "targetPath" "css/coder-dark.css" "enableSourceMap" true ) }}
     {{ $styles := resources.Get "scss/coder-dark.scss" | resources.ExecuteAsTemplate "style.coder-dark.css" . | toCSS $cssOpts | resources.PostProcess}}
     <link rel="stylesheet" href="{{ $styles.RelPermalink }}" media="screen">
   {{ else }}

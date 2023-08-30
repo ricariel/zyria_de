@@ -9,12 +9,10 @@
   {{ if hugo.IsProduction }}
   {{ $styles = $styles | minify | fingerprint | resources.PostProcess }}
   {{ end }}
-	<link
+  <link
   rel="stylesheet"
   href="{{ $styles.RelPermalink }}"
   {{ if hugo.IsProduction -}}
     integrity="{{ $styles.Data.Integrity }}"
   {{- end }}
 />
-
-

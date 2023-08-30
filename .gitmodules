@@ -1,9 +1,9 @@
 [submodule "themes/hugo-coder"]
-	path = themes/hugo-coder
-	url = https://github.com/luizdepra/hugo-coder.git
+  path = themes/hugo-coder
+  url = https://github.com/luizdepra/hugo-coder.git
 [submodule "themes/hugo-notice"]
-	path = themes/hugo-notice
-	url = https://github.com/martignoni/hugo-notice.git
+  path = themes/hugo-notice
+  url = https://github.com/martignoni/hugo-notice.git
 [submodule "themes/hugo-loremipsum"]
-	path = themes/hugo-loremipsum
-	url = https://github.com/martignoni/hugo-loremipsum.git
+  path = themes/hugo-loremipsum
+  url = https://github.com/martignoni/hugo-loremipsum.git
