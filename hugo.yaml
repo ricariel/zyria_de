@@ -83,6 +83,7 @@ params:
   enableTwemoji: true
   colorScheme: auto
   customCSS: ['lazyimg.css']
+
   hidecolorschemetoggle: false
   commit: "https://www.zyria.de/git/pyrox/zyria_de/commit"
 
