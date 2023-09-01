@@ -16,6 +16,8 @@ github.com/hugomods/bootstrap v0.8.0 h1:dQjF6M+P7SPxoBjuBub4l+zIRhO3npFdKG/4K9r1
 github.com/hugomods/bootstrap v0.8.0/go.mod h1:NVii94xgqDocyD0+aAWamBLPJjNspfMynEdmIOXO3Vs=
 github.com/hugomods/bootstrap v0.10.0 h1:vzMqVNcP/UlRft/jDm6jsjxPKTCfyUrfpku0lFkfOoc=
 github.com/hugomods/bootstrap v0.10.0/go.mod h1:NVii94xgqDocyD0+aAWamBLPJjNspfMynEdmIOXO3Vs=
+github.com/hugomods/bootstrap v0.11.1 h1:gbJRe1FyxnCxWq5DtyGXxVpU0rmFa5uS1htNUYKo8GQ=
+github.com/hugomods/bootstrap v0.11.1/go.mod h1:NVii94xgqDocyD0+aAWamBLPJjNspfMynEdmIOXO3Vs=
 github.com/hugomods/icons v0.6.0 h1:G6RU93okhPPRDh/jqcew9gwkcYpSpg0rCBv4S6yUAFw=
 github.com/hugomods/icons v0.6.0/go.mod h1:cIkSvK6W0q6N4U6n9KGz+QfRWQXAW0INd+1P31gPNGg=
 github.com/hugomods/images v0.7.0 h1:NEGgCSrh1YuHGmTAL9wDAKLdXL4WU6Nw4BfkampJxyM=
@@ -24,6 +26,8 @@ github.com/hugomods/shortcodes v0.10.0 h1:NKu2m1xciBsqzu7PU0SDu1C12OHdX+pMjfUI97
 github.com/hugomods/shortcodes v0.10.0/go.mod h1:EnVopbZMNI/HeteM3Lp3phBTCRLvPSe7l142qhRFFPY=
 github.com/martignoni/hugo-notice v0.0.0-20230418180851-cce7afd430d4 h1:OSXyp1wbpFw+WqGmo1aiTKmMzb9+UBrY3UA7jN9UEUo=
 github.com/martignoni/hugo-notice v0.0.0-20230418180851-cce7afd430d4/go.mod h1:MIQPOMgEcbyRC0gNLzQFSgrS+wIy3RuQ/HbaZYtTOKU=
+github.com/martignoni/hugo-notice v0.0.0-20230829114050-2d7d7460bc60 h1:cPU84OKIQJMEfuvgbAem94J5YDn3UBDrth17VM9I0QA=
+github.com/martignoni/hugo-notice v0.0.0-20230829114050-2d7d7460bc60/go.mod h1:MIQPOMgEcbyRC0gNLzQFSgrS+wIy3RuQ/HbaZYtTOKU=
 github.com/twbs/bootstrap v5.3.0+incompatible h1:4+staADO0OrqUv77m+XL+vHYojLH9oxb4Vxi9mnIJWg=
 github.com/twbs/bootstrap v5.3.0+incompatible/go.mod h1:fZTSrkpSf0/HkL0IIJzvVspTt1r9zuf7XlZau8kpcY0=
 github.com/twbs/icons v1.10.5 h1:F9uvW7cGfDBAautw5aeCmnB3hw4vv3aEQGbHnzcQKaE=

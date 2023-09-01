@@ -4,6 +4,9 @@
 @import "bootstrap/mixins/banner";
 //@include bsBanner("");
 
+:root {
+  $font-sans-serif:  -apple-system,BlinkMacSystemFont,segoe ui,Roboto,Oxygen-Sans,Ubuntu,Cantarell,helvetica neue,Helvetica,sans-serif;
+}
 
 // Configuration
 @import "bootstrap/functions";
