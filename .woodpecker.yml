@@ -22,13 +22,12 @@ steps:
     image: alpine
     secrets: [deploy_key, known_hosts]
     commands:
-      - apk --update add --no-cache hugo openssh-client rsync
+      - apk --update add --no-cache openssh-client rsync
       - mkdir /root/.ssh
       - chmod 700 /root/.ssh
       - echo "$DEPLOY_KEY"> /root/.ssh/id_ed25519
       - chown 600 /root/.ssh/id_ed25519
-      - ssh-keyscan -p 22 -H www.zyria.de > /root/.ssh/known_hosts
-      - rsync -rPvc --delete -e "ssh -6" public/ fabrice@www.zyria.de:/srv/zyria_de
+      - rsync -rPvc --delete -e "ssh -6 -o StrictHostKeyChecking=accept-new" public/ fabrice@www.zyria.de:/srv/zyria_de
     when:
       status: success
       branch:
