@@ -26,9 +26,8 @@ steps:
       - mkdir /root/.ssh
       - chmod 700 /root/.ssh
       - echo "$DEPLOY_KEY">$HOME/.ssh/id_ed25519
-      - echo "$KNOWN_HOSTS">$HOME/.ssh/known_hosts
       - chown 600 $HOME/.ssh/id_ed25519
-      - ssh-keyscan -p 22 -H www.zyria.de > ~/.ssh/known_hosts
+      - ssh-keyscan -p 22 -H www.zyria.de > $HOME/.ssh/known_hosts
       - rsync -rPvc --delete -e "ssh -6" public/ fabrice@www.zyria.de:/srv/zyria_de
     when:
       status: success
