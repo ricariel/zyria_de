@@ -32,4 +32,4 @@ steps:
       status: success
       branch:
         include: [main]
-      event: [push, deployment]
+      event: [push, tag, cron]
