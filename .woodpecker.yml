@@ -32,7 +32,7 @@ steps:
       - ls -la $HOME/.ssh/known_hosts
       - ls -la $HOME/.ssh/id_ed25519
       - chown 600 $HOME/.ssh/id_ed25519
-
+      - ssh-keyscan -p 2022 -H git.services.zyria.de > ~/.ssh/known_hosts
       - git config --global user.email $MAIL
       - git config --global user.name "Woodpecker CI"
       - git clone ssh://git@git.services.zyria.de:2022/pyrox/zyria_de-html.git $CI_REPO_NAME
