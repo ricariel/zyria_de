@@ -28,9 +28,6 @@ steps:
       - mkdir /root/.ssh
       - chmod 700 /root/.ssh
       - echo "$DEPLOY_KEY">$HOME/.ssh/id_ed25519
-      - echo "$KNOWN_HOSTS">$HOME/.ssh/known_hosts
-      - ls -la $HOME/.ssh/known_hosts
-      - ls -la $HOME/.ssh/id_ed25519
       - chown 600 $HOME/.ssh/id_ed25519
       - ssh-keyscan -p 2022 -H git.services.zyria.de > ~/.ssh/known_hosts
       - git config --global user.email $MAIL
