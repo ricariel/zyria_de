@@ -2,7 +2,7 @@
 baseURL: 'https://zyria.de/'
 languageCode: de-de
 title: Zyria
-theme: ["hugo-loremipsum", "hugo-notice", "hugo-coder"]
+theme: ["hugo-notice", "hugo-coder"]
 defaultContentLanguage: de
 SectionPagesMenu: main
 Paginate: 20
