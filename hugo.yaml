@@ -77,9 +77,9 @@ params:
   description: Diese Seite ist (scheinbar) leer.
   keywords: 'blog,developer,personal'
   avatarurl: /images/chibi.jpg
-  faviconSVG: /img/favicon.svg
-  favicon_32: /img/favicon-32x32.png
-  favicon_16: /img/favicon-16x16.png
+  faviconSVG: /imgages/favicon.svg
+  favicon_32: /imgages/favicon-32x32.png
+  favicon_16: /imgages/favicon-16x16.png
   since: 2003
   enableTwemoji: true
   colorScheme: auto
@@ -128,13 +128,3 @@ params:
       url: "https://kirchner.social/@fabrice"
       target: "_blank"
       rel: "me"
-
-  images:
-    alignment_center_class_name: d-block text-center
-    alignment_end_class_name: float-end ms-2
-    alignment_start_class_name: float-start me-2
-    class_name: img-fluid
-    figure_caption_class_name: figure-caption
-    figure_class_name: figure
-    figure_image_class_name: figure-img
-    modern_format: webp
