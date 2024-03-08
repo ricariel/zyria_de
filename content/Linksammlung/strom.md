@@ -1,5 +1,6 @@
 ---
 title: Strom
+
 ---
 Hichi IR und Home Assistant
 [Stromzähler mit einem ESP8266 / ESP32 mit Tasmota auslesen und darstellen](https://ottelo.jimdofree.com/stromzähler-auslesen-tasmota/)
