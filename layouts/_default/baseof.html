@@ -25,6 +25,7 @@
     {{ partial "footer.html" . }}
   </main>
 
+  <!--
   {{ if .Site.IsServer }}
   {{ $script := resources.Get "js/coder.js" }}
   <script src="{{ $script.RelPermalink }}" async></script>
@@ -52,7 +53,7 @@
   <script src="{{ $script.RelPermalink }}" integrity="{{ $script.Data.Integrity }}" nonce="{{ $script.Data.Integrity }}" async></script>
   {{ end }}
   {{ end }}
-
+  -->
   {{- partial "body/extensions" . -}}
 </body>
 
