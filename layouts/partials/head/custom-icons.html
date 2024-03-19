@@ -5,7 +5,7 @@
 <link rel="apple-touch-icon" href="{{ .Site.Params.touchicon | default "/images/apple-touch-icon.png" | relURL }}">
 <link rel="apple-touch-icon" sizes="180x180" href="{{ .Site.Params.touchicon | default "/images/apple-touch-icon.png" | relURL }}">
 
-  {{ $s := resources.Get "site.webmanifest" }}
+  {{ $s := resources.Get "site.webmanifest.json" }}
   {{ $s = $s | minify | fingerprint | resources.PostProcess }}
   <link
   rel="manifest"
