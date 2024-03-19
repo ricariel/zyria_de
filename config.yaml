@@ -13,6 +13,28 @@ tableOfContents: true
 enableGitInfo: true
 cleanDestinationDir: true
 
+security:
+  enableInlineShortcodes: false
+  exec:
+    allow:
+      - ^(dart-)?sass(-embedded)?$
+      - ^go$
+      - ^npx$
+      - ^postcss$
+      - ^asciidoctor$
+    osEnv:
+      - (?i)^((HTTPS?|NO)_PROXY|PATH(EXT)?|APPDATA|TE?MP|TERM|GO\w+|(XDG_CONFIG_)?HOME|USERPROFILE|SSH_AUTH_SOCK|DISPLAY|LANG|SYSTEMDRIVE)$
+  funcs:
+    getenv:
+      - ^HUGO_
+      - ^CI$
+  http:
+    mediaTypes: null
+    methods:
+      - (?i)GET|POST
+    urls:
+      - '.*'
+
 markup:
   highlight:
     style: "github-dark"
