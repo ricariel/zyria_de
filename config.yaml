@@ -75,8 +75,8 @@ build:
 params:
   lazyimg:
     resizer: auto
-    renderer: native
-    #renderer: lqip-webp
+    #renderer: native
+    renderer: lqip-webp
 
     # Resizer options:
     lqipSize: "120x Gaussian"
