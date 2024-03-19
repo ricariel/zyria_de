@@ -3,7 +3,7 @@
 {{ if .Params.canonicalUrl }}
 <link rel="canonical" href="{{ .Params.canonicalUrl }}">
 {{ else }}
-<link rel="canonical" href="{{ .Permalink }}">
+<link rel="canonical" href="{{ .RelPermalink }}">
 {{ end }}
 
 {{ partialCached "head/bootstrap.html" . }}
