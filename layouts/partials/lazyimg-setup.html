@@ -1,5 +1,5 @@
 {{ $lazyimg := resources.Get "lazyimg/lazysizes/lazysizes.min.js" }}
 {{ if hugo.IsProduction }}
-{{ $lazyimg = $lazyimg | minify | fingerprint | resources.PostProcess }}
+{{ $lazyimg = $lazyimg | minify | fingerprint }}
 {{ end }}
 <script src="{{ $lazyimg.Permalink }}" integrity="{{ $lazyimg.Data.Integrity }}" async></script>
