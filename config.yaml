@@ -99,9 +99,9 @@ params:
   description: Diese Seite ist (scheinbar) leer.
   keywords: 'blog,developer,personal'
   avatarurl: /images/chibi.jpg
-  faviconSVG: /imgages/favicon.svg
-  favicon_32: /imgages/favicon-32x32.png
-  favicon_16: /imgages/favicon-16x16.png
+  faviconSVG: /images/favicon.svg
+  favicon_32: /images/favicon-32x32.png
+  favicon_16: /images/favicon-16x16.png
   since: 2003
   enableTwemoji: true
   colorScheme: auto
