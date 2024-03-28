@@ -6,6 +6,7 @@ menu:
     - main
     - footer
 type: page
+weight: 9
 ---
 
 Diensteanbieter

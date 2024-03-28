@@ -108,7 +108,7 @@ params:
   customCSS: ['lazyimg.css']
 
   hidecolorschemetoggle: false
-  commit: "https://www.zyria.de/git/pyrox/zyria_de/commit"
+  commit: "https://git.zyria.de/pyrox/zyria_de/commit"
 
   background_color_class: bg-black
   recent_posts_number: 3
@@ -122,7 +122,7 @@ params:
     - name: Forgejo private
       icon: fa fa-git fa-2x
       weight: 1
-      url: "https://www.zyria.de/git/"
+      url: "https://git.zyria.de/"
       target: "_blank"
       rel: "me"
     - name: Codeberg

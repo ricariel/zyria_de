@@ -3,8 +3,8 @@ title: "Über mich"
 date: 2023-07-24T17:18:44+02:00
 draft: false
 menu:
-    main:
-        weight: 1
+  - main
+weight: 1
 ---
 
 ## Fabrice Kirchner

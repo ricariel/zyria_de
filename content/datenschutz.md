@@ -6,6 +6,7 @@ menu:
     - main
     - footer
 aliases: [ datenschutz, dataprotection, datenschutzerklärung ]
+weight: 7
 ---
 
 ## Einleitung
