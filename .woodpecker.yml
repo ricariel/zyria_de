@@ -22,7 +22,7 @@ steps:
     image: alpine
     secrets: [deploy_key, known_hosts, mail]
     environment:
-      - HUGO_OUTPUT: public
+      HUGO_OUTPUT: public
     commands:
       - apk --update add --no-cache hugo git openssh-client
       - mkdir /root/.ssh
