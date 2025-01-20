@@ -39,6 +39,7 @@ Interessen:
 * Heimautomatisierung
 * Cloud Free
 * Ingress
+* Strommanagement (PV)
 * Wandern
 * Radfahren
 
