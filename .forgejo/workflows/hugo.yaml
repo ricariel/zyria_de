@@ -67,11 +67,16 @@ jobs:
 
       - name: Upload
         run: |
+          ls
           cd ./public
+          ls
           git config --global user.email "${{ GITHUB_ACTOR }}@nomail.zyria.de"
           git config --global user.name "Woodpecker CI - ${{ GITHUB_ACTOR }}"
+          git status
           git add .
+          git status
           git commit -m "Woodpecker CI ${{ GITHUB_RUN_NUMBER }}"
+          git status
           git push
 
         #      # DEPLOY TO REMOTE SERVER
