@@ -44,30 +44,28 @@ jobs:
 
       #- run: npm install postcss postcss-cli @fullhuman/postcss-purgecss --save
 
+      - uses: https://github.com/actions/checkout@v4
+        with:
+          repository: https://git.zyria.de/pyrox/zyria_de-html.git
+          token: secrets.ZYRIA_TOKEN
+          path: public
+          submodules: true
+          fetch-depth: 0
+
+      - name: Upload
+        run: |
+          rm -rf ./public/*
+
       - name: Build Blog
         env:
           TZ: 'Europe/Berlin'
           HUGO_ENVIRONMENT: production
         run: hugo --minify --gc --environment production
 
-      - name: Set ENV variables
-        run: |
-          echo "CI_REPO_NAME=${GITHUB_REPOSITORY#$GITHUB_REPOSITORY_OWNER/}" >> $GITHUB_ENV
-
-      - name: Use the custom ENV variable
-        run: |
-          echo $CI_REPO_NAME
 
       - name: Upload
         run: |
-          git config --global user.email $MAIL
-          git config --global user.name "Woodpecker CI"
-          git clone https://git.zyria.de/pyrox/zyria_de-html.git $CI_REPO_NAME
-          rm -rf ./$CI_REPO_NAME/*
-          # Copy build step output to repository folder
-          cp -ar public/. $CI_REPO_NAME/
-          # Commit and push all static files with pipeline started timestamp
-          cd $CI_REPO_NAME
+          cd ./public
           git add .
           git commit -m "Woodpecker CI ${GITHUB_RUN_NUMBER}"
           git push
