@@ -5,7 +5,7 @@
   {{ end }}
   {{ $styles := resources.Get "scss/bootstrap.scss" }}
   {{ $styles = $styles | css.Sass $options }}
-  {{ $styles = $styles | resources.PostCSS $options }}
+  {{ $styles = $styles | css.PostCSS $options }}
   {{ if hugo.IsProduction }}
   {{ $styles = $styles | minify | fingerprint | resources.PostProcess }}
   {{ end }}
