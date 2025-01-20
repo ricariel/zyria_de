@@ -68,7 +68,7 @@ jobs:
           hugo --minify --gc --environment production
 
 
-      - name: Upload
+      - name: "Upload to repo"
         run: |
           echo "Doing Upload"
           ls
