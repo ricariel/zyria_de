@@ -50,6 +50,7 @@ jobs:
           github-server-url: 'https://git.zyria.de'
           token: ${{ secrets.ZYRIA_TOKEN }}
           path: public
+          ref: 'main'
           submodules: true
           fetch-depth: 0
 
