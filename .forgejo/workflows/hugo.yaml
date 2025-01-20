@@ -50,6 +50,32 @@ jobs:
           HUGO_ENVIRONMENT: production
         run: hugo --minify --gc --environment production
 
+      - name: Set ENV variables
+        run: |
+          echo "CI_REPO_NAME=${GITHUB_REPOSITORY#$GITHUB_REPOSITORY_OWNER/}" >> $GITHUB_ENV
+
+      - name: Use the custom ENV variable
+        run: |
+          echo $CI_REPO_NAME
+
+      - name: Upload
+        #run: mkdir /root/.ssh
+        #run: chmod 700 /root/.ssh
+        #run: echo "$DEPLOY_KEY">$HOME/.ssh/id_ed25519
+        #run: chown 600 $HOME/.ssh/id_ed25519
+        run: ssh-keyscan -p 2022 -H git.zyria.de > ~/.ssh/known_hosts
+        run: git config --global user.email $MAIL
+        run: git config --global user.name "Woodpecker CI"
+        run: git clone ssh://git@git.zyria.de:2022/pyrox/zyria_de-html.git $CI_REPO_NAME
+        run: rm -rf ./$CI_REPO_NAME/*
+        # Copy build step output to repository folder
+        run: cp -ar public/. $CI_REPO_NAME/
+        # Commit and push all static files with pipeline started timestamp
+        run: cd $CI_REPO_NAME
+        run: git add .
+        run: git commit -m "Woodpecker CI ${GITHUB_RUN_NUMBER}"
+        run: git push
+
         #      # DEPLOY TO REMOTE SERVER
         #      - name: Install SSH Key
         #        uses: shimataro/ssh-key-action@v2
