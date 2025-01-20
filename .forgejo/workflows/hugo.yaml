@@ -56,8 +56,8 @@ jobs:
 
       - name: "Cleanup repo"
         run: |
-          echo "rm -rf ./public/*"
-          rm -rf ./public/*
+          echo "rm -rf public/*"
+          rm -rf public/*
 
       - name: Build Blog
         env:
