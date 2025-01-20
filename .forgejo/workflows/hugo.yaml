@@ -68,10 +68,6 @@ jobs:
           echo "hugo --minify --gc --environment production"
           hugo --minify --gc --environment production
           pwd
-          echo "hugo run ready"
-
-      - run: |
-          pwd
           echo "Doing Upload"
           cd public
           pwd
