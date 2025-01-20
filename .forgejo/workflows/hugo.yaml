@@ -42,7 +42,7 @@ jobs:
 
       - run: npm ci
 
-      - run: npm install postcss postcss-cli @fullhuman/postcss-purgecss --save
+      #- run: npm install postcss postcss-cli @fullhuman/postcss-purgecss --save
 
       - name: Build Blog
         env:
