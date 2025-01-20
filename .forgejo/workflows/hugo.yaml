@@ -46,7 +46,8 @@ jobs:
 
       - uses: https://github.com/actions/checkout@v4
         with:
-          repository: https://git.zyria.de/pyrox/zyria_de-html.git
+          repository: pyrox/zyria_de-html
+          github-server-url: 'https://git.zyria.de'
           token: secrets.ZYRIA_TOKEN
           path: public
           submodules: true
