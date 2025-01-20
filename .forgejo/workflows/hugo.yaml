@@ -66,13 +66,13 @@ jobs:
         run: |
           echo "hugo --minify --gc --environment production"
           hugo --minify --gc --environment production
-
+          echo "hugo run ready"
 
       - name: "Upload to repo"
         run: |
           echo "Doing Upload"
           ls
-          cd ./public
+          cd public
           ls
           git config --global user.email "${{ GITHUB_ACTOR }}@nomail.zyria.de"
           git config --global user.name "Woodpecker CI - ${{ GITHUB_ACTOR }}"
@@ -81,4 +81,4 @@ jobs:
           git status
           git commit -m "Woodpecker CI ${{ GITHUB_RUN_NUMBER }}"
           git status
-          git push
+          git push -u origin main
