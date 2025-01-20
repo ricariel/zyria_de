@@ -66,12 +66,15 @@ jobs:
         run: |
           echo "hugo --minify --gc --environment production"
           hugo --minify --gc --environment production
+          pwd
           echo "hugo run ready"
 
       - name: "Upload to repo"
         run: |
+          pwd
           echo "Doing Upload"
           cd public
+          pwd
           git config --global user.email "${{ GITHUB_ACTOR }}@nomail.zyria.de"
           git config --global user.name "Woodpecker CI - ${{ GITHUB_ACTOR }}"
           git public add .
