@@ -5,7 +5,6 @@ title: Zyria
 theme: ["hugo-notice", "hugo-coder"]
 defaultContentLanguage: de
 SectionPagesMenu: main
-Paginate: 20
 googleAnalytics: ''
 enableRobotsTXT: true
 toc: true
@@ -22,6 +21,7 @@ security:
       - ^npx$
       - ^postcss$
       - ^asciidoctor$
+      - ^git$
     osEnv:
       - (?i)^((HTTPS?|NO)_PROXY|PATH(EXT)?|APPDATA|TE?MP|TERM|GO\w+|(XDG_CONFIG_)?HOME|USERPROFILE|SSH_AUTH_SOCK|DISPLAY|LANG|SYSTEMDRIVE)$
   funcs:
