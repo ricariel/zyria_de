@@ -67,10 +67,10 @@ jobs:
         run: |
           echo "hugo --minify --gc --environment production"
           hugo --minify --gc --environment production
-          echo "Doing Upload"
 
       - name: Upload
         run: |
+          echo "Doing Upload"
           cd public
           git config --global user.email ${{ env.GITHUB_ACTOR }}@zyria.de
           git config --global user.name "CI - ${{ env.GITHUB_ACTOR }}"
