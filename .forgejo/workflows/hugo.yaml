@@ -54,19 +54,23 @@ jobs:
           submodules: true
           fetch-depth: 0
 
-      - name: Upload
+      - name: "Cleanup repo"
         run: |
+          echo "rm -rf ./public/*"
           rm -rf ./public/*
 
       - name: Build Blog
         env:
           TZ: 'Europe/Berlin'
           HUGO_ENVIRONMENT: production
-        run: hugo --minify --gc --environment production
+        run: |
+          echo "hugo --minify --gc --environment production"
+          hugo --minify --gc --environment production
 
 
       - name: Upload
         run: |
+          echo "Doing Upload"
           ls
           cd ./public
           ls
