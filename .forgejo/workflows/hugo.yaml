@@ -48,7 +48,7 @@ jobs:
         with:
           repository: pyrox/zyria_de-html
           github-server-url: 'https://git.zyria.de'
-          token: secrets.ZYRIA_TOKEN
+          token: ${{ secrets.ZYRIA_TOKEN }}
           path: public
           submodules: true
           fetch-depth: 0
