@@ -10,7 +10,6 @@ Als Netto mit einem Solarkraftwerk in Selbstmontage geworben hat und unser Strom
 
 Zu Beginn meiner Reise habe ich mich für ein 830KWp Kraftwerk mit Deye Wechselrichter entschieden.
 
-
 {{< table table_class="table table-striped table-bordered table-hover" thead_class="table-info" caption="Auflistung aller Komponenten unserer Solaranlage">}}
 Komponente | Kosten inkl. Versand іn € | Bemerkung
 :--- | :---: | ---
