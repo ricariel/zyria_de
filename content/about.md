@@ -42,6 +42,7 @@ Interessen:
 * Strommanagement (PV)
 * Wandern
 * Radfahren
+* Wissen an Kind weitergeben
 
 Beruflich betreu ich die IT in einem mittelständischen Unternehmen.
 {{< /bs/col >}}
