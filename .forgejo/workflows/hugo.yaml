@@ -1,4 +1,4 @@
-name: Publish Blog
+name: Publish Site
 
 on: push
 
@@ -60,7 +60,7 @@ jobs:
           echo "rm -rf public/*"
           # rm -rf public/*
 
-      - name: Build Blog
+      - name: Build Site
         env:
           TZ: 'Europe/Berlin'
           HUGO_ENVIRONMENT: production
@@ -71,9 +71,11 @@ jobs:
           echo "Doing Upload"
           cd public
           pwd
-          git config --global user.email "${{ GITHUB_ACTOR }}@nomail.zyria.de"
-          git config --global user.name "Woodpecker CI - ${{ GITHUB_ACTOR }}"
+          git config --global user.email ${{ GITHUB_ACTOR }}@nomail.zyria.de
+          git config --global user.name Woodpecker CI - ${{ GITHUB_ACTOR }}
+      - name: Upload
+        run: |
           git public add .
-          git public commit -m "Woodpecker CI ${{ GITHUB_RUN_NUMBER }}"
+          git public commit -m Woodpecker CI ${{ GITHUB_RUN_NUMBER }}
           git public push -u origin main
           echo "Upload done"
