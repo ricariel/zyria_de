@@ -44,7 +44,8 @@ jobs:
 
       #- run: npm install postcss postcss-cli @fullhuman/postcss-purgecss --save
 
-      - uses: https://github.com/actions/checkout@v4
+      - name: Checkout target repo
+        uses: https://github.com/actions/checkout@v4
         with:
           repository: pyrox/zyria_de-html
           github-server-url: 'https://git.zyria.de'
@@ -69,8 +70,7 @@ jobs:
           pwd
           echo "hugo run ready"
 
-      - name: "Upload to repo"
-        run: |
+      - run: |
           pwd
           echo "Doing Upload"
           cd public
