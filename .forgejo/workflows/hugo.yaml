@@ -74,7 +74,7 @@ jobs:
 
       - name: Upload
         run: |
-          git config --global user.email fabrice@zyria.de
+          #git config --global user.email fabrice@zyria.de
           #          git config --global user.name Woodpecker CI - ${{ GITHUB_ACTOR }}
           #          git public add .
           #          git public commit -m Woodpecker CI ${{ GITHUB_RUN_NUMBER }}
