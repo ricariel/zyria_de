@@ -59,15 +59,10 @@ jobs:
           echo $CI_REPO_NAME
 
       - name: Upload
-        #run: mkdir /root/.ssh
-        #run: chmod 700 /root/.ssh
-        #run: echo "$DEPLOY_KEY">$HOME/.ssh/id_ed25519
-        #run: chown 600 $HOME/.ssh/id_ed25519
         run: |
-          ssh-keyscan -p 2022 -H git.zyria.de > ~/.ssh/known_hosts
           git config --global user.email $MAIL
           git config --global user.name "Woodpecker CI"
-          git clone ssh://git@git.zyria.de:2022/pyrox/zyria_de-html.git $CI_REPO_NAME
+          git clone https://git.zyria.de/pyrox/zyria_de-html.git $CI_REPO_NAME
           rm -rf ./$CI_REPO_NAME/*
           # Copy build step output to repository folder
           cp -ar public/. $CI_REPO_NAME/
