@@ -57,7 +57,7 @@ jobs:
       - name: "Cleanup repo"
         run: |
           echo "rm -rf public/*"
-          rm -rf public/*
+          # rm -rf public/*
 
       - name: Build Blog
         env:
@@ -71,9 +71,10 @@ jobs:
       - name: "Upload to repo"
         run: |
           echo "Doing Upload"
+          cd public
           git config --global user.email "${{ GITHUB_ACTOR }}@nomail.zyria.de"
           git config --global user.name "Woodpecker CI - ${{ GITHUB_ACTOR }}"
-          git -C public add .
-          git -C public commit -m "Woodpecker CI ${{ GITHUB_RUN_NUMBER }}"
-          git -C public push -u origin main
+          git public add .
+          git public commit -m "Woodpecker CI ${{ GITHUB_RUN_NUMBER }}"
+          git public push -u origin main
           echo "Upload done"
