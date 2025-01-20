@@ -12,38 +12,38 @@ jobs:
           submodules: true
           fetch-depth: 0
 
-          #      - uses: actions/setup-go@v5
-          #        with:
-          #          go-version: 'stable'
-          #
-          #      - name: Setup Hugo
-          #        uses: peaceiris/actions-hugo@v2
-          #        with:
-          #          hugo-version: 'latest'
-          #          extended: true
-          #
-          #      - name: Cache Hugo
-          #        uses: actions/cache@v4
-          #        with:
-          #          path: /tmp/hugo_cache
-          #          key: ${{ runner.os }}-hugomod-${{ hashFiles('**/go.sum') }}
-          #          restore-keys: |
-          #            ${{ runner.os }}-hugomod-
-          #
-          #      - uses: actions/setup-node@v4
-          #        with:
-          #          node-version: '20'
-          #          cache: 'npm'
-          #          # The action defaults to search for the dependency file (package-lock.json,
-          #          # npm-shrinkwrap.json or yarn.lock) in the repository root, and uses its
-          #          # hash as a part of the cache key.
-          #          # https://github.com/actions/setup-node/blob/main/docs/advanced-usage.md#caching-packages-data
-          #          cache-dependency-path: '**/package-lock.json'
-          #
-          #      - run: npm ci
-          #
-          #      #- run: npm install postcss postcss-cli @fullhuman/postcss-purgecss --save
-          #
+      - uses: actions/setup-go@v5
+        with:
+          go-version: 'stable'
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: 'latest'
+          extended: true
+
+      - name: Cache Hugo
+        uses: actions/cache@v4
+        with:
+          path: /tmp/hugo_cache
+          key: ${{ runner.os }}-hugomod-${{ hashFiles('**/go.sum') }}
+          restore-keys: |
+            ${{ runner.os }}-hugomod-
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+          # The action defaults to search for the dependency file (package-lock.json,
+          # npm-shrinkwrap.json or yarn.lock) in the repository root, and uses its
+          # hash as a part of the cache key.
+          # https://github.com/actions/setup-node/blob/main/docs/advanced-usage.md#caching-packages-data
+          cache-dependency-path: '**/package-lock.json'
+
+      - run: npm ci
+
+      #- run: npm install postcss postcss-cli @fullhuman/postcss-purgecss --save
+
       - name: Checkout target repo
         uses: https://github.com/actions/checkout@v4
         with:
@@ -58,7 +58,7 @@ jobs:
       - name: "Cleanup repo"
         run: |
           echo "rm -rf public/*"
-          # rm -rf public/*
+          rm -rf public/*
 
       - name: Build Site
         env:
@@ -66,15 +66,15 @@ jobs:
           HUGO_ENVIRONMENT: production
         run: |
           echo "hugo --minify --gc --environment production"
-          #hugo --minify --gc --environment production
+          hugo --minify --gc --environment production
           echo "Doing Upload"
 
       - name: Upload
         run: |
           cd public
-          git config --global user.email fabrice@zyria.de
-          git config --global user.name Woodpecker CI
+          git config --global user.email ${{ env.GITHUB_ACTOR }}@zyria.de
+          git config --global user.name "CI - ${{ env.GITHUB_ACTOR }}"
           git add .
-          git commit -m "Woodpecker CI"
+          git commit -m "CI - ${{ env.GITHUB_RUN_NUMBER }}"
           git push -u origin main
           echo "Upload done"
