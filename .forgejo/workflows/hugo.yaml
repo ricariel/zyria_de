@@ -67,16 +67,14 @@ jobs:
         run: |
           echo "hugo --minify --gc --environment production"
           #hugo --minify --gc --environment production
-          pwd
           echo "Doing Upload"
-          cd public
-          pwd
 
       - name: Upload
         run: |
+          cd public
           git config --global user.email fabrice@zyria.de
           git config --global user.name Woodpecker CI
-          git public add .
-          git public commit -m "Woodpecker CI"
-          git public push -u origin main
+          git add .
+          git commit -m "Woodpecker CI"
+          git push -u origin main
           echo "Upload done"
