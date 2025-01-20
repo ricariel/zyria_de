@@ -11,6 +11,59 @@ toc: true
 tableOfContents: true
 enableGitInfo: true
 cleanDestinationDir: true
+build:
+  writeStats: true
+  buildStats:
+    enable: true
+
+server:
+  headers:
+  - for: /**
+    values:
+      Content-Security-Policy: script-src localhost:1313
+      Referrer-Policy: strict-origin-when-cross-origin
+      X-Content-Type-Options: nosniff
+      X-Frame-Options: DENY
+      X-XSS-Protection: 1; mode=block
+
+minify:
+  disableCSS: false
+  disableHTML: false
+  disableJS: false
+  disableJSON: false
+  disableSVG: false
+  disableXML: false
+  minifyOutput: false
+  tdewolff:
+    css:
+      inline: false
+      keepCSS2: true
+      precision: 0
+    html:
+      keepComments: false
+      keepConditionalComments: false
+      keepDefaultAttrVals: true
+      keepDocumentTags: true
+      keepEndTags: true
+      keepQuotes: false
+      keepSpecialComments: true
+      keepWhitespace: false
+      templateDelims:
+      - ""
+      - ""
+    js:
+      keepVarNames: false
+      precision: 0
+      version: 2022
+    json:
+      keepNumbers: false
+      precision: 0
+    svg:
+      inline: false
+      keepComments: false
+      precision: 0
+    xml:
+      keepWhitespace: false
 
 security:
   enableInlineShortcodes: false
@@ -68,9 +121,6 @@ module:
       disable: false
       ignoreConfig: false
       ignoreImports: false
-
-build:
-  writeStats: true
 
 params:
   lazyimg:
