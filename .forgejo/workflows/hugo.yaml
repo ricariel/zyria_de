@@ -47,11 +47,11 @@ jobs:
       - name: Checkout target repo
         uses: https://github.com/actions/checkout@v4
         with:
-          repository: pyrox/zyria_de-html
+          repository: pyrox/zyria_de
           github-server-url: 'https://git.zyria.de'
           token: ${{ secrets.ZYRIA_TOKEN }}
           path: public
-          ref: 'main'
+          ref: 'pages'
           submodules: true
           fetch-depth: 0
 
@@ -76,5 +76,5 @@ jobs:
           git config --global user.name "CI - ${{ env.GITHUB_ACTOR }}"
           git add .
           git commit -m "CI - ${{ env.GITHUB_RUN_NUMBER }}"
-          git push -u origin main
+          git push -u origin pages
           echo "Upload done"
