@@ -16,15 +16,15 @@ build:
   buildStats:
     enable: true
 
-server:
-  headers:
-  - for: /**
-    values:
-      Content-Security-Policy: script-src localhost:1313
-      Referrer-Policy: strict-origin-when-cross-origin
-      X-Content-Type-Options: nosniff
-      X-Frame-Options: DENY
-      X-XSS-Protection: 1; mode=block
+#server:
+#  headers:
+#  - for: /**
+#    values:
+#      Content-Security-Policy: script-src localhost:1313
+#      Referrer-Policy: strict-origin-when-cross-origin
+#      X-Content-Type-Options: nosniff
+#      X-Frame-Options: DENY
+#      X-XSS-Protection: 1; mode=block
 
 minify:
   disableCSS: false
@@ -143,7 +143,8 @@ params:
       position_end: 1rem
 
 
-  author: Fabrice Kirchner
+  author:
+    name: Fabrice Kirchner
   info: |
     Diese Seite ist (scheinbar) leer.
   description: Diese Seite ist (scheinbar) leer.
