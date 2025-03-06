@@ -16,7 +16,7 @@ require (
 	github.com/hugomods/icons/vendors/bootstrap v0.5.9 // indirect
 	github.com/hugomods/images v0.11.2 // indirect
 	github.com/hugomods/shortcodes v0.24.0 // indirect
+	github.com/luizdepra/hugo-coder v0.0.0-20250228200816-6bc00595434a // indirect
 	github.com/twbs/bootstrap v5.3.3+incompatible // indirect
 	github.com/twbs/icons v1.11.3 // indirect
-	gitlab.com/writeonlyhugo/hugo-module-bootstrap v0.0.0-20230104032709-256ccad7a64e // indirect
 )
