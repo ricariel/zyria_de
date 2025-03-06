@@ -26,6 +26,16 @@ build:
 #      X-Content-Type-Options: nosniff
 #      X-Frame-Options: DENY
 #      X-XSS-Protection: 1; mode=block
+outputFormats:
+  SearchIndex:
+    mediaType: "application/json"
+    baseName: "searchindex"
+    isPlainText: true
+    notAlternative: true
+
+outputs:
+  home: ["HTML", "RSS", "SearchIndex"]
+  section: ["HTML", "RSS"]
 
 minify:
   disableCSS: false
@@ -99,7 +109,6 @@ markup:
       unsafe: true
       hardWraps: true
 
-
 sitemap:
   changefreq: monthly
   priority: 0.5
@@ -144,8 +153,7 @@ params:
       position_end: 1rem
 
 
-  author:
-    name: Fabrice Kirchner
+  author: Fabrice Kirchner
   info: |
     Diese Seite ist (scheinbar) leer.
   description: Diese Seite ist (scheinbar) leer.
