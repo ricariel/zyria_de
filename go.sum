@@ -45,12 +45,6 @@ github.com/hugomods/shortcodes v0.10.0 h1:NKu2m1xciBsqzu7PU0SDu1C12OHdX+pMjfUI97
 github.com/hugomods/shortcodes v0.10.0/go.mod h1:EnVopbZMNI/HeteM3Lp3phBTCRLvPSe7l142qhRFFPY=
 github.com/hugomods/shortcodes v0.24.0 h1:+on4M5WuqmczQ0mXA0Ec4PZApV0UbH+YHaLC5MVobyo=
 github.com/hugomods/shortcodes v0.24.0/go.mod h1:EnVopbZMNI/HeteM3Lp3phBTCRLvPSe7l142qhRFFPY=
-github.com/martignoni/hugo-notice v0.0.0-20230418180851-cce7afd430d4 h1:OSXyp1wbpFw+WqGmo1aiTKmMzb9+UBrY3UA7jN9UEUo=
-github.com/martignoni/hugo-notice v0.0.0-20230418180851-cce7afd430d4/go.mod h1:MIQPOMgEcbyRC0gNLzQFSgrS+wIy3RuQ/HbaZYtTOKU=
-github.com/martignoni/hugo-notice v0.0.0-20230829114050-2d7d7460bc60 h1:cPU84OKIQJMEfuvgbAem94J5YDn3UBDrth17VM9I0QA=
-github.com/martignoni/hugo-notice v0.0.0-20230829114050-2d7d7460bc60/go.mod h1:MIQPOMgEcbyRC0gNLzQFSgrS+wIy3RuQ/HbaZYtTOKU=
-github.com/martignoni/hugo-notice v0.0.0-20240707105359-40327ac00cc4 h1:lxS0B1ta9/uW+orrnvsGHMCC0TgN4DymEgdlb0PL/uU=
-github.com/martignoni/hugo-notice v0.0.0-20240707105359-40327ac00cc4/go.mod h1:MIQPOMgEcbyRC0gNLzQFSgrS+wIy3RuQ/HbaZYtTOKU=
 github.com/twbs/bootstrap v5.3.0+incompatible h1:4+staADO0OrqUv77m+XL+vHYojLH9oxb4Vxi9mnIJWg=
 github.com/twbs/bootstrap v5.3.0+incompatible/go.mod h1:fZTSrkpSf0/HkL0IIJzvVspTt1r9zuf7XlZau8kpcY0=
 github.com/twbs/bootstrap v5.3.2+incompatible/go.mod h1:fZTSrkpSf0/HkL0IIJzvVspTt1r9zuf7XlZau8kpcY0=

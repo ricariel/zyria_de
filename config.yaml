@@ -2,7 +2,7 @@
 baseURL: 'https://zyria.de/'
 languageCode: de-de
 title: Zyria
-theme: ["hugo-notice", "hugo-coder"]
+theme: ["hugo-coder"]
 defaultContentLanguage: de
 SectionPagesMenu: main
 googleAnalytics: ''
@@ -112,7 +112,6 @@ taxonomies:
 module:
   imports:
     - path: github.com/hugo-mods/lazyimg
-    - path: github.com/martignoni/hugo-notice
     - path: github.com/hugomods/images
     - path: github.com/hugomods/shortcodes
     - path: github.com/hugomods/bootstrap
