@@ -82,10 +82,10 @@ security:
     allow:
       - ^(dart-)?sass(-embedded)?$
       - ^go$
+      - ^git$
       - ^npx$
       - ^postcss$
-      - ^asciidoctor$
-      - ^git$
+      - ^tailwindcss$
     osEnv:
       - (?i)^((HTTPS?|NO)_PROXY|PATH(EXT)?|APPDATA|TE?MP|TERM|GO\w+|(XDG_CONFIG_)?HOME|USERPROFILE|SSH_AUTH_SOCK|DISPLAY|LANG|SYSTEMDRIVE)$
   funcs:
@@ -97,7 +97,7 @@ security:
     methods:
       - (?i)GET|POST
     urls:
-      - '.*'
+      - .*
 
 markup:
   highlight:
