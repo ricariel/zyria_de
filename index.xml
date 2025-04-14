@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Eine (scheinbar) leere Homepage on Zyria</title><link>https://zyria.de/</link><description>Recent content in Eine (scheinbar) leere Homepage on Zyria</description><generator>Hugo</generator><language>de-de</language><lastBuildDate>Mon, 14 Apr 2025 11:55:28 +0200</lastBuildDate><atom:link href="https://zyria.de/index.xml" rel="self" type="application/rss+xml"/><item><title>Über mich</title><link>https://zyria.de/about/</link><pubDate>Mon, 24 Jul 2023 17:18:44 +0200</pubDate><guid>https://zyria.de/about/</guid><description>&lt;h2 id="fabrice-kirchner">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Eine (scheinbar) leere Homepage on Zyria</title><link>https://zyria.de/</link><description>Recent content in Eine (scheinbar) leere Homepage on Zyria</description><generator>Hugo</generator><language>de-de</language><lastBuildDate>Mon, 14 Apr 2025 13:52:57 +0200</lastBuildDate><atom:link href="https://zyria.de/index.xml" rel="self" type="application/rss+xml"/><item><title>Über mich</title><link>https://zyria.de/about/</link><pubDate>Mon, 24 Jul 2023 17:18:44 +0200</pubDate><guid>https://zyria.de/about/</guid><description>&lt;h2 id="fabrice-kirchner">
  Fabrice Kirchner
  &lt;a class="heading-link" href="#fabrice-kirchner">
  &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
@@ -10,37 +10,7 @@
  class="container"
  >
 &lt;div class="col">
-&lt;p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- &lt;picture class="float-end ms-2">
- &lt;source srcset="https://zyria.de/images/chibi_hu_2732f90000136f1b.webp" type="image/webp" />
- &lt;img class="img-fluid" src="https://zyria.de/images/chibi_hu_f54bb69719549f68.f0d88672c089e7109fe9375761dd36ae.jpg" alt="Test Image" loading="lazy" height="644" width="330" />
-&lt;/picture>
-&lt;/p>
+&lt;p>&lt;img src="https://zyria.de/images/chibi.jpg?width=330px&amp;amp;classes=inline#float-end" alt="Test Image" />&lt;/p>
 &lt;/div>
 &lt;div class="col">
 &lt;ul>
@@ -71,7 +41,10 @@
 &lt;li>Radfahren&lt;/li>
 &lt;li>Wissen an Kind weitergeben&lt;/li>
 &lt;/ul>
-&lt;p>Beruflich betreu ich die IT in einem mittelständischen Unternehmen.&lt;/p></description></item><item><title>Datenschutzerklärung</title><link>https://zyria.de/datenschutz/</link><pubDate>Fri, 21 Jul 2023 15:17:40 +0200</pubDate><guid>https://zyria.de/datenschutz/</guid><description>&lt;h2 id="einleitung">
+&lt;p>Beruflich betreu ich die IT in einem mittelständischen Unternehmen.&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;/div></description></item><item><title>Datenschutzerklärung</title><link>https://zyria.de/datenschutz/</link><pubDate>Fri, 21 Jul 2023 15:17:40 +0200</pubDate><guid>https://zyria.de/datenschutz/</guid><description>&lt;h2 id="einleitung">
  Einleitung
  &lt;a class="heading-link" href="#einleitung">
  &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
@@ -107,8 +80,10 @@ web(at)zyria.de&lt;br>
 Telefon:&lt;br>
 0160 5513991&lt;/p>
 &lt;p>Mastodon:&lt;br>
-&lt;a href="https://kirchner.social/@fabrice" class="external-link" target="_blank" rel="noopener">fabrice&lt;/a>&lt;/p>
-&lt;p>&lt;a href="https://datenschutz-generator.de/" title="Rechtstext von Dr. Schwenke - für weitere Informationen bitte anklicken." class="external-link" target="_blank" rel="noopener">Erstellt mit kostenlosem Datenschutz-Generator.de von Dr. Thomas Schwenke&lt;/a>&lt;/p></description></item><item><title>Solaranlage</title><link>https://zyria.de/projekte/solaranlage/</link><pubDate>Fri, 22 Mar 2024 10:12:47 +0100</pubDate><guid>https://zyria.de/projekte/solaranlage/</guid><description>&lt;h2 id="übersicht-über-unsere-solaranlage-mit-komponenten">
+
+&lt;a href="https://kirchner.social/@fabrice" target="_blank">fabrice&lt;/a>&lt;/p>
+&lt;p>
+&lt;a href="https://datenschutz-generator.de/" title="Rechtstext von Dr. Schwenke - für weitere Informationen bitte anklicken." target="_blank">Erstellt mit kostenlosem Datenschutz-Generator.de von Dr. Thomas Schwenke&lt;/a>&lt;/p></description></item><item><title>Solaranlage</title><link>https://zyria.de/projekte/solaranlage/</link><pubDate>Fri, 22 Mar 2024 10:12:47 +0100</pubDate><guid>https://zyria.de/projekte/solaranlage/</guid><description>&lt;h2 id="übersicht-über-unsere-solaranlage-mit-komponenten">
  Übersicht über unsere Solaranlage mit Komponenten
  &lt;a class="heading-link" href="#%c3%bcbersicht-%c3%bcber-unsere-solaranlage-mit-komponenten">
  &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
@@ -233,7 +208,8 @@ Kabelbinder, Zangen, Schraubenschlüssel&lt;/p></description></item><item><title
  &lt;span class="sr-only">Link zu Überschrift&lt;/span>
  &lt;/a>
 &lt;/h2>
-&lt;p>&lt;a href="https://ottelo.jimdofree.com/stromz%c3%a4hler-auslesen-tasmota/" class="external-link" target="_blank" rel="noopener">Stromzähler mit einem ESP8266 / ESP32 mit Tasmota auslesen und darstellen&lt;/a>&lt;/p>
+&lt;p>
+&lt;a href="https://ottelo.jimdofree.com/stromz%c3%a4hler-auslesen-tasmota/" target="_blank">Stromzähler mit einem ESP8266 / ESP32 mit Tasmota auslesen und darstellen&lt;/a>&lt;/p>
 &lt;h2 id="solarflow-hoymiles-homeassistant">
  Solarflow Hoymiles Homeassistant
  &lt;a class="heading-link" href="#solarflow-hoymiles-homeassistant">
@@ -241,7 +217,8 @@ Kabelbinder, Zangen, Schraubenschlüssel&lt;/p></description></item><item><title
  &lt;span class="sr-only">Link zu Überschrift&lt;/span>
  &lt;/a>
 &lt;/h2>
-&lt;p>&lt;a href="https://github.com/z-master42/solarflow/tree/main" class="external-link" target="_blank" rel="noopener">Git Repo mit nützlichen Infos&lt;/a>&lt;/p>
+&lt;p>
+&lt;a href="https://github.com/z-master42/solarflow/tree/main" target="_blank">Git Repo mit nützlichen Infos&lt;/a>&lt;/p>
 &lt;h2 id="solarflow">
  Solarflow
  &lt;a class="heading-link" href="#solarflow">
@@ -250,22 +227,30 @@ Kabelbinder, Zangen, Schraubenschlüssel&lt;/p></description></item><item><title
  &lt;/a>
 &lt;/h2>
 &lt;p>Steuerung des Solarflow&lt;br>
-&lt;a href="https://github.com/reinhard-brandstaedter/solarflow-control" class="external-link" target="_blank" rel="noopener">Solarflow Control&lt;/a>&lt;/p>
+
+&lt;a href="https://github.com/reinhard-brandstaedter/solarflow-control" target="_blank">Solarflow Control&lt;/a>&lt;/p>
 &lt;p>Von Cloud trennen und an den loaklen MQTT binden&lt;br>
-&lt;a href="https://github.com/reinhard-brandstaedter/solarflow-bt-manager" class="external-link" target="_blank" rel="noopener">Solarflow Bluetooth Manager&lt;/a>&lt;/p>
+
+&lt;a href="https://github.com/reinhard-brandstaedter/solarflow-bt-manager" target="_blank">Solarflow Bluetooth Manager&lt;/a>&lt;/p>
 &lt;p>Eine Statusseite&lt;br>
-&lt;a href="https://github.com/reinhard-brandstaedter/solarflow-statuspage" class="external-link" target="_blank" rel="noopener">Solarflow Statuspage and Control&lt;/a>&lt;/p>
+
+&lt;a href="https://github.com/reinhard-brandstaedter/solarflow-statuspage" target="_blank">Solarflow Statuspage and Control&lt;/a>&lt;/p>
 &lt;p>Telegram Austauschgruppe&lt;br>
-&lt;a href="https://t.me/&amp;#43;nEPrpHst6xFmZTky" class="external-link" target="_blank" rel="noopener">Private Zendure Austauschgruppe&lt;/a>&lt;/p></description></item><item><title>Hardware</title><link>https://zyria.de/projekte/homelab/hardware/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://zyria.de/projekte/homelab/hardware/</guid><description>&lt;h2 id="netzwerk">
- Netzwerk
- &lt;a class="heading-link" href="#netzwerk">
+
+&lt;a href="https://t.me/&amp;#43;nEPrpHst6xFmZTky" target="_blank">Private Zendure Austauschgruppe&lt;/a>&lt;/p></description></item><item><title>Homelab Dokumentation</title><link>https://zyria.de/projekte/homelab/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://zyria.de/projekte/homelab/</guid><description>&lt;h2 id="unterseiten">
+ Unterseiten
+ &lt;a class="heading-link" href="#unterseiten">
  &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
  &lt;span class="sr-only">Link zu Überschrift&lt;/span>
  &lt;/a>
 &lt;/h2>
-&lt;ul>
-&lt;li>Fritzbox 7590&lt;/li>
-&lt;li>Unifi US 8 PoE 150W (2x)&lt;/li>
-&lt;li>Unifi Nano HD (2x)&lt;/li>
-&lt;li>Unifi U6 Pro&lt;/li>
-&lt;/ul></description></item></channel></rss>
+&lt;p>
+
+ &lt;a href="hardware">Hardware&lt;/a>&lt;/p>
+&lt;h2 id="welche-software-wird-auf-welchen-hardwarenodes-ausgeführt">
+ Welche Software wird auf welchen Hardwarenodes ausgeführt
+ &lt;a class="heading-link" href="#welche-software-wird-auf-welchen-hardwarenodes-ausgef%c3%bchrt">
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h2></description></item></channel></rss>

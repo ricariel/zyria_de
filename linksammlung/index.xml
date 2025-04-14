@@ -5,7 +5,8 @@
  &lt;span class="sr-only">Link zu Überschrift&lt;/span>
  &lt;/a>
 &lt;/h2>
-&lt;p>&lt;a href="https://ottelo.jimdofree.com/stromz%c3%a4hler-auslesen-tasmota/" class="external-link" target="_blank" rel="noopener">Stromzähler mit einem ESP8266 / ESP32 mit Tasmota auslesen und darstellen&lt;/a>&lt;/p>
+&lt;p>
+&lt;a href="https://ottelo.jimdofree.com/stromz%c3%a4hler-auslesen-tasmota/" target="_blank">Stromzähler mit einem ESP8266 / ESP32 mit Tasmota auslesen und darstellen&lt;/a>&lt;/p>
 &lt;h2 id="solarflow-hoymiles-homeassistant">
  Solarflow Hoymiles Homeassistant
  &lt;a class="heading-link" href="#solarflow-hoymiles-homeassistant">
@@ -13,7 +14,8 @@
  &lt;span class="sr-only">Link zu Überschrift&lt;/span>
  &lt;/a>
 &lt;/h2>
-&lt;p>&lt;a href="https://github.com/z-master42/solarflow/tree/main" class="external-link" target="_blank" rel="noopener">Git Repo mit nützlichen Infos&lt;/a>&lt;/p>
+&lt;p>
+&lt;a href="https://github.com/z-master42/solarflow/tree/main" target="_blank">Git Repo mit nützlichen Infos&lt;/a>&lt;/p>
 &lt;h2 id="solarflow">
  Solarflow
  &lt;a class="heading-link" href="#solarflow">
@@ -22,10 +24,14 @@
  &lt;/a>
 &lt;/h2>
 &lt;p>Steuerung des Solarflow&lt;br>
-&lt;a href="https://github.com/reinhard-brandstaedter/solarflow-control" class="external-link" target="_blank" rel="noopener">Solarflow Control&lt;/a>&lt;/p>
+
+&lt;a href="https://github.com/reinhard-brandstaedter/solarflow-control" target="_blank">Solarflow Control&lt;/a>&lt;/p>
 &lt;p>Von Cloud trennen und an den loaklen MQTT binden&lt;br>
-&lt;a href="https://github.com/reinhard-brandstaedter/solarflow-bt-manager" class="external-link" target="_blank" rel="noopener">Solarflow Bluetooth Manager&lt;/a>&lt;/p>
+
+&lt;a href="https://github.com/reinhard-brandstaedter/solarflow-bt-manager" target="_blank">Solarflow Bluetooth Manager&lt;/a>&lt;/p>
 &lt;p>Eine Statusseite&lt;br>
-&lt;a href="https://github.com/reinhard-brandstaedter/solarflow-statuspage" class="external-link" target="_blank" rel="noopener">Solarflow Statuspage and Control&lt;/a>&lt;/p>
+
+&lt;a href="https://github.com/reinhard-brandstaedter/solarflow-statuspage" target="_blank">Solarflow Statuspage and Control&lt;/a>&lt;/p>
 &lt;p>Telegram Austauschgruppe&lt;br>
-&lt;a href="https://t.me/&amp;#43;nEPrpHst6xFmZTky" class="external-link" target="_blank" rel="noopener">Private Zendure Austauschgruppe&lt;/a>&lt;/p></description></item></channel></rss>
+
+&lt;a href="https://t.me/&amp;#43;nEPrpHst6xFmZTky" target="_blank">Private Zendure Austauschgruppe&lt;/a>&lt;/p></description></item></channel></rss>
