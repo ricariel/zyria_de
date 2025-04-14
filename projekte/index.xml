@@ -123,9 +123,7 @@ Kabelbinder, Zangen, Schraubenschlüssel&lt;/p></description></item><item><title
  &lt;span class="sr-only">Link zu Überschrift&lt;/span>
  &lt;/a>
 &lt;/h2>
-&lt;p>
-
- &lt;a href="hardware">Hardware&lt;/a>&lt;/p>
+&lt;p>&lt;a href="hardware" >Hardware&lt;/a>&lt;/p>
 &lt;h2 id="welche-software-wird-auf-welchen-hardwarenodes-ausgeführt">
  Welche Software wird auf welchen Hardwarenodes ausgeführt
  &lt;a class="heading-link" href="#welche-software-wird-auf-welchen-hardwarenodes-ausgef%c3%bchrt">
