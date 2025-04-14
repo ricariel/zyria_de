@@ -8,4 +8,3 @@ description: Eine kleine Dokumentation für mich
 [Hardware](hardware)
 
 ## Welche Software wird auf welchen Hardwarenodes ausgeführt
-
