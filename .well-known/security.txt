@@ -1,5 +1,8 @@
 Contact: mailto:fabrice@zyria.de
 Contact: tel:+491605513991
-Expires: 2024-08-29T11:00:00.000Z
+Expires: 2026-04-13T22:00:00.000Z
 Preferred-Languages: de, en
-Canonical: https://www.zyria.de/.well-known/security.txt
+Canonical: https://hx53.de/.well-known/security.txt
+Canonical: https://quaecki.de/.well-known/security.txt
+Canonical: https://kirchner.social/.well-known/security.txt
+Canonical: https://zyria.de/.well-known/security.txt
