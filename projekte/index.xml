@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Projekte on Zyria</title><link>https://zyria.de/projekte/</link><description>Recent content in Projekte on Zyria</description><generator>Hugo</generator><language>de-de</language><lastBuildDate>Mon, 14 Apr 2025 13:52:57 +0200</lastBuildDate><atom:link href="https://zyria.de/projekte/index.xml" rel="self" type="application/rss+xml"/><item><title>Solaranlage</title><link>https://zyria.de/projekte/solaranlage/</link><pubDate>Fri, 22 Mar 2024 10:12:47 +0100</pubDate><guid>https://zyria.de/projekte/solaranlage/</guid><description>&lt;h2 id="übersicht-über-unsere-solaranlage-mit-komponenten">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Projekte on Zyria</title><link>https://zyria.de/projekte/</link><description>Recent content in Projekte on Zyria</description><generator>Hugo</generator><language>de-de</language><lastBuildDate>Mon, 14 Apr 2025 14:33:46 +0200</lastBuildDate><atom:link href="https://zyria.de/projekte/index.xml" rel="self" type="application/rss+xml"/><item><title>Solaranlage</title><link>https://zyria.de/projekte/solaranlage/</link><pubDate>Fri, 22 Mar 2024 10:12:47 +0100</pubDate><guid>https://zyria.de/projekte/solaranlage/</guid><description>&lt;h2 id="übersicht-über-unsere-solaranlage-mit-komponenten">
  Übersicht über unsere Solaranlage mit Komponenten
  &lt;a class="heading-link" href="#%c3%bcbersicht-%c3%bcber-unsere-solaranlage-mit-komponenten">
  &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
@@ -123,11 +123,12 @@ Kabelbinder, Zangen, Schraubenschlüssel&lt;/p></description></item><item><title
  &lt;span class="sr-only">Link zu Überschrift&lt;/span>
  &lt;/a>
 &lt;/h2>
-&lt;p>&lt;a href="hardware" >Hardware&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://zyria.de/projekte/homelab/Hardware" >Hardware&lt;/a>&lt;/p>
 &lt;h2 id="welche-software-wird-auf-welchen-hardwarenodes-ausgeführt">
  Welche Software wird auf welchen Hardwarenodes ausgeführt
  &lt;a class="heading-link" href="#welche-software-wird-auf-welchen-hardwarenodes-ausgef%c3%bchrt">
  &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
  &lt;span class="sr-only">Link zu Überschrift&lt;/span>
  &lt;/a>
-&lt;/h2></description></item></channel></rss>
+&lt;/h2>
+&lt;p>&lt;a href="https://zyria.de/projekte/homelab/Software" >Software&lt;/a>&lt;/p></description></item></channel></rss>
