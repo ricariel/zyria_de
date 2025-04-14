@@ -1,6 +1,6 @@
 ---
 title: Hardware
-desciption: Hardware Übersicht
+description: Hardware Übersicht
 ---
 
 ## Netzwerk
@@ -9,6 +9,3 @@ desciption: Hardware Übersicht
 - Unifi US 8 PoE 150W (2x)
 - Unifi Nano HD (2x)
 - Unifi U6 Pro
-
-
-

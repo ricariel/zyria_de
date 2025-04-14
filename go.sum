@@ -1,5 +1,9 @@
+git.zyria.de/pyrox/hugo-default-coder v0.0.0-20250414100429-a01ec42ee17c h1:iYjc3CdWwApKpD03z/tQFeLGjgA7ivwBrlBKIqESDNw=
+git.zyria.de/pyrox/hugo-default-coder v0.0.0-20250414100429-a01ec42ee17c/go.mod h1:Uwoc3s+nTSuyx02jv72jzDA3RtAnPgUh+1i5MF7BG0g=
 git.zyria.de/pyrox/hugo-shortcodes v0.0.0-20250414084428-4e08f9bf1da9 h1:2yKr9bTSnvPgQYbMYf182lkPHw5uu6Iq3Bc2O2iGg5M=
 git.zyria.de/pyrox/hugo-shortcodes v0.0.0-20250414084428-4e08f9bf1da9/go.mod h1:V2R75xLAXqOdvHSkKtqc0AqaCUof6704G2ELS6Huis4=
+git.zyria.de/pyrox/hugo-shortcodes v0.0.0-20250414085812-757216ac3d51 h1:TE37SKpWFqZbUhCQUNy2uxTW883JuD7VH71/K66LSzU=
+git.zyria.de/pyrox/hugo-shortcodes v0.0.0-20250414085812-757216ac3d51/go.mod h1:V2R75xLAXqOdvHSkKtqc0AqaCUof6704G2ELS6Huis4=
 github.com/aFarkas/lazysizes v0.0.0-20210408151554-27c7ceb7d737/go.mod h1:xl3heUINAn0oPowV1biDQ2Pyw1w3x66I7KEbWkaxox0=
 github.com/aFarkas/lazysizes v0.0.0-20210517092641-1523a4ff4579 h1:K8ukOfj0MOBEWWsL8Mzd8GXIbAf7/RHnX1hipqbjeto=
 github.com/aFarkas/lazysizes v0.0.0-20210517092641-1523a4ff4579/go.mod h1:xl3heUINAn0oPowV1biDQ2Pyw1w3x66I7KEbWkaxox0=
@@ -13,6 +17,8 @@ github.com/hugo-mods/lazyimg v0.0.0-20220925161121-72183e14a364 h1:D6wkkO/MtNX59
 github.com/hugo-mods/lazyimg v0.0.0-20220925161121-72183e14a364/go.mod h1:mUw/5rIlzxiJfDnKsFnZAITZ29I7n3QeDd8WwGsBmTI=
 github.com/hugomods/base v0.7.2 h1:SShNl7koN79CEUdGQ65Knbf/c2k+bE+El5ManYWd8Cg=
 github.com/hugomods/base v0.7.2/go.mod h1:hnWCPbVxuhXBwdFax3mmbMlWKmIo/7OP36MCLOyHtT4=
+github.com/hugomods/base v0.7.3 h1:HQ/eRGprVO6CyeHrMEFBEdl+zkpO4dYcIizgbhKwaVg=
+github.com/hugomods/base v0.7.3/go.mod h1:hnWCPbVxuhXBwdFax3mmbMlWKmIo/7OP36MCLOyHtT4=
 github.com/hugomods/bootstrap v0.23.0 h1:/Mj6VCk+xUNan72m4ulupu+oRug7IuvpBO1jp+MhhFw=
 github.com/hugomods/bootstrap v0.23.0/go.mod h1:eL5Y6abDndTt/LZu1VtgprvkdZgsV7/d3jpSoCcDkKQ=
 github.com/hugomods/icons v0.6.6 h1:gGlafcBDRP7sSID+tgLcWdog+s/QBj8DIfU+h9tZj1U=
@@ -27,5 +33,7 @@ github.com/luizdepra/hugo-coder v0.0.0-20250228200816-6bc00595434a h1:yeyX4eAKfC
 github.com/luizdepra/hugo-coder v0.0.0-20250228200816-6bc00595434a/go.mod h1:9EQBf2rU+NPjlohGuKcEgdqSeOc3tIQoOty4xPpuUQ4=
 github.com/twbs/bootstrap v5.3.3+incompatible h1:goFoqinzdHfkeegpFP7pvhbd0g+A3O2hbU3XCjuNrEQ=
 github.com/twbs/bootstrap v5.3.3+incompatible/go.mod h1:fZTSrkpSf0/HkL0IIJzvVspTt1r9zuf7XlZau8kpcY0=
+github.com/twbs/bootstrap v5.3.5+incompatible h1:6XrrFNMsiTTFcVTBf2886FO2XUNtwSE+QPv1os0uAA4=
+github.com/twbs/bootstrap v5.3.5+incompatible/go.mod h1:fZTSrkpSf0/HkL0IIJzvVspTt1r9zuf7XlZau8kpcY0=
 github.com/twbs/icons v1.11.3 h1:XhvrQ1XDom9ggBbQx3wQCFGEr8qAQwQP/dAcw8OXMtA=
 github.com/twbs/icons v1.11.3/go.mod h1:GnRlymgVWp5iVJCMa0Me5b6tFyGpVc2bSxPMRGIJmyA=
