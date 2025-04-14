@@ -121,8 +121,6 @@ taxonomies:
   author: authors
 module:
   imports:
-    - path: git.zyria.de/pyrox/hugo-default-coder
-    - path: git.zyria.de/pyrox/hugo-shortcodes
     - path: github.com/luizdepra/hugo-coder
     - path: github.com/hugo-mods/lazyimg
     - path: github.com/hugomods/images
@@ -133,6 +131,8 @@ module:
       disable: false
       ignoreConfig: false
       ignoreImports: false
+    - path: git.zyria.de/pyrox/hugo-shortcodes
+    - path: git.zyria.de/pyrox/hugo-default-coder
 
 params:
   lazyimg:
