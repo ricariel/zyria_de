@@ -1,3 +1,0 @@
-{{ $lazyimg := resources.Get "lazyimg/lazysizes/lazysizes.min.js" }}
-{{ $lazyimg = $lazyimg | minify | fingerprint "sha512" | resources.PostProcess }}
-<script src="{{ $lazyimg.RelPermalink }}" integrity="{{ $lazyimg.Data.Integrity }}" async></script>
