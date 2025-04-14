@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Eine (scheinbar) leere Homepage on Zyria</title><link>https://zyria.de/</link><description>Recent content in Eine (scheinbar) leere Homepage on Zyria</description><generator>Hugo</generator><language>de-de</language><lastBuildDate>Mon, 20 Jan 2025 17:23:07 +0100</lastBuildDate><atom:link href="https://zyria.de/index.xml" rel="self" type="application/rss+xml"/><item><title>Über mich</title><link>https://zyria.de/about/</link><pubDate>Mon, 24 Jul 2023 17:18:44 +0200</pubDate><guid>https://zyria.de/about/</guid><description>&lt;h2 id="fabrice-kirchner">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Eine (scheinbar) leere Homepage on Zyria</title><link>https://zyria.de/</link><description>Recent content in Eine (scheinbar) leere Homepage on Zyria</description><generator>Hugo</generator><language>de-de</language><lastBuildDate>Mon, 14 Apr 2025 11:55:28 +0200</lastBuildDate><atom:link href="https://zyria.de/index.xml" rel="self" type="application/rss+xml"/><item><title>Über mich</title><link>https://zyria.de/about/</link><pubDate>Mon, 24 Jul 2023 17:18:44 +0200</pubDate><guid>https://zyria.de/about/</guid><description>&lt;h2 id="fabrice-kirchner">
  Fabrice Kirchner
  &lt;a class="heading-link" href="#fabrice-kirchner">
  &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
@@ -256,4 +256,16 @@ Kabelbinder, Zangen, Schraubenschlüssel&lt;/p></description></item><item><title
 &lt;p>Eine Statusseite&lt;br>
 &lt;a href="https://github.com/reinhard-brandstaedter/solarflow-statuspage" class="external-link" target="_blank" rel="noopener">Solarflow Statuspage and Control&lt;/a>&lt;/p>
 &lt;p>Telegram Austauschgruppe&lt;br>
-&lt;a href="https://t.me/&amp;#43;nEPrpHst6xFmZTky" class="external-link" target="_blank" rel="noopener">Private Zendure Austauschgruppe&lt;/a>&lt;/p></description></item></channel></rss>
+&lt;a href="https://t.me/&amp;#43;nEPrpHst6xFmZTky" class="external-link" target="_blank" rel="noopener">Private Zendure Austauschgruppe&lt;/a>&lt;/p></description></item><item><title>Hardware</title><link>https://zyria.de/projekte/homelab/hardware/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://zyria.de/projekte/homelab/hardware/</guid><description>&lt;h2 id="netzwerk">
+ Netzwerk
+ &lt;a class="heading-link" href="#netzwerk">
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;ul>
+&lt;li>Fritzbox 7590&lt;/li>
+&lt;li>Unifi US 8 PoE 150W (2x)&lt;/li>
+&lt;li>Unifi Nano HD (2x)&lt;/li>
+&lt;li>Unifi U6 Pro&lt;/li>
+&lt;/ul></description></item></channel></rss>
