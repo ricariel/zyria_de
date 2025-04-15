@@ -26,7 +26,7 @@ menu:
     - name: Statusseite
       weight: 30
       url: https://status.zyria.de
-      post: <i class="external-link"></i>
+      class: external-link
 
 #server:
 #  headers:
