@@ -29,6 +29,7 @@ menu:
       params:
         class: external-link
         target: _blank
+        rel: noopener
 
 #server:
 #  headers:
