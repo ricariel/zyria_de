@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Projekte on Zyria</title><link>https://zyria.de/projekte/</link><description>Recent content in Projekte on Zyria</description><generator>Hugo</generator><language>de-de</language><lastBuildDate>Mon, 14 Apr 2025 14:33:46 +0200</lastBuildDate><atom:link href="https://zyria.de/projekte/index.xml" rel="self" type="application/rss+xml"/><item><title>Solaranlage</title><link>https://zyria.de/projekte/solaranlage/</link><pubDate>Fri, 22 Mar 2024 10:12:47 +0100</pubDate><guid>https://zyria.de/projekte/solaranlage/</guid><description>&lt;h2 id="übersicht-über-unsere-solaranlage-mit-komponenten">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Beiträge on Zyria</title><link>https://zyria.de/posts/</link><description>Recent content in Beiträge on Zyria</description><generator>Hugo</generator><language>de-de</language><atom:link href="https://zyria.de/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>Solaranlage</title><link>https://zyria.de/posts/solar/</link><pubDate>Fri, 22 Mar 2024 10:12:47 +0100</pubDate><guid>https://zyria.de/posts/solar/</guid><description>&lt;h2 id="übersicht-über-unsere-solaranlage-mit-komponenten">
  Übersicht über unsere Solaranlage mit Komponenten
  &lt;a class="heading-link" href="#%c3%bcbersicht-%c3%bcber-unsere-solaranlage-mit-komponenten">
  &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
@@ -116,19 +116,70 @@
  &lt;/tbody>
 &lt;/table>
 &lt;p>Was nicht in der Liste ist aber dennoch benötigt wird:&lt;br>
-Kabelbinder, Zangen, Schraubenschlüssel&lt;/p></description></item><item><title>Homelab Dokumentation</title><link>https://zyria.de/projekte/homelab/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://zyria.de/projekte/homelab/</guid><description>&lt;h2 id="unterseiten">
- Unterseiten
- &lt;a class="heading-link" href="#unterseiten">
+Kabelbinder, Zangen, Schraubenschlüssel&lt;/p></description></item><item><title>Linksammlung rund um Strom</title><link>https://zyria.de/posts/strom/</link><pubDate>Fri, 08 Mar 2024 12:52:37 +0200</pubDate><guid>https://zyria.de/posts/strom/</guid><description>&lt;h2 id="hichi-ir-und-home-assistant">
+ Hichi IR und Home Assistant
+ &lt;a class="heading-link" href="#hichi-ir-und-home-assistant">
  &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
  &lt;span class="sr-only">Link zu Überschrift&lt;/span>
  &lt;/a>
 &lt;/h2>
-&lt;p>&lt;a href="https://zyria.de/projekte/homelab/Hardware" >Hardware&lt;/a>&lt;/p>
-&lt;h2 id="welche-software-wird-auf-welchen-hardwarenodes-ausgeführt">
- Welche Software wird auf welchen Hardwarenodes ausgeführt
- &lt;a class="heading-link" href="#welche-software-wird-auf-welchen-hardwarenodes-ausgef%c3%bchrt">
+&lt;p>
+&lt;a href="https://ottelo.jimdofree.com/stromz%c3%a4hler-auslesen-tasmota/" target="_blank">Stromzähler mit einem ESP8266 / ESP32 mit Tasmota auslesen und darstellen&lt;/a>&lt;/p>
+&lt;h2 id="solarflow-hoymiles-homeassistant">
+ Solarflow Hoymiles Homeassistant
+ &lt;a class="heading-link" href="#solarflow-hoymiles-homeassistant">
  &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
  &lt;span class="sr-only">Link zu Überschrift&lt;/span>
  &lt;/a>
 &lt;/h2>
-&lt;p>&lt;a href="https://zyria.de/projekte/homelab/Software" >Software&lt;/a>&lt;/p></description></item></channel></rss>
+&lt;p>
+&lt;a href="https://github.com/z-master42/solarflow/tree/main" target="_blank">Git Repo mit nützlichen Infos&lt;/a>&lt;/p>
+&lt;h2 id="solarflow">
+ Solarflow
+ &lt;a class="heading-link" href="#solarflow">
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;p>Steuerung des Solarflow&lt;br>
+
+&lt;a href="https://github.com/reinhard-brandstaedter/solarflow-control" target="_blank">Solarflow Control&lt;/a>&lt;/p>
+&lt;p>Von Cloud trennen und an den loaklen MQTT binden&lt;br>
+
+&lt;a href="https://github.com/reinhard-brandstaedter/solarflow-bt-manager" target="_blank">Solarflow Bluetooth Manager&lt;/a>&lt;/p>
+&lt;p>Eine Statusseite&lt;br>
+
+&lt;a href="https://github.com/reinhard-brandstaedter/solarflow-statuspage" target="_blank">Solarflow Statuspage and Control&lt;/a>&lt;/p>
+&lt;p>Telegram Austauschgruppe&lt;br>
+
+&lt;a href="https://t.me/&amp;#43;nEPrpHst6xFmZTky" target="_blank">Private Zendure Austauschgruppe&lt;/a>&lt;/p></description></item><item><title>Hardware</title><link>https://zyria.de/posts/hardware/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://zyria.de/posts/hardware/</guid><description>&lt;h2 id="netzwerk">
+ Netzwerk
+ &lt;a class="heading-link" href="#netzwerk">
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;ul>
+&lt;li>Fritzbox 7590&lt;/li>
+&lt;li>Unifi US 8 PoE 150W (2x)&lt;/li>
+&lt;li>Unifi Nano HD (2x)&lt;/li>
+&lt;li>Unifi U6 Pro&lt;/li>
+&lt;/ul></description></item><item><title>Software</title><link>https://zyria.de/posts/software/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://zyria.de/posts/software/</guid><description>&lt;h2 id="softwareliste">
+ Softwareliste
+ &lt;a class="heading-link" href="#softwareliste">
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;ul>
+&lt;li>Moe
+&lt;ul>
+&lt;li>Proxmox&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Lisa
+&lt;ul>
+&lt;li>Proxmox&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul></description></item></channel></rss>
