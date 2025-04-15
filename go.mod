@@ -1,4 +1,4 @@
-module github.com/hugo-mods/lazyimg.git
+module git.zyria.de/pyrox/zyria_de
 
 go 1.24.2
 

@@ -1,13 +1,3 @@
-git.zyria.de/pyrox/hugo-default-coder v0.0.0-20250415090438-8f942198cfd0 h1:u4wy0inkrPBkPHgelSbFduBtiQUlZ7k2dZsWvwiCP10=
-git.zyria.de/pyrox/hugo-default-coder v0.0.0-20250415090438-8f942198cfd0/go.mod h1:Uwoc3s+nTSuyx02jv72jzDA3RtAnPgUh+1i5MF7BG0g=
-git.zyria.de/pyrox/hugo-default-coder v0.0.0-20250415095657-d7eedafbfa3e h1:CyO2Pxa7PghX2M/BpTlc6fNER9awpwUr+eQUlt6ddy4=
-git.zyria.de/pyrox/hugo-default-coder v0.0.0-20250415095657-d7eedafbfa3e/go.mod h1:Uwoc3s+nTSuyx02jv72jzDA3RtAnPgUh+1i5MF7BG0g=
-git.zyria.de/pyrox/hugo-default-coder v0.0.0-20250415104618-b80d69ada621 h1:pg1yuQ/52aAW0avvTKKG5zAjy3NqNMcO+WNvkyN0w3g=
-git.zyria.de/pyrox/hugo-default-coder v0.0.0-20250415104618-b80d69ada621/go.mod h1:Uwoc3s+nTSuyx02jv72jzDA3RtAnPgUh+1i5MF7BG0g=
-git.zyria.de/pyrox/hugo-default-coder v0.0.0-20250415105357-6a0657dc2af6 h1:YKWtasIvVyNYcUHqRhR3QYNY7pkPvOYSnepRCVfF79k=
-git.zyria.de/pyrox/hugo-default-coder v0.0.0-20250415105357-6a0657dc2af6/go.mod h1:Uwoc3s+nTSuyx02jv72jzDA3RtAnPgUh+1i5MF7BG0g=
-git.zyria.de/pyrox/hugo-default-coder v0.0.0-20250415122148-d7b7013eceb6 h1:o/7OkHPSTm2q1Lh7zAmf6fW4piEaLb3cTqnMInZ7P8U=
-git.zyria.de/pyrox/hugo-default-coder v0.0.0-20250415122148-d7b7013eceb6/go.mod h1:Uwoc3s+nTSuyx02jv72jzDA3RtAnPgUh+1i5MF7BG0g=
 git.zyria.de/pyrox/hugo-default-coder v0.0.0-20250415142326-33dc276c51db h1:quBnhigI/Kep9xSRKyF+nnNWyeGZLH0qWll1Zq+34x8=
 git.zyria.de/pyrox/hugo-default-coder v0.0.0-20250415142326-33dc276c51db/go.mod h1:Uwoc3s+nTSuyx02jv72jzDA3RtAnPgUh+1i5MF7BG0g=
 git.zyria.de/pyrox/hugo-shortcodes v0.0.0-20250414085812-757216ac3d51 h1:TE37SKpWFqZbUhCQUNy2uxTW883JuD7VH71/K66LSzU=
@@ -30,7 +20,6 @@ github.com/hugomods/shortcodes v0.24.0 h1:+on4M5WuqmczQ0mXA0Ec4PZApV0UbH+YHaLC5M
 github.com/hugomods/shortcodes v0.24.0/go.mod h1:EnVopbZMNI/HeteM3Lp3phBTCRLvPSe7l142qhRFFPY=
 github.com/luizdepra/hugo-coder v0.0.0-20250228200816-6bc00595434a h1:yeyX4eAKfC3vWDsIgS78KIN1iKPmHotZGeZmNonQUI8=
 github.com/luizdepra/hugo-coder v0.0.0-20250228200816-6bc00595434a/go.mod h1:9EQBf2rU+NPjlohGuKcEgdqSeOc3tIQoOty4xPpuUQ4=
-github.com/twbs/bootstrap v5.3.3+incompatible/go.mod h1:fZTSrkpSf0/HkL0IIJzvVspTt1r9zuf7XlZau8kpcY0=
 github.com/twbs/bootstrap v5.3.5+incompatible h1:6XrrFNMsiTTFcVTBf2886FO2XUNtwSE+QPv1os0uAA4=
 github.com/twbs/bootstrap v5.3.5+incompatible/go.mod h1:fZTSrkpSf0/HkL0IIJzvVspTt1r9zuf7XlZau8kpcY0=
 github.com/twbs/icons v1.11.3 h1:XhvrQ1XDom9ggBbQx3wQCFGEr8qAQwQP/dAcw8OXMtA=
