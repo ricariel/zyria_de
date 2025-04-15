@@ -3,7 +3,7 @@ module git.zyria.de/pyrox/zyria_de
 go 1.24.2
 
 require (
-  git.zyria.de/pyrox/hugo-default-coder v0.0.0-20250415145507-6eff7a44ed46 // indirect
+  git.zyria.de/pyrox/hugo-default-coder v0.0.0-20250415152436-2a8d8dc1a684 // indirect
   git.zyria.de/pyrox/hugo-shortcodes v0.0.0-20250414085812-757216ac3d51 // indirect
   github.com/gohugoio/hugo-mod-bootstrap-scss/v5 v5.20300.20400 // indirect
   github.com/gohugoio/hugo-mod-jslibs-dist/popperjs/v2 v2.21100.20000 // indirect

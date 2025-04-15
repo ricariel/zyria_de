@@ -27,9 +27,9 @@ menu:
       weight: 30
       url: https://status.zyria.de
       params:
-        class: external-link
-        target: _blank
-        rel: noopener
+        class: "external-link"
+        target: "_blank"
+        rel: "noopener"
 
 #server:
 #  headers:
