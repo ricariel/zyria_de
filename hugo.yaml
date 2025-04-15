@@ -4,6 +4,7 @@ languageCode: de-de
 title: Zyria
 theme:
   - github.com/luizdepra/hugo-coder
+  - git.zyria.de/pyrox/hugo-default-coder
 defaultContentLanguage: de
 SectionPagesMenu: main
 googleAnalytics: ''
@@ -121,30 +122,18 @@ taxonomies:
   author: authors
 module:
   imports:
-    - path: github.com/luizdepra/hugo-coder
-    - path: github.com/hugo-mods/lazyimg
     - path: github.com/hugomods/images
+    - path: git.zyria.de/pyrox/hugo-shortcodes
+    - path: git.zyria.de/pyrox/hugo-default-coder
+    - path: github.com/luizdepra/hugo-coder
     - path: github.com/hugomods/shortcodes
     - path: github.com/hugomods/bootstrap
     - path: github.com/gohugoio/hugo-mod-bootstrap-scss/v5
-    - path: github.com/davidsneighbour/hugo-modules/modules/security
-      disable: false
-      ignoreConfig: false
-      ignoreImports: false
-    - path: git.zyria.de/pyrox/hugo-shortcodes
-    - path: git.zyria.de/pyrox/hugo-default-coder
-
 params:
-  lazyimg:
-    resizer: auto
-    renderer: lqip-webp
-
-    # Resizer options:
-    lqipSize: "120x Gaussian"
-    maxSize: "1920x"
-    responsiveSizes: ["320x", "640x", "768x", "1024x", "1366x", "1600x", "1920x"]
-    resizeOptions: "Lanczos q95"
-
+  ShowReadingTime: true
+  ShowWordCount: true
+  cover:
+    responsiveImages: true
   hb:
     back_to_top:
       animation: true
@@ -158,8 +147,10 @@ params:
   author: Fabrice Kirchner
   info: |
     Diese Seite ist (scheinbar) leer.
-  description: Diese Seite ist (scheinbar) leer.
-  keywords: 'blog,developer,personal'
+  description: Diese Seite ist (scheinbar) fast leer.
+  keywords:
+    - blog
+    - personal
   avatarurl: /images/chibi_hu_2732f90000136f1b.webp
   faviconSVG: /images/favicon.svg
   favicon_32: /images/favicon-32x32.png
@@ -167,7 +158,7 @@ params:
   since: 2003
   enableTwemoji: true
   colorScheme: auto
-  customCSS: ['lazyimg.css']
+  customCSS: []
 
   hidecolorschemetoggle: false
   commit: "https://git.zyria.de/pyrox/zyria_de/commit"

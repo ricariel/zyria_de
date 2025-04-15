@@ -1,5 +1,5 @@
 ---
-title: Rund um Strom
+title: Linksammlung rund um Strom
 date: 2024-03-08T12:52:37+02:00
 ---
 

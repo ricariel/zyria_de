@@ -1,6 +1,9 @@
 ---
 title: Hardware
 description: Hardware Übersicht
+category:
+series:
+  - homelab
 ---
 
 ## Netzwerk
