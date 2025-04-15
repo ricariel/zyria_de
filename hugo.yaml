@@ -18,6 +18,15 @@ build:
   buildStats:
     enable: true
 
+enableEmoji: true
+pygmentsUseClasses: true
+
+menu:
+  main:
+    - name: Statusseite
+      weight: 30
+      url: https://status.zyria.de
+
 #server:
 #  headers:
 #  - for: /**
@@ -130,8 +139,24 @@ module:
     - path: github.com/hugomods/bootstrap
     - path: github.com/gohugoio/hugo-mod-bootstrap-scss/v5
 params:
-  ShowReadingTime: true
   ShowWordCount: true
+  ShowShareButtons: true
+  ShowReadingTime: true
+  # disableSpecial1stPost: true
+  displayFullLangName: true
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: true
+  ShowRssButtonInSectionTermList: true
+  ShowAllPagesInArchive: true
+  ShowPageNums: true
+  ShowToc: true
+  ShowCanonicalLink: true
+  editPost:
+    URL: "https://git.zyria.de/pyrox/zyria_de/src/branch/main/content"
+    Text: "Änderung vorschlagen" # edit text
+    appendFilePath: true # to append file path to Edit link
+
   cover:
     responsiveImages: true
   hb:
@@ -143,10 +168,9 @@ params:
       position_bottom: 1rem
       position_end: 1rem
 
-
   author: Fabrice Kirchner
   info: |
-    Diese Seite ist (scheinbar) leer.
+    Diese Seite ist (scheinbar) fast leer.
   description: Diese Seite ist (scheinbar) fast leer.
   keywords:
     - blog
@@ -197,8 +221,14 @@ params:
       url: "https://www.linkedin.com/in/fabrice-kirchner-bb5408163/"
       target: "_blank"
       rel: "me"
+    - name: Xing
+      icon: fa-brands fa-xing fa-2x
+      weight: 2
+      url: "https://www.xing.com/profile/Fabrice_Kirchner"
+      target: "_blank"
+      rel: "me"
     - name: Mastodon
-      icon: fa fa-mastodon fa-2x
+      icon: fa-brands fa-mastodon fa-2x
       weight: 3
       url: "https://kirchner.social/@fabrice"
       target: "_blank"

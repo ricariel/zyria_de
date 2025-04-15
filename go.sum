@@ -6,6 +6,8 @@ git.zyria.de/pyrox/hugo-default-coder v0.0.0-20250415104618-b80d69ada621 h1:pg1y
 git.zyria.de/pyrox/hugo-default-coder v0.0.0-20250415104618-b80d69ada621/go.mod h1:Uwoc3s+nTSuyx02jv72jzDA3RtAnPgUh+1i5MF7BG0g=
 git.zyria.de/pyrox/hugo-default-coder v0.0.0-20250415105357-6a0657dc2af6 h1:YKWtasIvVyNYcUHqRhR3QYNY7pkPvOYSnepRCVfF79k=
 git.zyria.de/pyrox/hugo-default-coder v0.0.0-20250415105357-6a0657dc2af6/go.mod h1:Uwoc3s+nTSuyx02jv72jzDA3RtAnPgUh+1i5MF7BG0g=
+git.zyria.de/pyrox/hugo-default-coder v0.0.0-20250415122148-d7b7013eceb6 h1:o/7OkHPSTm2q1Lh7zAmf6fW4piEaLb3cTqnMInZ7P8U=
+git.zyria.de/pyrox/hugo-default-coder v0.0.0-20250415122148-d7b7013eceb6/go.mod h1:Uwoc3s+nTSuyx02jv72jzDA3RtAnPgUh+1i5MF7BG0g=
 git.zyria.de/pyrox/hugo-shortcodes v0.0.0-20250414085812-757216ac3d51 h1:TE37SKpWFqZbUhCQUNy2uxTW883JuD7VH71/K66LSzU=
 git.zyria.de/pyrox/hugo-shortcodes v0.0.0-20250414085812-757216ac3d51/go.mod h1:V2R75xLAXqOdvHSkKtqc0AqaCUof6704G2ELS6Huis4=
 github.com/gohugoio/hugo-mod-bootstrap-scss/v5 v5.20300.20400 h1:L6+F22i76xmeWWwrtijAhUbf3BiRLmpO5j34bgl1ggU=

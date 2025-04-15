@@ -2,6 +2,7 @@
 title: Hardware
 description: Hardware Übersicht
 category:
+  - homelab
 series:
   - homelab
 ---
