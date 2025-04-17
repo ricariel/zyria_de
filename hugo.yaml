@@ -134,6 +134,9 @@ taxonomies:
   tag: tags
   author: authors
 module:
+  mounts:
+    - source: content
+      target: content
   imports:
     - path: github.com/hugomods/images
     - path: git.zyria.de/pyrox/hugo-shortcodes
@@ -142,6 +145,15 @@ module:
     - path: github.com/hugomods/shortcodes
     - path: github.com/hugomods/bootstrap
     - path: github.com/gohugoio/hugo-mod-bootstrap-scss/v5
+
+    # - path: github.com/imfing/hextra
+    - path: "git.zyria.de/pyrox/hugo-legal"
+      mounts:
+        - source: "impressum.md"
+          target: content/impressum.md
+        - source: "datenschutz.md"
+          target: content/datenschutz.md
+
 params:
   ShowWordCount: true
   ShowShareButtons: true

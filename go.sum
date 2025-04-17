@@ -1,7 +1,13 @@
 git.zyria.de/pyrox/hugo-default-coder v0.0.0-20250415152436-2a8d8dc1a684 h1:kbAWEO5YXuZqwgPs6g3Ir3IpbqK1bMRe3qkzYzHj6s4=
 git.zyria.de/pyrox/hugo-default-coder v0.0.0-20250415152436-2a8d8dc1a684/go.mod h1:Uwoc3s+nTSuyx02jv72jzDA3RtAnPgUh+1i5MF7BG0g=
+git.zyria.de/pyrox/hugo-default-coder v0.0.0-20250416104237-e9344c0c28c9 h1:Vl1izC3IykIE/ochW59FZUk2MCO2RF4I+l9E9VacyQc=
+git.zyria.de/pyrox/hugo-default-coder v0.0.0-20250416104237-e9344c0c28c9/go.mod h1:Uwoc3s+nTSuyx02jv72jzDA3RtAnPgUh+1i5MF7BG0g=
+git.zyria.de/pyrox/hugo-legal v0.0.0-20250417065133-879febf73df0 h1:8KqL7ec8DRuFM+J16idK9s7I069jSEmyrwUCex8g2cc=
+git.zyria.de/pyrox/hugo-legal v0.0.0-20250417065133-879febf73df0/go.mod h1:toDG6fvkjq5dz4fRe61EiBDBLRmKc8n7DeOg/c/5Rg8=
 git.zyria.de/pyrox/hugo-shortcodes v0.0.0-20250414085812-757216ac3d51 h1:TE37SKpWFqZbUhCQUNy2uxTW883JuD7VH71/K66LSzU=
 git.zyria.de/pyrox/hugo-shortcodes v0.0.0-20250414085812-757216ac3d51/go.mod h1:V2R75xLAXqOdvHSkKtqc0AqaCUof6704G2ELS6Huis4=
+git.zyria.de/pyrox/hugo-shortcodes v0.0.0-20250416101248-1e9589789f35 h1:RzyvRamTPA3YFdCRhkP2CjV5fAw/fmXoERIVCtywcik=
+git.zyria.de/pyrox/hugo-shortcodes v0.0.0-20250416101248-1e9589789f35/go.mod h1:V2R75xLAXqOdvHSkKtqc0AqaCUof6704G2ELS6Huis4=
 github.com/gohugoio/hugo-mod-bootstrap-scss/v5 v5.20300.20400 h1:L6+F22i76xmeWWwrtijAhUbf3BiRLmpO5j34bgl1ggU=
 github.com/gohugoio/hugo-mod-bootstrap-scss/v5 v5.20300.20400/go.mod h1:uekq1D4ebeXgduLj8VIZy8TgfTjrLdSl6nPtVczso78=
 github.com/gohugoio/hugo-mod-jslibs-dist/popperjs/v2 v2.21100.20000 h1:GZxx4Hc+yb0/t3/rau1j8XlAxLE4CyXns2fqQbyqWfs=
@@ -18,8 +24,11 @@ github.com/hugomods/images v0.11.2 h1:d7u3c/ePboeOGx8OI5eUnilpA79YvD7KJjUgqVMR83
 github.com/hugomods/images v0.11.2/go.mod h1:U6Gwj16LKvk66rOMyGFrnF6f0aV8lT89lqOsckOAjYY=
 github.com/hugomods/shortcodes v0.24.0 h1:+on4M5WuqmczQ0mXA0Ec4PZApV0UbH+YHaLC5MVobyo=
 github.com/hugomods/shortcodes v0.24.0/go.mod h1:EnVopbZMNI/HeteM3Lp3phBTCRLvPSe7l142qhRFFPY=
+github.com/hugomods/shortcodes v0.25.0 h1:CSi9ImvbY6YGAGSLIO0HkUXMYuohRnnbxhXpUmy0qfE=
+github.com/hugomods/shortcodes v0.25.0/go.mod h1:EnVopbZMNI/HeteM3Lp3phBTCRLvPSe7l142qhRFFPY=
 github.com/luizdepra/hugo-coder v0.0.0-20250228200816-6bc00595434a h1:yeyX4eAKfC3vWDsIgS78KIN1iKPmHotZGeZmNonQUI8=
 github.com/luizdepra/hugo-coder v0.0.0-20250228200816-6bc00595434a/go.mod h1:9EQBf2rU+NPjlohGuKcEgdqSeOc3tIQoOty4xPpuUQ4=
+github.com/twbs/bootstrap v5.3.3+incompatible/go.mod h1:fZTSrkpSf0/HkL0IIJzvVspTt1r9zuf7XlZau8kpcY0=
 github.com/twbs/bootstrap v5.3.5+incompatible h1:6XrrFNMsiTTFcVTBf2886FO2XUNtwSE+QPv1os0uAA4=
 github.com/twbs/bootstrap v5.3.5+incompatible/go.mod h1:fZTSrkpSf0/HkL0IIJzvVspTt1r9zuf7XlZau8kpcY0=
 github.com/twbs/icons v1.11.3 h1:XhvrQ1XDom9ggBbQx3wQCFGEr8qAQwQP/dAcw8OXMtA=
