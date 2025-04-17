@@ -51,8 +51,8 @@ jobs:
       - name: Checkout target repo
         uses: https://github.com/actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
         with:
-          repository: pyrox/zyria_de
-          github-server-url: 'https://git.zyria.de'
+          repository: ${{ env.GITHUB_REPOSITORY }}
+          github-server-url: ${{ env. GITHUB_SERVER_URL }}
           token: ${{ secrets.ZYRIA_TOKEN }}
           path: public
           ref: 'pages'
