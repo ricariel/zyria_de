@@ -1,6 +1,10 @@
 name: Publish Site
 
-on: push
+on:
+  push:
+    branches:
+      - main
+      - master
 
 jobs:
   build:
