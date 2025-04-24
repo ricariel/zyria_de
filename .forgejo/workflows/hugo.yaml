@@ -72,7 +72,13 @@ jobs:
           echo "hugo --minify --gc --environment production"
           hugo --minify --gc --environment production
 
+      - name: Check if there are any changes
+        id: verify_diff
+        run: |
+          git diff --quiet . || echo "changed=true" >> $GITHUB_OUTPUT
+
       - name: Upload
+        if: steps.verify_diff.outputs.changed == 'true'
         run: |
           echo "Doing Upload"
           cd public
