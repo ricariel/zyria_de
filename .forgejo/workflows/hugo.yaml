@@ -85,6 +85,6 @@ jobs:
           git config --global user.email ${{ env.GITHUB_ACTOR }}@zyria.de
           git config --global user.name "CI - ${{ env.GITHUB_ACTOR }}"
           git add .
-          git commit -m "CI - ${{ env.GITHUB_RUN_NUMBER }}"
-          git push -u origin pages
+          git commit -a -m "CI - ${{ env.GITHUB_RUN_NUMBER }}"
+          git push
           echo "Upload done"
