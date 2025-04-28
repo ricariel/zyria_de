@@ -75,8 +75,7 @@ jobs:
       - name: Check if there are any changes
         id: verify_diff
         run: |
-          cd public
-          git diff --quiet . || echo "changed=true" >> $GITHUB_OUTPUT
+          git diff -C public --quiet . || echo "changed=true" >> $GITHUB_OUTPUT
 
       - name: Upload
         if: steps.verify_diff.outputs.changed == 'true'
@@ -84,7 +83,7 @@ jobs:
           echo "Doing Upload"
           git config --global user.email ${{ env.GITHUB_ACTOR }}@zyria.de
           git config --global user.name "CI - ${{ env.GITHUB_ACTOR }}"
-          git add .
-          git commit -a -m "CI - ${{ env.GITHUB_RUN_NUMBER }}"
-          git push
+          git -C public add .
+          git -C public commit -a -m "CI - ${{ env.GITHUB_RUN_NUMBER }}"
+          git -C public push
           echo "Upload done"
