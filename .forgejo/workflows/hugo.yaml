@@ -81,8 +81,8 @@ jobs:
         if: steps.verify_diff.outputs.changed == 'true'
         run: |
           echo "Doing Upload"
-          git config --global user.email ${{ env.GITHUB_ACTOR }}@zyria.de
-          git config --global user.name "CI - ${{ env.GITHUB_ACTOR }}"
+          git config --global user.name "$(git --no-pager log --format=format:'%an' -n 1)"
+          git config --global user.email "$(git --no-pager log --format=format:'%ae' -n 1)"
           git -C public add .
           git -C public commit -a -m "CI - ${{ env.GITHUB_RUN_NUMBER }}"
           git -C public push
