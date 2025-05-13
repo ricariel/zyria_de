@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Virtuelle Maschinen on Zyria</title><link>https://zyria.de/docs/it-intern/server/vms/</link><description>Recent content in Virtuelle Maschinen on Zyria</description><generator>Hugo</generator><language>de-de</language><atom:link href="https://zyria.de/docs/it-intern/server/vms/index.xml" rel="self" type="application/rss+xml"/><item><title>Addc</title><link>https://zyria.de/docs/it-intern/server/vms/addc/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://zyria.de/docs/it-intern/server/vms/addc/</guid><description>&lt;h2 id="primärfunktion">
+ Primärfunktion
+ &lt;a class="heading-link" href="#prim%c3%a4rfunktion">
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;p>Samba Active Directory Domain Controller und Fileserver&lt;/p>
+&lt;h2 id="installierte-software">
+ Installierte Software
+ &lt;a class="heading-link" href="#installierte-software">
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;ul>
+&lt;li>Samba-AD-DC&lt;/li>
+&lt;/ul></description></item><item><title>Dev</title><link>https://zyria.de/docs/it-intern/server/vms/dev/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://zyria.de/docs/it-intern/server/vms/dev/</guid><description>&lt;h2 id="primärfunktion">
+ Primärfunktion
+ &lt;a class="heading-link" href="#prim%c3%a4rfunktion">
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;p>Host für Podman Container.&lt;/p>
+&lt;h2 id="installierte-software">
+ Installierte Software
+ &lt;a class="heading-link" href="#installierte-software">
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;ul>
+&lt;li>cockpit&lt;/li>
+&lt;li>podman&lt;/li>
+&lt;li>k3s&lt;/li>
+&lt;/ul></description></item></channel></rss>

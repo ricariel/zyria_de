@@ -1,0 +1,793 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Dienste on Zyria</title><link>https://zyria.de/docs/it-intern/services/</link><description>Recent content in Dienste on Zyria</description><generator>Hugo</generator><language>de-de</language><atom:link href="https://zyria.de/docs/it-intern/services/index.xml" rel="self" type="application/rss+xml"/><item><title>Dmarc-Report</title><link>https://zyria.de/docs/it-intern/services/dmarc-report/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://zyria.de/docs/it-intern/services/dmarc-report/</guid><description>&lt;h2 id="quelle">
+ Quelle
+ &lt;a class="heading-link" href="#quelle">
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;p>
+&lt;a href="https://hub.docker.com/r/gutmensch/dmarc-report"
+ class="external-link"
+ target="_blank"
+ rel="noopener">Docker Hub&lt;/a>
+&lt;/p>
+&lt;h2 id="repository">
+ Repository
+ &lt;a class="heading-link" href="#repository">
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;p>
+&lt;a href="https://github.com/gutmensch/docker-dmarc-report"
+ class="external-link"
+ target="_blank"
+ rel="noopener">Github&lt;/a>
+&lt;/p>
+&lt;h2 id="dokumentation">
+ Dokumentation
+ &lt;a class="heading-link" href="#dokumentation">
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;p>
+&lt;a href="https://github.com/gutmensch/docker-dmarc-report"
+ class="external-link"
+ target="_blank"
+ rel="noopener">Hersteller&lt;/a>
+&lt;/p>
+&lt;h2 id="funktion">
+ Funktion
+ &lt;a class="heading-link" href="#funktion">
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;p>Analysiert Dmarc Reports, welche uns zugesendet werden. Aufbereitung über ein&lt;br>
+Webinterface.&lt;/p></description></item><item><title>Docs</title><link>https://zyria.de/docs/it-intern/services/docs/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://zyria.de/docs/it-intern/services/docs/</guid><description>&lt;h2 id="quelle">
+ Quelle
+ &lt;a class="heading-link" href="#quelle">
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;p>
+&lt;a href="https://hub.docker.com/r/ricariel/nginx"
+ class="external-link"
+ target="_blank"
+ rel="noopener">Docker Hub&lt;/a>
+&lt;/p>
+&lt;h2 id="repository">
+ Repository
+ &lt;a class="heading-link" href="#repository">
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;p>
+&lt;a href="https://www.casa-due-pur.de/git/fabrice.kirchner/doc-site.git"
+ class="external-link"
+ target="_blank"
+ rel="noopener">Seitenquelltext&lt;/a>
+&lt;/p>
+&lt;p>
+&lt;a href="https://www.casa-due-pur.de/git/fabrice.kirchner/doc-site-html.git"
+ class="external-link"
+ target="_blank"
+ rel="noopener">Seite&lt;/a>
+&lt;/p>
+&lt;p>
+&lt;a href="https://git.zyria.de/pyrox/nginx-docker.git"
+ class="external-link"
+ target="_blank"
+ rel="noopener">Container&lt;/a>
+&lt;/p>
+&lt;h2 id="dokumentation">
+ Dokumentation
+ &lt;a class="heading-link" href="#dokumentation">
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;p>
+&lt;a href="https://docs.nginx.com"
+ class="external-link"
+ target="_blank"
+ rel="noopener">Nginx&lt;/a>
+&lt;/p>
+&lt;p>
+&lt;a href="https://gohugo.io/documentation/"
+ class="external-link"
+ target="_blank"
+ rel="noopener">Hugo&lt;/a>
+&lt;/p>
+&lt;p>
+&lt;a href="https://www.docsy.dev/docs/"
+ class="external-link"
+ target="_blank"
+ rel="noopener">Theme (Docsy)&lt;/a>
+&lt;/p>
+&lt;h2 id="funktion">
+ Funktion
+ &lt;a class="heading-link" href="#funktion">
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;p>Darstellung der Dokumentation. Intern erreichbar.&lt;/p></description></item><item><title>Forgejo</title><link>https://zyria.de/docs/it-intern/services/forgejo/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://zyria.de/docs/it-intern/services/forgejo/</guid><description>&lt;h2 id="quelle">
+ Quelle
+ &lt;a class="heading-link" href="#quelle">
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;p>
+&lt;a href="https://codeberg.org/forgejo/-/packages/container/forgejo"
+ class="external-link"
+ target="_blank"
+ rel="noopener">Codeberg&lt;/a>
+&lt;/p>
+&lt;h2 id="repository">
+ Repository
+ &lt;a class="heading-link" href="#repository">
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;p>
+&lt;a href="https://codeberg.org/forgejo/forgejo"
+ class="external-link"
+ target="_blank"
+ rel="noopener">Codeberg&lt;/a>
+&lt;/p>
+&lt;h2 id="dokumentation">
+ Dokumentation
+ &lt;a class="heading-link" href="#dokumentation">
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;p>
+&lt;a href="https://forgejo.org/docs/latest/"
+ class="external-link"
+ target="_blank"
+ rel="noopener">Hersteller&lt;/a>
+&lt;/p>
+&lt;h2 id="funktion">
+ Funktion
+ &lt;a class="heading-link" href="#funktion">
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;p>Github/Gitlab ähnliches Werkzeug und Fork von Gitea. Hier liegen alle&lt;br>
+Repositories des Unternehmens und von hier greifen andere Werkzeuge auf die&lt;br>
+Repositories zu.&lt;/p></description></item><item><title>Hedgedoc</title><link>https://zyria.de/docs/it-intern/services/hedgedoc/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://zyria.de/docs/it-intern/services/hedgedoc/</guid><description>&lt;h2 id="quelle">
+ Quelle
+ &lt;a class="heading-link" href="#quelle">
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;p>
+&lt;a href="https://quay.io/repository/hedgedoc/hedgedoc"
+ class="external-link"
+ target="_blank"
+ rel="noopener">Quay&lt;/a>
+&lt;/p>
+&lt;p>
+&lt;a href="https://hub.docker.com/_/postgres"
+ class="external-link"
+ target="_blank"
+ rel="noopener">Docker Hub Datenbank&lt;/a>
+&lt;/p>
+&lt;h2 id="repository">
+ Repository
+ &lt;a class="heading-link" href="#repository">
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;p>
+&lt;a href="https://github.com/hedgedoc/container"
+ class="external-link"
+ target="_blank"
+ rel="noopener">Github&lt;/a>
+&lt;/p>
+&lt;h2 id="dokumentation">
+ Dokumentation
+ &lt;a class="heading-link" href="#dokumentation">
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;p>
+&lt;a href="https://github.com/hedgedoc/container/blob/master/README.md"
+ class="external-link"
+ target="_blank"
+ rel="noopener">Hersteller Container&lt;/a>
+&lt;/p>
+&lt;p>
+&lt;a href="https://docs.hedgedoc.org"
+ class="external-link"
+ target="_blank"
+ rel="noopener">Hersteller Software&lt;/a>
+&lt;/p>
+&lt;p>
+&lt;a href="https://www.postgresql.org/docs/"
+ class="external-link"
+ target="_blank"
+ rel="noopener">Datenbank&lt;/a>
+&lt;/p>
+&lt;h2 id="funktion">
+ Funktion
+ &lt;a class="heading-link" href="#funktion">
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;p>Hedgedoc stellt Notizzettel zur gemeinsamen Bearbeitung in Markdown zur Verfügung.&lt;/p></description></item><item><title>Maintenance Page</title><link>https://zyria.de/docs/it-intern/services/maintenance/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://zyria.de/docs/it-intern/services/maintenance/</guid><description>&lt;h2 id="quelle">
+ Quelle
+ &lt;a class="heading-link" href="#quelle">
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;p>
+&lt;a href="https://hub.docker.com/r/ricariel/maintenance-page"
+ class="external-link"
+ target="_blank"
+ rel="noopener">Docker Hub&lt;/a>
+&lt;/p>
+&lt;h2 id="repository">
+ Repository
+ &lt;a class="heading-link" href="#repository">
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;p>
+&lt;a href="https://git.zyria.de/pyrox/maintenance-page-docker.git"
+ class="external-link"
+ target="_blank"
+ rel="noopener">Container&lt;/a>
+&lt;/p>
+&lt;p>
+&lt;a href="https://www.casa-due-pur.de/git/fabrice.kirchner/maintenance-page.git"
+ class="external-link"
+ target="_blank"
+ rel="noopener">Seitenquelltext&lt;/a>
+&lt;/p>
+&lt;p>
+&lt;a href="https://www.casa-due-pur.de/git/fabrice.kirchner/maintenance-page-html.git"
+ class="external-link"
+ target="_blank"
+ rel="noopener">Seitenhtml&lt;/a>
+&lt;/p>
+&lt;h2 id="dokumentation">
+ Dokumentation
+ &lt;a class="heading-link" href="#dokumentation">
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;h2 id="funktion">
+ Funktion
+ &lt;a class="heading-link" href="#funktion">
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;p>Stellt eine Wartunsseite bereit, wenn einer der Shops nicht erreichbar ist.&lt;/p></description></item><item><title>Mta-sts</title><link>https://zyria.de/docs/it-intern/services/mta-sts/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://zyria.de/docs/it-intern/services/mta-sts/</guid><description>&lt;h2 id="quelle">
+ Quelle
+ &lt;a class="heading-link" href="#quelle">
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;p>
+&lt;a href="https://hub.docker.com/r/ricariel/nginx"
+ class="external-link"
+ target="_blank"
+ rel="noopener">Docker Hub&lt;/a>
+&lt;/p>
+&lt;h2 id="repository">
+ Repository
+ &lt;a class="heading-link" href="#repository">
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;p>
+&lt;a href="https://git.zyria.de/pyrox/nginx-docker.git"
+ class="external-link"
+ target="_blank"
+ rel="noopener">Container&lt;/a>
+&lt;/p>
+&lt;h2 id="dokumentation">
+ Dokumentation
+ &lt;a class="heading-link" href="#dokumentation">
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;p>
+&lt;a href="https://docs.nginx.com"
+ class="external-link"
+ target="_blank"
+ rel="noopener">Nginx&lt;/a>
+&lt;/p>
+&lt;h2 id="funktion">
+ Funktion
+ &lt;a class="heading-link" href="#funktion">
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;p>Dieser Service stellt MTA-STS für Firmendomains bereit und ist öffentlich&lt;br>
+erreichbar.&lt;/p></description></item><item><title>Pihole</title><link>https://zyria.de/docs/it-intern/services/pihole/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://zyria.de/docs/it-intern/services/pihole/</guid><description>&lt;h2 id="quelle">
+ Quelle
+ &lt;a class="heading-link" href="#quelle">
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;p>
+&lt;a href="https://hub.docker.com/r/pihole/pihole"
+ class="external-link"
+ target="_blank"
+ rel="noopener">Docker Hub Pihole&lt;/a>
+&lt;/p>
+&lt;p>
+&lt;a href="https://hub.docker.com/r/ricariel/cn2pihole"
+ class="external-link"
+ target="_blank"
+ rel="noopener">Docker Hub cn2pihole&lt;/a>
+&lt;/p>
+&lt;h2 id="repository">
+ Repository
+ &lt;a class="heading-link" href="#repository">
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;p>
+&lt;a href="https://github.com/pi-hole/docker-pi-hole"
+ class="external-link"
+ target="_blank"
+ rel="noopener">Github&lt;/a>
+&lt;/p>
+&lt;p>
+&lt;a href="https://git.zyria.de/pyrox/core-networks2pihole-docker"
+ class="external-link"
+ target="_blank"
+ rel="noopener">Hersteller core-networks to pihole&lt;/a>
+&lt;/p>
+&lt;h2 id="dokumentation">
+ Dokumentation
+ &lt;a class="heading-link" href="#dokumentation">
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;p>
+&lt;a href="https://github.com/pi-hole/docker-pi-hole"
+ class="external-link"
+ target="_blank"
+ rel="noopener">Hersteller Container&lt;/a>
+&lt;/p>
+&lt;p>
+&lt;a href="https://git.zyria.de/pyrox/core-networks2pihole-docker"
+ class="external-link"
+ target="_blank"
+ rel="noopener">Hersteller core-networks to pihole&lt;/a>
+&lt;/p>
+&lt;h2 id="funktion">
+ Funktion
+ &lt;a class="heading-link" href="#funktion">
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;p>Pihole stellt den DNS hinter dem Active Directory Server bereit. Die Filterlisten enthalten die meisten unerwünschten Domains ohne den Anspruch vollstädnig zu sein. Die Allowlist wird großzügig auf Nutzeranfrage gefüllt.&lt;/p></description></item><item><title>Roundcube Webmail</title><link>https://zyria.de/docs/it-intern/services/roundcube/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://zyria.de/docs/it-intern/services/roundcube/</guid><description>&lt;h2 id="quelle">
+ Quelle
+ &lt;a class="heading-link" href="#quelle">
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;p>
+&lt;a href="https://hub.docker.com/r/roundcube/roundcubemail/"
+ class="external-link"
+ target="_blank"
+ rel="noopener">Docker Hub Roundcube&lt;/a>
+&lt;/p>
+&lt;p>
+&lt;a href="https://hub.docker.com/_/mariadb"
+ class="external-link"
+ target="_blank"
+ rel="noopener">Docker Hub Mariadb&lt;/a>
+&lt;/p>
+&lt;h2 id="repository">
+ Repository
+ &lt;a class="heading-link" href="#repository">
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;p>
+&lt;a href="https://github.com/roundcube/roundcubemail-docker/tree/master/examples"
+ class="external-link"
+ target="_blank"
+ rel="noopener">Github Container&lt;/a>
+&lt;/p>
+&lt;p>
+&lt;a href="https://github.com/roundcube/roundcubemail"
+ class="external-link"
+ target="_blank"
+ rel="noopener">Github Software&lt;/a>
+&lt;/p>
+&lt;p>
+&lt;a href="https://github.com/MariaDB/mariadb-docker"
+ class="external-link"
+ target="_blank"
+ rel="noopener">Github Mariadb&lt;/a>
+&lt;/p>
+&lt;h2 id="dokumentation">
+ Dokumentation
+ &lt;a class="heading-link" href="#dokumentation">
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;p>
+&lt;a href="https://roundcube.net/support/"
+ class="external-link"
+ target="_blank"
+ rel="noopener">Hersteller&lt;/a>
+&lt;/p>
+&lt;p>
+&lt;a href="https://github.com/roundcube/roundcubemail-docker/"
+ class="external-link"
+ target="_blank"
+ rel="noopener">Container&lt;/a>
+&lt;/p>
+&lt;p>
+&lt;a href="https://mariadb.org/documentation/"
+ class="external-link"
+ target="_blank"
+ rel="noopener">Datenbank&lt;/a>
+&lt;/p>
+&lt;h2 id="funktion">
+ Funktion
+ &lt;a class="heading-link" href="#funktion">
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;p>Stellt Webmail für Mitarbeiter bereit. Ist öffentlich erreichbar.&lt;/p></description></item><item><title>Traefik</title><link>https://zyria.de/docs/it-intern/services/traefik/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://zyria.de/docs/it-intern/services/traefik/</guid><description>&lt;h2 id="quelle">
+ Quelle
+ &lt;a class="heading-link" href="#quelle">
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;p>
+&lt;a href="https://hub.docker.com/_/traefik"
+ class="external-link"
+ target="_blank"
+ rel="noopener">Docker Hub&lt;/a>
+&lt;/p>
+&lt;h2 id="repository">
+ Repository
+ &lt;a class="heading-link" href="#repository">
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;p>
+&lt;a href="https://github.com/traefik/traefik"
+ class="external-link"
+ target="_blank"
+ rel="noopener">Github&lt;/a>
+&lt;/p>
+&lt;h2 id="dokumentation">
+ Dokumentation
+ &lt;a class="heading-link" href="#dokumentation">
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;p>
+&lt;a href="https://traefik.io/traefik/"
+ class="external-link"
+ target="_blank"
+ rel="noopener">Traefiklabs&lt;/a>
+&lt;/p>
+&lt;h2 id="funktion">
+ Funktion
+ &lt;a class="heading-link" href="#funktion">
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;p>Reverse Proxy und Load Balancer für alle HTTP Services und einige andere.&lt;/p></description></item><item><title>Unifi Controller</title><link>https://zyria.de/docs/it-intern/services/unifi-controller/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://zyria.de/docs/it-intern/services/unifi-controller/</guid><description>&lt;h2 id="quelle">
+ Quelle
+ &lt;a class="heading-link" href="#quelle">
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;p>
+&lt;a href="https://gitlab.com/Linuxserver.io/docker-unifi-network-application/container_registry"
+ class="external-link"
+ target="_blank"
+ rel="noopener">Docker Hub&lt;/a>
+&lt;/p>
+&lt;h2 id="repository">
+ Repository
+ &lt;a class="heading-link" href="#repository">
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;p>
+&lt;a href="https://github.com/linuxserver/docker-unifi-controller/packages"
+ class="external-link"
+ target="_blank"
+ rel="noopener">Github Container&lt;/a>
+&lt;/p>
+&lt;p>
+&lt;a href="https://github.com/linuxserver/docker-unifi-network-application"
+ class="external-link"
+ target="_blank"
+ rel="noopener">Github Container neu&lt;/a>
+&lt;/p>
+&lt;h2 id="dokumentation">
+ Dokumentation
+ &lt;a class="heading-link" href="#dokumentation">
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;p>
+&lt;a href="https://help.ui.com/hc/en-us/sections/6582310816535-Network"
+ class="external-link"
+ target="_blank"
+ rel="noopener">Hersteller&lt;/a>
+&lt;/p>
+&lt;p>
+&lt;a href="https://docs.linuxserver.io/images/docker-unifi-network-application/"
+ class="external-link"
+ target="_blank"
+ rel="noopener">Container&lt;/a>
+&lt;/p>
+&lt;h2 id="funktion">
+ Funktion
+ &lt;a class="heading-link" href="#funktion">
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;p>Steuerung der Netzwerkkomponenten im Rudert und der Oberstadt. (Access Points,&lt;br>
+Switche)&lt;/p></description></item><item><title>Uptime Kuma</title><link>https://zyria.de/docs/it-intern/services/uptime-kuma/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://zyria.de/docs/it-intern/services/uptime-kuma/</guid><description>&lt;h2 id="quelle">
+ Quelle
+ &lt;a class="heading-link" href="#quelle">
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;p>
+&lt;a href="https://hub.docker.com/r/louislam/uptime-kuma"
+ class="external-link"
+ target="_blank"
+ rel="noopener">Docker Hub&lt;/a>
+&lt;/p>
+&lt;h2 id="repository">
+ Repository
+ &lt;a class="heading-link" href="#repository">
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;p>
+&lt;a href="https://github.com/louislam/uptime-kuma"
+ class="external-link"
+ target="_blank"
+ rel="noopener">Github&lt;/a>
+&lt;/p>
+&lt;h2 id="dokumentation">
+ Dokumentation
+ &lt;a class="heading-link" href="#dokumentation">
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;p>
+&lt;a href="https://github.com/louislam/uptime-kuma/wiki"
+ class="external-link"
+ target="_blank"
+ rel="noopener">Hersteller&lt;/a>
+&lt;/p>
+&lt;h2 id="funktion">
+ Funktion
+ &lt;a class="heading-link" href="#funktion">
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;p>Internes Monitoring einzelner Dienste und Bereitstellung von Statusseiten.&lt;br>
+Mitarbeiter und Supporter haben dies als erste Anlaufstelle bei Problemen mit&lt;br>
+der IT.&lt;/p></description></item><item><title>Wireguard</title><link>https://zyria.de/docs/it-intern/services/wireguard/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://zyria.de/docs/it-intern/services/wireguard/</guid><description>&lt;h2 id="quelle">
+ Quelle
+ &lt;a class="heading-link" href="#quelle">
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;p>
+&lt;a href="https://hub.docker.com/r/ricariel/bastion"
+ class="external-link"
+ target="_blank"
+ rel="noopener">Docker Hub Bastion&lt;/a>
+&lt;/p>
+&lt;p>
+&lt;a href="https://hub.docker.com/r/linuxserver/wireguard"
+ class="external-link"
+ target="_blank"
+ rel="noopener">Docker Hub Wireguard&lt;/a>
+&lt;/p>
+&lt;p>
+&lt;a href="https://hub.docker.com/r/wgportal/wg-portal"
+ class="external-link"
+ target="_blank"
+ rel="noopener">Docker Hub wg-portal&lt;/a>
+&lt;/p>
+&lt;h2 id="repository">
+ Repository
+ &lt;a class="heading-link" href="#repository">
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;p>
+&lt;a href="https://git.zyria.de/pyrox/docker-ssh-bastion"
+ class="external-link"
+ target="_blank"
+ rel="noopener">Bastion&lt;/a>
+&lt;/p>
+&lt;p>
+&lt;a href="https://github.com/linuxserver/docker-wireguard"
+ class="external-link"
+ target="_blank"
+ rel="noopener">Github wireguard&lt;/a>
+&lt;/p>
+&lt;p>
+&lt;a href="https://github.com/h44z/wg-portal"
+ class="external-link"
+ target="_blank"
+ rel="noopener">Github wg-portal&lt;/a>
+&lt;/p>
+&lt;h2 id="dokumentation">
+ Dokumentation
+ &lt;a class="heading-link" href="#dokumentation">
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;p>
+&lt;a href="https://git.zyria.de/pyrox/docker-ssh-bastion"
+ class="external-link"
+ target="_blank"
+ rel="noopener">Hersteller Bastion&lt;/a>
+&lt;/p>
+&lt;p>
+&lt;a href="https://docs.linuxserver.io/images/docker-wireguard"
+ class="external-link"
+ target="_blank"
+ rel="noopener">Linuxserver.io wireguard&lt;/a>
+&lt;/p>
+&lt;p>
+&lt;a href="https://github.com/h44z/wg-portal"
+ class="external-link"
+ target="_blank"
+ rel="noopener">Github wg-portal&lt;/a>
+&lt;/p>
+&lt;h2 id="funktion">
+ Funktion
+ &lt;a class="heading-link" href="#funktion">
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;p>Der Bastion Container stellt einen SSH Jumphost bereit. Primär für die Nutzung&lt;br>
+von Ansible. Damit lassen sich alle Geräte hinter den NATs erreichen, welche im&lt;br>
+VPN sind.&lt;/p></description></item><item><title>Zammad</title><link>https://zyria.de/docs/it-intern/services/zammad/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://zyria.de/docs/it-intern/services/zammad/</guid><description>&lt;h2 id="quelle">
+ Quelle
+ &lt;a class="heading-link" href="#quelle">
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;h2 id="repository">
+ Repository
+ &lt;a class="heading-link" href="#repository">
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;p>
+&lt;a href="https://github.com/zammad"
+ class="external-link"
+ target="_blank"
+ rel="noopener">Zammad&lt;/a>
+&lt;/p>
+&lt;p>
+&lt;a href="https://github.com/zammad/zammad-helm"
+ class="external-link"
+ target="_blank"
+ rel="noopener">Helm&lt;/a>
+&lt;/p>
+&lt;h2 id="dokumentation">
+ Dokumentation
+ &lt;a class="heading-link" href="#dokumentation">
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;p>
+&lt;a href="https://admin-docs.zammad.org/de/latest/index.html"
+ class="external-link"
+ target="_blank"
+ rel="noopener">Admin Dokumentation&lt;/a>
+&lt;/p>
+&lt;p>
+&lt;a href="https://docs.zammad.org/en/latest/index.html"
+ class="external-link"
+ target="_blank"
+ rel="noopener">Zentrale Dokumentation&lt;/a>
+&lt;/p>
+&lt;p>
+&lt;a href="https://docs.zammad.org/en/latest/admin/console/hidden-settings.html"
+ class="external-link"
+ target="_blank"
+ rel="noopener">Console Settings&lt;/a>
+&lt;/p>
+&lt;h2 id="funktion">
+ Funktion
+ &lt;a class="heading-link" href="#funktion">
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;h2 id="anpassungen">
+ Anpassungen
+ &lt;a class="heading-link" href="#anpassungen">
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;p>Anpassungen, welche auf der rake console durchgeführt werden müssen.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="ln"> 1&lt;/span>&lt;span class="cl">Setting.set&lt;span class="o">(&lt;/span>&lt;span class="s1">&amp;#39;system_bcc&amp;#39;&lt;/span>, &lt;span class="s1">&amp;#39;service+Sent@casa-due-pur.de&amp;#39;&lt;/span>&lt;span class="o">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 2&lt;/span>&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 3&lt;/span>&lt;span class="cl">Setting.set&lt;span class="o">(&lt;/span>&lt;span class="s1">&amp;#39;ui_ticket_create_notes&amp;#39;&lt;/span>, &lt;span class="o">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 4&lt;/span>&lt;span class="cl"> :&lt;span class="s2">&amp;#34;phone-in&amp;#34;&lt;/span>&lt;span class="o">=&lt;/span>&amp;gt;&lt;span class="s2">&amp;#34;Du erstellst einen eingehenden Anruf.&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 5&lt;/span>&lt;span class="cl"> :&lt;span class="s2">&amp;#34;phone-out&amp;#34;&lt;/span>&lt;span class="o">=&lt;/span>&amp;gt;&lt;span class="s2">&amp;#34;Du erstellst einen ausgehenden Anruf.&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 6&lt;/span>&lt;span class="cl"> :&lt;span class="s2">&amp;#34;email-out&amp;#34;&lt;/span>&lt;span class="o">=&lt;/span>&amp;gt;&lt;span class="s2">&amp;#34;Du wirst eine E-Mail senden.&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 7&lt;/span>&lt;span class="cl"> &lt;span class="o">})&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 8&lt;/span>&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 9&lt;/span>&lt;span class="cl">Setting.set&lt;span class="o">(&lt;/span>&lt;span class="s1">&amp;#39;ui_ticket_add_article_hint&amp;#39;&lt;/span>, &lt;span class="o">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">10&lt;/span>&lt;span class="cl"> :&lt;span class="s2">&amp;#34;note-internal&amp;#34;&lt;/span>&lt;span class="o">=&lt;/span>&amp;gt;&lt;span class="s2">&amp;#34;Du erstellst eine INTERNE Notiz. Nur andere Mitarbeiter werden diese sehen können.&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">11&lt;/span>&lt;span class="cl"> :&lt;span class="s2">&amp;#34;note-public&amp;#34;&lt;/span>&lt;span class="o">=&lt;/span>&amp;gt;&lt;span class="s2">&amp;#34;Du erstellst eine öffentlich Notiz. Der Kunde kann diese unter Umständen sehen.&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">12&lt;/span>&lt;span class="cl"> :&lt;span class="s2">&amp;#34;phone-internal&amp;#34;&lt;/span> &lt;span class="o">=&lt;/span>&amp;gt; &lt;span class="s2">&amp;#34;Du erstellst eine INTERNE Telefonnotiz. Nur andere Mitarbeiter werden diese sehen können.&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">13&lt;/span>&lt;span class="cl"> :&lt;span class="s2">&amp;#34;phone-public&amp;#34;&lt;/span>&lt;span class="o">=&lt;/span>&amp;gt;&lt;span class="s2">&amp;#34;Du erstellst eine öffentliche Telefonnotiz. Der Kunde kann diese unter Umständen sehen.&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">14&lt;/span>&lt;span class="cl"> :&lt;span class="s2">&amp;#34;email-internal&amp;#34;&lt;/span> &lt;span class="o">=&lt;/span>&amp;gt; &lt;span class="s2">&amp;#34;Du erstellst eine externe Mail. Der Kunde kann diese sehen.&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">15&lt;/span>&lt;span class="cl"> :&lt;span class="s2">&amp;#34;email-public&amp;#34;&lt;/span>&lt;span class="o">=&lt;/span>&amp;gt;&lt;span class="s2">&amp;#34;Du erstellst eine externe Email. Der Kunde kann diese sehen.&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">16&lt;/span>&lt;span class="cl"> &lt;span class="o">})&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">17&lt;/span>&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">18&lt;/span>&lt;span class="cl">Setting.set&lt;span class="o">(&lt;/span>&lt;span class="s1">&amp;#39;ui_user_organization_selector_with_email&amp;#39;&lt;/span>, &lt;span class="nb">true&lt;/span>&lt;span class="o">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">19&lt;/span>&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">20&lt;/span>&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">21&lt;/span>&lt;span class="cl">Setting.set&lt;span class="o">(&lt;/span>&lt;span class="s1">&amp;#39;ui_sidebar_open_ticket_indicator_colored&amp;#39;&lt;/span>, &lt;span class="nb">true&lt;/span>&lt;span class="o">)&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item></channel></rss>

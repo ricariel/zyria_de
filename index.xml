@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Eine (scheinbar) leere Homepage on Zyria</title><link>https://zyria.de/</link><description>Recent content in Eine (scheinbar) leere Homepage on Zyria</description><generator>Hugo</generator><language>de-de</language><lastBuildDate>Tue, 15 Apr 2025 16:15:25 +0200</lastBuildDate><atom:link href="https://zyria.de/index.xml" rel="self" type="application/rss+xml"/><item><title>Über mich</title><link>https://zyria.de/about/</link><pubDate>Mon, 24 Jul 2023 17:18:44 +0200</pubDate><guid>https://zyria.de/about/</guid><description>&lt;h2 id="fabrice-kirchner">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Eine (scheinbar) leere Homepage on Zyria</title><link>https://zyria.de/</link><description>Recent content in Eine (scheinbar) leere Homepage on Zyria</description><generator>Hugo</generator><language>de-de</language><lastBuildDate>Tue, 13 May 2025 19:05:00 +0200</lastBuildDate><atom:link href="https://zyria.de/index.xml" rel="self" type="application/rss+xml"/><item><title>Über mich</title><link>https://zyria.de/about/</link><pubDate>Mon, 24 Jul 2023 17:18:44 +0200</pubDate><guid>https://zyria.de/about/</guid><description>&lt;h2 id="fabrice-kirchner">
  Fabrice Kirchner
  &lt;a class="heading-link" href="#fabrice-kirchner">
- &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
  &lt;span class="sr-only">Link zu Überschrift&lt;/span>
  &lt;/a>
 &lt;/h2>
@@ -74,7 +74,7 @@
 &lt;p>Beruflich betreu ich die IT in einem mittelständischen Unternehmen.&lt;/p></description></item><item><title>Datenschutzerklärung</title><link>https://zyria.de/datenschutz/</link><pubDate>Fri, 21 Jul 2023 15:17:40 +0200</pubDate><guid>https://zyria.de/datenschutz/</guid><description>&lt;h2 id="einleitung">
  Einleitung
  &lt;a class="heading-link" href="#einleitung">
- &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
  &lt;span class="sr-only">Link zu Überschrift&lt;/span>
  &lt;/a>
 &lt;/h2>
@@ -88,7 +88,7 @@ innerhalb externer Onlinepräsenzen, wie z.B. unserer Social-Media-Profile&lt;br
 (nachfolgend zusammenfassend bezeichnet als &amp;ldquo;Onlineangebot“).&lt;/p></description></item><item><title>Impressum</title><link>https://zyria.de/impressum/</link><pubDate>Fri, 21 Jul 2023 14:41:15 +0200</pubDate><guid>https://zyria.de/impressum/</guid><description>&lt;h2 id="diensteanbieter">
  Diensteanbieter
  &lt;a class="heading-link" href="#diensteanbieter">
- &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
  &lt;span class="sr-only">Link zu Überschrift&lt;/span>
  &lt;/a>
 &lt;/h2>
@@ -98,7 +98,7 @@ Haingasse 3&lt;br>
 &lt;h2 id="kontaktmöglichkeiten">
  Kontaktmöglichkeiten
  &lt;a class="heading-link" href="#kontaktm%c3%b6glichkeiten">
- &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
  &lt;span class="sr-only">Link zu Überschrift&lt;/span>
  &lt;/a>
 &lt;/h2>
@@ -108,14 +108,84 @@ Telefon:&lt;br>
 0160 5513991&lt;/p>
 &lt;p>Mastodon:&lt;br>
 
-&lt;a href="https://kirchner.social/@fabrice" class="external-link" target="_blank" rel="noopener">fabrice&lt;/a>
+&lt;a href="https://kirchner.social/@fabrice"
+ class="external-link"
+ target="_blank"
+ rel="noopener">fabrice&lt;/a>
 &lt;/p>
+&lt;img src="https://zyria.de/qr_30e536884bbd0a86.png" width="154" height="154" alt="QR Code der vCard von Fabrice Kirchner">
 &lt;p>
-&lt;a href="https://datenschutz-generator.de/" title="Rechtstext von Dr. Schwenke - für weitere Informationen bitte anklicken." class="external-link" target="_blank" rel="noopener">Erstellt mit kostenlosem Datenschutz-Generator.de von Dr. Thomas Schwenke&lt;/a>
-&lt;/p></description></item><item><title>Solaranlage</title><link>https://zyria.de/posts/solar/</link><pubDate>Fri, 22 Mar 2024 10:12:47 +0100</pubDate><guid>https://zyria.de/posts/solar/</guid><description>&lt;h2 id="übersicht-über-unsere-solaranlage-mit-komponenten">
+&lt;a href="https://datenschutz-generator.de/" title="Rechtstext von Dr. Schwenke - für weitere Informationen bitte anklicken."
+ class="external-link"
+ target="_blank"
+ rel="noopener">Erstellt mit kostenlosem Datenschutz-Generator.de von Dr. Thomas Schwenke&lt;/a>
+&lt;/p></description></item><item><title>Logins</title><link>https://zyria.de/docs/it-intern/server/login/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://zyria.de/docs/it-intern/server/login/</guid><description>&lt;p>Alle Zugangsdaten sind entweder in der Persönlichen Keepass Datendank (für&lt;br>
+personalisierte Logindaten) oder in der IT Datenbank. Der Login auf die Server&lt;br>
+geschieht über SSH Schlüssel. Ein Login mit dem Passwort ist nicht vorgesehen.&lt;/p>
+&lt;p>Für den externen Zugriff ist der Login über 
+&lt;a href="https://vpn.zyria.de"
+ class="external-link"
+ target="_blank"
+ rel="noopener">VPN&lt;/a>
+ oder einem Bastion Host&lt;br>
+
+&lt;a href="mailto:bastion@vpn.zyria.de">bastion@vpn.zyria.de&lt;/a>
+:3022 möglich. &lt;/p>
+&lt;p>Generell sollte jedoch ein Login auf die Server nur zum Suchen von Fehlern&lt;br>
+stattfinden. Die Verwaltung erfolgt ausschliesslich über Ansible. Jede händisch&lt;br>
+durchgeführte Änderung muss im Nachhinein in Ansible eingepflegt und getestet&lt;br>
+werden.&lt;/p></description></item><item><title>Server-,Diensteverwaltung</title><link>https://zyria.de/docs/it-intern/server/verwaltung/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://zyria.de/docs/it-intern/server/verwaltung/</guid><description>&lt;p>Wir verwenden zur generellen Verwaltung von Servern Ansible. Für manche Dienste&lt;br>
+ist es jedoch notwendig oder praktikabler dies über vorhandene Portale zu&lt;br>
+realisieren.&lt;/p>
+&lt;h2 id="core-networks-dns">
+ Core-Networks (DNS)
+ &lt;a class="heading-link" href="#core-networks-dns">
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;p>Unsere DNS Server werden bei 
+&lt;a href="https://www.core-networks.de"
+ class="external-link"
+ target="_blank"
+ rel="noopener">Core-Networks&lt;/a>
+&lt;br>
+gehostet. In deren 
+&lt;a href="https://iface.core-networks.de"
+ class="external-link"
+ target="_blank"
+ rel="noopener">Webinterface&lt;/a>
+ lassen sich&lt;br>
+alle relevanten Änderungen durchführen.&lt;/p>
+&lt;h2 id="hetzner-serveripreverse-dns">
+ Hetzner (Server,IP,Reverse DNS)
+ &lt;a class="heading-link" href="#hetzner-serveripreverse-dns">
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;p>Hetzner bietet ein 
+&lt;a href="https://robot.hetzner.com"
+ class="external-link"
+ target="_blank"
+ rel="noopener">Interface&lt;/a>
+ zur Steuerung an. Dort&lt;br>
+werden und müssen auch Reverse DNS Einträge angelegt. Für die&lt;br>
+
+&lt;a href="https://robot.hetzner.com/vswitch/index"
+ class="external-link"
+ target="_blank"
+ rel="noopener">Vswitch&lt;/a>
+ und für&lt;br>
+
+&lt;a href="https://robot.hetzner.com/server"
+ class="external-link"
+ target="_blank"
+ rel="noopener">Server&lt;/a>
+.&lt;/p></description></item><item><title>Solaranlage</title><link>https://zyria.de/posts/solar/</link><pubDate>Fri, 22 Mar 2024 10:12:47 +0100</pubDate><guid>https://zyria.de/posts/solar/</guid><description>&lt;h2 id="übersicht-über-unsere-solaranlage-mit-komponenten">
  Übersicht über unsere Solaranlage mit Komponenten
  &lt;a class="heading-link" href="#%c3%bcbersicht-%c3%bcber-unsere-solaranlage-mit-komponenten">
- &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
  &lt;span class="sr-only">Link zu Überschrift&lt;/span>
  &lt;/a>
 &lt;/h2>
@@ -233,49 +303,515 @@ Telefon:&lt;br>
 Kabelbinder, Zangen, Schraubenschlüssel&lt;/p></description></item><item><title>Linksammlung rund um Strom</title><link>https://zyria.de/posts/strom/</link><pubDate>Fri, 08 Mar 2024 12:52:37 +0200</pubDate><guid>https://zyria.de/posts/strom/</guid><description>&lt;h2 id="hichi-ir-und-home-assistant">
  Hichi IR und Home Assistant
  &lt;a class="heading-link" href="#hichi-ir-und-home-assistant">
- &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
  &lt;span class="sr-only">Link zu Überschrift&lt;/span>
  &lt;/a>
 &lt;/h2>
 &lt;p>
-&lt;a href="https://ottelo.jimdofree.com/stromz%c3%a4hler-auslesen-tasmota/" class="external-link" target="_blank" rel="noopener">Stromzähler mit einem ESP8266 / ESP32 mit Tasmota auslesen und darstellen&lt;/a>
+&lt;a href="https://ottelo.jimdofree.com/stromz%c3%a4hler-auslesen-tasmota/"
+ class="external-link"
+ target="_blank"
+ rel="noopener">Stromzähler mit einem ESP8266 / ESP32 mit Tasmota auslesen und darstellen&lt;/a>
 &lt;/p>
 &lt;h2 id="solarflow-hoymiles-homeassistant">
  Solarflow Hoymiles Homeassistant
  &lt;a class="heading-link" href="#solarflow-hoymiles-homeassistant">
- &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
  &lt;span class="sr-only">Link zu Überschrift&lt;/span>
  &lt;/a>
 &lt;/h2>
 &lt;p>
-&lt;a href="https://github.com/z-master42/solarflow/tree/main" class="external-link" target="_blank" rel="noopener">Git Repo mit nützlichen Infos&lt;/a>
+&lt;a href="https://github.com/z-master42/solarflow/tree/main"
+ class="external-link"
+ target="_blank"
+ rel="noopener">Git Repo mit nützlichen Infos&lt;/a>
 &lt;/p>
 &lt;h2 id="solarflow">
  Solarflow
  &lt;a class="heading-link" href="#solarflow">
- &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
  &lt;span class="sr-only">Link zu Überschrift&lt;/span>
  &lt;/a>
 &lt;/h2>
 &lt;p>Steuerung des Solarflow&lt;br>
 
-&lt;a href="https://github.com/reinhard-brandstaedter/solarflow-control" class="external-link" target="_blank" rel="noopener">Solarflow Control&lt;/a>
+&lt;a href="https://github.com/reinhard-brandstaedter/solarflow-control"
+ class="external-link"
+ target="_blank"
+ rel="noopener">Solarflow Control&lt;/a>
 &lt;/p>
 &lt;p>Von Cloud trennen und an den loaklen MQTT binden&lt;br>
 
-&lt;a href="https://github.com/reinhard-brandstaedter/solarflow-bt-manager" class="external-link" target="_blank" rel="noopener">Solarflow Bluetooth Manager&lt;/a>
+&lt;a href="https://github.com/reinhard-brandstaedter/solarflow-bt-manager"
+ class="external-link"
+ target="_blank"
+ rel="noopener">Solarflow Bluetooth Manager&lt;/a>
 &lt;/p>
 &lt;p>Eine Statusseite&lt;br>
 
-&lt;a href="https://github.com/reinhard-brandstaedter/solarflow-statuspage" class="external-link" target="_blank" rel="noopener">Solarflow Statuspage and Control&lt;/a>
+&lt;a href="https://github.com/reinhard-brandstaedter/solarflow-statuspage"
+ class="external-link"
+ target="_blank"
+ rel="noopener">Solarflow Statuspage and Control&lt;/a>
 &lt;/p>
 &lt;p>Telegram Austauschgruppe&lt;br>
 
-&lt;a href="https://t.me/&amp;#43;nEPrpHst6xFmZTky" class="external-link" target="_blank" rel="noopener">Private Zendure Austauschgruppe&lt;/a>
-&lt;/p></description></item><item><title>Hardware</title><link>https://zyria.de/posts/hardware/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://zyria.de/posts/hardware/</guid><description>&lt;h2 id="netzwerk">
+&lt;a href="https://t.me/&amp;#43;nEPrpHst6xFmZTky"
+ class="external-link"
+ target="_blank"
+ rel="noopener">Private Zendure Austauschgruppe&lt;/a>
+&lt;/p></description></item><item><title>Erste Hilfe</title><link>https://zyria.de/docs/it-support/erste_hilfe/</link><pubDate>Thu, 19 Oct 2023 13:28:04 +0200</pubDate><guid>https://zyria.de/docs/it-support/erste_hilfe/</guid><description>&lt;h2 id="erster-schritt">
+ Erster Schritt
+ &lt;a class="heading-link" href="#erster-schritt">
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;ul>
+&lt;li>Läuft das Gerät?&lt;/li>
+&lt;li>Hast du das Gerät einmal neu gestartet? Abmelden und anmelden reicht nicht&lt;br>
+aus!&lt;/li>
+&lt;li>Sind alle Kabel angeschlossen und richtig eingesteckt?&lt;/li>
+&lt;li>Ist der Bildschirm angeschaltet?&lt;/li>
+&lt;li>Was hast du getan, bevor das Gerät nicht mehr ging?&lt;/li>
+&lt;/ul>
+&lt;h2 id="zweiter-schritt">
+ Zweiter Schritt
+ &lt;a class="heading-link" href="#zweiter-schritt">
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;ul>
+&lt;li>
+&lt;a href="https://status.zyria.com/status/index"
+ class="external-link"
+ target="_blank"
+ rel="noopener">Statusseite checken&lt;/a>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="dritter-schritt">
+ Dritter Schritt
+ &lt;a class="heading-link" href="#dritter-schritt">
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;ul>
+&lt;li>Neustart des Rechners == (nach jeder Änderung!) ==&lt;/li>
+&lt;/ul>
+&lt;h2 id="vierter-schritt">
+ Vierter Schritt
+ &lt;a class="heading-link" href="#vierter-schritt">
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;ul>
+&lt;li>Evtl. ausstehende Updates ausführen&lt;/li>
+&lt;/ul></description></item><item><title/><link>https://zyria.de/docs/it-intern/sammelbecken/hetzner/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://zyria.de/docs/it-intern/sammelbecken/hetzner/</guid><description>&lt;h1 id="server-bei-hetzner">
+ Server bei Hetzner
+ &lt;a class="heading-link" href="#server-bei-hetzner">
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h1>
+&lt;h2 id="hardware">
+ Hardware
+ &lt;a class="heading-link" href="#hardware">
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;p>Aktuell sind alle Server bei Hetzner 
+&lt;a href="https://www.hetzner.com/de/dedicated-rootserver/ax101"
+ class="external-link"
+ target="_blank"
+ rel="noopener">AX101&lt;/a>
+ Server.&lt;br>
+Die Server sind Ipv6 only bestellt und beziehen eine IPv4 aus einem 
+&lt;a href="https://docs.hetzner.com/de/robot/dedicated-server/network/vswitch/"
+ class="external-link"
+ target="_blank"
+ rel="noopener">Hetzner vSwitch&lt;/a>
+.&lt;/p>
+&lt;h3 id="cl05">
+ cl05
+ &lt;a class="heading-link" href="#cl05">
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h3>
+&lt;ul>
+&lt;li>Standardserver (Proxmox Node)&lt;/li>
+&lt;li>Genutzt für daily Business&lt;/li>
+&lt;li>Standort: 
+&lt;a href="https://docs.hetzner.com/de/cloud/general/locations/"
+ class="external-link"
+ target="_blank"
+ rel="noopener">FSN1-DC6&lt;/a>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="cl06">
+ cl06
+ &lt;a class="heading-link" href="#cl06">
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h3>
+&lt;ul>
+&lt;li>Standardserver (Proxmox Node)&lt;/li>
+&lt;li>Genutzt für daily Business&lt;/li>
+&lt;li>Standort: 
+&lt;a href="https://docs.hetzner.com/de/cloud/general/locations/"
+ class="external-link"
+ target="_blank"
+ rel="noopener">FSN1-DC6&lt;/a>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="cl07">
+ cl07
+ &lt;a class="heading-link" href="#cl07">
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h3>
+&lt;ul>
+&lt;li>Standardserver (Proxmox Node) und Proxmox Backup Server&lt;/li>
+&lt;li>Genutzt für IT, Entwicklung, Backup und als Lastreserve&lt;/li>
+&lt;li>Standort: 
+&lt;a href="https://docs.hetzner.com/de/cloud/general/locations/"
+ class="external-link"
+ target="_blank"
+ rel="noopener">HEL1-DC5&lt;/a>
+&lt;/li>
+&lt;li>Dieser Server hat zusätzlich zwei Datacenter 16TB Festplatten eingebaut.&lt;/li>
+&lt;/ul>
+&lt;h2 id="hetzner-config">
+ Hetzner Config
+ &lt;a class="heading-link" href="#hetzner-config">
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;p>Im 
+&lt;a href="https://robot.hetzner.com/server"
+ class="external-link"
+ target="_blank"
+ rel="noopener">Robot&lt;/a>
+ Reverse-DNS-Eintrag - Ipv4 und Ipv6 - setzen. Auch an den 
+&lt;a href="https://robot.hetzner.com/vswitch/index"
+ class="external-link"
+ target="_blank"
+ rel="noopener">vswitch&lt;/a>
+ denken.&lt;/p></description></item><item><title/><link>https://zyria.de/docs/it-intern/sammelbecken/snippets/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://zyria.de/docs/it-intern/sammelbecken/snippets/</guid><description>&lt;h1 id="snippets">
+ Snippets
+ &lt;a class="heading-link" href="#snippets">
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h1>
+&lt;h2 id="raid-löschen">
+ Raid löschen
+ &lt;a class="heading-link" href="#raid-l%c3%b6schen">
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="ln">1&lt;/span>&lt;span class="cl">mdadm --stop /dev/md0
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">2&lt;/span>&lt;span class="cl">&lt;span class="k">for&lt;/span> i in &lt;span class="s2">&amp;#34;0&amp;#34;&lt;/span> &lt;span class="s2">&amp;#34;1&amp;#34;&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="k">do&lt;/span> mdadm --zero-superblock /dev/nvme&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="nv">$i&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>n1&lt;span class="p">;&lt;/span> &lt;span class="k">done&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="raid-erstellen">
+ Raid erstellen
+ &lt;a class="heading-link" href="#raid-erstellen">
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="ln">1&lt;/span>&lt;span class="cl">yes &lt;span class="p">|&lt;/span> mdadm --create -n &lt;span class="m">2&lt;/span> -l &lt;span class="m">1&lt;/span> /dev/md0 /dev/nvme&lt;span class="o">[&lt;/span>01&lt;span class="o">]&lt;/span>n1p1
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="partition-mit-ext4-formatieren">
+ Partition mit ext4 formatieren
+ &lt;a class="heading-link" href="#partition-mit-ext4-formatieren">
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;blockquote>
+&lt;p>mkfs.ext4 /dev/md0&lt;/p>&lt;/blockquote>
+&lt;p>oder&lt;/p>
+&lt;blockquote>
+&lt;p>yes | mkfs.ext4 -L boot /dev/md0&lt;/p>&lt;/blockquote>
+&lt;p>Swap:&lt;/p>
+&lt;blockquote>
+&lt;p>mkswap -f /dev/vg-name/swap&lt;/p></description></item><item><title>abe</title><link>https://zyria.de/docs/it-intern/server/physische-server/abe/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://zyria.de/docs/it-intern/server/physische-server/abe/</guid><description>&lt;h2 id="primärfunktion">
+ Primärfunktion
+ &lt;a class="heading-link" href="#prim%c3%a4rfunktion">
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;p>Virtualisierungshost&lt;/p>
+&lt;h2 id="zusätzlich-installierte-software">
+ Zusätzlich installierte Software
+ &lt;a class="heading-link" href="#zus%c3%a4tzlich-installierte-software">
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;ul>
+&lt;li>TODO&lt;/li>
+&lt;/ul>
+&lt;h2 id="setup-mit-ansible">
+ Setup mit Ansible
+ &lt;a class="heading-link" href="#setup-mit-ansible">
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;p>Nachdem ein Server das erste mal gestartet wurde und der Storage wie auch das remote unlock konfiguriert wurde, übernimmt Ansible die volle Kontrolle.&lt;/p></description></item><item><title>Addc</title><link>https://zyria.de/docs/it-intern/server/vms/addc/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://zyria.de/docs/it-intern/server/vms/addc/</guid><description>&lt;h2 id="primärfunktion">
+ Primärfunktion
+ &lt;a class="heading-link" href="#prim%c3%a4rfunktion">
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;p>Samba Active Directory Domain Controller und Fileserver&lt;/p>
+&lt;h2 id="installierte-software">
+ Installierte Software
+ &lt;a class="heading-link" href="#installierte-software">
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;ul>
+&lt;li>Samba-AD-DC&lt;/li>
+&lt;/ul></description></item><item><title>Ansible setup</title><link>https://zyria.de/docs/it-intern/server/physische-server/ansible/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://zyria.de/docs/it-intern/server/physische-server/ansible/</guid><description>&lt;h2 id="setup-mit-ansible">
+ Setup mit Ansible
+ &lt;a class="heading-link" href="#setup-mit-ansible">
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;p>Nachdem ein Server das erste mal gestartet wurde und der Storage wie auch das remote unlock konfiguriert wurde, übernimmt Ansible die volle Kontrolle.&lt;/p></description></item><item><title>Dev</title><link>https://zyria.de/docs/it-intern/server/vms/dev/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://zyria.de/docs/it-intern/server/vms/dev/</guid><description>&lt;h2 id="primärfunktion">
+ Primärfunktion
+ &lt;a class="heading-link" href="#prim%c3%a4rfunktion">
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;p>Host für Podman Container.&lt;/p>
+&lt;h2 id="installierte-software">
+ Installierte Software
+ &lt;a class="heading-link" href="#installierte-software">
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;ul>
+&lt;li>cockpit&lt;/li>
+&lt;li>podman&lt;/li>
+&lt;li>k3s&lt;/li>
+&lt;/ul></description></item><item><title>Dmarc-Report</title><link>https://zyria.de/docs/it-intern/services/dmarc-report/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://zyria.de/docs/it-intern/services/dmarc-report/</guid><description>&lt;h2 id="quelle">
+ Quelle
+ &lt;a class="heading-link" href="#quelle">
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;p>
+&lt;a href="https://hub.docker.com/r/gutmensch/dmarc-report"
+ class="external-link"
+ target="_blank"
+ rel="noopener">Docker Hub&lt;/a>
+&lt;/p>
+&lt;h2 id="repository">
+ Repository
+ &lt;a class="heading-link" href="#repository">
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;p>
+&lt;a href="https://github.com/gutmensch/docker-dmarc-report"
+ class="external-link"
+ target="_blank"
+ rel="noopener">Github&lt;/a>
+&lt;/p>
+&lt;h2 id="dokumentation">
+ Dokumentation
+ &lt;a class="heading-link" href="#dokumentation">
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;p>
+&lt;a href="https://github.com/gutmensch/docker-dmarc-report"
+ class="external-link"
+ target="_blank"
+ rel="noopener">Hersteller&lt;/a>
+&lt;/p>
+&lt;h2 id="funktion">
+ Funktion
+ &lt;a class="heading-link" href="#funktion">
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;p>Analysiert Dmarc Reports, welche uns zugesendet werden. Aufbereitung über ein&lt;br>
+Webinterface.&lt;/p></description></item><item><title>Docs</title><link>https://zyria.de/docs/it-intern/services/docs/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://zyria.de/docs/it-intern/services/docs/</guid><description>&lt;h2 id="quelle">
+ Quelle
+ &lt;a class="heading-link" href="#quelle">
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;p>
+&lt;a href="https://hub.docker.com/r/ricariel/nginx"
+ class="external-link"
+ target="_blank"
+ rel="noopener">Docker Hub&lt;/a>
+&lt;/p>
+&lt;h2 id="repository">
+ Repository
+ &lt;a class="heading-link" href="#repository">
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;p>
+&lt;a href="https://www.casa-due-pur.de/git/fabrice.kirchner/doc-site.git"
+ class="external-link"
+ target="_blank"
+ rel="noopener">Seitenquelltext&lt;/a>
+&lt;/p>
+&lt;p>
+&lt;a href="https://www.casa-due-pur.de/git/fabrice.kirchner/doc-site-html.git"
+ class="external-link"
+ target="_blank"
+ rel="noopener">Seite&lt;/a>
+&lt;/p>
+&lt;p>
+&lt;a href="https://git.zyria.de/pyrox/nginx-docker.git"
+ class="external-link"
+ target="_blank"
+ rel="noopener">Container&lt;/a>
+&lt;/p>
+&lt;h2 id="dokumentation">
+ Dokumentation
+ &lt;a class="heading-link" href="#dokumentation">
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;p>
+&lt;a href="https://docs.nginx.com"
+ class="external-link"
+ target="_blank"
+ rel="noopener">Nginx&lt;/a>
+&lt;/p>
+&lt;p>
+&lt;a href="https://gohugo.io/documentation/"
+ class="external-link"
+ target="_blank"
+ rel="noopener">Hugo&lt;/a>
+&lt;/p>
+&lt;p>
+&lt;a href="https://www.docsy.dev/docs/"
+ class="external-link"
+ target="_blank"
+ rel="noopener">Theme (Docsy)&lt;/a>
+&lt;/p>
+&lt;h2 id="funktion">
+ Funktion
+ &lt;a class="heading-link" href="#funktion">
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;p>Darstellung der Dokumentation. Intern erreichbar.&lt;/p></description></item><item><title>Dovecot</title><link>https://zyria.de/docs/it-intern/services/mailstack/dovecot/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://zyria.de/docs/it-intern/services/mailstack/dovecot/</guid><description>&lt;h2 id="quelle">
+ Quelle
+ &lt;a class="heading-link" href="#quelle">
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;p>
+&lt;a href="https://hub.docker.com/r/ricariel/postfix"
+ class="external-link"
+ target="_blank"
+ rel="noopener">Docker Hub&lt;/a>
+&lt;/p>
+&lt;h2 id="repository">
+ Repository
+ &lt;a class="heading-link" href="#repository">
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;p>
+&lt;a href="https://git.zyria.de/pyrox/postfix-docker.git"
+ class="external-link"
+ target="_blank"
+ rel="noopener">Repo&lt;/a>
+&lt;/p>
+&lt;h2 id="funktion">
+ Funktion
+ &lt;a class="heading-link" href="#funktion">
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;p>Dovecot fungiert in diesem Setup als MDA, Sieve und IMAP Server.&lt;/p></description></item><item><title>Forgejo</title><link>https://zyria.de/docs/it-intern/services/forgejo/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://zyria.de/docs/it-intern/services/forgejo/</guid><description>&lt;h2 id="quelle">
+ Quelle
+ &lt;a class="heading-link" href="#quelle">
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;p>
+&lt;a href="https://codeberg.org/forgejo/-/packages/container/forgejo"
+ class="external-link"
+ target="_blank"
+ rel="noopener">Codeberg&lt;/a>
+&lt;/p>
+&lt;h2 id="repository">
+ Repository
+ &lt;a class="heading-link" href="#repository">
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;p>
+&lt;a href="https://codeberg.org/forgejo/forgejo"
+ class="external-link"
+ target="_blank"
+ rel="noopener">Codeberg&lt;/a>
+&lt;/p>
+&lt;h2 id="dokumentation">
+ Dokumentation
+ &lt;a class="heading-link" href="#dokumentation">
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;p>
+&lt;a href="https://forgejo.org/docs/latest/"
+ class="external-link"
+ target="_blank"
+ rel="noopener">Hersteller&lt;/a>
+&lt;/p>
+&lt;h2 id="funktion">
+ Funktion
+ &lt;a class="heading-link" href="#funktion">
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;p>Github/Gitlab ähnliches Werkzeug und Fork von Gitea. Hier liegen alle&lt;br>
+Repositories des Unternehmens und von hier greifen andere Werkzeuge auf die&lt;br>
+Repositories zu.&lt;/p></description></item><item><title>Hardware</title><link>https://zyria.de/posts/hardware/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://zyria.de/posts/hardware/</guid><description>&lt;h2 id="netzwerk">
  Netzwerk
  &lt;a class="heading-link" href="#netzwerk">
- &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
  &lt;span class="sr-only">Link zu Überschrift&lt;/span>
  &lt;/a>
 &lt;/h2>
@@ -284,10 +820,772 @@ Kabelbinder, Zangen, Schraubenschlüssel&lt;/p></description></item><item><title
 &lt;li>Unifi US 8 PoE 150W (2x)&lt;/li>
 &lt;li>Unifi Nano HD (2x)&lt;/li>
 &lt;li>Unifi U6 Pro&lt;/li>
-&lt;/ul></description></item><item><title>Software</title><link>https://zyria.de/posts/software/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://zyria.de/posts/software/</guid><description>&lt;h2 id="softwareliste">
+&lt;/ul></description></item><item><title>Hedgedoc</title><link>https://zyria.de/docs/it-intern/services/hedgedoc/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://zyria.de/docs/it-intern/services/hedgedoc/</guid><description>&lt;h2 id="quelle">
+ Quelle
+ &lt;a class="heading-link" href="#quelle">
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;p>
+&lt;a href="https://quay.io/repository/hedgedoc/hedgedoc"
+ class="external-link"
+ target="_blank"
+ rel="noopener">Quay&lt;/a>
+&lt;/p>
+&lt;p>
+&lt;a href="https://hub.docker.com/_/postgres"
+ class="external-link"
+ target="_blank"
+ rel="noopener">Docker Hub Datenbank&lt;/a>
+&lt;/p>
+&lt;h2 id="repository">
+ Repository
+ &lt;a class="heading-link" href="#repository">
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;p>
+&lt;a href="https://github.com/hedgedoc/container"
+ class="external-link"
+ target="_blank"
+ rel="noopener">Github&lt;/a>
+&lt;/p>
+&lt;h2 id="dokumentation">
+ Dokumentation
+ &lt;a class="heading-link" href="#dokumentation">
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;p>
+&lt;a href="https://github.com/hedgedoc/container/blob/master/README.md"
+ class="external-link"
+ target="_blank"
+ rel="noopener">Hersteller Container&lt;/a>
+&lt;/p>
+&lt;p>
+&lt;a href="https://docs.hedgedoc.org"
+ class="external-link"
+ target="_blank"
+ rel="noopener">Hersteller Software&lt;/a>
+&lt;/p>
+&lt;p>
+&lt;a href="https://www.postgresql.org/docs/"
+ class="external-link"
+ target="_blank"
+ rel="noopener">Datenbank&lt;/a>
+&lt;/p>
+&lt;h2 id="funktion">
+ Funktion
+ &lt;a class="heading-link" href="#funktion">
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;p>Hedgedoc stellt Notizzettel zur gemeinsamen Bearbeitung in Markdown zur Verfügung.&lt;/p></description></item><item><title>Hetzner Server installieren</title><link>https://zyria.de/docs/it-intern/server/physische-server/hetzner_install/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://zyria.de/docs/it-intern/server/physische-server/hetzner_install/</guid><description>&lt;h2 id="bestellung-von-servern">
+ 
+&lt;a href="https://robot.hetzner.com/order"
+ class="external-link"
+ target="_blank"
+ rel="noopener">Bestellung&lt;/a>
+ von Servern
+ &lt;a class="heading-link" href="#bestellung-von-servern">
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;ol>
+&lt;li>IPv4 Option. Nach der Installation wird diese direkt gekündigt. Die IPv4 Adresse bekommt der Server später über den 
+&lt;a href="https://robot.hetzner.com/vswitch/index"
+ class="external-link"
+ target="_blank"
+ rel="noopener">Vswitch&lt;/a>
+.&lt;/li>
+&lt;li>Server werden immer mit Rescue System bestellt. Wir installieren unsere Maschinen selbst.&lt;/li>
+&lt;li>Bei der Bestellung unbedingt einen 
+&lt;a href="https://robot.hetzner.com/key/index"
+ class="external-link"
+ target="_blank"
+ rel="noopener">SSH Key hinterlegen&lt;/a>
+.&lt;/li>
+&lt;li>
+&lt;a href="https://docs.hetzner.com/de/general/others/order-processing/"
+ class="external-link"
+ target="_blank"
+ rel="noopener">Status&lt;/a>
+ prüfen und Puffer von etwa acht Stunden einplanen. (Lieber einen Tag zu früh bezahlen als ohne Server sein)&lt;/li>
+&lt;/ol>
+&lt;h2 id="nach-der-bestellung">
+ Nach der Bestellung
+ &lt;a class="heading-link" href="#nach-der-bestellung">
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;ol>
+&lt;li>Alle notwendigen Informationen werden uns Email zugesandt.&lt;/li>
+&lt;li>Prüfe den Fingerprint des Public Keys in der Email. Sollte der Key nicht stimmen, starte den Server erneut und mit korrekten Schlüssel in das 
+&lt;a href="https://robot.hetzner.com/server"
+ class="external-link"
+ target="_blank"
+ rel="noopener">Rescue System&lt;/a>
+.&lt;/li>
+&lt;li>Prüfe beim Einloggen den Host-Key Fingerprint. Sollte dieser nicht korrekt sein, wende dich an den Hetzner Support&lt;/li>
+&lt;li>Hetzner überprüft seine Hardware vor der Auslieferung. Sollte etwas auffällig sein, Server reklamieren. So der Server bereits eine längere Laufzeit hinter sich hat, die Lebensdauer der SSD überprüfen und gegebenenfalls tauschen lassen.&lt;/li>
+&lt;/ol>
+&lt;h2 id="installation">
+ Installation
+ &lt;a class="heading-link" href="#installation">
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;ol>
+&lt;li>Git auf dem Server installieren&lt;/li>
+&lt;li>
+&lt;a href="https://www.casa-due-pur.de/git/fabrice.kirchner/hetzner-install.git"
+ class="external-link"
+ target="_blank"
+ rel="noopener">Repository&lt;/a>
+ holen&lt;/li>
+&lt;li>Daten beschaffen:&lt;/li>
+&lt;/ol>
+&lt;p>a. FQDN = überlege einen passenden Namen für die Maschine.&lt;br>
+a. CRYPT_PASS = lass dir ein sicheres Passwort in deinem Passwortgenerator&lt;br>
+generieren.&lt;br>
+a. IPV4 = Die Adresse aus der Auslieferungsmail von Hetzner&lt;/p></description></item><item><title>lisa</title><link>https://zyria.de/docs/it-intern/server/physische-server/lisa/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://zyria.de/docs/it-intern/server/physische-server/lisa/</guid><description>&lt;h2 id="primärfunktion">
+ Primärfunktion
+ &lt;a class="heading-link" href="#prim%c3%a4rfunktion">
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;p>Virtualisierungshost&lt;/p>
+&lt;h2 id="zusätzlich-installierte-software">
+ Zusätzlich installierte Software
+ &lt;a class="heading-link" href="#zus%c3%a4tzlich-installierte-software">
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;ul>
+&lt;li>TODO&lt;/li>
+&lt;/ul>
+&lt;h2 id="setup-mit-ansible">
+ Setup mit Ansible
+ &lt;a class="heading-link" href="#setup-mit-ansible">
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;p>Nachdem ein Server das erste mal gestartet wurde und der Storage wie auch das remote unlock konfiguriert wurde, übernimmt Ansible die volle Kontrolle.&lt;/p></description></item><item><title>Maintenance Page</title><link>https://zyria.de/docs/it-intern/services/maintenance/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://zyria.de/docs/it-intern/services/maintenance/</guid><description>&lt;h2 id="quelle">
+ Quelle
+ &lt;a class="heading-link" href="#quelle">
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;p>
+&lt;a href="https://hub.docker.com/r/ricariel/maintenance-page"
+ class="external-link"
+ target="_blank"
+ rel="noopener">Docker Hub&lt;/a>
+&lt;/p>
+&lt;h2 id="repository">
+ Repository
+ &lt;a class="heading-link" href="#repository">
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;p>
+&lt;a href="https://git.zyria.de/pyrox/maintenance-page-docker.git"
+ class="external-link"
+ target="_blank"
+ rel="noopener">Container&lt;/a>
+&lt;/p>
+&lt;p>
+&lt;a href="https://www.casa-due-pur.de/git/fabrice.kirchner/maintenance-page.git"
+ class="external-link"
+ target="_blank"
+ rel="noopener">Seitenquelltext&lt;/a>
+&lt;/p>
+&lt;p>
+&lt;a href="https://www.casa-due-pur.de/git/fabrice.kirchner/maintenance-page-html.git"
+ class="external-link"
+ target="_blank"
+ rel="noopener">Seitenhtml&lt;/a>
+&lt;/p>
+&lt;h2 id="dokumentation">
+ Dokumentation
+ &lt;a class="heading-link" href="#dokumentation">
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;h2 id="funktion">
+ Funktion
+ &lt;a class="heading-link" href="#funktion">
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;p>Stellt eine Wartunsseite bereit, wenn einer der Shops nicht erreichbar ist.&lt;/p></description></item><item><title>marge</title><link>https://zyria.de/docs/it-intern/server/physische-server/marge/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://zyria.de/docs/it-intern/server/physische-server/marge/</guid><description>&lt;h2 id="primärfunktion">
+ Primärfunktion
+ &lt;a class="heading-link" href="#prim%c3%a4rfunktion">
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;p>Virtualisierungshost&lt;/p>
+&lt;h2 id="zusätzlich-installierte-software">
+ Zusätzlich installierte Software
+ &lt;a class="heading-link" href="#zus%c3%a4tzlich-installierte-software">
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;ul>
+&lt;li>TODO&lt;/li>
+&lt;/ul>
+&lt;h2 id="setup-mit-ansible">
+ Setup mit Ansible
+ &lt;a class="heading-link" href="#setup-mit-ansible">
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;p>Nachdem ein Server das erste mal gestartet wurde und der Storage wie auch das remote unlock konfiguriert wurde, übernimmt Ansible die volle Kontrolle.&lt;/p></description></item><item><title>moe</title><link>https://zyria.de/docs/it-intern/server/physische-server/moe/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://zyria.de/docs/it-intern/server/physische-server/moe/</guid><description>&lt;h2 id="primärfunktion">
+ Primärfunktion
+ &lt;a class="heading-link" href="#prim%c3%a4rfunktion">
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;p>Virtualisierungshost&lt;/p>
+&lt;h2 id="zusätzlich-installierte-software">
+ Zusätzlich installierte Software
+ &lt;a class="heading-link" href="#zus%c3%a4tzlich-installierte-software">
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;ul>
+&lt;li>TODO&lt;/li>
+&lt;/ul>
+&lt;h2 id="setup-mit-ansible">
+ Setup mit Ansible
+ &lt;a class="heading-link" href="#setup-mit-ansible">
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;p>Nachdem ein Server das erste mal gestartet wurde und der Storage wie auch das remote unlock konfiguriert wurde, übernimmt Ansible die volle Kontrolle.&lt;/p></description></item><item><title>MTA Postfix</title><link>https://zyria.de/docs/it-intern/services/mailstack/postfix/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://zyria.de/docs/it-intern/services/mailstack/postfix/</guid><description>&lt;h2 id="quelle">
+ Quelle
+ &lt;a class="heading-link" href="#quelle">
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;p>
+&lt;a href="https://hub.docker.com/r/ricariel/postfix"
+ class="external-link"
+ target="_blank"
+ rel="noopener">Docker Hub&lt;/a>
+&lt;/p>
+&lt;h2 id="repository">
+ Repository
+ &lt;a class="heading-link" href="#repository">
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;p>
+&lt;a href="https://git.zyria.de/pyrox/postfix-docker.git"
+ class="external-link"
+ target="_blank"
+ rel="noopener">Repo&lt;/a>
+&lt;/p>
+&lt;h2 id="funktion">
+ Funktion
+ &lt;a class="heading-link" href="#funktion">
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;p>Die Postfix Konfiguration kann über Dateien oder Umgebungsvariablen erfolgen.&lt;br>
+Ein Set an vordefinierten Variablen lässt sich im 
+&lt;a href="https://git.zyria.de/pyrox/docker-compose-files/raw/branch/master/mailstack.yml"
+ class="external-link"
+ target="_blank"
+ rel="noopener">Compose File&lt;/a>
+ finden.&lt;/p></description></item><item><title>Mta-sts</title><link>https://zyria.de/docs/it-intern/services/mta-sts/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://zyria.de/docs/it-intern/services/mta-sts/</guid><description>&lt;h2 id="quelle">
+ Quelle
+ &lt;a class="heading-link" href="#quelle">
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;p>
+&lt;a href="https://hub.docker.com/r/ricariel/nginx"
+ class="external-link"
+ target="_blank"
+ rel="noopener">Docker Hub&lt;/a>
+&lt;/p>
+&lt;h2 id="repository">
+ Repository
+ &lt;a class="heading-link" href="#repository">
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;p>
+&lt;a href="https://git.zyria.de/pyrox/nginx-docker.git"
+ class="external-link"
+ target="_blank"
+ rel="noopener">Container&lt;/a>
+&lt;/p>
+&lt;h2 id="dokumentation">
+ Dokumentation
+ &lt;a class="heading-link" href="#dokumentation">
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;p>
+&lt;a href="https://docs.nginx.com"
+ class="external-link"
+ target="_blank"
+ rel="noopener">Nginx&lt;/a>
+&lt;/p>
+&lt;h2 id="funktion">
+ Funktion
+ &lt;a class="heading-link" href="#funktion">
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;p>Dieser Service stellt MTA-STS für Firmendomains bereit und ist öffentlich&lt;br>
+erreichbar.&lt;/p></description></item><item><title>ned</title><link>https://zyria.de/docs/it-intern/server/physische-server/ned/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://zyria.de/docs/it-intern/server/physische-server/ned/</guid><description>&lt;h2 id="primärfunktion">
+ Primärfunktion
+ &lt;a class="heading-link" href="#prim%c3%a4rfunktion">
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;p>Virtualisierungshost&lt;/p>
+&lt;h2 id="zusätzlich-installierte-software">
+ Zusätzlich installierte Software
+ &lt;a class="heading-link" href="#zus%c3%a4tzlich-installierte-software">
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;ul>
+&lt;li>TODO&lt;/li>
+&lt;/ul>
+&lt;h2 id="setup-mit-ansible">
+ Setup mit Ansible
+ &lt;a class="heading-link" href="#setup-mit-ansible">
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;p>Nachdem ein Server das erste mal gestartet wurde und der Storage wie auch das remote unlock konfiguriert wurde, übernimmt Ansible die volle Kontrolle.&lt;/p></description></item><item><title>Passwörter</title><link>https://zyria.de/docs/it-support/passwords/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://zyria.de/docs/it-support/passwords/</guid><description>&lt;h2 id="was-wir-nicht-tun">
+ Was wir nicht tun
+ &lt;a class="heading-link" href="#was-wir-nicht-tun">
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;ul>
+&lt;li>Passwörter werden nicht im Browser oder in Dokumenten z.B. Text,Word,Excel gesichert.&lt;/li>
+&lt;li>Passwörter werden niemals durch Mitarbeiter verschickt. Nicht per Email, Telefon, SMS etc. Eine Ausnahme bildet die IT, welche im Ausnahmefall nicht persönlich vor Ort sein kann und selbstständig dafür sorgt, dass die Übertragung sicher ist. Für die Übertragung sind unten beschriebene Datenbanken gedacht. Hat ein Mitarbeiter keinen Zugriff auf eine Datenbank und benötigt ein Kennwort, bitte die IT kontaktieren.&lt;/li>
+&lt;/ul>
+&lt;h2 id="wie-wir-mit-kennworten-umehen">
+ Wie wir mit Kennworten umehen
+ &lt;a class="heading-link" href="#wie-wir-mit-kennworten-umehen">
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;ul>
+&lt;li>Wir benutzen einen dezentralen Passwortmanager (unter Windows Keepassxc), welcher auf allen Rechnern installiert ist. Dieser ermöglicht das sichere Speichern von sensiblen Daten und ist universell im ganzen Unternehmen einsetzbar.&lt;/li>
+&lt;li>Passwörter werden auch für den Transport von A nach B immer in einer Datenbank gesichert. Das Kennwort für diese Datenbank kann bei persönlichen Datenbanken selbst vergeben werden. Bei gemeinsam genutzen Datenbanken ist die IT Ansprechpartner für die Verwaltung der Kennwörter.&lt;/li>
+&lt;li>Der Ablageort für gemeinsam genutze Kennwörter ist
+&lt;blockquote>
+&lt;p>Y:\Zugangsdaten&lt;/p></description></item><item><title>Pihole</title><link>https://zyria.de/docs/it-intern/services/pihole/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://zyria.de/docs/it-intern/services/pihole/</guid><description>&lt;h2 id="quelle">
+ Quelle
+ &lt;a class="heading-link" href="#quelle">
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;p>
+&lt;a href="https://hub.docker.com/r/pihole/pihole"
+ class="external-link"
+ target="_blank"
+ rel="noopener">Docker Hub Pihole&lt;/a>
+&lt;/p>
+&lt;p>
+&lt;a href="https://hub.docker.com/r/ricariel/cn2pihole"
+ class="external-link"
+ target="_blank"
+ rel="noopener">Docker Hub cn2pihole&lt;/a>
+&lt;/p>
+&lt;h2 id="repository">
+ Repository
+ &lt;a class="heading-link" href="#repository">
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;p>
+&lt;a href="https://github.com/pi-hole/docker-pi-hole"
+ class="external-link"
+ target="_blank"
+ rel="noopener">Github&lt;/a>
+&lt;/p>
+&lt;p>
+&lt;a href="https://git.zyria.de/pyrox/core-networks2pihole-docker"
+ class="external-link"
+ target="_blank"
+ rel="noopener">Hersteller core-networks to pihole&lt;/a>
+&lt;/p>
+&lt;h2 id="dokumentation">
+ Dokumentation
+ &lt;a class="heading-link" href="#dokumentation">
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;p>
+&lt;a href="https://github.com/pi-hole/docker-pi-hole"
+ class="external-link"
+ target="_blank"
+ rel="noopener">Hersteller Container&lt;/a>
+&lt;/p>
+&lt;p>
+&lt;a href="https://git.zyria.de/pyrox/core-networks2pihole-docker"
+ class="external-link"
+ target="_blank"
+ rel="noopener">Hersteller core-networks to pihole&lt;/a>
+&lt;/p>
+&lt;h2 id="funktion">
+ Funktion
+ &lt;a class="heading-link" href="#funktion">
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;p>Pihole stellt den DNS hinter dem Active Directory Server bereit. Die Filterlisten enthalten die meisten unerwünschten Domains ohne den Anspruch vollstädnig zu sein. Die Allowlist wird großzügig auf Nutzeranfrage gefüllt.&lt;/p></description></item><item><title>Roundcube Webmail</title><link>https://zyria.de/docs/it-intern/services/roundcube/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://zyria.de/docs/it-intern/services/roundcube/</guid><description>&lt;h2 id="quelle">
+ Quelle
+ &lt;a class="heading-link" href="#quelle">
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;p>
+&lt;a href="https://hub.docker.com/r/roundcube/roundcubemail/"
+ class="external-link"
+ target="_blank"
+ rel="noopener">Docker Hub Roundcube&lt;/a>
+&lt;/p>
+&lt;p>
+&lt;a href="https://hub.docker.com/_/mariadb"
+ class="external-link"
+ target="_blank"
+ rel="noopener">Docker Hub Mariadb&lt;/a>
+&lt;/p>
+&lt;h2 id="repository">
+ Repository
+ &lt;a class="heading-link" href="#repository">
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;p>
+&lt;a href="https://github.com/roundcube/roundcubemail-docker/tree/master/examples"
+ class="external-link"
+ target="_blank"
+ rel="noopener">Github Container&lt;/a>
+&lt;/p>
+&lt;p>
+&lt;a href="https://github.com/roundcube/roundcubemail"
+ class="external-link"
+ target="_blank"
+ rel="noopener">Github Software&lt;/a>
+&lt;/p>
+&lt;p>
+&lt;a href="https://github.com/MariaDB/mariadb-docker"
+ class="external-link"
+ target="_blank"
+ rel="noopener">Github Mariadb&lt;/a>
+&lt;/p>
+&lt;h2 id="dokumentation">
+ Dokumentation
+ &lt;a class="heading-link" href="#dokumentation">
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;p>
+&lt;a href="https://roundcube.net/support/"
+ class="external-link"
+ target="_blank"
+ rel="noopener">Hersteller&lt;/a>
+&lt;/p>
+&lt;p>
+&lt;a href="https://github.com/roundcube/roundcubemail-docker/"
+ class="external-link"
+ target="_blank"
+ rel="noopener">Container&lt;/a>
+&lt;/p>
+&lt;p>
+&lt;a href="https://mariadb.org/documentation/"
+ class="external-link"
+ target="_blank"
+ rel="noopener">Datenbank&lt;/a>
+&lt;/p>
+&lt;h2 id="funktion">
+ Funktion
+ &lt;a class="heading-link" href="#funktion">
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;p>Stellt Webmail für Mitarbeiter bereit. Ist öffentlich erreichbar.&lt;/p></description></item><item><title>Samba Schema</title><link>https://zyria.de/docs/it-intern/server/samba-schema/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://zyria.de/docs/it-intern/server/samba-schema/</guid><description>&lt;h2 id="ms-mcs-admpwd-und-ms-mcs-admpwdexpirationtime">
+ ms-MCS-AdmPwd und ms-MCS-AdmPwdExpirationTime
+ &lt;a class="heading-link" href="#ms-mcs-admpwd-und-ms-mcs-admpwdexpirationtime">
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h2>
+
+
+ 
+
+
+
+
+	
+
+
+
+
+
+
+ 
+ 
+ 
+
+
+
+
+
+
+ &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="ln"> 1&lt;/span>&lt;span class="cl">dn: CN=ms-MCS-AdmPwd,CN=Schema,cn=configuration,DC=ad,DC=zyria,DC=de
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 2&lt;/span>&lt;span class="cl">changetype: add
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 3&lt;/span>&lt;span class="cl">objectClass: attributeSchema
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 4&lt;/span>&lt;span class="cl">ldapDisplayName: ms-MCS-AdmPwd
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 5&lt;/span>&lt;span class="cl">adminDisplayName: ms-MCS-AdmPwd
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 6&lt;/span>&lt;span class="cl">adminDescription: Stores password of local Administrator account on workstation
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 7&lt;/span>&lt;span class="cl">attributeId: 1.2.840.113556.1.8000.2554.50051.45980.28112.18903.35903.6685103.1224907.2.1
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 8&lt;/span>&lt;span class="cl">attributeSyntax: 2.5.5.5
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 9&lt;/span>&lt;span class="cl">omSyntax: 19
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">10&lt;/span>&lt;span class="cl">isSingleValued: TRUE
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">11&lt;/span>&lt;span class="cl">systemOnly: FALSE
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">12&lt;/span>&lt;span class="cl">searchFlags: 648
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">13&lt;/span>&lt;span class="cl">isMemberOfPartialAttributeSet: FALSE
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">14&lt;/span>&lt;span class="cl">showInAdvancedViewOnly: FALSE
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">15&lt;/span>&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">16&lt;/span>&lt;span class="cl">dn: CN=ms-MCS-AdmPwdExpirationTime,CN=Schema,cn=configuration,DC=ad,DC=zyria,DC=de
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">17&lt;/span>&lt;span class="cl">changetype: add
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">18&lt;/span>&lt;span class="cl">objectClass: attributeSchema
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">19&lt;/span>&lt;span class="cl">ldapDisplayName: ms-MCS-AdmPwdExpirationTime
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">20&lt;/span>&lt;span class="cl">adminDisplayName: ms-MCS-AdmPwdExpirationTime
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">21&lt;/span>&lt;span class="cl">adminDescription: Stores timestamp of last password change
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">22&lt;/span>&lt;span class="cl">attributeId: 1.2.840.113556.1.8000.2554.50051.45980.28112.18903.35903.6685103.1224907.2.2
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">23&lt;/span>&lt;span class="cl">attributeSyntax: 2.5.5.16
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">24&lt;/span>&lt;span class="cl">omSyntax: 65
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">25&lt;/span>&lt;span class="cl">isSingleValued: TRUE
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">26&lt;/span>&lt;span class="cl">systemOnly: FALSE
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">27&lt;/span>&lt;span class="cl">searchFlags: 0
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">28&lt;/span>&lt;span class="cl">isMemberOfPartialAttributeSet: FALSE
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">29&lt;/span>&lt;span class="cl">showInAdvancedViewOnly: FALSE
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
+
+
+&lt;h2 id="modify-computer">
+ modify computer
+ &lt;a class="heading-link" href="#modify-computer">
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h2>
+
+
+ 
+
+
+
+
+	
+
+
+
+
+
+
+ 
+ 
+ 
+
+
+
+
+
+
+ &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="ln">1&lt;/span>&lt;span class="cl">dn: CN=computer,CN=Schema,cn=configuration,DC=ad,DC=zyria,DC=de
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">2&lt;/span>&lt;span class="cl">changetype: Modify
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">3&lt;/span>&lt;span class="cl">add: mayContain
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">4&lt;/span>&lt;span class="cl">mayContain: ms-MCS-AdmPwd
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">5&lt;/span>&lt;span class="cl">mayContain: ms-MCS-AdmPwdExpirationTime
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
+
+
+&lt;h2 id="ldappublickey">
+ ldapPublicKey
+ &lt;a class="heading-link" href="#ldappublickey">
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h2>
+
+
+ 
+
+
+
+
+	
+
+
+
+
+
+
+ 
+ 
+ 
+
+
+
+
+
+
+ &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="ln"> 1&lt;/span>&lt;span class="cl">#dn: CN=sshPublicKey,CN=Schema,CN=Configuration,DC=ad,DC=zyria,DC=de
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 2&lt;/span>&lt;span class="cl">#changetype: add
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 3&lt;/span>&lt;span class="cl">#objectClass: top
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 4&lt;/span>&lt;span class="cl">#objectClass: attributeSchema
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 5&lt;/span>&lt;span class="cl">#attributeID: 1.3.6.1.4.1.24552.500.1.1.1.13
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 6&lt;/span>&lt;span class="cl">#cn: sshPublicKey
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 7&lt;/span>&lt;span class="cl">#name: sshPublicKey
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 8&lt;/span>&lt;span class="cl">#lDAPDisplayName: sshPublicKey
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 9&lt;/span>&lt;span class="cl">#description: MANDATORY: OpenSSH Public key
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">10&lt;/span>&lt;span class="cl">#attributeSyntax: 2.5.5.10
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">11&lt;/span>&lt;span class="cl">#oMSyntax: 4
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">12&lt;/span>&lt;span class="cl">#isSingleValued: FALSE
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">13&lt;/span>&lt;span class="cl">#searchFlags: 8
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">14&lt;/span>&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">15&lt;/span>&lt;span class="cl">dn: CN=ldapPublicKey,CN=Schema,CN=Configuration,DC=ad,DC=zyria,DC=de
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">16&lt;/span>&lt;span class="cl">changetype: add
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">17&lt;/span>&lt;span class="cl">objectClass: top
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">18&lt;/span>&lt;span class="cl">objectClass: classSchema
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">19&lt;/span>&lt;span class="cl">governsID: 1.3.6.1.4.1.24552.500.1.1.2.0
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">20&lt;/span>&lt;span class="cl">cn: ldapPublicKey
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">21&lt;/span>&lt;span class="cl">name: ldapPublicKey
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">22&lt;/span>&lt;span class="cl">description: MANDATORY: OpenSSH LPK objectclass
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">23&lt;/span>&lt;span class="cl">lDAPDisplayName: ldapPublicKey
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">24&lt;/span>&lt;span class="cl">subClassOf: top
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">25&lt;/span>&lt;span class="cl">objectClassCategory: 3
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">26&lt;/span>&lt;span class="cl">defaultObjectCategory: CN=ldapPublicKey,CN=Schema,CN=Configuration,DC=ad,DC=zyria,DC=de
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">27&lt;/span>&lt;span class="cl">mayContain: sshPublicKey
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
+
+
+&lt;h2 id="modify-user">
+ modify user
+ &lt;a class="heading-link" href="#modify-user">
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h2>
+
+
+ 
+
+
+
+
+	
+
+
+
+
+
+
+ 
+ 
+ 
+
+
+
+
+
+
+ &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="ln">1&lt;/span>&lt;span class="cl">dn: CN=User,CN=Schema,CN=Configuration,DC=ad,DC=zyria,DC=de
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">2&lt;/span>&lt;span class="cl">changetype: modify
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">3&lt;/span>&lt;span class="cl">replace: auxiliaryClass
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">4&lt;/span>&lt;span class="cl">auxiliaryClass: ldapPublicKey
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">5&lt;/span>&lt;span class="cl">auxiliaryClass: posixAccount
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">6&lt;/span>&lt;span class="cl">auxiliaryClass: shadowAccount
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Setup Windows Client</title><link>https://zyria.de/docs/it-intern/client/setup_windows/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://zyria.de/docs/it-intern/client/setup_windows/</guid><description>&lt;ul>
+&lt;li>
+&lt;p>Windows Rechner mit Professional Version kaufen (Aufgeräumt wird über Ansible)&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Windows Rechner vollständig laden&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Beim ersten Anschalten lokalen Benutzer oder Domäne auswählen.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Lokaler Benutzer ist der Hauptnutzer des Gerätes.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Kennwort wird in der IT Datenbank gesichert&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Alle Datensammelei während des Setups verbieten&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Rechner in Domäne aufnehmen&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Ansible Setup Script starten (liegt im ansible-main Repo unter files)&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Ansible Variablen setzen für den Host (VPN)&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Ansible laufen lassen (Neustarts notwendig und werden nicht durch Ansible&lt;br>
+ausgeführt. Einfach solang bis es durchläuft)&lt;/p></description></item><item><title>Software</title><link>https://zyria.de/posts/software/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://zyria.de/posts/software/</guid><description>&lt;h2 id="softwareliste">
  Softwareliste
  &lt;a class="heading-link" href="#softwareliste">
- &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
  &lt;span class="sr-only">Link zu Überschrift&lt;/span>
  &lt;/a>
 &lt;/h2>
@@ -302,4 +1600,406 @@ Kabelbinder, Zangen, Schraubenschlüssel&lt;/p></description></item><item><title
 &lt;li>Proxmox&lt;/li>
 &lt;/ul>
 &lt;/li>
-&lt;/ul></description></item></channel></rss>
+&lt;/ul></description></item><item><title>Traefik</title><link>https://zyria.de/docs/it-intern/services/traefik/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://zyria.de/docs/it-intern/services/traefik/</guid><description>&lt;h2 id="quelle">
+ Quelle
+ &lt;a class="heading-link" href="#quelle">
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;p>
+&lt;a href="https://hub.docker.com/_/traefik"
+ class="external-link"
+ target="_blank"
+ rel="noopener">Docker Hub&lt;/a>
+&lt;/p>
+&lt;h2 id="repository">
+ Repository
+ &lt;a class="heading-link" href="#repository">
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;p>
+&lt;a href="https://github.com/traefik/traefik"
+ class="external-link"
+ target="_blank"
+ rel="noopener">Github&lt;/a>
+&lt;/p>
+&lt;h2 id="dokumentation">
+ Dokumentation
+ &lt;a class="heading-link" href="#dokumentation">
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;p>
+&lt;a href="https://traefik.io/traefik/"
+ class="external-link"
+ target="_blank"
+ rel="noopener">Traefiklabs&lt;/a>
+&lt;/p>
+&lt;h2 id="funktion">
+ Funktion
+ &lt;a class="heading-link" href="#funktion">
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;p>Reverse Proxy und Load Balancer für alle HTTP Services und einige andere.&lt;/p></description></item><item><title>Unifi Controller</title><link>https://zyria.de/docs/it-intern/services/unifi-controller/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://zyria.de/docs/it-intern/services/unifi-controller/</guid><description>&lt;h2 id="quelle">
+ Quelle
+ &lt;a class="heading-link" href="#quelle">
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;p>
+&lt;a href="https://gitlab.com/Linuxserver.io/docker-unifi-network-application/container_registry"
+ class="external-link"
+ target="_blank"
+ rel="noopener">Docker Hub&lt;/a>
+&lt;/p>
+&lt;h2 id="repository">
+ Repository
+ &lt;a class="heading-link" href="#repository">
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;p>
+&lt;a href="https://github.com/linuxserver/docker-unifi-controller/packages"
+ class="external-link"
+ target="_blank"
+ rel="noopener">Github Container&lt;/a>
+&lt;/p>
+&lt;p>
+&lt;a href="https://github.com/linuxserver/docker-unifi-network-application"
+ class="external-link"
+ target="_blank"
+ rel="noopener">Github Container neu&lt;/a>
+&lt;/p>
+&lt;h2 id="dokumentation">
+ Dokumentation
+ &lt;a class="heading-link" href="#dokumentation">
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;p>
+&lt;a href="https://help.ui.com/hc/en-us/sections/6582310816535-Network"
+ class="external-link"
+ target="_blank"
+ rel="noopener">Hersteller&lt;/a>
+&lt;/p>
+&lt;p>
+&lt;a href="https://docs.linuxserver.io/images/docker-unifi-network-application/"
+ class="external-link"
+ target="_blank"
+ rel="noopener">Container&lt;/a>
+&lt;/p>
+&lt;h2 id="funktion">
+ Funktion
+ &lt;a class="heading-link" href="#funktion">
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;p>Steuerung der Netzwerkkomponenten im Rudert und der Oberstadt. (Access Points,&lt;br>
+Switche)&lt;/p></description></item><item><title>Uptime Kuma</title><link>https://zyria.de/docs/it-intern/services/uptime-kuma/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://zyria.de/docs/it-intern/services/uptime-kuma/</guid><description>&lt;h2 id="quelle">
+ Quelle
+ &lt;a class="heading-link" href="#quelle">
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;p>
+&lt;a href="https://hub.docker.com/r/louislam/uptime-kuma"
+ class="external-link"
+ target="_blank"
+ rel="noopener">Docker Hub&lt;/a>
+&lt;/p>
+&lt;h2 id="repository">
+ Repository
+ &lt;a class="heading-link" href="#repository">
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;p>
+&lt;a href="https://github.com/louislam/uptime-kuma"
+ class="external-link"
+ target="_blank"
+ rel="noopener">Github&lt;/a>
+&lt;/p>
+&lt;h2 id="dokumentation">
+ Dokumentation
+ &lt;a class="heading-link" href="#dokumentation">
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;p>
+&lt;a href="https://github.com/louislam/uptime-kuma/wiki"
+ class="external-link"
+ target="_blank"
+ rel="noopener">Hersteller&lt;/a>
+&lt;/p>
+&lt;h2 id="funktion">
+ Funktion
+ &lt;a class="heading-link" href="#funktion">
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;p>Internes Monitoring einzelner Dienste und Bereitstellung von Statusseiten.&lt;br>
+Mitarbeiter und Supporter haben dies als erste Anlaufstelle bei Problemen mit&lt;br>
+der IT.&lt;/p></description></item><item><title>Windows autologon</title><link>https://zyria.de/docs/it-intern/client/windows_autologon/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://zyria.de/docs/it-intern/client/windows_autologon/</guid><description>&lt;h2 id="autologon">
+ AutoLogon
+ &lt;a class="heading-link" href="#autologon">
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;p>Erstelle eine .reg Datei mit folgendem Inhalt und führe sie auf dem Zielrechner&lt;br>
+aus.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-registry" data-lang="registry">&lt;span class="line">&lt;span class="ln">1&lt;/span>&lt;span class="cl">Windows Registry Editor Version 5.00
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">2&lt;/span>&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">3&lt;/span>&lt;span class="cl">&lt;span class="k">[&lt;/span>&lt;span class="nb">HKEY_LOCAL_MACHINE&lt;/span>&lt;span class="k">\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">4&lt;/span>&lt;span class="cl">&lt;span class="na">&amp;#34;AutoAdminLogon&amp;#34;&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;1&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">5&lt;/span>&lt;span class="cl">&lt;span class="na">&amp;#34;DefaultUserName&amp;#34;&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;BENUTZERNAME&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">6&lt;/span>&lt;span class="cl">&lt;span class="na">&amp;#34;DefaultDomainName&amp;#34;&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;DOMÄNE&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">7&lt;/span>&lt;span class="cl">&lt;span class="na">&amp;#34;DefaultPassword&amp;#34;&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#39;*****&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Wireguard</title><link>https://zyria.de/docs/it-intern/services/wireguard/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://zyria.de/docs/it-intern/services/wireguard/</guid><description>&lt;h2 id="quelle">
+ Quelle
+ &lt;a class="heading-link" href="#quelle">
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;p>
+&lt;a href="https://hub.docker.com/r/ricariel/bastion"
+ class="external-link"
+ target="_blank"
+ rel="noopener">Docker Hub Bastion&lt;/a>
+&lt;/p>
+&lt;p>
+&lt;a href="https://hub.docker.com/r/linuxserver/wireguard"
+ class="external-link"
+ target="_blank"
+ rel="noopener">Docker Hub Wireguard&lt;/a>
+&lt;/p>
+&lt;p>
+&lt;a href="https://hub.docker.com/r/wgportal/wg-portal"
+ class="external-link"
+ target="_blank"
+ rel="noopener">Docker Hub wg-portal&lt;/a>
+&lt;/p>
+&lt;h2 id="repository">
+ Repository
+ &lt;a class="heading-link" href="#repository">
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;p>
+&lt;a href="https://git.zyria.de/pyrox/docker-ssh-bastion"
+ class="external-link"
+ target="_blank"
+ rel="noopener">Bastion&lt;/a>
+&lt;/p>
+&lt;p>
+&lt;a href="https://github.com/linuxserver/docker-wireguard"
+ class="external-link"
+ target="_blank"
+ rel="noopener">Github wireguard&lt;/a>
+&lt;/p>
+&lt;p>
+&lt;a href="https://github.com/h44z/wg-portal"
+ class="external-link"
+ target="_blank"
+ rel="noopener">Github wg-portal&lt;/a>
+&lt;/p>
+&lt;h2 id="dokumentation">
+ Dokumentation
+ &lt;a class="heading-link" href="#dokumentation">
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;p>
+&lt;a href="https://git.zyria.de/pyrox/docker-ssh-bastion"
+ class="external-link"
+ target="_blank"
+ rel="noopener">Hersteller Bastion&lt;/a>
+&lt;/p>
+&lt;p>
+&lt;a href="https://docs.linuxserver.io/images/docker-wireguard"
+ class="external-link"
+ target="_blank"
+ rel="noopener">Linuxserver.io wireguard&lt;/a>
+&lt;/p>
+&lt;p>
+&lt;a href="https://github.com/h44z/wg-portal"
+ class="external-link"
+ target="_blank"
+ rel="noopener">Github wg-portal&lt;/a>
+&lt;/p>
+&lt;h2 id="funktion">
+ Funktion
+ &lt;a class="heading-link" href="#funktion">
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;p>Der Bastion Container stellt einen SSH Jumphost bereit. Primär für die Nutzung&lt;br>
+von Ansible. Damit lassen sich alle Geräte hinter den NATs erreichen, welche im&lt;br>
+VPN sind.&lt;/p></description></item><item><title>WireGuard mit systemd</title><link>https://zyria.de/docs/it-intern/client/wireguard_mit_systemd/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://zyria.de/docs/it-intern/client/wireguard_mit_systemd/</guid><description>&lt;p>Für eine WireGuard-Verbindung mit systemd-networkd und systemd-resolved.&lt;/p>
+&lt;p>Alle Konfigurationsdateien gehören in &lt;code>/etc/systemd/network/&lt;/code>.&lt;/p>
+&lt;h2 id="interface">
+ Interface
+ &lt;a class="heading-link" href="#interface">
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;p>Das WireGuard-Interface anlegen (muss mit einer Zahl beginnen, z.B. &lt;code>10-wg0.netdev&lt;/code>) (
+&lt;a href="https://www.freedesktop.org/software/systemd/man/latest/systemd.netdev.html"
+ class="external-link"
+ target="_blank"
+ rel="noopener">Dokumentation&lt;/a>
+)&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-systemd" data-lang="systemd">&lt;span class="line">&lt;span class="ln"> 1&lt;/span>&lt;span class="cl">&lt;span class="k">[NetDev]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 2&lt;/span>&lt;span class="cl">&lt;span class="na">Name&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">wg0&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 3&lt;/span>&lt;span class="cl">&lt;span class="na">Kind&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">wireguard&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 4&lt;/span>&lt;span class="cl">&lt;span class="na">Description&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">WireGuard-Tunnel für Casa Due Pur&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 5&lt;/span>&lt;span class="cl">&lt;span class="na">MTUBytes&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">1320&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 6&lt;/span>&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 7&lt;/span>&lt;span class="cl">&lt;span class="k">[WireGuard]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 8&lt;/span>&lt;span class="cl">&lt;span class="na">PrivateKey&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">...&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 9&lt;/span>&lt;span class="cl">&lt;span class="c"># Für alle Netze aus AllowedIPs soll automatisch eine Route erzeugt werden, in einer separaten Routing-Tabelle:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">10&lt;/span>&lt;span class="cl">&lt;span class="na">RouteTable&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">123&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">11&lt;/span>&lt;span class="cl">&lt;span class="c"># Die verschlüsselten WireGuard-Pakete werden markiert:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">12&lt;/span>&lt;span class="cl">&lt;span class="na">FirewallMark&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">123&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">13&lt;/span>&lt;span class="cl">&lt;span class="c"># Beides erlaubt spezielles Routing, konfiguriert in der *.network-Datei&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">14&lt;/span>&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">15&lt;/span>&lt;span class="cl">&lt;span class="k">[WireGuardPeer]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">16&lt;/span>&lt;span class="cl">&lt;span class="na">PublicKey&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">IaNBwGqXkxy4iLuowJQuR6h+AdL5Oo9oYtSqub8m6C4=&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">17&lt;/span>&lt;span class="cl">&lt;span class="na">PresharedKey&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">...&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">18&lt;/span>&lt;span class="cl">&lt;span class="na">AllowedIPs&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">fd42:167:84::1/64, 2a01:4f8:1c1c:1e5b::/64, 2a01:4f8:fff0:22::/64, 2a01:4f8:242:27a5::/64, 2a01:4f8:242:27a3::/64, 2003:a:241:4400::/56, 2003:a:27f:c144::/64, 159.69.238.80/28, 159.69.10.123/32, 87.140.122.88/32, 168.119.65.89/32, 168.119.65.91/32, 10.26.15.0/24, 192.168.2.0/24&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">19&lt;/span>&lt;span class="cl">&lt;span class="na">Endpoint &lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s"> vpn.casa-due-pur.de:51194&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">20&lt;/span>&lt;span class="cl">&lt;span class="na">PersistentKeepalive&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">16&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;code>PrivateKey=&lt;/code> und &lt;code>PresharedKey=&lt;/code> entsprechend ausfüllen, den Rest sicherheitshalber nochmal abgleichen. Die Datei sollte für unprivilegierte Nutzer nicht lesbar sein, d.h. &lt;code>chown root:systemd-network ...&lt;/code>, &lt;code>chmod 640 ...&lt;/code>.&lt;/p></description></item><item><title>Zammad</title><link>https://zyria.de/docs/it-intern/services/zammad/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://zyria.de/docs/it-intern/services/zammad/</guid><description>&lt;h2 id="quelle">
+ Quelle
+ &lt;a class="heading-link" href="#quelle">
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;h2 id="repository">
+ Repository
+ &lt;a class="heading-link" href="#repository">
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;p>
+&lt;a href="https://github.com/zammad"
+ class="external-link"
+ target="_blank"
+ rel="noopener">Zammad&lt;/a>
+&lt;/p>
+&lt;p>
+&lt;a href="https://github.com/zammad/zammad-helm"
+ class="external-link"
+ target="_blank"
+ rel="noopener">Helm&lt;/a>
+&lt;/p>
+&lt;h2 id="dokumentation">
+ Dokumentation
+ &lt;a class="heading-link" href="#dokumentation">
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;p>
+&lt;a href="https://admin-docs.zammad.org/de/latest/index.html"
+ class="external-link"
+ target="_blank"
+ rel="noopener">Admin Dokumentation&lt;/a>
+&lt;/p>
+&lt;p>
+&lt;a href="https://docs.zammad.org/en/latest/index.html"
+ class="external-link"
+ target="_blank"
+ rel="noopener">Zentrale Dokumentation&lt;/a>
+&lt;/p>
+&lt;p>
+&lt;a href="https://docs.zammad.org/en/latest/admin/console/hidden-settings.html"
+ class="external-link"
+ target="_blank"
+ rel="noopener">Console Settings&lt;/a>
+&lt;/p>
+&lt;h2 id="funktion">
+ Funktion
+ &lt;a class="heading-link" href="#funktion">
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;h2 id="anpassungen">
+ Anpassungen
+ &lt;a class="heading-link" href="#anpassungen">
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;p>Anpassungen, welche auf der rake console durchgeführt werden müssen.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="ln"> 1&lt;/span>&lt;span class="cl">Setting.set&lt;span class="o">(&lt;/span>&lt;span class="s1">&amp;#39;system_bcc&amp;#39;&lt;/span>, &lt;span class="s1">&amp;#39;service+Sent@casa-due-pur.de&amp;#39;&lt;/span>&lt;span class="o">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 2&lt;/span>&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 3&lt;/span>&lt;span class="cl">Setting.set&lt;span class="o">(&lt;/span>&lt;span class="s1">&amp;#39;ui_ticket_create_notes&amp;#39;&lt;/span>, &lt;span class="o">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 4&lt;/span>&lt;span class="cl"> :&lt;span class="s2">&amp;#34;phone-in&amp;#34;&lt;/span>&lt;span class="o">=&lt;/span>&amp;gt;&lt;span class="s2">&amp;#34;Du erstellst einen eingehenden Anruf.&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 5&lt;/span>&lt;span class="cl"> :&lt;span class="s2">&amp;#34;phone-out&amp;#34;&lt;/span>&lt;span class="o">=&lt;/span>&amp;gt;&lt;span class="s2">&amp;#34;Du erstellst einen ausgehenden Anruf.&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 6&lt;/span>&lt;span class="cl"> :&lt;span class="s2">&amp;#34;email-out&amp;#34;&lt;/span>&lt;span class="o">=&lt;/span>&amp;gt;&lt;span class="s2">&amp;#34;Du wirst eine E-Mail senden.&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 7&lt;/span>&lt;span class="cl"> &lt;span class="o">})&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 8&lt;/span>&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 9&lt;/span>&lt;span class="cl">Setting.set&lt;span class="o">(&lt;/span>&lt;span class="s1">&amp;#39;ui_ticket_add_article_hint&amp;#39;&lt;/span>, &lt;span class="o">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">10&lt;/span>&lt;span class="cl"> :&lt;span class="s2">&amp;#34;note-internal&amp;#34;&lt;/span>&lt;span class="o">=&lt;/span>&amp;gt;&lt;span class="s2">&amp;#34;Du erstellst eine INTERNE Notiz. Nur andere Mitarbeiter werden diese sehen können.&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">11&lt;/span>&lt;span class="cl"> :&lt;span class="s2">&amp;#34;note-public&amp;#34;&lt;/span>&lt;span class="o">=&lt;/span>&amp;gt;&lt;span class="s2">&amp;#34;Du erstellst eine öffentlich Notiz. Der Kunde kann diese unter Umständen sehen.&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">12&lt;/span>&lt;span class="cl"> :&lt;span class="s2">&amp;#34;phone-internal&amp;#34;&lt;/span> &lt;span class="o">=&lt;/span>&amp;gt; &lt;span class="s2">&amp;#34;Du erstellst eine INTERNE Telefonnotiz. Nur andere Mitarbeiter werden diese sehen können.&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">13&lt;/span>&lt;span class="cl"> :&lt;span class="s2">&amp;#34;phone-public&amp;#34;&lt;/span>&lt;span class="o">=&lt;/span>&amp;gt;&lt;span class="s2">&amp;#34;Du erstellst eine öffentliche Telefonnotiz. Der Kunde kann diese unter Umständen sehen.&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">14&lt;/span>&lt;span class="cl"> :&lt;span class="s2">&amp;#34;email-internal&amp;#34;&lt;/span> &lt;span class="o">=&lt;/span>&amp;gt; &lt;span class="s2">&amp;#34;Du erstellst eine externe Mail. Der Kunde kann diese sehen.&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">15&lt;/span>&lt;span class="cl"> :&lt;span class="s2">&amp;#34;email-public&amp;#34;&lt;/span>&lt;span class="o">=&lt;/span>&amp;gt;&lt;span class="s2">&amp;#34;Du erstellst eine externe Email. Der Kunde kann diese sehen.&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">16&lt;/span>&lt;span class="cl"> &lt;span class="o">})&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">17&lt;/span>&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">18&lt;/span>&lt;span class="cl">Setting.set&lt;span class="o">(&lt;/span>&lt;span class="s1">&amp;#39;ui_user_organization_selector_with_email&amp;#39;&lt;/span>, &lt;span class="nb">true&lt;/span>&lt;span class="o">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">19&lt;/span>&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">20&lt;/span>&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">21&lt;/span>&lt;span class="cl">Setting.set&lt;span class="o">(&lt;/span>&lt;span class="s1">&amp;#39;ui_sidebar_open_ticket_indicator_colored&amp;#39;&lt;/span>, &lt;span class="nb">true&lt;/span>&lt;span class="o">)&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Zugriffsrechte auf Mailboxen</title><link>https://zyria.de/docs/it-intern/services/mailstack/sharedfolders/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://zyria.de/docs/it-intern/services/mailstack/sharedfolders/</guid><description>&lt;p>Wer hat eigentlich auf welche Mailbox Zugriff?&lt;/p>
+&lt;p>Nutzer können Ihr Mailboxen beliebig mit anderen Nutzern teilen. Die IT hat&lt;br>
+einige Freigaben bereits eingerichtet. Mit folgendem Befehlen lassen sich diese&lt;br>
+setzen:&lt;/p>
+
+
+ 
+
+
+
+
+	
+
+
+
+
+
+
+ 
+ 
+ 
+
+
+
+
+
+
+ &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;/code>&lt;/pre>&lt;/div></description></item></channel></rss>

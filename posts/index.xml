@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Beiträge on Zyria</title><link>https://zyria.de/posts/</link><description>Recent content in Beiträge on Zyria</description><generator>Hugo</generator><language>de-de</language><atom:link href="https://zyria.de/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>Solaranlage</title><link>https://zyria.de/posts/solar/</link><pubDate>Fri, 22 Mar 2024 10:12:47 +0100</pubDate><guid>https://zyria.de/posts/solar/</guid><description>&lt;h2 id="übersicht-über-unsere-solaranlage-mit-komponenten">
  Übersicht über unsere Solaranlage mit Komponenten
  &lt;a class="heading-link" href="#%c3%bcbersicht-%c3%bcber-unsere-solaranlage-mit-komponenten">
- &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
  &lt;span class="sr-only">Link zu Überschrift&lt;/span>
  &lt;/a>
 &lt;/h2>
@@ -119,49 +119,67 @@
 Kabelbinder, Zangen, Schraubenschlüssel&lt;/p></description></item><item><title>Linksammlung rund um Strom</title><link>https://zyria.de/posts/strom/</link><pubDate>Fri, 08 Mar 2024 12:52:37 +0200</pubDate><guid>https://zyria.de/posts/strom/</guid><description>&lt;h2 id="hichi-ir-und-home-assistant">
  Hichi IR und Home Assistant
  &lt;a class="heading-link" href="#hichi-ir-und-home-assistant">
- &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
  &lt;span class="sr-only">Link zu Überschrift&lt;/span>
  &lt;/a>
 &lt;/h2>
 &lt;p>
-&lt;a href="https://ottelo.jimdofree.com/stromz%c3%a4hler-auslesen-tasmota/" class="external-link" target="_blank" rel="noopener">Stromzähler mit einem ESP8266 / ESP32 mit Tasmota auslesen und darstellen&lt;/a>
+&lt;a href="https://ottelo.jimdofree.com/stromz%c3%a4hler-auslesen-tasmota/"
+ class="external-link"
+ target="_blank"
+ rel="noopener">Stromzähler mit einem ESP8266 / ESP32 mit Tasmota auslesen und darstellen&lt;/a>
 &lt;/p>
 &lt;h2 id="solarflow-hoymiles-homeassistant">
  Solarflow Hoymiles Homeassistant
  &lt;a class="heading-link" href="#solarflow-hoymiles-homeassistant">
- &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
  &lt;span class="sr-only">Link zu Überschrift&lt;/span>
  &lt;/a>
 &lt;/h2>
 &lt;p>
-&lt;a href="https://github.com/z-master42/solarflow/tree/main" class="external-link" target="_blank" rel="noopener">Git Repo mit nützlichen Infos&lt;/a>
+&lt;a href="https://github.com/z-master42/solarflow/tree/main"
+ class="external-link"
+ target="_blank"
+ rel="noopener">Git Repo mit nützlichen Infos&lt;/a>
 &lt;/p>
 &lt;h2 id="solarflow">
  Solarflow
  &lt;a class="heading-link" href="#solarflow">
- &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
  &lt;span class="sr-only">Link zu Überschrift&lt;/span>
  &lt;/a>
 &lt;/h2>
 &lt;p>Steuerung des Solarflow&lt;br>
 
-&lt;a href="https://github.com/reinhard-brandstaedter/solarflow-control" class="external-link" target="_blank" rel="noopener">Solarflow Control&lt;/a>
+&lt;a href="https://github.com/reinhard-brandstaedter/solarflow-control"
+ class="external-link"
+ target="_blank"
+ rel="noopener">Solarflow Control&lt;/a>
 &lt;/p>
 &lt;p>Von Cloud trennen und an den loaklen MQTT binden&lt;br>
 
-&lt;a href="https://github.com/reinhard-brandstaedter/solarflow-bt-manager" class="external-link" target="_blank" rel="noopener">Solarflow Bluetooth Manager&lt;/a>
+&lt;a href="https://github.com/reinhard-brandstaedter/solarflow-bt-manager"
+ class="external-link"
+ target="_blank"
+ rel="noopener">Solarflow Bluetooth Manager&lt;/a>
 &lt;/p>
 &lt;p>Eine Statusseite&lt;br>
 
-&lt;a href="https://github.com/reinhard-brandstaedter/solarflow-statuspage" class="external-link" target="_blank" rel="noopener">Solarflow Statuspage and Control&lt;/a>
+&lt;a href="https://github.com/reinhard-brandstaedter/solarflow-statuspage"
+ class="external-link"
+ target="_blank"
+ rel="noopener">Solarflow Statuspage and Control&lt;/a>
 &lt;/p>
 &lt;p>Telegram Austauschgruppe&lt;br>
 
-&lt;a href="https://t.me/&amp;#43;nEPrpHst6xFmZTky" class="external-link" target="_blank" rel="noopener">Private Zendure Austauschgruppe&lt;/a>
+&lt;a href="https://t.me/&amp;#43;nEPrpHst6xFmZTky"
+ class="external-link"
+ target="_blank"
+ rel="noopener">Private Zendure Austauschgruppe&lt;/a>
 &lt;/p></description></item><item><title>Hardware</title><link>https://zyria.de/posts/hardware/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://zyria.de/posts/hardware/</guid><description>&lt;h2 id="netzwerk">
  Netzwerk
  &lt;a class="heading-link" href="#netzwerk">
- &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
  &lt;span class="sr-only">Link zu Überschrift&lt;/span>
  &lt;/a>
 &lt;/h2>
@@ -173,7 +191,7 @@ Kabelbinder, Zangen, Schraubenschlüssel&lt;/p></description></item><item><title
 &lt;/ul></description></item><item><title>Software</title><link>https://zyria.de/posts/software/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://zyria.de/posts/software/</guid><description>&lt;h2 id="softwareliste">
  Softwareliste
  &lt;a class="heading-link" href="#softwareliste">
- &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
  &lt;span class="sr-only">Link zu Überschrift&lt;/span>
  &lt;/a>
 &lt;/h2>

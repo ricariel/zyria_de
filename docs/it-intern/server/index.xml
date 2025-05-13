@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Server on Zyria</title><link>https://zyria.de/docs/it-intern/server/</link><description>Recent content in Server on Zyria</description><generator>Hugo</generator><language>de-de</language><atom:link href="https://zyria.de/docs/it-intern/server/index.xml" rel="self" type="application/rss+xml"/><item><title>Logins</title><link>https://zyria.de/docs/it-intern/server/login/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://zyria.de/docs/it-intern/server/login/</guid><description>&lt;p>Alle Zugangsdaten sind entweder in der Persönlichen Keepass Datendank (für&lt;br>
+personalisierte Logindaten) oder in der IT Datenbank. Der Login auf die Server&lt;br>
+geschieht über SSH Schlüssel. Ein Login mit dem Passwort ist nicht vorgesehen.&lt;/p>
+&lt;p>Für den externen Zugriff ist der Login über 
+&lt;a href="https://vpn.zyria.de"
+ class="external-link"
+ target="_blank"
+ rel="noopener">VPN&lt;/a>
+ oder einem Bastion Host&lt;br>
+
+&lt;a href="mailto:bastion@vpn.zyria.de">bastion@vpn.zyria.de&lt;/a>
+:3022 möglich. &lt;/p>
+&lt;p>Generell sollte jedoch ein Login auf die Server nur zum Suchen von Fehlern&lt;br>
+stattfinden. Die Verwaltung erfolgt ausschliesslich über Ansible. Jede händisch&lt;br>
+durchgeführte Änderung muss im Nachhinein in Ansible eingepflegt und getestet&lt;br>
+werden.&lt;/p></description></item><item><title>Server-,Diensteverwaltung</title><link>https://zyria.de/docs/it-intern/server/verwaltung/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://zyria.de/docs/it-intern/server/verwaltung/</guid><description>&lt;p>Wir verwenden zur generellen Verwaltung von Servern Ansible. Für manche Dienste&lt;br>
+ist es jedoch notwendig oder praktikabler dies über vorhandene Portale zu&lt;br>
+realisieren.&lt;/p>
+&lt;h2 id="core-networks-dns">
+ Core-Networks (DNS)
+ &lt;a class="heading-link" href="#core-networks-dns">
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;p>Unsere DNS Server werden bei 
+&lt;a href="https://www.core-networks.de"
+ class="external-link"
+ target="_blank"
+ rel="noopener">Core-Networks&lt;/a>
+&lt;br>
+gehostet. In deren 
+&lt;a href="https://iface.core-networks.de"
+ class="external-link"
+ target="_blank"
+ rel="noopener">Webinterface&lt;/a>
+ lassen sich&lt;br>
+alle relevanten Änderungen durchführen.&lt;/p>
+&lt;h2 id="hetzner-serveripreverse-dns">
+ Hetzner (Server,IP,Reverse DNS)
+ &lt;a class="heading-link" href="#hetzner-serveripreverse-dns">
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;p>Hetzner bietet ein 
+&lt;a href="https://robot.hetzner.com"
+ class="external-link"
+ target="_blank"
+ rel="noopener">Interface&lt;/a>
+ zur Steuerung an. Dort&lt;br>
+werden und müssen auch Reverse DNS Einträge angelegt. Für die&lt;br>
+
+&lt;a href="https://robot.hetzner.com/vswitch/index"
+ class="external-link"
+ target="_blank"
+ rel="noopener">Vswitch&lt;/a>
+ und für&lt;br>
+
+&lt;a href="https://robot.hetzner.com/server"
+ class="external-link"
+ target="_blank"
+ rel="noopener">Server&lt;/a>
+.&lt;/p></description></item><item><title>Samba Schema</title><link>https://zyria.de/docs/it-intern/server/samba-schema/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://zyria.de/docs/it-intern/server/samba-schema/</guid><description>&lt;h2 id="ms-mcs-admpwd-und-ms-mcs-admpwdexpirationtime">
+ ms-MCS-AdmPwd und ms-MCS-AdmPwdExpirationTime
+ &lt;a class="heading-link" href="#ms-mcs-admpwd-und-ms-mcs-admpwdexpirationtime">
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h2>
+
+
+ 
+
+
+
+
+	
+
+
+
+
+
+
+ 
+ 
+ 
+
+
+
+
+
+
+ &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="ln"> 1&lt;/span>&lt;span class="cl">dn: CN=ms-MCS-AdmPwd,CN=Schema,cn=configuration,DC=ad,DC=zyria,DC=de
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 2&lt;/span>&lt;span class="cl">changetype: add
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 3&lt;/span>&lt;span class="cl">objectClass: attributeSchema
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 4&lt;/span>&lt;span class="cl">ldapDisplayName: ms-MCS-AdmPwd
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 5&lt;/span>&lt;span class="cl">adminDisplayName: ms-MCS-AdmPwd
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 6&lt;/span>&lt;span class="cl">adminDescription: Stores password of local Administrator account on workstation
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 7&lt;/span>&lt;span class="cl">attributeId: 1.2.840.113556.1.8000.2554.50051.45980.28112.18903.35903.6685103.1224907.2.1
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 8&lt;/span>&lt;span class="cl">attributeSyntax: 2.5.5.5
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 9&lt;/span>&lt;span class="cl">omSyntax: 19
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">10&lt;/span>&lt;span class="cl">isSingleValued: TRUE
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">11&lt;/span>&lt;span class="cl">systemOnly: FALSE
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">12&lt;/span>&lt;span class="cl">searchFlags: 648
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">13&lt;/span>&lt;span class="cl">isMemberOfPartialAttributeSet: FALSE
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">14&lt;/span>&lt;span class="cl">showInAdvancedViewOnly: FALSE
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">15&lt;/span>&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">16&lt;/span>&lt;span class="cl">dn: CN=ms-MCS-AdmPwdExpirationTime,CN=Schema,cn=configuration,DC=ad,DC=zyria,DC=de
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">17&lt;/span>&lt;span class="cl">changetype: add
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">18&lt;/span>&lt;span class="cl">objectClass: attributeSchema
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">19&lt;/span>&lt;span class="cl">ldapDisplayName: ms-MCS-AdmPwdExpirationTime
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">20&lt;/span>&lt;span class="cl">adminDisplayName: ms-MCS-AdmPwdExpirationTime
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">21&lt;/span>&lt;span class="cl">adminDescription: Stores timestamp of last password change
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">22&lt;/span>&lt;span class="cl">attributeId: 1.2.840.113556.1.8000.2554.50051.45980.28112.18903.35903.6685103.1224907.2.2
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">23&lt;/span>&lt;span class="cl">attributeSyntax: 2.5.5.16
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">24&lt;/span>&lt;span class="cl">omSyntax: 65
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">25&lt;/span>&lt;span class="cl">isSingleValued: TRUE
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">26&lt;/span>&lt;span class="cl">systemOnly: FALSE
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">27&lt;/span>&lt;span class="cl">searchFlags: 0
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">28&lt;/span>&lt;span class="cl">isMemberOfPartialAttributeSet: FALSE
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">29&lt;/span>&lt;span class="cl">showInAdvancedViewOnly: FALSE
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
+
+
+&lt;h2 id="modify-computer">
+ modify computer
+ &lt;a class="heading-link" href="#modify-computer">
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h2>
+
+
+ 
+
+
+
+
+	
+
+
+
+
+
+
+ 
+ 
+ 
+
+
+
+
+
+
+ &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="ln">1&lt;/span>&lt;span class="cl">dn: CN=computer,CN=Schema,cn=configuration,DC=ad,DC=zyria,DC=de
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">2&lt;/span>&lt;span class="cl">changetype: Modify
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">3&lt;/span>&lt;span class="cl">add: mayContain
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">4&lt;/span>&lt;span class="cl">mayContain: ms-MCS-AdmPwd
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">5&lt;/span>&lt;span class="cl">mayContain: ms-MCS-AdmPwdExpirationTime
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
+
+
+&lt;h2 id="ldappublickey">
+ ldapPublicKey
+ &lt;a class="heading-link" href="#ldappublickey">
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h2>
+
+
+ 
+
+
+
+
+	
+
+
+
+
+
+
+ 
+ 
+ 
+
+
+
+
+
+
+ &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="ln"> 1&lt;/span>&lt;span class="cl">#dn: CN=sshPublicKey,CN=Schema,CN=Configuration,DC=ad,DC=zyria,DC=de
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 2&lt;/span>&lt;span class="cl">#changetype: add
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 3&lt;/span>&lt;span class="cl">#objectClass: top
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 4&lt;/span>&lt;span class="cl">#objectClass: attributeSchema
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 5&lt;/span>&lt;span class="cl">#attributeID: 1.3.6.1.4.1.24552.500.1.1.1.13
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 6&lt;/span>&lt;span class="cl">#cn: sshPublicKey
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 7&lt;/span>&lt;span class="cl">#name: sshPublicKey
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 8&lt;/span>&lt;span class="cl">#lDAPDisplayName: sshPublicKey
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 9&lt;/span>&lt;span class="cl">#description: MANDATORY: OpenSSH Public key
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">10&lt;/span>&lt;span class="cl">#attributeSyntax: 2.5.5.10
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">11&lt;/span>&lt;span class="cl">#oMSyntax: 4
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">12&lt;/span>&lt;span class="cl">#isSingleValued: FALSE
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">13&lt;/span>&lt;span class="cl">#searchFlags: 8
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">14&lt;/span>&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">15&lt;/span>&lt;span class="cl">dn: CN=ldapPublicKey,CN=Schema,CN=Configuration,DC=ad,DC=zyria,DC=de
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">16&lt;/span>&lt;span class="cl">changetype: add
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">17&lt;/span>&lt;span class="cl">objectClass: top
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">18&lt;/span>&lt;span class="cl">objectClass: classSchema
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">19&lt;/span>&lt;span class="cl">governsID: 1.3.6.1.4.1.24552.500.1.1.2.0
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">20&lt;/span>&lt;span class="cl">cn: ldapPublicKey
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">21&lt;/span>&lt;span class="cl">name: ldapPublicKey
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">22&lt;/span>&lt;span class="cl">description: MANDATORY: OpenSSH LPK objectclass
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">23&lt;/span>&lt;span class="cl">lDAPDisplayName: ldapPublicKey
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">24&lt;/span>&lt;span class="cl">subClassOf: top
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">25&lt;/span>&lt;span class="cl">objectClassCategory: 3
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">26&lt;/span>&lt;span class="cl">defaultObjectCategory: CN=ldapPublicKey,CN=Schema,CN=Configuration,DC=ad,DC=zyria,DC=de
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">27&lt;/span>&lt;span class="cl">mayContain: sshPublicKey
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
+
+
+&lt;h2 id="modify-user">
+ modify user
+ &lt;a class="heading-link" href="#modify-user">
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h2>
+
+
+ 
+
+
+
+
+	
+
+
+
+
+
+
+ 
+ 
+ 
+
+
+
+
+
+
+ &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="ln">1&lt;/span>&lt;span class="cl">dn: CN=User,CN=Schema,CN=Configuration,DC=ad,DC=zyria,DC=de
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">2&lt;/span>&lt;span class="cl">changetype: modify
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">3&lt;/span>&lt;span class="cl">replace: auxiliaryClass
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">4&lt;/span>&lt;span class="cl">auxiliaryClass: ldapPublicKey
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">5&lt;/span>&lt;span class="cl">auxiliaryClass: posixAccount
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">6&lt;/span>&lt;span class="cl">auxiliaryClass: shadowAccount
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item></channel></rss>

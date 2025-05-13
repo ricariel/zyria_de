@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Sammelbecken on Zyria</title><link>https://zyria.de/docs/it-intern/sammelbecken/</link><description>Recent content in Sammelbecken on Zyria</description><generator>Hugo</generator><language>de-de</language><atom:link href="https://zyria.de/docs/it-intern/sammelbecken/index.xml" rel="self" type="application/rss+xml"/><item><title/><link>https://zyria.de/docs/it-intern/sammelbecken/hetzner/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://zyria.de/docs/it-intern/sammelbecken/hetzner/</guid><description>&lt;h1 id="server-bei-hetzner">
+ Server bei Hetzner
+ &lt;a class="heading-link" href="#server-bei-hetzner">
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h1>
+&lt;h2 id="hardware">
+ Hardware
+ &lt;a class="heading-link" href="#hardware">
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;p>Aktuell sind alle Server bei Hetzner 
+&lt;a href="https://www.hetzner.com/de/dedicated-rootserver/ax101"
+ class="external-link"
+ target="_blank"
+ rel="noopener">AX101&lt;/a>
+ Server.&lt;br>
+Die Server sind Ipv6 only bestellt und beziehen eine IPv4 aus einem 
+&lt;a href="https://docs.hetzner.com/de/robot/dedicated-server/network/vswitch/"
+ class="external-link"
+ target="_blank"
+ rel="noopener">Hetzner vSwitch&lt;/a>
+.&lt;/p>
+&lt;h3 id="cl05">
+ cl05
+ &lt;a class="heading-link" href="#cl05">
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h3>
+&lt;ul>
+&lt;li>Standardserver (Proxmox Node)&lt;/li>
+&lt;li>Genutzt für daily Business&lt;/li>
+&lt;li>Standort: 
+&lt;a href="https://docs.hetzner.com/de/cloud/general/locations/"
+ class="external-link"
+ target="_blank"
+ rel="noopener">FSN1-DC6&lt;/a>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="cl06">
+ cl06
+ &lt;a class="heading-link" href="#cl06">
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h3>
+&lt;ul>
+&lt;li>Standardserver (Proxmox Node)&lt;/li>
+&lt;li>Genutzt für daily Business&lt;/li>
+&lt;li>Standort: 
+&lt;a href="https://docs.hetzner.com/de/cloud/general/locations/"
+ class="external-link"
+ target="_blank"
+ rel="noopener">FSN1-DC6&lt;/a>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="cl07">
+ cl07
+ &lt;a class="heading-link" href="#cl07">
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h3>
+&lt;ul>
+&lt;li>Standardserver (Proxmox Node) und Proxmox Backup Server&lt;/li>
+&lt;li>Genutzt für IT, Entwicklung, Backup und als Lastreserve&lt;/li>
+&lt;li>Standort: 
+&lt;a href="https://docs.hetzner.com/de/cloud/general/locations/"
+ class="external-link"
+ target="_blank"
+ rel="noopener">HEL1-DC5&lt;/a>
+&lt;/li>
+&lt;li>Dieser Server hat zusätzlich zwei Datacenter 16TB Festplatten eingebaut.&lt;/li>
+&lt;/ul>
+&lt;h2 id="hetzner-config">
+ Hetzner Config
+ &lt;a class="heading-link" href="#hetzner-config">
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;p>Im 
+&lt;a href="https://robot.hetzner.com/server"
+ class="external-link"
+ target="_blank"
+ rel="noopener">Robot&lt;/a>
+ Reverse-DNS-Eintrag - Ipv4 und Ipv6 - setzen. Auch an den 
+&lt;a href="https://robot.hetzner.com/vswitch/index"
+ class="external-link"
+ target="_blank"
+ rel="noopener">vswitch&lt;/a>
+ denken.&lt;/p></description></item><item><title/><link>https://zyria.de/docs/it-intern/sammelbecken/snippets/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://zyria.de/docs/it-intern/sammelbecken/snippets/</guid><description>&lt;h1 id="snippets">
+ Snippets
+ &lt;a class="heading-link" href="#snippets">
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h1>
+&lt;h2 id="raid-löschen">
+ Raid löschen
+ &lt;a class="heading-link" href="#raid-l%c3%b6schen">
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="ln">1&lt;/span>&lt;span class="cl">mdadm --stop /dev/md0
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">2&lt;/span>&lt;span class="cl">&lt;span class="k">for&lt;/span> i in &lt;span class="s2">&amp;#34;0&amp;#34;&lt;/span> &lt;span class="s2">&amp;#34;1&amp;#34;&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="k">do&lt;/span> mdadm --zero-superblock /dev/nvme&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="nv">$i&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>n1&lt;span class="p">;&lt;/span> &lt;span class="k">done&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="raid-erstellen">
+ Raid erstellen
+ &lt;a class="heading-link" href="#raid-erstellen">
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="ln">1&lt;/span>&lt;span class="cl">yes &lt;span class="p">|&lt;/span> mdadm --create -n &lt;span class="m">2&lt;/span> -l &lt;span class="m">1&lt;/span> /dev/md0 /dev/nvme&lt;span class="o">[&lt;/span>01&lt;span class="o">]&lt;/span>n1p1
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="partition-mit-ext4-formatieren">
+ Partition mit ext4 formatieren
+ &lt;a class="heading-link" href="#partition-mit-ext4-formatieren">
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;blockquote>
+&lt;p>mkfs.ext4 /dev/md0&lt;/p>&lt;/blockquote>
+&lt;p>oder&lt;/p>
+&lt;blockquote>
+&lt;p>yes | mkfs.ext4 -L boot /dev/md0&lt;/p>&lt;/blockquote>
+&lt;p>Swap:&lt;/p>
+&lt;blockquote>
+&lt;p>mkswap -f /dev/vg-name/swap&lt;/p></description></item></channel></rss>

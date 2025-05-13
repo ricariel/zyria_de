@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>IT Support on Zyria</title><link>https://zyria.de/docs/it-support/</link><description>Recent content in IT Support on Zyria</description><generator>Hugo</generator><language>de-de</language><lastBuildDate>Tue, 13 May 2025 19:00:32 +0200</lastBuildDate><atom:link href="https://zyria.de/docs/it-support/index.xml" rel="self" type="application/rss+xml"/><item><title>Erste Hilfe</title><link>https://zyria.de/docs/it-support/erste_hilfe/</link><pubDate>Thu, 19 Oct 2023 13:28:04 +0200</pubDate><guid>https://zyria.de/docs/it-support/erste_hilfe/</guid><description>&lt;h2 id="erster-schritt">
+ Erster Schritt
+ &lt;a class="heading-link" href="#erster-schritt">
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;ul>
+&lt;li>Läuft das Gerät?&lt;/li>
+&lt;li>Hast du das Gerät einmal neu gestartet? Abmelden und anmelden reicht nicht&lt;br>
+aus!&lt;/li>
+&lt;li>Sind alle Kabel angeschlossen und richtig eingesteckt?&lt;/li>
+&lt;li>Ist der Bildschirm angeschaltet?&lt;/li>
+&lt;li>Was hast du getan, bevor das Gerät nicht mehr ging?&lt;/li>
+&lt;/ul>
+&lt;h2 id="zweiter-schritt">
+ Zweiter Schritt
+ &lt;a class="heading-link" href="#zweiter-schritt">
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;ul>
+&lt;li>
+&lt;a href="https://status.zyria.com/status/index"
+ class="external-link"
+ target="_blank"
+ rel="noopener">Statusseite checken&lt;/a>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="dritter-schritt">
+ Dritter Schritt
+ &lt;a class="heading-link" href="#dritter-schritt">
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;ul>
+&lt;li>Neustart des Rechners == (nach jeder Änderung!) ==&lt;/li>
+&lt;/ul>
+&lt;h2 id="vierter-schritt">
+ Vierter Schritt
+ &lt;a class="heading-link" href="#vierter-schritt">
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;ul>
+&lt;li>Evtl. ausstehende Updates ausführen&lt;/li>
+&lt;/ul></description></item><item><title>Passwörter</title><link>https://zyria.de/docs/it-support/passwords/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://zyria.de/docs/it-support/passwords/</guid><description>&lt;h2 id="was-wir-nicht-tun">
+ Was wir nicht tun
+ &lt;a class="heading-link" href="#was-wir-nicht-tun">
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;ul>
+&lt;li>Passwörter werden nicht im Browser oder in Dokumenten z.B. Text,Word,Excel gesichert.&lt;/li>
+&lt;li>Passwörter werden niemals durch Mitarbeiter verschickt. Nicht per Email, Telefon, SMS etc. Eine Ausnahme bildet die IT, welche im Ausnahmefall nicht persönlich vor Ort sein kann und selbstständig dafür sorgt, dass die Übertragung sicher ist. Für die Übertragung sind unten beschriebene Datenbanken gedacht. Hat ein Mitarbeiter keinen Zugriff auf eine Datenbank und benötigt ein Kennwort, bitte die IT kontaktieren.&lt;/li>
+&lt;/ul>
+&lt;h2 id="wie-wir-mit-kennworten-umehen">
+ Wie wir mit Kennworten umehen
+ &lt;a class="heading-link" href="#wie-wir-mit-kennworten-umehen">
+ &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
+ &lt;span class="sr-only">Link zu Überschrift&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;ul>
+&lt;li>Wir benutzen einen dezentralen Passwortmanager (unter Windows Keepassxc), welcher auf allen Rechnern installiert ist. Dieser ermöglicht das sichere Speichern von sensiblen Daten und ist universell im ganzen Unternehmen einsetzbar.&lt;/li>
+&lt;li>Passwörter werden auch für den Transport von A nach B immer in einer Datenbank gesichert. Das Kennwort für diese Datenbank kann bei persönlichen Datenbanken selbst vergeben werden. Bei gemeinsam genutzen Datenbanken ist die IT Ansprechpartner für die Verwaltung der Kennwörter.&lt;/li>
+&lt;li>Der Ablageort für gemeinsam genutze Kennwörter ist
+&lt;blockquote>
+&lt;p>Y:\Zugangsdaten&lt;/p></description></item></channel></rss>

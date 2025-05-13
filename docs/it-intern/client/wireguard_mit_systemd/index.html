@@ -1,0 +1,114 @@
+<!doctype html><html lang=de><head><title>WireGuard mit systemd · Zyria
+</title><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=color-scheme content="light dark"><meta name=author content="Fabrice Kirchner"><meta name=description content="Für eine WireGuard-Verbindung mit systemd-networkd und systemd-resolved.
+Alle Konfigurationsdateien gehören in /etc/systemd/network/.
+
+  Interface
+  
+    
+    Link zu Überschrift
+  
+
+Das WireGuard-Interface anlegen (muss mit einer Zahl beginnen, z.B. 10-wg0.netdev) (
+Dokumentation
+)
+ 1[NetDev]
+ 2Name=wg0
+ 3Kind=wireguard
+ 4Description=WireGuard-Tunnel für Casa Due Pur
+ 5MTUBytes=1320
+ 6
+ 7[WireGuard]
+ 8PrivateKey=...
+ 9# Für alle Netze aus AllowedIPs soll automatisch eine Route erzeugt werden, in einer separaten Routing-Tabelle:
+10RouteTable=123
+11# Die verschlüsselten WireGuard-Pakete werden markiert:
+12FirewallMark=123
+13# Beides erlaubt spezielles Routing, konfiguriert in der *.network-Datei
+14
+15[WireGuardPeer]
+16PublicKey=IaNBwGqXkxy4iLuowJQuR6h+AdL5Oo9oYtSqub8m6C4=
+17PresharedKey=...
+18AllowedIPs=fd42:167:84::1/64, 2a01:4f8:1c1c:1e5b::/64, 2a01:4f8:fff0:22::/64, 2a01:4f8:242:27a5::/64, 2a01:4f8:242:27a3::/64, 2003:a:241:4400::/56, 2003:a:27f:c144::/64, 159.69.238.80/28, 159.69.10.123/32, 87.140.122.88/32, 168.119.65.89/32, 168.119.65.91/32, 10.26.15.0/24, 192.168.2.0/24
+19Endpoint = vpn.casa-due-pur.de:51194
+20PersistentKeepalive=16
+PrivateKey= und PresharedKey= entsprechend ausfüllen, den Rest sicherheitshalber nochmal abgleichen. Die Datei sollte für unprivilegierte Nutzer nicht lesbar sein, d.h. chown root:systemd-network ..., chmod 640 ...."><meta name=keywords content="[blog personal]"><meta name=twitter:card content="summary"><meta name=twitter:title content="WireGuard mit systemd"><meta name=twitter:description content="Für eine WireGuard-Verbindung mit systemd-networkd und systemd-resolved.
+Alle Konfigurationsdateien gehören in /etc/systemd/network/.
+Interface Link zu Überschrift Das WireGuard-Interface anlegen (muss mit einer Zahl beginnen, z.B. 10-wg0.netdev) ( Dokumentation )
+1[NetDev] 2Name=wg0 3Kind=wireguard 4Description=WireGuard-Tunnel für Casa Due Pur 5MTUBytes=1320 6 7[WireGuard] 8PrivateKey=... 9# Für alle Netze aus AllowedIPs soll automatisch eine Route erzeugt werden, in einer separaten Routing-Tabelle: 10RouteTable=123 11# Die verschlüsselten WireGuard-Pakete werden markiert: 12FirewallMark=123 13# Beides erlaubt spezielles Routing, konfiguriert in der *.network-Datei 14 15[WireGuardPeer] 16PublicKey=IaNBwGqXkxy4iLuowJQuR6h+AdL5Oo9oYtSqub8m6C4= 17PresharedKey=... 18AllowedIPs=fd42:167:84::1/64, 2a01:4f8:1c1c:1e5b::/64, 2a01:4f8:fff0:22::/64, 2a01:4f8:242:27a5::/64, 2a01:4f8:242:27a3::/64, 2003:a:241:4400::/56, 2003:a:27f:c144::/64, 159.69.238.80/28, 159.69.10.123/32, 87.140.122.88/32, 168.119.65.89/32, 168.119.65.91/32, 10.26.15.0/24, 192.168.2.0/24 19Endpoint = vpn.casa-due-pur.de:51194 20PersistentKeepalive=16 PrivateKey= und PresharedKey= entsprechend ausfüllen, den Rest sicherheitshalber nochmal abgleichen. Die Datei sollte für unprivilegierte Nutzer nicht lesbar sein, d.h. chown root:systemd-network ..., chmod 640 ...."><meta property="og:url" content="https://zyria.de/docs/it-intern/client/wireguard_mit_systemd/"><meta property="og:site_name" content="Zyria"><meta property="og:title" content="WireGuard mit systemd"><meta property="og:description" content="Für eine WireGuard-Verbindung mit systemd-networkd und systemd-resolved.
+Alle Konfigurationsdateien gehören in /etc/systemd/network/.
+Interface Link zu Überschrift Das WireGuard-Interface anlegen (muss mit einer Zahl beginnen, z.B. 10-wg0.netdev) ( Dokumentation )
+1[NetDev] 2Name=wg0 3Kind=wireguard 4Description=WireGuard-Tunnel für Casa Due Pur 5MTUBytes=1320 6 7[WireGuard] 8PrivateKey=... 9# Für alle Netze aus AllowedIPs soll automatisch eine Route erzeugt werden, in einer separaten Routing-Tabelle: 10RouteTable=123 11# Die verschlüsselten WireGuard-Pakete werden markiert: 12FirewallMark=123 13# Beides erlaubt spezielles Routing, konfiguriert in der *.network-Datei 14 15[WireGuardPeer] 16PublicKey=IaNBwGqXkxy4iLuowJQuR6h+AdL5Oo9oYtSqub8m6C4= 17PresharedKey=... 18AllowedIPs=fd42:167:84::1/64, 2a01:4f8:1c1c:1e5b::/64, 2a01:4f8:fff0:22::/64, 2a01:4f8:242:27a5::/64, 2a01:4f8:242:27a3::/64, 2003:a:241:4400::/56, 2003:a:27f:c144::/64, 159.69.238.80/28, 159.69.10.123/32, 87.140.122.88/32, 168.119.65.89/32, 168.119.65.91/32, 10.26.15.0/24, 192.168.2.0/24 19Endpoint = vpn.casa-due-pur.de:51194 20PersistentKeepalive=16 PrivateKey= und PresharedKey= entsprechend ausfüllen, den Rest sicherheitshalber nochmal abgleichen. Die Datei sollte für unprivilegierte Nutzer nicht lesbar sein, d.h. chown root:systemd-network ..., chmod 640 ...."><meta property="og:locale" content="de_de"><meta property="og:type" content="article"><meta property="article:section" content="docs"><meta property="article:modified_time" content="2025-05-13T19:00:32+02:00"><link rel=canonical href=https://zyria.de/docs/it-intern/client/wireguard_mit_systemd/><link rel=preload href=/fonts/fa-brands-400.woff2 as=font type=font/woff2 crossorigin><link rel=preload href=/fonts/fa-regular-400.woff2 as=font type=font/woff2 crossorigin><link rel=preload href=/fonts/fa-solid-900.woff2 as=font type=font/woff2 crossorigin><link rel=stylesheet href=/css/coder.min.434ad5163a65351ea4f778685780b8d9f01f9e8b5f3f686907735d023ef5fbf1.css integrity="sha256-Q0rVFjplNR6k93hoV4C42fAfnotfP2hpB3NdAj71+/E=" crossorigin=anonymous media=screen><link rel=stylesheet href="/css/coder-dark.min.ad48f476275974885bdc03d5251e3cdbe1678c54a63ff772376b0ed2adc468dd.css" integrity="sha256-rUj0didZdIhb3APVJR482+FnjFSmP/dyN2sO0q3EaN0=" crossorigin=anonymous media=screen><link rel=icon type=image/svg+xml href=/images/favicon.svg sizes=any><link rel=icon type=image/png href=/images/favicon-32x32.png sizes=32x32><link rel=icon type=image/png href=/images/favicon-16x16.png sizes=16x16><link rel=apple-touch-icon href=/images/apple-touch-icon.png><link rel=apple-touch-icon sizes=180x180 href=/images/apple-touch-icon.png><link rel=manifest href="/site.webmanifest.min.4ef1fd7bf38feef47142065705850163a02bf5e743be48806e160c8c67cb36b6.json" integrity="sha256-TvH9e/OP7vRxQgZXBYUBY6Ar9edDvkiAbhYMjGfLNrY="><link rel=mask-icon href=/images/safari-pinned-tab.svg color=#5bbad5></head><body class="preload-transitions colorscheme-auto"><div class=float-container><a id=dark-mode-toggle class=colorscheme-toggle><i class="fa-solid fa-adjust fa-fw" aria-hidden=true></i></a></div><main class=wrapper><nav class=navigation><section class=container><a class=navigation-title href=https://zyria.de/>Zyria
+</a><input type=checkbox id=menu-toggle>
+<label class="menu-button float-right" for=menu-toggle><i class="fa-solid fa-bars fa-fw" aria-hidden=true></i></label><ul class=navigation-list><li class=navigation-item><a class=navigation-link href=/about/>Über mich</a></li><li class=navigation-item><a class=navigation-link href=/posts/>Beiträge</a></li><li class=navigation-item><a class=navigation-link href=/datenschutz/>Datenschutzerklärung</a></li><li class=navigation-item><a class=navigation-link href=/impressum/>Impressum</a></li><li class=navigation-item><a class=navigation-link href=/docs/>Docs</a></li><li class=navigation-item><a class="navigation-link external-link" href=https://status.zyria.de>Statusseite</a></li></ul></section></nav><div class=content><section class="container page"><article><header><h1 class=title><a class=title-link href=https://zyria.de/docs/it-intern/client/wireguard_mit_systemd/>WireGuard mit systemd</a></h1></header><p>Für eine WireGuard-Verbindung mit systemd-networkd und systemd-resolved.</p><p>Alle Konfigurationsdateien gehören in <code>/etc/systemd/network/</code>.</p><h2 id=interface>Interface
+<a class=heading-link href=#interface><i class="fa fa-link" aria-hidden=true title="Link zu Überschrift"></i>
+<span class=sr-only>Link zu Überschrift</span></a></h2><p>Das WireGuard-Interface anlegen (muss mit einer Zahl beginnen, z.B. <code>10-wg0.netdev</code>) (
+<a href=https://www.freedesktop.org/software/systemd/man/latest/systemd.netdev.html class=external-link target=_blank rel=noopener>Dokumentation</a>
+)</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-systemd data-lang=systemd><span class=line><span class=ln> 1</span><span class=cl><span class=k>[NetDev]</span>
+</span></span><span class=line><span class=ln> 2</span><span class=cl><span class=na>Name</span><span class=o>=</span><span class=s>wg0</span>
+</span></span><span class=line><span class=ln> 3</span><span class=cl><span class=na>Kind</span><span class=o>=</span><span class=s>wireguard</span>
+</span></span><span class=line><span class=ln> 4</span><span class=cl><span class=na>Description</span><span class=o>=</span><span class=s>WireGuard-Tunnel für Casa Due Pur</span>
+</span></span><span class=line><span class=ln> 5</span><span class=cl><span class=na>MTUBytes</span><span class=o>=</span><span class=s>1320</span>
+</span></span><span class=line><span class=ln> 6</span><span class=cl>
+</span></span><span class=line><span class=ln> 7</span><span class=cl><span class=k>[WireGuard]</span>
+</span></span><span class=line><span class=ln> 8</span><span class=cl><span class=na>PrivateKey</span><span class=o>=</span><span class=s>...</span>
+</span></span><span class=line><span class=ln> 9</span><span class=cl><span class=c># Für alle Netze aus AllowedIPs soll automatisch eine Route erzeugt werden, in einer separaten Routing-Tabelle:</span>
+</span></span><span class=line><span class=ln>10</span><span class=cl><span class=na>RouteTable</span><span class=o>=</span><span class=s>123</span>
+</span></span><span class=line><span class=ln>11</span><span class=cl><span class=c># Die verschlüsselten WireGuard-Pakete werden markiert:</span>
+</span></span><span class=line><span class=ln>12</span><span class=cl><span class=na>FirewallMark</span><span class=o>=</span><span class=s>123</span>
+</span></span><span class=line><span class=ln>13</span><span class=cl><span class=c># Beides erlaubt spezielles Routing, konfiguriert in der *.network-Datei</span>
+</span></span><span class=line><span class=ln>14</span><span class=cl>
+</span></span><span class=line><span class=ln>15</span><span class=cl><span class=k>[WireGuardPeer]</span>
+</span></span><span class=line><span class=ln>16</span><span class=cl><span class=na>PublicKey</span><span class=o>=</span><span class=s>IaNBwGqXkxy4iLuowJQuR6h+AdL5Oo9oYtSqub8m6C4=</span>
+</span></span><span class=line><span class=ln>17</span><span class=cl><span class=na>PresharedKey</span><span class=o>=</span><span class=s>...</span>
+</span></span><span class=line><span class=ln>18</span><span class=cl><span class=na>AllowedIPs</span><span class=o>=</span><span class=s>fd42:167:84::1/64, 2a01:4f8:1c1c:1e5b::/64, 2a01:4f8:fff0:22::/64, 2a01:4f8:242:27a5::/64, 2a01:4f8:242:27a3::/64, 2003:a:241:4400::/56, 2003:a:27f:c144::/64, 159.69.238.80/28, 159.69.10.123/32, 87.140.122.88/32, 168.119.65.89/32, 168.119.65.91/32, 10.26.15.0/24, 192.168.2.0/24</span>
+</span></span><span class=line><span class=ln>19</span><span class=cl><span class=na>Endpoint </span><span class=o>=</span><span class=s> vpn.casa-due-pur.de:51194</span>
+</span></span><span class=line><span class=ln>20</span><span class=cl><span class=na>PersistentKeepalive</span><span class=o>=</span><span class=s>16</span>
+</span></span></code></pre></div><p><code>PrivateKey=</code> und <code>PresharedKey=</code> entsprechend ausfüllen, den Rest sicherheitshalber nochmal abgleichen. Die Datei sollte für unprivilegierte Nutzer nicht lesbar sein, d.h. <code>chown root:systemd-network ...</code>, <code>chmod 640 ...</code>.</p><h2 id=netzwerk>Netzwerk
+<a class=heading-link href=#netzwerk><i class="fa fa-link" aria-hidden=true title="Link zu Überschrift"></i>
+<span class=sr-only>Link zu Überschrift</span></a></h2><p>Nun das passende Netzwerk zum Interface anlegen (z.B. <code>wg0.network</code>) (
+<a href=https://www.freedesktop.org/software/systemd/man/latest/systemd.network.html class=external-link target=_blank rel=noopener>Dokumentation</a>
+)</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-systemd data-lang=systemd><span class=line><span class=ln> 1</span><span class=cl><span class=k>[Match]</span>
+</span></span><span class=line><span class=ln> 2</span><span class=cl><span class=na>Name</span><span class=o>=</span><span class=s>wg0</span>
+</span></span><span class=line><span class=ln> 3</span><span class=cl>
+</span></span><span class=line><span class=ln> 4</span><span class=cl><span class=k>[Network]</span>
+</span></span><span class=line><span class=ln> 5</span><span class=cl><span class=na>Address</span><span class=o>=</span><span class=s>...</span>
+</span></span><span class=line><span class=ln> 6</span><span class=cl><span class=na>Address</span><span class=o>=</span><span class=s>...</span>
+</span></span><span class=line><span class=ln> 7</span><span class=cl>
+</span></span><span class=line><span class=ln> 8</span><span class=cl><span class=c># Nur Domains mit dieser Endung über diesen DNS auflösen:</span>
+</span></span><span class=line><span class=ln> 9</span><span class=cl><span class=na>Domains</span><span class=o>=</span><span class=s>~casa-due-pur.de</span>
+</span></span><span class=line><span class=ln>10</span><span class=cl><span class=na>DNS</span><span class=o>=</span><span class=s>2a01:4f8:fff0:22:ca9:16ff:fe6e:cc14</span>
+</span></span><span class=line><span class=ln>11</span><span class=cl><span class=na>DNS</span><span class=o>=</span><span class=s>159.69.238.89</span>
+</span></span><span class=line><span class=ln>12</span><span class=cl><span class=na>DNSDefaultRoute</span><span class=o>=</span><span class=s>false</span>
+</span></span><span class=line><span class=ln>13</span><span class=cl>
+</span></span><span class=line><span class=ln>14</span><span class=cl><span class=k>[Link]</span>
+</span></span><span class=line><span class=ln>15</span><span class=cl><span class=na>RequiredForOnline</span><span class=o>=</span><span class=s>no</span>
+</span></span><span class=line><span class=ln>16</span><span class=cl><span class=c># Optional: nicht automatisch beim Systemstart verbinden</span>
+</span></span><span class=line><span class=ln>17</span><span class=cl><span class=na>ActivationPolicy</span><span class=o>=</span><span class=s>manual</span>
+</span></span><span class=line><span class=ln>18</span><span class=cl>
+</span></span><span class=line><span class=ln>19</span><span class=cl><span class=c># Die verschlüsselten WireGuard-Pakete sind mit 123 markiert und dürfen nicht über diese Verbindung geleitet werden.</span>
+</span></span><span class=line><span class=ln>20</span><span class=cl><span class=c># Die WireGuard-spezifischen Routen sind in einer Tabelle mit id 123.</span>
+</span></span><span class=line><span class=ln>21</span><span class=cl><span class=c># Diese Policy wendet die spezifischen Routen ausschliesslich auf unmarkierte Pakete an.</span>
+</span></span><span class=line><span class=ln>22</span><span class=cl><span class=k>[RoutingPolicyRule]</span>
+</span></span><span class=line><span class=ln>23</span><span class=cl><span class=na>FirewallMark</span><span class=o>=</span><span class=s>123</span>
+</span></span><span class=line><span class=ln>24</span><span class=cl><span class=na>Table</span><span class=o>=</span><span class=s>123</span>
+</span></span><span class=line><span class=ln>25</span><span class=cl><span class=na>InvertRule</span><span class=o>=</span><span class=s>true</span>
+</span></span><span class=line><span class=ln>26</span><span class=cl><span class=na>Family</span><span class=o>=</span><span class=s>both</span>
+</span></span></code></pre></div><p><code>Adress</code>en (ipv4 und ipv6) eintragen. Der Tunnel kann mit <code>networkctl up wg0</code> bzw <code>networkctl down wg0</code> nach Bedarf verbunden und getrennt werden.</p><p>Sobald der Tunnel verbunden ist, lässt sich die Routing-Tabelle mit <code>ip route show table 123</code> anzeigen. Die RoutingPolicy sollte in <code>ip rule</code> auftauchen.</p><h2 id=dns>DNS
+<a class=heading-link href=#dns><i class="fa fa-link" aria-hidden=true title="Link zu Überschrift"></i>
+<span class=sr-only>Link zu Überschrift</span></a></h2><p>Wir haben jetzt zwei DNS-Server im System. Falls bei beiden <code>Domains=</code> gesetzt ist, muss der vorhandene Server explizite als default markiert werden (z.B. in <code>eth0.network</code>):</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-systemd data-lang=systemd><span class=line><span class=ln>1</span><span class=cl><span class=k>[Network]</span>
+</span></span><span class=line><span class=ln>2</span><span class=cl><span class=na>DNSDefaultRoute</span><span class=o>=</span><span class=s>true</span>
+</span></span></code></pre></div><h2 id=firewall>Firewall
+<a class=heading-link href=#firewall><i class="fa fa-link" aria-hidden=true title="Link zu Überschrift"></i>
+<span class=sr-only>Link zu Überschrift</span></a></h2><p>Es wird kein Routing konfiguriert, daher sind normalerweise keine Änderungen an iptables notwendig.</p><p>Am Beispiel einer Firewall mit striktem whitelisting sind mindestens folgende Verbindungen zu erlauben:</p><ul><li>WireGuard-Traffic zum Endpoint <code>iptables -A OUTPUT -m owner ! --uid-owner 0-99999 -p udp -d 159.69.238.84 --dport 51194 -j ACCEPT</code> (Wireguard-Pakete kommen aus dem Kernel und sind keinem Benutzer zugeordnet)</li><li>Ausgehender traffic auf wg0: <code>iptables -A OUTPUT -o wg0 -j ACCEPT</code>, ggf. mit <code>-m owner --uid-owner ...</code> auf einen Nutzer beschränkt.</li><li>DNS-Traffic über den Tunnel: <code>iptables -A OUTPUT -m owner --uid-owner systemd-resolve -d 159.69.238.89 -o wg0 j ACCEPT</code></li><li>Eingehende pings und andere ICMP-Pakete auf wg0: <code>iptables -A INPUT -i wg0 -p icmp -j ACCEPT</code></li><li>Optional anderer eingehender Traffic auf wg0, z.B. ssh: <code>iptables -A INPUT -i wg0 -p tcp --dport 22 -j ACCEPT</code> (kann nicht nach Nutzer gefiltert werden)</li></ul><p>Die Firewall muss verbindungsorientiert sein, üblicherweise mit einer der folgenden Methoden:</p><ul><li>Zugehörige Pakete werden direkt akzeptiert, z.B. mit <code>iptables -A INPUT/OUTPUT -m conntrack --ctstate RELATED,ESTABLISHED -j ACCEPT</code> (
+<a href=https://wiki.archlinux.org/title/Simple_stateful_firewall class=external-link target=_blank rel=noopener>Tutorial</a>
+)</li><li>Verbindungen werden markiert (statt <code>-j ACCEPT</code> nutzt man <code>-j CONNMARK --set-mark ...</code>) und markierte Verbindungen werden erlaubt (<code>iptables -A INPUT/OUTPUT -m connmark --mark ... -j ACCEPT</code>). Diese Variante ist umständlicher, erlaubt aber Traffic Shaping oder separate Statistiken pro verwendeter Markierung.</li></ul><p>Für ipv6 sind äquivalente Regeln einzurichten.</p></article></section></div><footer class=footer><section class=container>©
+2003 -
+2025
+Fabrice Kirchner
+·
+Gestaltet mit <a href=https://gohugo.io/ target=_blank rel=noopener>Hugo</a> & <a href=https://github.com/luizdepra/hugo-coder/ target=_blank rel=noopener>Coder</a>.
+[<a href=https://git.zyria.de/pyrox/zyria_de/commit/c7038db61e07958bc411c2b0529944503314b1b7 target=_blank rel=noopener>c7038db</a>]</section><section class=container><div class="td-page-meta ms-2 pb-1 pt-2 mb-0"><a href=https://git.zyria.de/pyrox/zyria_de/src/branch/main/content/docs/it-intern/client/wireguard_mit_systemd.md class="td-page-meta--view td-page-meta__view" target=_blank rel=noopener><i class="fa-solid fa-file-lines fa-fw"></i> Quellcode dieser Seite ansehen</a>
+<a href=https://git.zyria.de/pyrox/zyria_de/_edit/main/content/docs/it-intern/client/wireguard_mit_systemd.md class="td-page-meta--edit td-page-meta__edit" target=_blank rel=noopener><i class="fa-solid fa-pen-to-square fa-fw"></i> Diese Seite bearbeiten</a>
+<a href="https://git.zyria.de/pyrox/zyria_de/_new/main/content/docs/it-intern/client?filename=change-me.md&amp;value=---%0Atitle%3A+%22Long+Page+Title%22%0AlinkTitle%3A+%22Short+Nav+Title%22%0Aweight%3A+100%0Adescription%3A+%3E-%0A++Page+description+for+heading+and+indexes.%0A---%0A%0A%23%23+Heading%0A%0AEdit+this+template+to+create+your+new+page.%0A%0A%2A+Give+it+a+good+name%2C+ending+in+%60.md%60+-+e.g.+%60getting-started.md%60%0A%2A+Edit+the+%22front+matter%22+section+at+the+top+of+the+page+%28weight+controls+how+its+ordered+amongst+other+pages+in+the+same+directory%3B+lowest+number+first%29.%0A%2A+Add+a+good+commit+message+at+the+bottom+of+the+page+%28%3C80+characters%3B+use+the+extended+description+field+for+more+detail%29.%0A%2A+Create+a+new+branch+so+you+can+preview+your+new+file+and+request+a+review+via+Pull+Request.%0A" class="td-page-meta--child td-page-meta__child" target=_blank rel=noopener><i class="fa-solid fa-pen-to-square fa-fw"></i> Unterseite anlegen</a>
+<a href="https://git.zyria.de/pyrox/zyria_de/issues/new?title=WireGuard%20mit%20systemd" class="td-page-meta--issue td-page-meta__issue" target=_blank rel=noopener><i class="fa-solid fa-list-check fa-fw"></i> Problem zu dieser Seite melden</a>
+<a href=https://git.zyria.de/pyrox/zyria_de.git/issues/new class="td-page-meta--project td-page-meta__project-issue" target=_blank rel=noopener><i class="fa-solid fa-list-check fa-fw"></i> Problem melden</a></div></section></footer></main><script src=/js/coder.min.6ae284be93d2d19dad1f02b0039508d9aab3180a12a06dcc71b0b0ef7825a317.js integrity="sha256-auKEvpPS0Z2tHwKwA5UI2aqzGAoSoG3McbCw73gloxc="></script><script src=/js/index.f2979a93a325fecf9605263bd141398a311c8e23388ed7dcff74f92f7e632866.js integrity="sha256-8peak6Ml/s+WBSY70UE5ijEcjiM4jtfc/3T5L35jKGY=" defer></script></body></html>
