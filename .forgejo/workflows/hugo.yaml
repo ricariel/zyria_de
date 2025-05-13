@@ -75,7 +75,7 @@ jobs:
       - name: Check if there are any changes
         id: verify_diff
         run: |
-          git diff -C public . || echo "changed=true" >> $GITHUB_OUTPUT
+          git -C public diff --quiet . || echo "::set-output name=changed::true"
 
       - name: Upload
         if: steps.verify_diff.outputs.changed == 'true'

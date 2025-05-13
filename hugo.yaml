@@ -12,6 +12,7 @@ enableRobotsTXT: true
 toc: true
 tableOfContents: true
 enableGitInfo: true
+
 cleanDestinationDir: true
 build:
   writeStats: true
@@ -20,6 +21,9 @@ build:
 
 enableEmoji: true
 pygmentsUseClasses: true
+pygmentsCodeFences: true
+pygmentsUseClassic: false
+pygmentsStyle: "tango"
 
 menu:
   main:
@@ -116,9 +120,13 @@ security:
 markup:
   highlight:
     style: "github-dark"
+    guessSyntax: true
     lineNos: true
     lineNumbersInTable: false
   goldmark:
+    parser:
+      attribute:
+        block: true
     renderer:
       unsafe: true
       hardWraps: true
@@ -138,15 +146,7 @@ module:
     - source: content
       target: content
   imports:
-    - path: github.com/hugomods/images
-    - path: git.zyria.de/pyrox/hugo-shortcodes
     - path: git.zyria.de/pyrox/hugo-default-coder
-    - path: github.com/luizdepra/hugo-coder
-    - path: github.com/hugomods/shortcodes
-    - path: github.com/hugomods/bootstrap
-    - path: github.com/gohugoio/hugo-mod-bootstrap-scss/v5
-
-    # - path: github.com/imfing/hextra
     - path: "git.zyria.de/pyrox/hugo-legal"
       mounts:
         - source: "impressum.md"
@@ -155,6 +155,10 @@ module:
           target: content/datenschutz.md
 
 params:
+  github_repo: "https://git.zyria.de/pyrox/zyria_de"
+  github_project_repo: "https://git.zyria.de/pyrox/zyria_de.git"
+  github_branch: "main"
+
   ShowWordCount: true
   ShowShareButtons: true
   ShowReadingTime: true
