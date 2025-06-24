@@ -2,7 +2,7 @@
 title: Documentation
 linkTitle: Docs
 weight: 10
-draft: true
+draft: false
 ---
 
 Allgemeine Dokumentation - Jede Person im Unternehmen kann zu
