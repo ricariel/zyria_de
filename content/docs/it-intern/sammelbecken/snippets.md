@@ -5,6 +5,14 @@ description: 'Sammlung von Codesnippets'
 
 ## Snippets
 
+### Leeren branch in git erstellen
+
+```bash
+git switch --orphan pages
+git commit --allow-empty -m "Initial commit on orphan branch"
+git push -u origin pages
+```
+
 ### Zone aus Samba extrahieren
 
 {{< readfile file="extract_zone.sh" code="true" lang="bash" >}}
