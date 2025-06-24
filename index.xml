@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Eine (scheinbar) leere Homepage on Zyria</title><link>https://zyria.de/</link><description>Recent content in Eine (scheinbar) leere Homepage on Zyria</description><generator>Hugo</generator><language>de-de</language><lastBuildDate>Tue, 13 May 2025 19:05:00 +0200</lastBuildDate><atom:link href="https://zyria.de/index.xml" rel="self" type="application/rss+xml"/><item><title>Über mich</title><link>https://zyria.de/about/</link><pubDate>Mon, 24 Jul 2023 17:18:44 +0200</pubDate><guid>https://zyria.de/about/</guid><description>&lt;h2 id="fabrice-kirchner">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Eine (scheinbar) leere Homepage on Zyria</title><link>https://zyria.de/</link><description>Recent content in Eine (scheinbar) leere Homepage on Zyria</description><generator>Hugo</generator><language>de-de</language><lastBuildDate>Tue, 24 Jun 2025 10:01:03 +0200</lastBuildDate><atom:link href="https://zyria.de/index.xml" rel="self" type="application/rss+xml"/><item><title>Über mich</title><link>https://zyria.de/about/</link><pubDate>Mon, 24 Jul 2023 17:18:44 +0200</pubDate><guid>https://zyria.de/about/</guid><description>&lt;h2 id="fabrice-kirchner">
  Fabrice Kirchner
  &lt;a class="heading-link" href="#fabrice-kirchner">
  &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
@@ -1552,7 +1552,7 @@ erreichbar.&lt;/p></description></item><item><title>ned</title><link>https://zyr
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">4&lt;/span>&lt;span class="cl">auxiliaryClass: ldapPublicKey
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">5&lt;/span>&lt;span class="cl">auxiliaryClass: posixAccount
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">6&lt;/span>&lt;span class="cl">auxiliaryClass: shadowAccount
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Setup Windows Client</title><link>https://zyria.de/docs/it-intern/client/setup_windows/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://zyria.de/docs/it-intern/client/setup_windows/</guid><description>&lt;ul>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Search Results</title><link>https://zyria.de/search/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://zyria.de/search/</guid><description/></item><item><title>Setup Windows Client</title><link>https://zyria.de/docs/it-intern/client/setup_windows/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://zyria.de/docs/it-intern/client/setup_windows/</guid><description>&lt;ul>
 &lt;li>
 &lt;p>Windows Rechner mit Professional Version kaufen (Aufgeräumt wird über Ansible)&lt;/p>
 &lt;/li>
