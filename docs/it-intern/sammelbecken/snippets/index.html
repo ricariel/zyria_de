@@ -1,71 +1,312 @@
-<!doctype html><html lang=de><head><title>· Zyria</title><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=color-scheme content="light dark"><meta name=author content="Fabrice Kirchner"><meta name=description content='
-  Snippets
-  
-    
-    Link zu Überschrift
-  
-
-
-  Raid löschen
-  
-    
-    Link zu Überschrift
-  
-
-1mdadm --stop /dev/md0
-2for i in "0" "1"; do  mdadm --zero-superblock /dev/nvme"$i"n1; done
-
-  Raid erstellen
-  
-    
-    Link zu Überschrift
-  
-
-1yes | mdadm --create -n 2 -l 1 /dev/md0 /dev/nvme[01]n1p1
-
-  Partition mit ext4 formatieren
-  
-    
-    Link zu Überschrift
-  
-
-
-mkfs.ext4 /dev/md0
-oder
-
-yes | mkfs.ext4 -L boot /dev/md0
-Swap:
-
-mkswap -f /dev/vg-name/swap'><meta name=keywords content="[blog personal]"><meta name=twitter:card content="summary"><meta name=twitter:title content="Zyria"><meta name=twitter:description content='Snippets Link zu Überschrift Raid löschen Link zu Überschrift 1mdadm --stop /dev/md0 2for i in "0" "1"; do mdadm --zero-superblock /dev/nvme"$i"n1; done Raid erstellen Link zu Überschrift 1yes | mdadm --create -n 2 -l 1 /dev/md0 /dev/nvme[01]n1p1 Partition mit ext4 formatieren Link zu Überschrift mkfs.ext4 /dev/md0
-oder
-yes | mkfs.ext4 -L boot /dev/md0
-Swap:
-mkswap -f /dev/vg-name/swap'><meta property="og:url" content="https://zyria.de/docs/it-intern/sammelbecken/snippets/"><meta property="og:site_name" content="Zyria"><meta property="og:title" content="Zyria"><meta property="og:description" content='Snippets Link zu Überschrift Raid löschen Link zu Überschrift 1mdadm --stop /dev/md0 2for i in "0" "1"; do mdadm --zero-superblock /dev/nvme"$i"n1; done Raid erstellen Link zu Überschrift 1yes | mdadm --create -n 2 -l 1 /dev/md0 /dev/nvme[01]n1p1 Partition mit ext4 formatieren Link zu Überschrift mkfs.ext4 /dev/md0
-oder
-yes | mkfs.ext4 -L boot /dev/md0
-Swap:
-mkswap -f /dev/vg-name/swap'><meta property="og:locale" content="de_de"><meta property="og:type" content="article"><meta property="article:section" content="docs"><meta property="article:modified_time" content="2025-05-13T19:00:32+02:00"><link rel=canonical href=https://zyria.de/docs/it-intern/sammelbecken/snippets/><link rel=preload href=/fonts/fa-brands-400.woff2 as=font type=font/woff2 crossorigin><link rel=preload href=/fonts/fa-regular-400.woff2 as=font type=font/woff2 crossorigin><link rel=preload href=/fonts/fa-solid-900.woff2 as=font type=font/woff2 crossorigin><link rel=stylesheet href=/css/coder.min.d4ceffed3c46f343284e82f8229aec7df576d3e818677792dccae1ac7972550f.css integrity="sha256-1M7/7TxG80MoToL4IprsffV20+gYZ3eS3MrhrHlyVQ8=" crossorigin=anonymous media=screen><link rel=stylesheet href="/css/coder-dark.min.ad48f476275974885bdc03d5251e3cdbe1678c54a63ff772376b0ed2adc468dd.css" integrity="sha256-rUj0didZdIhb3APVJR482+FnjFSmP/dyN2sO0q3EaN0=" crossorigin=anonymous media=screen><link rel=icon type=image/svg+xml href=/images/favicon.svg sizes=any><link rel=icon type=image/png href=/images/favicon-32x32.png sizes=32x32><link rel=icon type=image/png href=/images/favicon-16x16.png sizes=16x16><link rel=apple-touch-icon href=/images/apple-touch-icon.png><link rel=apple-touch-icon sizes=180x180 href=/images/apple-touch-icon.png><link rel=manifest href="/site.webmanifest.min.4ef1fd7bf38feef47142065705850163a02bf5e743be48806e160c8c67cb36b6.json" integrity="sha256-TvH9e/OP7vRxQgZXBYUBY6Ar9edDvkiAbhYMjGfLNrY="><link rel=mask-icon href=/images/safari-pinned-tab.svg color=#5bbad5></head><body class="preload-transitions colorscheme-auto"><div class=float-container><a id=dark-mode-toggle class=colorscheme-toggle><i class="fa-solid fa-adjust fa-fw" aria-hidden=true></i></a></div><main class=wrapper><nav class=navigation><section class=container><a class=navigation-title href=https://zyria.de/>Zyria
+<!doctype html><html lang=de><head><title>Snippets · Zyria</title><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=color-scheme content="light dark"><meta name=author content="Fabrice Kirchner"><meta name=description content="Sammlung von Codesnippets"><meta name=keywords content="[blog personal]"><meta name=twitter:card content="summary"><meta name=twitter:title content="Snippets"><meta name=twitter:description content="Sammlung von Codesnippets"><meta property="og:url" content="https://zyria.de/docs/it-intern/sammelbecken/snippets/"><meta property="og:site_name" content="Zyria"><meta property="og:title" content="Snippets"><meta property="og:description" content="Sammlung von Codesnippets"><meta property="og:locale" content="de_de"><meta property="og:type" content="article"><meta property="article:section" content="docs"><meta property="article:modified_time" content="2025-06-24T10:19:55+02:00"><link rel=canonical href=https://zyria.de/docs/it-intern/sammelbecken/snippets/><link rel=preload href=/fonts/fa-brands-400.woff2 as=font type=font/woff2 crossorigin><link rel=preload href=/fonts/fa-regular-400.woff2 as=font type=font/woff2 crossorigin><link rel=preload href=/fonts/fa-solid-900.woff2 as=font type=font/woff2 crossorigin><link rel=stylesheet href=/css/coder.min.d4ceffed3c46f343284e82f8229aec7df576d3e818677792dccae1ac7972550f.css integrity="sha256-1M7/7TxG80MoToL4IprsffV20+gYZ3eS3MrhrHlyVQ8=" crossorigin=anonymous media=screen><link rel=stylesheet href="/css/coder-dark.min.ad48f476275974885bdc03d5251e3cdbe1678c54a63ff772376b0ed2adc468dd.css" integrity="sha256-rUj0didZdIhb3APVJR482+FnjFSmP/dyN2sO0q3EaN0=" crossorigin=anonymous media=screen><link rel=icon type=image/svg+xml href=/images/favicon.svg sizes=any><link rel=icon type=image/png href=/images/favicon-32x32.png sizes=32x32><link rel=icon type=image/png href=/images/favicon-16x16.png sizes=16x16><link rel=apple-touch-icon href=/images/apple-touch-icon.png><link rel=apple-touch-icon sizes=180x180 href=/images/apple-touch-icon.png><link rel=manifest href="/site.webmanifest.min.4ef1fd7bf38feef47142065705850163a02bf5e743be48806e160c8c67cb36b6.json" integrity="sha256-TvH9e/OP7vRxQgZXBYUBY6Ar9edDvkiAbhYMjGfLNrY="><link rel=mask-icon href=/images/safari-pinned-tab.svg color=#5bbad5></head><body class="preload-transitions colorscheme-auto"><div class=float-container><a id=dark-mode-toggle class=colorscheme-toggle><i class="fa-solid fa-adjust fa-fw" aria-hidden=true></i></a></div><main class=wrapper><nav class=navigation><section class=container><a class=navigation-title href=https://zyria.de/>Zyria
 </a><input type=checkbox id=menu-toggle>
-<label class="menu-button float-right" for=menu-toggle><i class="fa-solid fa-bars fa-fw" aria-hidden=true></i></label><ul class=navigation-list><li class=navigation-item><a class=navigation-link href=/about/>Über mich</a></li><li class=navigation-item><a class=navigation-link href=/posts/>Beiträge</a></li><li class=navigation-item><a class=navigation-link href=/datenschutz/>Datenschutzerklärung</a></li><li class=navigation-item><a class=navigation-link href=/impressum/>Impressum</a></li><li class=navigation-item><a class=navigation-link href=/docs/>Docs</a></li><li class=navigation-item><a class="navigation-link external-link" href=https://status.zyria.de>Statusseite</a></li></ul></section></nav><div class=content><section class="container page"><article><header><h1 class=title><a class=title-link href=https://zyria.de/docs/it-intern/sammelbecken/snippets/></a></h1></header><h1 id=snippets>Snippets
+<label class="menu-button float-right" for=menu-toggle><i class="fa-solid fa-bars fa-fw" aria-hidden=true></i></label><ul class=navigation-list><li class=navigation-item><a class=navigation-link href=/about/>Über mich</a></li><li class=navigation-item><a class=navigation-link href=/posts/>Beiträge</a></li><li class=navigation-item><a class=navigation-link href=/datenschutz/>Datenschutzerklärung</a></li><li class=navigation-item><a class=navigation-link href=/impressum/>Impressum</a></li><li class=navigation-item><a class=navigation-link href=/docs/>Docs</a></li><li class=navigation-item><a class="navigation-link external-link" href=https://status.zyria.de>Statusseite</a></li></ul></section></nav><div class=content><section class="container page"><article><header><h1 class=title><a class=title-link href=https://zyria.de/docs/it-intern/sammelbecken/snippets/>Snippets</a></h1></header><h2 id=snippets>Snippets
 <a class=heading-link href=#snippets><i class="fa fa-link" aria-hidden=true title="Link zu Überschrift"></i>
-<span class=sr-only>Link zu Überschrift</span></a></h1><h2 id=raid-löschen>Raid löschen
+<span class=sr-only>Link zu Überschrift</span></a></h2><h3 id=zone-aus-samba-extrahieren>Zone aus Samba extrahieren
+<a class=heading-link href=#zone-aus-samba-extrahieren><i class="fa fa-link" aria-hidden=true title="Link zu Überschrift"></i>
+<span class=sr-only>Link zu Überschrift</span></a></h3><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=ln>  1</span><span class=cl><span class=cp>#!/bin/sh
+</span></span></span><span class=line><span class=ln>  2</span><span class=cl><span class=cp></span><span class=c1>#</span>
+</span></span><span class=line><span class=ln>  3</span><span class=cl><span class=c1># Extract DNS zone from Samba4 native DNS using samba-tool</span>
+</span></span><span class=line><span class=ln>  4</span><span class=cl><span class=c1>#</span>
+</span></span><span class=line><span class=ln>  5</span><span class=cl><span class=c1># Prerequistes:</span>
+</span></span><span class=line><span class=ln>  6</span><span class=cl><span class=c1># samba krb5-workstation</span>
+</span></span><span class=line><span class=ln>  7</span><span class=cl>
+</span></span><span class=line><span class=ln>  8</span><span class=cl><span class=nv>SAMBA_TOOL</span><span class=o>=</span>samba-tool
+</span></span><span class=line><span class=ln>  9</span><span class=cl>
+</span></span><span class=line><span class=ln> 10</span><span class=cl><span class=c1>#kinit Administrator</span>
+</span></span><span class=line><span class=ln> 11</span><span class=cl><span class=c1>#trap &#34;kdestroy; rm -f $TMPFILE&#34; 0 1 2 15</span>
+</span></span><span class=line><span class=ln> 12</span><span class=cl><span class=c1>#klist</span>
+</span></span><span class=line><span class=ln> 13</span><span class=cl><span class=c1>## -k=yes doesn&#39;t work...</span>
+</span></span><span class=line><span class=ln> 14</span><span class=cl><span class=c1>## Using --password isn&#39;t secure.</span>
+</span></span><span class=line><span class=ln> 15</span><span class=cl><span class=nv>USER</span><span class=o>=</span>Administrator
+</span></span><span class=line><span class=ln> 16</span><span class=cl><span class=nb>echo</span> -n <span class=s2>&#34;</span><span class=nv>$USER</span><span class=s2> password:&#34;</span> &gt;<span class=p>&amp;</span>2<span class=p>;</span> stty -echo<span class=p>;</span> <span class=nb>read</span> PASS<span class=p>;</span> stty echo<span class=p>;</span> <span class=nb>echo</span> <span class=s1>&#39;&#39;</span> &gt;<span class=p>&amp;</span><span class=m>2</span>
+</span></span><span class=line><span class=ln> 17</span><span class=cl><span class=nb>echo</span> <span class=s1>&#39;Please ignore &#34;Cannot do GSSAPI to an IP address&#34; errors...&#39;</span> &gt;<span class=p>&amp;</span><span class=m>2</span>
+</span></span><span class=line><span class=ln> 18</span><span class=cl>
+</span></span><span class=line><span class=ln> 19</span><span class=cl><span class=c1>## Extract zones</span>
+</span></span><span class=line><span class=ln> 20</span><span class=cl><span class=c1>#  2 zone(s) found</span>
+</span></span><span class=line><span class=ln> 21</span><span class=cl><span class=c1>#</span>
+</span></span><span class=line><span class=ln> 22</span><span class=cl><span class=c1>#  pszZoneName                 : a.example.or.jp</span>
+</span></span><span class=line><span class=ln> 23</span><span class=cl><span class=c1>#  Flags                       : DNS_RPC_ZONE_DSINTEGRATED DNS_RPC_ZONE_UPDATE_SECURE</span>
+</span></span><span class=line><span class=ln> 24</span><span class=cl><span class=c1>#  ZoneType                    : DNS_ZONE_TYPE_PRIMARY</span>
+</span></span><span class=line><span class=ln> 25</span><span class=cl><span class=c1>#  Version                     : 50</span>
+</span></span><span class=line><span class=ln> 26</span><span class=cl><span class=c1>#  dwDpFlags                   : DNS_DP_AUTOCREATED DNS_DP_DOMAIN_DEFAULT DNS_DP_ENLISTED</span>
+</span></span><span class=line><span class=ln> 27</span><span class=cl><span class=c1>#  pszDpFqdn                   : DomainDnsZones.a.example.or.jp</span>
+</span></span><span class=line><span class=ln> 28</span><span class=cl><span class=c1>#</span>
+</span></span><span class=line><span class=ln> 29</span><span class=cl><span class=c1>#  pszZoneName                 : _msdcs.a.example.or.jp</span>
+</span></span><span class=line><span class=ln> 30</span><span class=cl><span class=c1>#  Flags                       : DNS_RPC_ZONE_DSINTEGRATED DNS_RPC_ZONE_UPDATE_SECURE</span>
+</span></span><span class=line><span class=ln> 31</span><span class=cl><span class=c1>#  ZoneType                    : DNS_ZONE_TYPE_PRIMARY</span>
+</span></span><span class=line><span class=ln> 32</span><span class=cl><span class=c1>#  Version                     : 50</span>
+</span></span><span class=line><span class=ln> 33</span><span class=cl><span class=c1>#  dwDpFlags                   : DNS_DP_AUTOCREATED DNS_DP_FOREST_DEFAULT DNS_DP_ENLISTED</span>
+</span></span><span class=line><span class=ln> 34</span><span class=cl><span class=c1>#  pszDpFqdn                   : ForestDnsZones.a.example.or.jp</span>
+</span></span><span class=line><span class=ln> 35</span><span class=cl>
+</span></span><span class=line><span class=ln> 36</span><span class=cl><span class=c1>#$SAMBA_TOOL dns zonelist localhost --kerberos=yes &gt; $TMPFILE</span>
+</span></span><span class=line><span class=ln> 37</span><span class=cl><span class=nv>ZONES</span><span class=o>=</span><span class=sb>`</span><span class=nv>$SAMBA_TOOL</span> dns zonelist localhost -U <span class=s2>&#34;</span><span class=nv>$USER</span><span class=s2>&#34;</span> --password <span class=s2>&#34;</span><span class=nv>$PASS</span><span class=s2>&#34;</span> <span class=p>|</span> awk <span class=s1>&#39;$1 ~ /pszZoneName/{print $3}&#39;</span><span class=sb>`</span>
+</span></span><span class=line><span class=ln> 38</span><span class=cl>
+</span></span><span class=line><span class=ln> 39</span><span class=cl><span class=c1>## queryzone $zone &#34;ForestDnsZones&#34;</span>
+</span></span><span class=line><span class=ln> 40</span><span class=cl>queryzone <span class=o>()</span> <span class=o>{</span>
+</span></span><span class=line><span class=ln> 41</span><span class=cl>  <span class=nb>local</span> <span class=nv>zone</span><span class=o>=</span><span class=s2>&#34;</span><span class=nv>$1</span><span class=s2>&#34;</span>
+</span></span><span class=line><span class=ln> 42</span><span class=cl>  <span class=nb>local</span> <span class=nv>entry</span><span class=o>=</span><span class=s2>&#34;</span><span class=nv>$2</span><span class=s2>&#34;</span>
+</span></span><span class=line><span class=ln> 43</span><span class=cl>  <span class=nb>local</span> <span class=nv>qentry</span><span class=o>=</span><span class=s2>&#34;</span><span class=nv>$entry</span><span class=s2>&#34;</span>
+</span></span><span class=line><span class=ln> 44</span><span class=cl>  <span class=nb>local</span> name
+</span></span><span class=line><span class=ln> 45</span><span class=cl>  <span class=nb>local</span> children
+</span></span><span class=line><span class=ln> 46</span><span class=cl>  <span class=nb>local</span> lhs
+</span></span><span class=line><span class=ln> 47</span><span class=cl>  <span class=nb>test</span> -z <span class=s2>&#34;</span><span class=nv>$entry</span><span class=s2>&#34;</span> <span class=o>&amp;&amp;</span> <span class=nv>qentry</span><span class=o>=</span><span class=s2>&#34;@&#34;</span>
+</span></span><span class=line><span class=ln> 48</span><span class=cl>
+</span></span><span class=line><span class=ln> 49</span><span class=cl>  <span class=nv>$SAMBA_TOOL</span> dns query localhost <span class=nv>$zone</span> <span class=s2>&#34;</span><span class=nv>$qentry</span><span class=s2>&#34;</span> ALL -U <span class=s2>&#34;</span><span class=nv>$USER</span><span class=s2>&#34;</span> --password <span class=s2>&#34;</span><span class=nv>$PASS</span><span class=s2>&#34;</span> <span class=p>|</span>
+</span></span><span class=line><span class=ln> 50</span><span class=cl><span class=c1>#  Name=, Records=3, Children=0</span>
+</span></span><span class=line><span class=ln> 51</span><span class=cl><span class=c1>#    SOA: serial=1, refresh=900, retry=600, expire=86400, minttl=3600, ns=ad01.a.example.or.jp., email=hostmaster.a.example.or.jp. (flags=600000f0, serial=1, ttl=3600)</span>
+</span></span><span class=line><span class=ln> 52</span><span class=cl><span class=c1>#    NS: ad01.a.example.or.jp. (flags=600000f0, serial=1, ttl=900)</span>
+</span></span><span class=line><span class=ln> 53</span><span class=cl><span class=c1>#    A: 100.64.96.31 (flags=600000f0, serial=1, ttl=900)</span>
+</span></span><span class=line><span class=ln> 54</span><span class=cl><span class=c1>#  Name=_msdcs, Records=0, Children=0</span>
+</span></span><span class=line><span class=ln> 55</span><span class=cl><span class=c1>#  Name=_sites, Records=0, Children=1</span>
+</span></span><span class=line><span class=ln> 56</span><span class=cl><span class=c1>#  Name=_tcp, Records=0, Children=4</span>
+</span></span><span class=line><span class=ln> 57</span><span class=cl>  <span class=k>while</span> <span class=nb>read</span> line<span class=p>;</span> <span class=k>do</span>
+</span></span><span class=line><span class=ln> 58</span><span class=cl>    <span class=nb>set</span> <span class=nv>$line</span>
+</span></span><span class=line><span class=ln> 59</span><span class=cl>    <span class=k>case</span> <span class=s2>&#34;</span><span class=nv>$1</span><span class=s2>&#34;</span> in
+</span></span><span class=line><span class=ln> 60</span><span class=cl>        <span class=nv>Name</span><span class=o>=</span>*,<span class=o>)</span>
+</span></span><span class=line><span class=ln> 61</span><span class=cl>      <span class=nv>name</span><span class=o>=</span><span class=sb>`</span>expr <span class=nv>$1</span> : <span class=s1>&#39;Name=\([^,]*\)*,&#39;</span><span class=sb>`</span>
+</span></span><span class=line><span class=ln> 62</span><span class=cl>      <span class=nv>children</span><span class=o>=</span><span class=sb>`</span>expr <span class=nv>$3</span> : <span class=s1>&#39;Children=\([0-9]*\)&#39;</span><span class=sb>`</span>
+</span></span><span class=line><span class=ln> 63</span><span class=cl>      <span class=k>if</span> <span class=o>[</span> <span class=nv>$children</span> -gt <span class=m>0</span> <span class=o>]</span><span class=p>;</span> <span class=k>then</span>
+</span></span><span class=line><span class=ln> 64</span><span class=cl>        queryzone <span class=nv>$zone</span> <span class=nv>$name</span><span class=si>${</span><span class=nv>entry</span><span class=p>:+.</span><span class=si>}</span><span class=nv>$entry</span>
+</span></span><span class=line><span class=ln> 65</span><span class=cl>      <span class=k>fi</span>
+</span></span><span class=line><span class=ln> 66</span><span class=cl>      <span class=k>if</span> <span class=o>[</span> -z <span class=s2>&#34;</span><span class=nv>$name</span><span class=s2>&#34;</span> <span class=o>]</span><span class=p>;</span> <span class=k>then</span>
+</span></span><span class=line><span class=ln> 67</span><span class=cl>        <span class=k>if</span> <span class=o>[</span> -z <span class=s2>&#34;</span><span class=nv>$entry</span><span class=s2>&#34;</span> <span class=o>]</span><span class=p>;</span> <span class=k>then</span>
+</span></span><span class=line><span class=ln> 68</span><span class=cl>          <span class=nv>lhs</span><span class=o>=</span><span class=s2>&#34;@&#34;</span>
+</span></span><span class=line><span class=ln> 69</span><span class=cl>        <span class=k>else</span>
+</span></span><span class=line><span class=ln> 70</span><span class=cl>          <span class=nv>lhs</span><span class=o>=</span><span class=s2>&#34;</span><span class=si>${</span><span class=nv>entry</span><span class=si>}</span><span class=s2>&#34;</span>
+</span></span><span class=line><span class=ln> 71</span><span class=cl>        <span class=k>fi</span>
+</span></span><span class=line><span class=ln> 72</span><span class=cl>      <span class=k>else</span>
+</span></span><span class=line><span class=ln> 73</span><span class=cl>        <span class=nv>lhs</span><span class=o>=</span><span class=s2>&#34;</span><span class=si>${</span><span class=nv>name</span><span class=si>}${</span><span class=nv>entry</span><span class=p>:+.</span><span class=si>}${</span><span class=nv>entry</span><span class=si>}</span><span class=s2>&#34;</span>
+</span></span><span class=line><span class=ln> 74</span><span class=cl>      <span class=k>fi</span>
+</span></span><span class=line><span class=ln> 75</span><span class=cl>      <span class=p>;;</span>
+</span></span><span class=line><span class=ln> 76</span><span class=cl>        SOA:<span class=o>)</span>
+</span></span><span class=line><span class=ln> 77</span><span class=cl><span class=c1>#    SOA: serial=1, refresh=900, retry=600, expire=86400, minttl=3600, ns=ad01.a.example.or.jp., email=hostmaster.a.example.or.jp. (flags=600000f0, serial=1, ttl=3600)</span>
+</span></span><span class=line><span class=ln> 78</span><span class=cl>      <span class=nb>echo</span> <span class=s2>&#34;</span><span class=nv>$@</span><span class=s2>&#34;</span> <span class=p>|</span> sed -e <span class=s1>&#39;s/.*serial=\([0-9]*\), refresh=\([0-9]*\), retry=\([0-9]*\), expire=\([0-9]*\), minttl=\([0-9]*\), ns=\([^,]*\), email=\([^,]*\) (flags=.*, serial=[0-9]*, ttl=\([0-9]*\))/&#39;</span><span class=s2>&#34;</span><span class=si>${</span><span class=nv>name</span><span class=k>:-</span><span class=p>@</span><span class=si>}</span><span class=s2>&#34;</span><span class=s1>&#39; \8  IN SOA \6 \7 \1 \2 \3 \4 \5/&#39;</span>
+</span></span><span class=line><span class=ln> 79</span><span class=cl>      <span class=p>;;</span>
+</span></span><span class=line><span class=ln> 80</span><span class=cl><span class=c1>#    NS: ad01.a.example.or.jp. (flags=600000f0, serial=1, ttl=900)</span>
+</span></span><span class=line><span class=ln> 81</span><span class=cl><span class=c1>#    A: 100.64.96.31 (flags=600000f0, serial=1, ttl=900)</span>
+</span></span><span class=line><span class=ln> 82</span><span class=cl>        NS:<span class=p>|</span>A:<span class=p>|</span>AAAA:<span class=o>)</span>
+</span></span><span class=line><span class=ln> 83</span><span class=cl>      <span class=nb>echo</span> <span class=s2>&#34;</span><span class=nv>$@</span><span class=s2>&#34;</span> <span class=p>|</span> sed -ne <span class=s1>&#39;s/\([^ ]*\): \([^ ]*\) (flags=[0-9a-f]*, serial=[0-9]*, ttl=\([0-9]*\)).*/&#39;</span><span class=s2>&#34;</span><span class=si>${</span><span class=nv>lhs</span><span class=si>}</span><span class=s2>&#34;</span><span class=s1>&#39; \3 IN \1  \2/p&#39;</span>
+</span></span><span class=line><span class=ln> 84</span><span class=cl>      <span class=p>;;</span>
+</span></span><span class=line><span class=ln> 85</span><span class=cl><span class=c1>#    SRV: ad01.a.example.or.jp. (88, 0, 100) (flags=f0, serial=1, ttl=900)</span>
+</span></span><span class=line><span class=ln> 86</span><span class=cl>        SRV:<span class=p>|</span>MX:<span class=o>)</span>
+</span></span><span class=line><span class=ln> 87</span><span class=cl>      <span class=nb>echo</span> <span class=s2>&#34;</span><span class=nv>$@</span><span class=s2>&#34;</span> <span class=p>|</span> sed -ne <span class=s1>&#39;s/\([^ ]*\): \([^ ]*\) (\([0-9]*\), \([0-9]*\), \([0-9]*\)) (flags=[0-9a-f]*, serial=[0-9]*, ttl=\([0-9]*\)).*/&#39;</span><span class=s2>&#34;</span><span class=si>${</span><span class=nv>lhs</span><span class=si>}</span><span class=s2>&#34;</span><span class=s1>&#39;  \6 IN \1  \4 \5 \3 \2/p&#39;</span>
+</span></span><span class=line><span class=ln> 88</span><span class=cl>      <span class=p>;;</span>
+</span></span><span class=line><span class=ln> 89</span><span class=cl><span class=c1>#    CNAME: ad01.a.example.or.jp. (flags=f0, serial=1, ttl=900)</span>
+</span></span><span class=line><span class=ln> 90</span><span class=cl>        CNAME:<span class=o>)</span>
+</span></span><span class=line><span class=ln> 91</span><span class=cl>      <span class=nb>echo</span> <span class=s2>&#34;</span><span class=nv>$@</span><span class=s2>&#34;</span> <span class=p>|</span> sed -ne <span class=s1>&#39;s/\([^ ]*\): \([^ ]*\) (flags=[0-9a-f]*, serial=[0-9]*, ttl=\([0-9]*\)).*/&#39;</span><span class=s2>&#34;</span><span class=si>${</span><span class=nv>lhs</span><span class=si>}</span><span class=s2>&#34;</span><span class=s1>&#39; \3 IN \1  \2/p&#39;</span>
+</span></span><span class=line><span class=ln> 92</span><span class=cl>      <span class=p>;;</span>
+</span></span><span class=line><span class=ln> 93</span><span class=cl>        *<span class=o>)</span>
+</span></span><span class=line><span class=ln> 94</span><span class=cl>      <span class=nb>echo</span> <span class=s2>&#34;ERROR unknown record type </span><span class=nv>$1</span><span class=s2>; aborting&#34;</span> &gt;<span class=p>&amp;</span>2<span class=p>;</span> <span class=nb>exit</span> <span class=m>1</span>
+</span></span><span class=line><span class=ln> 95</span><span class=cl>      <span class=p>;;</span>
+</span></span><span class=line><span class=ln> 96</span><span class=cl>    <span class=k>esac</span>
+</span></span><span class=line><span class=ln> 97</span><span class=cl>  <span class=k>done</span>
+</span></span><span class=line><span class=ln> 98</span><span class=cl><span class=o>}</span>
+</span></span><span class=line><span class=ln> 99</span><span class=cl>
+</span></span><span class=line><span class=ln>100</span><span class=cl><span class=nb>echo</span> Zones: <span class=nv>$ZONES</span> &gt;<span class=p>&amp;</span><span class=m>2</span>
+</span></span><span class=line><span class=ln>101</span><span class=cl><span class=k>for</span> zone in <span class=nv>$ZONES</span><span class=p>;</span> <span class=k>do</span>
+</span></span><span class=line><span class=ln>102</span><span class=cl>  <span class=nb>echo</span> <span class=s1>&#39;$ORIGIN&#39;</span> <span class=nv>$zone</span>
+</span></span><span class=line><span class=ln>103</span><span class=cl>  <span class=nb>echo</span> <span class=s1>&#39;&#39;</span>
+</span></span><span class=line><span class=ln>104</span><span class=cl>  queryzone <span class=nv>$zone</span> <span class=s2>&#34;&#34;</span>
+</span></span><span class=line><span class=ln>105</span><span class=cl>  <span class=nb>echo</span> <span class=s1>&#39;&#39;</span>
+</span></span><span class=line><span class=ln>106</span><span class=cl><span class=k>done</span> <span class=p>;</span><span class=c1># zone $ZONES</span>
+</span></span></code></pre></div><h3 id=schlüssel-aus-windows-extrahieren>Schlüssel aus Windows extrahieren
+<a class=heading-link href=#schl%c3%bcssel-aus-windows-extrahieren><i class="fa fa-link" aria-hidden=true title="Link zu Überschrift"></i>
+<span class=sr-only>Link zu Überschrift</span></a></h3><div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=ln> 1</span><span class=cl>Set WshShell = CreateObject(&#34;WScript.Shell&#34;)
+</span></span><span class=line><span class=ln> 2</span><span class=cl>MsgBox ConvertToKey(WshShell.RegRead(&#34;HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\DigitalProductId&#34;))
+</span></span><span class=line><span class=ln> 3</span><span class=cl>
+</span></span><span class=line><span class=ln> 4</span><span class=cl>Function ConvertToKey(Key)
+</span></span><span class=line><span class=ln> 5</span><span class=cl>Const KeyOffset = 52
+</span></span><span class=line><span class=ln> 6</span><span class=cl>i = 28
+</span></span><span class=line><span class=ln> 7</span><span class=cl>Chars = &#34;BCDFGHJKMPQRTVWXY2346789&#34;
+</span></span><span class=line><span class=ln> 8</span><span class=cl>Do
+</span></span><span class=line><span class=ln> 9</span><span class=cl>Cur = 0
+</span></span><span class=line><span class=ln>10</span><span class=cl>x = 14
+</span></span><span class=line><span class=ln>11</span><span class=cl>Do
+</span></span><span class=line><span class=ln>12</span><span class=cl>Cur = Cur * 256
+</span></span><span class=line><span class=ln>13</span><span class=cl>Cur = Key(x + KeyOffset) + Cur
+</span></span><span class=line><span class=ln>14</span><span class=cl>Key(x + KeyOffset) = (Cur \ 24) And 255
+</span></span><span class=line><span class=ln>15</span><span class=cl>Cur = Cur Mod 24
+</span></span><span class=line><span class=ln>16</span><span class=cl>x = x -1
+</span></span><span class=line><span class=ln>17</span><span class=cl>Loop While x &gt;= 0
+</span></span><span class=line><span class=ln>18</span><span class=cl>i = i -1
+</span></span><span class=line><span class=ln>19</span><span class=cl>KeyOutput = Mid(Chars, Cur + 1, 1) &amp; KeyOutput
+</span></span><span class=line><span class=ln>20</span><span class=cl>If (((29 - i) Mod 6) = 0) And (i &lt;&gt; -1) Then
+</span></span><span class=line><span class=ln>21</span><span class=cl>i = i -1
+</span></span><span class=line><span class=ln>22</span><span class=cl>KeyOutput = &#34;-&#34; &amp; KeyOutput
+</span></span><span class=line><span class=ln>23</span><span class=cl>End If
+</span></span><span class=line><span class=ln>24</span><span class=cl>Loop While i &gt;= 0
+</span></span><span class=line><span class=ln>25</span><span class=cl>ConvertToKey = KeyOutput
+</span></span><span class=line><span class=ln>26</span><span class=cl>End Function
+</span></span></code></pre></div><h3 id=festplatten-in-proxmox-bewegen>Festplatten in Proxmox bewegen
+<a class=heading-link href=#festplatten-in-proxmox-bewegen><i class="fa fa-link" aria-hidden=true title="Link zu Überschrift"></i>
+<span class=sr-only>Link zu Überschrift</span></a></h3><p>Dieses Script migriert alle Festplatten einer VM auf einen anderen Storage</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=ln> 1</span><span class=cl><span class=cp>#!/bin/bash
+</span></span></span><span class=line><span class=ln> 2</span><span class=cl><span class=cp></span>
+</span></span><span class=line><span class=ln> 3</span><span class=cl><span class=nv>VMID</span><span class=o>=</span><span class=m>0</span>
+</span></span><span class=line><span class=ln> 4</span><span class=cl><span class=nv>STORAGE_DEST</span><span class=o>=</span><span class=s2>&#34;&#34;</span>
+</span></span><span class=line><span class=ln> 5</span><span class=cl><span class=nv>HOST_DEST</span><span class=o>=</span><span class=s2>&#34;&#34;</span>
+</span></span><span class=line><span class=ln> 6</span><span class=cl>
+</span></span><span class=line><span class=ln> 7</span><span class=cl><span class=k>while</span> <span class=nb>getopts</span> <span class=s2>&#34;:i:s:h&#34;</span> opt
+</span></span><span class=line><span class=ln> 8</span><span class=cl><span class=k>do</span>
+</span></span><span class=line><span class=ln> 9</span><span class=cl>  <span class=k>case</span> <span class=nv>$opt</span> in
+</span></span><span class=line><span class=ln>10</span><span class=cl>    i <span class=o>)</span> <span class=nv>VMID</span><span class=o>=</span><span class=nv>$OPTARG</span> <span class=p>;;</span>
+</span></span><span class=line><span class=ln>11</span><span class=cl>    s <span class=o>)</span> <span class=nv>STORAGE_DEST</span><span class=o>=</span><span class=nv>$OPTARG</span> <span class=p>;;</span>
+</span></span><span class=line><span class=ln>12</span><span class=cl>    h <span class=o>)</span> <span class=nv>HOST_DEST</span><span class=o>=</span><span class=nv>$OPTARG</span> <span class=p>;;</span>
+</span></span><span class=line><span class=ln>13</span><span class=cl>    <span class=se>\?</span> <span class=o>)</span> <span class=nb>echo</span> <span class=s2>&#34;Error&#34;</span>
+</span></span><span class=line><span class=ln>14</span><span class=cl>      <span class=nb>exit</span> <span class=m>1</span> <span class=p>;;</span>
+</span></span><span class=line><span class=ln>15</span><span class=cl>    : <span class=o>)</span> <span class=nb>echo</span> <span class=s2>&#34;Option -</span><span class=nv>$OPTARG</span><span class=s2> requires an argument&#34;</span>
+</span></span><span class=line><span class=ln>16</span><span class=cl>      <span class=nb>exit</span> <span class=m>1</span> <span class=p>;;</span>
+</span></span><span class=line><span class=ln>17</span><span class=cl>  <span class=k>esac</span>
+</span></span><span class=line><span class=ln>18</span><span class=cl><span class=k>done</span>
+</span></span><span class=line><span class=ln>19</span><span class=cl>
+</span></span><span class=line><span class=ln>20</span><span class=cl><span class=nv>VMS</span><span class=o>=</span><span class=s2>&#34;</span><span class=k>$(</span>qm list <span class=p>|</span> egrep <span class=s2>&#34;[0-9]{3}&#34;</span> <span class=p>|</span> awk <span class=s1>&#39;{print $1}&#39;</span><span class=k>)</span><span class=s2>&#34;</span>
+</span></span><span class=line><span class=ln>21</span><span class=cl><span class=nb>echo</span> <span class=nv>$VMS</span>
+</span></span><span class=line><span class=ln>22</span><span class=cl>
+</span></span><span class=line><span class=ln>23</span><span class=cl><span class=k>if</span> <span class=o>[[</span> <span class=nv>$VMID</span><span class=o>==</span><span class=s2>&#34;all&#34;</span> <span class=o>]]</span>
+</span></span><span class=line><span class=ln>24</span><span class=cl><span class=k>then</span>
+</span></span><span class=line><span class=ln>25</span><span class=cl>  <span class=k>for</span> j in <span class=nv>$VMS</span><span class=p>;</span> <span class=k>do</span>
+</span></span><span class=line><span class=ln>26</span><span class=cl>        <span class=nv>DISCOS</span><span class=o>=</span><span class=s2>&#34;</span><span class=k>$(</span>qm config <span class=nv>$j</span> <span class=p>|</span> egrep <span class=s2>&#34;^virtio[0-9]|^scsi[0-9]&#34;</span> <span class=p>|</span> awk <span class=s1>&#39;{print $1}&#39;</span> <span class=p>|</span> tr -d <span class=s2>&#34;:&#34;</span><span class=k>)</span><span class=s2>&#34;</span>
+</span></span><span class=line><span class=ln>27</span><span class=cl>        <span class=nb>echo</span> <span class=nv>$DISCOS</span>
+</span></span><span class=line><span class=ln>28</span><span class=cl>        <span class=k>for</span> i in <span class=nv>$DISCOS</span><span class=p>;</span> <span class=k>do</span>
+</span></span><span class=line><span class=ln>29</span><span class=cl>                qm move_disk <span class=nv>$j</span> <span class=nv>$i</span> <span class=nv>$STORAGE_DEST</span> --delete --format qcow2
+</span></span><span class=line><span class=ln>30</span><span class=cl>        <span class=k>done</span>
+</span></span><span class=line><span class=ln>31</span><span class=cl>  <span class=k>done</span>
+</span></span><span class=line><span class=ln>32</span><span class=cl><span class=k>else</span>
+</span></span><span class=line><span class=ln>33</span><span class=cl>  <span class=nv>DISCOS</span><span class=o>=</span><span class=s2>&#34;</span><span class=k>$(</span>qm config <span class=nv>$VMID</span> <span class=p>|</span> egrep <span class=s2>&#34;^virtio[0-9]|^scsi[0-9]&#34;</span> <span class=p>|</span> awk <span class=s1>&#39;{print $1}&#39;</span> <span class=p>|</span> tr -d <span class=s2>&#34;:&#34;</span><span class=k>)</span><span class=s2>&#34;</span>
+</span></span><span class=line><span class=ln>34</span><span class=cl>  <span class=k>for</span> i in <span class=nv>$DISCOS</span><span class=p>;</span> <span class=k>do</span>
+</span></span><span class=line><span class=ln>35</span><span class=cl>    qm move_disk <span class=nv>$VMID</span> <span class=nv>$i</span> <span class=nv>$STORAGE_DEST</span> --delete --format qcow2
+</span></span><span class=line><span class=ln>36</span><span class=cl>  <span class=k>done</span>
+</span></span><span class=line><span class=ln>37</span><span class=cl>
+</span></span><span class=line><span class=ln>38</span><span class=cl><span class=k>fi</span>
+</span></span><span class=line><span class=ln>39</span><span class=cl><span class=c1>#qm migrate $VMID $HOST_DEST --online</span>
+</span></span></code></pre></div><h3 id=reset-aller-policies-unter-windows>Reset aller Policies unter Windows
+<a class=heading-link href=#reset-aller-policies-unter-windows><i class="fa fa-link" aria-hidden=true title="Link zu Überschrift"></i>
+<span class=sr-only>Link zu Überschrift</span></a></h3><div class=highlight><pre tabindex=0 class=chroma><code class=language-cmd data-lang=cmd><span class=line><span class=ln> 1</span><span class=cl>secedit /configure /cfg <span class=nv>%windir%</span>\inf\defltbase.inf /db defltbase.sdb /verbose
+</span></span><span class=line><span class=ln> 2</span><span class=cl>
+</span></span><span class=line><span class=ln> 3</span><span class=cl><span class=k>RD</span> /S /Q <span class=s2>&#34;</span><span class=nv>%WinDir%</span><span class=s2>\System32\GroupPolicyUsers&#34;</span>
+</span></span><span class=line><span class=ln> 4</span><span class=cl><span class=k>RD</span> /S /Q <span class=s2>&#34;</span><span class=nv>%WinDir%</span><span class=s2>\System32\GroupPolicy&#34;</span>
+</span></span><span class=line><span class=ln> 5</span><span class=cl>
+</span></span><span class=line><span class=ln> 6</span><span class=cl>reg delete <span class=s2>&#34;HKCU\Software\Microsoft\Windows\CurrentVersion\Policies&#34;</span> /f
+</span></span><span class=line><span class=ln> 7</span><span class=cl>reg delete <span class=s2>&#34;HKCU\Software\Microsoft\WindowsSelfHost&#34;</span> /f
+</span></span><span class=line><span class=ln> 8</span><span class=cl>reg delete <span class=s2>&#34;HKCU\Software\Policies&#34;</span> /f
+</span></span><span class=line><span class=ln> 9</span><span class=cl>reg delete <span class=s2>&#34;HKLM\Software\Microsoft\Policies&#34;</span> /f
+</span></span><span class=line><span class=ln>10</span><span class=cl>reg delete <span class=s2>&#34;HKLM\Software\Microsoft\Windows\CurrentVersion\Policies&#34;</span> /f
+</span></span><span class=line><span class=ln>11</span><span class=cl>reg delete <span class=s2>&#34;HKLM\Software\Microsoft\Windows\CurrentVersion\WindowsStore\WindowsUpdate&#34;</span> /f
+</span></span><span class=line><span class=ln>12</span><span class=cl>reg delete <span class=s2>&#34;HKLM\Software\Microsoft\WindowsSelfHost&#34;</span> /f
+</span></span><span class=line><span class=ln>13</span><span class=cl>reg delete <span class=s2>&#34;HKLM\Software\Policies&#34;</span> /f
+</span></span><span class=line><span class=ln>14</span><span class=cl>reg delete <span class=s2>&#34;HKLM\Software\WOW6432Node\Microsoft\Policies&#34;</span> /f
+</span></span><span class=line><span class=ln>15</span><span class=cl>reg delete <span class=s2>&#34;HKLM\Software\WOW6432Node\Microsoft\Windows\CurrentVersion\Policies&#34;</span> /f
+</span></span><span class=line><span class=ln>16</span><span class=cl>reg delete <span class=s2>&#34;HKLM\Software\WOW6432Node\Microsoft\Windows\CurrentVersion\WindowsStore\WindowsUpdate&#34;</span> /f
+</span></span><span class=line><span class=ln>17</span><span class=cl>
+</span></span><span class=line><span class=ln>18</span><span class=cl>gpupdate /force
+</span></span></code></pre></div><h3 id=reset-der-user-folder-redirection-policy-unter-windows>Reset der User Folder Redirection Policy unter Windows
+<a class=heading-link href=#reset-der-user-folder-redirection-policy-unter-windows><i class="fa fa-link" aria-hidden=true title="Link zu Überschrift"></i>
+<span class=sr-only>Link zu Überschrift</span></a></h3><div class=highlight><pre tabindex=0 class=chroma><code class=language-registry data-lang=registry><span class=line><span class=ln> 1</span><span class=cl>Windows Registry Editor Version 5.00
+</span></span><span class=line><span class=ln> 2</span><span class=cl>
+</span></span><span class=line><span class=ln> 3</span><span class=cl><span class=k>[</span><span class=nb>HKEY_CURRENT_USER</span><span class=k>\Software\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders]</span>
+</span></span><span class=line><span class=ln> 4</span><span class=cl><span class=na>&#34;AppData&#34;</span><span class=o>=</span><span class=nv>hex(2)</span><span class=p>:</span><span class=m>25,00,55,00,53,00,45,00,52,00,50,00,52,00,4f,00,46,00,49,00,</span><span class=err>\</span>
+</span></span><span class=line><span class=ln> 5</span><span class=cl>  <span class=err>4c,00,45,00,25,00,5c,00,41,00,70,00,70,00,44,00,61,00,74,00,61,00,5c,00,52,\</span>
+</span></span><span class=line><span class=ln> 6</span><span class=cl>  <span class=err>00,6f,00,61,00,6d,00,69,00,6e,00,67,00,00,00</span>
+</span></span><span class=line><span class=ln> 7</span><span class=cl><span class=na>&#34;Cache&#34;</span><span class=o>=</span><span class=nv>hex(2)</span><span class=p>:</span><span class=m>25,00,55,00,53,00,45,00,52,00,50,00,52,00,4f,00,46,00,49,00,4c,</span><span class=err>\</span>
+</span></span><span class=line><span class=ln> 8</span><span class=cl>  <span class=err>00,45,00,25,00,5c,00,41,00,70,00,70,00,44,00,61,00,74,00,61,00,5c,00,4c,00,\</span>
+</span></span><span class=line><span class=ln> 9</span><span class=cl>  <span class=err>6f,00,63,00,61,00,6c,00,5c,00,4d,00,69,00,63,00,72,00,6f,00,73,00,6f,00,66,\</span>
+</span></span><span class=line><span class=ln>10</span><span class=cl>  <span class=err>00,74,00,5c,00,57,00,69,00,6e,00,64,00,6f,00,77,00,73,00,5c,00,54,00,65,00,\</span>
+</span></span><span class=line><span class=ln>11</span><span class=cl>  <span class=err>6d,00,70,00,6f,00,72,00,61,00,72,00,79,00,20,00,49,00,6e,00,74,00,65,00,72,\</span>
+</span></span><span class=line><span class=ln>12</span><span class=cl>  <span class=err>00,6e,00,65,00,74,00,20,00,46,00,69,00,6c,00,65,00,73,00,00,00</span>
+</span></span><span class=line><span class=ln>13</span><span class=cl><span class=na>&#34;Cookies&#34;</span><span class=o>=</span><span class=nv>hex(2)</span><span class=p>:</span><span class=m>25,00,55,00,53,00,45,00,52,00,50,00,52,00,4f,00,46,00,49,00,</span><span class=err>\</span>
+</span></span><span class=line><span class=ln>14</span><span class=cl>  <span class=err>4c,00,45,00,25,00,5c,00,41,00,70,00,70,00,44,00,61,00,74,00,61,00,5c,00,52,\</span>
+</span></span><span class=line><span class=ln>15</span><span class=cl>  <span class=err>00,6f,00,61,00,6d,00,69,00,6e,00,67,00,5c,00,4d,00,69,00,63,00,72,00,6f,00,\</span>
+</span></span><span class=line><span class=ln>16</span><span class=cl>  <span class=err>73,00,6f,00,66,00,74,00,5c,00,57,00,69,00,6e,00,64,00,6f,00,77,00,73,00,5c,\</span>
+</span></span><span class=line><span class=ln>17</span><span class=cl>  <span class=err>00,43,00,6f,00,6f,00,6b,00,69,00,65,00,73,00,00,00</span>
+</span></span><span class=line><span class=ln>18</span><span class=cl><span class=na>&#34;Desktop&#34;</span><span class=o>=</span><span class=nv>hex(2)</span><span class=p>:</span><span class=m>25,00,55,00,53,00,45,00,52,00,50,00,52,00,4f,00,46,00,49,00,</span><span class=err>\</span>
+</span></span><span class=line><span class=ln>19</span><span class=cl>  <span class=err>4c,00,45,00,25,00,5c,00,44,00,65,00,73,00,6b,00,74,00,6f,00,70,00,00,00</span>
+</span></span><span class=line><span class=ln>20</span><span class=cl><span class=na>&#34;Favorites&#34;</span><span class=o>=</span><span class=nv>hex(2)</span><span class=p>:</span><span class=m>25,00,55,00,53,00,45,00,52,00,50,00,52,00,4f,00,46,00,49,00,</span><span class=err>\</span>
+</span></span><span class=line><span class=ln>21</span><span class=cl>  <span class=err>4c,00,45,00,25,00,5c,00,46,00,61,00,76,00,6f,00,72,00,69,00,74,00,65,00,73,\</span>
+</span></span><span class=line><span class=ln>22</span><span class=cl>  <span class=err>00,00,00</span>
+</span></span><span class=line><span class=ln>23</span><span class=cl><span class=na>&#34;History&#34;</span><span class=o>=</span><span class=nv>hex(2)</span><span class=p>:</span><span class=m>25,00,55,00,53,00,45,00,52,00,50,00,52,00,4f,00,46,00,49,00,</span><span class=err>\</span>
+</span></span><span class=line><span class=ln>24</span><span class=cl>  <span class=err>4c,00,45,00,25,00,5c,00,41,00,70,00,70,00,44,00,61,00,74,00,61,00,5c,00,4c,\</span>
+</span></span><span class=line><span class=ln>25</span><span class=cl>  <span class=err>00,6f,00,63,00,61,00,6c,00,5c,00,4d,00,69,00,63,00,72,00,6f,00,73,00,6f,00,\</span>
+</span></span><span class=line><span class=ln>26</span><span class=cl>  <span class=err>66,00,74,00,5c,00,57,00,69,00,6e,00,64,00,6f,00,77,00,73,00,5c,00,48,00,69,\</span>
+</span></span><span class=line><span class=ln>27</span><span class=cl>  <span class=err>00,73,00,74,00,6f,00,72,00,79,00,00,00</span>
+</span></span><span class=line><span class=ln>28</span><span class=cl><span class=na>&#34;Local AppData&#34;</span><span class=o>=</span><span class=nv>hex(2)</span><span class=p>:</span><span class=m>25,00,55,00,53,00,45,00,52,00,50,00,52,00,4f,00,46,00,</span><span class=err>\</span>
+</span></span><span class=line><span class=ln>29</span><span class=cl>  <span class=err>49,00,4c,00,45,00,25,00,5c,00,41,00,70,00,70,00,44,00,61,00,74,00,61,00,5c,\</span>
+</span></span><span class=line><span class=ln>30</span><span class=cl>  <span class=err>00,4c,00,6f,00,63,00,61,00,6c,00,00,00</span>
+</span></span><span class=line><span class=ln>31</span><span class=cl><span class=na>&#34;My Music&#34;</span><span class=o>=</span><span class=nv>hex(2)</span><span class=p>:</span><span class=m>25,00,55,00,53,00,45,00,52,00,50,00,52,00,4f,00,46,00,49,00,</span><span class=err>\</span>
+</span></span><span class=line><span class=ln>32</span><span class=cl>  <span class=err>4c,00,45,00,25,00,5c,00,4d,00,75,00,73,00,69,00,63,00,00,00</span>
+</span></span><span class=line><span class=ln>33</span><span class=cl><span class=na>&#34;My Pictures&#34;</span><span class=o>=</span><span class=nv>hex(2)</span><span class=p>:</span><span class=m>25,00,55,00,53,00,45,00,52,00,50,00,52,00,4f,00,46,00,49,</span><span class=err>\</span>
+</span></span><span class=line><span class=ln>34</span><span class=cl>  <span class=err>00,4c,00,45,00,25,00,5c,00,50,00,69,00,63,00,74,00,75,00,72,00,65,00,73,00,\</span>
+</span></span><span class=line><span class=ln>35</span><span class=cl>  <span class=err>00,00</span>
+</span></span><span class=line><span class=ln>36</span><span class=cl><span class=na>&#34;My Video&#34;</span><span class=o>=</span><span class=nv>hex(2)</span><span class=p>:</span><span class=m>25,00,55,00,53,00,45,00,52,00,50,00,52,00,4f,00,46,00,49,00,</span><span class=err>\</span>
+</span></span><span class=line><span class=ln>37</span><span class=cl>  <span class=err>4c,00,45,00,25,00,5c,00,56,00,69,00,64,00,65,00,6f,00,73,00,00,00</span>
+</span></span><span class=line><span class=ln>38</span><span class=cl><span class=na>&#34;NetHood&#34;</span><span class=o>=</span><span class=nv>hex(2)</span><span class=p>:</span><span class=m>25,00,55,00,53,00,45,00,52,00,50,00,52,00,4f,00,46,00,49,00,</span><span class=err>\</span>
+</span></span><span class=line><span class=ln>39</span><span class=cl>  <span class=err>4c,00,45,00,25,00,5c,00,41,00,70,00,70,00,44,00,61,00,74,00,61,00,5c,00,52,\</span>
+</span></span><span class=line><span class=ln>40</span><span class=cl>  <span class=err>00,6f,00,61,00,6d,00,69,00,6e,00,67,00,5c,00,4d,00,69,00,63,00,72,00,6f,00,\</span>
+</span></span><span class=line><span class=ln>41</span><span class=cl>  <span class=err>73,00,6f,00,66,00,74,00,5c,00,57,00,69,00,6e,00,64,00,6f,00,77,00,73,00,5c,\</span>
+</span></span><span class=line><span class=ln>42</span><span class=cl>  <span class=err>00,4e,00,65,00,74,00,77,00,6f,00,72,00,6b,00,20,00,53,00,68,00,6f,00,72,00,\</span>
+</span></span><span class=line><span class=ln>43</span><span class=cl>  <span class=err>74,00,63,00,75,00,74,00,73,00,00,00</span>
+</span></span><span class=line><span class=ln>44</span><span class=cl><span class=na>&#34;Personal&#34;</span><span class=o>=</span><span class=nv>hex(2)</span><span class=p>:</span><span class=m>25,00,55,00,53,00,45,00,52,00,50,00,52,00,4f,00,46,00,49,00,</span><span class=err>\</span>
+</span></span><span class=line><span class=ln>45</span><span class=cl>  <span class=err>4c,00,45,00,25,00,5c,00,44,00,6f,00,63,00,75,00,6d,00,65,00,6e,00,74,00,73,\</span>
+</span></span><span class=line><span class=ln>46</span><span class=cl>  <span class=err>00,00,00</span>
+</span></span><span class=line><span class=ln>47</span><span class=cl><span class=na>&#34;Programs&#34;</span><span class=o>=</span><span class=nv>hex(2)</span><span class=p>:</span><span class=m>25,00,55,00,53,00,45,00,52,00,50,00,52,00,4f,00,46,00,49,00,</span><span class=err>\</span>
+</span></span><span class=line><span class=ln>48</span><span class=cl>  <span class=err>4c,00,45,00,25,00,5c,00,41,00,70,00,70,00,44,00,61,00,74,00,61,00,5c,00,52,\</span>
+</span></span><span class=line><span class=ln>49</span><span class=cl>  <span class=err>00,6f,00,61,00,6d,00,69,00,6e,00,67,00,5c,00,4d,00,69,00,63,00,72,00,6f,00,\</span>
+</span></span><span class=line><span class=ln>50</span><span class=cl>  <span class=err>73,00,6f,00,66,00,74,00,5c,00,57,00,69,00,6e,00,64,00,6f,00,77,00,73,00,5c,\</span>
+</span></span><span class=line><span class=ln>51</span><span class=cl>  <span class=err>00,53,00,74,00,61,00,72,00,74,00,20,00,4d,00,65,00,6e,00,75,00,5c,00,50,00,\</span>
+</span></span><span class=line><span class=ln>52</span><span class=cl>  <span class=err>72,00,6f,00,67,00,72,00,61,00,6d,00,73,00,00,00</span>
+</span></span><span class=line><span class=ln>53</span><span class=cl><span class=na>&#34;Recent&#34;</span><span class=o>=</span><span class=nv>hex(2)</span><span class=p>:</span><span class=m>25,00,55,00,53,00,45,00,52,00,50,00,52,00,4f,00,46,00,49,00,4c,</span><span class=err>\</span>
+</span></span><span class=line><span class=ln>54</span><span class=cl>  <span class=err>00,45,00,25,00,5c,00,41,00,70,00,70,00,44,00,61,00,74,00,61,00,5c,00,52,00,\</span>
+</span></span><span class=line><span class=ln>55</span><span class=cl>  <span class=err>6f,00,61,00,6d,00,69,00,6e,00,67,00,5c,00,4d,00,69,00,63,00,72,00,6f,00,73,\</span>
+</span></span><span class=line><span class=ln>56</span><span class=cl>  <span class=err>00,6f,00,66,00,74,00,5c,00,57,00,69,00,6e,00,64,00,6f,00,77,00,73,00,5c,00,\</span>
+</span></span><span class=line><span class=ln>57</span><span class=cl>  <span class=err>52,00,65,00,63,00,65,00,6e,00,74,00,00,00</span>
+</span></span><span class=line><span class=ln>58</span><span class=cl><span class=na>&#34;SendTo&#34;</span><span class=o>=</span><span class=nv>hex(2)</span><span class=p>:</span><span class=m>25,00,55,00,53,00,45,00,52,00,50,00,52,00,4f,00,46,00,49,00,4c,</span><span class=err>\</span>
+</span></span><span class=line><span class=ln>59</span><span class=cl>  <span class=err>00,45,00,25,00,5c,00,41,00,70,00,70,00,44,00,61,00,74,00,61,00,5c,00,52,00,\</span>
+</span></span><span class=line><span class=ln>60</span><span class=cl>  <span class=err>6f,00,61,00,6d,00,69,00,6e,00,67,00,5c,00,4d,00,69,00,63,00,72,00,6f,00,73,\</span>
+</span></span><span class=line><span class=ln>61</span><span class=cl>  <span class=err>00,6f,00,66,00,74,00,5c,00,57,00,69,00,6e,00,64,00,6f,00,77,00,73,00,5c,00,\</span>
+</span></span><span class=line><span class=ln>62</span><span class=cl>  <span class=err>53,00,65,00,6e,00,64,00,54,00,6f,00,00,00</span>
+</span></span><span class=line><span class=ln>63</span><span class=cl><span class=na>&#34;Startup&#34;</span><span class=o>=</span><span class=nv>hex(2)</span><span class=p>:</span><span class=m>25,00,55,00,53,00,45,00,52,00,50,00,52,00,4f,00,46,00,49,00,</span><span class=err>\</span>
+</span></span><span class=line><span class=ln>64</span><span class=cl>  <span class=err>4c,00,45,00,25,00,5c,00,41,00,70,00,70,00,44,00,61,00,74,00,61,00,5c,00,52,\</span>
+</span></span><span class=line><span class=ln>65</span><span class=cl>  <span class=err>00,6f,00,61,00,6d,00,69,00,6e,00,67,00,5c,00,4d,00,69,00,63,00,72,00,6f,00,\</span>
+</span></span><span class=line><span class=ln>66</span><span class=cl>  <span class=err>73,00,6f,00,66,00,74,00,5c,00,57,00,69,00,6e,00,64,00,6f,00,77,00,73,00,5c,\</span>
+</span></span><span class=line><span class=ln>67</span><span class=cl>  <span class=err>00,53,00,74,00,61,00,72,00,74,00,20,00,4d,00,65,00,6e,00,75,00,5c,00,50,00,\</span>
+</span></span><span class=line><span class=ln>68</span><span class=cl>  <span class=err>72,00,6f,00,67,00,72,00,61,00,6d,00,73,00,5c,00,53,00,74,00,61,00,72,00,74,\</span>
+</span></span><span class=line><span class=ln>69</span><span class=cl>  <span class=err>00,75,00,70,00,00,00</span>
+</span></span><span class=line><span class=ln>70</span><span class=cl><span class=na>&#34;Start Menu&#34;</span><span class=o>=</span><span class=nv>hex(2)</span><span class=p>:</span><span class=m>25,00,55,00,53,00,45,00,52,00,50,00,52,00,4f,00,46,00,49,</span><span class=err>\</span>
+</span></span><span class=line><span class=ln>71</span><span class=cl>  <span class=err>00,4c,00,45,00,25,00,5c,00,41,00,70,00,70,00,44,00,61,00,74,00,61,00,5c,00,\</span>
+</span></span><span class=line><span class=ln>72</span><span class=cl>  <span class=err>52,00,6f,00,61,00,6d,00,69,00,6e,00,67,00,5c,00,4d,00,69,00,63,00,72,00,6f,\</span>
+</span></span><span class=line><span class=ln>73</span><span class=cl>  <span class=err>00,73,00,6f,00,66,00,74,00,5c,00,57,00,69,00,6e,00,64,00,6f,00,77,00,73,00,\</span>
+</span></span><span class=line><span class=ln>74</span><span class=cl>  <span class=err>5c,00,53,00,74,00,61,00,72,00,74,00,20,00,4d,00,65,00,6e,00,75,00,00,00</span>
+</span></span><span class=line><span class=ln>75</span><span class=cl><span class=na>&#34;Templates&#34;</span><span class=o>=</span><span class=nv>hex(2)</span><span class=p>:</span><span class=m>25,00,55,00,53,00,45,00,52,00,50,00,52,00,4f,00,46,00,49,00,</span><span class=err>\</span>
+</span></span><span class=line><span class=ln>76</span><span class=cl>  <span class=err>4c,00,45,00,25,00,5c,00,41,00,70,00,70,00,44,00,61,00,74,00,61,00,5c,00,52,\</span>
+</span></span><span class=line><span class=ln>77</span><span class=cl>  <span class=err>00,6f,00,61,00,6d,00,69,00,6e,00,67,00,5c,00,4d,00,69,00,63,00,72,00,6f,00,\</span>
+</span></span><span class=line><span class=ln>78</span><span class=cl>  <span class=err>73,00,6f,00,66,00,74,00,5c,00,57,00,69,00,6e,00,64,00,6f,00,77,00,73,00,5c,\</span>
+</span></span><span class=line><span class=ln>79</span><span class=cl>  <span class=err>00,54,00,65,00,6d,00,70,00,6c,00,61,00,74,00,65,00,73,00,00,00</span>
+</span></span><span class=line><span class=ln>80</span><span class=cl><span class=na>&#34;{374DE290-123F-4565-9164-39C4925E467B}&#34;</span><span class=o>=</span><span class=nv>hex(2)</span><span class=p>:</span><span class=m>25,00,55,00,53,00,45,00,52,00,</span><span class=err>\</span>
+</span></span><span class=line><span class=ln>81</span><span class=cl>  <span class=err>50,00,52,00,4f,00,46,00,49,00,4c,00,45,00,25,00,5c,00,44,00,6f,00,77,00,6e,\</span>
+</span></span><span class=line><span class=ln>82</span><span class=cl>  <span class=err>00,6c,00,6f,00,61,00,64,00,73,00,00,00</span>
+</span></span><span class=line><span class=ln>83</span><span class=cl><span class=na>&#34;PrintHood&#34;</span><span class=o>=</span><span class=nv>hex(2)</span><span class=p>:</span><span class=m>25,00,55,00,53,00,45,00,52,00,50,00,52,00,4f,00,46,00,49,00,</span><span class=err>\</span>
+</span></span><span class=line><span class=ln>84</span><span class=cl>  <span class=err>4c,00,45,00,25,00,5c,00,41,00,70,00,70,00,44,00,61,00,74,00,61,00,5c,00,52,\</span>
+</span></span><span class=line><span class=ln>85</span><span class=cl>  <span class=err>00,6f,00,61,00,6d,00,69,00,6e,00,67,00,5c,00,4d,00,69,00,63,00,72,00,6f,00,\</span>
+</span></span><span class=line><span class=ln>86</span><span class=cl>  <span class=err>73,00,6f,00,66,00,74,00,5c,00,57,00,69,00,6e,00,64,00,6f,00,77,00,73,00,5c,\</span>
+</span></span><span class=line><span class=ln>87</span><span class=cl>  <span class=err>00,50,00,72,00,69,00,6e,00,74,00,65,00,72,00,20,00,53,00,68,00,6f,00,72,00,\</span>
+</span></span><span class=line><span class=ln>88</span><span class=cl>  <span class=err>74,00,63,00,75,00,74,00,73,00,00,00</span>
+</span></span></code></pre></div><h3 id=raid-löschen>Raid löschen
 <a class=heading-link href=#raid-l%c3%b6schen><i class="fa fa-link" aria-hidden=true title="Link zu Überschrift"></i>
-<span class=sr-only>Link zu Überschrift</span></a></h2><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=ln>1</span><span class=cl>mdadm --stop /dev/md0
+<span class=sr-only>Link zu Überschrift</span></a></h3><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=ln>1</span><span class=cl>mdadm --stop /dev/md0
 </span></span><span class=line><span class=ln>2</span><span class=cl><span class=k>for</span> i in <span class=s2>&#34;0&#34;</span> <span class=s2>&#34;1&#34;</span><span class=p>;</span> <span class=k>do</span>  mdadm --zero-superblock /dev/nvme<span class=s2>&#34;</span><span class=nv>$i</span><span class=s2>&#34;</span>n1<span class=p>;</span> <span class=k>done</span>
-</span></span></code></pre></div><h2 id=raid-erstellen>Raid erstellen
+</span></span></code></pre></div><h3 id=raid-erstellen>Raid erstellen
 <a class=heading-link href=#raid-erstellen><i class="fa fa-link" aria-hidden=true title="Link zu Überschrift"></i>
-<span class=sr-only>Link zu Überschrift</span></a></h2><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=ln>1</span><span class=cl>yes <span class=p>|</span> mdadm --create -n <span class=m>2</span> -l <span class=m>1</span> /dev/md0 /dev/nvme<span class=o>[</span>01<span class=o>]</span>n1p1
-</span></span></code></pre></div><h2 id=partition-mit-ext4-formatieren>Partition mit ext4 formatieren
+<span class=sr-only>Link zu Überschrift</span></a></h3><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=ln>1</span><span class=cl>yes <span class=p>|</span> mdadm --create -n <span class=m>2</span> -l <span class=m>1</span> /dev/md0 /dev/nvme<span class=o>[</span>01<span class=o>]</span>n1p1
+</span></span></code></pre></div><h3 id=partition-mit-ext4-formatieren>Partition mit ext4 formatieren
 <a class=heading-link href=#partition-mit-ext4-formatieren><i class="fa fa-link" aria-hidden=true title="Link zu Überschrift"></i>
-<span class=sr-only>Link zu Überschrift</span></a></h2><blockquote><p>mkfs.ext4 /dev/md0</p></blockquote><p>oder</p><blockquote><p>yes | mkfs.ext4 -L boot /dev/md0</p></blockquote><p>Swap:</p><blockquote><p>mkswap -f /dev/vg-name/swap</p></blockquote><h2 id=festplatten-verschlüsselung>Festplatten Verschlüsselung
+<span class=sr-only>Link zu Überschrift</span></a></h3><blockquote><p>mkfs.ext4 /dev/md0</p></blockquote><p>oder</p><blockquote><p>yes | mkfs.ext4 -L boot /dev/md0</p></blockquote><p>Swap:</p><blockquote><p>mkswap -f /dev/vg-name/swap</p></blockquote><h3 id=festplatten-verschlüsselung>Festplatten Verschlüsselung
 <a class=heading-link href=#festplatten-verschl%c3%bcsselung><i class="fa fa-link" aria-hidden=true title="Link zu Überschrift"></i>
-<span class=sr-only>Link zu Überschrift</span></a></h2><h3 id=verschlüsseln>verschlüsseln
+<span class=sr-only>Link zu Überschrift</span></a></h3><h4 id=verschlüsseln>verschlüsseln
 <a class=heading-link href=#verschl%c3%bcsseln><i class="fa fa-link" aria-hidden=true title="Link zu Überschrift"></i>
-<span class=sr-only>Link zu Überschrift</span></a></h3><blockquote><p>cryptsetup &ndash;batch-mode -c aes-cbc-essiv:sha256 -s 256 -y luksFormat /dev/nvme0n1p4</p></blockquote><h3 id=öffnen>öffnen
+<span class=sr-only>Link zu Überschrift</span></a></h4><blockquote><p>cryptsetup &ndash;batch-mode -c aes-cbc-essiv:sha256 -s 256 -y luksFormat /dev/nvme0n1p4</p></blockquote><h4 id=öffnen>öffnen
 <a class=heading-link href=#%c3%b6ffnen><i class="fa fa-link" aria-hidden=true title="Link zu Überschrift"></i>
-<span class=sr-only>Link zu Überschrift</span></a></h3><blockquote><p>cryptsetup luksOpen /dev/md1 crypt-root</p></blockquote><h2 id=festplatte-partitionieren>Festplatte Partitionieren
+<span class=sr-only>Link zu Überschrift</span></a></h4><blockquote><p>cryptsetup luksOpen /dev/md1 crypt-root</p></blockquote><h3 id=festplatte-partitionieren>Festplatte Partitionieren
 <a class=heading-link href=#festplatte-partitionieren><i class="fa fa-link" aria-hidden=true title="Link zu Überschrift"></i>
-<span class=sr-only>Link zu Überschrift</span></a></h2><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=ln> 1</span><span class=cl><span class=k>for</span> i in <span class=s2>&#34;0&#34;</span> <span class=s2>&#34;1&#34;</span><span class=p>;</span> <span class=k>do</span>
+<span class=sr-only>Link zu Überschrift</span></a></h3><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=ln> 1</span><span class=cl><span class=k>for</span> i in <span class=s2>&#34;0&#34;</span> <span class=s2>&#34;1&#34;</span><span class=p>;</span> <span class=k>do</span>
 </span></span><span class=line><span class=ln> 2</span><span class=cl>parted -a optimal /dev/nvme<span class=s2>&#34;</span><span class=nv>$i</span><span class=s2>&#34;</span>n1 --script <span class=se>\
 </span></span></span><span class=line><span class=ln> 3</span><span class=cl><span class=se></span>unit s <span class=se>\
 </span></span></span><span class=line><span class=ln> 4</span><span class=cl><span class=se></span>mklabel gpt <span class=se>\
@@ -80,31 +321,31 @@ mkswap -f /dev/vg-name/swap'><meta property="og:locale" content="de_de"><meta pr
 </span></span><span class=line><span class=ln>13</span><span class=cl>
 </span></span><span class=line><span class=ln>14</span><span class=cl><span class=nb>set</span> <span class=m>2</span> bios_grub on <span class=se>\
 </span></span></span><span class=line><span class=ln>15</span><span class=cl><span class=se></span><span class=nb>set</span> <span class=m>2</span> boot on <span class=se>\
-</span></span></span></code></pre></div><h2 id=lvm>LVM
+</span></span></span></code></pre></div><h3 id=lvm>LVM
 <a class=heading-link href=#lvm><i class="fa fa-link" aria-hidden=true title="Link zu Überschrift"></i>
-<span class=sr-only>Link zu Überschrift</span></a></h2><h3 id=gerät-hinzufügen>Gerät hinzufügen
+<span class=sr-only>Link zu Überschrift</span></a></h3><h4 id=gerät-hinzufügen>Gerät hinzufügen
 <a class=heading-link href=#ger%c3%a4t-hinzuf%c3%bcgen><i class="fa fa-link" aria-hidden=true title="Link zu Überschrift"></i>
-<span class=sr-only>Link zu Überschrift</span></a></h3><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=ln>1</span><span class=cl>pvcreate /dev/mapper/crypt-root
+<span class=sr-only>Link zu Überschrift</span></a></h4><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=ln>1</span><span class=cl>pvcreate /dev/mapper/crypt-root
 </span></span><span class=line><span class=ln>2</span><span class=cl>vgcreate vg-name /dev/mapper/crypt-root
 </span></span><span class=line><span class=ln>3</span><span class=cl>
 </span></span><span class=line><span class=ln>4</span><span class=cl>lvcreate -n root -L 4G vg-name
 </span></span><span class=line><span class=ln>5</span><span class=cl>lvcreate -n var-log -l100%FREE vg-name
-</span></span></code></pre></div><h3 id=lvm-vergrößern>LVM vergrößern
+</span></span></code></pre></div><h4 id=lvm-vergrößern>LVM vergrößern
 <a class=heading-link href=#lvm-vergr%c3%b6%c3%9fern><i class="fa fa-link" aria-hidden=true title="Link zu Überschrift"></i>
-<span class=sr-only>Link zu Überschrift</span></a></h3><p><a href=https://www.thomas-krenn.com/de/wiki/LVM_vergr%c3%b6%c3%9fern class=external-link target=_blank rel=noopener>Link</a></p><h2 id=backup>Backup
+<span class=sr-only>Link zu Überschrift</span></a></h4><p><a href=https://www.thomas-krenn.com/de/wiki/LVM_vergr%c3%b6%c3%9fern class=external-link target=_blank rel=noopener>Link</a></p><h3 id=backup>Backup
 <a class=heading-link href=#backup><i class="fa fa-link" aria-hidden=true title="Link zu Überschrift"></i>
-<span class=sr-only>Link zu Überschrift</span></a></h2><p><a href=https://wiki.hetzner.de/index.php/BorgBackup class=external-link target=_blank rel=noopener>BorgBackup bei Hetzner</a></p><h2 id=git>Git
+<span class=sr-only>Link zu Überschrift</span></a></h3><p><a href=https://wiki.hetzner.de/index.php/BorgBackup class=external-link target=_blank rel=noopener>BorgBackup bei Hetzner</a></p><h3 id=git>Git
 <a class=heading-link href=#git><i class="fa fa-link" aria-hidden=true title="Link zu Überschrift"></i>
-<span class=sr-only>Link zu Überschrift</span></a></h2><p>Alle Repos mit Zugriff auf den lokalen Rechner clonen</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=ln>1</span><span class=cl>tea login add
-</span></span><span class=line><span class=ln>2</span><span class=cl><span class=k>for</span> i in <span class=k>$(</span>tea repos ls --fields ssh -o simple -l www.casa-due-pur.de -T <span class=nb>source</span><span class=k>)</span><span class=p>;</span> <span class=k>do</span> git clone <span class=nv>$i</span><span class=p>;</span> <span class=k>done</span>
+<span class=sr-only>Link zu Überschrift</span></a></h3><p>Alle Repos mit Zugriff auf den lokalen Rechner clonen</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=ln>1</span><span class=cl>tea login add
+</span></span><span class=line><span class=ln>2</span><span class=cl><span class=k>for</span> i in <span class=k>$(</span>tea repos ls --fields ssh -o simple -l git.zyria.de -T <span class=nb>source</span><span class=k>)</span><span class=p>;</span> <span class=k>do</span> git clone <span class=nv>$i</span><span class=p>;</span> <span class=k>done</span>
 </span></span></code></pre></div></article></section></div><footer class=footer><section class=container>©
 2003 -
 2025
 Fabrice Kirchner
 ·
 Gestaltet mit <a href=https://gohugo.io/ target=_blank rel=noopener>Hugo</a> & <a href=https://github.com/luizdepra/hugo-coder/ target=_blank rel=noopener>Coder</a>.
-[<a href=https://git.zyria.de/pyrox/zyria_de/commit/c7038db61e07958bc411c2b0529944503314b1b7 target=_blank rel=noopener>c7038db</a>]</section><section class=container><details><summary>Funktionsleiste</summary><div class="td-page-meta ms-2 pb-1 pt-2 mb-0"><a href=https://git.zyria.de/pyrox/zyria_de/src/branch/main/content/docs/it-intern/sammelbecken/snippets.md class="td-page-meta--view td-page-meta__view" target=_blank rel=noopener><i class="fa-solid fa-file-lines fa-fw"></i> Quellcode dieser Seite ansehen</a>
+[<a href=https://git.zyria.de/pyrox/zyria_de/commit/70d2f4bed102b0b8d8f7e65f892bd97a906da34f target=_blank rel=noopener>70d2f4b</a>]</section><section class=container><details><summary>Funktionsleiste</summary><div class="td-page-meta ms-2 pb-1 pt-2 mb-0"><a href=https://git.zyria.de/pyrox/zyria_de/src/branch/main/content/docs/it-intern/sammelbecken/snippets.md class="td-page-meta--view td-page-meta__view" target=_blank rel=noopener><i class="fa-solid fa-file-lines fa-fw"></i> Quellcode dieser Seite ansehen</a>
 <a href=https://git.zyria.de/pyrox/zyria_de/_edit/main/content/docs/it-intern/sammelbecken/snippets.md class="td-page-meta--edit td-page-meta__edit" target=_blank rel=noopener><i class="fa-solid fa-pen-to-square fa-fw"></i> Diese Seite bearbeiten</a>
 <a href="https://git.zyria.de/pyrox/zyria_de/_new/main/content/docs/it-intern/sammelbecken?filename=change-me.md&amp;value=---%0Atitle%3A+%22Long+Page+Title%22%0AlinkTitle%3A+%22Short+Nav+Title%22%0Aweight%3A+100%0Adescription%3A+%3E-%0A++Page+description+for+heading+and+indexes.%0A---%0A%0A%23%23+Heading%0A%0AEdit+this+template+to+create+your+new+page.%0A%0A%2A+Give+it+a+good+name%2C+ending+in+%60.md%60+-+e.g.+%60getting-started.md%60%0A%2A+Edit+the+%22front+matter%22+section+at+the+top+of+the+page+%28weight+controls+how+its+ordered+amongst+other+pages+in+the+same+directory%3B+lowest+number+first%29.%0A%2A+Add+a+good+commit+message+at+the+bottom+of+the+page+%28%3C80+characters%3B+use+the+extended+description+field+for+more+detail%29.%0A%2A+Create+a+new+branch+so+you+can+preview+your+new+file+and+request+a+review+via+Pull+Request.%0A" class="td-page-meta--child td-page-meta__child" target=_blank rel=noopener><i class="fa-solid fa-pen-to-square fa-fw"></i> Unterseite anlegen</a>
-<a href="https://git.zyria.de/pyrox/zyria_de/issues/new?title=" class="td-page-meta--issue td-page-meta__issue" target=_blank rel=noopener><i class="fa-solid fa-list-check fa-fw"></i> Problem zu dieser Seite melden</a>
+<a href="https://git.zyria.de/pyrox/zyria_de/issues/new?title=Snippets" class="td-page-meta--issue td-page-meta__issue" target=_blank rel=noopener><i class="fa-solid fa-list-check fa-fw"></i> Problem zu dieser Seite melden</a>
 <a href=https://git.zyria.de/pyrox/zyria_de.git/issues/new class="td-page-meta--project td-page-meta__project-issue" target=_blank rel=noopener><i class="fa-solid fa-list-check fa-fw"></i> Problem melden</a></div></details></section></footer></main><script src=/js/coder.min.6ae284be93d2d19dad1f02b0039508d9aab3180a12a06dcc71b0b0ef7825a317.js integrity="sha256-auKEvpPS0Z2tHwKwA5UI2aqzGAoSoG3McbCw73gloxc="></script><script src=/js/index.f2979a93a325fecf9605263bd141398a311c8e23388ed7dcff74f92f7e632866.js integrity="sha256-8peak6Ml/s+WBSY70UE5ijEcjiM4jtfc/3T5L35jKGY=" defer></script></body></html>
