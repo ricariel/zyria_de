@@ -1,19 +1,46 @@
-# Snippets
+---
+title: 'Snippets'
+description: 'Sammlung von Codesnippets'
+---
 
-## Raid löschen
+## Snippets
+
+### Zone aus Samba extrahieren
+
+{{< readfile file="extract_zone.sh" code="true" lang="bash" >}}
+
+### Schlüssel aus Windows extrahieren
+
+{{< readfile file="getkey.vbs" code="true" lang="vbscript" >}}
+
+### Festplatten in Proxmox bewegen
+
+Dieses Script migriert alle Festplatten einer VM auf einen anderen Storage
+
+{{< readfile file="move_all_disks.sh" code="true" lang="bash" >}}
+
+### Reset aller Policies unter Windows
+
+{{< readfile file="resetPolicies.bat" code="true" lang="cmd" >}}
+
+### Reset der User Folder Redirection Policy unter Windows
+
+{{< readfile file="userFolderRedirectionReset.reg" code="true" lang="registry" >}}
+
+### Raid löschen
 
 ```bash
 mdadm --stop /dev/md0
 for i in "0" "1"; do  mdadm --zero-superblock /dev/nvme"$i"n1; done
 ```
 
-## Raid erstellen
+### Raid erstellen
 
 ```bash
 yes | mdadm --create -n 2 -l 1 /dev/md0 /dev/nvme[01]n1p1
 ```
 
-## Partition mit ext4 formatieren
+### Partition mit ext4 formatieren
 
 > mkfs.ext4 /dev/md0
 
@@ -23,17 +50,17 @@ oder
 Swap:
 > mkswap -f /dev/vg-name/swap
 
-## Festplatten Verschlüsselung
+### Festplatten Verschlüsselung
 
-### verschlüsseln
+#### verschlüsseln
 
 > cryptsetup --batch-mode -c aes-cbc-essiv:sha256 -s 256 -y luksFormat /dev/nvme0n1p4
 
-### öffnen
+#### öffnen
 
 > cryptsetup luksOpen /dev/md1 crypt-root
 
-## Festplatte Partitionieren
+### Festplatte Partitionieren
 
 ```bash
 for i in "0" "1"; do
@@ -53,9 +80,9 @@ set 2 bios_grub on \
 set 2 boot on \
 ```
 
-## LVM
+### LVM
 
-### Gerät hinzufügen
+#### Gerät hinzufügen
 
 ```bash
 pvcreate /dev/mapper/crypt-root
@@ -65,19 +92,19 @@ lvcreate -n root -L 4G vg-name
 lvcreate -n var-log -l100%FREE vg-name
 ```
 
-### LVM vergrößern
+#### LVM vergrößern
 
 [Link](https://www.thomas-krenn.com/de/wiki/LVM_vergrößern)
 
-## Backup
+### Backup
 
 [BorgBackup bei Hetzner](https://wiki.hetzner.de/index.php/BorgBackup)
 
-## Git
+### Git
 
 Alle Repos mit Zugriff auf den lokalen Rechner clonen
 
 ```bash
 tea login add
-for i in $(tea repos ls --fields ssh -o simple -l www.casa-due-pur.de -T source); do git clone $i; done
+for i in $(tea repos ls --fields ssh -o simple -l git.zyria.de -T source); do git clone $i; done
 ```

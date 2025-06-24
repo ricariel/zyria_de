@@ -1,1 +1,0 @@
-rsync -XAavz --chmod=775 --delete-after  --progress --stats  /var/lib/samba/sysvol/ root@server.casa-due-pur.de:/var/lib/samba/sysvol/
