@@ -35,13 +35,19 @@ fingerprintAlgorithm = "sha512" # Valid values are "sha512" (default), "sha384",
 giteaDefaultServer = "https://git.fsfe.org"
 forgejoDefaultServer = "https://git.zyria.de"
 
+github_repo = "https://git.zyria.de/pyrox/zyria_de"
+github_project_repo = "https://git.zyria.de/pyrox/zyria_de.git"
+github_branch = "main"
+commit = "https://git.zyria.de/pyrox/zyria_de/commit"
+
+since = 2003
 [header]
   layout = "basic" # valid options: basic, fixed, fixed-fill, fixed-gradient, fixed-fill-blur
 
 [footer]
   showMenu = true
-  showCopyright = true
-  showThemeAttribution = true
+  showCopyright = false
+  showThemeAttribution = false
   showAppearanceSwitcher = true
   showScrollToTop = true
 

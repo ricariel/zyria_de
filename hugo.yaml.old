@@ -146,10 +146,6 @@ module:
           target: content/datenschutz.md
 
 params:
-  github_repo: "https://git.zyria.de/pyrox/zyria_de"
-  github_project_repo: "https://git.zyria.de/pyrox/zyria_de.git"
-  github_branch: "main"
-
   ShowWordCount: true
   ShowShareButtons: true
   ShowReadingTime: true
@@ -197,47 +193,3 @@ params:
 
   background_color_class: bg-black
   recent_posts_number: 3
-  social:
-    - name: Forgejo Business
-      icon: fa fa-git fa-2x
-      weight: 1
-      url: "https://www.casa-due-pur.de/git/"
-      target: "_blank"
-      rel: "me"
-    - name: Forgejo private
-      icon: fa fa-git fa-2x
-      weight: 1
-      url: "https://git.zyria.de/"
-      target: "_blank"
-      rel: "me"
-    - name: Codeberg
-      icon: fa fa-git fa-2x
-      weight: 1
-      url: "https://codeberg.org/ricariel"
-      target: "_blank"
-      rel: "me"
-
-    - name: Github
-      icon: fa fa-github fa-2x
-      weight: 1
-      url: "https://github.com/ricariel"
-      target: "_blank"
-      rel: "me"
-    - name: Linkedin
-      icon: fa fa-linkedin fa-2x
-      weight: 2
-      url: "https://www.linkedin.com/in/fabrice-kirchner-bb5408163/"
-      target: "_blank"
-      rel: "me"
-    - name: Xing
-      icon: fa-brands fa-xing fa-2x
-      weight: 2
-      url: "https://www.xing.com/profile/Fabrice_Kirchner"
-      target: "_blank"
-      rel: "me"
-    - name: Mastodon
-      icon: fa-brands fa-mastodon fa-2x
-      weight: 3
-      url: "https://kirchner.social/@fabrice"
-      target: "_blank"
-      rel: "me"
