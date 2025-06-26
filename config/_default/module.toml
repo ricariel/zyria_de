@@ -1,5 +1,5 @@
 [hugoVersion]
-  extended = false
+  extended = true
   min = "0.87.0"
 
 [[mounts]]
@@ -15,6 +15,7 @@ path = "git.zyria.de/pyrox/hugo-shortcodes"
 
 [[imports]]
 path = "github.com/hugomods/shortcodes"
+
 [[imports]]
 path = "git.zyria.de/pyrox/hugo-default-coder"
   [[imports.mounts]]
@@ -34,10 +35,6 @@ path = "github.com/google/docsy"
   [[imports.mounts]]
   source = "layouts/_shortcodes/readfile.html"
   target = "layouts/_shortcodes/readfile.html"
-
-  [[imports.mounts]]
-  source = "layouts/_shortcodes/alert.html"
-  target = "layouts/_shortcodes/alert.html"
 
 [[imports]]
 path = "git.zyria.de/pyrox/hugo-legal"
