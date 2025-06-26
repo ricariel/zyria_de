@@ -22,8 +22,8 @@ path = "git.zyria.de/pyrox/hugo-default-coder"
   source = "static/"
   target = "static/"
   [[imports.mounts]]
-  source = "asset/"
-  target = "asset/"
+  source = "assets/"
+  target = "assets/"
   [[imports.mounts]]
   source = "layouts/"
   target = "layouts/"
