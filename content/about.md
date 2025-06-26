@@ -9,14 +9,6 @@ weight: 1
 
 ## Fabrice Kirchner
 
-{{% bs/clearfix %}}
-{{< bs/container >}}
-{{< bs/col >}}
-![Test Image](/images/chibi.jpg?width=330px&classes=inline#float-end)
-
-{{< /bs/col >}}
-{{< bs/col >}}
-
 * geboren, aufgewachsen und sozialisiert in Berlin
 * Abstecher nach Bayern
 * Wohnhaft auf einem Vulkan in Hessen
@@ -45,6 +37,3 @@ Interessen:
 * Wissen an Kind weitergeben
 
 Beruflich betreu ich die IT in einem mittelständischen Unternehmen.
-{{< /bs/col >}}
-{{< /bs/container >}}
-{{% /bs/clearfix %}}
