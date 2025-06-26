@@ -29,12 +29,12 @@ path = "github.com/google/docsy"
   target = "i18n/"
 
   [[imports.mounts]]
-  source = "layouts/shortcodes/readfile.html"
-  target = "layouts/shortcodes/readfile.html"
+  source = "layouts/_shortcodes/readfile.html"
+  target = "layouts/_shortcodes/readfile.html"
 
   [[imports.mounts]]
-  source = "layouts/shortcodes/alert.html"
-  target = "layouts/shortcodes/alert.html"
+  source = "layouts/_shortcodes/alert.html"
+  target = "layouts/_shortcodes/alert.html"
 
 [[imports]]
 path = "git.zyria.de/pyrox/hugo-legal"
