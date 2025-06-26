@@ -1,34 +1,34 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Virtuelle Maschinen on Zyria</title><link>https://zyria.de/docs/it-intern/server/vms/</link><description>Recent content in Virtuelle Maschinen on Zyria</description><generator>Hugo</generator><language>de-de</language><atom:link href="https://zyria.de/docs/it-intern/server/vms/index.xml" rel="self" type="application/rss+xml"/><item><title>Addc</title><link>https://zyria.de/docs/it-intern/server/vms/addc/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://zyria.de/docs/it-intern/server/vms/addc/</guid><description>&lt;h2 id="primärfunktion">
- Primärfunktion
- &lt;a class="heading-link" href="#prim%c3%a4rfunktion">
- &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
- &lt;span class="sr-only">Link zu Überschrift&lt;/span>
- &lt;/a>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Virtuelle Maschinen on Zyria</title><link>/docs/it-intern/server/vms/</link><description>Recent content in Virtuelle Maschinen on Zyria</description><generator>Hugo -- gohugo.io</generator><language>de</language><managingEditor>fabrice@zyria.de (Fabrice Kirchner)</managingEditor><webMaster>fabrice@zyria.de (Fabrice Kirchner)</webMaster><copyright>&amp;copy; 2003 - 2025 Fabrice Kirchner</copyright><atom:link href="/docs/it-intern/server/vms/index.xml" rel="self" type="application/rss+xml"/><item><title>Addc</title><link>/docs/it-intern/server/vms/addc/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>fabrice@zyria.de (Fabrice Kirchner)</author><guid>/docs/it-intern/server/vms/addc/</guid><description>&lt;h2 class="relative group">Primärfunktion
+&lt;div id="primärfunktion" class="anchor">&lt;/div>
+&lt;span
+class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+&lt;a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#prim%c3%a4rfunktion" aria-label="Anker">#&lt;/a>
+&lt;/span>
 &lt;/h2>
 &lt;p>Samba Active Directory Domain Controller und Fileserver&lt;/p>
-&lt;h2 id="installierte-software">
- Installierte Software
- &lt;a class="heading-link" href="#installierte-software">
- &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
- &lt;span class="sr-only">Link zu Überschrift&lt;/span>
- &lt;/a>
+&lt;h2 class="relative group">Installierte Software
+&lt;div id="installierte-software" class="anchor">&lt;/div>
+&lt;span
+class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+&lt;a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#installierte-software" aria-label="Anker">#&lt;/a>
+&lt;/span>
 &lt;/h2>
 &lt;ul>
 &lt;li>Samba-AD-DC&lt;/li>
-&lt;/ul></description></item><item><title>Dev</title><link>https://zyria.de/docs/it-intern/server/vms/dev/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://zyria.de/docs/it-intern/server/vms/dev/</guid><description>&lt;h2 id="primärfunktion">
- Primärfunktion
- &lt;a class="heading-link" href="#prim%c3%a4rfunktion">
- &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
- &lt;span class="sr-only">Link zu Überschrift&lt;/span>
- &lt;/a>
+&lt;/ul></description></item><item><title>Dev</title><link>/docs/it-intern/server/vms/dev/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>fabrice@zyria.de (Fabrice Kirchner)</author><guid>/docs/it-intern/server/vms/dev/</guid><description>&lt;h2 class="relative group">Primärfunktion
+&lt;div id="primärfunktion" class="anchor">&lt;/div>
+&lt;span
+class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+&lt;a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#prim%c3%a4rfunktion" aria-label="Anker">#&lt;/a>
+&lt;/span>
 &lt;/h2>
 &lt;p>Host für Podman Container.&lt;/p>
-&lt;h2 id="installierte-software">
- Installierte Software
- &lt;a class="heading-link" href="#installierte-software">
- &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
- &lt;span class="sr-only">Link zu Überschrift&lt;/span>
- &lt;/a>
+&lt;h2 class="relative group">Installierte Software
+&lt;div id="installierte-software" class="anchor">&lt;/div>
+&lt;span
+class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+&lt;a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#installierte-software" aria-label="Anker">#&lt;/a>
+&lt;/span>
 &lt;/h2>
 &lt;ul>
 &lt;li>cockpit&lt;/li>

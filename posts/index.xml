@@ -1,199 +1,52 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Beiträge on Zyria</title><link>https://zyria.de/posts/</link><description>Recent content in Beiträge on Zyria</description><generator>Hugo</generator><language>de-de</language><atom:link href="https://zyria.de/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>Solaranlage</title><link>https://zyria.de/posts/solar/</link><pubDate>Fri, 22 Mar 2024 10:12:47 +0100</pubDate><guid>https://zyria.de/posts/solar/</guid><description>&lt;h2 id="übersicht-über-unsere-solaranlage-mit-komponenten">
- Übersicht über unsere Solaranlage mit Komponenten
- &lt;a class="heading-link" href="#%c3%bcbersicht-%c3%bcber-unsere-solaranlage-mit-komponenten">
- &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
- &lt;span class="sr-only">Link zu Überschrift&lt;/span>
- &lt;/a>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Beiträge on Zyria</title><link>/posts/</link><description>Recent content in Beiträge on Zyria</description><generator>Hugo -- gohugo.io</generator><language>de</language><managingEditor>fabrice@zyria.de (Fabrice Kirchner)</managingEditor><webMaster>fabrice@zyria.de (Fabrice Kirchner)</webMaster><copyright>&amp;copy; 2003 - 2025 Fabrice Kirchner</copyright><lastBuildDate>Fri, 22 Mar 2024 10:12:47 +0100</lastBuildDate><atom:link href="/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>Solaranlage</title><link>/posts/solar/</link><pubDate>Fri, 22 Mar 2024 10:12:47 +0100</pubDate><author>fabrice@zyria.de (Fabrice Kirchner)</author><guid>/posts/solar/</guid><description>&lt;h2 class="relative group">Übersicht über unsere Solaranlage mit Komponenten
+&lt;div id="übersicht-über-unsere-solaranlage-mit-komponenten" class="anchor">&lt;/div>
+&lt;span
+class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+&lt;a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#%c3%bcbersicht-%c3%bcber-unsere-solaranlage-mit-komponenten" aria-label="Anker">#&lt;/a>
+&lt;/span>
 &lt;/h2>
 &lt;p>Als Netto mit einem Solarkraftwerk in Selbstmontage geworben hat und unser Stromanbieter schon wieder eine Preiserhöhung ins Haus flatter ließ, war es um mich passiert. Es musste etwas passieren.&lt;/p>
-&lt;p>Zu Beginn meiner Reise habe ich mich für ein 830KWp Kraftwerk mit Deye Wechselrichter entschieden.&lt;/p>
-
-
-
-
- 
- 
- 
- 
-
-
-
-
-
-
-
-&lt;div class="table-responsive">
-&lt;table class="table table-striped table-bordered table-hover">
-&lt;caption>Auflistung aller Komponenten unserer Solaranlage&lt;/caption>
- &lt;thead class="table-info">
- &lt;tr>
- &lt;th style="text-align: left">Komponente&lt;/th>
- &lt;th style="text-align: center">Kosten inkl. Versand іn €&lt;/th>
- &lt;th>Bemerkung&lt;/th>
- &lt;/tr>
- &lt;/thead>
- &lt;tbody>
- &lt;tr>
- &lt;td style="text-align: left">Netto Solarkraftwerk&lt;/td>
- &lt;td style="text-align: center">702,94&lt;/td>
- &lt;td>Wechselrichter nicht mehr in Betrieb&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td style="text-align: left">Juskys Aufständerung&lt;/td>
- &lt;td style="text-align: center">299,98&lt;/td>
- &lt;td>Zur Boden und Balkonmontage geeignet&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td style="text-align: left">Van der Valk Solar Systems ValkBox 3 (3mal)&lt;/td>
- &lt;td style="text-align: center">134,97&lt;/td>
- &lt;td>Bodenmontage&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td style="text-align: left">Anschlussleitung Kabel Betteri BC05 - Schuko 3m Field Connector BC05 Kabel&lt;/td>
- &lt;td style="text-align: center">29,90&lt;/td>
- &lt;td>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td style="text-align: left">3&lt;/td>
- &lt;td>&lt;/td>
- &lt;td>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td style="text-align: left">Verlängerungskabel beidseitig Solarstecker Solarkabel rot/schwarz 6mm² 2 x 10 m (3mal)&lt;/td>
- &lt;td style="text-align: center">101,85&lt;/td>
- &lt;td>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td style="text-align: left">2x20m Solarkabel 6mm2, Solarkabel Verlängerung mit Stecker (2mal)&lt;/td>
- &lt;td style="text-align: center">157,98&lt;/td>
- &lt;td>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td style="text-align: left">6mm² Solarkabel Y-Verteiler 2 Paar (2mal)&lt;/td>
- &lt;td style="text-align: center">15,99&lt;/td>
- &lt;td>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td style="text-align: left">Verlängerungskabel beidseitig Solarstecker Solarkabel rot/schwarz 6mm² 2 x 10 m (3mal)&lt;/td>
- &lt;td style="text-align: center">58,95&lt;/td>
- &lt;td>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td style="text-align: left">Solar Crimpzange Set für 2.5/4.0/6.0mm² Solarpanel PV Kabel, Male Female Kabelstecker Stecker mit SOMELINE® +Abisolierzange+Kabelschneider+Schraubenschlüssel&lt;/td>
- &lt;td style="text-align: center">49,99&lt;/td>
- &lt;td>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td style="text-align: left">Solarflow Antennen (2mal)&lt;/td>
- &lt;td style="text-align: center">8,49&lt;/td>
- &lt;td>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td style="text-align: left">Van der Valk Solar Systems ValkBox 3 (3mal)&lt;/td>
- &lt;td style="text-align: center">131,67&lt;/td>
- &lt;td>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td style="text-align: left">Hoymiles Mikro-Wechselrichter HMS-1800-4T, 1.800 Watt&lt;/td>
- &lt;td style="text-align: center">269,00&lt;/td>
- &lt;td>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td style="text-align: left">LONGi HI-MO 6m Explorer Solarpanel LR5-54HTH-430M, 430W Black Frame (3mal)&lt;/td>
- &lt;td style="text-align: center">299,70&lt;/td>
- &lt;td>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td style="text-align: left">Trinasolar Solarpanel Vertex S+ TSM-NEG9R.28, 440 Watt, Black Frame (3mal)&lt;/td>
- &lt;td style="text-align: center">344,70&lt;/td>
- &lt;td>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td style="text-align: left">OpenDTU&lt;/td>
- &lt;td style="text-align: center">48,98&lt;/td>
- &lt;td>&lt;/td>
- &lt;/tr>
- &lt;/tbody>
-&lt;/table>
-&lt;p>Was nicht in der Liste ist aber dennoch benötigt wird:&lt;br>
-Kabelbinder, Zangen, Schraubenschlüssel&lt;/p></description></item><item><title>Linksammlung rund um Strom</title><link>https://zyria.de/posts/strom/</link><pubDate>Fri, 08 Mar 2024 12:52:37 +0200</pubDate><guid>https://zyria.de/posts/strom/</guid><description>&lt;h2 id="hichi-ir-und-home-assistant">
- Hichi IR und Home Assistant
- &lt;a class="heading-link" href="#hichi-ir-und-home-assistant">
- &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
- &lt;span class="sr-only">Link zu Überschrift&lt;/span>
- &lt;/a>
+&lt;p>Zu Beginn meiner Reise habe ich mich für ein 830KWp Kraftwerk mit Deye Wechselrichter entschieden.&lt;/p></description></item><item><title>Linksammlung rund um Strom</title><link>/posts/strom/</link><pubDate>Fri, 08 Mar 2024 12:52:37 +0200</pubDate><author>fabrice@zyria.de (Fabrice Kirchner)</author><guid>/posts/strom/</guid><description>&lt;h2 class="relative group">Hichi IR und Home Assistant
+&lt;div id="hichi-ir-und-home-assistant" class="anchor">&lt;/div>
+&lt;span
+class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+&lt;a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#hichi-ir-und-home-assistant" aria-label="Anker">#&lt;/a>
+&lt;/span>
 &lt;/h2>
-&lt;p>
-&lt;a href="https://ottelo.jimdofree.com/stromz%c3%a4hler-auslesen-tasmota/"
- class="external-link"
- target="_blank"
- rel="noopener">Stromzähler mit einem ESP8266 / ESP32 mit Tasmota auslesen und darstellen&lt;/a>
+&lt;p>&lt;a
+href="https://ottelo.jimdofree.com/stromz%c3%a4hler-auslesen-tasmota/"
+target="_blank"
+>Stromzähler mit einem ESP8266 / ESP32 mit Tasmota auslesen und darstellen&lt;/a>
 &lt;/p>
-&lt;h2 id="solarflow-hoymiles-homeassistant">
- Solarflow Hoymiles Homeassistant
- &lt;a class="heading-link" href="#solarflow-hoymiles-homeassistant">
- &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
- &lt;span class="sr-only">Link zu Überschrift&lt;/span>
- &lt;/a>
+&lt;h2 class="relative group">Solarflow Hoymiles Homeassistant
+&lt;div id="solarflow-hoymiles-homeassistant" class="anchor">&lt;/div>
+&lt;span
+class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+&lt;a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#solarflow-hoymiles-homeassistant" aria-label="Anker">#&lt;/a>
+&lt;/span>
 &lt;/h2>
-&lt;p>
-&lt;a href="https://github.com/z-master42/solarflow/tree/main"
- class="external-link"
- target="_blank"
- rel="noopener">Git Repo mit nützlichen Infos&lt;/a>
-&lt;/p>
-&lt;h2 id="solarflow">
- Solarflow
- &lt;a class="heading-link" href="#solarflow">
- &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
- &lt;span class="sr-only">Link zu Überschrift&lt;/span>
- &lt;/a>
-&lt;/h2>
-&lt;p>Steuerung des Solarflow&lt;br>
-
-&lt;a href="https://github.com/reinhard-brandstaedter/solarflow-control"
- class="external-link"
- target="_blank"
- rel="noopener">Solarflow Control&lt;/a>
-&lt;/p>
-&lt;p>Von Cloud trennen und an den loaklen MQTT binden&lt;br>
-
-&lt;a href="https://github.com/reinhard-brandstaedter/solarflow-bt-manager"
- class="external-link"
- target="_blank"
- rel="noopener">Solarflow Bluetooth Manager&lt;/a>
-&lt;/p>
-&lt;p>Eine Statusseite&lt;br>
-
-&lt;a href="https://github.com/reinhard-brandstaedter/solarflow-statuspage"
- class="external-link"
- target="_blank"
- rel="noopener">Solarflow Statuspage and Control&lt;/a>
-&lt;/p>
-&lt;p>Telegram Austauschgruppe&lt;br>
-
-&lt;a href="https://t.me/&amp;#43;nEPrpHst6xFmZTky"
- class="external-link"
- target="_blank"
- rel="noopener">Private Zendure Austauschgruppe&lt;/a>
-&lt;/p></description></item><item><title>Hardware</title><link>https://zyria.de/posts/hardware/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://zyria.de/posts/hardware/</guid><description>&lt;h2 id="netzwerk">
- Netzwerk
- &lt;a class="heading-link" href="#netzwerk">
- &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
- &lt;span class="sr-only">Link zu Überschrift&lt;/span>
- &lt;/a>
+&lt;p>&lt;a
+href="https://github.com/z-master42/solarflow/tree/main"
+target="_blank"
+>Git Repo mit nützlichen Infos&lt;/a>
+&lt;/p></description></item><item><title>Hardware</title><link>/posts/hardware/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>fabrice@zyria.de (Fabrice Kirchner)</author><guid>/posts/hardware/</guid><description>&lt;h2 class="relative group">Netzwerk
+&lt;div id="netzwerk" class="anchor">&lt;/div>
+&lt;span
+class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+&lt;a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#netzwerk" aria-label="Anker">#&lt;/a>
+&lt;/span>
 &lt;/h2>
 &lt;ul>
 &lt;li>Fritzbox 7590&lt;/li>
 &lt;li>Unifi US 8 PoE 150W (2x)&lt;/li>
 &lt;li>Unifi Nano HD (2x)&lt;/li>
 &lt;li>Unifi U6 Pro&lt;/li>
-&lt;/ul></description></item><item><title>Software</title><link>https://zyria.de/posts/software/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://zyria.de/posts/software/</guid><description>&lt;h2 id="softwareliste">
- Softwareliste
- &lt;a class="heading-link" href="#softwareliste">
- &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
- &lt;span class="sr-only">Link zu Überschrift&lt;/span>
- &lt;/a>
+&lt;/ul></description></item><item><title>Software</title><link>/posts/software/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>fabrice@zyria.de (Fabrice Kirchner)</author><guid>/posts/software/</guid><description>&lt;h2 class="relative group">Softwareliste
+&lt;div id="softwareliste" class="anchor">&lt;/div>
+&lt;span
+class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+&lt;a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#softwareliste" aria-label="Anker">#&lt;/a>
+&lt;/span>
 &lt;/h2>
 &lt;ul>
 &lt;li>Moe

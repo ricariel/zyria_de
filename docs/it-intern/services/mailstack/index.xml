@@ -1,100 +1,72 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Mailstack on Zyria</title><link>https://zyria.de/docs/it-intern/services/mailstack/</link><description>Recent content in Mailstack on Zyria</description><generator>Hugo</generator><language>de-de</language><atom:link href="https://zyria.de/docs/it-intern/services/mailstack/index.xml" rel="self" type="application/rss+xml"/><item><title>Dovecot</title><link>https://zyria.de/docs/it-intern/services/mailstack/dovecot/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://zyria.de/docs/it-intern/services/mailstack/dovecot/</guid><description>&lt;h2 id="quelle">
- Quelle
- &lt;a class="heading-link" href="#quelle">
- &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
- &lt;span class="sr-only">Link zu Überschrift&lt;/span>
- &lt;/a>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Mailstack on Zyria</title><link>/docs/it-intern/services/mailstack/</link><description>Recent content in Mailstack on Zyria</description><generator>Hugo -- gohugo.io</generator><language>de</language><managingEditor>fabrice@zyria.de (Fabrice Kirchner)</managingEditor><webMaster>fabrice@zyria.de (Fabrice Kirchner)</webMaster><copyright>&amp;copy; 2003 - 2025 Fabrice Kirchner</copyright><atom:link href="/docs/it-intern/services/mailstack/index.xml" rel="self" type="application/rss+xml"/><item><title>Dovecot</title><link>/docs/it-intern/services/mailstack/dovecot/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>fabrice@zyria.de (Fabrice Kirchner)</author><guid>/docs/it-intern/services/mailstack/dovecot/</guid><description>&lt;h2 class="relative group">Quelle
+&lt;div id="quelle" class="anchor">&lt;/div>
+&lt;span
+class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+&lt;a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#quelle" aria-label="Anker">#&lt;/a>
+&lt;/span>
 &lt;/h2>
-&lt;p>
-&lt;a href="https://hub.docker.com/r/ricariel/postfix"
- class="external-link"
- target="_blank"
- rel="noopener">Docker Hub&lt;/a>
+&lt;p>&lt;a
+href="https://hub.docker.com/r/ricariel/postfix"
+target="_blank"
+>Docker Hub&lt;/a>
 &lt;/p>
-&lt;h2 id="repository">
- Repository
- &lt;a class="heading-link" href="#repository">
- &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
- &lt;span class="sr-only">Link zu Überschrift&lt;/span>
- &lt;/a>
+&lt;h2 class="relative group">Repository
+&lt;div id="repository" class="anchor">&lt;/div>
+&lt;span
+class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+&lt;a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#repository" aria-label="Anker">#&lt;/a>
+&lt;/span>
 &lt;/h2>
-&lt;p>
-&lt;a href="https://git.zyria.de/pyrox/postfix-docker.git"
- class="external-link"
- target="_blank"
- rel="noopener">Repo&lt;/a>
+&lt;p>&lt;a
+href="https://git.zyria.de/pyrox/postfix-docker.git"
+target="_blank"
+>Repo&lt;/a>
 &lt;/p>
-&lt;h2 id="funktion">
- Funktion
- &lt;a class="heading-link" href="#funktion">
- &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
- &lt;span class="sr-only">Link zu Überschrift&lt;/span>
- &lt;/a>
+&lt;h2 class="relative group">Funktion
+&lt;div id="funktion" class="anchor">&lt;/div>
+&lt;span
+class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+&lt;a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#funktion" aria-label="Anker">#&lt;/a>
+&lt;/span>
 &lt;/h2>
-&lt;p>Dovecot fungiert in diesem Setup als MDA, Sieve und IMAP Server.&lt;/p></description></item><item><title>MTA Postfix</title><link>https://zyria.de/docs/it-intern/services/mailstack/postfix/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://zyria.de/docs/it-intern/services/mailstack/postfix/</guid><description>&lt;h2 id="quelle">
- Quelle
- &lt;a class="heading-link" href="#quelle">
- &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
- &lt;span class="sr-only">Link zu Überschrift&lt;/span>
- &lt;/a>
+&lt;p>Dovecot fungiert in diesem Setup als MDA, Sieve und IMAP Server.&lt;/p></description></item><item><title>MTA Postfix</title><link>/docs/it-intern/services/mailstack/postfix/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>fabrice@zyria.de (Fabrice Kirchner)</author><guid>/docs/it-intern/services/mailstack/postfix/</guid><description>&lt;h2 class="relative group">Quelle
+&lt;div id="quelle" class="anchor">&lt;/div>
+&lt;span
+class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+&lt;a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#quelle" aria-label="Anker">#&lt;/a>
+&lt;/span>
 &lt;/h2>
-&lt;p>
-&lt;a href="https://hub.docker.com/r/ricariel/postfix"
- class="external-link"
- target="_blank"
- rel="noopener">Docker Hub&lt;/a>
+&lt;p>&lt;a
+href="https://hub.docker.com/r/ricariel/postfix"
+target="_blank"
+>Docker Hub&lt;/a>
 &lt;/p>
-&lt;h2 id="repository">
- Repository
- &lt;a class="heading-link" href="#repository">
- &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
- &lt;span class="sr-only">Link zu Überschrift&lt;/span>
- &lt;/a>
+&lt;h2 class="relative group">Repository
+&lt;div id="repository" class="anchor">&lt;/div>
+&lt;span
+class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+&lt;a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#repository" aria-label="Anker">#&lt;/a>
+&lt;/span>
 &lt;/h2>
-&lt;p>
-&lt;a href="https://git.zyria.de/pyrox/postfix-docker.git"
- class="external-link"
- target="_blank"
- rel="noopener">Repo&lt;/a>
+&lt;p>&lt;a
+href="https://git.zyria.de/pyrox/postfix-docker.git"
+target="_blank"
+>Repo&lt;/a>
 &lt;/p>
-&lt;h2 id="funktion">
- Funktion
- &lt;a class="heading-link" href="#funktion">
- &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
- &lt;span class="sr-only">Link zu Überschrift&lt;/span>
- &lt;/a>
+&lt;h2 class="relative group">Funktion
+&lt;div id="funktion" class="anchor">&lt;/div>
+&lt;span
+class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+&lt;a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#funktion" aria-label="Anker">#&lt;/a>
+&lt;/span>
 &lt;/h2>
-&lt;p>Die Postfix Konfiguration kann über Dateien oder Umgebungsvariablen erfolgen.&lt;br>
-Ein Set an vordefinierten Variablen lässt sich im 
-&lt;a href="https://git.zyria.de/pyrox/docker-compose-files/raw/branch/master/mailstack.yml"
- class="external-link"
- target="_blank"
- rel="noopener">Compose File&lt;/a>
- finden.&lt;/p></description></item><item><title>Zugriffsrechte auf Mailboxen</title><link>https://zyria.de/docs/it-intern/services/mailstack/sharedfolders/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://zyria.de/docs/it-intern/services/mailstack/sharedfolders/</guid><description>&lt;p>Wer hat eigentlich auf welche Mailbox Zugriff?&lt;/p>
-&lt;p>Nutzer können Ihr Mailboxen beliebig mit anderen Nutzern teilen. Die IT hat&lt;br>
-einige Freigaben bereits eingerichtet. Mit folgendem Befehlen lassen sich diese&lt;br>
+&lt;p>Die Postfix Konfiguration kann über Dateien oder Umgebungsvariablen erfolgen.
+Ein Set an vordefinierten Variablen lässt sich im &lt;a
+href="https://git.zyria.de/pyrox/docker-compose-files/raw/branch/master/mailstack.yml"
+target="_blank"
+>Compose File&lt;/a>
+finden.&lt;/p></description></item><item><title>Zugriffsrechte auf Mailboxen</title><link>/docs/it-intern/services/mailstack/sharedfolders/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>fabrice@zyria.de (Fabrice Kirchner)</author><guid>/docs/it-intern/services/mailstack/sharedfolders/</guid><description>&lt;p>Wer hat eigentlich auf welche Mailbox Zugriff?&lt;/p>
+&lt;p>Nutzer können Ihr Mailboxen beliebig mit anderen Nutzern teilen. Die IT hat
+einige Freigaben bereits eingerichtet. Mit folgendem Befehlen lassen sich diese
 setzen:&lt;/p>
-
-
- 
-
-
-
-
-	
-
-
-
-
-
-
- 
- 
- 
-
-
-
-
-
-
- &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;/code>&lt;/pre>&lt;/div></description></item></channel></rss>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;/code>&lt;/pre>&lt;/div></description></item></channel></rss>

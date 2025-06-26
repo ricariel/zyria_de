@@ -1,21 +1,21 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Homelab on Zyria</title><link>https://zyria.de/series/homelab/</link><description>Recent content in Homelab on Zyria</description><generator>Hugo</generator><language>de-de</language><atom:link href="https://zyria.de/series/homelab/index.xml" rel="self" type="application/rss+xml"/><item><title>Hardware</title><link>https://zyria.de/posts/hardware/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://zyria.de/posts/hardware/</guid><description>&lt;h2 id="netzwerk">
- Netzwerk
- &lt;a class="heading-link" href="#netzwerk">
- &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
- &lt;span class="sr-only">Link zu Überschrift&lt;/span>
- &lt;/a>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Homelab on Zyria</title><link>/series/homelab/</link><description>Recent content in Homelab on Zyria</description><generator>Hugo -- gohugo.io</generator><language>de</language><managingEditor>fabrice@zyria.de (Fabrice Kirchner)</managingEditor><webMaster>fabrice@zyria.de (Fabrice Kirchner)</webMaster><copyright>&amp;copy; 2003 - 2025 Fabrice Kirchner</copyright><atom:link href="/series/homelab/index.xml" rel="self" type="application/rss+xml"/><item><title>Hardware</title><link>/posts/hardware/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>fabrice@zyria.de (Fabrice Kirchner)</author><guid>/posts/hardware/</guid><description>&lt;h2 class="relative group">Netzwerk
+&lt;div id="netzwerk" class="anchor">&lt;/div>
+&lt;span
+class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+&lt;a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#netzwerk" aria-label="Anker">#&lt;/a>
+&lt;/span>
 &lt;/h2>
 &lt;ul>
 &lt;li>Fritzbox 7590&lt;/li>
 &lt;li>Unifi US 8 PoE 150W (2x)&lt;/li>
 &lt;li>Unifi Nano HD (2x)&lt;/li>
 &lt;li>Unifi U6 Pro&lt;/li>
-&lt;/ul></description></item><item><title>Software</title><link>https://zyria.de/posts/software/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://zyria.de/posts/software/</guid><description>&lt;h2 id="softwareliste">
- Softwareliste
- &lt;a class="heading-link" href="#softwareliste">
- &lt;i class="fa fa-link" aria-hidden="true" title="Link zu Überschrift">&lt;/i>
- &lt;span class="sr-only">Link zu Überschrift&lt;/span>
- &lt;/a>
+&lt;/ul></description></item><item><title>Software</title><link>/posts/software/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>fabrice@zyria.de (Fabrice Kirchner)</author><guid>/posts/software/</guid><description>&lt;h2 class="relative group">Softwareliste
+&lt;div id="softwareliste" class="anchor">&lt;/div>
+&lt;span
+class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+&lt;a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#softwareliste" aria-label="Anker">#&lt;/a>
+&lt;/span>
 &lt;/h2>
 &lt;ul>
 &lt;li>Moe
