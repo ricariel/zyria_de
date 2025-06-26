@@ -24,6 +24,9 @@ path = "git.zyria.de/pyrox/hugo-default-coder"
   [[imports.mounts]]
   source = "asset/"
   target = "asset/"
+  [[imports.mounts]]
+  source = "layouts/"
+  target = "layouts/"
 
 [[imports]]
 path = "github.com/google/docsy"
