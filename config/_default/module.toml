@@ -14,9 +14,6 @@ path = "github.com/nunocoracao/blowfish/v2"
 path = "git.zyria.de/pyrox/hugo-shortcodes"
 
 [[imports]]
-path = "github.com/hugomods/bootstrap"
-
-[[imports]]
 path = "github.com/hugomods/shortcodes"
 #[[imports]]
 #path = "git.zyria.de/pyrox/hugo-default-coder"
