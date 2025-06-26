@@ -1,0 +1,48 @@
+[hugoVersion]
+  extended = false
+  min = "0.87.0"
+
+[[mounts]]
+source = "content"
+target = "content"
+
+[[imports]]
+disable = false
+path = "github.com/nunocoracao/blowfish/v2"
+
+[[imports]]
+path = "git.zyria.de/pyrox/hugo-shortcodes"
+
+[[imports]]
+path = "github.com/hugomods/bootstrap"
+
+[[imports]]
+path = "github.com/hugomods/shortcodes"
+#[[imports]]
+#path = "git.zyria.de/pyrox/hugo-default-coder"
+
+[[imports]]
+path = "github.com/google/docsy"
+
+  [[imports.mounts]]
+  source = "i18n/"
+  target = "i18n/"
+
+  [[imports.mounts]]
+  source = "layouts/shortcodes/readfile.html"
+  target = "layouts/shortcodes/readfile.html"
+
+  [[imports.mounts]]
+  source = "layouts/shortcodes/alert.html"
+  target = "layouts/shortcodes/alert.html"
+
+[[imports]]
+path = "git.zyria.de/pyrox/hugo-legal"
+
+  [[imports.mounts]]
+  source = "impressum.md"
+  target = "content/impressum.md"
+
+  [[imports.mounts]]
+  source = "datenschutz.md"
+  target = "content/datenschutz.md"

@@ -75,6 +75,7 @@ jobs:
       - name: Check if there are any changes
         id: verify_diff
         run: |
+          git -C public add -N .
           git -C public diff --quiet . || echo "::set-output name=changed::true"
 
       - name: Upload

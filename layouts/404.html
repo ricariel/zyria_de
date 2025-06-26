@@ -5,7 +5,7 @@
 
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
-<title></title>
+<title>{{ i18n "error.404_title" | emojify }}</title>
 
 <style type="text/css" media="all">
 html,
@@ -102,12 +102,12 @@ body {
 
 <div id="text-shadow-box">
     <div id="tsb-box"></div>
-    <p id="tsb-text">{{ i18n "page_not_found" }}</p>
-    <p id="tsb-link">{{ i18n "page_not_found" }}</p>
+    <p id="tsb-text">{{ i18n "page_not_found" }}{{ i18n "error.404_title" | emojify }}</p>
+    <p id="tsb-link">{{ i18n "page_not_found" }}{{ i18n "error.404_description" | emojify }}</p>
 
     <div id="tsb-wall">
       <h1>{{ i18n "page_not_found" }}</h1>
-      <p>{{ i18n "page_does_not_exist" }}<br />{{ i18n "head_back" .Site.BaseURL | safeHTML }}</p>
+      <p>{{ i18n "page_does_not_exist" }}<br />{{ i18n "head_back" .Site.BaseURL | safeHTML }}<br />{{ i18n "error.404_error" | emojify }}</p>
   </div>
     <div id="tsb-spot"></div>
 </div>

@@ -1,22 +1,10 @@
 {
-  "devDependencies": {
-    "autoprefixer": "10.4.21",
-    "postcss": "8.5.6",
-    "postcss-cli": "11.0.1",
-    "postcss-load-config": "6.0.1"
+  "comments": {
+    "dependencies": {},
+    "devDependencies": {}
   },
-  "dependencies": {
-    "@fullhuman/postcss-purgecss": "^7.0.2",
-    "cssnano": "^7.0.6"
-  },
+  "dependencies": {},
+  "devDependencies": {},
   "name": "zyria_de",
-  "version": "1.0.0",
-  "description": "Meine private Seite.",
-  "main": "postcss.config.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "version": "0.1.0"
 }
