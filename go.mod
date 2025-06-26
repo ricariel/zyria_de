@@ -3,7 +3,7 @@ module git.zyria.de/pyrox/zyria_de
 go 1.24.3
 
 require (
-  git.zyria.de/pyrox/hugo-default-coder v0.0.0-20250625151129-f6a6c1c660fb // indirect
+  git.zyria.de/pyrox/hugo-default-coder v0.0.0-20250626083841-61edbd97ea48 // indirect
   git.zyria.de/pyrox/hugo-legal v0.0.0-20250625155628-c250f4879fba // indirect
   git.zyria.de/pyrox/hugo-shortcodes v0.0.0-20250513171334-8058cc681a62 // indirect
   github.com/FortAwesome/Font-Awesome v4.7.0+incompatible // indirect
