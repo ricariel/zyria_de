@@ -1,74 +1,123 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Client on Zyria</title><link>/docs/it-intern/client/</link><description>Recent content in Client on Zyria</description><generator>Hugo -- gohugo.io</generator><language>de</language><managingEditor>fabrice@zyria.de (Fabrice Kirchner)</managingEditor><webMaster>fabrice@zyria.de (Fabrice Kirchner)</webMaster><atom:link href="/docs/it-intern/client/index.xml" rel="self" type="application/rss+xml"/><item><title>Setup Windows Client</title><link>/docs/it-intern/client/setup_windows/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>fabrice@zyria.de (Fabrice Kirchner)</author><guid>/docs/it-intern/client/setup_windows/</guid><description>&lt;ul>
-&lt;li>
-&lt;p>Windows Rechner mit Professional Version kaufen (Aufgeräumt wird über Ansible)&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>Windows Rechner vollständig laden&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>Beim ersten Anschalten lokalen Benutzer oder Domäne auswählen.&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>Lokaler Benutzer ist der Hauptnutzer des Gerätes.&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>Kennwort wird in der IT Datenbank gesichert&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>Alle Datensammelei während des Setups verbieten&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>Rechner in Domäne aufnehmen&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>Ansible Setup Script starten (liegt im ansible-main Repo unter files)&lt;/p></description></item><item><title>Windows autologon</title><link>/docs/it-intern/client/windows_autologon/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>fabrice@zyria.de (Fabrice Kirchner)</author><guid>/docs/it-intern/client/windows_autologon/</guid><description>&lt;h2 class="relative group">AutoLogon
-&lt;div id="autologon" class="anchor">&lt;/div>
-&lt;span
-class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-&lt;a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#autologon" aria-label="Anker">#&lt;/a>
-&lt;/span>
-&lt;/h2>
-&lt;p>Erstelle eine .reg Datei mit folgendem Inhalt und führe sie auf dem Zielrechner
-aus.&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-registry" data-lang="registry">&lt;span class="line">&lt;span class="cl">Windows Registry Editor Version 5.00
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">[&lt;/span>&lt;span class="nb">HKEY_LOCAL_MACHINE&lt;/span>&lt;span class="k">\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon]&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="na">&amp;#34;AutoAdminLogon&amp;#34;&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;1&amp;#34;&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="na">&amp;#34;DefaultUserName&amp;#34;&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;BENUTZERNAME&amp;#34;&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="na">&amp;#34;DefaultDomainName&amp;#34;&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;DOMÄNE&amp;#34;&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="na">&amp;#34;DefaultPassword&amp;#34;&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#39;*****&amp;#39;&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>WireGuard mit systemd</title><link>/docs/it-intern/client/wireguard_mit_systemd/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>fabrice@zyria.de (Fabrice Kirchner)</author><guid>/docs/it-intern/client/wireguard_mit_systemd/</guid><description>&lt;p>Für eine WireGuard-Verbindung mit systemd-networkd und systemd-resolved.&lt;/p>
-&lt;p>Alle Konfigurationsdateien gehören in &lt;code>/etc/systemd/network/&lt;/code>.&lt;/p>
-&lt;h2 class="relative group">Interface
-&lt;div id="interface" class="anchor">&lt;/div>
-&lt;span
-class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-&lt;a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#interface" aria-label="Anker">#&lt;/a>
-&lt;/span>
-&lt;/h2>
-&lt;p>Das WireGuard-Interface anlegen (muss mit einer Zahl beginnen, z.B. &lt;code>10-wg0.netdev&lt;/code>) (&lt;a
-href="https://www.freedesktop.org/software/systemd/man/latest/systemd.netdev.html"
-target="_blank"
->Dokumentation&lt;/a>
-)&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-systemd" data-lang="systemd">&lt;span class="line">&lt;span class="cl">&lt;span class="k">[NetDev]&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="na">Name&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">wg0&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="na">Kind&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">wireguard&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="na">Description&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">WireGuard-Tunnel für Casa Due Pur&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="na">MTUBytes&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">1320&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">[WireGuard]&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="na">PrivateKey&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">...&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c"># Für alle Netze aus AllowedIPs soll automatisch eine Route erzeugt werden, in einer separaten Routing-Tabelle:&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="na">RouteTable&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">123&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c"># Die verschlüsselten WireGuard-Pakete werden markiert:&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="na">FirewallMark&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">123&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c"># Beides erlaubt spezielles Routing, konfiguriert in der *.network-Datei&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">[WireGuardPeer]&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="na">PublicKey&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">IaNBwGqXkxy4iLuowJQuR6h+AdL5Oo9oYtSqub8m6C4=&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="na">PresharedKey&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">...&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="na">AllowedIPs&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">fd42:167:84::1/64, 2a01:4f8:1c1c:1e5b::/64, 2a01:4f8:fff0:22::/64, 2a01:4f8:242:27a5::/64, 2a01:4f8:242:27a3::/64, 2003:a:241:4400::/56, 2003:a:27f:c144::/64, 159.69.238.80/28, 159.69.10.123/32, 87.140.122.88/32, 168.119.65.89/32, 168.119.65.91/32, 10.26.15.0/24, 192.168.2.0/24&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="na">Endpoint &lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s"> vpn.casa-due-pur.de:51194&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="na">PersistentKeepalive&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">16&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;code>PrivateKey=&lt;/code> und &lt;code>PresharedKey=&lt;/code> entsprechend ausfüllen, den Rest sicherheitshalber nochmal abgleichen. Die Datei sollte für unprivilegierte Nutzer nicht lesbar sein, d.h. &lt;code>chown root:systemd-network ...&lt;/code>, &lt;code>chmod 640 ...&lt;/code>.&lt;/p></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Client on Zyria</title>
+    <link>https://www.zyria.de/docs/it-intern/client/</link>
+    <description>Recent content in Client on Zyria</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>de-de</language>
+    <managingEditor>fabrice@zyria.de (Fabrice Kirchner)</managingEditor>
+    <webMaster>fabrice@zyria.de (Fabrice Kirchner)</webMaster>
+    
+    <atom:link href="https://www.zyria.de/docs/it-intern/client/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Setup Windows Client</title>
+      <link>https://www.zyria.de/docs/it-intern/client/setup_windows/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://www.zyria.de/docs/it-intern/client/setup_windows/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Windows Rechner mit Professional Version kaufen (Aufgeräumt wird über Ansible)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Windows Rechner vollständig laden&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Beim ersten Anschalten lokalen Benutzer oder Domäne auswählen.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Lokaler Benutzer ist der Hauptnutzer des Gerätes.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Kennwort wird in der IT Datenbank gesichert&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Alle Datensammelei während des Setups verbieten&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Rechner in Domäne aufnehmen&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Ansible Setup Script starten (liegt im ansible-main Repo unter files)&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Windows autologon</title>
+      <link>https://www.zyria.de/docs/it-intern/client/windows_autologon/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://www.zyria.de/docs/it-intern/client/windows_autologon/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;AutoLogon 
+    &lt;div id=&#34;autologon&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#autologon&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;p&gt;Erstelle eine .reg Datei mit folgendem Inhalt und führe sie auf dem Zielrechner&lt;br&gt;
+aus.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-registry&#34; data-lang=&#34;registry&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;Windows Registry Editor Version 5.00
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;HKEY_LOCAL_MACHINE&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;4&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;na&#34;&gt;&amp;#34;AutoAdminLogon&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;1&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;5&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;na&#34;&gt;&amp;#34;DefaultUserName&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;BENUTZERNAME&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;6&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;na&#34;&gt;&amp;#34;DefaultDomainName&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;DOMÄNE&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;7&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;na&#34;&gt;&amp;#34;DefaultPassword&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;*****&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>WireGuard mit systemd</title>
+      <link>https://www.zyria.de/docs/it-intern/client/wireguard_mit_systemd/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://www.zyria.de/docs/it-intern/client/wireguard_mit_systemd/</guid>
+      <description>&lt;p&gt;Für eine WireGuard-Verbindung mit systemd-networkd und systemd-resolved.&lt;/p&gt;
+&lt;p&gt;Alle Konfigurationsdateien gehören in &lt;code&gt;/etc/systemd/network/&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h2 class=&#34;relative group&#34;&gt;Interface 
+    &lt;div id=&#34;interface&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#interface&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;p&gt;Das WireGuard-Interface anlegen (muss mit einer Zahl beginnen, z.B. &lt;code&gt;10-wg0.netdev&lt;/code&gt;) (&lt;a
+  href=&#34;https://www.freedesktop.org/software/systemd/man/latest/systemd.netdev.html&#34;
+    target=&#34;_blank&#34;
+  &gt;Dokumentation&lt;/a&gt;
+)&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-systemd&#34; data-lang=&#34;systemd&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt; 1&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;[NetDev]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt; 2&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;na&#34;&gt;Name&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;wg0&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt; 3&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;na&#34;&gt;Kind&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;wireguard&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt; 4&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;na&#34;&gt;Description&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;WireGuard-Tunnel für Casa Due Pur&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt; 5&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;na&#34;&gt;MTUBytes&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;1320&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt; 6&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt; 7&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;[WireGuard]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt; 8&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;na&#34;&gt;PrivateKey&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;...&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt; 9&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c&#34;&gt;# Für alle Netze aus AllowedIPs soll automatisch eine Route erzeugt werden, in einer separaten Routing-Tabelle:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;10&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;na&#34;&gt;RouteTable&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;123&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;11&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c&#34;&gt;# Die verschlüsselten WireGuard-Pakete werden markiert:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;12&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;na&#34;&gt;FirewallMark&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;123&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;13&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c&#34;&gt;# Beides erlaubt spezielles Routing, konfiguriert in der *.network-Datei&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;14&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;15&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;[WireGuardPeer]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;16&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;na&#34;&gt;PublicKey&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;IaNBwGqXkxy4iLuowJQuR6h+AdL5Oo9oYtSqub8m6C4=&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;17&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;na&#34;&gt;PresharedKey&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;...&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;18&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;na&#34;&gt;AllowedIPs&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;fd42:167:84::1/64, 2a01:4f8:1c1c:1e5b::/64, 2a01:4f8:fff0:22::/64, 2a01:4f8:242:27a5::/64, 2a01:4f8:242:27a3::/64, 2003:a:241:4400::/56, 2003:a:27f:c144::/64, 159.69.238.80/28, 159.69.10.123/32, 87.140.122.88/32, 168.119.65.89/32, 168.119.65.91/32, 10.26.15.0/24, 192.168.2.0/24&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;19&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;na&#34;&gt;Endpoint &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt; vpn.casa-due-pur.de:51194&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;20&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;na&#34;&gt;PersistentKeepalive&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;16&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;code&gt;PrivateKey=&lt;/code&gt; und &lt;code&gt;PresharedKey=&lt;/code&gt; entsprechend ausfüllen, den Rest sicherheitshalber nochmal abgleichen. Die Datei sollte für unprivilegierte Nutzer nicht lesbar sein, d.h. &lt;code&gt;chown root:systemd-network ...&lt;/code&gt;, &lt;code&gt;chmod 640 ...&lt;/code&gt;.&lt;/p&gt;</description>
+      
+    </item>
+    
+  </channel>
+</rss>

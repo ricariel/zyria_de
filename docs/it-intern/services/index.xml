@@ -1,585 +1,851 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Dienste on Zyria</title><link>/docs/it-intern/services/</link><description>Recent content in Dienste on Zyria</description><generator>Hugo -- gohugo.io</generator><language>de</language><managingEditor>fabrice@zyria.de (Fabrice Kirchner)</managingEditor><webMaster>fabrice@zyria.de (Fabrice Kirchner)</webMaster><atom:link href="/docs/it-intern/services/index.xml" rel="self" type="application/rss+xml"/><item><title>Dmarc-Report</title><link>/docs/it-intern/services/dmarc-report/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>fabrice@zyria.de (Fabrice Kirchner)</author><guid>/docs/it-intern/services/dmarc-report/</guid><description>&lt;h2 class="relative group">Quelle
-&lt;div id="quelle" class="anchor">&lt;/div>
-&lt;span
-class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-&lt;a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#quelle" aria-label="Anker">#&lt;/a>
-&lt;/span>
-&lt;/h2>
-&lt;p>&lt;a
-href="https://hub.docker.com/r/gutmensch/dmarc-report"
-target="_blank"
->Docker Hub&lt;/a>
-&lt;/p>
-&lt;h2 class="relative group">Repository
-&lt;div id="repository" class="anchor">&lt;/div>
-&lt;span
-class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-&lt;a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#repository" aria-label="Anker">#&lt;/a>
-&lt;/span>
-&lt;/h2>
-&lt;p>&lt;a
-href="https://github.com/gutmensch/docker-dmarc-report"
-target="_blank"
->Github&lt;/a>
-&lt;/p>
-&lt;h2 class="relative group">Dokumentation
-&lt;div id="dokumentation" class="anchor">&lt;/div>
-&lt;span
-class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-&lt;a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#dokumentation" aria-label="Anker">#&lt;/a>
-&lt;/span>
-&lt;/h2>
-&lt;p>&lt;a
-href="https://github.com/gutmensch/docker-dmarc-report"
-target="_blank"
->Hersteller&lt;/a>
-&lt;/p>
-&lt;h2 class="relative group">Funktion
-&lt;div id="funktion" class="anchor">&lt;/div>
-&lt;span
-class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-&lt;a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#funktion" aria-label="Anker">#&lt;/a>
-&lt;/span>
-&lt;/h2>
-&lt;p>Analysiert Dmarc Reports, welche uns zugesendet werden. Aufbereitung über ein
-Webinterface.&lt;/p></description></item><item><title>Docs</title><link>/docs/it-intern/services/docs/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>fabrice@zyria.de (Fabrice Kirchner)</author><guid>/docs/it-intern/services/docs/</guid><description>&lt;h2 class="relative group">Quelle
-&lt;div id="quelle" class="anchor">&lt;/div>
-&lt;span
-class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-&lt;a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#quelle" aria-label="Anker">#&lt;/a>
-&lt;/span>
-&lt;/h2>
-&lt;p>&lt;a
-href="https://hub.docker.com/r/ricariel/nginx"
-target="_blank"
->Docker Hub&lt;/a>
-&lt;/p>
-&lt;h2 class="relative group">Repository
-&lt;div id="repository" class="anchor">&lt;/div>
-&lt;span
-class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-&lt;a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#repository" aria-label="Anker">#&lt;/a>
-&lt;/span>
-&lt;/h2>
-&lt;p>&lt;a
-href="https://www.casa-due-pur.de/git/fabrice.kirchner/doc-site.git"
-target="_blank"
->Seitenquelltext&lt;/a>
-&lt;/p>
-&lt;p>&lt;a
-href="https://www.casa-due-pur.de/git/fabrice.kirchner/doc-site-html.git"
-target="_blank"
->Seite&lt;/a>
-&lt;/p>
-&lt;p>&lt;a
-href="https://git.zyria.de/pyrox/nginx-docker.git"
-target="_blank"
->Container&lt;/a>
-&lt;/p>
-&lt;h2 class="relative group">Dokumentation
-&lt;div id="dokumentation" class="anchor">&lt;/div>
-&lt;span
-class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-&lt;a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#dokumentation" aria-label="Anker">#&lt;/a>
-&lt;/span>
-&lt;/h2>
-&lt;p>&lt;a
-href="https://docs.nginx.com"
-target="_blank"
->Nginx&lt;/a>
-&lt;/p></description></item><item><title>Forgejo</title><link>/docs/it-intern/services/forgejo/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>fabrice@zyria.de (Fabrice Kirchner)</author><guid>/docs/it-intern/services/forgejo/</guid><description>&lt;h2 class="relative group">Quelle
-&lt;div id="quelle" class="anchor">&lt;/div>
-&lt;span
-class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-&lt;a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#quelle" aria-label="Anker">#&lt;/a>
-&lt;/span>
-&lt;/h2>
-&lt;p>&lt;a
-href="https://codeberg.org/forgejo/-/packages/container/forgejo"
-target="_blank"
->Codeberg&lt;/a>
-&lt;/p>
-&lt;h2 class="relative group">Repository
-&lt;div id="repository" class="anchor">&lt;/div>
-&lt;span
-class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-&lt;a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#repository" aria-label="Anker">#&lt;/a>
-&lt;/span>
-&lt;/h2>
-&lt;p>&lt;a
-href="https://codeberg.org/forgejo/forgejo"
-target="_blank"
->Codeberg&lt;/a>
-&lt;/p>
-&lt;h2 class="relative group">Dokumentation
-&lt;div id="dokumentation" class="anchor">&lt;/div>
-&lt;span
-class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-&lt;a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#dokumentation" aria-label="Anker">#&lt;/a>
-&lt;/span>
-&lt;/h2>
-&lt;p>&lt;a
-href="https://forgejo.org/docs/latest/"
-target="_blank"
->Hersteller&lt;/a>
-&lt;/p>
-&lt;h2 class="relative group">Funktion
-&lt;div id="funktion" class="anchor">&lt;/div>
-&lt;span
-class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-&lt;a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#funktion" aria-label="Anker">#&lt;/a>
-&lt;/span>
-&lt;/h2>
-&lt;p>Github/Gitlab ähnliches Werkzeug und Fork von Gitea. Hier liegen alle
-Repositories des Unternehmens und von hier greifen andere Werkzeuge auf die
-Repositories zu.&lt;/p></description></item><item><title>Hedgedoc</title><link>/docs/it-intern/services/hedgedoc/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>fabrice@zyria.de (Fabrice Kirchner)</author><guid>/docs/it-intern/services/hedgedoc/</guid><description>&lt;h2 class="relative group">Quelle
-&lt;div id="quelle" class="anchor">&lt;/div>
-&lt;span
-class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-&lt;a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#quelle" aria-label="Anker">#&lt;/a>
-&lt;/span>
-&lt;/h2>
-&lt;p>&lt;a
-href="https://quay.io/repository/hedgedoc/hedgedoc"
-target="_blank"
->Quay&lt;/a>
-&lt;/p>
-&lt;p>&lt;a
-href="https://hub.docker.com/_/postgres"
-target="_blank"
->Docker Hub Datenbank&lt;/a>
-&lt;/p>
-&lt;h2 class="relative group">Repository
-&lt;div id="repository" class="anchor">&lt;/div>
-&lt;span
-class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-&lt;a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#repository" aria-label="Anker">#&lt;/a>
-&lt;/span>
-&lt;/h2>
-&lt;p>&lt;a
-href="https://github.com/hedgedoc/container"
-target="_blank"
->Github&lt;/a>
-&lt;/p>
-&lt;h2 class="relative group">Dokumentation
-&lt;div id="dokumentation" class="anchor">&lt;/div>
-&lt;span
-class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-&lt;a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#dokumentation" aria-label="Anker">#&lt;/a>
-&lt;/span>
-&lt;/h2>
-&lt;p>&lt;a
-href="https://github.com/hedgedoc/container/blob/master/README.md"
-target="_blank"
->Hersteller Container&lt;/a>
-&lt;/p></description></item><item><title>Maintenance Page</title><link>/docs/it-intern/services/maintenance/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>fabrice@zyria.de (Fabrice Kirchner)</author><guid>/docs/it-intern/services/maintenance/</guid><description>&lt;h2 class="relative group">Quelle
-&lt;div id="quelle" class="anchor">&lt;/div>
-&lt;span
-class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-&lt;a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#quelle" aria-label="Anker">#&lt;/a>
-&lt;/span>
-&lt;/h2>
-&lt;p>&lt;a
-href="https://hub.docker.com/r/ricariel/maintenance-page"
-target="_blank"
->Docker Hub&lt;/a>
-&lt;/p>
-&lt;h2 class="relative group">Repository
-&lt;div id="repository" class="anchor">&lt;/div>
-&lt;span
-class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-&lt;a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#repository" aria-label="Anker">#&lt;/a>
-&lt;/span>
-&lt;/h2>
-&lt;p>&lt;a
-href="https://git.zyria.de/pyrox/maintenance-page-docker.git"
-target="_blank"
->Container&lt;/a>
-&lt;/p>
-&lt;p>&lt;a
-href="https://www.casa-due-pur.de/git/fabrice.kirchner/maintenance-page.git"
-target="_blank"
->Seitenquelltext&lt;/a>
-&lt;/p>
-&lt;p>&lt;a
-href="https://www.casa-due-pur.de/git/fabrice.kirchner/maintenance-page-html.git"
-target="_blank"
->Seitenhtml&lt;/a>
-&lt;/p>
-&lt;h2 class="relative group">Dokumentation
-&lt;div id="dokumentation" class="anchor">&lt;/div>
-&lt;span
-class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-&lt;a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#dokumentation" aria-label="Anker">#&lt;/a>
-&lt;/span>
-&lt;/h2>
-&lt;h2 class="relative group">Funktion
-&lt;div id="funktion" class="anchor">&lt;/div>
-&lt;span
-class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-&lt;a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#funktion" aria-label="Anker">#&lt;/a>
-&lt;/span>
-&lt;/h2>
-&lt;p>Stellt eine Wartunsseite bereit, wenn einer der Shops nicht erreichbar ist.&lt;/p></description></item><item><title>Mta-sts</title><link>/docs/it-intern/services/mta-sts/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>fabrice@zyria.de (Fabrice Kirchner)</author><guid>/docs/it-intern/services/mta-sts/</guid><description>&lt;h2 class="relative group">Quelle
-&lt;div id="quelle" class="anchor">&lt;/div>
-&lt;span
-class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-&lt;a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#quelle" aria-label="Anker">#&lt;/a>
-&lt;/span>
-&lt;/h2>
-&lt;p>&lt;a
-href="https://hub.docker.com/r/ricariel/nginx"
-target="_blank"
->Docker Hub&lt;/a>
-&lt;/p>
-&lt;h2 class="relative group">Repository
-&lt;div id="repository" class="anchor">&lt;/div>
-&lt;span
-class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-&lt;a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#repository" aria-label="Anker">#&lt;/a>
-&lt;/span>
-&lt;/h2>
-&lt;p>&lt;a
-href="https://git.zyria.de/pyrox/nginx-docker.git"
-target="_blank"
->Container&lt;/a>
-&lt;/p>
-&lt;h2 class="relative group">Dokumentation
-&lt;div id="dokumentation" class="anchor">&lt;/div>
-&lt;span
-class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-&lt;a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#dokumentation" aria-label="Anker">#&lt;/a>
-&lt;/span>
-&lt;/h2>
-&lt;p>&lt;a
-href="https://docs.nginx.com"
-target="_blank"
->Nginx&lt;/a>
-&lt;/p>
-&lt;h2 class="relative group">Funktion
-&lt;div id="funktion" class="anchor">&lt;/div>
-&lt;span
-class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-&lt;a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#funktion" aria-label="Anker">#&lt;/a>
-&lt;/span>
-&lt;/h2>
-&lt;p>Dieser Service stellt MTA-STS für Firmendomains bereit und ist öffentlich
-erreichbar.&lt;/p></description></item><item><title>Pihole</title><link>/docs/it-intern/services/pihole/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>fabrice@zyria.de (Fabrice Kirchner)</author><guid>/docs/it-intern/services/pihole/</guid><description>&lt;h2 class="relative group">Quelle
-&lt;div id="quelle" class="anchor">&lt;/div>
-&lt;span
-class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-&lt;a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#quelle" aria-label="Anker">#&lt;/a>
-&lt;/span>
-&lt;/h2>
-&lt;p>&lt;a
-href="https://hub.docker.com/r/pihole/pihole"
-target="_blank"
->Docker Hub Pihole&lt;/a>
-&lt;/p>
-&lt;p>&lt;a
-href="https://hub.docker.com/r/ricariel/cn2pihole"
-target="_blank"
->Docker Hub cn2pihole&lt;/a>
-&lt;/p>
-&lt;h2 class="relative group">Repository
-&lt;div id="repository" class="anchor">&lt;/div>
-&lt;span
-class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-&lt;a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#repository" aria-label="Anker">#&lt;/a>
-&lt;/span>
-&lt;/h2>
-&lt;p>&lt;a
-href="https://github.com/pi-hole/docker-pi-hole"
-target="_blank"
->Github&lt;/a>
-&lt;/p>
-&lt;p>&lt;a
-href="https://git.zyria.de/pyrox/core-networks2pihole-docker"
-target="_blank"
->Hersteller core-networks to pihole&lt;/a>
-&lt;/p>
-&lt;h2 class="relative group">Dokumentation
-&lt;div id="dokumentation" class="anchor">&lt;/div>
-&lt;span
-class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-&lt;a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#dokumentation" aria-label="Anker">#&lt;/a>
-&lt;/span>
-&lt;/h2>
-&lt;p>&lt;a
-href="https://github.com/pi-hole/docker-pi-hole"
-target="_blank"
->Hersteller Container&lt;/a>
-&lt;/p></description></item><item><title>Roundcube Webmail</title><link>/docs/it-intern/services/roundcube/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>fabrice@zyria.de (Fabrice Kirchner)</author><guid>/docs/it-intern/services/roundcube/</guid><description>&lt;h2 class="relative group">Quelle
-&lt;div id="quelle" class="anchor">&lt;/div>
-&lt;span
-class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-&lt;a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#quelle" aria-label="Anker">#&lt;/a>
-&lt;/span>
-&lt;/h2>
-&lt;p>&lt;a
-href="https://hub.docker.com/r/roundcube/roundcubemail/"
-target="_blank"
->Docker Hub Roundcube&lt;/a>
-&lt;/p>
-&lt;p>&lt;a
-href="https://hub.docker.com/_/mariadb"
-target="_blank"
->Docker Hub Mariadb&lt;/a>
-&lt;/p>
-&lt;h2 class="relative group">Repository
-&lt;div id="repository" class="anchor">&lt;/div>
-&lt;span
-class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-&lt;a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#repository" aria-label="Anker">#&lt;/a>
-&lt;/span>
-&lt;/h2>
-&lt;p>&lt;a
-href="https://github.com/roundcube/roundcubemail-docker/tree/master/examples"
-target="_blank"
->Github Container&lt;/a>
-&lt;/p>
-&lt;p>&lt;a
-href="https://github.com/roundcube/roundcubemail"
-target="_blank"
->Github Software&lt;/a>
-&lt;/p>
-&lt;p>&lt;a
-href="https://github.com/MariaDB/mariadb-docker"
-target="_blank"
->Github Mariadb&lt;/a>
-&lt;/p>
-&lt;h2 class="relative group">Dokumentation
-&lt;div id="dokumentation" class="anchor">&lt;/div>
-&lt;span
-class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-&lt;a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#dokumentation" aria-label="Anker">#&lt;/a>
-&lt;/span>
-&lt;/h2>
-&lt;p>&lt;a
-href="https://roundcube.net/support/"
-target="_blank"
->Hersteller&lt;/a>
-&lt;/p></description></item><item><title>Traefik</title><link>/docs/it-intern/services/traefik/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>fabrice@zyria.de (Fabrice Kirchner)</author><guid>/docs/it-intern/services/traefik/</guid><description>&lt;h2 class="relative group">Quelle
-&lt;div id="quelle" class="anchor">&lt;/div>
-&lt;span
-class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-&lt;a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#quelle" aria-label="Anker">#&lt;/a>
-&lt;/span>
-&lt;/h2>
-&lt;p>&lt;a
-href="https://hub.docker.com/_/traefik"
-target="_blank"
->Docker Hub&lt;/a>
-&lt;/p>
-&lt;h2 class="relative group">Repository
-&lt;div id="repository" class="anchor">&lt;/div>
-&lt;span
-class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-&lt;a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#repository" aria-label="Anker">#&lt;/a>
-&lt;/span>
-&lt;/h2>
-&lt;p>&lt;a
-href="https://github.com/traefik/traefik"
-target="_blank"
->Github&lt;/a>
-&lt;/p>
-&lt;h2 class="relative group">Dokumentation
-&lt;div id="dokumentation" class="anchor">&lt;/div>
-&lt;span
-class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-&lt;a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#dokumentation" aria-label="Anker">#&lt;/a>
-&lt;/span>
-&lt;/h2>
-&lt;p>&lt;a
-href="https://traefik.io/traefik/"
-target="_blank"
->Traefiklabs&lt;/a>
-&lt;/p>
-&lt;h2 class="relative group">Funktion
-&lt;div id="funktion" class="anchor">&lt;/div>
-&lt;span
-class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-&lt;a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#funktion" aria-label="Anker">#&lt;/a>
-&lt;/span>
-&lt;/h2>
-&lt;p>Reverse Proxy und Load Balancer für alle HTTP Services und einige andere.&lt;/p></description></item><item><title>Unifi Controller</title><link>/docs/it-intern/services/unifi-controller/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>fabrice@zyria.de (Fabrice Kirchner)</author><guid>/docs/it-intern/services/unifi-controller/</guid><description>&lt;h2 class="relative group">Quelle
-&lt;div id="quelle" class="anchor">&lt;/div>
-&lt;span
-class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-&lt;a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#quelle" aria-label="Anker">#&lt;/a>
-&lt;/span>
-&lt;/h2>
-&lt;p>&lt;a
-href="https://gitlab.com/Linuxserver.io/docker-unifi-network-application/container_registry"
-target="_blank"
->Docker Hub&lt;/a>
-&lt;/p>
-&lt;h2 class="relative group">Repository
-&lt;div id="repository" class="anchor">&lt;/div>
-&lt;span
-class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-&lt;a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#repository" aria-label="Anker">#&lt;/a>
-&lt;/span>
-&lt;/h2>
-&lt;p>&lt;a
-href="https://github.com/linuxserver/docker-unifi-controller/packages"
-target="_blank"
->Github Container&lt;/a>
-&lt;/p>
-&lt;p>&lt;a
-href="https://github.com/linuxserver/docker-unifi-network-application"
-target="_blank"
->Github Container neu&lt;/a>
-&lt;/p>
-&lt;h2 class="relative group">Dokumentation
-&lt;div id="dokumentation" class="anchor">&lt;/div>
-&lt;span
-class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-&lt;a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#dokumentation" aria-label="Anker">#&lt;/a>
-&lt;/span>
-&lt;/h2>
-&lt;p>&lt;a
-href="https://help.ui.com/hc/en-us/sections/6582310816535-Network"
-target="_blank"
->Hersteller&lt;/a>
-&lt;/p></description></item><item><title>Uptime Kuma</title><link>/docs/it-intern/services/uptime-kuma/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>fabrice@zyria.de (Fabrice Kirchner)</author><guid>/docs/it-intern/services/uptime-kuma/</guid><description>&lt;h2 class="relative group">Quelle
-&lt;div id="quelle" class="anchor">&lt;/div>
-&lt;span
-class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-&lt;a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#quelle" aria-label="Anker">#&lt;/a>
-&lt;/span>
-&lt;/h2>
-&lt;p>&lt;a
-href="https://hub.docker.com/r/louislam/uptime-kuma"
-target="_blank"
->Docker Hub&lt;/a>
-&lt;/p>
-&lt;h2 class="relative group">Repository
-&lt;div id="repository" class="anchor">&lt;/div>
-&lt;span
-class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-&lt;a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#repository" aria-label="Anker">#&lt;/a>
-&lt;/span>
-&lt;/h2>
-&lt;p>&lt;a
-href="https://github.com/louislam/uptime-kuma"
-target="_blank"
->Github&lt;/a>
-&lt;/p>
-&lt;h2 class="relative group">Dokumentation
-&lt;div id="dokumentation" class="anchor">&lt;/div>
-&lt;span
-class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-&lt;a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#dokumentation" aria-label="Anker">#&lt;/a>
-&lt;/span>
-&lt;/h2>
-&lt;p>&lt;a
-href="https://github.com/louislam/uptime-kuma/wiki"
-target="_blank"
->Hersteller&lt;/a>
-&lt;/p>
-&lt;h2 class="relative group">Funktion
-&lt;div id="funktion" class="anchor">&lt;/div>
-&lt;span
-class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-&lt;a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#funktion" aria-label="Anker">#&lt;/a>
-&lt;/span>
-&lt;/h2>
-&lt;p>Internes Monitoring einzelner Dienste und Bereitstellung von Statusseiten.
-Mitarbeiter und Supporter haben dies als erste Anlaufstelle bei Problemen mit
-der IT.&lt;/p></description></item><item><title>Wireguard</title><link>/docs/it-intern/services/wireguard/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>fabrice@zyria.de (Fabrice Kirchner)</author><guid>/docs/it-intern/services/wireguard/</guid><description>&lt;h2 class="relative group">Quelle
-&lt;div id="quelle" class="anchor">&lt;/div>
-&lt;span
-class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-&lt;a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#quelle" aria-label="Anker">#&lt;/a>
-&lt;/span>
-&lt;/h2>
-&lt;p>&lt;a
-href="https://hub.docker.com/r/ricariel/bastion"
-target="_blank"
->Docker Hub Bastion&lt;/a>
-&lt;/p>
-&lt;p>&lt;a
-href="https://hub.docker.com/r/linuxserver/wireguard"
-target="_blank"
->Docker Hub Wireguard&lt;/a>
-&lt;/p>
-&lt;p>&lt;a
-href="https://hub.docker.com/r/wgportal/wg-portal"
-target="_blank"
->Docker Hub wg-portal&lt;/a>
-&lt;/p>
-&lt;h2 class="relative group">Repository
-&lt;div id="repository" class="anchor">&lt;/div>
-&lt;span
-class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-&lt;a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#repository" aria-label="Anker">#&lt;/a>
-&lt;/span>
-&lt;/h2>
-&lt;p>&lt;a
-href="https://git.zyria.de/pyrox/docker-ssh-bastion"
-target="_blank"
->Bastion&lt;/a>
-&lt;/p>
-&lt;p>&lt;a
-href="https://github.com/linuxserver/docker-wireguard"
-target="_blank"
->Github wireguard&lt;/a>
-&lt;/p>
-&lt;p>&lt;a
-href="https://github.com/h44z/wg-portal"
-target="_blank"
->Github wg-portal&lt;/a>
-&lt;/p>
-&lt;h2 class="relative group">Dokumentation
-&lt;div id="dokumentation" class="anchor">&lt;/div>
-&lt;span
-class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-&lt;a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#dokumentation" aria-label="Anker">#&lt;/a>
-&lt;/span>
-&lt;/h2>
-&lt;p>&lt;a
-href="https://git.zyria.de/pyrox/docker-ssh-bastion"
-target="_blank"
->Hersteller Bastion&lt;/a>
-&lt;/p></description></item><item><title>Zammad</title><link>/docs/it-intern/services/zammad/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>fabrice@zyria.de (Fabrice Kirchner)</author><guid>/docs/it-intern/services/zammad/</guid><description>&lt;h2 class="relative group">Quelle
-&lt;div id="quelle" class="anchor">&lt;/div>
-&lt;span
-class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-&lt;a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#quelle" aria-label="Anker">#&lt;/a>
-&lt;/span>
-&lt;/h2>
-&lt;h2 class="relative group">Repository
-&lt;div id="repository" class="anchor">&lt;/div>
-&lt;span
-class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-&lt;a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#repository" aria-label="Anker">#&lt;/a>
-&lt;/span>
-&lt;/h2>
-&lt;p>&lt;a
-href="https://github.com/zammad"
-target="_blank"
->Zammad&lt;/a>
-&lt;/p>
-&lt;p>&lt;a
-href="https://github.com/zammad/zammad-helm"
-target="_blank"
->Helm&lt;/a>
-&lt;/p>
-&lt;h2 class="relative group">Dokumentation
-&lt;div id="dokumentation" class="anchor">&lt;/div>
-&lt;span
-class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-&lt;a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#dokumentation" aria-label="Anker">#&lt;/a>
-&lt;/span>
-&lt;/h2>
-&lt;p>&lt;a
-href="https://admin-docs.zammad.org/de/latest/index.html"
-target="_blank"
->Admin Dokumentation&lt;/a>
-&lt;/p>
-&lt;p>&lt;a
-href="https://docs.zammad.org/en/latest/index.html"
-target="_blank"
->Zentrale Dokumentation&lt;/a>
-&lt;/p></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Dienste on Zyria</title>
+    <link>https://www.zyria.de/docs/it-intern/services/</link>
+    <description>Recent content in Dienste on Zyria</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>de-de</language>
+    <managingEditor>fabrice@zyria.de (Fabrice Kirchner)</managingEditor>
+    <webMaster>fabrice@zyria.de (Fabrice Kirchner)</webMaster>
+    
+    <atom:link href="https://www.zyria.de/docs/it-intern/services/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Dmarc-Report</title>
+      <link>https://www.zyria.de/docs/it-intern/services/dmarc-report/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://www.zyria.de/docs/it-intern/services/dmarc-report/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;Quelle 
+    &lt;div id=&#34;quelle&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#quelle&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;p&gt;&lt;a
+  href=&#34;https://hub.docker.com/r/gutmensch/dmarc-report&#34;
+    target=&#34;_blank&#34;
+  &gt;Docker Hub&lt;/a&gt;
+&lt;/p&gt;
+
+&lt;h2 class=&#34;relative group&#34;&gt;Repository 
+    &lt;div id=&#34;repository&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#repository&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;p&gt;&lt;a
+  href=&#34;https://github.com/gutmensch/docker-dmarc-report&#34;
+    target=&#34;_blank&#34;
+  &gt;Github&lt;/a&gt;
+&lt;/p&gt;
+
+&lt;h2 class=&#34;relative group&#34;&gt;Dokumentation 
+    &lt;div id=&#34;dokumentation&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#dokumentation&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;p&gt;&lt;a
+  href=&#34;https://github.com/gutmensch/docker-dmarc-report&#34;
+    target=&#34;_blank&#34;
+  &gt;Hersteller&lt;/a&gt;
+&lt;/p&gt;
+
+&lt;h2 class=&#34;relative group&#34;&gt;Funktion 
+    &lt;div id=&#34;funktion&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#funktion&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;p&gt;Analysiert Dmarc Reports, welche uns zugesendet werden. Aufbereitung über ein&lt;br&gt;
+Webinterface.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Docs</title>
+      <link>https://www.zyria.de/docs/it-intern/services/docs/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://www.zyria.de/docs/it-intern/services/docs/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;Quelle 
+    &lt;div id=&#34;quelle&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#quelle&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;p&gt;&lt;a
+  href=&#34;https://hub.docker.com/r/ricariel/nginx&#34;
+    target=&#34;_blank&#34;
+  &gt;Docker Hub&lt;/a&gt;
+&lt;/p&gt;
+
+&lt;h2 class=&#34;relative group&#34;&gt;Repository 
+    &lt;div id=&#34;repository&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#repository&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;p&gt;&lt;a
+  href=&#34;https://www.casa-due-pur.de/git/fabrice.kirchner/doc-site.git&#34;
+    target=&#34;_blank&#34;
+  &gt;Seitenquelltext&lt;/a&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;a
+  href=&#34;https://www.casa-due-pur.de/git/fabrice.kirchner/doc-site-html.git&#34;
+    target=&#34;_blank&#34;
+  &gt;Seite&lt;/a&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;a
+  href=&#34;https://git.zyria.de/pyrox/nginx-docker.git&#34;
+    target=&#34;_blank&#34;
+  &gt;Container&lt;/a&gt;
+&lt;/p&gt;
+
+&lt;h2 class=&#34;relative group&#34;&gt;Dokumentation 
+    &lt;div id=&#34;dokumentation&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#dokumentation&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;p&gt;&lt;a
+  href=&#34;https://docs.nginx.com&#34;
+    target=&#34;_blank&#34;
+  &gt;Nginx&lt;/a&gt;
+&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Forgejo</title>
+      <link>https://www.zyria.de/docs/it-intern/services/forgejo/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://www.zyria.de/docs/it-intern/services/forgejo/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;Quelle 
+    &lt;div id=&#34;quelle&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#quelle&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;p&gt;&lt;a
+  href=&#34;https://codeberg.org/forgejo/-/packages/container/forgejo&#34;
+    target=&#34;_blank&#34;
+  &gt;Codeberg&lt;/a&gt;
+&lt;/p&gt;
+
+&lt;h2 class=&#34;relative group&#34;&gt;Repository 
+    &lt;div id=&#34;repository&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#repository&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;p&gt;&lt;a
+  href=&#34;https://codeberg.org/forgejo/forgejo&#34;
+    target=&#34;_blank&#34;
+  &gt;Codeberg&lt;/a&gt;
+&lt;/p&gt;
+
+&lt;h2 class=&#34;relative group&#34;&gt;Dokumentation 
+    &lt;div id=&#34;dokumentation&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#dokumentation&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;p&gt;&lt;a
+  href=&#34;https://forgejo.org/docs/latest/&#34;
+    target=&#34;_blank&#34;
+  &gt;Hersteller&lt;/a&gt;
+&lt;/p&gt;
+
+&lt;h2 class=&#34;relative group&#34;&gt;Funktion 
+    &lt;div id=&#34;funktion&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#funktion&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;p&gt;Github/Gitlab ähnliches Werkzeug und Fork von Gitea. Hier liegen alle&lt;br&gt;
+Repositories des Unternehmens und von hier greifen andere Werkzeuge auf die&lt;br&gt;
+Repositories zu.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Hedgedoc</title>
+      <link>https://www.zyria.de/docs/it-intern/services/hedgedoc/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://www.zyria.de/docs/it-intern/services/hedgedoc/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;Quelle 
+    &lt;div id=&#34;quelle&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#quelle&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;p&gt;&lt;a
+  href=&#34;https://quay.io/repository/hedgedoc/hedgedoc&#34;
+    target=&#34;_blank&#34;
+  &gt;Quay&lt;/a&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;a
+  href=&#34;https://hub.docker.com/_/postgres&#34;
+    target=&#34;_blank&#34;
+  &gt;Docker Hub Datenbank&lt;/a&gt;
+&lt;/p&gt;
+
+&lt;h2 class=&#34;relative group&#34;&gt;Repository 
+    &lt;div id=&#34;repository&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#repository&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;p&gt;&lt;a
+  href=&#34;https://github.com/hedgedoc/container&#34;
+    target=&#34;_blank&#34;
+  &gt;Github&lt;/a&gt;
+&lt;/p&gt;
+
+&lt;h2 class=&#34;relative group&#34;&gt;Dokumentation 
+    &lt;div id=&#34;dokumentation&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#dokumentation&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;p&gt;&lt;a
+  href=&#34;https://github.com/hedgedoc/container/blob/master/README.md&#34;
+    target=&#34;_blank&#34;
+  &gt;Hersteller Container&lt;/a&gt;
+&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Maintenance Page</title>
+      <link>https://www.zyria.de/docs/it-intern/services/maintenance/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://www.zyria.de/docs/it-intern/services/maintenance/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;Quelle 
+    &lt;div id=&#34;quelle&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#quelle&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;p&gt;&lt;a
+  href=&#34;https://hub.docker.com/r/ricariel/maintenance-page&#34;
+    target=&#34;_blank&#34;
+  &gt;Docker Hub&lt;/a&gt;
+&lt;/p&gt;
+
+&lt;h2 class=&#34;relative group&#34;&gt;Repository 
+    &lt;div id=&#34;repository&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#repository&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;p&gt;&lt;a
+  href=&#34;https://git.zyria.de/pyrox/maintenance-page-docker.git&#34;
+    target=&#34;_blank&#34;
+  &gt;Container&lt;/a&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;a
+  href=&#34;https://www.casa-due-pur.de/git/fabrice.kirchner/maintenance-page.git&#34;
+    target=&#34;_blank&#34;
+  &gt;Seitenquelltext&lt;/a&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;a
+  href=&#34;https://www.casa-due-pur.de/git/fabrice.kirchner/maintenance-page-html.git&#34;
+    target=&#34;_blank&#34;
+  &gt;Seitenhtml&lt;/a&gt;
+&lt;/p&gt;
+
+&lt;h2 class=&#34;relative group&#34;&gt;Dokumentation 
+    &lt;div id=&#34;dokumentation&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#dokumentation&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+
+&lt;h2 class=&#34;relative group&#34;&gt;Funktion 
+    &lt;div id=&#34;funktion&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#funktion&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;p&gt;Stellt eine Wartunsseite bereit, wenn einer der Shops nicht erreichbar ist.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Mta-sts</title>
+      <link>https://www.zyria.de/docs/it-intern/services/mta-sts/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://www.zyria.de/docs/it-intern/services/mta-sts/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;Quelle 
+    &lt;div id=&#34;quelle&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#quelle&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;p&gt;&lt;a
+  href=&#34;https://hub.docker.com/r/ricariel/nginx&#34;
+    target=&#34;_blank&#34;
+  &gt;Docker Hub&lt;/a&gt;
+&lt;/p&gt;
+
+&lt;h2 class=&#34;relative group&#34;&gt;Repository 
+    &lt;div id=&#34;repository&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#repository&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;p&gt;&lt;a
+  href=&#34;https://git.zyria.de/pyrox/nginx-docker.git&#34;
+    target=&#34;_blank&#34;
+  &gt;Container&lt;/a&gt;
+&lt;/p&gt;
+
+&lt;h2 class=&#34;relative group&#34;&gt;Dokumentation 
+    &lt;div id=&#34;dokumentation&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#dokumentation&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;p&gt;&lt;a
+  href=&#34;https://docs.nginx.com&#34;
+    target=&#34;_blank&#34;
+  &gt;Nginx&lt;/a&gt;
+&lt;/p&gt;
+
+&lt;h2 class=&#34;relative group&#34;&gt;Funktion 
+    &lt;div id=&#34;funktion&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#funktion&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;p&gt;Dieser Service stellt MTA-STS für Firmendomains bereit und ist öffentlich&lt;br&gt;
+erreichbar.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Pihole</title>
+      <link>https://www.zyria.de/docs/it-intern/services/pihole/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://www.zyria.de/docs/it-intern/services/pihole/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;Quelle 
+    &lt;div id=&#34;quelle&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#quelle&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;p&gt;&lt;a
+  href=&#34;https://hub.docker.com/r/pihole/pihole&#34;
+    target=&#34;_blank&#34;
+  &gt;Docker Hub Pihole&lt;/a&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;a
+  href=&#34;https://hub.docker.com/r/ricariel/cn2pihole&#34;
+    target=&#34;_blank&#34;
+  &gt;Docker Hub cn2pihole&lt;/a&gt;
+&lt;/p&gt;
+
+&lt;h2 class=&#34;relative group&#34;&gt;Repository 
+    &lt;div id=&#34;repository&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#repository&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;p&gt;&lt;a
+  href=&#34;https://github.com/pi-hole/docker-pi-hole&#34;
+    target=&#34;_blank&#34;
+  &gt;Github&lt;/a&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;a
+  href=&#34;https://git.zyria.de/pyrox/core-networks2pihole-docker&#34;
+    target=&#34;_blank&#34;
+  &gt;Hersteller core-networks to pihole&lt;/a&gt;
+&lt;/p&gt;
+
+&lt;h2 class=&#34;relative group&#34;&gt;Dokumentation 
+    &lt;div id=&#34;dokumentation&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#dokumentation&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;p&gt;&lt;a
+  href=&#34;https://github.com/pi-hole/docker-pi-hole&#34;
+    target=&#34;_blank&#34;
+  &gt;Hersteller Container&lt;/a&gt;
+&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Roundcube Webmail</title>
+      <link>https://www.zyria.de/docs/it-intern/services/roundcube/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://www.zyria.de/docs/it-intern/services/roundcube/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;Quelle 
+    &lt;div id=&#34;quelle&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#quelle&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;p&gt;&lt;a
+  href=&#34;https://hub.docker.com/r/roundcube/roundcubemail/&#34;
+    target=&#34;_blank&#34;
+  &gt;Docker Hub Roundcube&lt;/a&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;a
+  href=&#34;https://hub.docker.com/_/mariadb&#34;
+    target=&#34;_blank&#34;
+  &gt;Docker Hub Mariadb&lt;/a&gt;
+&lt;/p&gt;
+
+&lt;h2 class=&#34;relative group&#34;&gt;Repository 
+    &lt;div id=&#34;repository&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#repository&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;p&gt;&lt;a
+  href=&#34;https://github.com/roundcube/roundcubemail-docker/tree/master/examples&#34;
+    target=&#34;_blank&#34;
+  &gt;Github Container&lt;/a&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;a
+  href=&#34;https://github.com/roundcube/roundcubemail&#34;
+    target=&#34;_blank&#34;
+  &gt;Github Software&lt;/a&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;a
+  href=&#34;https://github.com/MariaDB/mariadb-docker&#34;
+    target=&#34;_blank&#34;
+  &gt;Github Mariadb&lt;/a&gt;
+&lt;/p&gt;
+
+&lt;h2 class=&#34;relative group&#34;&gt;Dokumentation 
+    &lt;div id=&#34;dokumentation&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#dokumentation&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;p&gt;&lt;a
+  href=&#34;https://roundcube.net/support/&#34;
+    target=&#34;_blank&#34;
+  &gt;Hersteller&lt;/a&gt;
+&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Traefik</title>
+      <link>https://www.zyria.de/docs/it-intern/services/traefik/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://www.zyria.de/docs/it-intern/services/traefik/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;Quelle 
+    &lt;div id=&#34;quelle&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#quelle&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;p&gt;&lt;a
+  href=&#34;https://hub.docker.com/_/traefik&#34;
+    target=&#34;_blank&#34;
+  &gt;Docker Hub&lt;/a&gt;
+&lt;/p&gt;
+
+&lt;h2 class=&#34;relative group&#34;&gt;Repository 
+    &lt;div id=&#34;repository&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#repository&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;p&gt;&lt;a
+  href=&#34;https://github.com/traefik/traefik&#34;
+    target=&#34;_blank&#34;
+  &gt;Github&lt;/a&gt;
+&lt;/p&gt;
+
+&lt;h2 class=&#34;relative group&#34;&gt;Dokumentation 
+    &lt;div id=&#34;dokumentation&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#dokumentation&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;p&gt;&lt;a
+  href=&#34;https://traefik.io/traefik/&#34;
+    target=&#34;_blank&#34;
+  &gt;Traefiklabs&lt;/a&gt;
+&lt;/p&gt;
+
+&lt;h2 class=&#34;relative group&#34;&gt;Funktion 
+    &lt;div id=&#34;funktion&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#funktion&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;p&gt;Reverse Proxy und Load Balancer für alle HTTP Services und einige andere.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Unifi Controller</title>
+      <link>https://www.zyria.de/docs/it-intern/services/unifi-controller/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://www.zyria.de/docs/it-intern/services/unifi-controller/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;Quelle 
+    &lt;div id=&#34;quelle&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#quelle&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;p&gt;&lt;a
+  href=&#34;https://gitlab.com/Linuxserver.io/docker-unifi-network-application/container_registry&#34;
+    target=&#34;_blank&#34;
+  &gt;Docker Hub&lt;/a&gt;
+&lt;/p&gt;
+
+&lt;h2 class=&#34;relative group&#34;&gt;Repository 
+    &lt;div id=&#34;repository&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#repository&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;p&gt;&lt;a
+  href=&#34;https://github.com/linuxserver/docker-unifi-controller/packages&#34;
+    target=&#34;_blank&#34;
+  &gt;Github Container&lt;/a&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;a
+  href=&#34;https://github.com/linuxserver/docker-unifi-network-application&#34;
+    target=&#34;_blank&#34;
+  &gt;Github Container neu&lt;/a&gt;
+&lt;/p&gt;
+
+&lt;h2 class=&#34;relative group&#34;&gt;Dokumentation 
+    &lt;div id=&#34;dokumentation&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#dokumentation&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;p&gt;&lt;a
+  href=&#34;https://help.ui.com/hc/en-us/sections/6582310816535-Network&#34;
+    target=&#34;_blank&#34;
+  &gt;Hersteller&lt;/a&gt;
+&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Uptime Kuma</title>
+      <link>https://www.zyria.de/docs/it-intern/services/uptime-kuma/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://www.zyria.de/docs/it-intern/services/uptime-kuma/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;Quelle 
+    &lt;div id=&#34;quelle&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#quelle&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;p&gt;&lt;a
+  href=&#34;https://hub.docker.com/r/louislam/uptime-kuma&#34;
+    target=&#34;_blank&#34;
+  &gt;Docker Hub&lt;/a&gt;
+&lt;/p&gt;
+
+&lt;h2 class=&#34;relative group&#34;&gt;Repository 
+    &lt;div id=&#34;repository&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#repository&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;p&gt;&lt;a
+  href=&#34;https://github.com/louislam/uptime-kuma&#34;
+    target=&#34;_blank&#34;
+  &gt;Github&lt;/a&gt;
+&lt;/p&gt;
+
+&lt;h2 class=&#34;relative group&#34;&gt;Dokumentation 
+    &lt;div id=&#34;dokumentation&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#dokumentation&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;p&gt;&lt;a
+  href=&#34;https://github.com/louislam/uptime-kuma/wiki&#34;
+    target=&#34;_blank&#34;
+  &gt;Hersteller&lt;/a&gt;
+&lt;/p&gt;
+
+&lt;h2 class=&#34;relative group&#34;&gt;Funktion 
+    &lt;div id=&#34;funktion&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#funktion&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;p&gt;Internes Monitoring einzelner Dienste und Bereitstellung von Statusseiten.&lt;br&gt;
+Mitarbeiter und Supporter haben dies als erste Anlaufstelle bei Problemen mit&lt;br&gt;
+der IT.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Wireguard</title>
+      <link>https://www.zyria.de/docs/it-intern/services/wireguard/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://www.zyria.de/docs/it-intern/services/wireguard/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;Quelle 
+    &lt;div id=&#34;quelle&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#quelle&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;p&gt;&lt;a
+  href=&#34;https://hub.docker.com/r/ricariel/bastion&#34;
+    target=&#34;_blank&#34;
+  &gt;Docker Hub Bastion&lt;/a&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;a
+  href=&#34;https://hub.docker.com/r/linuxserver/wireguard&#34;
+    target=&#34;_blank&#34;
+  &gt;Docker Hub Wireguard&lt;/a&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;a
+  href=&#34;https://hub.docker.com/r/wgportal/wg-portal&#34;
+    target=&#34;_blank&#34;
+  &gt;Docker Hub wg-portal&lt;/a&gt;
+&lt;/p&gt;
+
+&lt;h2 class=&#34;relative group&#34;&gt;Repository 
+    &lt;div id=&#34;repository&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#repository&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;p&gt;&lt;a
+  href=&#34;https://git.zyria.de/pyrox/docker-ssh-bastion&#34;
+    target=&#34;_blank&#34;
+  &gt;Bastion&lt;/a&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;a
+  href=&#34;https://github.com/linuxserver/docker-wireguard&#34;
+    target=&#34;_blank&#34;
+  &gt;Github wireguard&lt;/a&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;a
+  href=&#34;https://github.com/h44z/wg-portal&#34;
+    target=&#34;_blank&#34;
+  &gt;Github wg-portal&lt;/a&gt;
+&lt;/p&gt;
+
+&lt;h2 class=&#34;relative group&#34;&gt;Dokumentation 
+    &lt;div id=&#34;dokumentation&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#dokumentation&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;p&gt;&lt;a
+  href=&#34;https://git.zyria.de/pyrox/docker-ssh-bastion&#34;
+    target=&#34;_blank&#34;
+  &gt;Hersteller Bastion&lt;/a&gt;
+&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Zammad</title>
+      <link>https://www.zyria.de/docs/it-intern/services/zammad/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://www.zyria.de/docs/it-intern/services/zammad/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;Quelle 
+    &lt;div id=&#34;quelle&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#quelle&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+
+&lt;h2 class=&#34;relative group&#34;&gt;Repository 
+    &lt;div id=&#34;repository&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#repository&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;p&gt;&lt;a
+  href=&#34;https://github.com/zammad&#34;
+    target=&#34;_blank&#34;
+  &gt;Zammad&lt;/a&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;a
+  href=&#34;https://github.com/zammad/zammad-helm&#34;
+    target=&#34;_blank&#34;
+  &gt;Helm&lt;/a&gt;
+&lt;/p&gt;
+
+&lt;h2 class=&#34;relative group&#34;&gt;Dokumentation 
+    &lt;div id=&#34;dokumentation&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#dokumentation&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;p&gt;&lt;a
+  href=&#34;https://admin-docs.zammad.org/de/latest/index.html&#34;
+    target=&#34;_blank&#34;
+  &gt;Admin Dokumentation&lt;/a&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;a
+  href=&#34;https://docs.zammad.org/en/latest/index.html&#34;
+    target=&#34;_blank&#34;
+  &gt;Zentrale Dokumentation&lt;/a&gt;
+&lt;/p&gt;</description>
+      
+    </item>
+    
+  </channel>
+</rss>
