@@ -5,6 +5,8 @@
 [goldmark.renderer]
   unsafe = true
 
+  hardWraps = true
+
   [goldmark.extensions]
     [goldmark.extensions.passthrough]
       enable = true
@@ -12,9 +14,18 @@
         block = [['\[', '\]'], ['$$', '$$']]
         inline = [['\(', '\)']]
 
-[highlight]
-  noClasses = false
+[goldmark.parser.attribute]
+block = true
 
 [tableOfContents]
   startLevel = 2
   endLevel = 4
+
+
+
+[highlight]
+style = "github-dark"
+guessSyntax = true
+lineNos = true
+lineNumbersInTable = false
+  noClasses = false

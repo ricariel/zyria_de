@@ -20,6 +20,11 @@
   pageRef = "docs"
   weight = 5
 
+[[main]]
+  name = "Statusseite"
+  url = "https://status.zyria.de"
+  weight = 30
+
 #[[main]]
 #  name = "Parent"
 #  weight = 20

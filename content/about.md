@@ -9,11 +9,12 @@ weight: 1
 
 ## Fabrice Kirchner
 
-* geboren, aufgewachsen und sozialisiert in Berlin
-* Abstecher nach Bayern
-* Wohnhaft auf einem Vulkan in Hessen
+Ich bin Fabrice,  geboren, aufgewachsen und sozialisiert in Berlin mit einem Abstecher nach Bayern und jetzt Wohnhaft auf einem Vulkan in Hessen.
+Derzeit betreu ich die IT in einem mittelständischen Unternehmen und bin ab und an für Projekte verfügbar.
 
-Ausbildung:
+Diese Seite dient hauptsächlich dazu Erfahrungen mit Hugo zu sammeln und Dinge für den Job auszuprobieren.
+
+### Ausbildung
 
 * Programmieren für Spiele
 * Selfhosting
@@ -22,7 +23,7 @@ Ausbildung:
 * Bücher, Internet, Manpages, ausprobieren
 * immer neugierig und lernwillig
 
-Interessen:
+### Interessen
 
 * Linux
 * Apple
@@ -35,5 +36,3 @@ Interessen:
 * Wandern
 * Radfahren
 * Wissen an Kind weitergeben
-
-Beruflich betreu ich die IT in einem mittelständischen Unternehmen.

@@ -3,8 +3,14 @@
 # https://blowfish.page/docs/getting-started/
 
 # theme = "blowfish" # UNCOMMENT THIS LINE
-# baseURL = "https://your_domain.com/"
+baseURL = "https://www.zyria.de/"
 defaultContentLanguage = "de"
+cleanDestinationDir = true
+
+pygmentsUseClasses= true
+pygmentsCodeFences= true
+pygmentsUseClassic= false
+pygmentsStyle= "tango"
 
 # pluralizeListTitles = "true" # hugo function useful for non-english languages, find out more in  https://gohugo.io/getting-started/configuration/#pluralizelisttitles
 
@@ -38,6 +44,7 @@ enableGitInfo = true
 
 [outputs]
   home = ["HTML", "RSS", "JSON"]
+  section = ["HTML", "RSS"]
 
 [related]
   threshold = 0
