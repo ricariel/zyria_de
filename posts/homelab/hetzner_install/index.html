@@ -12,14 +12,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   
-  <title>Ansible setup &middot; Zyria</title>
-  <meta name="title" content="Ansible setup &middot; Zyria" />
+  <title>Hetzner Server installieren &middot; Zyria</title>
+  <meta name="title" content="Hetzner Server installieren &middot; Zyria" />
   
-  <meta name="description" content="Ansible Steuerung aller Hardware" />
+  <meta name="description" content="Wir wir eine Maschine bei Hetzner zu einem Proxmox Server machen." />
   
   
   
-  <link rel="canonical" href="https://www.zyria.de/docs/it-intern/server/physische-server/ansible/" />
+  <link rel="canonical" href="https://www.zyria.de/posts/homelab/hetzner_install/" />
   
   
   
@@ -85,20 +85,20 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   
   
   
-  <meta property="og:url" content="https://www.zyria.de/docs/it-intern/server/physische-server/ansible/">
+  <meta property="og:url" content="https://www.zyria.de/posts/homelab/hetzner_install/">
   <meta property="og:site_name" content="Zyria">
-  <meta property="og:title" content="Ansible setup">
-  <meta property="og:description" content="Ansible Steuerung aller Hardware">
+  <meta property="og:title" content="Hetzner Server installieren">
+  <meta property="og:description" content="Wir wir eine Maschine bei Hetzner zu einem Proxmox Server machen.">
   <meta property="og:locale" content="de_de">
   <meta property="og:type" content="article">
-    <meta property="article:section" content="docs">
-    <meta property="article:published_time" content="2025-06-30T15:22:00+02:00">
-    <meta property="article:modified_time" content="2025-05-13T19:00:32+02:00">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-06-30T17:05:57+02:00">
+    <meta property="article:modified_time" content="2025-06-30T17:05:47+02:00">
 
   
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Ansible setup">
-  <meta name="twitter:description" content="Ansible Steuerung aller Hardware">
+  <meta name="twitter:title" content="Hetzner Server installieren">
+  <meta name="twitter:description" content="Wir wir eine Maschine bei Hetzner zu einem Proxmox Server machen.">
 
     
   
@@ -107,27 +107,27 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   [{
     "@context": "https://schema.org",
     "@type": "Article",
-    "articleSection": "Documentation",
-    "name": "Ansible setup",
-    "headline": "Ansible setup",
-    "description": "Ansible Steuerung aller Hardware",
-    "abstract": "\u003ch2 class=\u0022relative group\u0022\u003eSetup mit Ansible \n    \u003cdiv id=\u0022setup-mit-ansible\u0022 class=\u0022anchor\u0022\u003e\u003c\/div\u003e\n    \n    \u003cspan\n        class=\u0022absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100\u0022\u003e\n        \u003ca class=\u0022group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline\u0022 href=\u0022#setup-mit-ansible\u0022 aria-label=\u0022Anker\u0022\u003e#\u003c\/a\u003e\n    \u003c\/span\u003e        \n    \n\u003c\/h2\u003e\n\u003cp\u003eNachdem ein Server das erste mal gestartet wurde und der Storage wie auch das remote unlock konfiguriert wurde, übernimmt Ansible die volle Kontrolle.\u003c\/p\u003e",
+    "articleSection": "Beiträge",
+    "name": "Hetzner Server installieren",
+    "headline": "Hetzner Server installieren",
+    "description": "Wir wir eine Maschine bei Hetzner zu einem Proxmox Server machen.",
+    "abstract": "\u003cp\u003eAnbei ist der Ablauf beschrieben einen Hetzner Server in das System einzubinden.\u003c\/p\u003e",
     "inLanguage": "de-de",
-    "url" : "https:\/\/www.zyria.de\/docs\/it-intern\/server\/physische-server\/ansible\/",
+    "url" : "https:\/\/www.zyria.de\/posts\/homelab\/hetzner_install\/",
     "author" : {
       "@type": "Person",
       "name": "Fabrice Kirchner"
     },
     "copyrightYear": "2025",
-    "dateCreated": "2025-06-30T15:22:00\u002b02:00",
-    "datePublished": "2025-06-30T15:22:00\u002b02:00",
+    "dateCreated": "2025-06-30T17:05:57\u002b02:00",
+    "datePublished": "2025-06-30T17:05:57\u002b02:00",
     
-    "dateModified": "2025-05-13T19:00:32\u002b02:00",
+    "dateModified": "2025-06-30T17:05:47\u002b02:00",
     
     
     
     "mainEntityOfPage": "true",
-    "wordCount": "27"
+    "wordCount": "309"
   }]
   </script>
 
@@ -612,12 +612,6 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   
     
   
-    
-  
-    
-  
-    
-  
   <li class="hidden">
     <a class="hover:underline decoration-neutral-300 dark:underline-neutral-600" href="/"
       >Eine (scheinbar) leere Homepage</a
@@ -626,36 +620,15 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
 
   
   <li class="inline">
-    <a class="hover:underline decoration-neutral-300 dark:underline-neutral-600" href="/docs/"
-      >Documentation</a
-    ><span class="px-1 text-primary-500">/</span>
-  </li>
-
-  
-  <li class="inline">
-    <a class="hover:underline decoration-neutral-300 dark:underline-neutral-600" href="/docs/it-intern/"
-      >IT interne Dokumentation</a
-    ><span class="px-1 text-primary-500">/</span>
-  </li>
-
-  
-  <li class="inline">
-    <a class="hover:underline decoration-neutral-300 dark:underline-neutral-600" href="/docs/it-intern/server/"
-      >Server</a
-    ><span class="px-1 text-primary-500">/</span>
-  </li>
-
-  
-  <li class="inline">
-    <a class="hover:underline decoration-neutral-300 dark:underline-neutral-600" href="/docs/it-intern/server/physische-server/"
-      >Physische Server</a
+    <a class="hover:underline decoration-neutral-300 dark:underline-neutral-600" href="/posts/"
+      >Beiträge</a
     ><span class="px-1 text-primary-500">/</span>
   </li>
 
   
   <li class="hidden">
-    <a class="hover:underline decoration-neutral-300 dark:underline-neutral-600" href="/docs/it-intern/server/physische-server/ansible/"
-      >Ansible setup</a
+    <a class="hover:underline decoration-neutral-300 dark:underline-neutral-600" href="/posts/homelab/hetzner_install/"
+      >Hetzner Server installieren</a
     ><span class="px-1 text-primary-500">/</span>
   </li>
 
@@ -664,7 +637,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
 
       
       <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
-        Ansible setup
+        Hetzner Server installieren
       </h1>
       <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
         
@@ -694,8 +667,6 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   
 
   
-    
-  
 
   
 
@@ -719,7 +690,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2025-06-30T15:22:00&#43;02:00">30 Juni 2025</time><span class="px-2 text-primary-500">&middot;</span><time datetime="2025-05-13T19:00:32&#43;02:00">Aktualisiert: 13 Mai 2025</time><span class="px-2 text-primary-500">&middot;</span>
+      <time datetime="2025-06-30T17:05:57&#43;02:00">30 Juni 2025</time><span class="px-2 text-primary-500">&middot;</span>
 
 
   
@@ -727,7 +698,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
 
 <span class="mb-[2px]">
   <a
-    href="https://git.zyria.de/pyrox/zyria_de/src/branch/main/content/docs/it-intern/server/physische-server/ansible.md"
+    href="https://git.zyria.de/pyrox/zyria_de/src/branch/main/content/posts/homelab/hetzner_install.md"
     class="text-lg hover:text-primary-500"
     rel="noopener noreferrer"
     target="_blank"
@@ -849,7 +820,9 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
     class="min-w-[220px] py-2 border-dotted ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#setup-mit-ansible">Setup mit Ansible</a></li>
+    <li><a href="#bestellung-von-servern"><a href="https://robot.hetzner.com/order">Bestellung</a> von Servern</a></li>
+    <li><a href="#nach-der-bestellung">Nach der Bestellung</a></li>
+    <li><a href="#installation">Installation</a></li>
   </ul>
 </nav>
   </div>
@@ -863,7 +836,9 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
     class="py-2 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#setup-mit-ansible">Setup mit Ansible</a></li>
+    <li><a href="#bestellung-von-servern"><a href="https://robot.hetzner.com/order">Bestellung</a> von Servern</a></li>
+    <li><a href="#nach-der-bestellung">Nach der Bestellung</a></li>
+    <li><a href="#installation">Installation</a></li>
   </ul>
 </nav>
   </div>
@@ -966,18 +941,106 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
 
 
         <div class="article-content max-w-prose mb-20">
-          
-<h2 class="relative group">Setup mit Ansible 
-    <div id="setup-mit-ansible" class="anchor"></div>
+          <p>Anbei ist der Ablauf beschrieben einen Hetzner Server in das System einzubinden.</p>
+
+<h2 class="relative group"><a
+  href="https://robot.hetzner.com/order"
+    target="_blank"
+  >Bestellung</a>
+ von Servern 
+    <div id="bestellung-von-servern" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#setup-mit-ansible" aria-label="Anker">#</a>
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#bestellung-von-servern" aria-label="Anker">#</a>
     </span>        
     
 </h2>
-<p>Nachdem ein Server das erste mal gestartet wurde und der Storage wie auch das remote unlock konfiguriert wurde, übernimmt Ansible die volle Kontrolle.</p>
+<ol>
+<li>IPv4 Option. Nach der Installation wird diese direkt gekündigt. Die IPv4 Adresse bekommt der Server später über den <a
+  href="https://robot.hetzner.com/vswitch/index"
+    target="_blank"
+  >Vswitch</a>
+.</li>
+<li>Server werden immer mit Rescue System bestellt. Wir installieren unsere Maschinen selbst.</li>
+<li>Bei der Bestellung unbedingt einen <a
+  href="https://robot.hetzner.com/key/index"
+    target="_blank"
+  >SSH Key hinterlegen</a>
+.</li>
+<li><a
+  href="https://docs.hetzner.com/de/general/others/order-processing/"
+    target="_blank"
+  >Status</a>
+ prüfen und Puffer von etwa acht Stunden einplanen. (Lieber einen Tag zu früh bezahlen als ohne Server sein)</li>
+</ol>
 
+<h2 class="relative group">Nach der Bestellung 
+    <div id="nach-der-bestellung" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#nach-der-bestellung" aria-label="Anker">#</a>
+    </span>        
+    
+</h2>
+<ol>
+<li>Alle notwendigen Informationen werden uns Email zugesandt.</li>
+<li>Prüfe den Fingerprint des Public Keys in der Email. Sollte der Key nicht stimmen, starte den Server erneut und mit korrekten Schlüssel in das <a
+  href="https://robot.hetzner.com/server"
+    target="_blank"
+  >Rescue System</a>
+.</li>
+<li>Prüfe beim Einloggen den Host-Key Fingerprint. Sollte dieser nicht korrekt sein, wende dich an den Hetzner Support</li>
+<li>Hetzner überprüft seine Hardware vor der Auslieferung. Sollte etwas auffällig sein, Server reklamieren. So der Server bereits eine längere Laufzeit hinter sich hat, die Lebensdauer der SSD überprüfen und gegebenenfalls tauschen lassen.</li>
+</ol>
+
+<h2 class="relative group">Installation 
+    <div id="installation" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#installation" aria-label="Anker">#</a>
+    </span>        
+    
+</h2>
+<ol>
+<li>Git auf dem Server installieren</li>
+<li><a
+  href="https://www.casa-due-pur.de/git/fabrice.kirchner/hetzner-install.git"
+    target="_blank"
+  >Repository</a>
+ holen</li>
+<li>Daten beschaffen:</li>
+</ol>
+<p>a. FQDN = überlege einen passenden Namen für die Maschine.<br>
+a. CRYPT_PASS = lass dir ein sicheres Passwort in deinem Passwortgenerator<br>
+generieren.<br>
+a. IPV4 = Die Adresse aus der Auslieferungsmail von Hetzner</p>
+<ol>
+<li>
+<blockquote>
+<p>./install.sh FQDN CRYPT_PASS IPV4</p></blockquote>
+</li>
+<li>
+<p>Neustart, wenn keine Fehlermeldungen kamen.</p>
+</li>
+<li>
+<p>TODO: STORAGE beschreiben</p>
+</li>
+<li>
+<p>Remote unlock einrichten.<br>
+Per SSH funktioniert das entsperren der Luks Partitionen bereits. Damit dies automatisch funktioniert, müssen noch alle Tang Server hinzugefügt werden, welche die Partitionen entsperren dürfen. Dazu als erstes die neue IP in der Firewall freischalten und dann folgende Kommandos auf der Kommandozeile eingeben:</p>
+</li>
+</ol>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">  clevis luks <span class="nb">bind</span> -d /dev/md1 tang <span class="s1">&#39;{&#34;url&#34;: &#34;http://[2003:a:b16:4700:56b2:3ff:fefd:3ec9]&#34;}&#39;</span>
+</span></span><span class="line"><span class="ln">2</span><span class="cl">  <span class="c1"># cl07</span>
+</span></span><span class="line"><span class="ln">3</span><span class="cl">  clevis luks <span class="nb">bind</span> -d /dev/md1 tang <span class="s1">&#39;{&#34;url&#34;: &#34;http://[2a01:4f9:5a:5393::2]&#34;}&#39;</span>
+</span></span><span class="line"><span class="ln">4</span><span class="cl">  <span class="c1"># cl06</span>
+</span></span><span class="line"><span class="ln">5</span><span class="cl">  clevis luks <span class="nb">bind</span> -d /dev/md1 tang <span class="s1">&#39;{&#34;url&#34;: &#34;http://[2a01:4f8:151:3184::2]&#34;}&#39;</span>
+</span></span><span class="line"><span class="ln">6</span><span class="cl">  <span class="c1"># cl05</span>
+</span></span><span class="line"><span class="ln">7</span><span class="cl">  clevis luks <span class="nb">bind</span> -d /dev/md1 tang <span class="s1">&#39;{&#34;url&#34;: &#34;http://[2a01:4f8:151:317c::2]&#34;}&#39;</span>
+</span></span></code></pre></div>
           
           
           
@@ -985,7 +1048,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
               <a
                 target="_blank"
                 class="m-1 rounded bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-                href="mailto:fabrice@zyria.de?subject=Reply%20to%20Ansible%20setup">
+                href="mailto:fabrice@zyria.de?subject=Reply%20to%20Hetzner%20Server%20installieren">
                 Reply by Email
               </a>
             </strong>
@@ -1209,8 +1272,8 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
           type="text/javascript"
           src="/js/page.min.407e5b2727c1f241c95d53db24c776bea71bfc18e09511b815d669ad8caca6e9e18a53864ad364b1ccccfa2f2956768d33cfe193bfb64d3406f3b5ece354ba57.js"
           integrity="sha512-QH5bJyfB8kHJXVPbJMd2vqcb/BjglRG4FdZprYyspunhilOGStNksczM&#43;i8pVnaNM8/hk7&#43;2TTQG87Xs41S6Vw=="
-          data-oid="views_docs/it-intern/server/physische-server/ansible.md"
-          data-oid-likes="likes_docs/it-intern/server/physische-server/ansible.md"></script>
+          data-oid="views_posts/homelab/hetzner_install.md"
+          data-oid-likes="likes_posts/homelab/hetzner_install.md"></script>
       
 
     </section>
@@ -1225,7 +1288,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
       <div class="flex justify-between pt-3">
         <span>
           
-            <a class="flex group mr-3" href="/docs/it-intern/server/physische-server/hetzner_install/">
+            <a class="flex group mr-3" href="/posts/homelab/software/">
               <span
                 class="mr-3 text-neutral-700 group-hover:text-primary-600 ltr:inline rtl:hidden dark:text-neutral dark:group-hover:text-primary-400"
                 >&larr;</span
@@ -1236,11 +1299,11 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
               >
               <span class="flex flex-col">
                 <span class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
-                  >Hetzner Server installieren</span
+                  >Software</span
                 >
                 <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
                   
-                    <time datetime="2025-06-30T15:22:00&#43;02:00">30 Juni 2025</time>
+                    <time datetime="2025-06-30T17:05:57&#43;02:00">30 Juni 2025</time>
                   
                 </span>
               </span>
@@ -1249,14 +1312,14 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
         </span>
         <span>
           
-            <a class="flex text-right group ml-3" href="/docs/it-intern/server/physische-server/abe/">
+            <a class="flex text-right group ml-3" href="/posts/homelab/hardware/">
               <span class="flex flex-col">
                 <span class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
-                  >abe</span
+                  >Hardware im Homelab</span
                 >
                 <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
                   
-                    <time datetime="2025-06-30T15:22:00&#43;02:00">30 Juni 2025</time>
+                    <time datetime="2025-06-30T17:05:57&#43;02:00">30 Juni 2025</time>
                   
                 </span>
               </span>

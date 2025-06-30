@@ -10,7 +10,7 @@
   </url>
   <url>
     <loc>https://www.zyria.de/posts/</loc>
-    <lastmod>2025-05-13T19:00:32+02:00</lastmod>
+    <lastmod>2025-06-30T17:05:47+02:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
@@ -57,12 +57,6 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://www.zyria.de/docs/it-intern/server/physische-server/</loc>
-    <lastmod>2025-05-13T19:00:32+02:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
     <loc>https://www.zyria.de/docs/it-intern/sammelbecken/</loc>
     <lastmod>2025-05-13T19:00:32+02:00</lastmod>
     <changefreq>daily</changefreq>
@@ -87,19 +81,7 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://www.zyria.de/docs/it-intern/server/physische-server/abe/</loc>
-    <lastmod>2025-05-13T19:00:32+02:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
     <loc>https://www.zyria.de/docs/it-intern/server/vms/addc/</loc>
-    <lastmod>2025-05-13T19:00:32+02:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://www.zyria.de/docs/it-intern/server/physische-server/ansible/</loc>
     <lastmod>2025-05-13T19:00:32+02:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
@@ -142,7 +124,7 @@
   </url>
   <url>
     <loc>https://www.zyria.de/posts/homelab/hardware/</loc>
-    <lastmod>2025-06-30T15:21:49+02:00</lastmod>
+    <lastmod>2025-06-30T17:05:47+02:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
@@ -153,14 +135,8 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://www.zyria.de/docs/it-intern/server/physische-server/hetzner_install/</loc>
-    <lastmod>2025-05-13T19:00:32+02:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://www.zyria.de/docs/it-intern/server/physische-server/lisa/</loc>
-    <lastmod>2025-05-13T19:00:32+02:00</lastmod>
+    <loc>https://www.zyria.de/posts/homelab/hetzner_install/</loc>
+    <lastmod>2025-06-30T17:05:47+02:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
@@ -177,18 +153,6 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://www.zyria.de/docs/it-intern/server/physische-server/marge/</loc>
-    <lastmod>2025-05-13T19:00:32+02:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://www.zyria.de/docs/it-intern/server/physische-server/moe/</loc>
-    <lastmod>2025-05-13T19:00:32+02:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
     <loc>https://www.zyria.de/docs/it-intern/services/mailstack/postfix/</loc>
     <lastmod>2025-05-13T19:00:32+02:00</lastmod>
     <changefreq>daily</changefreq>
@@ -196,12 +160,6 @@
   </url>
   <url>
     <loc>https://www.zyria.de/docs/it-intern/services/mta-sts/</loc>
-    <lastmod>2025-05-13T19:00:32+02:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://www.zyria.de/docs/it-intern/server/physische-server/ned/</loc>
     <lastmod>2025-05-13T19:00:32+02:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
@@ -250,7 +208,7 @@
   </url>
   <url>
     <loc>https://www.zyria.de/posts/homelab/software/</loc>
-    <lastmod>2025-06-30T15:21:49+02:00</lastmod>
+    <lastmod>2025-06-30T17:05:47+02:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
@@ -304,13 +262,13 @@
   </url>
   <url>
     <loc>https://www.zyria.de/posts/solar/</loc>
-    <lastmod>2025-04-15T12:05:01+02:00</lastmod>
+    <lastmod>2025-06-30T17:05:47+02:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.zyria.de/posts/strom/</loc>
-    <lastmod>2025-04-15T12:05:01+02:00</lastmod>
+    <lastmod>2025-06-30T17:05:47+02:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>

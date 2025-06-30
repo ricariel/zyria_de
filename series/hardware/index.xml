@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Homelab on Zyria</title>
-    <link>https://www.zyria.de/series/homelab/</link>
-    <description>Recent content in Homelab on Zyria</description>
+    <title>Hardware on Zyria</title>
+    <link>https://www.zyria.de/series/hardware/</link>
+    <description>Recent content in Hardware on Zyria</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>de-de</language>
     <managingEditor>fabrice@zyria.de (Fabrice Kirchner)</managingEditor>
     <webMaster>fabrice@zyria.de (Fabrice Kirchner)</webMaster>
     
-    <lastBuildDate>Mon, 30 Jun 2025 17:05:57 +0200</lastBuildDate><atom:link href="https://www.zyria.de/series/homelab/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 30 Jun 2025 17:05:57 +0200</lastBuildDate><atom:link href="https://www.zyria.de/series/hardware/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Hardware im Homelab</title>
@@ -18,16 +18,6 @@
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/posts/homelab/hardware/</guid>
       <description>&lt;p&gt;Hier findet man eine Übersicht über die im Homelab verwendete Hardware.&lt;/p&gt;</description>
-      
-    </item>
-    
-    <item>
-      <title>Software</title>
-      <link>https://www.zyria.de/posts/homelab/software/</link>
-      <pubDate>Mon, 30 Jun 2025 17:05:57 +0200</pubDate>
-      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://www.zyria.de/posts/homelab/software/</guid>
-      <description>&lt;p&gt;Die eingesetzte Software partiell dokumentiert.&lt;/p&gt;</description>
       
     </item>
     

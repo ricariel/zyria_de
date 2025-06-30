@@ -107,7 +107,7 @@ Telefon:&lt;br&gt;
     <item>
       <title>Logins</title>
       <link>https://www.zyria.de/docs/it-intern/server/login/</link>
-      <pubDate>Mon, 30 Jun 2025 15:22:00 +0200</pubDate>
+      <pubDate>Mon, 30 Jun 2025 17:05:57 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/docs/it-intern/server/login/</guid>
       <description>&lt;p&gt;Alle Zugangsdaten sind entweder in der Persönlichen Keepass Datendank (für&lt;br&gt;
@@ -131,7 +131,7 @@ werden.&lt;/p&gt;</description>
     <item>
       <title>Server-,Diensteverwaltung</title>
       <link>https://www.zyria.de/docs/it-intern/server/verwaltung/</link>
-      <pubDate>Mon, 30 Jun 2025 15:22:00 +0200</pubDate>
+      <pubDate>Mon, 30 Jun 2025 17:05:57 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/docs/it-intern/server/verwaltung/</guid>
       <description>&lt;p&gt;Wir verwenden zur generellen Verwaltung von Servern Ansible. Für manche Dienste&lt;br&gt;
@@ -200,52 +200,9 @@ Die Server sind Ipv6 only bestellt und beziehen eine IPv4 aus einem &lt;a
     </item>
     
     <item>
-      <title>abe</title>
-      <link>https://www.zyria.de/docs/it-intern/server/physische-server/abe/</link>
-      <pubDate>Mon, 30 Jun 2025 15:22:00 +0200</pubDate>
-      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://www.zyria.de/docs/it-intern/server/physische-server/abe/</guid>
-      <description>&lt;h2 class=&#34;relative group&#34;&gt;Primärfunktion 
-    &lt;div id=&#34;primärfunktion&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
-    
-    &lt;span
-        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
-        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#prim%c3%a4rfunktion&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;
-    &lt;/span&gt;        
-    
-&lt;/h2&gt;
-&lt;p&gt;Virtualisierungshost&lt;/p&gt;
-
-&lt;h2 class=&#34;relative group&#34;&gt;Zusätzlich installierte Software 
-    &lt;div id=&#34;zusätzlich-installierte-software&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
-    
-    &lt;span
-        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
-        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#zus%c3%a4tzlich-installierte-software&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;
-    &lt;/span&gt;        
-    
-&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;TODO&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 class=&#34;relative group&#34;&gt;Setup mit Ansible 
-    &lt;div id=&#34;setup-mit-ansible&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
-    
-    &lt;span
-        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
-        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#setup-mit-ansible&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;
-    &lt;/span&gt;        
-    
-&lt;/h2&gt;
-&lt;p&gt;Nachdem ein Server das erste mal gestartet wurde und der Storage wie auch das remote unlock konfiguriert wurde, übernimmt Ansible die volle Kontrolle.&lt;/p&gt;</description>
-      
-    </item>
-    
-    <item>
       <title>Addc</title>
       <link>https://www.zyria.de/docs/it-intern/server/vms/addc/</link>
-      <pubDate>Mon, 30 Jun 2025 15:22:00 +0200</pubDate>
+      <pubDate>Mon, 30 Jun 2025 17:05:57 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/docs/it-intern/server/vms/addc/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;Primärfunktion 
@@ -275,28 +232,9 @@ Die Server sind Ipv6 only bestellt und beziehen eine IPv4 aus einem &lt;a
     </item>
     
     <item>
-      <title>Ansible setup</title>
-      <link>https://www.zyria.de/docs/it-intern/server/physische-server/ansible/</link>
-      <pubDate>Mon, 30 Jun 2025 15:22:00 +0200</pubDate>
-      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://www.zyria.de/docs/it-intern/server/physische-server/ansible/</guid>
-      <description>&lt;h2 class=&#34;relative group&#34;&gt;Setup mit Ansible 
-    &lt;div id=&#34;setup-mit-ansible&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
-    
-    &lt;span
-        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
-        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#setup-mit-ansible&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;
-    &lt;/span&gt;        
-    
-&lt;/h2&gt;
-&lt;p&gt;Nachdem ein Server das erste mal gestartet wurde und der Storage wie auch das remote unlock konfiguriert wurde, übernimmt Ansible die volle Kontrolle.&lt;/p&gt;</description>
-      
-    </item>
-    
-    <item>
       <title>Dev</title>
       <link>https://www.zyria.de/docs/it-intern/server/vms/dev/</link>
-      <pubDate>Mon, 30 Jun 2025 15:22:00 +0200</pubDate>
+      <pubDate>Mon, 30 Jun 2025 17:05:57 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/docs/it-intern/server/vms/dev/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;Primärfunktion 
@@ -330,7 +268,7 @@ Die Server sind Ipv6 only bestellt und beziehen eine IPv4 aus einem &lt;a
     <item>
       <title>Dmarc-Report</title>
       <link>https://www.zyria.de/docs/it-intern/services/dmarc-report/</link>
-      <pubDate>Mon, 30 Jun 2025 15:22:00 +0200</pubDate>
+      <pubDate>Mon, 30 Jun 2025 17:05:57 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/docs/it-intern/services/dmarc-report/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;Quelle 
@@ -395,7 +333,7 @@ Webinterface.&lt;/p&gt;</description>
     <item>
       <title>Docs</title>
       <link>https://www.zyria.de/docs/it-intern/services/docs/</link>
-      <pubDate>Mon, 30 Jun 2025 15:22:00 +0200</pubDate>
+      <pubDate>Mon, 30 Jun 2025 17:05:57 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/docs/it-intern/services/docs/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;Quelle 
@@ -458,7 +396,7 @@ Webinterface.&lt;/p&gt;</description>
     <item>
       <title>Dovecot</title>
       <link>https://www.zyria.de/docs/it-intern/services/mailstack/dovecot/</link>
-      <pubDate>Mon, 30 Jun 2025 15:22:00 +0200</pubDate>
+      <pubDate>Mon, 30 Jun 2025 17:05:57 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/docs/it-intern/services/mailstack/dovecot/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;Quelle 
@@ -507,7 +445,7 @@ Webinterface.&lt;/p&gt;</description>
     <item>
       <title>Forgejo</title>
       <link>https://www.zyria.de/docs/it-intern/services/forgejo/</link>
-      <pubDate>Mon, 30 Jun 2025 15:22:00 +0200</pubDate>
+      <pubDate>Mon, 30 Jun 2025 17:05:57 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/docs/it-intern/services/forgejo/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;Quelle 
@@ -573,42 +511,17 @@ Repositories zu.&lt;/p&gt;</description>
     <item>
       <title>Hardware im Homelab</title>
       <link>https://www.zyria.de/posts/homelab/hardware/</link>
-      <pubDate>Mon, 30 Jun 2025 15:22:00 +0200</pubDate>
+      <pubDate>Mon, 30 Jun 2025 17:05:57 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/posts/homelab/hardware/</guid>
-      <description>&lt;h2 class=&#34;relative group&#34;&gt;Netzwerk 
-    &lt;div id=&#34;netzwerk&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
-    
-    &lt;span
-        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
-        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#netzwerk&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;
-    &lt;/span&gt;        
-    
-&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Fritzbox 7590&lt;/li&gt;
-&lt;li&gt;Unifi US 8 PoE 150W (2x)&lt;/li&gt;
-&lt;li&gt;Unifi Nano HD (2x)&lt;/li&gt;
-&lt;li&gt;Unifi U6 Pro&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 class=&#34;relative group&#34;&gt;Server 
-    &lt;div id=&#34;server&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
-    
-    &lt;span
-        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
-        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#server&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;
-    &lt;/span&gt;        
-    
-&lt;/h2&gt;
-&lt;p&gt;Aktuell nutze ich Mini-PC&amp;rsquo;s als Server, da Sie relativ günstig und stromsparend sind.&lt;/p&gt;</description>
+      <description>&lt;p&gt;Hier findet man eine Übersicht über die im Homelab verwendete Hardware.&lt;/p&gt;</description>
       
     </item>
     
     <item>
       <title>Hedgedoc</title>
       <link>https://www.zyria.de/docs/it-intern/services/hedgedoc/</link>
-      <pubDate>Mon, 30 Jun 2025 15:22:00 +0200</pubDate>
+      <pubDate>Mon, 30 Jun 2025 17:05:57 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/docs/it-intern/services/hedgedoc/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;Quelle 
@@ -665,134 +578,18 @@ Repositories zu.&lt;/p&gt;</description>
     
     <item>
       <title>Hetzner Server installieren</title>
-      <link>https://www.zyria.de/docs/it-intern/server/physische-server/hetzner_install/</link>
-      <pubDate>Mon, 30 Jun 2025 15:22:00 +0200</pubDate>
+      <link>https://www.zyria.de/posts/homelab/hetzner_install/</link>
+      <pubDate>Mon, 30 Jun 2025 17:05:57 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://www.zyria.de/docs/it-intern/server/physische-server/hetzner_install/</guid>
-      <description>&lt;h2 class=&#34;relative group&#34;&gt;&lt;a
-  href=&#34;https://robot.hetzner.com/order&#34;
-    target=&#34;_blank&#34;
-  &gt;Bestellung&lt;/a&gt;
- von Servern 
-    &lt;div id=&#34;bestellung-von-servern&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
-    
-    &lt;span
-        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
-        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#bestellung-von-servern&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;
-    &lt;/span&gt;        
-    
-&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;IPv4 Option. Nach der Installation wird diese direkt gekündigt. Die IPv4 Adresse bekommt der Server später über den &lt;a
-  href=&#34;https://robot.hetzner.com/vswitch/index&#34;
-    target=&#34;_blank&#34;
-  &gt;Vswitch&lt;/a&gt;
-.&lt;/li&gt;
-&lt;li&gt;Server werden immer mit Rescue System bestellt. Wir installieren unsere Maschinen selbst.&lt;/li&gt;
-&lt;li&gt;Bei der Bestellung unbedingt einen &lt;a
-  href=&#34;https://robot.hetzner.com/key/index&#34;
-    target=&#34;_blank&#34;
-  &gt;SSH Key hinterlegen&lt;/a&gt;
-.&lt;/li&gt;
-&lt;li&gt;&lt;a
-  href=&#34;https://docs.hetzner.com/de/general/others/order-processing/&#34;
-    target=&#34;_blank&#34;
-  &gt;Status&lt;/a&gt;
- prüfen und Puffer von etwa acht Stunden einplanen. (Lieber einen Tag zu früh bezahlen als ohne Server sein)&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2 class=&#34;relative group&#34;&gt;Nach der Bestellung 
-    &lt;div id=&#34;nach-der-bestellung&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
-    
-    &lt;span
-        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
-        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#nach-der-bestellung&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;
-    &lt;/span&gt;        
-    
-&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;Alle notwendigen Informationen werden uns Email zugesandt.&lt;/li&gt;
-&lt;li&gt;Prüfe den Fingerprint des Public Keys in der Email. Sollte der Key nicht stimmen, starte den Server erneut und mit korrekten Schlüssel in das &lt;a
-  href=&#34;https://robot.hetzner.com/server&#34;
-    target=&#34;_blank&#34;
-  &gt;Rescue System&lt;/a&gt;
-.&lt;/li&gt;
-&lt;li&gt;Prüfe beim Einloggen den Host-Key Fingerprint. Sollte dieser nicht korrekt sein, wende dich an den Hetzner Support&lt;/li&gt;
-&lt;li&gt;Hetzner überprüft seine Hardware vor der Auslieferung. Sollte etwas auffällig sein, Server reklamieren. So der Server bereits eine längere Laufzeit hinter sich hat, die Lebensdauer der SSD überprüfen und gegebenenfalls tauschen lassen.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2 class=&#34;relative group&#34;&gt;Installation 
-    &lt;div id=&#34;installation&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
-    
-    &lt;span
-        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
-        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#installation&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;
-    &lt;/span&gt;        
-    
-&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;Git auf dem Server installieren&lt;/li&gt;
-&lt;li&gt;&lt;a
-  href=&#34;https://www.casa-due-pur.de/git/fabrice.kirchner/hetzner-install.git&#34;
-    target=&#34;_blank&#34;
-  &gt;Repository&lt;/a&gt;
- holen&lt;/li&gt;
-&lt;li&gt;Daten beschaffen:&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;a. FQDN = überlege einen passenden Namen für die Maschine.&lt;br&gt;
-a. CRYPT_PASS = lass dir ein sicheres Passwort in deinem Passwortgenerator&lt;br&gt;
-generieren.&lt;br&gt;
-a. IPV4 = Die Adresse aus der Auslieferungsmail von Hetzner&lt;/p&gt;</description>
-      
-    </item>
-    
-    <item>
-      <title>lisa</title>
-      <link>https://www.zyria.de/docs/it-intern/server/physische-server/lisa/</link>
-      <pubDate>Mon, 30 Jun 2025 15:22:00 +0200</pubDate>
-      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://www.zyria.de/docs/it-intern/server/physische-server/lisa/</guid>
-      <description>&lt;h2 class=&#34;relative group&#34;&gt;Primärfunktion 
-    &lt;div id=&#34;primärfunktion&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
-    
-    &lt;span
-        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
-        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#prim%c3%a4rfunktion&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;
-    &lt;/span&gt;        
-    
-&lt;/h2&gt;
-&lt;p&gt;Virtualisierungshost&lt;/p&gt;
-
-&lt;h2 class=&#34;relative group&#34;&gt;Zusätzlich installierte Software 
-    &lt;div id=&#34;zusätzlich-installierte-software&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
-    
-    &lt;span
-        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
-        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#zus%c3%a4tzlich-installierte-software&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;
-    &lt;/span&gt;        
-    
-&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;TODO&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 class=&#34;relative group&#34;&gt;Setup mit Ansible 
-    &lt;div id=&#34;setup-mit-ansible&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
-    
-    &lt;span
-        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
-        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#setup-mit-ansible&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;
-    &lt;/span&gt;        
-    
-&lt;/h2&gt;
-&lt;p&gt;Nachdem ein Server das erste mal gestartet wurde und der Storage wie auch das remote unlock konfiguriert wurde, übernimmt Ansible die volle Kontrolle.&lt;/p&gt;</description>
+      <guid>https://www.zyria.de/posts/homelab/hetzner_install/</guid>
+      <description>&lt;p&gt;Anbei ist der Ablauf beschrieben einen Hetzner Server in das System einzubinden.&lt;/p&gt;</description>
       
     </item>
     
     <item>
       <title>Maintenance Page</title>
       <link>https://www.zyria.de/docs/it-intern/services/maintenance/</link>
-      <pubDate>Mon, 30 Jun 2025 15:22:00 +0200</pubDate>
+      <pubDate>Mon, 30 Jun 2025 17:05:57 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/docs/it-intern/services/maintenance/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;Quelle 
@@ -859,95 +656,9 @@ a. IPV4 = Die Adresse aus der Auslieferungsmail von Hetzner&lt;/p&gt;</descripti
     </item>
     
     <item>
-      <title>marge</title>
-      <link>https://www.zyria.de/docs/it-intern/server/physische-server/marge/</link>
-      <pubDate>Mon, 30 Jun 2025 15:22:00 +0200</pubDate>
-      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://www.zyria.de/docs/it-intern/server/physische-server/marge/</guid>
-      <description>&lt;h2 class=&#34;relative group&#34;&gt;Primärfunktion 
-    &lt;div id=&#34;primärfunktion&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
-    
-    &lt;span
-        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
-        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#prim%c3%a4rfunktion&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;
-    &lt;/span&gt;        
-    
-&lt;/h2&gt;
-&lt;p&gt;Virtualisierungshost&lt;/p&gt;
-
-&lt;h2 class=&#34;relative group&#34;&gt;Zusätzlich installierte Software 
-    &lt;div id=&#34;zusätzlich-installierte-software&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
-    
-    &lt;span
-        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
-        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#zus%c3%a4tzlich-installierte-software&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;
-    &lt;/span&gt;        
-    
-&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;TODO&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 class=&#34;relative group&#34;&gt;Setup mit Ansible 
-    &lt;div id=&#34;setup-mit-ansible&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
-    
-    &lt;span
-        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
-        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#setup-mit-ansible&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;
-    &lt;/span&gt;        
-    
-&lt;/h2&gt;
-&lt;p&gt;Nachdem ein Server das erste mal gestartet wurde und der Storage wie auch das remote unlock konfiguriert wurde, übernimmt Ansible die volle Kontrolle.&lt;/p&gt;</description>
-      
-    </item>
-    
-    <item>
-      <title>moe</title>
-      <link>https://www.zyria.de/docs/it-intern/server/physische-server/moe/</link>
-      <pubDate>Mon, 30 Jun 2025 15:22:00 +0200</pubDate>
-      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://www.zyria.de/docs/it-intern/server/physische-server/moe/</guid>
-      <description>&lt;h2 class=&#34;relative group&#34;&gt;Primärfunktion 
-    &lt;div id=&#34;primärfunktion&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
-    
-    &lt;span
-        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
-        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#prim%c3%a4rfunktion&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;
-    &lt;/span&gt;        
-    
-&lt;/h2&gt;
-&lt;p&gt;Virtualisierungshost&lt;/p&gt;
-
-&lt;h2 class=&#34;relative group&#34;&gt;Zusätzlich installierte Software 
-    &lt;div id=&#34;zusätzlich-installierte-software&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
-    
-    &lt;span
-        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
-        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#zus%c3%a4tzlich-installierte-software&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;
-    &lt;/span&gt;        
-    
-&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;TODO&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 class=&#34;relative group&#34;&gt;Setup mit Ansible 
-    &lt;div id=&#34;setup-mit-ansible&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
-    
-    &lt;span
-        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
-        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#setup-mit-ansible&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;
-    &lt;/span&gt;        
-    
-&lt;/h2&gt;
-&lt;p&gt;Nachdem ein Server das erste mal gestartet wurde und der Storage wie auch das remote unlock konfiguriert wurde, übernimmt Ansible die volle Kontrolle.&lt;/p&gt;</description>
-      
-    </item>
-    
-    <item>
       <title>MTA Postfix</title>
       <link>https://www.zyria.de/docs/it-intern/services/mailstack/postfix/</link>
-      <pubDate>Mon, 30 Jun 2025 15:22:00 +0200</pubDate>
+      <pubDate>Mon, 30 Jun 2025 17:05:57 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/docs/it-intern/services/mailstack/postfix/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;Quelle 
@@ -1001,7 +712,7 @@ Ein Set an vordefinierten Variablen lässt sich im &lt;a
     <item>
       <title>Mta-sts</title>
       <link>https://www.zyria.de/docs/it-intern/services/mta-sts/</link>
-      <pubDate>Mon, 30 Jun 2025 15:22:00 +0200</pubDate>
+      <pubDate>Mon, 30 Jun 2025 17:05:57 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/docs/it-intern/services/mta-sts/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;Quelle 
@@ -1064,52 +775,9 @@ erreichbar.&lt;/p&gt;</description>
     </item>
     
     <item>
-      <title>ned</title>
-      <link>https://www.zyria.de/docs/it-intern/server/physische-server/ned/</link>
-      <pubDate>Mon, 30 Jun 2025 15:22:00 +0200</pubDate>
-      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://www.zyria.de/docs/it-intern/server/physische-server/ned/</guid>
-      <description>&lt;h2 class=&#34;relative group&#34;&gt;Primärfunktion 
-    &lt;div id=&#34;primärfunktion&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
-    
-    &lt;span
-        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
-        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#prim%c3%a4rfunktion&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;
-    &lt;/span&gt;        
-    
-&lt;/h2&gt;
-&lt;p&gt;Virtualisierungshost&lt;/p&gt;
-
-&lt;h2 class=&#34;relative group&#34;&gt;Zusätzlich installierte Software 
-    &lt;div id=&#34;zusätzlich-installierte-software&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
-    
-    &lt;span
-        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
-        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#zus%c3%a4tzlich-installierte-software&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;
-    &lt;/span&gt;        
-    
-&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;TODO&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 class=&#34;relative group&#34;&gt;Setup mit Ansible 
-    &lt;div id=&#34;setup-mit-ansible&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
-    
-    &lt;span
-        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
-        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#setup-mit-ansible&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;
-    &lt;/span&gt;        
-    
-&lt;/h2&gt;
-&lt;p&gt;Nachdem ein Server das erste mal gestartet wurde und der Storage wie auch das remote unlock konfiguriert wurde, übernimmt Ansible die volle Kontrolle.&lt;/p&gt;</description>
-      
-    </item>
-    
-    <item>
       <title>Passwörter</title>
       <link>https://www.zyria.de/docs/it-support/passworter/</link>
-      <pubDate>Mon, 30 Jun 2025 15:22:00 +0200</pubDate>
+      <pubDate>Mon, 30 Jun 2025 17:05:57 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/docs/it-support/passworter/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;Was wir nicht tun 
@@ -1147,7 +815,7 @@ erreichbar.&lt;/p&gt;</description>
     <item>
       <title>Pihole</title>
       <link>https://www.zyria.de/docs/it-intern/services/pihole/</link>
-      <pubDate>Mon, 30 Jun 2025 15:22:00 +0200</pubDate>
+      <pubDate>Mon, 30 Jun 2025 17:05:57 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/docs/it-intern/services/pihole/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;Quelle 
@@ -1210,7 +878,7 @@ erreichbar.&lt;/p&gt;</description>
     <item>
       <title>Roundcube Webmail</title>
       <link>https://www.zyria.de/docs/it-intern/services/roundcube/</link>
-      <pubDate>Mon, 30 Jun 2025 15:22:00 +0200</pubDate>
+      <pubDate>Mon, 30 Jun 2025 17:05:57 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/docs/it-intern/services/roundcube/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;Quelle 
@@ -1278,7 +946,7 @@ erreichbar.&lt;/p&gt;</description>
     <item>
       <title>Samba Schema</title>
       <link>https://www.zyria.de/docs/it-intern/server/samba-schema/</link>
-      <pubDate>Mon, 30 Jun 2025 15:22:00 +0200</pubDate>
+      <pubDate>Mon, 30 Jun 2025 17:05:57 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/docs/it-intern/server/samba-schema/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;ms-MCS-AdmPwd und ms-MCS-AdmPwdExpirationTime 
@@ -1495,7 +1163,7 @@ erreichbar.&lt;/p&gt;</description>
     <item>
       <title>Setup Windows Client</title>
       <link>https://www.zyria.de/docs/it-intern/client/setup_windows/</link>
-      <pubDate>Mon, 30 Jun 2025 15:22:00 +0200</pubDate>
+      <pubDate>Mon, 30 Jun 2025 17:05:57 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/docs/it-intern/client/setup_windows/</guid>
       <description>&lt;ul&gt;
@@ -1528,7 +1196,7 @@ erreichbar.&lt;/p&gt;</description>
     <item>
       <title>Snippets</title>
       <link>https://www.zyria.de/docs/it-intern/sammelbecken/snippets/</link>
-      <pubDate>Mon, 30 Jun 2025 15:22:00 +0200</pubDate>
+      <pubDate>Mon, 30 Jun 2025 17:05:57 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/docs/it-intern/sammelbecken/snippets/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;Snippets 
@@ -1774,37 +1442,17 @@ erreichbar.&lt;/p&gt;</description>
     <item>
       <title>Software</title>
       <link>https://www.zyria.de/posts/homelab/software/</link>
-      <pubDate>Mon, 30 Jun 2025 15:22:00 +0200</pubDate>
+      <pubDate>Mon, 30 Jun 2025 17:05:57 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/posts/homelab/software/</guid>
-      <description>&lt;h2 class=&#34;relative group&#34;&gt;Softwareliste 
-    &lt;div id=&#34;softwareliste&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
-    
-    &lt;span
-        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
-        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#softwareliste&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;
-    &lt;/span&gt;        
-    
-&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Moe
-&lt;ul&gt;
-&lt;li&gt;Proxmox&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Lisa
-&lt;ul&gt;
-&lt;li&gt;Proxmox&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;</description>
+      <description>&lt;p&gt;Die eingesetzte Software partiell dokumentiert.&lt;/p&gt;</description>
       
     </item>
     
     <item>
       <title>Traefik</title>
       <link>https://www.zyria.de/docs/it-intern/services/traefik/</link>
-      <pubDate>Mon, 30 Jun 2025 15:22:00 +0200</pubDate>
+      <pubDate>Mon, 30 Jun 2025 17:05:57 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/docs/it-intern/services/traefik/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;Quelle 
@@ -1868,7 +1516,7 @@ erreichbar.&lt;/p&gt;</description>
     <item>
       <title>Unifi Controller</title>
       <link>https://www.zyria.de/docs/it-intern/services/unifi-controller/</link>
-      <pubDate>Mon, 30 Jun 2025 15:22:00 +0200</pubDate>
+      <pubDate>Mon, 30 Jun 2025 17:05:57 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/docs/it-intern/services/unifi-controller/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;Quelle 
@@ -1926,7 +1574,7 @@ erreichbar.&lt;/p&gt;</description>
     <item>
       <title>Uptime Kuma</title>
       <link>https://www.zyria.de/docs/it-intern/services/uptime-kuma/</link>
-      <pubDate>Mon, 30 Jun 2025 15:22:00 +0200</pubDate>
+      <pubDate>Mon, 30 Jun 2025 17:05:57 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/docs/it-intern/services/uptime-kuma/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;Quelle 
@@ -1992,7 +1640,7 @@ der IT.&lt;/p&gt;</description>
     <item>
       <title>Windows autologon</title>
       <link>https://www.zyria.de/docs/it-intern/client/windows_autologon/</link>
-      <pubDate>Mon, 30 Jun 2025 15:22:00 +0200</pubDate>
+      <pubDate>Mon, 30 Jun 2025 17:05:57 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/docs/it-intern/client/windows_autologon/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;AutoLogon 
@@ -2020,7 +1668,7 @@ aus.&lt;/p&gt;
     <item>
       <title>Wireguard</title>
       <link>https://www.zyria.de/docs/it-intern/services/wireguard/</link>
-      <pubDate>Mon, 30 Jun 2025 15:22:00 +0200</pubDate>
+      <pubDate>Mon, 30 Jun 2025 17:05:57 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/docs/it-intern/services/wireguard/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;Quelle 
@@ -2093,7 +1741,7 @@ aus.&lt;/p&gt;
     <item>
       <title>WireGuard mit systemd</title>
       <link>https://www.zyria.de/docs/it-intern/client/wireguard_mit_systemd/</link>
-      <pubDate>Mon, 30 Jun 2025 15:22:00 +0200</pubDate>
+      <pubDate>Mon, 30 Jun 2025 17:05:57 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/docs/it-intern/client/wireguard_mit_systemd/</guid>
       <description>&lt;p&gt;Für eine WireGuard-Verbindung mit systemd-networkd und systemd-resolved.&lt;/p&gt;
@@ -2140,7 +1788,7 @@ aus.&lt;/p&gt;
     <item>
       <title>Zammad</title>
       <link>https://www.zyria.de/docs/it-intern/services/zammad/</link>
-      <pubDate>Mon, 30 Jun 2025 15:22:00 +0200</pubDate>
+      <pubDate>Mon, 30 Jun 2025 17:05:57 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/docs/it-intern/services/zammad/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;Quelle 
@@ -2198,7 +1846,7 @@ aus.&lt;/p&gt;
     <item>
       <title>Zugriffsrechte auf Mailboxen</title>
       <link>https://www.zyria.de/docs/it-intern/services/mailstack/sharedfolders/</link>
-      <pubDate>Mon, 30 Jun 2025 15:22:00 +0200</pubDate>
+      <pubDate>Mon, 30 Jun 2025 17:05:57 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/docs/it-intern/services/mailstack/sharedfolders/</guid>
       <description>&lt;p&gt;Wer hat eigentlich auf welche Mailbox Zugriff?&lt;/p&gt;
@@ -2247,8 +1895,7 @@ setzen:&lt;/p&gt;
     &lt;/span&gt;        
     
 &lt;/h2&gt;
-&lt;p&gt;Als Netto mit einem Solarkraftwerk in Selbstmontage geworben hat und unser Stromanbieter schon wieder eine Preiserhöhung ins Haus flatter ließ, war es um mich passiert. Es musste etwas passieren.&lt;/p&gt;
-&lt;p&gt;Zu Beginn meiner Reise habe ich mich für ein 830KWp Kraftwerk mit Deye Wechselrichter entschieden.&lt;/p&gt;</description>
+&lt;p&gt;Als Netto mit einem Solarkraftwerk in Selbstmontage geworben hat und unser Stromanbieter schon wieder eine Preiserhöhung ins Haus flatter ließ, war es um mich passiert. Es musste etwas passieren.&lt;/p&gt;</description>
       
     </item>
     
@@ -2258,35 +1905,7 @@ setzen:&lt;/p&gt;
       <pubDate>Fri, 08 Mar 2024 12:52:37 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/posts/strom/</guid>
-      <description>&lt;h2 class=&#34;relative group&#34;&gt;Hichi IR und Home Assistant 
-    &lt;div id=&#34;hichi-ir-und-home-assistant&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
-    
-    &lt;span
-        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
-        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#hichi-ir-und-home-assistant&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;
-    &lt;/span&gt;        
-    
-&lt;/h2&gt;
-&lt;p&gt;&lt;a
-  href=&#34;https://ottelo.jimdofree.com/stromz%c3%a4hler-auslesen-tasmota/&#34;
-    target=&#34;_blank&#34;
-  &gt;Stromzähler mit einem ESP8266 / ESP32 mit Tasmota auslesen und darstellen&lt;/a&gt;
-&lt;/p&gt;
-
-&lt;h2 class=&#34;relative group&#34;&gt;Solarflow Hoymiles Homeassistant 
-    &lt;div id=&#34;solarflow-hoymiles-homeassistant&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
-    
-    &lt;span
-        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
-        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#solarflow-hoymiles-homeassistant&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;
-    &lt;/span&gt;        
-    
-&lt;/h2&gt;
-&lt;p&gt;&lt;a
-  href=&#34;https://github.com/z-master42/solarflow/tree/main&#34;
-    target=&#34;_blank&#34;
-  &gt;Git Repo mit nützlichen Infos&lt;/a&gt;
-&lt;/p&gt;</description>
+      <description>&lt;p&gt;Linksammlung zum Thema Strom in meinem Heim.&lt;/p&gt;</description>
       
     </item>
     
