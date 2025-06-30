@@ -9,12 +9,12 @@
     <managingEditor>fabrice@zyria.de (Fabrice Kirchner)</managingEditor>
     <webMaster>fabrice@zyria.de (Fabrice Kirchner)</webMaster>
     
-    <lastBuildDate>Mon, 30 Jun 2025 15:14:21 +0200</lastBuildDate><atom:link href="https://www.zyria.de/docs/it-intern/server/physische-server/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 30 Jun 2025 15:22:00 +0200</lastBuildDate><atom:link href="https://www.zyria.de/docs/it-intern/server/physische-server/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>abe</title>
       <link>https://www.zyria.de/docs/it-intern/server/physische-server/abe/</link>
-      <pubDate>Mon, 30 Jun 2025 15:14:21 +0200</pubDate>
+      <pubDate>Mon, 30 Jun 2025 15:22:00 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/docs/it-intern/server/physische-server/abe/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;Primärfunktion 
@@ -57,7 +57,7 @@
     <item>
       <title>Ansible setup</title>
       <link>https://www.zyria.de/docs/it-intern/server/physische-server/ansible/</link>
-      <pubDate>Mon, 30 Jun 2025 15:14:21 +0200</pubDate>
+      <pubDate>Mon, 30 Jun 2025 15:22:00 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/docs/it-intern/server/physische-server/ansible/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;Setup mit Ansible 
@@ -76,7 +76,7 @@
     <item>
       <title>Hetzner Server installieren</title>
       <link>https://www.zyria.de/docs/it-intern/server/physische-server/hetzner_install/</link>
-      <pubDate>Mon, 30 Jun 2025 15:14:21 +0200</pubDate>
+      <pubDate>Mon, 30 Jun 2025 15:22:00 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/docs/it-intern/server/physische-server/hetzner_install/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;&lt;a
@@ -159,7 +159,7 @@ a. IPV4 = Die Adresse aus der Auslieferungsmail von Hetzner&lt;/p&gt;</descripti
     <item>
       <title>lisa</title>
       <link>https://www.zyria.de/docs/it-intern/server/physische-server/lisa/</link>
-      <pubDate>Mon, 30 Jun 2025 15:14:21 +0200</pubDate>
+      <pubDate>Mon, 30 Jun 2025 15:22:00 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/docs/it-intern/server/physische-server/lisa/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;Primärfunktion 
@@ -202,7 +202,7 @@ a. IPV4 = Die Adresse aus der Auslieferungsmail von Hetzner&lt;/p&gt;</descripti
     <item>
       <title>marge</title>
       <link>https://www.zyria.de/docs/it-intern/server/physische-server/marge/</link>
-      <pubDate>Mon, 30 Jun 2025 15:14:21 +0200</pubDate>
+      <pubDate>Mon, 30 Jun 2025 15:22:00 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/docs/it-intern/server/physische-server/marge/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;Primärfunktion 
@@ -245,7 +245,7 @@ a. IPV4 = Die Adresse aus der Auslieferungsmail von Hetzner&lt;/p&gt;</descripti
     <item>
       <title>moe</title>
       <link>https://www.zyria.de/docs/it-intern/server/physische-server/moe/</link>
-      <pubDate>Mon, 30 Jun 2025 15:14:21 +0200</pubDate>
+      <pubDate>Mon, 30 Jun 2025 15:22:00 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/docs/it-intern/server/physische-server/moe/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;Primärfunktion 
@@ -288,7 +288,7 @@ a. IPV4 = Die Adresse aus der Auslieferungsmail von Hetzner&lt;/p&gt;</descripti
     <item>
       <title>ned</title>
       <link>https://www.zyria.de/docs/it-intern/server/physische-server/ned/</link>
-      <pubDate>Mon, 30 Jun 2025 15:14:21 +0200</pubDate>
+      <pubDate>Mon, 30 Jun 2025 15:22:00 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/docs/it-intern/server/physische-server/ned/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;Primärfunktion 

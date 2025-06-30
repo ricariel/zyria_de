@@ -141,8 +141,8 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://www.zyria.de/posts/hardware/</loc>
-    <lastmod>2025-06-30T15:14:12+02:00</lastmod>
+    <loc>https://www.zyria.de/posts/homelab/hardware/</loc>
+    <lastmod>2025-06-30T15:21:49+02:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
@@ -249,8 +249,8 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://www.zyria.de/posts/software/</loc>
-    <lastmod>2025-04-15T16:15:25+02:00</lastmod>
+    <loc>https://www.zyria.de/posts/homelab/software/</loc>
+    <lastmod>2025-06-30T15:21:49+02:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
