@@ -31,6 +31,26 @@ Meine Reise in die Technikwelt begann mit dem Basteln an alter Hardware, führte
 
 ---
 
+### Mein ehrenamtliches Engagement
+
+#### Technisches Hilfswerk (THW)
+
+Mit Stolz engagiere ich mich ehrenamtlich im **Technischen Hilfswerk (THW)**, der Zivil- und Katastrophenschutzorganisation Deutschlands. Meine ehrenamtliche Heimat ist der **Ortsverband Marburg**. Dort gehöre ich dem **Zugtrupp** an, der Führungseinheit des Technischen Zuges, und unterstütze den Zugführer bei der Koordination und Leitung von Einsätzen. So helfen wir Menschen in Notlagen schnell und effektiv.
+
+Durch mein Engagement möchte ich einen aktiven Beitrag für die Sicherheit und den Zusammenhalt in unserer Gesellschaft leisten.
+
+{{< alert "bell" >}}
+**Interesse geweckt?**
+
+Du bist herzlich eingeladen, uns und unsere Arbeit kennenzulernen. Unser Dienst findet - außerhalb der hessischen Schulferien - **jeden Donnerstag ab 19:30 Uhr** in unserem Ortsverband in der **Molkereistraße 7, 35039 Marburg** statt.
+
+Eine Anmeldung ist nicht erforderlich, erleichtert uns aber die Planung. Gib uns einfach kurz per E-Mail Bescheid: [mail@thw-marburg.de](mailto:mail@thw-marburg.de)
+{{< /alert >}}
+
+Einen umfassenden Einblick in die bundesweite Arbeit des THW findest du auf der offiziellen Webseite: [https://www.thw.de/](https://www.thw.de/)
+
+---
+
 ### Mein beruflicher Fokus
 
 Aktuell leite ich die **IT-Abteilung** in einem mittelständischen Unternehmen. Hier setze ich mein Wissen ein, um die technische Infrastruktur zu optimieren und einen reibungslosen Betrieb sicherzustellen.
@@ -97,25 +117,5 @@ Meine **thematischen Schwerpunkte** liegen in der Serveradministration, IT-Secur
 
 #### Sprachen
 
-* Deutsch (Muttersprache)
-* Englisch (Fließend)
-
----
-
-### Mein ehrenamtliches Engagement
-
-#### Technisches Hilfswerk (THW)
-
-Mit Stolz engagiere ich mich ehrenamtlich im **Technischen Hilfswerk (THW)**, der Zivil- und Katastrophenschutzorganisation Deutschlands. Meine ehrenamtliche Heimat ist der **Ortsverband Marburg**. Dort gehöre ich dem **Zugtrupp** an, der Führungseinheit des Technischen Zuges, und unterstütze den Zugführer bei der Koordination und Leitung von Einsätzen. So helfen wir Menschen in Notlagen schnell und effektiv.
-
-Durch mein Engagement möchte ich einen aktiven Beitrag für die Sicherheit und den Zusammenhalt in unserer Gesellschaft leisten.
-
-{{< alert "bell" >}}
-**Interesse geweckt?**
-
-Du bist herzlich eingeladen, uns und unsere Arbeit kennenzulernen. Unser Dienst findet - außerhalb der hessischen Schulferien - **jeden Donnerstag ab 19:30 Uhr** in unserem Ortsverband in der **Molkereistraße 7, 35039 Marburg** statt.
-
-Eine Anmeldung ist nicht erforderlich, erleichtert uns aber die Planung. Gib uns einfach kurz per E-Mail Bescheid: [mail@thw-marburg.de](mailto:mail@thw-marburg.de)
-{{< /alert >}}
-
-Einen umfassenden Einblick in die bundesweite Arbeit des THW findest du auf der offiziellen Webseite: [https://www.thw.de/](https://www.thw.de/)
+* Deutsch
+* Englisch
