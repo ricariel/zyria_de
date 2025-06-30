@@ -24,7 +24,7 @@ Anbei ist der Ablauf beschrieben einen Hetzner Server in das System einzubinden.
 ## Installation
 
 1. Git auf dem Server installieren
-1. [Repository](https://www.casa-due-pur.de/git/fabrice.kirchner/hetzner-install.git) holen
+1. [Repository](https://git.casa-due-pur.de/fabrice.kirchner/hetzner-install.git) holen
 1. Daten beschaffen:
 
   a. FQDN = überlege einen passenden Namen für die Maschine.
