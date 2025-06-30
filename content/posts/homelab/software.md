@@ -7,6 +7,10 @@ series:
   - homelab
 ---
 
+Die eingesetzte Software partiell dokumentiert.
+
+<!--more-->
+
 ## Softwareliste
 
 - Moe

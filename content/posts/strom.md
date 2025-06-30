@@ -3,6 +3,10 @@ title: Linksammlung rund um Strom
 date: 2024-03-08T12:52:37+02:00
 ---
 
+Linksammlung zum Thema Strom in meinem Heim.
+
+<!--more-->
+
 ## Hichi IR und Home Assistant
 
 [Stromzähler mit einem ESP8266 / ESP32 mit Tasmota auslesen und darstellen](https://ottelo.jimdofree.com/stromzähler-auslesen-tasmota/)

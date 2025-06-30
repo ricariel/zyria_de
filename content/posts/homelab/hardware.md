@@ -6,7 +6,12 @@ category:
   - hardware
 series:
   - homelab
+  - hardware
 ---
+
+Hier findet man eine Übersicht über die im Homelab verwendete Hardware.
+
+<!--more-->
 
 ## Netzwerk
 
@@ -40,3 +45,5 @@ Aktuell nutze ich Mini-PC's als Server, da Sie relativ günstig und stromsparend
 ---
 
 {{% include moe.md %}}
+
+---

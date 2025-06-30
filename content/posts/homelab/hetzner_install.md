@@ -3,6 +3,10 @@ title: "Hetzner Server installieren"
 description: "Wir wir eine Maschine bei Hetzner zu einem Proxmox Server machen."
 ---
 
+Anbei ist der Ablauf beschrieben einen Hetzner Server in das System einzubinden.
+
+<!--more-->
+
 ## [Bestellung](https://robot.hetzner.com/order) von Servern
 
 1. IPv4 Option. Nach der Installation wird diese direkt gekündigt. Die IPv4 Adresse bekommt der Server später über den [Vswitch](https://robot.hetzner.com/vswitch/index).
