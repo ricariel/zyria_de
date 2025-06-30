@@ -11,7 +11,7 @@ weight: 1
 
 Willkommen auf meiner persönlichen Seite!
 
-Ich bin Fabrice, ein waschechter Berliner, der über Bayern nun auf einem hessischen Vulkan zu Hause ist. Meine Leidenschaft? **Technologie, unermüdliche Neugier und das ständige Streben nach neuem Wissen.** Ob ich mich in Fachbüchern vertiefe, das Internet nach innovativen Lösungen durchforste oder in Handbüchern versinke - ich bin immer bereit, etwas Neues zu lernen und mein Wissen zu erweitern.
+Ich bin Fabrice, ein Berliner, der nach einiger Zeit in Bayern nun in Hessen zu Hause ist. Meine Leidenschaft? **Technologie, unermüdliche Neugier und das ständige Streben nach neuem Wissen.** Ob ich mich in Fachbüchern vertiefe, das Internet nach innovativen Lösungen durchforste oder in Handbüchern versinke - ich bin immer bereit, etwas Neues zu lernen und mein Wissen zu erweitern.
 
 Diese Seite dient mir hauptsächlich als Spielwiese, um Erfahrungen mit **Hugo** zu sammeln und berufliche Konzepte auszuprobieren.
 
