@@ -3,8 +3,40 @@
   min = "0.87.0"
 
 [[mounts]]
-source = "content"
-target = "content"
+  disableWatch = false
+  lang = ''
+  source = 'content'
+  target = 'content'
+[[mounts]]
+  disableWatch = false
+  lang = ''
+  source = 'data'
+  target = 'data'
+[[mounts]]
+  disableWatch = false
+  lang = ''
+  source = 'layouts'
+  target = 'layouts'
+[[mounts]]
+  disableWatch = false
+  lang = ''
+  source = 'i18n'
+  target = 'i18n'
+[[mounts]]
+  disableWatch = false
+  lang = ''
+  source = 'archetypes'
+  target = 'archetypes'
+[[mounts]]
+  disableWatch = false
+  lang = ''
+  source = 'assets'
+  target = 'assets'
+[[mounts]]
+  disableWatch = false
+  lang = ''
+  source = 'static'
+  target = 'static'
 
 [[imports]]
 disable = false
@@ -49,3 +81,15 @@ path = "git.zyria.de/pyrox/hugo-legal"
   [[imports.mounts]]
   source = "datenschutz.md"
   target = "content/datenschutz.md"
+
+[[imports]]
+path = "git.zyria.de/pyrox/k3s-prod"
+
+  [[imports.mounts]]
+  source = "README.md"
+  target = "content/posts/homelab/k3s-prod/_index.md"
+
+  [[imports.mounts]]
+  source = "."
+  target = "content/posts/homelab/k3s-prod/"
+  includeFiles = [ "apps/*/README.md",  "apps/*/doc/README.md" ]
