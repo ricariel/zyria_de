@@ -9,12 +9,12 @@
     <managingEditor>fabrice@zyria.de (Fabrice Kirchner)</managingEditor>
     <webMaster>fabrice@zyria.de (Fabrice Kirchner)</webMaster>
     
-    <atom:link href="https://www.zyria.de/docs/it-intern/services/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 30 Jun 2025 13:21:45 +0200</lastBuildDate><atom:link href="https://www.zyria.de/docs/it-intern/services/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Dmarc-Report</title>
       <link>https://www.zyria.de/docs/it-intern/services/dmarc-report/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 30 Jun 2025 13:21:45 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/docs/it-intern/services/dmarc-report/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;Quelle 
@@ -79,7 +79,7 @@ Webinterface.&lt;/p&gt;</description>
     <item>
       <title>Docs</title>
       <link>https://www.zyria.de/docs/it-intern/services/docs/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 30 Jun 2025 13:21:45 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/docs/it-intern/services/docs/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;Quelle 
@@ -142,7 +142,7 @@ Webinterface.&lt;/p&gt;</description>
     <item>
       <title>Forgejo</title>
       <link>https://www.zyria.de/docs/it-intern/services/forgejo/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 30 Jun 2025 13:21:45 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/docs/it-intern/services/forgejo/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;Quelle 
@@ -208,7 +208,7 @@ Repositories zu.&lt;/p&gt;</description>
     <item>
       <title>Hedgedoc</title>
       <link>https://www.zyria.de/docs/it-intern/services/hedgedoc/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 30 Jun 2025 13:21:45 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/docs/it-intern/services/hedgedoc/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;Quelle 
@@ -266,7 +266,7 @@ Repositories zu.&lt;/p&gt;</description>
     <item>
       <title>Maintenance Page</title>
       <link>https://www.zyria.de/docs/it-intern/services/maintenance/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 30 Jun 2025 13:21:45 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/docs/it-intern/services/maintenance/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;Quelle 
@@ -335,7 +335,7 @@ Repositories zu.&lt;/p&gt;</description>
     <item>
       <title>Mta-sts</title>
       <link>https://www.zyria.de/docs/it-intern/services/mta-sts/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 30 Jun 2025 13:21:45 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/docs/it-intern/services/mta-sts/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;Quelle 
@@ -400,7 +400,7 @@ erreichbar.&lt;/p&gt;</description>
     <item>
       <title>Pihole</title>
       <link>https://www.zyria.de/docs/it-intern/services/pihole/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 30 Jun 2025 13:21:45 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/docs/it-intern/services/pihole/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;Quelle 
@@ -463,7 +463,7 @@ erreichbar.&lt;/p&gt;</description>
     <item>
       <title>Roundcube Webmail</title>
       <link>https://www.zyria.de/docs/it-intern/services/roundcube/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 30 Jun 2025 13:21:45 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/docs/it-intern/services/roundcube/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;Quelle 
@@ -531,7 +531,7 @@ erreichbar.&lt;/p&gt;</description>
     <item>
       <title>Traefik</title>
       <link>https://www.zyria.de/docs/it-intern/services/traefik/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 30 Jun 2025 13:21:45 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/docs/it-intern/services/traefik/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;Quelle 
@@ -595,7 +595,7 @@ erreichbar.&lt;/p&gt;</description>
     <item>
       <title>Unifi Controller</title>
       <link>https://www.zyria.de/docs/it-intern/services/unifi-controller/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 30 Jun 2025 13:21:45 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/docs/it-intern/services/unifi-controller/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;Quelle 
@@ -653,7 +653,7 @@ erreichbar.&lt;/p&gt;</description>
     <item>
       <title>Uptime Kuma</title>
       <link>https://www.zyria.de/docs/it-intern/services/uptime-kuma/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 30 Jun 2025 13:21:45 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/docs/it-intern/services/uptime-kuma/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;Quelle 
@@ -719,7 +719,7 @@ der IT.&lt;/p&gt;</description>
     <item>
       <title>Wireguard</title>
       <link>https://www.zyria.de/docs/it-intern/services/wireguard/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 30 Jun 2025 13:21:45 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/docs/it-intern/services/wireguard/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;Quelle 
@@ -792,7 +792,7 @@ der IT.&lt;/p&gt;</description>
     <item>
       <title>Zammad</title>
       <link>https://www.zyria.de/docs/it-intern/services/zammad/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 30 Jun 2025 13:21:45 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/docs/it-intern/services/zammad/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;Quelle 

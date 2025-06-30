@@ -9,12 +9,12 @@
     <managingEditor>fabrice@zyria.de (Fabrice Kirchner)</managingEditor>
     <webMaster>fabrice@zyria.de (Fabrice Kirchner)</webMaster>
     
-    <atom:link href="https://www.zyria.de/docs/it-intern/server/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 30 Jun 2025 13:21:45 +0200</lastBuildDate><atom:link href="https://www.zyria.de/docs/it-intern/server/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Logins</title>
       <link>https://www.zyria.de/docs/it-intern/server/login/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 30 Jun 2025 13:21:45 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/docs/it-intern/server/login/</guid>
       <description>&lt;p&gt;Alle Zugangsdaten sind entweder in der Persönlichen Keepass Datendank (für&lt;br&gt;
@@ -38,7 +38,7 @@ werden.&lt;/p&gt;</description>
     <item>
       <title>Server-,Diensteverwaltung</title>
       <link>https://www.zyria.de/docs/it-intern/server/verwaltung/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 30 Jun 2025 13:21:45 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/docs/it-intern/server/verwaltung/</guid>
       <description>&lt;p&gt;Wir verwenden zur generellen Verwaltung von Servern Ansible. Für manche Dienste&lt;br&gt;
@@ -71,7 +71,7 @@ alle relevanten Änderungen durchführen.&lt;/p&gt;</description>
     <item>
       <title>Samba Schema</title>
       <link>https://www.zyria.de/docs/it-intern/server/samba-schema/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 30 Jun 2025 13:21:45 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/docs/it-intern/server/samba-schema/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;ms-MCS-AdmPwd und ms-MCS-AdmPwdExpirationTime 
