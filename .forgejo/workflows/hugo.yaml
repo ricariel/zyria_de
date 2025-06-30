@@ -18,7 +18,7 @@ jobs:
 
       - name: Setup secrets
         run: |
-          echo "machine ${{ env.GITHUB_SERVER_URL }} login ${{ secrets.ZYRIA_TOKEN }} password x-oauth-basic" > $HOME/.netrc
+          echo "machine ${{ env.GITHUB_SERVER_URL }} login $GITHUB_USER password $GITHUB_TOKEN" > $HOME/.netrc
 
       - uses: actions/setup-go@d35c59abb061a4a6fb18e82ac0862c26744d6ab5 # v5
         with:
