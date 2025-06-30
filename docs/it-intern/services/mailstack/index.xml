@@ -9,12 +9,12 @@
     <managingEditor>fabrice@zyria.de (Fabrice Kirchner)</managingEditor>
     <webMaster>fabrice@zyria.de (Fabrice Kirchner)</webMaster>
     
-    <lastBuildDate>Mon, 30 Jun 2025 13:21:45 +0200</lastBuildDate><atom:link href="https://www.zyria.de/docs/it-intern/services/mailstack/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 30 Jun 2025 13:36:21 +0200</lastBuildDate><atom:link href="https://www.zyria.de/docs/it-intern/services/mailstack/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Dovecot</title>
       <link>https://www.zyria.de/docs/it-intern/services/mailstack/dovecot/</link>
-      <pubDate>Mon, 30 Jun 2025 13:21:45 +0200</pubDate>
+      <pubDate>Mon, 30 Jun 2025 13:36:21 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/docs/it-intern/services/mailstack/dovecot/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;Quelle 
@@ -63,7 +63,7 @@
     <item>
       <title>MTA Postfix</title>
       <link>https://www.zyria.de/docs/it-intern/services/mailstack/postfix/</link>
-      <pubDate>Mon, 30 Jun 2025 13:21:45 +0200</pubDate>
+      <pubDate>Mon, 30 Jun 2025 13:36:21 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/docs/it-intern/services/mailstack/postfix/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;Quelle 
@@ -117,7 +117,7 @@ Ein Set an vordefinierten Variablen lässt sich im &lt;a
     <item>
       <title>Zugriffsrechte auf Mailboxen</title>
       <link>https://www.zyria.de/docs/it-intern/services/mailstack/sharedfolders/</link>
-      <pubDate>Mon, 30 Jun 2025 13:21:45 +0200</pubDate>
+      <pubDate>Mon, 30 Jun 2025 13:36:21 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/docs/it-intern/services/mailstack/sharedfolders/</guid>
       <description>&lt;p&gt;Wer hat eigentlich auf welche Mailbox Zugriff?&lt;/p&gt;

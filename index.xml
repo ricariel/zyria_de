@@ -107,7 +107,7 @@ Telefon:&lt;br&gt;
     <item>
       <title>Logins</title>
       <link>https://www.zyria.de/docs/it-intern/server/login/</link>
-      <pubDate>Mon, 30 Jun 2025 13:21:45 +0200</pubDate>
+      <pubDate>Mon, 30 Jun 2025 13:36:21 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/docs/it-intern/server/login/</guid>
       <description>&lt;p&gt;Alle Zugangsdaten sind entweder in der Persönlichen Keepass Datendank (für&lt;br&gt;
@@ -131,7 +131,7 @@ werden.&lt;/p&gt;</description>
     <item>
       <title>Server-,Diensteverwaltung</title>
       <link>https://www.zyria.de/docs/it-intern/server/verwaltung/</link>
-      <pubDate>Mon, 30 Jun 2025 13:21:45 +0200</pubDate>
+      <pubDate>Mon, 30 Jun 2025 13:36:21 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/docs/it-intern/server/verwaltung/</guid>
       <description>&lt;p&gt;Wir verwenden zur generellen Verwaltung von Servern Ansible. Für manche Dienste&lt;br&gt;
@@ -202,7 +202,7 @@ Die Server sind Ipv6 only bestellt und beziehen eine IPv4 aus einem &lt;a
     <item>
       <title>abe</title>
       <link>https://www.zyria.de/docs/it-intern/server/physische-server/abe/</link>
-      <pubDate>Mon, 30 Jun 2025 13:21:45 +0200</pubDate>
+      <pubDate>Mon, 30 Jun 2025 13:36:21 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/docs/it-intern/server/physische-server/abe/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;Primärfunktion 
@@ -245,7 +245,7 @@ Die Server sind Ipv6 only bestellt und beziehen eine IPv4 aus einem &lt;a
     <item>
       <title>Addc</title>
       <link>https://www.zyria.de/docs/it-intern/server/vms/addc/</link>
-      <pubDate>Mon, 30 Jun 2025 13:21:45 +0200</pubDate>
+      <pubDate>Mon, 30 Jun 2025 13:36:21 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/docs/it-intern/server/vms/addc/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;Primärfunktion 
@@ -277,7 +277,7 @@ Die Server sind Ipv6 only bestellt und beziehen eine IPv4 aus einem &lt;a
     <item>
       <title>Ansible setup</title>
       <link>https://www.zyria.de/docs/it-intern/server/physische-server/ansible/</link>
-      <pubDate>Mon, 30 Jun 2025 13:21:45 +0200</pubDate>
+      <pubDate>Mon, 30 Jun 2025 13:36:21 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/docs/it-intern/server/physische-server/ansible/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;Setup mit Ansible 
@@ -296,7 +296,7 @@ Die Server sind Ipv6 only bestellt und beziehen eine IPv4 aus einem &lt;a
     <item>
       <title>Dev</title>
       <link>https://www.zyria.de/docs/it-intern/server/vms/dev/</link>
-      <pubDate>Mon, 30 Jun 2025 13:21:45 +0200</pubDate>
+      <pubDate>Mon, 30 Jun 2025 13:36:21 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/docs/it-intern/server/vms/dev/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;Primärfunktion 
@@ -330,7 +330,7 @@ Die Server sind Ipv6 only bestellt und beziehen eine IPv4 aus einem &lt;a
     <item>
       <title>Dmarc-Report</title>
       <link>https://www.zyria.de/docs/it-intern/services/dmarc-report/</link>
-      <pubDate>Mon, 30 Jun 2025 13:21:45 +0200</pubDate>
+      <pubDate>Mon, 30 Jun 2025 13:36:21 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/docs/it-intern/services/dmarc-report/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;Quelle 
@@ -395,7 +395,7 @@ Webinterface.&lt;/p&gt;</description>
     <item>
       <title>Docs</title>
       <link>https://www.zyria.de/docs/it-intern/services/docs/</link>
-      <pubDate>Mon, 30 Jun 2025 13:21:45 +0200</pubDate>
+      <pubDate>Mon, 30 Jun 2025 13:36:21 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/docs/it-intern/services/docs/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;Quelle 
@@ -458,7 +458,7 @@ Webinterface.&lt;/p&gt;</description>
     <item>
       <title>Dovecot</title>
       <link>https://www.zyria.de/docs/it-intern/services/mailstack/dovecot/</link>
-      <pubDate>Mon, 30 Jun 2025 13:21:45 +0200</pubDate>
+      <pubDate>Mon, 30 Jun 2025 13:36:21 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/docs/it-intern/services/mailstack/dovecot/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;Quelle 
@@ -507,7 +507,7 @@ Webinterface.&lt;/p&gt;</description>
     <item>
       <title>Forgejo</title>
       <link>https://www.zyria.de/docs/it-intern/services/forgejo/</link>
-      <pubDate>Mon, 30 Jun 2025 13:21:45 +0200</pubDate>
+      <pubDate>Mon, 30 Jun 2025 13:36:21 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/docs/it-intern/services/forgejo/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;Quelle 
@@ -573,7 +573,7 @@ Repositories zu.&lt;/p&gt;</description>
     <item>
       <title>Hardware</title>
       <link>https://www.zyria.de/posts/hardware/</link>
-      <pubDate>Mon, 30 Jun 2025 13:21:45 +0200</pubDate>
+      <pubDate>Mon, 30 Jun 2025 13:36:21 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/posts/hardware/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;Netzwerk 
@@ -597,7 +597,7 @@ Repositories zu.&lt;/p&gt;</description>
     <item>
       <title>Hedgedoc</title>
       <link>https://www.zyria.de/docs/it-intern/services/hedgedoc/</link>
-      <pubDate>Mon, 30 Jun 2025 13:21:45 +0200</pubDate>
+      <pubDate>Mon, 30 Jun 2025 13:36:21 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/docs/it-intern/services/hedgedoc/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;Quelle 
@@ -655,7 +655,7 @@ Repositories zu.&lt;/p&gt;</description>
     <item>
       <title>Hetzner Server installieren</title>
       <link>https://www.zyria.de/docs/it-intern/server/physische-server/hetzner_install/</link>
-      <pubDate>Mon, 30 Jun 2025 13:21:45 +0200</pubDate>
+      <pubDate>Mon, 30 Jun 2025 13:36:21 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/docs/it-intern/server/physische-server/hetzner_install/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;&lt;a
@@ -738,7 +738,7 @@ a. IPV4 = Die Adresse aus der Auslieferungsmail von Hetzner&lt;/p&gt;</descripti
     <item>
       <title>lisa</title>
       <link>https://www.zyria.de/docs/it-intern/server/physische-server/lisa/</link>
-      <pubDate>Mon, 30 Jun 2025 13:21:45 +0200</pubDate>
+      <pubDate>Mon, 30 Jun 2025 13:36:21 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/docs/it-intern/server/physische-server/lisa/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;Primärfunktion 
@@ -781,7 +781,7 @@ a. IPV4 = Die Adresse aus der Auslieferungsmail von Hetzner&lt;/p&gt;</descripti
     <item>
       <title>Maintenance Page</title>
       <link>https://www.zyria.de/docs/it-intern/services/maintenance/</link>
-      <pubDate>Mon, 30 Jun 2025 13:21:45 +0200</pubDate>
+      <pubDate>Mon, 30 Jun 2025 13:36:21 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/docs/it-intern/services/maintenance/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;Quelle 
@@ -850,7 +850,7 @@ a. IPV4 = Die Adresse aus der Auslieferungsmail von Hetzner&lt;/p&gt;</descripti
     <item>
       <title>marge</title>
       <link>https://www.zyria.de/docs/it-intern/server/physische-server/marge/</link>
-      <pubDate>Mon, 30 Jun 2025 13:21:45 +0200</pubDate>
+      <pubDate>Mon, 30 Jun 2025 13:36:21 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/docs/it-intern/server/physische-server/marge/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;Primärfunktion 
@@ -893,7 +893,7 @@ a. IPV4 = Die Adresse aus der Auslieferungsmail von Hetzner&lt;/p&gt;</descripti
     <item>
       <title>moe</title>
       <link>https://www.zyria.de/docs/it-intern/server/physische-server/moe/</link>
-      <pubDate>Mon, 30 Jun 2025 13:21:45 +0200</pubDate>
+      <pubDate>Mon, 30 Jun 2025 13:36:21 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/docs/it-intern/server/physische-server/moe/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;Primärfunktion 
@@ -936,7 +936,7 @@ a. IPV4 = Die Adresse aus der Auslieferungsmail von Hetzner&lt;/p&gt;</descripti
     <item>
       <title>MTA Postfix</title>
       <link>https://www.zyria.de/docs/it-intern/services/mailstack/postfix/</link>
-      <pubDate>Mon, 30 Jun 2025 13:21:45 +0200</pubDate>
+      <pubDate>Mon, 30 Jun 2025 13:36:21 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/docs/it-intern/services/mailstack/postfix/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;Quelle 
@@ -990,7 +990,7 @@ Ein Set an vordefinierten Variablen lässt sich im &lt;a
     <item>
       <title>Mta-sts</title>
       <link>https://www.zyria.de/docs/it-intern/services/mta-sts/</link>
-      <pubDate>Mon, 30 Jun 2025 13:21:45 +0200</pubDate>
+      <pubDate>Mon, 30 Jun 2025 13:36:21 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/docs/it-intern/services/mta-sts/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;Quelle 
@@ -1055,7 +1055,7 @@ erreichbar.&lt;/p&gt;</description>
     <item>
       <title>ned</title>
       <link>https://www.zyria.de/docs/it-intern/server/physische-server/ned/</link>
-      <pubDate>Mon, 30 Jun 2025 13:21:45 +0200</pubDate>
+      <pubDate>Mon, 30 Jun 2025 13:36:21 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/docs/it-intern/server/physische-server/ned/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;Primärfunktion 
@@ -1098,7 +1098,7 @@ erreichbar.&lt;/p&gt;</description>
     <item>
       <title>Passwörter</title>
       <link>https://www.zyria.de/docs/it-support/passworter/</link>
-      <pubDate>Mon, 30 Jun 2025 13:21:45 +0200</pubDate>
+      <pubDate>Mon, 30 Jun 2025 13:36:21 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/docs/it-support/passworter/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;Was wir nicht tun 
@@ -1136,7 +1136,7 @@ erreichbar.&lt;/p&gt;</description>
     <item>
       <title>Pihole</title>
       <link>https://www.zyria.de/docs/it-intern/services/pihole/</link>
-      <pubDate>Mon, 30 Jun 2025 13:21:45 +0200</pubDate>
+      <pubDate>Mon, 30 Jun 2025 13:36:21 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/docs/it-intern/services/pihole/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;Quelle 
@@ -1199,7 +1199,7 @@ erreichbar.&lt;/p&gt;</description>
     <item>
       <title>Roundcube Webmail</title>
       <link>https://www.zyria.de/docs/it-intern/services/roundcube/</link>
-      <pubDate>Mon, 30 Jun 2025 13:21:45 +0200</pubDate>
+      <pubDate>Mon, 30 Jun 2025 13:36:21 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/docs/it-intern/services/roundcube/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;Quelle 
@@ -1267,7 +1267,7 @@ erreichbar.&lt;/p&gt;</description>
     <item>
       <title>Samba Schema</title>
       <link>https://www.zyria.de/docs/it-intern/server/samba-schema/</link>
-      <pubDate>Mon, 30 Jun 2025 13:21:45 +0200</pubDate>
+      <pubDate>Mon, 30 Jun 2025 13:36:21 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/docs/it-intern/server/samba-schema/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;ms-MCS-AdmPwd und ms-MCS-AdmPwdExpirationTime 
@@ -1484,7 +1484,7 @@ erreichbar.&lt;/p&gt;</description>
     <item>
       <title>Setup Windows Client</title>
       <link>https://www.zyria.de/docs/it-intern/client/setup_windows/</link>
-      <pubDate>Mon, 30 Jun 2025 13:21:45 +0200</pubDate>
+      <pubDate>Mon, 30 Jun 2025 13:36:21 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/docs/it-intern/client/setup_windows/</guid>
       <description>&lt;ul&gt;
@@ -1517,7 +1517,7 @@ erreichbar.&lt;/p&gt;</description>
     <item>
       <title>Snippets</title>
       <link>https://www.zyria.de/docs/it-intern/sammelbecken/snippets/</link>
-      <pubDate>Mon, 30 Jun 2025 13:21:45 +0200</pubDate>
+      <pubDate>Mon, 30 Jun 2025 13:36:21 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/docs/it-intern/sammelbecken/snippets/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;Snippets 
@@ -1763,7 +1763,7 @@ erreichbar.&lt;/p&gt;</description>
     <item>
       <title>Software</title>
       <link>https://www.zyria.de/posts/software/</link>
-      <pubDate>Mon, 30 Jun 2025 13:21:45 +0200</pubDate>
+      <pubDate>Mon, 30 Jun 2025 13:36:21 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/posts/software/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;Softwareliste 
@@ -1793,7 +1793,7 @@ erreichbar.&lt;/p&gt;</description>
     <item>
       <title>Traefik</title>
       <link>https://www.zyria.de/docs/it-intern/services/traefik/</link>
-      <pubDate>Mon, 30 Jun 2025 13:21:45 +0200</pubDate>
+      <pubDate>Mon, 30 Jun 2025 13:36:21 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/docs/it-intern/services/traefik/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;Quelle 
@@ -1857,7 +1857,7 @@ erreichbar.&lt;/p&gt;</description>
     <item>
       <title>Unifi Controller</title>
       <link>https://www.zyria.de/docs/it-intern/services/unifi-controller/</link>
-      <pubDate>Mon, 30 Jun 2025 13:21:45 +0200</pubDate>
+      <pubDate>Mon, 30 Jun 2025 13:36:21 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/docs/it-intern/services/unifi-controller/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;Quelle 
@@ -1915,7 +1915,7 @@ erreichbar.&lt;/p&gt;</description>
     <item>
       <title>Uptime Kuma</title>
       <link>https://www.zyria.de/docs/it-intern/services/uptime-kuma/</link>
-      <pubDate>Mon, 30 Jun 2025 13:21:45 +0200</pubDate>
+      <pubDate>Mon, 30 Jun 2025 13:36:21 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/docs/it-intern/services/uptime-kuma/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;Quelle 
@@ -1981,7 +1981,7 @@ der IT.&lt;/p&gt;</description>
     <item>
       <title>Windows autologon</title>
       <link>https://www.zyria.de/docs/it-intern/client/windows_autologon/</link>
-      <pubDate>Mon, 30 Jun 2025 13:21:45 +0200</pubDate>
+      <pubDate>Mon, 30 Jun 2025 13:36:21 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/docs/it-intern/client/windows_autologon/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;AutoLogon 
@@ -2009,7 +2009,7 @@ aus.&lt;/p&gt;
     <item>
       <title>Wireguard</title>
       <link>https://www.zyria.de/docs/it-intern/services/wireguard/</link>
-      <pubDate>Mon, 30 Jun 2025 13:21:45 +0200</pubDate>
+      <pubDate>Mon, 30 Jun 2025 13:36:21 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/docs/it-intern/services/wireguard/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;Quelle 
@@ -2082,7 +2082,7 @@ aus.&lt;/p&gt;
     <item>
       <title>WireGuard mit systemd</title>
       <link>https://www.zyria.de/docs/it-intern/client/wireguard_mit_systemd/</link>
-      <pubDate>Mon, 30 Jun 2025 13:21:45 +0200</pubDate>
+      <pubDate>Mon, 30 Jun 2025 13:36:21 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/docs/it-intern/client/wireguard_mit_systemd/</guid>
       <description>&lt;p&gt;Für eine WireGuard-Verbindung mit systemd-networkd und systemd-resolved.&lt;/p&gt;
@@ -2129,7 +2129,7 @@ aus.&lt;/p&gt;
     <item>
       <title>Zammad</title>
       <link>https://www.zyria.de/docs/it-intern/services/zammad/</link>
-      <pubDate>Mon, 30 Jun 2025 13:21:45 +0200</pubDate>
+      <pubDate>Mon, 30 Jun 2025 13:36:21 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/docs/it-intern/services/zammad/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;Quelle 
@@ -2187,7 +2187,7 @@ aus.&lt;/p&gt;
     <item>
       <title>Zugriffsrechte auf Mailboxen</title>
       <link>https://www.zyria.de/docs/it-intern/services/mailstack/sharedfolders/</link>
-      <pubDate>Mon, 30 Jun 2025 13:21:45 +0200</pubDate>
+      <pubDate>Mon, 30 Jun 2025 13:36:21 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/docs/it-intern/services/mailstack/sharedfolders/</guid>
       <description>&lt;p&gt;Wer hat eigentlich auf welche Mailbox Zugriff?&lt;/p&gt;
