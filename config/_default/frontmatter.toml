@@ -1,4 +1,5 @@
-date = ["date","lastmod"]
-lastmod = [":git", "lastmod", "date"]
-publishDate = ["publishDate", "date"]
+date = ['date', 'publishdate', 'pubdate', 'published', 'lastmod', 'modified', ':fileModTime']
+lastmod = [':git', 'lastmod', 'modified', "fileModTime", 'date', 'publishdate', 'pubdate', 'published']
+
+publishDate = ['publishdate', 'pubdate', 'published', 'date']
 expiryDate = ["expiryDate"]

@@ -1,7 +1,7 @@
 ---
-title: "Passwörter"
-slug: "Passwords"
-description: "Wie werden Passwörter bei uns verwaltet"
+title: Passwörter
+slug: passworter
+description: Wie werden Passwörter bei uns verwaltet
 ---
 
 ## Was wir nicht tun
