@@ -1,11 +1,8 @@
 ---
 title: "Hetzner Server installieren"
 description: "Wir wir eine Maschine bei Hetzner zu einem Proxmox Server machen."
+summary: "Anbei ist der Ablauf beschrieben einen Hetzner Server in das System einzubinden."
 ---
-
-Anbei ist der Ablauf beschrieben einen Hetzner Server in das System einzubinden.
-
-<!--more-->
 
 ## [Bestellung](https://robot.hetzner.com/order) von Servern
 
