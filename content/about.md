@@ -31,6 +31,10 @@ Meine Reise in die Technikwelt begann mit dem Basteln an alter Hardware, führte
 
 ---
 
+### Familie
+
+Auch wenn meine Leidenschaft der Technik gehört, sind meine größte Inspirationsquelle und mein wichtigster Ausgleich meine Familie. Wenn ich den Laptop zuklappe, beginnt die schönste Zeit des Tages. Die gemeinsamen Momente, das Lachen und der Zusammenhalt sind der wahre Antrieb für alles, was ich tue und erinnern mich immer wieder daran, dass die besten Verbindungen nicht aus Kabeln, sondern aus Liebe und gemeinsamen Erinnerungen bestehen.
+
 ### Mein ehrenamtliches Engagement
 
 #### Technisches Hilfswerk (THW)
