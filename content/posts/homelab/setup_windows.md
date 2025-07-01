@@ -1,7 +1,8 @@
 ---
 title: Setup Windows Client
 description: Wie man einen Windows Client in die Firma einbindet.
-series:
+tags:
+  - windows
   - homelab
 ---
 

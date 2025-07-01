@@ -1,6 +1,7 @@
 ---
 title: 'Windows autologon'
-series:
+tags:
+  - windows
   - homelab
 ---
 

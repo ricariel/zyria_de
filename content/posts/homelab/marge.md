@@ -1,11 +1,6 @@
 ---
 title: Marge
 description: Beschreibung von Marge
-category:
-  - homelab
-  - hardware
-series:
-  - homelab
 headless: true
 ---
 

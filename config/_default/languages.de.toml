@@ -11,7 +11,7 @@ title = "Zyria"
   dateFormat = "2 January 2006"
   # logo = "img/logo.png"
   # secondaryLogo = "img/secondary-logo.png"
-  description = "Diese Seite ist (scheinbar) fast leer."
+  description = "Öffentliches Notizbuch von Fabrice Kirchner"
   copyright = "&copy; 2003 - { year } Fabrice Kirchner"
 
 [params.author]

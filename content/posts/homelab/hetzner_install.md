@@ -2,8 +2,9 @@
 title: "Hetzner Server"
 description: "Wir wir eine Maschine bei Hetzner zu einem Proxmox Server machen."
 summary: "Anbei ist der Ablauf beschrieben einen Hetzner Server in das System einzubinden."
-series:
+tags:
   - homelab
+  - extern
 ---
 
 ## Server bei Hetzner

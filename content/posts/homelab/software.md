@@ -1,10 +1,9 @@
 ---
 title: Software
 description: Eingesetzte Software auf den Nodes
-category:
+tags:
   - homelab
-series:
-  - homelab
+  - software
 ---
 
 Die eingesetzte Software partiell dokumentiert.

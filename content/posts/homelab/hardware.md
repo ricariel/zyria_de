@@ -1,12 +1,9 @@
 ---
 title: Hardware im Homelab
 description: Hardware Übersicht
-category:
-  - homelab
+tags:
   - hardware
-series:
   - homelab
-  - hardware
 ---
 
 Hier findet man eine Übersicht über die im Homelab verwendete Hardware.

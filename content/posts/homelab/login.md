@@ -1,7 +1,7 @@
 ---
 title: Logins
 description: "Zugang zu den Servern"
-series:
+tags:
   - homelab
   - service
 ---

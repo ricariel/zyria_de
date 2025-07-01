@@ -1,7 +1,9 @@
 ---
 title: 'WireGuard mit systemd'
-series:
+tags:
   - homelab
+  - vpn
+  - software
 ---
 
 Für eine WireGuard-Verbindung mit systemd-networkd und systemd-resolved.

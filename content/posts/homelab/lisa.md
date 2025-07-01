@@ -1,11 +1,6 @@
 ---
 title: Lisa
 description: Beschreibung von Lisa
-category:
-  - homelab
-  - hardware
-series:
-  - homelab
 headless: true
 ---
 

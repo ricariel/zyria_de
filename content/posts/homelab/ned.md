@@ -1,11 +1,6 @@
 ---
 title: Ned
 description: Beschreibung von Ned
-category:
-  - homelab
-  - hardware
-series:
-  - homelab
 headless: true
 ---
 

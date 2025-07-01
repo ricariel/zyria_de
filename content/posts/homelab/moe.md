@@ -1,11 +1,6 @@
 ---
 title: Moe
 description: Beschreibung von Moe
-category:
-  - homelab
-  - hardware
-series:
-  - homelab
 headless: true
 ---
 

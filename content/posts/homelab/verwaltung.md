@@ -1,7 +1,8 @@
 ---
 title: Server-,Diensteverwaltung
 description: "Möglichkeiten die Server und Dienste zu verwalten"
-series:
+tags:
+  - extern
   - homelab
   - software
 ---

@@ -1,8 +1,12 @@
 ---
 title: Samba Schema
 description: "Das Samba Schema wurde durch folgende Entitäten erweitert"
-series:
+summary: "Active Directory Schema Erweiterungen"
+tags:
   - homelab
+  - software
+  - samba
+  - active directory
 ---
 
 ## ms-MCS-AdmPwd und ms-MCS-AdmPwdExpirationTime

@@ -1,11 +1,6 @@
 ---
 title: Abe
 description: Beschreibung von Abe
-category:
-  - homelab
-  - hardware
-series:
-  - homelab
 headless: true
 ---
 

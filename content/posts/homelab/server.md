@@ -1,13 +1,15 @@
 ---
 title: "Server"
 description: "Beschreibung der Serverlandschaft"
-series:
+tags:
   - homelab
-  - software
   - hardware
+  - maschinen
 ---
 
 Alle Maschinen dienen der Virtualisierung von diversen Systemen. Wir brauche die Flexibilität Systeme schnell skalieren zu können und auch durch neue zu ersetzen.
+
+<!--more-->
 
 ## Physisch vorhandene Server
 
