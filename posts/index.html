@@ -247,20 +247,6 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
             
             
   <a
-  href="/docs/"
-  
-  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
-  
-  <p class="text-base font-medium" title="Documentation">
-    Dokumentation
-  </p>
-</a>
-
-
-
-            
-            
-  <a
   href="/datenschutz/"
   
   class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
@@ -459,24 +445,6 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
     
     <p class="text-bg font-bg" title="Beiträge">
       Beiträge
-    </p>
-  </a>
-</li>
-
-
-
-
-                    
-
-                    
-  <li class="mt-1">
-  <a
-    href="/docs/"
-    
-    class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
-    
-    <p class="text-bg font-bg" title="Documentation">
-      Dokumentation
     </p>
   </a>
 </li>
@@ -868,7 +836,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2025-06-30T23:12:15&#43;02:00">30 Juni 2025</time>
+      <time datetime="2025-07-01T12:11:00&#43;02:00">1 Juli 2025</time>
     
 
     
@@ -948,12 +916,12 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
 
 
 
-  <a class="flex flex-wrap md:flex-nowrap article border border-neutral-200 dark:border-neutral-700 border-2 rounded-md overflow-hidden" href="/posts/homelab/software/">
+  <a class="flex flex-wrap md:flex-nowrap article border border-neutral-200 dark:border-neutral-700 border-2 rounded-md overflow-hidden" href="/posts/homelab/wireguard_mit_systemd/">
     <div class=" p-4">
       <div class="items-center text-left text-xl font-semibold">
         
         <div class="font-bold text-xl text-neutral-800 decoration-primary-500 hover:underline hover:underline-offset-2 dark:text-neutral"
-          href="/posts/homelab/software/">Software</div>
+          href="/posts/homelab/wireguard_mit_systemd/">WireGuard mit systemd</div>
         
         
         
@@ -1002,7 +970,420 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2025-06-30T23:11:45&#43;02:00">30 Juni 2025</time>
+      <time datetime="2025-07-01T12:10:31&#43;02:00">1 Juli 2025</time>
+    
+
+    
+    
+  </div>
+
+  
+    <div class="flex flex-row flex-wrap items-center">
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+  
+
+  
+  
+    <div class="flex flex-row flex-wrap items-center">
+      
+        
+      
+        
+          
+        
+      
+        
+      
+        
+          
+        
+      
+    </div>
+  
+
+  
+  
+
+
+
+      </div>
+      
+      <div class="py-1 max-w-fit prose dark:prose-invert">
+        Für eine WireGuard-Verbindung mit systemd-networkd und systemd-resolved.
+Alle Konfigurationsdateien gehören in /etc/systemd/network/.
+Interface # Das WireGuard-Interface anlegen (muss mit einer Zahl beginnen, z.B. 10-wg0.netdev) (Dokumentation )
+1[NetDev] 2Name=wg0 3Kind=wireguard 4Description=WireGuard-Tunnel für Casa Due Pur 5MTUBytes=1320 6 7[WireGuard] 8PrivateKey=... 9# Für alle Netze aus AllowedIPs soll automatisch eine Route erzeugt werden, in einer separaten Routing-Tabelle: 10RouteTable=123 11# Die verschlüsselten WireGuard-Pakete werden markiert: 12FirewallMark=123 13# Beides erlaubt spezielles Routing, konfiguriert in der *.network-Datei 14 15[WireGuardPeer] 16PublicKey=&lt;Public Key&gt; 17PresharedKey=... 18AllowedIPs=0.0.0.0/0,::1 19Endpoint = vpn.casa-due-pur.de:51194 20PersistentKeepalive=16 PrivateKey= und PresharedKey= entsprechend ausfüllen, den Rest sicherheitshalber nochmal abgleichen. Die Datei sollte für unprivilegierte Nutzer nicht lesbar sein, d.h. chown root:systemd-network ..., chmod 640 ....
+
+      </div>
+      
+    </div>
+  </a>
+
+        
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a class="flex flex-wrap md:flex-nowrap article border border-neutral-200 dark:border-neutral-700 border-2 rounded-md overflow-hidden" href="/posts/homelab/windows_autologon/">
+    <div class=" p-4">
+      <div class="items-center text-left text-xl font-semibold">
+        
+        <div class="font-bold text-xl text-neutral-800 decoration-primary-500 hover:underline hover:underline-offset-2 dark:text-neutral"
+          href="/posts/homelab/windows_autologon/">Windows autologon</div>
+        
+        
+        
+      </div>
+      <div class="text-sm text-neutral-500 dark:text-neutral-400">
+        
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+
+  
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="2025-07-01T12:10:31&#43;02:00">1 Juli 2025</time>
+    
+
+    
+    
+  </div>
+
+  
+    <div class="flex flex-row flex-wrap items-center">
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+  
+
+  
+  
+    <div class="flex flex-row flex-wrap items-center">
+      
+        
+      
+        
+          
+        
+      
+        
+      
+        
+          
+        
+      
+    </div>
+  
+
+  
+  
+
+
+
+      </div>
+      
+      <div class="py-1 max-w-fit prose dark:prose-invert">
+        AutoLogon # Erstelle eine .reg Datei mit folgendem Inhalt und führe sie auf dem Zielrechner
+aus.
+1Windows Registry Editor Version 5.00 2 3[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon] 4&#34;AutoAdminLogon&#34;=&#34;1&#34; 5&#34;DefaultUserName&#34;=&#34;BENUTZERNAME&#34; 6&#34;DefaultDomainName&#34;=&#34;DOMÄNE&#34; 7&#34;DefaultPassword&#34;=&#39;*****&#39; 
+      </div>
+      
+    </div>
+  </a>
+
+        
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a class="flex flex-wrap md:flex-nowrap article border border-neutral-200 dark:border-neutral-700 border-2 rounded-md overflow-hidden" href="/posts/solar/">
+    <div class=" p-4">
+      <div class="items-center text-left text-xl font-semibold">
+        
+        <div class="font-bold text-xl text-neutral-800 decoration-primary-500 hover:underline hover:underline-offset-2 dark:text-neutral"
+          href="/posts/solar/">Solaranlage</div>
+        
+        
+        
+      </div>
+      <div class="text-sm text-neutral-500 dark:text-neutral-400">
+        
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+
+  
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="2025-07-01T12:10:31&#43;02:00">1 Juli 2025</time><span class="px-2 text-primary-500">&middot;</span><time datetime="2025-06-30T17:05:47&#43;02:00">Aktualisiert: 30 Juni 2025</time>
+    
+
+    
+    
+  </div>
+
+  
+    <div class="flex flex-row flex-wrap items-center">
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+  
+
+  
+  
+    <div class="flex flex-row flex-wrap items-center">
+      
+        
+      
+        
+          
+        
+      
+        
+      
+        
+          
+        
+      
+    </div>
+  
+
+  
+  
+
+
+
+      </div>
+      
+      <div class="py-1 max-w-fit prose dark:prose-invert">
+        Übersicht über unsere Solaranlage mit Komponenten # Als Netto mit einem Solarkraftwerk in Selbstmontage geworben hat und unser Stromanbieter schon wieder eine Preiserhöhung ins Haus flatter ließ, war es um mich passiert. Es musste etwas passieren.
+
+      </div>
+      
+    </div>
+  </a>
+
+        
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a class="flex flex-wrap md:flex-nowrap article border border-neutral-200 dark:border-neutral-700 border-2 rounded-md overflow-hidden" href="/posts/homelab/software/">
+    <div class=" p-4">
+      <div class="items-center text-left text-xl font-semibold">
+        
+        <div class="font-bold text-xl text-neutral-800 decoration-primary-500 hover:underline hover:underline-offset-2 dark:text-neutral"
+          href="/posts/homelab/software/">Software</div>
+        
+        
+        
+      </div>
+      <div class="text-sm text-neutral-500 dark:text-neutral-400">
+        
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+
+  
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="2025-07-01T12:10:31&#43;02:00">1 Juli 2025</time><span class="px-2 text-primary-500">&middot;</span><time datetime="2025-06-30T17:05:47&#43;02:00">Aktualisiert: 30 Juni 2025</time>
     
 
     
@@ -1083,12 +1464,12 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
 
 
 
-  <a class="flex flex-wrap md:flex-nowrap article border border-neutral-200 dark:border-neutral-700 border-2 rounded-md overflow-hidden" href="/posts/homelab/hetzner_install/">
+  <a class="flex flex-wrap md:flex-nowrap article border border-neutral-200 dark:border-neutral-700 border-2 rounded-md overflow-hidden" href="/posts/homelab/snippets/">
     <div class=" p-4">
       <div class="items-center text-left text-xl font-semibold">
         
         <div class="font-bold text-xl text-neutral-800 decoration-primary-500 hover:underline hover:underline-offset-2 dark:text-neutral"
-          href="/posts/homelab/hetzner_install/">Hetzner Server installieren</div>
+          href="/posts/homelab/snippets/">Snippets</div>
         
         
         
@@ -1137,7 +1518,1107 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2025-06-30T23:11:45&#43;02:00">30 Juni 2025</time>
+      <time datetime="2025-07-01T12:10:31&#43;02:00">1 Juli 2025</time>
+    
+
+    
+    
+  </div>
+
+  
+    <div class="flex flex-row flex-wrap items-center">
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+  
+
+  
+  
+    <div class="flex flex-row flex-wrap items-center">
+      
+        
+      
+        
+          
+        
+      
+        
+      
+        
+          
+        
+      
+    </div>
+  
+
+  
+  
+
+
+
+      </div>
+      
+      <div class="py-1 max-w-fit prose dark:prose-invert">
+        Snippets # Leeren branch in git erstellen # 1git switch --orphan pages 2git commit --allow-empty -m &#34;Initial commit on orphan branch&#34; 3git push -u origin pages Zone aus Samba extrahieren # 1#!/bin/sh 2# 3# Extract DNS zone from Samba4 native DNS using samba-tool 4# 5# Prerequistes: 6# samba krb5-workstation 7 8SAMBA_TOOL=samba-tool 9 10#kinit Administrator 11#trap &#34;kdestroy; rm -f $TMPFILE&#34; 0 1 2 15 12#klist 13## -k=yes doesn&#39;t work... 14## Using --password isn&#39;t secure. 15USER=Administrator 16echo -n &#34;$USER password:&#34; &gt;&amp;2; stty -echo; read PASS; stty echo; echo &#39;&#39; &gt;&amp;2 17echo &#39;Please ignore &#34;Cannot do GSSAPI to an IP address&#34; errors...&#39; &gt;&amp;2 18 19## Extract zones 20# 2 zone(s) found 21# 22# pszZoneName : a.example.or.jp 23# Flags : DNS_RPC_ZONE_DSINTEGRATED DNS_RPC_ZONE_UPDATE_SECURE 24# ZoneType : DNS_ZONE_TYPE_PRIMARY 25# Version : 50 26# dwDpFlags : DNS_DP_AUTOCREATED DNS_DP_DOMAIN_DEFAULT DNS_DP_ENLISTED 27# pszDpFqdn : DomainDnsZones.a.example.or.jp 28# 29# pszZoneName : _msdcs.a.example.or.jp 30# Flags : DNS_RPC_ZONE_DSINTEGRATED DNS_RPC_ZONE_UPDATE_SECURE 31# ZoneType : DNS_ZONE_TYPE_PRIMARY 32# Version : 50 33# dwDpFlags : DNS_DP_AUTOCREATED DNS_DP_FOREST_DEFAULT DNS_DP_ENLISTED 34# pszDpFqdn : ForestDnsZones.a.example.or.jp 35 36#$SAMBA_TOOL dns zonelist localhost --kerberos=yes &gt; $TMPFILE 37ZONES=`$SAMBA_TOOL dns zonelist localhost -U &#34;$USER&#34; --password &#34;$PASS&#34; | awk &#39;$1 ~ /pszZoneName/{print $3}&#39;` 38 39## queryzone $zone &#34;ForestDnsZones&#34; 40queryzone () { 41 local zone=&#34;$1&#34; 42 local entry=&#34;$2&#34; 43 local qentry=&#34;$entry&#34; 44 local name 45 local children 46 local lhs 47 test -z &#34;$entry&#34; &amp;&amp; qentry=&#34;@&#34; 48 49 $SAMBA_TOOL dns query localhost $zone &#34;$qentry&#34; ALL -U &#34;$USER&#34; --password &#34;$PASS&#34; | 50# Name=, Records=3, Children=0 51# SOA: serial=1, refresh=900, retry=600, expire=86400, minttl=3600, ns=ad01.a.example.or.jp., email=hostmaster.a.example.or.jp. (flags=600000f0, serial=1, ttl=3600) 52# NS: ad01.a.example.or.jp. (flags=600000f0, serial=1, ttl=900) 53# A: 100.64.96.31 (flags=600000f0, serial=1, ttl=900) 54# Name=_msdcs, Records=0, Children=0 55# Name=_sites, Records=0, Children=1 56# Name=_tcp, Records=0, Children=4 57 while read line; do 58 set $line 59 case &#34;$1&#34; in 60 Name=*,) 61 name=`expr $1 : &#39;Name=\([^,]*\)*,&#39;` 62 children=`expr $3 : &#39;Children=\([0-9]*\)&#39;` 63 if [ $children -gt 0 ]; then 64 queryzone $zone $name${entry:+.}$entry 65 fi 66 if [ -z &#34;$name&#34; ]; then 67 if [ -z &#34;$entry&#34; ]; then 68 lhs=&#34;@&#34; 69 else 70 lhs=&#34;${entry}&#34; 71 fi 72 else 73 lhs=&#34;${name}${entry:+.}${entry}&#34; 74 fi 75 ;; 76 SOA:) 77# SOA: serial=1, refresh=900, retry=600, expire=86400, minttl=3600, ns=ad01.a.example.or.jp., email=hostmaster.a.example.or.jp. (flags=600000f0, serial=1, ttl=3600) 78 echo &#34;$@&#34; | sed -e &#39;s/.*serial=\([0-9]*\), refresh=\([0-9]*\), retry=\([0-9]*\), expire=\([0-9]*\), minttl=\([0-9]*\), ns=\([^,]*\), email=\([^,]*\) (flags=.*, serial=[0-9]*, ttl=\([0-9]*\))/&#39;&#34;${name:-@}&#34;&#39; \8 IN SOA \6 \7 \1 \2 \3 \4 \5/&#39; 79 ;; 80# NS: ad01.a.example.or.jp. (flags=600000f0, serial=1, ttl=900) 81# A: 100.64.96.31 (flags=600000f0, serial=1, ttl=900) 82 NS:|A:|AAAA:) 83 echo &#34;$@&#34; | sed -ne &#39;s/\([^ ]*\): \([^ ]*\) (flags=[0-9a-f]*, serial=[0-9]*, ttl=\([0-9]*\)).*/&#39;&#34;${lhs}&#34;&#39; \3 IN \1 \2/p&#39; 84 ;; 85# SRV: ad01.a.example.or.jp. (88, 0, 100) (flags=f0, serial=1, ttl=900) 86 SRV:|MX:) 87 echo &#34;$@&#34; | sed -ne &#39;s/\([^ ]*\): \([^ ]*\) (\([0-9]*\), \([0-9]*\), \([0-9]*\)) (flags=[0-9a-f]*, serial=[0-9]*, ttl=\([0-9]*\)).*/&#39;&#34;${lhs}&#34;&#39; \6 IN \1 \4 \5 \3 \2/p&#39; 88 ;; 89# CNAME: ad01.a.example.or.jp. (flags=f0, serial=1, ttl=900) 90 CNAME:) 91 echo &#34;$@&#34; | sed -ne &#39;s/\([^ ]*\): \([^ ]*\) (flags=[0-9a-f]*, serial=[0-9]*, ttl=\([0-9]*\)).*/&#39;&#34;${lhs}&#34;&#39; \3 IN \1 \2/p&#39; 92 ;; 93 *) 94 echo &#34;ERROR unknown record type $1; aborting&#34; &gt;&amp;2; exit 1 95 ;; 96 esac 97 done 98} 99 100echo Zones: $ZONES &gt;&amp;2 101for zone in $ZONES; do 102 echo &#39;$ORIGIN&#39; $zone 103 echo &#39;&#39; 104 queryzone $zone &#34;&#34; 105 echo &#39;&#39; 106done ;# zone $ZONES Schlüssel aus Windows extrahieren # 1Set WshShell = CreateObject(&#34;WScript.Shell&#34;) 2MsgBox ConvertToKey(WshShell.RegRead(&#34;HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\DigitalProductId&#34;)) 3 4Function ConvertToKey(Key) 5Const KeyOffset = 52 6i = 28 7Chars = &#34;BCDFGHJKMPQRTVWXY2346789&#34; 8Do 9Cur = 0 10x = 14 11Do 12Cur = Cur * 256 13Cur = Key(x + KeyOffset) + Cur 14Key(x + KeyOffset) = (Cur \ 24) And 255 15Cur = Cur Mod 24 16x = x -1 17Loop While x &gt;= 0 18i = i -1 19KeyOutput = Mid(Chars, Cur + 1, 1) &amp; KeyOutput 20If (((29 - i) Mod 6) = 0) And (i &lt;&gt; -1) Then 21i = i -1 22KeyOutput = &#34;-&#34; &amp; KeyOutput 23End If 24Loop While i &gt;= 0 25ConvertToKey = KeyOutput 26End Function Festplatten in Proxmox bewegen # Dieses Script migriert alle Festplatten einer VM auf einen anderen Storage
+
+      </div>
+      
+    </div>
+  </a>
+
+        
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a class="flex flex-wrap md:flex-nowrap article border border-neutral-200 dark:border-neutral-700 border-2 rounded-md overflow-hidden" href="/posts/homelab/setup_windows/">
+    <div class=" p-4">
+      <div class="items-center text-left text-xl font-semibold">
+        
+        <div class="font-bold text-xl text-neutral-800 decoration-primary-500 hover:underline hover:underline-offset-2 dark:text-neutral"
+          href="/posts/homelab/setup_windows/">Setup Windows Client</div>
+        
+        
+        
+      </div>
+      <div class="text-sm text-neutral-500 dark:text-neutral-400">
+        
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+
+  
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="2025-07-01T12:10:31&#43;02:00">1 Juli 2025</time>
+    
+
+    
+    
+  </div>
+
+  
+    <div class="flex flex-row flex-wrap items-center">
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+  
+
+  
+  
+    <div class="flex flex-row flex-wrap items-center">
+      
+        
+      
+        
+          
+        
+      
+        
+      
+        
+          
+        
+      
+    </div>
+  
+
+  
+  
+
+
+
+      </div>
+      
+      <div class="py-1 max-w-fit prose dark:prose-invert">
+         Windows Rechner mit Professional Version kaufen (Aufgeräumt wird über Ansible)
+Windows Rechner vollständig laden
+Beim ersten Anschalten lokalen Benutzer oder Domäne auswählen.
+Lokaler Benutzer ist der Hauptnutzer des Gerätes.
+Kennwort wird in der IT Datenbank gesichert
+Alle Datensammelei während des Setups verbieten
+Rechner in Domäne aufnehmen
+Ansible Setup Script starten (liegt im ansible-main Repo unter files)
+
+      </div>
+      
+    </div>
+  </a>
+
+        
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a class="flex flex-wrap md:flex-nowrap article border border-neutral-200 dark:border-neutral-700 border-2 rounded-md overflow-hidden" href="/posts/homelab/verwaltung/">
+    <div class=" p-4">
+      <div class="items-center text-left text-xl font-semibold">
+        
+        <div class="font-bold text-xl text-neutral-800 decoration-primary-500 hover:underline hover:underline-offset-2 dark:text-neutral"
+          href="/posts/homelab/verwaltung/">Server-,Diensteverwaltung</div>
+        
+        
+        
+      </div>
+      <div class="text-sm text-neutral-500 dark:text-neutral-400">
+        
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+
+  
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="2025-07-01T12:10:31&#43;02:00">1 Juli 2025</time>
+    
+
+    
+    
+  </div>
+
+  
+    <div class="flex flex-row flex-wrap items-center">
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+  
+
+  
+  
+    <div class="flex flex-row flex-wrap items-center">
+      
+        
+      
+        
+          
+        
+      
+        
+      
+        
+          
+        
+      
+    </div>
+  
+
+  
+  
+
+
+
+      </div>
+      
+      <div class="py-1 max-w-fit prose dark:prose-invert">
+        Wir verwenden zur generellen Verwaltung von Servern Ansible. Für manche Dienste
+ist es jedoch notwendig oder praktikabler dies über vorhandene Portale zu
+realisieren.
+Core-Networks (DNS) # Unsere DNS Server werden bei Core-Networks gehostet. In deren Webinterface lassen sich
+alle relevanten Änderungen durchführen.
+
+      </div>
+      
+    </div>
+  </a>
+
+        
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a class="flex flex-wrap md:flex-nowrap article border border-neutral-200 dark:border-neutral-700 border-2 rounded-md overflow-hidden" href="/posts/homelab/server/">
+    <div class=" p-4">
+      <div class="items-center text-left text-xl font-semibold">
+        
+        <div class="font-bold text-xl text-neutral-800 decoration-primary-500 hover:underline hover:underline-offset-2 dark:text-neutral"
+          href="/posts/homelab/server/">Server</div>
+        
+        
+        
+      </div>
+      <div class="text-sm text-neutral-500 dark:text-neutral-400">
+        
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+
+  
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="2025-07-01T12:10:31&#43;02:00">1 Juli 2025</time>
+    
+
+    
+    
+  </div>
+
+  
+    <div class="flex flex-row flex-wrap items-center">
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+  
+
+  
+  
+    <div class="flex flex-row flex-wrap items-center">
+      
+        
+      
+        
+          
+        
+      
+        
+      
+        
+          
+        
+      
+    </div>
+  
+
+  
+  
+
+
+
+      </div>
+      
+      <div class="py-1 max-w-fit prose dark:prose-invert">
+        Alle Maschinen dienen der Virtualisierung von diversen Systemen. Wir brauche die Flexibilität Systeme schnell skalieren zu können und auch durch neue zu ersetzen.
+Physisch vorhandene Server # Die Installation von zusätzlichen Diensten auf den physischen Servern sollte dringend vermieden werden. So ein zusätzlicher Dienst installiert werden musste, ist eine Dokumentation dringend erforderlich.
+
+      </div>
+      
+    </div>
+  </a>
+
+        
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a class="flex flex-wrap md:flex-nowrap article border border-neutral-200 dark:border-neutral-700 border-2 rounded-md overflow-hidden" href="/posts/homelab/samba-schema/">
+    <div class=" p-4">
+      <div class="items-center text-left text-xl font-semibold">
+        
+        <div class="font-bold text-xl text-neutral-800 decoration-primary-500 hover:underline hover:underline-offset-2 dark:text-neutral"
+          href="/posts/homelab/samba-schema/">Samba Schema</div>
+        
+        
+        
+      </div>
+      <div class="text-sm text-neutral-500 dark:text-neutral-400">
+        
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+
+  
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="2025-07-01T12:10:31&#43;02:00">1 Juli 2025</time>
+    
+
+    
+    
+  </div>
+
+  
+    <div class="flex flex-row flex-wrap items-center">
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+  
+
+  
+  
+    <div class="flex flex-row flex-wrap items-center">
+      
+        
+      
+        
+          
+        
+      
+        
+      
+        
+          
+        
+      
+    </div>
+  
+
+  
+  
+
+
+
+      </div>
+      
+      <div class="py-1 max-w-fit prose dark:prose-invert">
+        ms-MCS-AdmPwd und ms-MCS-AdmPwdExpirationTime # 1dn: CN=ms-MCS-AdmPwd,CN=Schema,cn=configuration,DC=ad,DC=zyria,DC=de 2changetype: add 3objectClass: attributeSchema 4ldapDisplayName: ms-MCS-AdmPwd 5adminDisplayName: ms-MCS-AdmPwd 6adminDescription: Stores password of local Administrator account on workstation 7attributeId: 1.2.840.113556.1.8000.2554.50051.45980.28112.18903.35903.6685103.1224907.2.1 8attributeSyntax: 2.5.5.5 9omSyntax: 19 10isSingleValued: TRUE 11systemOnly: FALSE 12searchFlags: 648 13isMemberOfPartialAttributeSet: FALSE 14showInAdvancedViewOnly: FALSE 15 16dn: CN=ms-MCS-AdmPwdExpirationTime,CN=Schema,cn=configuration,DC=ad,DC=zyria,DC=de 17changetype: add 18objectClass: attributeSchema 19ldapDisplayName: ms-MCS-AdmPwdExpirationTime 20adminDisplayName: ms-MCS-AdmPwdExpirationTime 21adminDescription: Stores timestamp of last password change 22attributeId: 1.2.840.113556.1.8000.2554.50051.45980.28112.18903.35903.6685103.1224907.2.2 23attributeSyntax: 2.5.5.16 24omSyntax: 65 25isSingleValued: TRUE 26systemOnly: FALSE 27searchFlags: 0 28isMemberOfPartialAttributeSet: FALSE 29showInAdvancedViewOnly: FALSE modify computer # 1dn: CN=computer,CN=Schema,cn=configuration,DC=ad,DC=zyria,DC=de 2changetype: Modify 3add: mayContain 4mayContain: ms-MCS-AdmPwd 5mayContain: ms-MCS-AdmPwdExpirationTime ldapPublicKey # 1#dn: CN=sshPublicKey,CN=Schema,CN=Configuration,DC=ad,DC=zyria,DC=de 2#changetype: add 3#objectClass: top 4#objectClass: attributeSchema 5#attributeID: 1.3.6.1.4.1.24552.500.1.1.1.13 6#cn: sshPublicKey 7#name: sshPublicKey 8#lDAPDisplayName: sshPublicKey 9#description: MANDATORY: OpenSSH Public key 10#attributeSyntax: 2.5.5.10 11#oMSyntax: 4 12#isSingleValued: FALSE 13#searchFlags: 8 14 15dn: CN=ldapPublicKey,CN=Schema,CN=Configuration,DC=ad,DC=zyria,DC=de 16changetype: add 17objectClass: top 18objectClass: classSchema 19governsID: 1.3.6.1.4.1.24552.500.1.1.2.0 20cn: ldapPublicKey 21name: ldapPublicKey 22description: MANDATORY: OpenSSH LPK objectclass 23lDAPDisplayName: ldapPublicKey 24subClassOf: top 25objectClassCategory: 3 26defaultObjectCategory: CN=ldapPublicKey,CN=Schema,CN=Configuration,DC=ad,DC=zyria,DC=de 27mayContain: sshPublicKey modify user # 1dn: CN=User,CN=Schema,CN=Configuration,DC=ad,DC=zyria,DC=de 2changetype: modify 3replace: auxiliaryClass 4auxiliaryClass: ldapPublicKey 5auxiliaryClass: posixAccount 6auxiliaryClass: shadowAccount 
+      </div>
+      
+    </div>
+  </a>
+
+        
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a class="flex flex-wrap md:flex-nowrap article border border-neutral-200 dark:border-neutral-700 border-2 rounded-md overflow-hidden" href="/posts/homelab/passworter/">
+    <div class=" p-4">
+      <div class="items-center text-left text-xl font-semibold">
+        
+        <div class="font-bold text-xl text-neutral-800 decoration-primary-500 hover:underline hover:underline-offset-2 dark:text-neutral"
+          href="/posts/homelab/passworter/">Passwörter</div>
+        
+        
+        
+      </div>
+      <div class="text-sm text-neutral-500 dark:text-neutral-400">
+        
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+
+  
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="2025-07-01T12:10:31&#43;02:00">1 Juli 2025</time>
+    
+
+    
+    
+  </div>
+
+  
+    <div class="flex flex-row flex-wrap items-center">
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+  
+
+  
+  
+    <div class="flex flex-row flex-wrap items-center">
+      
+        
+      
+        
+          
+        
+      
+        
+      
+        
+          
+        
+      
+    </div>
+  
+
+  
+  
+
+
+
+      </div>
+      
+      <div class="py-1 max-w-fit prose dark:prose-invert">
+        Was wir nicht tun # Passwörter werden nicht im Browser oder in Dokumenten z.B. Text,Word,Excel gesichert. Passwörter werden niemals durch Mitarbeiter verschickt. Nicht per Email, Telefon, SMS etc. Eine Ausnahme bildet die IT, welche im Ausnahmefall nicht persönlich vor Ort sein kann und selbstständig dafür sorgt, dass die Übertragung sicher ist. Für die Übertragung sind unten beschriebene Datenbanken gedacht. Hat ein Mitarbeiter keinen Zugriff auf eine Datenbank und benötigt ein Kennwort, bitte die IT kontaktieren. Wie wir mit Kennworten umehen # Wir benutzen einen dezentralen Passwortmanager (unter Windows Keepassxc), welcher auf allen Rechnern installiert ist. Dieser ermöglicht das sichere Speichern von sensiblen Daten und ist universell im ganzen Unternehmen einsetzbar. Passwörter werden auch für den Transport von A nach B immer in einer Datenbank gesichert. Das Kennwort für diese Datenbank kann bei persönlichen Datenbanken selbst vergeben werden. Bei gemeinsam genutzen Datenbanken ist die IT Ansprechpartner für die Verwaltung der Kennwörter. Der Ablageort für gemeinsam genutze Kennwörter ist Y:\Zugangsdaten
+
+      </div>
+      
+    </div>
+  </a>
+
+        
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a class="flex flex-wrap md:flex-nowrap article border border-neutral-200 dark:border-neutral-700 border-2 rounded-md overflow-hidden" href="/posts/homelab/login/">
+    <div class=" p-4">
+      <div class="items-center text-left text-xl font-semibold">
+        
+        <div class="font-bold text-xl text-neutral-800 decoration-primary-500 hover:underline hover:underline-offset-2 dark:text-neutral"
+          href="/posts/homelab/login/">Logins</div>
+        
+        
+        
+      </div>
+      <div class="text-sm text-neutral-500 dark:text-neutral-400">
+        
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+
+  
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="2025-07-01T12:10:31&#43;02:00">1 Juli 2025</time>
+    
+
+    
+    
+  </div>
+
+  
+    <div class="flex flex-row flex-wrap items-center">
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+  
+
+  
+  
+    <div class="flex flex-row flex-wrap items-center">
+      
+        
+      
+        
+          
+        
+      
+        
+      
+        
+          
+        
+      
+    </div>
+  
+
+  
+  
+
+
+
+      </div>
+      
+      <div class="py-1 max-w-fit prose dark:prose-invert">
+        Alle Zugangsdaten sind entweder in der Persönlichen Keepass Datendank (für
+personalisierte Logindaten) oder in der IT Datenbank. Der Login auf die Server
+geschieht über SSH Schlüssel. Ein Login mit dem Passwort ist nicht vorgesehen.
+Für den externen Zugriff ist der Login über VPN oder einem Bastion Host
+bastion@vpn.zyria.de :3022 möglich. Generell sollte jedoch ein Login auf die Server nur zum Suchen von Fehlern
+stattfinden. Die Verwaltung erfolgt ausschliesslich über Ansible. Jede händisch
+durchgeführte Änderung muss im Nachhinein in Ansible eingepflegt und getestet
+werden.
+
+      </div>
+      
+    </div>
+  </a>
+
+        
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a class="flex flex-wrap md:flex-nowrap article border border-neutral-200 dark:border-neutral-700 border-2 rounded-md overflow-hidden" href="/posts/strom/">
+    <div class=" p-4">
+      <div class="items-center text-left text-xl font-semibold">
+        
+        <div class="font-bold text-xl text-neutral-800 decoration-primary-500 hover:underline hover:underline-offset-2 dark:text-neutral"
+          href="/posts/strom/">Linksammlung rund um Strom</div>
+        
+        
+        
+      </div>
+      <div class="text-sm text-neutral-500 dark:text-neutral-400">
+        
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+
+  
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="2025-07-01T12:10:31&#43;02:00">1 Juli 2025</time><span class="px-2 text-primary-500">&middot;</span><time datetime="2025-06-30T17:05:47&#43;02:00">Aktualisiert: 30 Juni 2025</time>
+    
+
+    
+    
+  </div>
+
+  
+    <div class="flex flex-row flex-wrap items-center">
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+  
+
+  
+  
+    <div class="flex flex-row flex-wrap items-center">
+      
+        
+      
+        
+          
+        
+      
+        
+      
+        
+          
+        
+      
+    </div>
+  
+
+  
+  
+
+
+
+      </div>
+      
+      <div class="py-1 max-w-fit prose dark:prose-invert">
+        Linksammlung zum Thema Strom in meinem Heim.
+
+      </div>
+      
+    </div>
+  </a>
+
+        
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a class="flex flex-wrap md:flex-nowrap article border border-neutral-200 dark:border-neutral-700 border-2 rounded-md overflow-hidden" href="/posts/homelab/hetzner_install/">
+    <div class=" p-4">
+      <div class="items-center text-left text-xl font-semibold">
+        
+        <div class="font-bold text-xl text-neutral-800 decoration-primary-500 hover:underline hover:underline-offset-2 dark:text-neutral"
+          href="/posts/homelab/hetzner_install/">Hetzner Server</div>
+        
+        
+        
+      </div>
+      <div class="text-sm text-neutral-500 dark:text-neutral-400">
+        
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+
+  
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="2025-07-01T12:10:31&#43;02:00">1 Juli 2025</time>
     
 
     
@@ -1252,6 +2733,8 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   
 
   
+    
+  
 
   
 
@@ -1271,7 +2754,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2025-06-30T23:11:45&#43;02:00">30 Juni 2025</time>
+      <time datetime="2025-07-01T12:10:31&#43;02:00">1 Juli 2025</time><span class="px-2 text-primary-500">&middot;</span><time datetime="2025-06-30T17:15:13&#43;02:00">Aktualisiert: 30 Juni 2025</time>
     
 
     
@@ -1330,9 +2813,6 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
 
         
         
-        
-        
-        
 
 
 
@@ -1355,12 +2835,12 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
 
 
 
-  <a class="flex flex-wrap md:flex-nowrap article border border-neutral-200 dark:border-neutral-700 border-2 rounded-md overflow-hidden" href="/posts/solar/">
+  <a class="flex flex-wrap md:flex-nowrap article border border-neutral-200 dark:border-neutral-700 border-2 rounded-md overflow-hidden" href="/posts/homelab/erste_hilfe/">
     <div class=" p-4">
       <div class="items-center text-left text-xl font-semibold">
         
         <div class="font-bold text-xl text-neutral-800 decoration-primary-500 hover:underline hover:underline-offset-2 dark:text-neutral"
-          href="/posts/solar/">Solaranlage</div>
+          href="/posts/homelab/erste_hilfe/">Erste Hilfe</div>
         
         
         
@@ -1390,8 +2870,6 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   
 
   
-    
-  
 
   
 
@@ -1411,7 +2889,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2024-03-22T10:12:47&#43;01:00">22 März 2024</time><span class="px-2 text-primary-500">&middot;</span><time datetime="2025-06-30T17:05:47&#43;02:00">Aktualisiert: 30 Juni 2025</time>
+      <time datetime="2025-07-01T12:10:31&#43;02:00">1 Juli 2025</time>
     
 
     
@@ -1461,8 +2939,8 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
       </div>
       
       <div class="py-1 max-w-fit prose dark:prose-invert">
-        Übersicht über unsere Solaranlage mit Komponenten # Als Netto mit einem Solarkraftwerk in Selbstmontage geworben hat und unser Stromanbieter schon wieder eine Preiserhöhung ins Haus flatter ließ, war es um mich passiert. Es musste etwas passieren.
-
+        Erster Schritt # Läuft das Gerät? Hast du das Gerät einmal neu gestartet? Abmelden und anmelden reicht nicht
+aus! Sind alle Kabel angeschlossen und richtig eingesteckt? Ist der Bildschirm angeschaltet? Was hast du getan, bevor das Gerät nicht mehr ging? Zweiter Schritt # Statusseite checken Dritter Schritt # Neustart des Rechners == (nach jeder Änderung!) == Vierter Schritt # Evtl. ausstehende Updates ausführen 
       </div>
       
     </div>
@@ -1492,12 +2970,12 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
 
 
 
-  <a class="flex flex-wrap md:flex-nowrap article border border-neutral-200 dark:border-neutral-700 border-2 rounded-md overflow-hidden" href="/posts/strom/">
+  <a class="flex flex-wrap md:flex-nowrap article border border-neutral-200 dark:border-neutral-700 border-2 rounded-md overflow-hidden" href="/posts/homelab/vms/">
     <div class=" p-4">
       <div class="items-center text-left text-xl font-semibold">
         
         <div class="font-bold text-xl text-neutral-800 decoration-primary-500 hover:underline hover:underline-offset-2 dark:text-neutral"
-          href="/posts/strom/">Linksammlung rund um Strom</div>
+          href="/posts/homelab/vms/">Virtuelle Maschinen</div>
         
         
         
@@ -1527,8 +3005,6 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   
 
   
-    
-  
 
   
 
@@ -1548,7 +3024,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2024-03-08T12:52:37&#43;02:00">8 März 2024</time><span class="px-2 text-primary-500">&middot;</span><time datetime="2025-06-30T17:05:47&#43;02:00">Aktualisiert: 30 Juni 2025</time>
+      <time datetime="2025-07-01T12:10:31&#43;02:00">1 Juli 2025</time>
     
 
     
@@ -1598,8 +3074,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
       </div>
       
       <div class="py-1 max-w-fit prose dark:prose-invert">
-        Linksammlung zum Thema Strom in meinem Heim.
-
+         Servername Hostname Funktion System Notiz dev dev.zyria.de Docker Host Debian Stable IT interne Dienste addc addc.zyria.de Active Directory, Fileserver Debian Stable 
       </div>
       
     </div>

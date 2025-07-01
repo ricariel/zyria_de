@@ -9,12 +9,12 @@
     <managingEditor>fabrice@zyria.de (Fabrice Kirchner)</managingEditor>
     <webMaster>fabrice@zyria.de (Fabrice Kirchner)</webMaster>
     
-    <lastBuildDate>Mon, 30 Jun 2025 23:12:15 +0200</lastBuildDate><atom:link href="https://www.zyria.de/series/homelab/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 01 Jul 2025 12:11:00 +0200</lastBuildDate><atom:link href="https://www.zyria.de/series/homelab/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Dmarc-Report</title>
       <link>https://www.zyria.de/posts/homelab/k3s-prod/apps/dmarc-report/readme/</link>
-      <pubDate>Mon, 30 Jun 2025 23:12:15 +0200</pubDate>
+      <pubDate>Tue, 01 Jul 2025 12:11:00 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/posts/homelab/k3s-prod/apps/dmarc-report/readme/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;Quelle 
@@ -79,7 +79,7 @@ Webinterface.&lt;/p&gt;</description>
     <item>
       <title>Forgejo</title>
       <link>https://www.zyria.de/posts/homelab/k3s-prod/apps/forgejo/readme/</link>
-      <pubDate>Mon, 30 Jun 2025 23:12:15 +0200</pubDate>
+      <pubDate>Tue, 01 Jul 2025 12:11:00 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/posts/homelab/k3s-prod/apps/forgejo/readme/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;Quelle 
@@ -145,7 +145,7 @@ Repositories zu.&lt;/p&gt;</description>
     <item>
       <title>Hedgedoc</title>
       <link>https://www.zyria.de/posts/homelab/k3s-prod/apps/hedgedoc/readme/</link>
-      <pubDate>Mon, 30 Jun 2025 23:12:15 +0200</pubDate>
+      <pubDate>Tue, 01 Jul 2025 12:11:00 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/posts/homelab/k3s-prod/apps/hedgedoc/readme/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;Quelle 
@@ -203,7 +203,7 @@ Repositories zu.&lt;/p&gt;</description>
     <item>
       <title>k3s Argocd</title>
       <link>https://www.zyria.de/posts/homelab/k3s-prod/apps/argocd/readme/</link>
-      <pubDate>Mon, 30 Jun 2025 23:12:15 +0200</pubDate>
+      <pubDate>Tue, 01 Jul 2025 12:11:00 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/posts/homelab/k3s-prod/apps/argocd/readme/</guid>
       <description>Hier wird jeder Service (mit README.md) kurz notiert</description>
@@ -213,7 +213,7 @@ Repositories zu.&lt;/p&gt;</description>
     <item>
       <title>k3s cert-manager</title>
       <link>https://www.zyria.de/posts/homelab/k3s-prod/apps/cert-manager/readme/</link>
-      <pubDate>Mon, 30 Jun 2025 23:12:15 +0200</pubDate>
+      <pubDate>Tue, 01 Jul 2025 12:11:00 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/posts/homelab/k3s-prod/apps/cert-manager/readme/</guid>
       <description>Hier wird jeder Service (mit README.md) kurz notiert</description>
@@ -223,7 +223,7 @@ Repositories zu.&lt;/p&gt;</description>
     <item>
       <title>k3s descheduler</title>
       <link>https://www.zyria.de/posts/homelab/k3s-prod/apps/descheduler/readme/</link>
-      <pubDate>Mon, 30 Jun 2025 23:12:15 +0200</pubDate>
+      <pubDate>Tue, 01 Jul 2025 12:11:00 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/posts/homelab/k3s-prod/apps/descheduler/readme/</guid>
       <description>Hier wird jeder Service (mit README.md) kurz notiert</description>
@@ -233,7 +233,7 @@ Repositories zu.&lt;/p&gt;</description>
     <item>
       <title>k3s Homelab Cluster</title>
       <link>https://www.zyria.de/posts/homelab/k3s-prod/</link>
-      <pubDate>Mon, 30 Jun 2025 23:12:15 +0200</pubDate>
+      <pubDate>Tue, 01 Jul 2025 12:11:00 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/posts/homelab/k3s-prod/</guid>
       <description>Hier wird jeder Service (mit README.md) kurz notiert</description>
@@ -243,7 +243,7 @@ Repositories zu.&lt;/p&gt;</description>
     <item>
       <title>k3s keel</title>
       <link>https://www.zyria.de/posts/homelab/k3s-prod/apps/keel/readme/</link>
-      <pubDate>Mon, 30 Jun 2025 23:12:15 +0200</pubDate>
+      <pubDate>Tue, 01 Jul 2025 12:11:00 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/posts/homelab/k3s-prod/apps/keel/readme/</guid>
       <description>Hier wird jeder Service (mit README.md) kurz notiert</description>
@@ -253,7 +253,7 @@ Repositories zu.&lt;/p&gt;</description>
     <item>
       <title>k3s main</title>
       <link>https://www.zyria.de/posts/homelab/k3s-prod/apps/k3s/readme/</link>
-      <pubDate>Mon, 30 Jun 2025 23:12:15 +0200</pubDate>
+      <pubDate>Tue, 01 Jul 2025 12:11:00 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/posts/homelab/k3s-prod/apps/k3s/readme/</guid>
       <description>Hier wird jeder Service (mit README.md) kurz notiert</description>
@@ -263,7 +263,7 @@ Repositories zu.&lt;/p&gt;</description>
     <item>
       <title>k3s metallb</title>
       <link>https://www.zyria.de/posts/homelab/k3s-prod/apps/metallb/readme/</link>
-      <pubDate>Mon, 30 Jun 2025 23:12:15 +0200</pubDate>
+      <pubDate>Tue, 01 Jul 2025 12:11:00 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/posts/homelab/k3s-prod/apps/metallb/readme/</guid>
       <description>Hier wird jeder Service (mit README.md) kurz notiert</description>
@@ -273,7 +273,7 @@ Repositories zu.&lt;/p&gt;</description>
     <item>
       <title>k3s mta-sts</title>
       <link>https://www.zyria.de/posts/homelab/k3s-prod/apps/mta-sts/readme/</link>
-      <pubDate>Mon, 30 Jun 2025 23:12:15 +0200</pubDate>
+      <pubDate>Tue, 01 Jul 2025 12:11:00 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/posts/homelab/k3s-prod/apps/mta-sts/readme/</guid>
       <description>Hier wird jeder Service (mit README.md) kurz notiert</description>
@@ -283,7 +283,7 @@ Repositories zu.&lt;/p&gt;</description>
     <item>
       <title>k3s nfs-provisioner</title>
       <link>https://www.zyria.de/posts/homelab/k3s-prod/apps/nfs-provisioner/readme/</link>
-      <pubDate>Mon, 30 Jun 2025 23:12:15 +0200</pubDate>
+      <pubDate>Tue, 01 Jul 2025 12:11:00 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/posts/homelab/k3s-prod/apps/nfs-provisioner/readme/</guid>
       <description>Hier wird jeder Service (mit README.md) kurz notiert</description>
@@ -293,7 +293,7 @@ Repositories zu.&lt;/p&gt;</description>
     <item>
       <title>k3s Prometheus</title>
       <link>https://www.zyria.de/posts/homelab/k3s-prod/apps/prometheus/readme/</link>
-      <pubDate>Mon, 30 Jun 2025 23:12:15 +0200</pubDate>
+      <pubDate>Tue, 01 Jul 2025 12:11:00 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/posts/homelab/k3s-prod/apps/prometheus/readme/</guid>
       <description>Hier wird jeder Service (mit README.md) kurz notiert</description>
@@ -303,7 +303,7 @@ Repositories zu.&lt;/p&gt;</description>
     <item>
       <title>k3s reloader</title>
       <link>https://www.zyria.de/posts/homelab/k3s-prod/apps/reloader/readme/</link>
-      <pubDate>Mon, 30 Jun 2025 23:12:15 +0200</pubDate>
+      <pubDate>Tue, 01 Jul 2025 12:11:00 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/posts/homelab/k3s-prod/apps/reloader/readme/</guid>
       <description>Hier wird jeder Service (mit README.md) kurz notiert</description>
@@ -313,7 +313,7 @@ Repositories zu.&lt;/p&gt;</description>
     <item>
       <title>k3s system-upgrade-controller</title>
       <link>https://www.zyria.de/posts/homelab/k3s-prod/apps/system-upgrade-controller/readme/</link>
-      <pubDate>Mon, 30 Jun 2025 23:12:15 +0200</pubDate>
+      <pubDate>Tue, 01 Jul 2025 12:11:00 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/posts/homelab/k3s-prod/apps/system-upgrade-controller/readme/</guid>
       <description>Hier wird jeder Service (mit README.md) kurz notiert</description>
@@ -323,7 +323,7 @@ Repositories zu.&lt;/p&gt;</description>
     <item>
       <title>k3s Traefik</title>
       <link>https://www.zyria.de/posts/homelab/k3s-prod/apps/traefik/readme/</link>
-      <pubDate>Mon, 30 Jun 2025 23:12:15 +0200</pubDate>
+      <pubDate>Tue, 01 Jul 2025 12:11:00 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/posts/homelab/k3s-prod/apps/traefik/readme/</guid>
       <description>Hier wird jeder Service (mit README.md) kurz notiert</description>
@@ -333,7 +333,7 @@ Repositories zu.&lt;/p&gt;</description>
     <item>
       <title>k3s whoami</title>
       <link>https://www.zyria.de/posts/homelab/k3s-prod/apps/whoami/readme/</link>
-      <pubDate>Mon, 30 Jun 2025 23:12:15 +0200</pubDate>
+      <pubDate>Tue, 01 Jul 2025 12:11:00 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/posts/homelab/k3s-prod/apps/whoami/readme/</guid>
       <description>Hier wird jeder Service (mit README.md) kurz notiert</description>
@@ -342,10 +342,10 @@ Repositories zu.&lt;/p&gt;</description>
     
     <item>
       <title>Mailstack</title>
-      <link>https://www.zyria.de/posts/homelab/k3s-prod/apps/mailstack/doc/readme/</link>
-      <pubDate>Mon, 30 Jun 2025 23:12:15 +0200</pubDate>
+      <link>https://www.zyria.de/posts/homelab/k3s-prod/apps/mailstack/readme/</link>
+      <pubDate>Tue, 01 Jul 2025 12:11:00 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://www.zyria.de/posts/homelab/k3s-prod/apps/mailstack/doc/readme/</guid>
+      <guid>https://www.zyria.de/posts/homelab/k3s-prod/apps/mailstack/readme/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;Funktion 
     &lt;div id=&#34;funktion&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
     
@@ -368,14 +368,27 @@ Policy bereitzustellen&lt;/li&gt;
 &lt;li&gt;&lt;a
   href=&#34;https://www.zyria.de/posts/homelab/k3s-prod/apps/roundcube/readme/&#34;&gt;Roundcube Webmail&lt;/a&gt;
 &lt;/li&gt;
-&lt;/ul&gt;</description>
+&lt;/ul&gt;
+
+&lt;h2 class=&#34;relative group&#34;&gt;Wer hat eigentlich auf welche Mailbox Zugriff? 
+    &lt;div id=&#34;wer-hat-eigentlich-auf-welche-mailbox-zugriff&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#wer-hat-eigentlich-auf-welche-mailbox-zugriff&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;p&gt;Nutzer können Ihr Mailboxen beliebig mit anderen Nutzern teilen. Die IT hat&lt;br&gt;
+einige Freigaben bereits eingerichtet. Mit folgendem Befehlen lassen sich diese&lt;br&gt;
+setzen:&lt;/p&gt;</description>
       
     </item>
     
     <item>
       <title>Maintenance Page</title>
       <link>https://www.zyria.de/posts/homelab/k3s-prod/apps/maintenance-page/readme/</link>
-      <pubDate>Mon, 30 Jun 2025 23:12:15 +0200</pubDate>
+      <pubDate>Tue, 01 Jul 2025 12:11:00 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/posts/homelab/k3s-prod/apps/maintenance-page/readme/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;Quelle 
@@ -444,7 +457,7 @@ Policy bereitzustellen&lt;/li&gt;
     <item>
       <title>Pihole</title>
       <link>https://www.zyria.de/posts/homelab/k3s-prod/apps/pihole/pihole/</link>
-      <pubDate>Mon, 30 Jun 2025 23:12:15 +0200</pubDate>
+      <pubDate>Tue, 01 Jul 2025 12:11:00 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/posts/homelab/k3s-prod/apps/pihole/pihole/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;Quelle 
@@ -507,7 +520,7 @@ Policy bereitzustellen&lt;/li&gt;
     <item>
       <title>Roundcube Webmail</title>
       <link>https://www.zyria.de/posts/homelab/k3s-prod/apps/roundcube/readme/</link>
-      <pubDate>Mon, 30 Jun 2025 23:12:15 +0200</pubDate>
+      <pubDate>Tue, 01 Jul 2025 12:11:00 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/posts/homelab/k3s-prod/apps/roundcube/readme/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;Quelle 
@@ -575,7 +588,7 @@ Policy bereitzustellen&lt;/li&gt;
     <item>
       <title>Unifi Controller</title>
       <link>https://www.zyria.de/posts/homelab/k3s-prod/apps/unifi-controller/readme/</link>
-      <pubDate>Mon, 30 Jun 2025 23:12:15 +0200</pubDate>
+      <pubDate>Tue, 01 Jul 2025 12:11:00 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/posts/homelab/k3s-prod/apps/unifi-controller/readme/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;Quelle 
@@ -633,7 +646,7 @@ Policy bereitzustellen&lt;/li&gt;
     <item>
       <title>Uptime Kuma</title>
       <link>https://www.zyria.de/posts/homelab/k3s-prod/apps/uptime-kuma/readme/</link>
-      <pubDate>Mon, 30 Jun 2025 23:12:15 +0200</pubDate>
+      <pubDate>Tue, 01 Jul 2025 12:11:00 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/posts/homelab/k3s-prod/apps/uptime-kuma/readme/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;Quelle 
@@ -699,7 +712,7 @@ der IT.&lt;/p&gt;</description>
     <item>
       <title>Wireguard</title>
       <link>https://www.zyria.de/posts/homelab/k3s-prod/apps/wireguard/readme/</link>
-      <pubDate>Mon, 30 Jun 2025 23:12:15 +0200</pubDate>
+      <pubDate>Tue, 01 Jul 2025 12:11:00 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/posts/homelab/k3s-prod/apps/wireguard/readme/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;Quelle 
@@ -772,7 +785,7 @@ der IT.&lt;/p&gt;</description>
     <item>
       <title>Zammad</title>
       <link>https://www.zyria.de/posts/homelab/k3s-prod/apps/zammad/readme/</link>
-      <pubDate>Mon, 30 Jun 2025 23:12:15 +0200</pubDate>
+      <pubDate>Tue, 01 Jul 2025 12:11:00 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/posts/homelab/k3s-prod/apps/zammad/readme/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;Quelle 
@@ -828,9 +841,78 @@ der IT.&lt;/p&gt;</description>
     </item>
     
     <item>
+      <title>Erste Hilfe</title>
+      <link>https://www.zyria.de/posts/homelab/erste_hilfe/</link>
+      <pubDate>Tue, 01 Jul 2025 12:10:31 +0200</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://www.zyria.de/posts/homelab/erste_hilfe/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;Erster Schritt 
+    &lt;div id=&#34;erster-schritt&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#erster-schritt&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Läuft das Gerät?&lt;/li&gt;
+&lt;li&gt;Hast du das Gerät einmal neu gestartet? Abmelden und anmelden reicht nicht&lt;br&gt;
+aus!&lt;/li&gt;
+&lt;li&gt;Sind alle Kabel angeschlossen und richtig eingesteckt?&lt;/li&gt;
+&lt;li&gt;Ist der Bildschirm angeschaltet?&lt;/li&gt;
+&lt;li&gt;Was hast du getan, bevor das Gerät nicht mehr ging?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 class=&#34;relative group&#34;&gt;Zweiter Schritt 
+    &lt;div id=&#34;zweiter-schritt&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#zweiter-schritt&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a
+  href=&#34;https://status.zyria.com/status/index&#34;
+    target=&#34;_blank&#34;
+  &gt;Statusseite checken&lt;/a&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 class=&#34;relative group&#34;&gt;Dritter Schritt 
+    &lt;div id=&#34;dritter-schritt&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#dritter-schritt&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Neustart des Rechners == (nach jeder Änderung!) ==&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 class=&#34;relative group&#34;&gt;Vierter Schritt 
+    &lt;div id=&#34;vierter-schritt&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#vierter-schritt&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Evtl. ausstehende Updates ausführen&lt;/li&gt;
+&lt;/ul&gt;</description>
+      
+    </item>
+    
+    <item>
       <title>Hardware im Homelab</title>
       <link>https://www.zyria.de/posts/homelab/hardware/</link>
-      <pubDate>Mon, 30 Jun 2025 23:11:45 +0200</pubDate>
+      <pubDate>Tue, 01 Jul 2025 12:10:31 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/posts/homelab/hardware/</guid>
       <description>&lt;p&gt;Hier findet man eine Übersicht über die im Homelab verwendete Hardware.&lt;/p&gt;</description>
@@ -838,12 +920,463 @@ der IT.&lt;/p&gt;</description>
     </item>
     
     <item>
+      <title>Hetzner Server</title>
+      <link>https://www.zyria.de/posts/homelab/hetzner_install/</link>
+      <pubDate>Tue, 01 Jul 2025 12:10:31 +0200</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://www.zyria.de/posts/homelab/hetzner_install/</guid>
+      <description>Anbei ist der Ablauf beschrieben einen Hetzner Server in das System einzubinden.</description>
+      
+    </item>
+    
+    <item>
+      <title>Logins</title>
+      <link>https://www.zyria.de/posts/homelab/login/</link>
+      <pubDate>Tue, 01 Jul 2025 12:10:31 +0200</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://www.zyria.de/posts/homelab/login/</guid>
+      <description>&lt;p&gt;Alle Zugangsdaten sind entweder in der Persönlichen Keepass Datendank (für&lt;br&gt;
+personalisierte Logindaten) oder in der IT Datenbank. Der Login auf die Server&lt;br&gt;
+geschieht über SSH Schlüssel. Ein Login mit dem Passwort ist nicht vorgesehen.&lt;/p&gt;
+&lt;p&gt;Für den externen Zugriff ist der Login über &lt;a
+  href=&#34;https://vpn.zyria.de&#34;
+    target=&#34;_blank&#34;
+  &gt;VPN&lt;/a&gt;
+ oder einem Bastion Host&lt;br&gt;
+&lt;a
+  href=&#34;mailto:bastion@vpn.zyria.de&#34;&gt;bastion@vpn.zyria.de&lt;/a&gt;
+:3022 möglich. &lt;/p&gt;
+&lt;p&gt;Generell sollte jedoch ein Login auf die Server nur zum Suchen von Fehlern&lt;br&gt;
+stattfinden. Die Verwaltung erfolgt ausschliesslich über Ansible. Jede händisch&lt;br&gt;
+durchgeführte Änderung muss im Nachhinein in Ansible eingepflegt und getestet&lt;br&gt;
+werden.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Passwörter</title>
+      <link>https://www.zyria.de/posts/homelab/passworter/</link>
+      <pubDate>Tue, 01 Jul 2025 12:10:31 +0200</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://www.zyria.de/posts/homelab/passworter/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;Was wir nicht tun 
+    &lt;div id=&#34;was-wir-nicht-tun&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#was-wir-nicht-tun&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Passwörter werden nicht im Browser oder in Dokumenten z.B. Text,Word,Excel gesichert.&lt;/li&gt;
+&lt;li&gt;Passwörter werden niemals durch Mitarbeiter verschickt. Nicht per Email, Telefon, SMS etc. Eine Ausnahme bildet die IT, welche im Ausnahmefall nicht persönlich vor Ort sein kann und selbstständig dafür sorgt, dass die Übertragung sicher ist. Für die Übertragung sind unten beschriebene Datenbanken gedacht. Hat ein Mitarbeiter keinen Zugriff auf eine Datenbank und benötigt ein Kennwort, bitte die IT kontaktieren.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 class=&#34;relative group&#34;&gt;Wie wir mit Kennworten umehen 
+    &lt;div id=&#34;wie-wir-mit-kennworten-umehen&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#wie-wir-mit-kennworten-umehen&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Wir benutzen einen dezentralen Passwortmanager (unter Windows Keepassxc), welcher auf allen Rechnern installiert ist. Dieser ermöglicht das sichere Speichern von sensiblen Daten und ist universell im ganzen Unternehmen einsetzbar.&lt;/li&gt;
+&lt;li&gt;Passwörter werden auch für den Transport von A nach B immer in einer Datenbank gesichert. Das Kennwort für diese Datenbank kann bei persönlichen Datenbanken selbst vergeben werden. Bei gemeinsam genutzen Datenbanken ist die IT Ansprechpartner für die Verwaltung der Kennwörter.&lt;/li&gt;
+&lt;li&gt;Der Ablageort für gemeinsam genutze Kennwörter ist
+&lt;blockquote&gt;
+&lt;p&gt;Y:\Zugangsdaten&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Samba Schema</title>
+      <link>https://www.zyria.de/posts/homelab/samba-schema/</link>
+      <pubDate>Tue, 01 Jul 2025 12:10:31 +0200</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://www.zyria.de/posts/homelab/samba-schema/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;ms-MCS-AdmPwd und ms-MCS-AdmPwdExpirationTime 
+    &lt;div id=&#34;ms-mcs-admpwd-und-ms-mcs-admpwdexpirationtime&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#ms-mcs-admpwd-und-ms-mcs-admpwdexpirationtime&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+
+  
+  
+  
+
+
+
+
+
+
+  &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt; 1&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;dn: CN=ms-MCS-AdmPwd,CN=Schema,cn=configuration,DC=ad,DC=zyria,DC=de
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt; 2&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;changetype: add
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt; 3&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;objectClass: attributeSchema
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt; 4&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;ldapDisplayName: ms-MCS-AdmPwd
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt; 5&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;adminDisplayName: ms-MCS-AdmPwd
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt; 6&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;adminDescription: Stores password of local Administrator account on workstation
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt; 7&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;attributeId: 1.2.840.113556.1.8000.2554.50051.45980.28112.18903.35903.6685103.1224907.2.1
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt; 8&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;attributeSyntax: 2.5.5.5
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt; 9&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;omSyntax: 19
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;10&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;isSingleValued: TRUE
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;11&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;systemOnly: FALSE
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;12&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;searchFlags: 648
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;13&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;isMemberOfPartialAttributeSet: FALSE
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;14&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;showInAdvancedViewOnly: FALSE
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;15&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;16&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;dn: CN=ms-MCS-AdmPwdExpirationTime,CN=Schema,cn=configuration,DC=ad,DC=zyria,DC=de
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;17&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;changetype: add
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;18&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;objectClass: attributeSchema
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;19&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;ldapDisplayName: ms-MCS-AdmPwdExpirationTime
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;20&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;adminDisplayName: ms-MCS-AdmPwdExpirationTime
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;21&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;adminDescription: Stores timestamp of last password change
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;22&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;attributeId: 1.2.840.113556.1.8000.2554.50051.45980.28112.18903.35903.6685103.1224907.2.2
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;23&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;attributeSyntax: 2.5.5.16
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;24&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;omSyntax: 65
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;25&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;isSingleValued: TRUE
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;26&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;systemOnly: FALSE
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;27&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;searchFlags: 0
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;28&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;isMemberOfPartialAttributeSet: FALSE
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;29&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;showInAdvancedViewOnly: FALSE
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+
+&lt;h2 class=&#34;relative group&#34;&gt;modify computer 
+    &lt;div id=&#34;modify-computer&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#modify-computer&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+
+  
+  
+  
+
+
+
+
+
+
+  &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;dn: CN=computer,CN=Schema,cn=configuration,DC=ad,DC=zyria,DC=de
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;changetype: Modify
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;add: mayContain
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;4&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;mayContain: ms-MCS-AdmPwd
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;5&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;mayContain: ms-MCS-AdmPwdExpirationTime
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+
+&lt;h2 class=&#34;relative group&#34;&gt;ldapPublicKey 
+    &lt;div id=&#34;ldappublickey&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#ldappublickey&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+
+  
+  
+  
+
+
+
+
+
+
+  &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt; 1&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;#dn: CN=sshPublicKey,CN=Schema,CN=Configuration,DC=ad,DC=zyria,DC=de
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt; 2&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;#changetype: add
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt; 3&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;#objectClass: top
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt; 4&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;#objectClass: attributeSchema
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt; 5&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;#attributeID: 1.3.6.1.4.1.24552.500.1.1.1.13
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt; 6&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;#cn: sshPublicKey
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt; 7&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;#name: sshPublicKey
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt; 8&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;#lDAPDisplayName: sshPublicKey
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt; 9&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;#description: MANDATORY: OpenSSH Public key
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;10&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;#attributeSyntax: 2.5.5.10
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;11&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;#oMSyntax: 4
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;12&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;#isSingleValued: FALSE
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;13&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;#searchFlags: 8
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;14&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;15&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;dn: CN=ldapPublicKey,CN=Schema,CN=Configuration,DC=ad,DC=zyria,DC=de
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;16&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;changetype: add
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;17&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;objectClass: top
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;18&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;objectClass: classSchema
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;19&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;governsID: 1.3.6.1.4.1.24552.500.1.1.2.0
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;20&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;cn: ldapPublicKey
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;21&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;name: ldapPublicKey
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;22&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;description: MANDATORY: OpenSSH LPK objectclass
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;23&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;lDAPDisplayName: ldapPublicKey
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;24&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;subClassOf: top
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;25&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;objectClassCategory: 3
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;26&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;defaultObjectCategory: CN=ldapPublicKey,CN=Schema,CN=Configuration,DC=ad,DC=zyria,DC=de
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;27&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;mayContain: sshPublicKey
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+
+&lt;h2 class=&#34;relative group&#34;&gt;modify user 
+    &lt;div id=&#34;modify-user&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#modify-user&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+
+  
+  
+  
+
+
+
+
+
+
+  &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;dn: CN=User,CN=Schema,CN=Configuration,DC=ad,DC=zyria,DC=de
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;changetype: modify
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;replace: auxiliaryClass
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;4&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;auxiliaryClass: ldapPublicKey
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;5&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;auxiliaryClass: posixAccount
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;6&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;auxiliaryClass: shadowAccount
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Server</title>
+      <link>https://www.zyria.de/posts/homelab/server/</link>
+      <pubDate>Tue, 01 Jul 2025 12:10:31 +0200</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://www.zyria.de/posts/homelab/server/</guid>
+      <description>&lt;p&gt;Alle Maschinen dienen der Virtualisierung von diversen Systemen. Wir brauche die Flexibilität Systeme schnell skalieren zu können und auch durch neue zu ersetzen.&lt;/p&gt;
+
+&lt;h2 class=&#34;relative group&#34;&gt;Physisch vorhandene Server 
+    &lt;div id=&#34;physisch-vorhandene-server&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#physisch-vorhandene-server&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;p&gt;Die Installation von zusätzlichen Diensten auf den physischen Servern sollte dringend vermieden werden. So ein zusätzlicher Dienst installiert werden musste, ist eine Dokumentation dringend erforderlich.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Server-,Diensteverwaltung</title>
+      <link>https://www.zyria.de/posts/homelab/verwaltung/</link>
+      <pubDate>Tue, 01 Jul 2025 12:10:31 +0200</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://www.zyria.de/posts/homelab/verwaltung/</guid>
+      <description>&lt;p&gt;Wir verwenden zur generellen Verwaltung von Servern Ansible. Für manche Dienste&lt;br&gt;
+ist es jedoch notwendig oder praktikabler dies über vorhandene Portale zu&lt;br&gt;
+realisieren.&lt;/p&gt;
+
+&lt;h2 class=&#34;relative group&#34;&gt;Core-Networks (DNS) 
+    &lt;div id=&#34;core-networks-dns&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#core-networks-dns&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;p&gt;Unsere DNS Server werden bei &lt;a
+  href=&#34;https://www.core-networks.de&#34;
+    target=&#34;_blank&#34;
+  &gt;Core-Networks&lt;/a&gt;
+&lt;br&gt;
+gehostet. In deren &lt;a
+  href=&#34;https://iface.core-networks.de&#34;
+    target=&#34;_blank&#34;
+  &gt;Webinterface&lt;/a&gt;
+ lassen sich&lt;br&gt;
+alle relevanten Änderungen durchführen.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Setup Windows Client</title>
+      <link>https://www.zyria.de/posts/homelab/setup_windows/</link>
+      <pubDate>Tue, 01 Jul 2025 12:10:31 +0200</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://www.zyria.de/posts/homelab/setup_windows/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Windows Rechner mit Professional Version kaufen (Aufgeräumt wird über Ansible)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Windows Rechner vollständig laden&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Beim ersten Anschalten lokalen Benutzer oder Domäne auswählen.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Lokaler Benutzer ist der Hauptnutzer des Gerätes.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Kennwort wird in der IT Datenbank gesichert&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Alle Datensammelei während des Setups verbieten&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Rechner in Domäne aufnehmen&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Ansible Setup Script starten (liegt im ansible-main Repo unter files)&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
       <title>Software</title>
       <link>https://www.zyria.de/posts/homelab/software/</link>
-      <pubDate>Mon, 30 Jun 2025 23:11:45 +0200</pubDate>
+      <pubDate>Tue, 01 Jul 2025 12:10:31 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/posts/homelab/software/</guid>
       <description>&lt;p&gt;Die eingesetzte Software partiell dokumentiert.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Windows autologon</title>
+      <link>https://www.zyria.de/posts/homelab/windows_autologon/</link>
+      <pubDate>Tue, 01 Jul 2025 12:10:31 +0200</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://www.zyria.de/posts/homelab/windows_autologon/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;AutoLogon 
+    &lt;div id=&#34;autologon&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#autologon&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;p&gt;Erstelle eine .reg Datei mit folgendem Inhalt und führe sie auf dem Zielrechner&lt;br&gt;
+aus.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-registry&#34; data-lang=&#34;registry&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;Windows Registry Editor Version 5.00
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;HKEY_LOCAL_MACHINE&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;4&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;na&#34;&gt;&amp;#34;AutoAdminLogon&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;1&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;5&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;na&#34;&gt;&amp;#34;DefaultUserName&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;BENUTZERNAME&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;6&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;na&#34;&gt;&amp;#34;DefaultDomainName&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;DOMÄNE&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;7&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;na&#34;&gt;&amp;#34;DefaultPassword&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;*****&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>WireGuard mit systemd</title>
+      <link>https://www.zyria.de/posts/homelab/wireguard_mit_systemd/</link>
+      <pubDate>Tue, 01 Jul 2025 12:10:31 +0200</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://www.zyria.de/posts/homelab/wireguard_mit_systemd/</guid>
+      <description>&lt;p&gt;Für eine WireGuard-Verbindung mit systemd-networkd und systemd-resolved.&lt;/p&gt;
+&lt;p&gt;Alle Konfigurationsdateien gehören in &lt;code&gt;/etc/systemd/network/&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h2 class=&#34;relative group&#34;&gt;Interface 
+    &lt;div id=&#34;interface&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#interface&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;p&gt;Das WireGuard-Interface anlegen (muss mit einer Zahl beginnen, z.B. &lt;code&gt;10-wg0.netdev&lt;/code&gt;) (&lt;a
+  href=&#34;https://www.freedesktop.org/software/systemd/man/latest/systemd.netdev.html&#34;
+    target=&#34;_blank&#34;
+  &gt;Dokumentation&lt;/a&gt;
+)&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-systemd&#34; data-lang=&#34;systemd&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt; 1&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;[NetDev]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt; 2&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;na&#34;&gt;Name&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;wg0&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt; 3&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;na&#34;&gt;Kind&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;wireguard&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt; 4&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;na&#34;&gt;Description&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;WireGuard-Tunnel für Casa Due Pur&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt; 5&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;na&#34;&gt;MTUBytes&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;1320&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt; 6&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt; 7&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;[WireGuard]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt; 8&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;na&#34;&gt;PrivateKey&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;...&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt; 9&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c&#34;&gt;# Für alle Netze aus AllowedIPs soll automatisch eine Route erzeugt werden, in einer separaten Routing-Tabelle:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;10&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;na&#34;&gt;RouteTable&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;123&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;11&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c&#34;&gt;# Die verschlüsselten WireGuard-Pakete werden markiert:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;12&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;na&#34;&gt;FirewallMark&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;123&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;13&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c&#34;&gt;# Beides erlaubt spezielles Routing, konfiguriert in der *.network-Datei&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;14&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;15&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;[WireGuardPeer]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;16&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;na&#34;&gt;PublicKey&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;lt;Public Key&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;17&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;na&#34;&gt;PresharedKey&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;...&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;18&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;na&#34;&gt;AllowedIPs&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;0.0.0.0/0,::1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;19&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;na&#34;&gt;Endpoint &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt; vpn.casa-due-pur.de:51194&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;20&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;na&#34;&gt;PersistentKeepalive&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;16&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;code&gt;PrivateKey=&lt;/code&gt; und &lt;code&gt;PresharedKey=&lt;/code&gt; entsprechend ausfüllen, den Rest sicherheitshalber nochmal abgleichen. Die Datei sollte für unprivilegierte Nutzer nicht lesbar sein, d.h. &lt;code&gt;chown root:systemd-network ...&lt;/code&gt;, &lt;code&gt;chmod 640 ...&lt;/code&gt;.&lt;/p&gt;</description>
       
     </item>
     
