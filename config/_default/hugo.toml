@@ -23,6 +23,9 @@ buildFuture = false
 enableEmoji = true
 enableGitInfo = true
 
+refLinksErrorLevel = 'warning'
+refLinksNotFoundURL = '/404'
+
 # googleAnalytics = "G-XXXXXXXXX"
 
 [pagination]
