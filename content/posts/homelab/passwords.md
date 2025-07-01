@@ -2,6 +2,9 @@
 title: Passwörter
 slug: passworter
 description: Wie werden Passwörter bei uns verwaltet
+series:
+  - homelab
+  - service
 ---
 
 ## Was wir nicht tun

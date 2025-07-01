@@ -1,7 +1,9 @@
 ---
 title: Server-,Diensteverwaltung
 description: "Möglichkeiten die Server und Dienste zu verwalten"
-weight: 20
+series:
+  - homelab
+  - software
 ---
 
 Wir verwenden zur generellen Verwaltung von Servern Ansible. Für manche Dienste

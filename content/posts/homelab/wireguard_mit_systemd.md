@@ -1,5 +1,7 @@
 ---
 title: 'WireGuard mit systemd'
+series:
+  - homelab
 ---
 
 Für eine WireGuard-Verbindung mit systemd-networkd und systemd-resolved.
@@ -26,9 +28,9 @@ FirewallMark=123
 # Beides erlaubt spezielles Routing, konfiguriert in der *.network-Datei
 
 [WireGuardPeer]
-PublicKey=IaNBwGqXkxy4iLuowJQuR6h+AdL5Oo9oYtSqub8m6C4=
+PublicKey=<Public Key>
 PresharedKey=...
-AllowedIPs=fd42:167:84::1/64, 2a01:4f8:1c1c:1e5b::/64, 2a01:4f8:fff0:22::/64, 2a01:4f8:242:27a5::/64, 2a01:4f8:242:27a3::/64, 2003:a:241:4400::/56, 2003:a:27f:c144::/64, 159.69.238.80/28, 159.69.10.123/32, 87.140.122.88/32, 168.119.65.89/32, 168.119.65.91/32, 10.26.15.0/24, 192.168.2.0/24
+AllowedIPs=0.0.0.0/0,::1
 Endpoint = vpn.casa-due-pur.de:51194
 PersistentKeepalive=16
 ```

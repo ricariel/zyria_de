@@ -3,6 +3,9 @@ title: 'Erste Hilfe'
 description: 'Erste Anlaufstelle bei Problemen'
 date: 2023-10-19T13:28:04+02:00
 weigth: 1
+series:
+  - homelab
+  - service
 ---
 
 ## Erster Schritt

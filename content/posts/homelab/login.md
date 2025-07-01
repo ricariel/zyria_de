@@ -1,7 +1,9 @@
 ---
 title: Logins
 description: "Zugang zu den Servern"
-weight: 10
+series:
+  - homelab
+  - service
 ---
 
 Alle Zugangsdaten sind entweder in der Persönlichen Keepass Datendank (für

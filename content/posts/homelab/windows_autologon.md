@@ -1,5 +1,7 @@
 ---
 title: 'Windows autologon'
+series:
+  - homelab
 ---
 
 ## AutoLogon

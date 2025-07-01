@@ -1,15 +1,17 @@
 ---
 title: "Server"
 description: "Beschreibung der Serverlandschaft"
+series:
+  - homelab
+  - software
+  - hardware
 ---
 
-Alle Maschinen bei Hetzner dienen der Virtualisierung von diversen Systemen. Wir brauche die Flexibilität Systeme schnell skalieren zu können und auch durch neue zu ersetzen.
+Alle Maschinen dienen der Virtualisierung von diversen Systemen. Wir brauche die Flexibilität Systeme schnell skalieren zu können und auch durch neue zu ersetzen.
 
 ## Physisch vorhandene Server
 
-Die Installation von zusätzlichen Diensten auf den physischen Servern bei
-Hetzner sollte dringend vermieden werden. So ein zusätzlicher Dienst
-installiert werden musste, ist eine Dokumentation dringend erforderlich.
+Die Installation von zusätzlichen Diensten auf den physischen Servern sollte dringend vermieden werden. So ein zusätzlicher Dienst installiert werden musste, ist eine Dokumentation dringend erforderlich.
 
 ## Virtuelle Maschinen
 

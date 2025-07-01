@@ -1,6 +1,8 @@
 ---
 title: Setup Windows Client
 description: Wie man einen Windows Client in die Firma einbindet.
+series:
+  - homelab
 ---
 
 - Windows Rechner mit Professional Version kaufen (Aufgeräumt wird über Ansible)

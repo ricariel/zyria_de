@@ -16,11 +16,6 @@
   weight = 3
 
 [[main]]
-  name = "Dokumentation"
-  pageRef = "docs"
-  weight = 5
-
-[[main]]
   name = "Statusseite"
   url = "https://status.zyria.de"
   weight = 30
