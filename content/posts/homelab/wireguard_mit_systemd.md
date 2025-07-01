@@ -6,6 +6,8 @@ series:
 
 Für eine WireGuard-Verbindung mit systemd-networkd und systemd-resolved.
 
+<!--more-->
+
 Alle Konfigurationsdateien gehören in `/etc/systemd/network/`.
 
 ## Interface
