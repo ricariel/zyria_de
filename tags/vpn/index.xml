@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Vpn on Zyria</title>
+    <link>https://www.zyria.de/tags/vpn/</link>
+    <description>Recent content in Vpn on Zyria</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>de-de</language>
+    <managingEditor>fabrice@zyria.de (Fabrice Kirchner)</managingEditor>
+    <webMaster>fabrice@zyria.de (Fabrice Kirchner)</webMaster>
+    
+    <lastBuildDate>Tue, 01 Jul 2025 13:37:47 +0200</lastBuildDate><atom:link href="https://www.zyria.de/tags/vpn/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>WireGuard mit systemd</title>
+      <link>https://www.zyria.de/posts/homelab/wireguard_mit_systemd/</link>
+      <pubDate>Tue, 01 Jul 2025 13:37:47 +0200</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://www.zyria.de/posts/homelab/wireguard_mit_systemd/</guid>
+      <description>&lt;p&gt;Für eine WireGuard-Verbindung mit systemd-networkd und systemd-resolved.&lt;/p&gt;</description>
+      
+    </item>
+    
+  </channel>
+</rss>

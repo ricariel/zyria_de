@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Service on Zyria</title>
+    <link>https://www.zyria.de/tags/service/</link>
+    <description>Recent content in Service on Zyria</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>de-de</language>
+    <managingEditor>fabrice@zyria.de (Fabrice Kirchner)</managingEditor>
+    <webMaster>fabrice@zyria.de (Fabrice Kirchner)</webMaster>
+    
+    <lastBuildDate>Tue, 01 Jul 2025 13:37:47 +0200</lastBuildDate><atom:link href="https://www.zyria.de/tags/service/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Erste Hilfe</title>
+      <link>https://www.zyria.de/posts/homelab/erste_hilfe/</link>
+      <pubDate>Tue, 01 Jul 2025 13:37:47 +0200</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://www.zyria.de/posts/homelab/erste_hilfe/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;Erster Schritt 
+    &lt;div id=&#34;erster-schritt&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#erster-schritt&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Läuft das Gerät?&lt;/li&gt;
+&lt;li&gt;Hast du das Gerät einmal neu gestartet? Abmelden und anmelden reicht nicht&lt;br&gt;
+aus!&lt;/li&gt;
+&lt;li&gt;Sind alle Kabel angeschlossen und richtig eingesteckt?&lt;/li&gt;
+&lt;li&gt;Ist der Bildschirm angeschaltet?&lt;/li&gt;
+&lt;li&gt;Was hast du getan, bevor das Gerät nicht mehr ging?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 class=&#34;relative group&#34;&gt;Zweiter Schritt 
+    &lt;div id=&#34;zweiter-schritt&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#zweiter-schritt&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a
+  href=&#34;https://status.zyria.com/status/index&#34;
+    target=&#34;_blank&#34;
+  &gt;Statusseite checken&lt;/a&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 class=&#34;relative group&#34;&gt;Dritter Schritt 
+    &lt;div id=&#34;dritter-schritt&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#dritter-schritt&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Neustart des Rechners == (nach jeder Änderung!) ==&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 class=&#34;relative group&#34;&gt;Vierter Schritt 
+    &lt;div id=&#34;vierter-schritt&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#vierter-schritt&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Evtl. ausstehende Updates ausführen&lt;/li&gt;
+&lt;/ul&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Logins</title>
+      <link>https://www.zyria.de/posts/homelab/login/</link>
+      <pubDate>Tue, 01 Jul 2025 13:37:47 +0200</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://www.zyria.de/posts/homelab/login/</guid>
+      <description>&lt;p&gt;Alle Zugangsdaten sind entweder in der Persönlichen Keepass Datendank (für&lt;br&gt;
+personalisierte Logindaten) oder in der IT Datenbank. Der Login auf die Server&lt;br&gt;
+geschieht über SSH Schlüssel. Ein Login mit dem Passwort ist nicht vorgesehen.&lt;/p&gt;
+&lt;p&gt;Für den externen Zugriff ist der Login über &lt;a
+  href=&#34;https://vpn.zyria.de&#34;
+    target=&#34;_blank&#34;
+  &gt;VPN&lt;/a&gt;
+ oder einem Bastion Host&lt;br&gt;
+&lt;a
+  href=&#34;mailto:bastion@vpn.zyria.de&#34;&gt;bastion@vpn.zyria.de&lt;/a&gt;
+:3022 möglich. &lt;/p&gt;
+&lt;p&gt;Generell sollte jedoch ein Login auf die Server nur zum Suchen von Fehlern&lt;br&gt;
+stattfinden. Die Verwaltung erfolgt ausschliesslich über Ansible. Jede händisch&lt;br&gt;
+durchgeführte Änderung muss im Nachhinein in Ansible eingepflegt und getestet&lt;br&gt;
+werden.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Passwörter</title>
+      <link>https://www.zyria.de/posts/homelab/passworter/</link>
+      <pubDate>Tue, 01 Jul 2025 13:37:47 +0200</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://www.zyria.de/posts/homelab/passworter/</guid>
+      <description>Umgang mit Passwörtern</description>
+      
+    </item>
+    
+  </channel>
+</rss>
