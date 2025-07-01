@@ -9,12 +9,12 @@
     <managingEditor>fabrice@zyria.de (Fabrice Kirchner)</managingEditor>
     <webMaster>fabrice@zyria.de (Fabrice Kirchner)</webMaster>
     
-    <lastBuildDate>Tue, 01 Jul 2025 12:39:04 +0200</lastBuildDate><atom:link href="https://www.zyria.de/series/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 01 Jul 2025 12:41:44 +0200</lastBuildDate><atom:link href="https://www.zyria.de/series/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Hardware</title>
       <link>https://www.zyria.de/series/hardware/</link>
-      <pubDate>Tue, 01 Jul 2025 12:39:04 +0200</pubDate>
+      <pubDate>Tue, 01 Jul 2025 12:41:44 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/series/hardware/</guid>
       <description></description>
@@ -24,7 +24,7 @@
     <item>
       <title>Homelab</title>
       <link>https://www.zyria.de/series/homelab/</link>
-      <pubDate>Tue, 01 Jul 2025 12:39:04 +0200</pubDate>
+      <pubDate>Tue, 01 Jul 2025 12:41:44 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/series/homelab/</guid>
       <description></description>
@@ -34,7 +34,7 @@
     <item>
       <title>Service</title>
       <link>https://www.zyria.de/series/service/</link>
-      <pubDate>Tue, 01 Jul 2025 12:38:31 +0200</pubDate>
+      <pubDate>Tue, 01 Jul 2025 12:41:13 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/series/service/</guid>
       <description></description>
@@ -44,7 +44,7 @@
     <item>
       <title>Software</title>
       <link>https://www.zyria.de/series/software/</link>
-      <pubDate>Tue, 01 Jul 2025 12:38:31 +0200</pubDate>
+      <pubDate>Tue, 01 Jul 2025 12:41:13 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/series/software/</guid>
       <description></description>
