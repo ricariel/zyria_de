@@ -3,10 +3,10 @@ module git.zyria.de/pyrox/zyria_de
 go 1.24.4
 
 require (
-  git.zyria.de/pyrox/hugo-default-coder v0.0.0-20250626124718-2d829eabfe02 // indirect
-  git.zyria.de/pyrox/hugo-legal v0.0.0-20250625155628-c250f4879fba // indirect
-  git.zyria.de/pyrox/hugo-shortcodes v0.0.0-20250513171334-8058cc681a62 // indirect
-  git.zyria.de/pyrox/k3s-prod v0.0.0-20250701113321-b56eec85685a // indirect
+  git.zyria.de/pyrox/hugo-default-coder v0.0.0-20250628110235-1ac6f8d7da9f // indirect
+  git.zyria.de/pyrox/hugo-legal v0.0.0-20250701122842-d90525d8d5bf // indirect
+  git.zyria.de/pyrox/hugo-shortcodes v0.0.0-20250701122553-27d7a6dfcf76 // indirect
+  git.zyria.de/pyrox/k3s-prod v0.0.0-20250701121339-010b4aae203f // indirect
   github.com/FortAwesome/Font-Awesome v0.0.0-20241216213156-af620534bfc3 // indirect
   github.com/google/docsy v0.12.0 // indirect
   github.com/hugomods/shortcodes v0.25.1 // indirect

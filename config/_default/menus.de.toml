@@ -67,3 +67,7 @@
   name = "Tags"
   pageRef = "tags"
   weight = 10
+[[footer]]
+  name = "Sitemap"
+  pageRef = "sitemap"
+  weight = 10
