@@ -5,6 +5,8 @@ draft: false
 menu:
   - main
 weight: 1
+tags:
+  - Über mich
 ---
 
 ## Fabrice Kirchner: Mein Weg durch die Tech-Welt
