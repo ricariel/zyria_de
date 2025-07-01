@@ -1,6 +1,7 @@
 ---
 title: 'Snippets'
 description: 'Sammlung von Codesnippets'
+summary: "All der Kram, der sonst nirgends hin gehört"
 ---
 
 ## Snippets
