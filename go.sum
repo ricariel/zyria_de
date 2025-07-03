@@ -1,11 +1,11 @@
-git.zyria.de/pyrox/hugo-default-coder v0.0.0-20250628110235-1ac6f8d7da9f h1:byRQAwgqaPxkC844IUkHgHgNGpFwH680HP/MS8kp8pI=
-git.zyria.de/pyrox/hugo-default-coder v0.0.0-20250628110235-1ac6f8d7da9f/go.mod h1:Y7qQuCK09h4tITlXuem2aXju0GL6/phMWq1/uy0uewk=
-git.zyria.de/pyrox/hugo-legal v0.0.0-20250701122842-d90525d8d5bf h1:7+os78rmaBNdp1XxpNvuq0AsMMj6vWh3ilOMumeXAN0=
-git.zyria.de/pyrox/hugo-legal v0.0.0-20250701122842-d90525d8d5bf/go.mod h1:1MFdE30Bzx583p3qHNQCQPOG2pMoDmms/4xqYiUtqOk=
+git.zyria.de/pyrox/hugo-default-coder v0.0.0-20250703122849-1f1acfc8f54e h1:7wYpLZNCmDkaOqlieyMp1zpbdtU6jxzJ2c4e7FKDUmc=
+git.zyria.de/pyrox/hugo-default-coder v0.0.0-20250703122849-1f1acfc8f54e/go.mod h1:Y7qQuCK09h4tITlXuem2aXju0GL6/phMWq1/uy0uewk=
+git.zyria.de/pyrox/hugo-legal v0.0.0-20250703123638-c16b2a624750 h1:+tNtqYnx253t+WUWjrWN6VGmRcQlXCakuPPNPtmhjjc=
+git.zyria.de/pyrox/hugo-legal v0.0.0-20250703123638-c16b2a624750/go.mod h1:1MFdE30Bzx583p3qHNQCQPOG2pMoDmms/4xqYiUtqOk=
 git.zyria.de/pyrox/hugo-shortcodes v0.0.0-20250701122553-27d7a6dfcf76 h1:MhRn9R0ZlXA2PogvHc2OpiHVJ+Lbw5Rktb2zuEVJUng=
 git.zyria.de/pyrox/hugo-shortcodes v0.0.0-20250701122553-27d7a6dfcf76/go.mod h1:V2R75xLAXqOdvHSkKtqc0AqaCUof6704G2ELS6Huis4=
-git.zyria.de/pyrox/k3s-prod v0.0.0-20250703095223-0ad2a1d1dafb h1:uXllcAMyGb0Y2WAOK1VKyaqO3wUf4CjwlibkO1XcfEs=
-git.zyria.de/pyrox/k3s-prod v0.0.0-20250703095223-0ad2a1d1dafb/go.mod h1:lM6OkgyZUD2079ubnXJYR7VJUxPW3peobWUYXCHfIBE=
+git.zyria.de/pyrox/k3s-prod v0.0.0-20250703103718-b909d3919458 h1:mdXFgDK0Ij2WIwZACwYZevt3gqT9B/CXWYPOZjW5l3w=
+git.zyria.de/pyrox/k3s-prod v0.0.0-20250703103718-b909d3919458/go.mod h1:lM6OkgyZUD2079ubnXJYR7VJUxPW3peobWUYXCHfIBE=
 github.com/FortAwesome/Font-Awesome v0.0.0-20241216213156-af620534bfc3 h1:/iluJkJiyTAdnqrw3Yi9rH2HNHhrrtCmj8VJe7I6o3w=
 github.com/FortAwesome/Font-Awesome v0.0.0-20241216213156-af620534bfc3/go.mod h1:IUgezN/MFpCDIlFezw3L8j83oeiIuYoj28Miwr/KUYo=
 github.com/google/docsy v0.12.0 h1:CddZKL39YyJzawr8GTVaakvcUTCJRAAYdz7W0qfZ2P4=
@@ -14,5 +14,6 @@ github.com/hugomods/shortcodes v0.25.1 h1:JQZ/Kw9aOlFVnDiDgXsSqiu8gLFXAM7tQn+TYr
 github.com/hugomods/shortcodes v0.25.1/go.mod h1:EnVopbZMNI/HeteM3Lp3phBTCRLvPSe7l142qhRFFPY=
 github.com/nunocoracao/blowfish/v2 v2.87.0 h1:m8hGBNSGpzHwy5xUGUsBzvkYeSuACjujyMu1H7HTqHE=
 github.com/nunocoracao/blowfish/v2 v2.87.0/go.mod h1:4SkMc+Ht8gpQCwArqiHMBDP3soxi2OWuAhVney+cuyk=
+github.com/twbs/bootstrap v5.3.6+incompatible/go.mod h1:fZTSrkpSf0/HkL0IIJzvVspTt1r9zuf7XlZau8kpcY0=
 github.com/twbs/bootstrap v5.3.7+incompatible h1:ea1W8TOWZFkqSK2M0McpgzLiUQVru3bz8aHb0j/XtuM=
 github.com/twbs/bootstrap v5.3.7+incompatible/go.mod h1:fZTSrkpSf0/HkL0IIJzvVspTt1r9zuf7XlZau8kpcY0=

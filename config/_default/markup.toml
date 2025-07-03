@@ -5,7 +5,7 @@
 [goldmark.renderer]
   unsafe = true
 
-  hardWraps = true
+  hardWraps = false
 
   [goldmark.extensions]
     [goldmark.extensions.passthrough]
