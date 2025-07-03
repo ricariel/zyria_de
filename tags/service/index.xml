@@ -9,12 +9,12 @@
     <managingEditor>fabrice@zyria.de (Fabrice Kirchner)</managingEditor>
     <webMaster>fabrice@zyria.de (Fabrice Kirchner)</webMaster>
     
-    <lastBuildDate>Thu, 03 Jul 2025 11:54:23 +0200</lastBuildDate><atom:link href="https://www.zyria.de/tags/service/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 03 Jul 2025 14:48:14 +0200</lastBuildDate><atom:link href="https://www.zyria.de/tags/service/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Erste Hilfe</title>
       <link>https://www.zyria.de/posts/homelab/erste_hilfe/</link>
-      <pubDate>Thu, 03 Jul 2025 11:54:23 +0200</pubDate>
+      <pubDate>Thu, 03 Jul 2025 14:48:14 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/posts/homelab/erste_hilfe/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;Erster Schritt 
@@ -28,7 +28,7 @@
 &lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;Läuft das Gerät?&lt;/li&gt;
-&lt;li&gt;Hast du das Gerät einmal neu gestartet? Abmelden und anmelden reicht nicht&lt;br&gt;
+&lt;li&gt;Hast du das Gerät einmal neu gestartet? Abmelden und anmelden reicht nicht
 aus!&lt;/li&gt;
 &lt;li&gt;Sind alle Kabel angeschlossen und richtig eingesteckt?&lt;/li&gt;
 &lt;li&gt;Ist der Bildschirm angeschaltet?&lt;/li&gt;
@@ -83,23 +83,23 @@ aus!&lt;/li&gt;
     <item>
       <title>Logins</title>
       <link>https://www.zyria.de/posts/homelab/login/</link>
-      <pubDate>Thu, 03 Jul 2025 11:54:23 +0200</pubDate>
+      <pubDate>Thu, 03 Jul 2025 14:48:14 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/posts/homelab/login/</guid>
-      <description>&lt;p&gt;Alle Zugangsdaten sind entweder in der Persönlichen Keepass Datendank (für&lt;br&gt;
-personalisierte Logindaten) oder in der IT Datenbank. Der Login auf die Server&lt;br&gt;
+      <description>&lt;p&gt;Alle Zugangsdaten sind entweder in der Persönlichen Keepass Datendank (für
+personalisierte Logindaten) oder in der IT Datenbank. Der Login auf die Server
 geschieht über SSH Schlüssel. Ein Login mit dem Passwort ist nicht vorgesehen.&lt;/p&gt;
 &lt;p&gt;Für den externen Zugriff ist der Login über &lt;a
   href=&#34;https://vpn.zyria.de&#34;
     target=&#34;_blank&#34;
   &gt;VPN&lt;/a&gt;
- oder einem Bastion Host&lt;br&gt;
+ oder einem Bastion Host
 &lt;a
   href=&#34;mailto:bastion@vpn.zyria.de&#34;&gt;bastion@vpn.zyria.de&lt;/a&gt;
 :3022 möglich. &lt;/p&gt;
-&lt;p&gt;Generell sollte jedoch ein Login auf die Server nur zum Suchen von Fehlern&lt;br&gt;
-stattfinden. Die Verwaltung erfolgt ausschliesslich über Ansible. Jede händisch&lt;br&gt;
-durchgeführte Änderung muss im Nachhinein in Ansible eingepflegt und getestet&lt;br&gt;
+&lt;p&gt;Generell sollte jedoch ein Login auf die Server nur zum Suchen von Fehlern
+stattfinden. Die Verwaltung erfolgt ausschliesslich über Ansible. Jede händisch
+durchgeführte Änderung muss im Nachhinein in Ansible eingepflegt und getestet
 werden.&lt;/p&gt;</description>
       
     </item>
@@ -107,7 +107,7 @@ werden.&lt;/p&gt;</description>
     <item>
       <title>Passwörter</title>
       <link>https://www.zyria.de/posts/homelab/passworter/</link>
-      <pubDate>Thu, 03 Jul 2025 11:54:23 +0200</pubDate>
+      <pubDate>Thu, 03 Jul 2025 14:48:14 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/posts/homelab/passworter/</guid>
       <description>Umgang mit Passwörtern</description>

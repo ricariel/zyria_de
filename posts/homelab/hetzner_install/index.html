@@ -30,8 +30,10 @@
   
   
   
-  <link type="text/css" rel="stylesheet" href="/css/main.bundle.min.2755fda1868f0bfc1843df512e7b0b0bec55a259db5f8b13dc3c0f7894e519f617c2b66f5915ec207e2a1ffc8b6d1b53dbd8f3dff8892140cb5eacc50a6edfbb.css"
-    integrity="sha512-J1X9oYaPC/wYQ99RLnsLC&#43;xVolnbX4sT3DwPeJTlGfYXwrZvWRXsIH4qH/yLbRtT29jz3/iJIUDLXqzFCm7fuw==" />
+  
+  
+  <link type="text/css" rel="stylesheet" href="/css/main.bundle.min.4d02dcdf582b9883c5c39623fe5aff979ca38add30068276abb7aa2d3ca512a7e89bfe9ef5d3616045e43a457971ab9263443121fcb6fe16841d982d76f1007b.css"
+    integrity="sha512-TQLc31grmIPFw5Yj/lr/l5yjit0wBoJ2q7eqLTylEqfom/6e9dNhYEXkOkV5cauSY0QxIfy2/haEHZgtdvEAew==" />
   
   
   <script type="text/javascript" src="/js/appearance.min.516a16745bea5a9bd011138d254cc0fd3973cd55ce6e15f3dec763e7c7c2c7448f8fe7b54cca811cb821b0c7e12cd161caace1dd794ac3d34d40937cbcc9ee12.js"
@@ -92,7 +94,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   <meta property="og:locale" content="de_de">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
-    <meta property="article:published_time" content="2025-07-03T11:54:23+02:00">
+    <meta property="article:published_time" content="2025-07-03T14:48:14+02:00">
     <meta property="article:modified_time" content="2025-07-01T13:37:34+02:00">
     <meta property="article:tag" content="Homelab">
     <meta property="article:tag" content="Extern">
@@ -121,8 +123,8 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
       "name": "Fabrice Kirchner"
     },
     "copyrightYear": "2025",
-    "dateCreated": "2025-07-03T11:54:23\u002b02:00",
-    "datePublished": "2025-07-03T11:54:23\u002b02:00",
+    "dateCreated": "2025-07-03T14:48:14\u002b02:00",
+    "datePublished": "2025-07-03T14:48:14\u002b02:00",
     
     "dateModified": "2025-07-01T13:37:34\u002b02:00",
     
@@ -650,6 +652,8 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   
 
   
+    
+  
 
   
 
@@ -671,7 +675,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2025-07-03T11:54:23&#43;02:00">3 Juli 2025</time><span class="px-2 text-primary-500">&middot;</span><time datetime="2025-07-01T13:37:34&#43;02:00">Aktualisiert: 1 Juli 2025</time><span class="px-2 text-primary-500">&middot;</span>
+      <time datetime="2025-07-03T14:48:14&#43;02:00">3 Juli 2025</time><span class="px-2 text-primary-500">&middot;</span><time datetime="2025-07-01T13:37:34&#43;02:00">Aktualisiert: 1 Juli 2025</time><span class="px-2 text-primary-500">&middot;</span><span>371 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
 
 
   
@@ -924,7 +928,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
       const toc = document.querySelector(TOC_SELECTOR)
       if (!toc) return
 
-      const collapseInactive = true
+      const collapseInactive = false
       const anchors = [...document.querySelectorAll(ANCHOR_SELECTOR)]
       const links = [...toc.querySelectorAll(TOC_LINK_SELECTOR)]
 
@@ -990,7 +994,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   href="https://www.hetzner.com/de/dedicated-rootserver/ax101"
     target="_blank"
   >AX101</a>
- Server.<br>
+ Server.
 Die Server sind Ipv6 only bestellt und beziehen eine IPv4 aus einem <a
   href="https://docs.hetzner.com/de/robot/dedicated-server/network/vswitch/"
     target="_blank"
@@ -1086,9 +1090,9 @@ Die Server sind Ipv6 only bestellt und beziehen eine IPv4 aus einem <a
  holen</li>
 <li>Daten beschaffen:</li>
 </ol>
-<p>a. FQDN = überlege einen passenden Namen für die Maschine.<br>
-a. CRYPT_PASS = lass dir ein sicheres Passwort in deinem Passwortgenerator<br>
-generieren.<br>
+<p>a. FQDN = überlege einen passenden Namen für die Maschine.
+a. CRYPT_PASS = lass dir ein sicheres Passwort in deinem Passwortgenerator
+generieren.
 a. IPV4 = Die Adresse aus der Auslieferungsmail von Hetzner</p>
 <ol>
 <li>|</li>
@@ -1104,11 +1108,11 @@ a. IPV4 = Die Adresse aus der Auslieferungsmail von Hetzner</p>
 <p>TODO: STORAGE beschreiben</p>
 </li>
 <li>
-<p>Remote unlock einrichten.<br>
+<p>Remote unlock einrichten.
 Per SSH funktioniert das entsperren der Luks Partitionen bereits. Damit dies automatisch funktioniert, müssen noch alle Tang Server hinzugefügt werden, welche die Partitionen entsperren dürfen. Dazu als erstes die neue IP in der Firewall freischalten und dann folgende Kommandos auf der Kommandozeile eingeben</p>
 </li>
 </ol>
-<p>Sollte die Installation über das Hetzner Script fehlschlagen, folgende Anleitung nutzen:<br>
+<p>Sollte die Installation über das Hetzner Script fehlschlagen, folgende Anleitung nutzen:
 <a
   href="https://pve.proxmox.com/wiki/Install_Proxmox_VE_on_Debian_11_Bullseye"
     target="_blank"
@@ -1128,7 +1132,7 @@ Per SSH funktioniert das entsperren der Luks Partitionen bereits. Damit dies aut
   href="https://www.networkshinobi.com/clevis-and-tang-network-bound-disk-encryption/"
     target="_blank"
   >dieser Anleitung</a>
- installieren auf allen physischen Hosts.<br>
+ installieren auf allen physischen Hosts.
 Hinzufügen zu den internen Tang Servern</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">clevis luks <span class="nb">bind</span> -d /dev/md1 tang <span class="s1">&#39;{&#34;url&#34;: &#34;http://[ipv6]&#34;}&#39;</span>
 </span></span></code></pre></div>
@@ -1420,7 +1424,7 @@ Hinzufügen zu den internen Tang Servern</p>
                 >
                 <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
                   
-                    <time datetime="2025-07-03T11:54:23&#43;02:00">3 Juli 2025</time>
+                    <time datetime="2025-07-03T14:48:14&#43;02:00">3 Juli 2025</time>
                   
                 </span>
               </span>
@@ -1436,7 +1440,7 @@ Hinzufügen zu den internen Tang Servern</p>
                 >
                 <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
                   
-                    <time datetime="2025-07-03T11:54:23&#43;02:00">3 Juli 2025</time>
+                    <time datetime="2025-07-03T14:48:14&#43;02:00">3 Juli 2025</time>
                   
                 </span>
               </span>

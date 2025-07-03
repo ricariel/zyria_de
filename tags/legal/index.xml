@@ -9,12 +9,12 @@
     <managingEditor>fabrice@zyria.de (Fabrice Kirchner)</managingEditor>
     <webMaster>fabrice@zyria.de (Fabrice Kirchner)</webMaster>
     
-    <lastBuildDate>Thu, 03 Jul 2025 11:54:53 +0200</lastBuildDate><atom:link href="https://www.zyria.de/tags/legal/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 03 Jul 2025 14:48:47 +0200</lastBuildDate><atom:link href="https://www.zyria.de/tags/legal/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Datenschutzerklärung</title>
       <link>https://www.zyria.de/datenschutz/</link>
-      <pubDate>Thu, 03 Jul 2025 11:54:53 +0200</pubDate>
+      <pubDate>Thu, 03 Jul 2025 14:48:47 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/datenschutz/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;Einleitung 
@@ -26,13 +26,13 @@
     &lt;/span&gt;        
     
 &lt;/h2&gt;
-&lt;p&gt;Mit der folgenden Datenschutzerklärung möchten wir Sie darüber aufklären, welche&lt;br&gt;
-Arten Ihrer personenbezogenen Daten (nachfolgend auch kurz als &amp;ldquo;Daten“&lt;br&gt;
-bezeichnet) wir zu welchen Zwecken und in welchem Umfang verarbeiten. Die&lt;br&gt;
-Datenschutzerklärung gilt für alle von uns durchgeführten Verarbeitungen&lt;br&gt;
-personenbezogener Daten, sowohl im Rahmen der Erbringung unserer Leistungen als&lt;br&gt;
-auch insbesondere auf unseren Webseiten, in mobilen Applikationen sowie&lt;br&gt;
-innerhalb externer Onlinepräsenzen, wie z.B. unserer Social-Media-Profile&lt;br&gt;
+&lt;p&gt;Mit der folgenden Datenschutzerklärung möchten wir Sie darüber aufklären, welche
+Arten Ihrer personenbezogenen Daten (nachfolgend auch kurz als &amp;ldquo;Daten“
+bezeichnet) wir zu welchen Zwecken und in welchem Umfang verarbeiten. Die
+Datenschutzerklärung gilt für alle von uns durchgeführten Verarbeitungen
+personenbezogener Daten, sowohl im Rahmen der Erbringung unserer Leistungen als
+auch insbesondere auf unseren Webseiten, in mobilen Applikationen sowie
+innerhalb externer Onlinepräsenzen, wie z.B. unserer Social-Media-Profile
 (nachfolgend zusammenfassend bezeichnet als &amp;ldquo;Onlineangebot“).&lt;/p&gt;</description>
       
     </item>
@@ -40,7 +40,7 @@ innerhalb externer Onlinepräsenzen, wie z.B. unserer Social-Media-Profile&lt;br
     <item>
       <title>Impressum</title>
       <link>https://www.zyria.de/impressum/</link>
-      <pubDate>Thu, 03 Jul 2025 11:54:53 +0200</pubDate>
+      <pubDate>Thu, 03 Jul 2025 14:48:47 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/impressum/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;Diensteanbieter 
@@ -66,8 +66,8 @@ Haingasse 3&lt;br&gt;
     
 &lt;/h2&gt;
 &lt;p&gt;E-Mail-Adresse:&lt;br&gt;
-web(at)zyria.de&lt;br&gt;
-Telefon:&lt;br&gt;
+web(at)zyria.de&lt;/p&gt;
+&lt;p&gt;Telefon:&lt;br&gt;
 0160 5513991&lt;/p&gt;
 &lt;p&gt;Mastodon:&lt;br&gt;
 &lt;a
