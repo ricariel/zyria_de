@@ -9,12 +9,12 @@
     <managingEditor>fabrice@zyria.de (Fabrice Kirchner)</managingEditor>
     <webMaster>fabrice@zyria.de (Fabrice Kirchner)</webMaster>
     
-    <lastBuildDate>Thu, 03 Jul 2025 14:48:14 +0200</lastBuildDate><atom:link href="https://www.zyria.de/tags/windows/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 03 Jul 2025 15:22:22 +0200</lastBuildDate><atom:link href="https://www.zyria.de/tags/windows/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Setup Windows Client</title>
       <link>https://www.zyria.de/posts/homelab/setup_windows/</link>
-      <pubDate>Thu, 03 Jul 2025 14:48:14 +0200</pubDate>
+      <pubDate>Thu, 03 Jul 2025 15:22:22 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/posts/homelab/setup_windows/</guid>
       <description>&lt;ul&gt;
@@ -47,7 +47,7 @@
     <item>
       <title>Windows autologon</title>
       <link>https://www.zyria.de/posts/homelab/windows_autologon/</link>
-      <pubDate>Thu, 03 Jul 2025 14:48:14 +0200</pubDate>
+      <pubDate>Thu, 03 Jul 2025 15:22:22 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/posts/homelab/windows_autologon/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;AutoLogon 
