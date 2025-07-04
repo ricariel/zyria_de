@@ -1,4 +1,4 @@
-date = [':fileModTime', ":filename",'date', 'publishdate', 'pubdate', 'published', 'lastmod', 'modified']
+date = [":filename",'date', 'publishdate', 'pubdate', 'published', 'lastmod', 'modified',':fileModTime']
 lastmod = [':git', ":fileModTime", 'lastmod', 'modified', 'date', 'publishdate', 'pubdate', 'published']
 
 publishDate = ['publishdate', 'pubdate', 'published', 'date']
