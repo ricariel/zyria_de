@@ -9,12 +9,12 @@
     <managingEditor>fabrice@zyria.de (Fabrice Kirchner)</managingEditor>
     <webMaster>fabrice@zyria.de (Fabrice Kirchner)</webMaster>
     
-    <lastBuildDate>Fri, 04 Jul 2025 11:43:33 +0200</lastBuildDate><atom:link href="https://www.zyria.de/tags/extern/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 04 Jul 2025 11:46:48 +0200</lastBuildDate><atom:link href="https://www.zyria.de/tags/extern/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Hetzner Server</title>
       <link>https://www.zyria.de/posts/homelab/hetzner_install/</link>
-      <pubDate>Fri, 04 Jul 2025 11:43:33 +0200</pubDate>
+      <pubDate>Fri, 04 Jul 2025 11:46:48 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/posts/homelab/hetzner_install/</guid>
       <description>Anbei ist der Ablauf beschrieben einen Hetzner Server in das System einzubinden.</description>
@@ -24,7 +24,7 @@
     <item>
       <title>Server-,Diensteverwaltung</title>
       <link>https://www.zyria.de/posts/homelab/verwaltung/</link>
-      <pubDate>Fri, 04 Jul 2025 11:43:33 +0200</pubDate>
+      <pubDate>Fri, 04 Jul 2025 11:46:48 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/posts/homelab/verwaltung/</guid>
       <description>&lt;p&gt;Wir verwenden zur generellen Verwaltung von Servern Ansible. Für manche Dienste

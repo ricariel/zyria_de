@@ -9,22 +9,12 @@
     <managingEditor>fabrice@zyria.de (Fabrice Kirchner)</managingEditor>
     <webMaster>fabrice@zyria.de (Fabrice Kirchner)</webMaster>
     
-    <lastBuildDate>Fri, 04 Jul 2025 11:43:33 +0200</lastBuildDate><atom:link href="https://www.zyria.de/posts/index.xml" rel="self" type="application/rss+xml" />
-    
-    <item>
-      <title>Linksammlung rund um Strom</title>
-      <link>https://www.zyria.de/posts/strom/</link>
-      <pubDate>Fri, 04 Jul 2025 11:43:33 +0200</pubDate>
-      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://www.zyria.de/posts/strom/</guid>
-      <description>&lt;p&gt;Linksammlung zum Thema Strom in meinem Heim.&lt;/p&gt;</description>
-      
-    </item>
+    <lastBuildDate>Fri, 04 Jul 2025 11:46:48 +0200</lastBuildDate><atom:link href="https://www.zyria.de/posts/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Solaranlage</title>
       <link>https://www.zyria.de/posts/solar/</link>
-      <pubDate>Fri, 04 Jul 2025 11:43:33 +0200</pubDate>
+      <pubDate>Fri, 22 Mar 2024 10:12:47 +0100</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/posts/solar/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;Übersicht über unsere Solaranlage mit Komponenten 
@@ -37,6 +27,16 @@
     
 &lt;/h2&gt;
 &lt;p&gt;Als Netto mit einem Solarkraftwerk in Selbstmontage geworben hat und unser Stromanbieter schon wieder eine Preiserhöhung ins Haus flatter ließ, war es um mich passiert. Es musste etwas passieren.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Linksammlung rund um Strom</title>
+      <link>https://www.zyria.de/posts/strom/</link>
+      <pubDate>Fri, 08 Mar 2024 12:52:37 +0200</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://www.zyria.de/posts/strom/</guid>
+      <description>&lt;p&gt;Linksammlung zum Thema Strom in meinem Heim.&lt;/p&gt;</description>
       
     </item>
     
