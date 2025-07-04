@@ -9,12 +9,12 @@
     <managingEditor>fabrice@zyria.de (Fabrice Kirchner)</managingEditor>
     <webMaster>fabrice@zyria.de (Fabrice Kirchner)</webMaster>
     
-    <lastBuildDate>Fri, 04 Jul 2025 11:46:48 +0200</lastBuildDate><atom:link href="https://www.zyria.de/posts/homelab/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 01 Jul 2025 13:37:34 +0200</lastBuildDate><atom:link href="https://www.zyria.de/posts/homelab/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Hardware im Homelab</title>
       <link>https://www.zyria.de/posts/homelab/hardware/</link>
-      <pubDate>Fri, 04 Jul 2025 11:46:48 +0200</pubDate>
+      <pubDate>Tue, 01 Jul 2025 13:37:34 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/posts/homelab/hardware/</guid>
       <description>&lt;p&gt;Hier findet man eine Übersicht über die im Homelab verwendete Hardware.&lt;/p&gt;</description>
@@ -24,7 +24,7 @@
     <item>
       <title>Hetzner Server</title>
       <link>https://www.zyria.de/posts/homelab/hetzner_install/</link>
-      <pubDate>Fri, 04 Jul 2025 11:46:48 +0200</pubDate>
+      <pubDate>Tue, 01 Jul 2025 13:37:34 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/posts/homelab/hetzner_install/</guid>
       <description>Anbei ist der Ablauf beschrieben einen Hetzner Server in das System einzubinden.</description>
@@ -34,7 +34,7 @@
     <item>
       <title>Logins</title>
       <link>https://www.zyria.de/posts/homelab/login/</link>
-      <pubDate>Fri, 04 Jul 2025 11:46:48 +0200</pubDate>
+      <pubDate>Tue, 01 Jul 2025 13:37:34 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/posts/homelab/login/</guid>
       <description>&lt;p&gt;Alle Zugangsdaten sind entweder in der Persönlichen Keepass Datendank (für
@@ -58,7 +58,7 @@ werden.&lt;/p&gt;</description>
     <item>
       <title>Passwörter</title>
       <link>https://www.zyria.de/posts/homelab/passworter/</link>
-      <pubDate>Fri, 04 Jul 2025 11:46:48 +0200</pubDate>
+      <pubDate>Tue, 01 Jul 2025 13:37:34 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/posts/homelab/passworter/</guid>
       <description>Umgang mit Passwörtern</description>
@@ -68,7 +68,7 @@ werden.&lt;/p&gt;</description>
     <item>
       <title>Samba Schema</title>
       <link>https://www.zyria.de/posts/homelab/samba-schema/</link>
-      <pubDate>Fri, 04 Jul 2025 11:46:48 +0200</pubDate>
+      <pubDate>Tue, 01 Jul 2025 13:37:34 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/posts/homelab/samba-schema/</guid>
       <description>Active Directory Schema Erweiterungen</description>
@@ -78,7 +78,7 @@ werden.&lt;/p&gt;</description>
     <item>
       <title>Server</title>
       <link>https://www.zyria.de/posts/homelab/server/</link>
-      <pubDate>Fri, 04 Jul 2025 11:46:48 +0200</pubDate>
+      <pubDate>Tue, 01 Jul 2025 13:37:34 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/posts/homelab/server/</guid>
       <description>&lt;p&gt;Alle Maschinen dienen der Virtualisierung von diversen Systemen. Wir brauche die Flexibilität Systeme schnell skalieren zu können und auch durch neue zu ersetzen.&lt;/p&gt;</description>
@@ -88,7 +88,7 @@ werden.&lt;/p&gt;</description>
     <item>
       <title>Server-,Diensteverwaltung</title>
       <link>https://www.zyria.de/posts/homelab/verwaltung/</link>
-      <pubDate>Fri, 04 Jul 2025 11:46:48 +0200</pubDate>
+      <pubDate>Tue, 01 Jul 2025 13:37:34 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/posts/homelab/verwaltung/</guid>
       <description>&lt;p&gt;Wir verwenden zur generellen Verwaltung von Servern Ansible. Für manche Dienste
@@ -121,7 +121,7 @@ alle relevanten Änderungen durchführen.&lt;/p&gt;</description>
     <item>
       <title>Setup Windows Client</title>
       <link>https://www.zyria.de/posts/homelab/setup_windows/</link>
-      <pubDate>Fri, 04 Jul 2025 11:46:48 +0200</pubDate>
+      <pubDate>Tue, 01 Jul 2025 13:37:34 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/posts/homelab/setup_windows/</guid>
       <description>&lt;ul&gt;
@@ -152,19 +152,9 @@ alle relevanten Änderungen durchführen.&lt;/p&gt;</description>
     </item>
     
     <item>
-      <title>Snippets</title>
-      <link>https://www.zyria.de/posts/homelab/snippets/</link>
-      <pubDate>Fri, 04 Jul 2025 11:46:48 +0200</pubDate>
-      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://www.zyria.de/posts/homelab/snippets/</guid>
-      <description>All der Kram, der sonst nirgends hin gehört</description>
-      
-    </item>
-    
-    <item>
       <title>Software</title>
       <link>https://www.zyria.de/posts/homelab/software/</link>
-      <pubDate>Fri, 04 Jul 2025 11:46:48 +0200</pubDate>
+      <pubDate>Tue, 01 Jul 2025 13:37:34 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/posts/homelab/software/</guid>
       <description>&lt;p&gt;Die eingesetzte Software partiell dokumentiert.&lt;/p&gt;</description>
@@ -174,7 +164,7 @@ alle relevanten Änderungen durchführen.&lt;/p&gt;</description>
     <item>
       <title>Windows autologon</title>
       <link>https://www.zyria.de/posts/homelab/windows_autologon/</link>
-      <pubDate>Fri, 04 Jul 2025 11:46:48 +0200</pubDate>
+      <pubDate>Tue, 01 Jul 2025 13:37:34 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/posts/homelab/windows_autologon/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;AutoLogon 
@@ -202,10 +192,20 @@ aus.&lt;/p&gt;
     <item>
       <title>WireGuard mit systemd</title>
       <link>https://www.zyria.de/posts/homelab/wireguard_mit_systemd/</link>
-      <pubDate>Fri, 04 Jul 2025 11:46:48 +0200</pubDate>
+      <pubDate>Tue, 01 Jul 2025 13:37:34 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/posts/homelab/wireguard_mit_systemd/</guid>
       <description>&lt;p&gt;Für eine WireGuard-Verbindung mit systemd-networkd und systemd-resolved.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Snippets</title>
+      <link>https://www.zyria.de/posts/homelab/snippets/</link>
+      <pubDate>Tue, 01 Jul 2025 12:41:04 +0200</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://www.zyria.de/posts/homelab/snippets/</guid>
+      <description>All der Kram, der sonst nirgends hin gehört</description>
       
     </item>
     

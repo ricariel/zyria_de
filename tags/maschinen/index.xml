@@ -9,12 +9,12 @@
     <managingEditor>fabrice@zyria.de (Fabrice Kirchner)</managingEditor>
     <webMaster>fabrice@zyria.de (Fabrice Kirchner)</webMaster>
     
-    <lastBuildDate>Fri, 04 Jul 2025 11:46:48 +0200</lastBuildDate><atom:link href="https://www.zyria.de/tags/maschinen/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 01 Jul 2025 13:37:34 +0200</lastBuildDate><atom:link href="https://www.zyria.de/tags/maschinen/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Server</title>
       <link>https://www.zyria.de/posts/homelab/server/</link>
-      <pubDate>Fri, 04 Jul 2025 11:46:48 +0200</pubDate>
+      <pubDate>Tue, 01 Jul 2025 13:37:34 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/posts/homelab/server/</guid>
       <description>&lt;p&gt;Alle Maschinen dienen der Virtualisierung von diversen Systemen. Wir brauche die Flexibilität Systeme schnell skalieren zu können und auch durch neue zu ersetzen.&lt;/p&gt;</description>
