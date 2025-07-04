@@ -1,5 +1,5 @@
 [hugoVersion]
-  extended = true
+  extended = false
   min = "0.87.0"
 
 [[mounts]]
@@ -41,36 +41,74 @@
 [[imports]]
 disable = false
 path = "github.com/nunocoracao/blowfish/v2"
+  [[imports.mounts]]
+  source = 'static'
+  target = 'static'
+  excludeFiles = '**'
+  [[imports.mounts]]
+  disableWatch = false
+  lang = ''
+  source = 'content'
+  target = 'content'
+  [[imports.mounts]]
+  disableWatch = false
+  lang = ''
+  source = 'data'
+  target = 'data'
+  [[imports.mounts]]
+  disableWatch = false
+  lang = ''
+  source = 'layouts'
+  target = 'layouts'
+  [[imports.mounts]]
+  disableWatch = false
+  lang = ''
+  source = 'i18n'
+  target = 'i18n'
+  [[imports.mounts]]
+  disableWatch = false
+  lang = ''
+  source = 'archetypes'
+  target = 'archetypes'
+  [[imports.mounts]]
+  disableWatch = false
+  lang = ''
+  source = 'assets'
+  target = 'assets'
 
 [[imports]]
 path = "git.zyria.de/pyrox/hugo-shortcodes"
 
+# import some shortcodes
 [[imports]]
 path = "github.com/hugomods/shortcodes"
 
+# import default files for most sites
 [[imports]]
 path = "git.zyria.de/pyrox/hugo-default-coder"
   [[imports.mounts]]
-  source = "static/"
-  target = "static/"
+  source = 'static'
+  target = 'static'
   [[imports.mounts]]
-  source = "assets/"
-  target = "assets/"
+  source = "assets"
+  target = "assets"
   [[imports.mounts]]
-  source = "layouts/"
-  target = "layouts/"
+  source = "layouts"
+  target = "layouts"
 
+# import shortcode
 [[imports]]
 path = "github.com/google/docsy"
 
   [[imports.mounts]]
-  source = "i18n/"
-  target = "i18n/"
+  source = "i18n"
+  target = "i18n"
 
   [[imports.mounts]]
   source = "layouts/_shortcodes/readfile.html"
   target = "layouts/_shortcodes/readfile.html"
 
+# Import legal texts
 [[imports]]
 path = "git.zyria.de/pyrox/hugo-legal"
 
@@ -82,6 +120,7 @@ path = "git.zyria.de/pyrox/hugo-legal"
   source = "datenschutz.md"
   target = "content/datenschutz.md"
 
+# Import documentation from my prod k3s cluster
 [[imports]]
 path = "git.zyria.de/pyrox/k3s-prod"
 
