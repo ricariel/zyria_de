@@ -1,5 +1,2 @@
-date = [":filename",'date', 'publishdate', 'pubdate', 'published', 'lastmod', 'modified',':fileModTime']
+date = ['date', 'publishdate', 'pubdate', 'published', 'lastmod', 'modified',':git',":filename",':fileModTime']
 lastmod = [':git', ":fileModTime", 'lastmod', 'modified', 'date', 'publishdate', 'pubdate', 'published']
-
-publishDate = ['publishdate', 'pubdate', 'published', 'date']
-expiryDate = ["expiryDate"]
