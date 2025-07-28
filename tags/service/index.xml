@@ -23,11 +23,9 @@ geschieht über SSH Schlüssel. Ein Login mit dem Passwort ist nicht vorgesehen.
 &lt;p&gt;Für den externen Zugriff ist der Login über &lt;a
   href=&#34;https://vpn.zyria.de&#34;
     target=&#34;_blank&#34;
-  &gt;VPN&lt;/a&gt;
- oder einem Bastion Host
+  &gt;VPN&lt;/a&gt; oder einem Bastion Host
 &lt;a
-  href=&#34;mailto:bastion@vpn.zyria.de&#34;&gt;bastion@vpn.zyria.de&lt;/a&gt;
-:3022 möglich. &lt;/p&gt;
+  href=&#34;mailto:bastion@vpn.zyria.de&#34;&gt;bastion@vpn.zyria.de&lt;/a&gt;:3022 möglich. &lt;/p&gt;
 &lt;p&gt;Generell sollte jedoch ein Login auf die Server nur zum Suchen von Fehlern
 stattfinden. Die Verwaltung erfolgt ausschliesslich über Ansible. Jede händisch
 durchgeführte Änderung muss im Nachhinein in Ansible eingepflegt und getestet
@@ -82,8 +80,7 @@ aus!&lt;/li&gt;
 &lt;li&gt;&lt;a
   href=&#34;https://status.zyria.com/status/index&#34;
     target=&#34;_blank&#34;
-  &gt;Statusseite checken&lt;/a&gt;
-&lt;/li&gt;
+  &gt;Statusseite checken&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 class=&#34;relative group&#34;&gt;Dritter Schritt 

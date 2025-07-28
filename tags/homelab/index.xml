@@ -9,7 +9,7 @@
     <managingEditor>fabrice@zyria.de (Fabrice Kirchner)</managingEditor>
     <webMaster>fabrice@zyria.de (Fabrice Kirchner)</webMaster>
     
-    <lastBuildDate>Mon, 28 Jul 2025 12:11:07 +0200</lastBuildDate><atom:link href="https://www.zyria.de/tags/homelab/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 28 Jul 2025 13:51:20 +0200</lastBuildDate><atom:link href="https://www.zyria.de/tags/homelab/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Virtuelle Maschinen</title>
@@ -30,8 +30,7 @@
   &lt;tbody&gt;
       &lt;tr&gt;
           &lt;td&gt;&lt;a
-  href=&#34;https://www.zyria.de/posts/homelab/vms/dev/&#34;&gt;dev&lt;/a&gt;
-&lt;/td&gt;
+  href=&#34;https://www.zyria.de/posts/homelab/vms/dev/&#34;&gt;dev&lt;/a&gt;&lt;/td&gt;
           &lt;td&gt;dev.zyria.de&lt;/td&gt;
           &lt;td&gt;Docker Host&lt;/td&gt;
           &lt;td&gt;Debian Stable&lt;/td&gt;
@@ -39,8 +38,7 @@
       &lt;/tr&gt;
       &lt;tr&gt;
           &lt;td&gt;&lt;a
-  href=&#34;https://www.zyria.de/posts/homelab/vms/addc/&#34;&gt;addc&lt;/a&gt;
-&lt;/td&gt;
+  href=&#34;https://www.zyria.de/posts/homelab/vms/addc/&#34;&gt;addc&lt;/a&gt;&lt;/td&gt;
           &lt;td&gt;addc.zyria.de&lt;/td&gt;
           &lt;td&gt;Active Directory, Fileserver&lt;/td&gt;
           &lt;td&gt;Debian Stable&lt;/td&gt;
@@ -54,7 +52,7 @@
     <item>
       <title>Dmarc-Report</title>
       <link>https://www.zyria.de/posts/homelab/k3s-prod/apps/dmarc-report/readme/</link>
-      <pubDate>Mon, 28 Jul 2025 12:11:07 +0200</pubDate>
+      <pubDate>Mon, 28 Jul 2025 13:51:20 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/posts/homelab/k3s-prod/apps/dmarc-report/readme/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;Dmarc Report Service 
@@ -167,15 +165,14 @@
 &lt;p&gt;&lt;a
   href=&#34;https://hub.docker.com/r/gutmensch/dmarc-report&#34;
     target=&#34;_blank&#34;
-  &gt;Docker Hub&lt;/a&gt;
-&lt;/p&gt;</description>
+  &gt;Docker Hub&lt;/a&gt;&lt;/p&gt;</description>
       
     </item>
     
     <item>
       <title>Forgejo</title>
       <link>https://www.zyria.de/posts/homelab/k3s-prod/apps/forgejo/readme/</link>
-      <pubDate>Mon, 28 Jul 2025 12:11:07 +0200</pubDate>
+      <pubDate>Mon, 28 Jul 2025 13:51:20 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/posts/homelab/k3s-prod/apps/forgejo/readme/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;Quelle 
@@ -190,8 +187,7 @@
 &lt;p&gt;&lt;a
   href=&#34;https://codeberg.org/forgejo/-/packages/container/forgejo&#34;
     target=&#34;_blank&#34;
-  &gt;Codeberg&lt;/a&gt;
-&lt;/p&gt;
+  &gt;Codeberg&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 class=&#34;relative group&#34;&gt;Repository 
     &lt;div id=&#34;repository&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
@@ -205,8 +201,7 @@
 &lt;p&gt;&lt;a
   href=&#34;https://codeberg.org/forgejo/forgejo&#34;
     target=&#34;_blank&#34;
-  &gt;Codeberg&lt;/a&gt;
-&lt;/p&gt;
+  &gt;Codeberg&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 class=&#34;relative group&#34;&gt;Dokumentation 
     &lt;div id=&#34;dokumentation&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
@@ -220,8 +215,7 @@
 &lt;p&gt;&lt;a
   href=&#34;https://forgejo.org/docs/latest/&#34;
     target=&#34;_blank&#34;
-  &gt;Hersteller&lt;/a&gt;
-&lt;/p&gt;
+  &gt;Hersteller&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 class=&#34;relative group&#34;&gt;Funktion 
     &lt;div id=&#34;funktion&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
@@ -241,7 +235,7 @@ Repositories zu.&lt;/p&gt;</description>
     <item>
       <title>Hedgedoc</title>
       <link>https://www.zyria.de/posts/homelab/k3s-prod/apps/hedgedoc/readme/</link>
-      <pubDate>Mon, 28 Jul 2025 12:11:07 +0200</pubDate>
+      <pubDate>Mon, 28 Jul 2025 13:51:20 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/posts/homelab/k3s-prod/apps/hedgedoc/readme/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;Quelle 
@@ -256,13 +250,11 @@ Repositories zu.&lt;/p&gt;</description>
 &lt;p&gt;&lt;a
   href=&#34;https://quay.io/repository/hedgedoc/hedgedoc&#34;
     target=&#34;_blank&#34;
-  &gt;Quay&lt;/a&gt;
-&lt;/p&gt;
+  &gt;Quay&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a
   href=&#34;https://hub.docker.com/_/postgres&#34;
     target=&#34;_blank&#34;
-  &gt;Docker Hub Datenbank&lt;/a&gt;
-&lt;/p&gt;
+  &gt;Docker Hub Datenbank&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 class=&#34;relative group&#34;&gt;Repository 
     &lt;div id=&#34;repository&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
@@ -276,8 +268,7 @@ Repositories zu.&lt;/p&gt;</description>
 &lt;p&gt;&lt;a
   href=&#34;https://github.com/hedgedoc/container&#34;
     target=&#34;_blank&#34;
-  &gt;Github&lt;/a&gt;
-&lt;/p&gt;
+  &gt;Github&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 class=&#34;relative group&#34;&gt;Dokumentation 
     &lt;div id=&#34;dokumentation&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
@@ -291,15 +282,14 @@ Repositories zu.&lt;/p&gt;</description>
 &lt;p&gt;&lt;a
   href=&#34;https://github.com/hedgedoc/container/blob/master/README.md&#34;
     target=&#34;_blank&#34;
-  &gt;Hersteller Container&lt;/a&gt;
-&lt;/p&gt;</description>
+  &gt;Hersteller Container&lt;/a&gt;&lt;/p&gt;</description>
       
     </item>
     
     <item>
       <title>k3s Argocd</title>
       <link>https://www.zyria.de/posts/homelab/k3s-prod/apps/argocd/readme/</link>
-      <pubDate>Mon, 28 Jul 2025 12:11:07 +0200</pubDate>
+      <pubDate>Mon, 28 Jul 2025 13:51:20 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/posts/homelab/k3s-prod/apps/argocd/readme/</guid>
       <description>Hier wird jeder Service (mit README.md) kurz notiert</description>
@@ -309,7 +299,7 @@ Repositories zu.&lt;/p&gt;</description>
     <item>
       <title>k3s cert-manager</title>
       <link>https://www.zyria.de/posts/homelab/k3s-prod/apps/cert-manager/readme/</link>
-      <pubDate>Mon, 28 Jul 2025 12:11:07 +0200</pubDate>
+      <pubDate>Mon, 28 Jul 2025 13:51:20 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/posts/homelab/k3s-prod/apps/cert-manager/readme/</guid>
       <description>Hier wird jeder Service (mit README.md) kurz notiert</description>
@@ -317,9 +307,19 @@ Repositories zu.&lt;/p&gt;</description>
     </item>
     
     <item>
+      <title>k3s coredns</title>
+      <link>https://www.zyria.de/posts/homelab/k3s-prod/apps/coredns/readme/</link>
+      <pubDate>Mon, 28 Jul 2025 13:51:20 +0200</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://www.zyria.de/posts/homelab/k3s-prod/apps/coredns/readme/</guid>
+      <description>Hier wird jeder Service (mit README.md) kurz notiert</description>
+      
+    </item>
+    
+    <item>
       <title>k3s descheduler</title>
       <link>https://www.zyria.de/posts/homelab/k3s-prod/apps/descheduler/readme/</link>
-      <pubDate>Mon, 28 Jul 2025 12:11:07 +0200</pubDate>
+      <pubDate>Mon, 28 Jul 2025 13:51:20 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/posts/homelab/k3s-prod/apps/descheduler/readme/</guid>
       <description>Hier wird jeder Service (mit README.md) kurz notiert</description>
@@ -329,7 +329,7 @@ Repositories zu.&lt;/p&gt;</description>
     <item>
       <title>k3s Homelab Cluster</title>
       <link>https://www.zyria.de/posts/homelab/k3s-prod/</link>
-      <pubDate>Mon, 28 Jul 2025 12:11:07 +0200</pubDate>
+      <pubDate>Mon, 28 Jul 2025 13:51:20 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/posts/homelab/k3s-prod/</guid>
       <description>Hier wird jeder Service (mit README.md) kurz notiert</description>
@@ -339,7 +339,7 @@ Repositories zu.&lt;/p&gt;</description>
     <item>
       <title>k3s keel</title>
       <link>https://www.zyria.de/posts/homelab/k3s-prod/apps/keel/readme/</link>
-      <pubDate>Mon, 28 Jul 2025 12:11:07 +0200</pubDate>
+      <pubDate>Mon, 28 Jul 2025 13:51:20 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/posts/homelab/k3s-prod/apps/keel/readme/</guid>
       <description>Hier wird jeder Service (mit README.md) kurz notiert</description>
@@ -349,7 +349,7 @@ Repositories zu.&lt;/p&gt;</description>
     <item>
       <title>k3s main</title>
       <link>https://www.zyria.de/posts/homelab/k3s-prod/apps/k3s/readme/</link>
-      <pubDate>Mon, 28 Jul 2025 12:11:07 +0200</pubDate>
+      <pubDate>Mon, 28 Jul 2025 13:51:20 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/posts/homelab/k3s-prod/apps/k3s/readme/</guid>
       <description>Hier wird jeder Service (mit README.md) kurz notiert</description>
@@ -359,7 +359,7 @@ Repositories zu.&lt;/p&gt;</description>
     <item>
       <title>k3s metallb</title>
       <link>https://www.zyria.de/posts/homelab/k3s-prod/apps/metallb/readme/</link>
-      <pubDate>Mon, 28 Jul 2025 12:11:07 +0200</pubDate>
+      <pubDate>Mon, 28 Jul 2025 13:51:20 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/posts/homelab/k3s-prod/apps/metallb/readme/</guid>
       <description>Hier wird jeder Service (mit README.md) kurz notiert</description>
@@ -369,7 +369,7 @@ Repositories zu.&lt;/p&gt;</description>
     <item>
       <title>k3s mta-sts</title>
       <link>https://www.zyria.de/posts/homelab/k3s-prod/apps/mta-sts/readme/</link>
-      <pubDate>Mon, 28 Jul 2025 12:11:07 +0200</pubDate>
+      <pubDate>Mon, 28 Jul 2025 13:51:20 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/posts/homelab/k3s-prod/apps/mta-sts/readme/</guid>
       <description>Hier wird jeder Service (mit README.md) kurz notiert</description>
@@ -379,7 +379,7 @@ Repositories zu.&lt;/p&gt;</description>
     <item>
       <title>k3s nfs-provisioner</title>
       <link>https://www.zyria.de/posts/homelab/k3s-prod/apps/nfs-provisioner/readme/</link>
-      <pubDate>Mon, 28 Jul 2025 12:11:07 +0200</pubDate>
+      <pubDate>Mon, 28 Jul 2025 13:51:20 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/posts/homelab/k3s-prod/apps/nfs-provisioner/readme/</guid>
       <description>Hier wird jeder Service (mit README.md) kurz notiert</description>
@@ -389,7 +389,7 @@ Repositories zu.&lt;/p&gt;</description>
     <item>
       <title>k3s Prometheus</title>
       <link>https://www.zyria.de/posts/homelab/k3s-prod/apps/prometheus/readme/</link>
-      <pubDate>Mon, 28 Jul 2025 12:11:07 +0200</pubDate>
+      <pubDate>Mon, 28 Jul 2025 13:51:20 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/posts/homelab/k3s-prod/apps/prometheus/readme/</guid>
       <description>Hier wird jeder Service (mit README.md) kurz notiert</description>
@@ -399,7 +399,7 @@ Repositories zu.&lt;/p&gt;</description>
     <item>
       <title>k3s reloader</title>
       <link>https://www.zyria.de/posts/homelab/k3s-prod/apps/reloader/readme/</link>
-      <pubDate>Mon, 28 Jul 2025 12:11:07 +0200</pubDate>
+      <pubDate>Mon, 28 Jul 2025 13:51:20 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/posts/homelab/k3s-prod/apps/reloader/readme/</guid>
       <description>Hier wird jeder Service (mit README.md) kurz notiert</description>
@@ -409,7 +409,7 @@ Repositories zu.&lt;/p&gt;</description>
     <item>
       <title>k3s system-upgrade-controller</title>
       <link>https://www.zyria.de/posts/homelab/k3s-prod/apps/system-upgrade-controller/readme/</link>
-      <pubDate>Mon, 28 Jul 2025 12:11:07 +0200</pubDate>
+      <pubDate>Mon, 28 Jul 2025 13:51:20 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/posts/homelab/k3s-prod/apps/system-upgrade-controller/readme/</guid>
       <description>Hier wird jeder Service (mit README.md) kurz notiert</description>
@@ -419,7 +419,7 @@ Repositories zu.&lt;/p&gt;</description>
     <item>
       <title>k3s Traefik</title>
       <link>https://www.zyria.de/posts/homelab/k3s-prod/apps/traefik/readme/</link>
-      <pubDate>Mon, 28 Jul 2025 12:11:07 +0200</pubDate>
+      <pubDate>Mon, 28 Jul 2025 13:51:20 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/posts/homelab/k3s-prod/apps/traefik/readme/</guid>
       <description>Hier wird jeder Service (mit README.md) kurz notiert</description>
@@ -429,7 +429,7 @@ Repositories zu.&lt;/p&gt;</description>
     <item>
       <title>k3s whoami</title>
       <link>https://www.zyria.de/posts/homelab/k3s-prod/apps/whoami/readme/</link>
-      <pubDate>Mon, 28 Jul 2025 12:11:07 +0200</pubDate>
+      <pubDate>Mon, 28 Jul 2025 13:51:20 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/posts/homelab/k3s-prod/apps/whoami/readme/</guid>
       <description>Hier wird jeder Service (mit README.md) kurz notiert</description>
@@ -439,7 +439,7 @@ Repositories zu.&lt;/p&gt;</description>
     <item>
       <title>Mailstack</title>
       <link>https://www.zyria.de/posts/homelab/k3s-prod/apps/mailstack/readme/</link>
-      <pubDate>Mon, 28 Jul 2025 12:11:07 +0200</pubDate>
+      <pubDate>Mon, 28 Jul 2025 13:51:20 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/posts/homelab/k3s-prod/apps/mailstack/readme/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;Funktion 
@@ -455,15 +455,12 @@ Repositories zu.&lt;/p&gt;</description>
 &lt;p&gt;Dienste welche mit dem Mailstack interagieren:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a
-  href=&#34;https://www.zyria.de/posts/homelab/k3s-prod/apps/mta-sts/readme/&#34;&gt;MTA-STS&lt;/a&gt;
- um externen Mailservern unsere TLS
+  href=&#34;https://www.zyria.de/posts/homelab/k3s-prod/apps/mta-sts/readme/&#34;&gt;MTA-STS&lt;/a&gt; um externen Mailservern unsere TLS
 Policy bereitzustellen&lt;/li&gt;
 &lt;li&gt;&lt;a
-  href=&#34;https://www.zyria.de/posts/homelab/k3s-prod/apps/dmarc-report/readme/&#34;&gt;Dmarc-Report&lt;/a&gt;
-&lt;/li&gt;
+  href=&#34;https://www.zyria.de/posts/homelab/k3s-prod/apps/dmarc-report/readme/&#34;&gt;Dmarc-Report&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a
-  href=&#34;https://www.zyria.de/posts/homelab/k3s-prod/apps/roundcube/readme/&#34;&gt;Roundcube Webmail&lt;/a&gt;
-&lt;/li&gt;
+  href=&#34;https://www.zyria.de/posts/homelab/k3s-prod/apps/roundcube/readme/&#34;&gt;Roundcube Webmail&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 class=&#34;relative group&#34;&gt;Wer hat eigentlich auf welche Mailbox Zugriff? 
@@ -484,7 +481,7 @@ setzen:&lt;/p&gt;</description>
     <item>
       <title>Maintenance Page</title>
       <link>https://www.zyria.de/posts/homelab/k3s-prod/apps/maintenance-page/readme/</link>
-      <pubDate>Mon, 28 Jul 2025 12:11:07 +0200</pubDate>
+      <pubDate>Mon, 28 Jul 2025 13:51:20 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/posts/homelab/k3s-prod/apps/maintenance-page/readme/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;Quelle 
@@ -499,8 +496,7 @@ setzen:&lt;/p&gt;</description>
 &lt;p&gt;&lt;a
   href=&#34;https://hub.docker.com/r/ricariel/maintenance-page&#34;
     target=&#34;_blank&#34;
-  &gt;Docker Hub&lt;/a&gt;
-&lt;/p&gt;
+  &gt;Docker Hub&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 class=&#34;relative group&#34;&gt;Repository 
     &lt;div id=&#34;repository&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
@@ -514,18 +510,15 @@ setzen:&lt;/p&gt;</description>
 &lt;p&gt;&lt;a
   href=&#34;https://git.zyria.de/pyrox/maintenance-page-docker.git&#34;
     target=&#34;_blank&#34;
-  &gt;Container&lt;/a&gt;
-&lt;/p&gt;
+  &gt;Container&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a
   href=&#34;https://www.casa-due-pur.de/git/fabrice.kirchner/maintenance-page.git&#34;
     target=&#34;_blank&#34;
-  &gt;Seitenquelltext&lt;/a&gt;
-&lt;/p&gt;
+  &gt;Seitenquelltext&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a
   href=&#34;https://www.casa-due-pur.de/git/fabrice.kirchner/maintenance-page-html.git&#34;
     target=&#34;_blank&#34;
-  &gt;Seitenhtml&lt;/a&gt;
-&lt;/p&gt;
+  &gt;Seitenhtml&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 class=&#34;relative group&#34;&gt;Dokumentation 
     &lt;div id=&#34;dokumentation&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
@@ -553,7 +546,7 @@ setzen:&lt;/p&gt;</description>
     <item>
       <title>Pihole</title>
       <link>https://www.zyria.de/posts/homelab/k3s-prod/apps/pihole/pihole/</link>
-      <pubDate>Mon, 28 Jul 2025 12:11:07 +0200</pubDate>
+      <pubDate>Mon, 28 Jul 2025 13:51:20 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/posts/homelab/k3s-prod/apps/pihole/pihole/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;Quelle 
@@ -568,13 +561,11 @@ setzen:&lt;/p&gt;</description>
 &lt;p&gt;&lt;a
   href=&#34;https://hub.docker.com/r/pihole/pihole&#34;
     target=&#34;_blank&#34;
-  &gt;Docker Hub Pihole&lt;/a&gt;
-&lt;/p&gt;
+  &gt;Docker Hub Pihole&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a
   href=&#34;https://hub.docker.com/r/ricariel/cn2pihole&#34;
     target=&#34;_blank&#34;
-  &gt;Docker Hub cn2pihole&lt;/a&gt;
-&lt;/p&gt;
+  &gt;Docker Hub cn2pihole&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 class=&#34;relative group&#34;&gt;Repository 
     &lt;div id=&#34;repository&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
@@ -588,13 +579,11 @@ setzen:&lt;/p&gt;</description>
 &lt;p&gt;&lt;a
   href=&#34;https://github.com/pi-hole/docker-pi-hole&#34;
     target=&#34;_blank&#34;
-  &gt;Github&lt;/a&gt;
-&lt;/p&gt;
+  &gt;Github&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a
   href=&#34;https://git.zyria.de/pyrox/core-networks2pihole-docker&#34;
     target=&#34;_blank&#34;
-  &gt;Hersteller core-networks to pihole&lt;/a&gt;
-&lt;/p&gt;
+  &gt;Hersteller core-networks to pihole&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 class=&#34;relative group&#34;&gt;Dokumentation 
     &lt;div id=&#34;dokumentation&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
@@ -608,15 +597,14 @@ setzen:&lt;/p&gt;</description>
 &lt;p&gt;&lt;a
   href=&#34;https://github.com/pi-hole/docker-pi-hole&#34;
     target=&#34;_blank&#34;
-  &gt;Hersteller Container&lt;/a&gt;
-&lt;/p&gt;</description>
+  &gt;Hersteller Container&lt;/a&gt;&lt;/p&gt;</description>
       
     </item>
     
     <item>
       <title>Roundcube Webmail</title>
       <link>https://www.zyria.de/posts/homelab/k3s-prod/apps/roundcube/readme/</link>
-      <pubDate>Mon, 28 Jul 2025 12:11:07 +0200</pubDate>
+      <pubDate>Mon, 28 Jul 2025 13:51:20 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/posts/homelab/k3s-prod/apps/roundcube/readme/</guid>
       <description>&lt;h3 class=&#34;relative group&#34;&gt;Status 
@@ -719,13 +707,11 @@ setzen:&lt;/p&gt;</description>
 &lt;p&gt;&lt;a
   href=&#34;https://hub.docker.com/r/roundcube/roundcubemail/&#34;
     target=&#34;_blank&#34;
-  &gt;Docker Hub Roundcube&lt;/a&gt;
-&lt;/p&gt;
+  &gt;Docker Hub Roundcube&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a
   href=&#34;https://hub.docker.com/_/mariadb&#34;
     target=&#34;_blank&#34;
-  &gt;Docker Hub Mariadb&lt;/a&gt;
-&lt;/p&gt;
+  &gt;Docker Hub Mariadb&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 class=&#34;relative group&#34;&gt;Repository 
     &lt;div id=&#34;repository&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
@@ -739,15 +725,14 @@ setzen:&lt;/p&gt;</description>
 &lt;p&gt;&lt;a
   href=&#34;https://github.com/roundcube/roundcubemail-docker/tree/master/examples&#34;
     target=&#34;_blank&#34;
-  &gt;Github Container&lt;/a&gt;
-&lt;/p&gt;</description>
+  &gt;Github Container&lt;/a&gt;&lt;/p&gt;</description>
       
     </item>
     
     <item>
       <title>Unifi Controller</title>
       <link>https://www.zyria.de/posts/homelab/k3s-prod/apps/unifi-controller/readme/</link>
-      <pubDate>Mon, 28 Jul 2025 12:11:07 +0200</pubDate>
+      <pubDate>Mon, 28 Jul 2025 13:51:20 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/posts/homelab/k3s-prod/apps/unifi-controller/readme/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;Unifi Controller 
@@ -860,15 +845,14 @@ setzen:&lt;/p&gt;</description>
 &lt;p&gt;&lt;a
   href=&#34;https://gitlab.com/Linuxserver.io/docker-unifi-network-application/container_registry&#34;
     target=&#34;_blank&#34;
-  &gt;Docker Hub&lt;/a&gt;
-&lt;/p&gt;</description>
+  &gt;Docker Hub&lt;/a&gt;&lt;/p&gt;</description>
       
     </item>
     
     <item>
       <title>Uptime Kuma</title>
       <link>https://www.zyria.de/posts/homelab/k3s-prod/apps/uptime-kuma/readme/</link>
-      <pubDate>Mon, 28 Jul 2025 12:11:07 +0200</pubDate>
+      <pubDate>Mon, 28 Jul 2025 13:51:20 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/posts/homelab/k3s-prod/apps/uptime-kuma/readme/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;Quelle 
@@ -883,8 +867,7 @@ setzen:&lt;/p&gt;</description>
 &lt;p&gt;&lt;a
   href=&#34;https://hub.docker.com/r/louislam/uptime-kuma&#34;
     target=&#34;_blank&#34;
-  &gt;Docker Hub&lt;/a&gt;
-&lt;/p&gt;
+  &gt;Docker Hub&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 class=&#34;relative group&#34;&gt;Repository 
     &lt;div id=&#34;repository&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
@@ -898,8 +881,7 @@ setzen:&lt;/p&gt;</description>
 &lt;p&gt;&lt;a
   href=&#34;https://github.com/louislam/uptime-kuma&#34;
     target=&#34;_blank&#34;
-  &gt;Github&lt;/a&gt;
-&lt;/p&gt;
+  &gt;Github&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 class=&#34;relative group&#34;&gt;Dokumentation 
     &lt;div id=&#34;dokumentation&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
@@ -913,8 +895,7 @@ setzen:&lt;/p&gt;</description>
 &lt;p&gt;&lt;a
   href=&#34;https://github.com/louislam/uptime-kuma/wiki&#34;
     target=&#34;_blank&#34;
-  &gt;Hersteller&lt;/a&gt;
-&lt;/p&gt;
+  &gt;Hersteller&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 class=&#34;relative group&#34;&gt;Funktion 
     &lt;div id=&#34;funktion&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
@@ -934,7 +915,7 @@ der IT.&lt;/p&gt;</description>
     <item>
       <title>Wireguard</title>
       <link>https://www.zyria.de/posts/homelab/k3s-prod/apps/wireguard/readme/</link>
-      <pubDate>Mon, 28 Jul 2025 12:11:07 +0200</pubDate>
+      <pubDate>Mon, 28 Jul 2025 13:51:20 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/posts/homelab/k3s-prod/apps/wireguard/readme/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;Quelle 
@@ -949,18 +930,15 @@ der IT.&lt;/p&gt;</description>
 &lt;p&gt;&lt;a
   href=&#34;https://hub.docker.com/r/ricariel/bastion&#34;
     target=&#34;_blank&#34;
-  &gt;Docker Hub Bastion&lt;/a&gt;
-&lt;/p&gt;
+  &gt;Docker Hub Bastion&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a
   href=&#34;https://hub.docker.com/r/linuxserver/wireguard&#34;
     target=&#34;_blank&#34;
-  &gt;Docker Hub Wireguard&lt;/a&gt;
-&lt;/p&gt;
+  &gt;Docker Hub Wireguard&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a
   href=&#34;https://hub.docker.com/r/wgportal/wg-portal&#34;
     target=&#34;_blank&#34;
-  &gt;Docker Hub wg-portal&lt;/a&gt;
-&lt;/p&gt;
+  &gt;Docker Hub wg-portal&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 class=&#34;relative group&#34;&gt;Repository 
     &lt;div id=&#34;repository&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
@@ -974,18 +952,15 @@ der IT.&lt;/p&gt;</description>
 &lt;p&gt;&lt;a
   href=&#34;https://git.zyria.de/pyrox/docker-ssh-bastion&#34;
     target=&#34;_blank&#34;
-  &gt;Bastion&lt;/a&gt;
-&lt;/p&gt;
+  &gt;Bastion&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a
   href=&#34;https://github.com/linuxserver/docker-wireguard&#34;
     target=&#34;_blank&#34;
-  &gt;Github wireguard&lt;/a&gt;
-&lt;/p&gt;
+  &gt;Github wireguard&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a
   href=&#34;https://github.com/h44z/wg-portal&#34;
     target=&#34;_blank&#34;
-  &gt;Github wg-portal&lt;/a&gt;
-&lt;/p&gt;
+  &gt;Github wg-portal&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 class=&#34;relative group&#34;&gt;Dokumentation 
     &lt;div id=&#34;dokumentation&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
@@ -999,15 +974,14 @@ der IT.&lt;/p&gt;</description>
 &lt;p&gt;&lt;a
   href=&#34;https://git.zyria.de/pyrox/docker-ssh-bastion&#34;
     target=&#34;_blank&#34;
-  &gt;Hersteller Bastion&lt;/a&gt;
-&lt;/p&gt;</description>
+  &gt;Hersteller Bastion&lt;/a&gt;&lt;/p&gt;</description>
       
     </item>
     
     <item>
       <title>Zammad</title>
       <link>https://www.zyria.de/posts/homelab/k3s-prod/apps/zammad/readme/</link>
-      <pubDate>Mon, 28 Jul 2025 12:11:07 +0200</pubDate>
+      <pubDate>Mon, 28 Jul 2025 13:51:20 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/posts/homelab/k3s-prod/apps/zammad/readme/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;Quelle 
@@ -1032,13 +1006,11 @@ der IT.&lt;/p&gt;</description>
 &lt;p&gt;&lt;a
   href=&#34;https://github.com/zammad&#34;
     target=&#34;_blank&#34;
-  &gt;Zammad&lt;/a&gt;
-&lt;/p&gt;
+  &gt;Zammad&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a
   href=&#34;https://github.com/zammad/zammad-helm&#34;
     target=&#34;_blank&#34;
-  &gt;Helm&lt;/a&gt;
-&lt;/p&gt;
+  &gt;Helm&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 class=&#34;relative group&#34;&gt;Dokumentation 
     &lt;div id=&#34;dokumentation&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
@@ -1052,13 +1024,11 @@ der IT.&lt;/p&gt;</description>
 &lt;p&gt;&lt;a
   href=&#34;https://admin-docs.zammad.org/de/latest/index.html&#34;
     target=&#34;_blank&#34;
-  &gt;Admin Dokumentation&lt;/a&gt;
-&lt;/p&gt;
+  &gt;Admin Dokumentation&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a
   href=&#34;https://docs.zammad.org/en/latest/index.html&#34;
     target=&#34;_blank&#34;
-  &gt;Zentrale Dokumentation&lt;/a&gt;
-&lt;/p&gt;</description>
+  &gt;Zentrale Dokumentation&lt;/a&gt;&lt;/p&gt;</description>
       
     </item>
     
@@ -1114,11 +1084,9 @@ geschieht über SSH Schlüssel. Ein Login mit dem Passwort ist nicht vorgesehen.
 &lt;p&gt;Für den externen Zugriff ist der Login über &lt;a
   href=&#34;https://vpn.zyria.de&#34;
     target=&#34;_blank&#34;
-  &gt;VPN&lt;/a&gt;
- oder einem Bastion Host
+  &gt;VPN&lt;/a&gt; oder einem Bastion Host
 &lt;a
-  href=&#34;mailto:bastion@vpn.zyria.de&#34;&gt;bastion@vpn.zyria.de&lt;/a&gt;
-:3022 möglich. &lt;/p&gt;
+  href=&#34;mailto:bastion@vpn.zyria.de&#34;&gt;bastion@vpn.zyria.de&lt;/a&gt;:3022 möglich. &lt;/p&gt;
 &lt;p&gt;Generell sollte jedoch ein Login auf die Server nur zum Suchen von Fehlern
 stattfinden. Die Verwaltung erfolgt ausschliesslich über Ansible. Jede händisch
 durchgeführte Änderung muss im Nachhinein in Ansible eingepflegt und getestet
@@ -1179,12 +1147,10 @@ realisieren.&lt;/p&gt;
   href=&#34;https://www.core-networks.de&#34;
     target=&#34;_blank&#34;
   &gt;Core-Networks&lt;/a&gt;
-
 gehostet. In deren &lt;a
   href=&#34;https://iface.core-networks.de&#34;
     target=&#34;_blank&#34;
-  &gt;Webinterface&lt;/a&gt;
- lassen sich
+  &gt;Webinterface&lt;/a&gt; lassen sich
 alle relevanten Änderungen durchführen.&lt;/p&gt;</description>
       
     </item>
@@ -1383,8 +1349,7 @@ aus!&lt;/li&gt;
 &lt;li&gt;&lt;a
   href=&#34;https://status.zyria.com/status/index&#34;
     target=&#34;_blank&#34;
-  &gt;Statusseite checken&lt;/a&gt;
-&lt;/li&gt;
+  &gt;Statusseite checken&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 class=&#34;relative group&#34;&gt;Dritter Schritt 
