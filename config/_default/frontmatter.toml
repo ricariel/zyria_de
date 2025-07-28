@@ -1,0 +1,2 @@
+date = ['date', 'publishdate', 'pubdate', 'published', 'lastmod', 'modified',':git',":filename",':fileModTime']
+lastmod = [':git', ":fileModTime", 'lastmod', 'modified', 'date', 'publishdate', 'pubdate', 'published']
