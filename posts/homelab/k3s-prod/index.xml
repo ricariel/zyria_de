@@ -9,12 +9,12 @@
     <managingEditor>fabrice@zyria.de (Fabrice Kirchner)</managingEditor>
     <webMaster>fabrice@zyria.de (Fabrice Kirchner)</webMaster>
     
-    <lastBuildDate>Mon, 28 Jul 2025 13:51:20 +0200</lastBuildDate><atom:link href="https://www.zyria.de/posts/homelab/k3s-prod/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 28 Jul 2025 22:23:23 +0200</lastBuildDate><atom:link href="https://www.zyria.de/posts/homelab/k3s-prod/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Dmarc-Report</title>
       <link>https://www.zyria.de/posts/homelab/k3s-prod/apps/dmarc-report/readme/</link>
-      <pubDate>Mon, 28 Jul 2025 13:51:20 +0200</pubDate>
+      <pubDate>Mon, 28 Jul 2025 22:23:23 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/posts/homelab/k3s-prod/apps/dmarc-report/readme/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;Dmarc Report Service 
@@ -134,7 +134,7 @@
     <item>
       <title>Forgejo</title>
       <link>https://www.zyria.de/posts/homelab/k3s-prod/apps/forgejo/readme/</link>
-      <pubDate>Mon, 28 Jul 2025 13:51:20 +0200</pubDate>
+      <pubDate>Mon, 28 Jul 2025 22:23:23 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/posts/homelab/k3s-prod/apps/forgejo/readme/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;Quelle 
@@ -197,7 +197,7 @@ Repositories zu.&lt;/p&gt;</description>
     <item>
       <title>Hedgedoc</title>
       <link>https://www.zyria.de/posts/homelab/k3s-prod/apps/hedgedoc/readme/</link>
-      <pubDate>Mon, 28 Jul 2025 13:51:20 +0200</pubDate>
+      <pubDate>Mon, 28 Jul 2025 22:23:23 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/posts/homelab/k3s-prod/apps/hedgedoc/readme/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;Quelle 
@@ -251,7 +251,7 @@ Repositories zu.&lt;/p&gt;</description>
     <item>
       <title>k3s Argocd</title>
       <link>https://www.zyria.de/posts/homelab/k3s-prod/apps/argocd/readme/</link>
-      <pubDate>Mon, 28 Jul 2025 13:51:20 +0200</pubDate>
+      <pubDate>Mon, 28 Jul 2025 22:23:23 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/posts/homelab/k3s-prod/apps/argocd/readme/</guid>
       <description>Hier wird jeder Service (mit README.md) kurz notiert</description>
@@ -261,7 +261,7 @@ Repositories zu.&lt;/p&gt;</description>
     <item>
       <title>k3s cert-manager</title>
       <link>https://www.zyria.de/posts/homelab/k3s-prod/apps/cert-manager/readme/</link>
-      <pubDate>Mon, 28 Jul 2025 13:51:20 +0200</pubDate>
+      <pubDate>Mon, 28 Jul 2025 22:23:23 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/posts/homelab/k3s-prod/apps/cert-manager/readme/</guid>
       <description>Hier wird jeder Service (mit README.md) kurz notiert</description>
@@ -271,7 +271,7 @@ Repositories zu.&lt;/p&gt;</description>
     <item>
       <title>k3s coredns</title>
       <link>https://www.zyria.de/posts/homelab/k3s-prod/apps/coredns/readme/</link>
-      <pubDate>Mon, 28 Jul 2025 13:51:20 +0200</pubDate>
+      <pubDate>Mon, 28 Jul 2025 22:23:23 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/posts/homelab/k3s-prod/apps/coredns/readme/</guid>
       <description>Hier wird jeder Service (mit README.md) kurz notiert</description>
@@ -281,7 +281,7 @@ Repositories zu.&lt;/p&gt;</description>
     <item>
       <title>k3s descheduler</title>
       <link>https://www.zyria.de/posts/homelab/k3s-prod/apps/descheduler/readme/</link>
-      <pubDate>Mon, 28 Jul 2025 13:51:20 +0200</pubDate>
+      <pubDate>Mon, 28 Jul 2025 22:23:23 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/posts/homelab/k3s-prod/apps/descheduler/readme/</guid>
       <description>Hier wird jeder Service (mit README.md) kurz notiert</description>
@@ -291,7 +291,7 @@ Repositories zu.&lt;/p&gt;</description>
     <item>
       <title>k3s keel</title>
       <link>https://www.zyria.de/posts/homelab/k3s-prod/apps/keel/readme/</link>
-      <pubDate>Mon, 28 Jul 2025 13:51:20 +0200</pubDate>
+      <pubDate>Mon, 28 Jul 2025 22:23:23 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/posts/homelab/k3s-prod/apps/keel/readme/</guid>
       <description>Hier wird jeder Service (mit README.md) kurz notiert</description>
@@ -301,7 +301,7 @@ Repositories zu.&lt;/p&gt;</description>
     <item>
       <title>k3s main</title>
       <link>https://www.zyria.de/posts/homelab/k3s-prod/apps/k3s/readme/</link>
-      <pubDate>Mon, 28 Jul 2025 13:51:20 +0200</pubDate>
+      <pubDate>Mon, 28 Jul 2025 22:23:23 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/posts/homelab/k3s-prod/apps/k3s/readme/</guid>
       <description>Hier wird jeder Service (mit README.md) kurz notiert</description>
@@ -311,7 +311,7 @@ Repositories zu.&lt;/p&gt;</description>
     <item>
       <title>k3s metallb</title>
       <link>https://www.zyria.de/posts/homelab/k3s-prod/apps/metallb/readme/</link>
-      <pubDate>Mon, 28 Jul 2025 13:51:20 +0200</pubDate>
+      <pubDate>Mon, 28 Jul 2025 22:23:23 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/posts/homelab/k3s-prod/apps/metallb/readme/</guid>
       <description>Hier wird jeder Service (mit README.md) kurz notiert</description>
@@ -321,7 +321,7 @@ Repositories zu.&lt;/p&gt;</description>
     <item>
       <title>k3s mta-sts</title>
       <link>https://www.zyria.de/posts/homelab/k3s-prod/apps/mta-sts/readme/</link>
-      <pubDate>Mon, 28 Jul 2025 13:51:20 +0200</pubDate>
+      <pubDate>Mon, 28 Jul 2025 22:23:23 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/posts/homelab/k3s-prod/apps/mta-sts/readme/</guid>
       <description>Hier wird jeder Service (mit README.md) kurz notiert</description>
@@ -331,7 +331,7 @@ Repositories zu.&lt;/p&gt;</description>
     <item>
       <title>k3s nfs-provisioner</title>
       <link>https://www.zyria.de/posts/homelab/k3s-prod/apps/nfs-provisioner/readme/</link>
-      <pubDate>Mon, 28 Jul 2025 13:51:20 +0200</pubDate>
+      <pubDate>Mon, 28 Jul 2025 22:23:23 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/posts/homelab/k3s-prod/apps/nfs-provisioner/readme/</guid>
       <description>Hier wird jeder Service (mit README.md) kurz notiert</description>
@@ -341,7 +341,7 @@ Repositories zu.&lt;/p&gt;</description>
     <item>
       <title>k3s Prometheus</title>
       <link>https://www.zyria.de/posts/homelab/k3s-prod/apps/prometheus/readme/</link>
-      <pubDate>Mon, 28 Jul 2025 13:51:20 +0200</pubDate>
+      <pubDate>Mon, 28 Jul 2025 22:23:23 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/posts/homelab/k3s-prod/apps/prometheus/readme/</guid>
       <description>Hier wird jeder Service (mit README.md) kurz notiert</description>
@@ -351,7 +351,7 @@ Repositories zu.&lt;/p&gt;</description>
     <item>
       <title>k3s reloader</title>
       <link>https://www.zyria.de/posts/homelab/k3s-prod/apps/reloader/readme/</link>
-      <pubDate>Mon, 28 Jul 2025 13:51:20 +0200</pubDate>
+      <pubDate>Mon, 28 Jul 2025 22:23:23 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/posts/homelab/k3s-prod/apps/reloader/readme/</guid>
       <description>Hier wird jeder Service (mit README.md) kurz notiert</description>
@@ -361,7 +361,7 @@ Repositories zu.&lt;/p&gt;</description>
     <item>
       <title>k3s system-upgrade-controller</title>
       <link>https://www.zyria.de/posts/homelab/k3s-prod/apps/system-upgrade-controller/readme/</link>
-      <pubDate>Mon, 28 Jul 2025 13:51:20 +0200</pubDate>
+      <pubDate>Mon, 28 Jul 2025 22:23:23 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/posts/homelab/k3s-prod/apps/system-upgrade-controller/readme/</guid>
       <description>Hier wird jeder Service (mit README.md) kurz notiert</description>
@@ -371,7 +371,7 @@ Repositories zu.&lt;/p&gt;</description>
     <item>
       <title>k3s Traefik</title>
       <link>https://www.zyria.de/posts/homelab/k3s-prod/apps/traefik/readme/</link>
-      <pubDate>Mon, 28 Jul 2025 13:51:20 +0200</pubDate>
+      <pubDate>Mon, 28 Jul 2025 22:23:23 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/posts/homelab/k3s-prod/apps/traefik/readme/</guid>
       <description>Hier wird jeder Service (mit README.md) kurz notiert</description>
@@ -381,7 +381,7 @@ Repositories zu.&lt;/p&gt;</description>
     <item>
       <title>k3s whoami</title>
       <link>https://www.zyria.de/posts/homelab/k3s-prod/apps/whoami/readme/</link>
-      <pubDate>Mon, 28 Jul 2025 13:51:20 +0200</pubDate>
+      <pubDate>Mon, 28 Jul 2025 22:23:23 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/posts/homelab/k3s-prod/apps/whoami/readme/</guid>
       <description>Hier wird jeder Service (mit README.md) kurz notiert</description>
@@ -391,7 +391,7 @@ Repositories zu.&lt;/p&gt;</description>
     <item>
       <title>Mailstack</title>
       <link>https://www.zyria.de/posts/homelab/k3s-prod/apps/mailstack/readme/</link>
-      <pubDate>Mon, 28 Jul 2025 13:51:20 +0200</pubDate>
+      <pubDate>Mon, 28 Jul 2025 22:23:23 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/posts/homelab/k3s-prod/apps/mailstack/readme/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;Funktion 
@@ -433,7 +433,7 @@ setzen:&lt;/p&gt;</description>
     <item>
       <title>Maintenance Page</title>
       <link>https://www.zyria.de/posts/homelab/k3s-prod/apps/maintenance-page/readme/</link>
-      <pubDate>Mon, 28 Jul 2025 13:51:20 +0200</pubDate>
+      <pubDate>Mon, 28 Jul 2025 22:23:23 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/posts/homelab/k3s-prod/apps/maintenance-page/readme/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;Quelle 
@@ -498,7 +498,7 @@ setzen:&lt;/p&gt;</description>
     <item>
       <title>Pihole</title>
       <link>https://www.zyria.de/posts/homelab/k3s-prod/apps/pihole/pihole/</link>
-      <pubDate>Mon, 28 Jul 2025 13:51:20 +0200</pubDate>
+      <pubDate>Mon, 28 Jul 2025 22:23:23 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/posts/homelab/k3s-prod/apps/pihole/pihole/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;Quelle 
@@ -556,7 +556,7 @@ setzen:&lt;/p&gt;</description>
     <item>
       <title>Roundcube Webmail</title>
       <link>https://www.zyria.de/posts/homelab/k3s-prod/apps/roundcube/readme/</link>
-      <pubDate>Mon, 28 Jul 2025 13:51:20 +0200</pubDate>
+      <pubDate>Mon, 28 Jul 2025 22:23:23 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/posts/homelab/k3s-prod/apps/roundcube/readme/</guid>
       <description>&lt;h3 class=&#34;relative group&#34;&gt;Status 
@@ -684,7 +684,7 @@ setzen:&lt;/p&gt;</description>
     <item>
       <title>Unifi Controller</title>
       <link>https://www.zyria.de/posts/homelab/k3s-prod/apps/unifi-controller/readme/</link>
-      <pubDate>Mon, 28 Jul 2025 13:51:20 +0200</pubDate>
+      <pubDate>Mon, 28 Jul 2025 22:23:23 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/posts/homelab/k3s-prod/apps/unifi-controller/readme/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;Unifi Controller 
@@ -804,7 +804,7 @@ setzen:&lt;/p&gt;</description>
     <item>
       <title>Uptime Kuma</title>
       <link>https://www.zyria.de/posts/homelab/k3s-prod/apps/uptime-kuma/readme/</link>
-      <pubDate>Mon, 28 Jul 2025 13:51:20 +0200</pubDate>
+      <pubDate>Mon, 28 Jul 2025 22:23:23 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/posts/homelab/k3s-prod/apps/uptime-kuma/readme/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;Quelle 
@@ -867,7 +867,7 @@ der IT.&lt;/p&gt;</description>
     <item>
       <title>Wireguard</title>
       <link>https://www.zyria.de/posts/homelab/k3s-prod/apps/wireguard/readme/</link>
-      <pubDate>Mon, 28 Jul 2025 13:51:20 +0200</pubDate>
+      <pubDate>Mon, 28 Jul 2025 22:23:23 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/posts/homelab/k3s-prod/apps/wireguard/readme/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;Quelle 
@@ -933,7 +933,7 @@ der IT.&lt;/p&gt;</description>
     <item>
       <title>Zammad</title>
       <link>https://www.zyria.de/posts/homelab/k3s-prod/apps/zammad/readme/</link>
-      <pubDate>Mon, 28 Jul 2025 13:51:20 +0200</pubDate>
+      <pubDate>Mon, 28 Jul 2025 22:23:23 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/posts/homelab/k3s-prod/apps/zammad/readme/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;Quelle 
