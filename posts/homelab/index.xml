@@ -14,18 +14,10 @@
     <item>
       <title>Kubernetes Snippets</title>
       <link>https://www.zyria.de/posts/homelab/kubernets/</link>
-      <pubDate>Mon, 28 Jul 2025 10:47:46 +0200</pubDate>
+      <pubDate>Mon, 28 Jul 2025 10:58:38 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/posts/homelab/kubernets/</guid>
-      <description>&lt;h2 class=&#34;relative group&#34;&gt;Hier Sammle ich Snippets, welche mir das Tippen ersparen sollen und für Kubernetes öfter mal gebraucht werden 
-    &lt;div id=&#34;hier-sammle-ich-snippets-welche-mir-das-tippen-ersparen-sollen-und-für-kubernetes-öfter-mal-gebraucht-werden&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
-    
-    &lt;span
-        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
-        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#hier-sammle-ich-snippets-welche-mir-das-tippen-ersparen-sollen-und-f%c3%bcr-kubernetes-%c3%b6fter-mal-gebraucht-werden&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;
-    &lt;/span&gt;        
-    
-&lt;/h2&gt;</description>
+      <description>&lt;p&gt;Hier Sammle ich Snippets, welche mir das Tippen ersparen sollen und für Kubernetes öfter mal gebraucht werden.&lt;/p&gt;</description>
       
     </item>
     
