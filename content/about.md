@@ -47,7 +47,7 @@ Mit Stolz engagiere ich mich ehrenamtlich im **Technischen Hilfswerk (THW)**, de
 
 Durch mein Engagement möchte ich einen aktiven Beitrag für die Sicherheit und den Zusammenhalt in unserer Gesellschaft leisten.
 
-{{< alert icon="bell" cardColor="#3161f0" iconColor="#60a5fa" textColor="#ffffff" >}}
+{{< alert icon="bell" cardColor="#003399" iconColor="#60a5fa" textColor="#ffffff" >}}
 **Interesse geweckt?**
 
 Du bist herzlich eingeladen, uns und unsere Arbeit kennenzulernen. Unser Dienst findet - außerhalb der hessischen Schulferien - **jeden Donnerstag ab 19:30 Uhr** in unserem Ortsverband in der **Molkereistraße 7, 35039 Marburg** statt.
