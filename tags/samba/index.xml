@@ -9,12 +9,12 @@
     <managingEditor>fabrice@zyria.de (Fabrice Kirchner)</managingEditor>
     <webMaster>fabrice@zyria.de (Fabrice Kirchner)</webMaster>
     
-    <lastBuildDate>Tue, 01 Jul 2025 13:37:34 +0200</lastBuildDate><atom:link href="https://www.zyria.de/tags/samba/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://www.zyria.de/tags/samba/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Samba Schema</title>
       <link>https://www.zyria.de/posts/homelab/samba-schema/</link>
-      <pubDate>Tue, 01 Jul 2025 13:37:34 +0200</pubDate>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/posts/homelab/samba-schema/</guid>
       <description>Active Directory Schema Erweiterungen</description>
