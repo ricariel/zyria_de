@@ -39,3 +39,9 @@ kubectl get nodes -o=jsonpath="{range .items[*]}{.metadata.name}: {.metadata.lab
 ```bash
 kubectl delete events --all -A
 ```
+
+## Lösche alle nicht gebundenen Images
+
+```bash
+/usr/local/bin//k3s crictl rmi --prune
+```
