@@ -717,7 +717,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2025-07-04T11:53:52&#43;02:00">4 Juli 2025</time><span class="px-2 text-primary-500">&middot;</span><span>52 Wörter</span>
+      <time datetime="2025-07-28T10:40:39&#43;02:00">28 Juli 2025</time><span class="px-2 text-primary-500">&middot;</span><span>52 Wörter</span>
     
 
     
@@ -832,6 +832,182 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
       
       <div class="py-1 max-w-fit prose dark:prose-invert">
         Hier wird jeder Service (mit README.md) kurz notiert
+      </div>
+      
+    </div>
+  </a>
+
+        
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a class="flex flex-wrap md:flex-nowrap article border border-neutral-200 dark:border-neutral-700 border-2 rounded-md overflow-hidden" href="/posts/homelab/kubernets/">
+    <div class=" p-4">
+      <div class="items-center text-left text-xl font-semibold">
+        
+        <div class="font-bold text-xl text-neutral-800 decoration-primary-500 hover:underline hover:underline-offset-2 dark:text-neutral"
+          href="/posts/homelab/kubernets/">Kubernetes Snippets</div>
+        
+        
+        
+      </div>
+      <div class="text-sm text-neutral-500 dark:text-neutral-400">
+        
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+
+  
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="2025-07-28T10:38:00&#43;02:00">28 Juli 2025</time><span class="px-2 text-primary-500">&middot;</span><span>77 Wörter</span>
+    
+
+    
+    
+  </div>
+
+  
+    <div class="flex flex-row flex-wrap items-center">
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+  
+
+  
+  
+    <div class="flex flex-row flex-wrap items-center">
+      
+        
+      
+        
+          
+        
+      
+        
+      
+        
+          
+            
+              <span
+                class="mr-2 margin-top-[0.5rem]"
+                onclick="window.open(&#34;/tags/kubernetes/&#34;,'_self');return false;">
+                <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Kubernetes
+  </span>
+</span>
+
+              </span>
+            
+              <span
+                class="mr-2 margin-top-[0.5rem]"
+                onclick="window.open(&#34;/tags/homelab/&#34;,'_self');return false;">
+                <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Homelab
+  </span>
+</span>
+
+              </span>
+            
+              <span
+                class="mr-2 margin-top-[0.5rem]"
+                onclick="window.open(&#34;/tags/k3s/&#34;,'_self');return false;">
+                <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    K3s
+  </span>
+</span>
+
+              </span>
+            
+          
+        
+      
+    </div>
+  
+
+  
+  
+
+
+
+      </div>
+      
+      <div class="py-1 max-w-fit prose dark:prose-invert">
+        Finalizer löschen # ´´´bash kubectl get linstorsatellites.piraeus.io -o name | sed -e &rsquo;s/.*///g&rsquo; | xargs -I {} kubectl patch linstorsatellites.piraeus.io {} -p &lsquo;{&ldquo;metadata&rdquo;: {&ldquo;finalizers&rdquo;: null}}&rsquo; &ndash;type merge ´´´
+Update Postgres mit Podman/Docker # ´´´bash podman run &ndash;rm &ndash;name pgauto -it &ndash;mount type=bind,source=./,target=/var/lib/postgresql/data -e POSTGRES_PASSWORD=password -e PGAUTO_ONESHOT=yes -e PGAUTO_REINDEX=no pgautoupgrade/pgautoupgrade:16-bookworm ´´´
+
       </div>
       
     </div>

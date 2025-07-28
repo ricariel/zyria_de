@@ -5,7 +5,6 @@
   class="scroll-smooth"
   data-default-appearance="light"
   data-auto-appearance="true"><head>
-	<meta name="generator" content="Hugo 0.148.2">
   <meta charset="utf-8" />
   
   <meta http-equiv="content-language" content="de-de" />
@@ -13,18 +12,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   
-  <title>Zyria</title>
-  <meta name="title" content="Zyria" />
+  <title>Kubernetes Snippets &middot; Zyria</title>
+  <meta name="title" content="Kubernetes Snippets &middot; Zyria" />
   
-  <meta name="description" content="Öffentliches Notizbuch von Fabrice Kirchner" />
+  <meta name="description" content="Sammlung von Snippets, welche immer mal wieder benötigt wurden" />
+  <meta name="keywords" content="Kubernetes, Homelab, K3s, " />
   
   
-  
-  <link rel="canonical" href="https://www.zyria.de/" />
-  
-  <link rel="alternate" type="application/rss+xml" href="/index.xml" title="Zyria" />
-  
-  <link rel="alternate" type="application/json" href="/index.json" title="Zyria" />
+  <link rel="canonical" href="https://www.zyria.de/posts/homelab/kubernets/" />
   
   
   
@@ -92,38 +87,53 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   
   
   
-  <meta property="og:url" content="https://www.zyria.de/">
+  <meta property="og:url" content="https://www.zyria.de/posts/homelab/kubernets/">
   <meta property="og:site_name" content="Zyria">
-  <meta property="og:title" content="Eine (scheinbar) leere Homepage">
-  <meta property="og:description" content="Auf dieser Homepage ist (zumindest jetzt) nichts zu finden.
-Aber?!">
+  <meta property="og:title" content="Kubernetes Snippets">
+  <meta property="og:description" content="Sammlung von Snippets, welche immer mal wieder benötigt wurden">
   <meta property="og:locale" content="de_de">
-  <meta property="og:type" content="website">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-07-28T10:38:00+02:00">
+    <meta property="article:modified_time" content="2025-07-28T10:38:00+02:00">
+    <meta property="article:tag" content="Kubernetes">
+    <meta property="article:tag" content="Homelab">
+    <meta property="article:tag" content="K3s">
 
   
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Eine (scheinbar) leere Homepage">
-  <meta name="twitter:description" content="Auf dieser Homepage ist (zumindest jetzt) nichts zu finden.
-Aber?!">
+  <meta name="twitter:title" content="Kubernetes Snippets">
+  <meta name="twitter:description" content="Sammlung von Snippets, welche immer mal wieder benötigt wurden">
 
     
   
   
   <script type="application/ld+json">
-  {
+  [{
     "@context": "https://schema.org",
-    "@type": "WebSite",
-    "@id": "https:\/\/www.zyria.de\/",
-    "name": "Zyria",
-    "description": "Öffentliches Notizbuch von Fabrice Kirchner",
+    "@type": "Article",
+    "articleSection": "Beiträge",
+    "name": "Kubernetes Snippets",
+    "headline": "Kubernetes Snippets",
+    "description": "Sammlung von Snippets, welche immer mal wieder benötigt wurden",
+    "abstract": "\u003ch2 class=\u0022relative group\u0022\u003eFinalizer löschen \n    \u003cdiv id=\u0022finalizer-löschen\u0022 class=\u0022anchor\u0022\u003e\u003c\/div\u003e\n    \n    \u003cspan\n        class=\u0022absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100\u0022\u003e\n        \u003ca class=\u0022group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline\u0022 href=\u0022#finalizer-l%c3%b6schen\u0022 aria-label=\u0022Anker\u0022\u003e#\u003c\/a\u003e\n    \u003c\/span\u003e        \n    \n\u003c\/h2\u003e\n\u003cp\u003e´´´bash\nkubectl get linstorsatellites.piraeus.io -o name | sed -e \u0026rsquo;s\/.*\/\/\/g\u0026rsquo; | xargs -I {} kubectl patch linstorsatellites.piraeus.io {} -p \u0026lsquo;{\u0026ldquo;metadata\u0026rdquo;: {\u0026ldquo;finalizers\u0026rdquo;: null}}\u0026rsquo; \u0026ndash;type merge\n´´´\u003c\/p\u003e\n\n\u003ch2 class=\u0022relative group\u0022\u003eUpdate Postgres mit Podman\/Docker \n    \u003cdiv id=\u0022update-postgres-mit-podmandocker\u0022 class=\u0022anchor\u0022\u003e\u003c\/div\u003e\n    \n    \u003cspan\n        class=\u0022absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100\u0022\u003e\n        \u003ca class=\u0022group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline\u0022 href=\u0022#update-postgres-mit-podmandocker\u0022 aria-label=\u0022Anker\u0022\u003e#\u003c\/a\u003e\n    \u003c\/span\u003e        \n    \n\u003c\/h2\u003e\n\u003cp\u003e´´´bash\npodman run \u0026ndash;rm \u0026ndash;name pgauto -it \u003cbr\u003e\n\u0026ndash;mount type=bind,source=.\/,target=\/var\/lib\/postgresql\/data \u003cbr\u003e\n-e POSTGRES_PASSWORD=password \u003cbr\u003e\n-e PGAUTO_ONESHOT=yes \u003cbr\u003e\n-e PGAUTO_REINDEX=no \u003cbr\u003e\npgautoupgrade\/pgautoupgrade:16-bookworm\n´´´\u003c\/p\u003e",
     "inLanguage": "de-de",
-    "url": "https:\/\/www.zyria.de\/",
-    
-    "publisher" : {
+    "url" : "https:\/\/www.zyria.de\/posts\/homelab\/kubernets\/",
+    "author" : {
       "@type": "Person",
       "name": "Fabrice Kirchner"
-    }
-  }
+    },
+    "copyrightYear": "2025",
+    "dateCreated": "2025-07-28T10:38:00\u002b02:00",
+    "datePublished": "2025-07-28T10:38:00\u002b02:00",
+    
+    "dateModified": "2025-07-28T10:38:00\u002b02:00",
+    
+    "keywords": ["Kubernetes","Homelab","K3s"],
+    
+    "mainEntityOfPage": "true",
+    "wordCount": "77"
+  }]
   </script>
 
 
@@ -551,36 +561,518 @@ Aber?!">
       <main id="main-content" class="grow">
         
   
-  
+
+
+  <article>
     
-<article
-  class="
-    h-full
-   flex flex-col items-center justify-center text-center">
-  <header class="relative px-1 py-1 flex flex-col items-center mb-3">
-    
+      
+      
       
       
         
+  
+
       
+    
+
+
+    <header id="single_header" class="mt-5 max-w-prose">
+      
+        <ol class="text-sm text-neutral-500 dark:text-neutral-400 print:hidden">
+  
+  
+    
+  
+    
+  
+    
+  
+  <li class="hidden">
+    <a class="hover:underline decoration-neutral-300 dark:underline-neutral-600" href="/"
+      >Eine (scheinbar) leere Homepage</a
+    ><span class="px-1 text-primary-500">/</span>
+  </li>
+
+  
+  <li class="inline">
+    <a class="hover:underline decoration-neutral-300 dark:underline-neutral-600" href="/posts/"
+      >Beiträge</a
+    ><span class="px-1 text-primary-500">/</span>
+  </li>
+
+  
+  <li class="inline">
+    <a class="hover:underline decoration-neutral-300 dark:underline-neutral-600" href="/posts/homelab/"
+      >Kleines Homelab</a
+    ><span class="px-1 text-primary-500">/</span>
+  </li>
+
+  
+  <li class="hidden">
+    <a class="hover:underline decoration-neutral-300 dark:underline-neutral-600" href="/posts/homelab/kubernets/"
+      >Kubernetes Snippets</a
+    ><span class="px-1 text-primary-500">/</span>
+  </li>
+
+</ol>
+
+
+      
+      <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+        Kubernetes Snippets
+      </h1>
+      <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
+        
+
+
+
+
+
+  
+  
+
+
+
+  
+
+  
+  
+  
+
+  
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+  
+
+  
+    
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="2025-07-28T10:38:00&#43;02:00">28 Juli 2025</time><span class="px-2 text-primary-500">&middot;</span><span>77 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
+
+
+  
+  
+
+<span class="mb-[2px]">
+  <a
+    href="https://git.zyria.de/pyrox/zyria_de/src/branch/main/content/posts/homelab/kubernets.md"
+    class="text-lg hover:text-primary-500"
+    rel="noopener noreferrer"
+    target="_blank"
+    title="Inhalt bearbeiten"
+    ><span class="inline-block align-text-bottom">
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><path fill="currentColor" d="M441 58.9L453.1 71c9.4 9.4 9.4 24.6 0 33.9L424 134.1 377.9 88 407 58.9c9.4-9.4 24.6-9.4 33.9 0zM209.8 256.2L344 121.9 390.1 168 255.8 302.2c-2.9 2.9-6.5 5-10.4 6.1l-58.5 16.7 16.7-58.5c1.1-3.9 3.2-7.5 6.1-10.4zM373.1 25L175.8 222.2c-8.7 8.7-15 19.4-18.3 31.1l-28.6 100c-2.4 8.4-.1 17.4 6.1 23.6s15.2 8.5 23.6 6.1l100-28.6c11.8-3.4 22.5-9.7 31.1-18.3L487 138.9c28.1-28.1 28.1-73.7 0-101.8L474.9 25C446.8-3.1 401.2-3.1 373.1 25zM88 64C39.4 64 0 103.4 0 152V424c0 48.6 39.4 88 88 88H360c48.6 0 88-39.4 88-88V312c0-13.3-10.7-24-24-24s-24 10.7-24 24V424c0 22.1-17.9 40-40 40H88c-22.1 0-40-17.9-40-40V152c0-22.1 17.9-40 40-40H200c13.3 0 24-10.7 24-24s-10.7-24-24-24H88z"/></svg>
+  </span>
+
+</span></a
+  >
+</span><span class="px-2 text-primary-500">&middot;</span>
+
+
+
+<script
+  type="text/javascript"
+  src="/js/zen-mode.min.2a0a1375509c03daf41c53a9831aa2d560895b7a2528c3eb3b56e7b11a135c7529e49727162a053b6193be8340270a8342f42c69f3d7e262ae54bc248eaac8f5.js"
+  integrity="sha512-KgoTdVCcA9r0HFOpgxqi1WCJW3olKMPrO1bnsRoTXHUp5JcnFioFO2GTvoNAJwqDQvQsafPX4mKuVLwkjqrI9Q=="></script>
+
+<span class="mb-[2px]">
+  <span
+    id="zen-mode-button"
+    class="text-lg hover:text-primary-500"
+    title=""
+    data-title-i18n-disable=""
+    data-title-i18n-enable="">
+    <span class="inline-block align-text-bottom">
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="50px" height="50px">
+    <path fill="currentColor" d="M 12.980469 4 C 9.1204688 4 5.9804688 7.14 5.9804688 11 L 6 26 L 9.9804688 26 L 9.9804688 11 C 9.9804688 9.35 11.320469 8 12.980469 8 L 40.019531 8 C 41.679531 8 43.019531 9.35 43.019531 11 L 43.019531 39 C 43.019531 40.65 41.679531 42 40.019531 42 L 29 42 C 29 43.54 28.420938 44.94 27.460938 46 L 40.019531 46 C 43.879531 46 47.019531 42.86 47.019531 39 L 47.019531 11 C 47.019531 7.14 43.879531 4 40.019531 4 L 12.980469 4 z M 7 28 C 4.794 28 3 29.794 3 32 L 3 42 C 3 44.206 4.794 46 7 46 L 23 46 C 25.206 46 27 44.206 27 42 L 27 32 C 27 29.794 25.206 28 23 28 L 7 28 z M 7 32 L 23 32 L 23.001953 42 L 7 42 L 7 32 z"/>
+</svg>
+  </span>
+
+</span>
+  </span>
+</span>
+
+    
+
+    
+    
+  </div>
+
+  
+    <div class="flex flex-row flex-wrap items-center">
       
         
           
         
-        <img
-          class="mb-2 rounded-full h-36 w-36"
-          width="144"
-          height="144"
-          alt="Fabrice Kirchner"
-          src="/images/chibi-head_hu_ccc4f0e6f94b1449.jpg">
+      
+        
+      
+        
+      
+        
+      
+    </div>
+  
+
+  
+  
+    <div class="flex flex-row flex-wrap items-center">
+      
+        
+      
+        
+          
+        
+      
+        
+      
+        
+          
+            
+              <span
+                class="mr-2 margin-top-[0.5rem]"
+                onclick="window.open(&#34;/tags/kubernetes/&#34;,'_self');return false;">
+                <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Kubernetes
+  </span>
+</span>
+
+              </span>
+            
+              <span
+                class="mr-2 margin-top-[0.5rem]"
+                onclick="window.open(&#34;/tags/homelab/&#34;,'_self');return false;">
+                <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Homelab
+  </span>
+</span>
+
+              </span>
+            
+              <span
+                class="mr-2 margin-top-[0.5rem]"
+                onclick="window.open(&#34;/tags/k3s/&#34;,'_self');return false;">
+                <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    K3s
+  </span>
+</span>
+
+              </span>
+            
+          
+        
+      
+    </div>
+  
+
+  
+  
+
+
+
+      </div>
+
+      
+      
+      
+      
+      
+
+      
+
+      
+
+    </header>
+
+    <section class="flex flex-col max-w-full mt-0 prose dark:prose-invert lg:flex-row">
+      
+        <div class="order-first lg:ml-auto px-0 lg:order-last ltr:lg:pl-8 rtl:lg:pr-8">
+          <div
+            class="toc ltr:pl-5 rtl:pr-5 print:hidden lg:sticky 
+              lg:top-10
+            
+            ">
+            
+              <details
+  open
+  id="TOCView"
+  class="toc-right mt-0 overflow-y-auto overscroll-contain scrollbar-thin scrollbar-track-neutral-200 scrollbar-thumb-neutral-400 dark:scrollbar-track-neutral-800 dark:scrollbar-thumb-neutral-600 rounded-lg ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 hidden lg:block">
+  <summary
+    class="block py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">
+    Inhaltsverzeichnis
+  </summary>
+  <div
+    class="min-w-[220px] py-2 border-dotted ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#finalizer-löschen">Finalizer löschen</a></li>
+    <li><a href="#update-postgres-mit-podmandocker">Update Postgres mit Podman/Docker</a></li>
+    <li><a href="#zeige-alle-nodes-mit-dem-label-performance">Zeige alle Nodes mit dem Label performance</a></li>
+    <li><a href="#lösche-alle-events">Lösche alle Events</a></li>
+  </ul>
+</nav>
+  </div>
+</details>
+<details class="toc-inside mt-0 overflow-hidden rounded-lg ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 lg:hidden">
+  <summary
+    class="py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">
+    Inhaltsverzeichnis
+  </summary>
+  <div
+    class="py-2 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#finalizer-löschen">Finalizer löschen</a></li>
+    <li><a href="#update-postgres-mit-podmandocker">Update Postgres mit Podman/Docker</a></li>
+    <li><a href="#zeige-alle-nodes-mit-dem-label-performance">Zeige alle Nodes mit dem Label performance</a></li>
+    <li><a href="#lösche-alle-events">Lösche alle Events</a></li>
+  </ul>
+</nav>
+  </div>
+</details>
+
+
+<script>
+  (function () {
+    'use strict'
+
+    const SCROLL_OFFSET_RATIO = 0.33
+    const TOC_SELECTOR = '#TableOfContents'
+    const ANCHOR_SELECTOR = '.anchor'
+    const TOC_LINK_SELECTOR = 'a[href^="#"]'
+    const NESTED_LIST_SELECTOR = 'li ul'
+    const ACTIVE_CLASS = 'active'
+
+    function getActiveAnchorId(anchors, offsetRatio) {
+      const threshold = window.scrollY + window.innerHeight * offsetRatio
+      const tocLinks = [...document.querySelectorAll('#TableOfContents a[href^="#"]')]
+      const tocIds = new Set(tocLinks.map(link => link.getAttribute('href').substring(1)))
+
+      for (let i = anchors.length - 1; i >= 0; i--) {
+        const top = anchors[i].getBoundingClientRect().top + window.scrollY
+        if (top <= threshold && tocIds.has(anchors[i].id)) {
+          return anchors[i].id
+        }
+      }
+      return anchors.find(anchor => tocIds.has(anchor.id))?.id || ''
+    }
+
+    function updateTOC({ toc, anchors, links, scrollOffset, collapseInactive }) {
+      const activeId = getActiveAnchorId(anchors, scrollOffset)
+      if (!activeId) return
+
+      links.forEach(link => {
+        const isActive = link.getAttribute('href') === `#${activeId}`
+        link.classList.toggle(ACTIVE_CLASS, isActive)
+
+        if (collapseInactive) {
+          const ul = link.closest('li')?.querySelector('ul')
+          if (ul) ul.style.display = isActive ? '' : 'none'
+        }
+      })
+
+      if (collapseInactive) {
+        const activeLink = toc.querySelector(`a[href="#${CSS.escape(activeId)}"]`)
+        let el = activeLink
+        while (el && el !== toc) {
+          if (el.tagName === 'UL') el.style.display = ''
+          if (el.tagName === 'LI') el.querySelector('ul')?.style.setProperty('display', '')
+          el = el.parentElement
+        }
+      }
+    }
+
+    function initTOC() {
+      const toc = document.querySelector(TOC_SELECTOR)
+      if (!toc) return
+
+      const collapseInactive = false
+      const anchors = [...document.querySelectorAll(ANCHOR_SELECTOR)]
+      const links = [...toc.querySelectorAll(TOC_LINK_SELECTOR)]
+
+      if (collapseInactive) {
+        toc.querySelectorAll(NESTED_LIST_SELECTOR).forEach(ul => ul.style.display = 'none')
+      }
+
+      const config = {
+        toc,
+        anchors,
+        links,
+        scrollOffset: SCROLL_OFFSET_RATIO,
+        collapseInactive
+      }
+
+      window.addEventListener('scroll', () => updateTOC(config), { passive: true })
+      window.addEventListener('hashchange', () => updateTOC(config), { passive: true })
+
+      updateTOC(config)
+    }
+
+    document.readyState === 'loading'
+      ? document.addEventListener('DOMContentLoaded', initTOC)
+      : initTOC()
+  })()
+</script>
+
+
+            
+            
+          </div>
+        </div>
+      
+
+
+      <div class="min-w-0 min-h-0 max-w-fit">
+        
+
+
+
+        <div class="article-content max-w-prose mb-20">
+          
+<h2 class="relative group">Finalizer löschen 
+    <div id="finalizer-löschen" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#finalizer-l%c3%b6schen" aria-label="Anker">#</a>
+    </span>        
+    
+</h2>
+<p>´´´bash
+kubectl get linstorsatellites.piraeus.io -o name | sed -e &rsquo;s/.*///g&rsquo; | xargs -I {} kubectl patch linstorsatellites.piraeus.io {} -p &lsquo;{&ldquo;metadata&rdquo;: {&ldquo;finalizers&rdquo;: null}}&rsquo; &ndash;type merge
+´´´</p>
+
+<h2 class="relative group">Update Postgres mit Podman/Docker 
+    <div id="update-postgres-mit-podmandocker" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#update-postgres-mit-podmandocker" aria-label="Anker">#</a>
+    </span>        
+    
+</h2>
+<p>´´´bash
+podman run &ndash;rm &ndash;name pgauto -it <br>
+&ndash;mount type=bind,source=./,target=/var/lib/postgresql/data <br>
+-e POSTGRES_PASSWORD=password <br>
+-e PGAUTO_ONESHOT=yes <br>
+-e PGAUTO_REINDEX=no <br>
+pgautoupgrade/pgautoupgrade:16-bookworm
+´´´</p>
+
+<h2 class="relative group">Zeige alle Nodes mit dem Label performance 
+    <div id="zeige-alle-nodes-mit-dem-label-performance" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#zeige-alle-nodes-mit-dem-label-performance" aria-label="Anker">#</a>
+    </span>        
+    
+</h2>
+<p>´´´bash
+kubectl get nodes -o=jsonpath=&quot;{range .items[*]}{.metadata.name}: {.metadata.labels.performance}{&rsquo;\n&rsquo;}{end}&quot;
+´´´</p>
+
+<h2 class="relative group">Lösche alle Events 
+    <div id="lösche-alle-events" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#l%c3%b6sche-alle-events" aria-label="Anker">#</a>
+    </span>        
+    
+</h2>
+<p>´´´bash
+kubectl delete events &ndash;all -A
+´´´</p>
+
+          
+          
+          
+            <strong class="block mt-8">
+              <a
+                target="_blank"
+                class="m-1 rounded bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
+                href="mailto:fabrice@zyria.de?subject=Reply%20to%20Kubernetes%20Snippets">
+                Reply by Email
+              </a>
+            </strong>
+          
+        </div>
+
+        
+
+          
+            
+            
+<div class="flex author">
+  
+    
+    
       
     
-    <h1 class="text-4xl font-extrabold">
-      Fabrice Kirchner
-    </h1>
     
-    <div class="mt-1 text-2xl">
       
+        
+      
+      <img
+        class="!mt-0 !mb-0 h-24 w-24 rounded-full ltr:mr-4 rtl:ml-4"
+        width="96"
+        height="96"
+        alt="Fabrice Kirchner"
+        src="/images/chibi-head_hu_c9b7f3db40f37b6c.jpg">
+    
+  
+  <div class="place-self-center">
+    
+      <div class="text-[0.6rem] uppercase leading-3 text-neutral-500 dark:text-neutral-400">
+        Autor
+      </div>
+      <div class="font-semibold leading-6 text-neutral-800 dark:text-neutral-300">
+        Fabrice Kirchner
+      </div>
+    
+    
+      <div class="text-sm text-neutral-700 dark:text-neutral-400">stolzer Vater, Nerd, Admin</div>
+    
+    <div class="text-2xl sm:text-lg">
   <div class="flex flex-wrap text-neutral-400 dark:text-neutral-500">
     
       
@@ -727,23 +1219,90 @@ Aber?!">
     
   </div>
 
+</div>
+  </div>
+</div>
 
+          
+
+          
+
+          
+            <div class="mb-10"></div>
+          
+
+        
+
+        
+
+        
+
+        
+
+      </div>
+
+      
+      
+        
+        
+          
+          
+        
+        
+        
+        <script
+          type="text/javascript"
+          src="/js/page.min.407e5b2727c1f241c95d53db24c776bea71bfc18e09511b815d669ad8caca6e9e18a53864ad364b1ccccfa2f2956768d33cfe193bfb64d3406f3b5ece354ba57.js"
+          integrity="sha512-QH5bJyfB8kHJXVPbJMd2vqcb/BjglRG4FdZprYyspunhilOGStNksczM&#43;i8pVnaNM8/hk7&#43;2TTQG87Xs41S6Vw=="
+          data-oid="views_posts/homelab/kubernets.md"
+          data-oid-likes="likes_posts/homelab/kubernets.md"></script>
+      
+
+    </section>
+    <footer class="pt-8 max-w-prose print:hidden">
+      
+  
+    
+    
+    
+    <div class="pt-8">
+      <hr class="border-dotted border-neutral-300 dark:border-neutral-600">
+      <div class="flex justify-between pt-3">
+        <span>
+          
+            <a class="flex group mr-3" href="/posts/homelab/hardware/">
+              <span
+                class="mr-3 text-neutral-700 group-hover:text-primary-600 ltr:inline rtl:hidden dark:text-neutral dark:group-hover:text-primary-400"
+                >&larr;</span
+              >
+              <span
+                class="ml-3 text-neutral-700 group-hover:text-primary-600 ltr:hidden rtl:inline dark:text-neutral dark:group-hover:text-primary-400"
+                >&rarr;</span
+              >
+              <span class="flex flex-col">
+                <span class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
+                  >Hardware im Homelab</span
+                >
+                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
+                  
+                    <time datetime="2025-07-01T13:37:34&#43;02:00">1 Juli 2025</time>
+                  
+                </span>
+              </span>
+            </a>
+          
+        </span>
+        <span>
+          
+        </span>
+      </div>
     </div>
-  </header>
-  <section class="prose dark:prose-invert"><p>Auf dieser Homepage ist (zumindest jetzt) nichts zu finden.</p>
-<p><a
-  href="/why/">Aber?!</a>
-</p>
-</section>
-</article>
-<section>
   
 
 
-
-</section>
-
-  
+      
+    </footer>
+  </article>
 
         <div id="top-scroller" class="pointer-events-none absolute top-[110vh] bottom-0 w-12 ltr:right-0 rtl:left-0">
   <a
