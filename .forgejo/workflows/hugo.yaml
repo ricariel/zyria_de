@@ -74,7 +74,7 @@ jobs:
           HUGO_ENVIRONMENT: production
         run: |
           echo "hugo --minify --gc --environment production"
-          hugo --minify --gc --environment production
+          hugo --enableGitInfo --minify --gc --environment production
 
       - name: Check if there are any changes
         id: verify_diff
