@@ -94,8 +94,8 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   <meta property="og:locale" content="de_de">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
-    <meta property="article:published_time" content="2025-07-28T10:38:00+02:00">
-    <meta property="article:modified_time" content="2025-07-28T10:38:00+02:00">
+    <meta property="article:published_time" content="2025-07-28T10:47:46+02:00">
+    <meta property="article:modified_time" content="2025-07-28T10:47:46+02:00">
     <meta property="article:tag" content="Kubernetes">
     <meta property="article:tag" content="Homelab">
     <meta property="article:tag" content="K3s">
@@ -116,7 +116,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
     "name": "Kubernetes Snippets",
     "headline": "Kubernetes Snippets",
     "description": "Sammlung von Snippets, welche immer mal wieder benötigt wurden",
-    "abstract": "\u003ch2 class=\u0022relative group\u0022\u003eFinalizer löschen \n    \u003cdiv id=\u0022finalizer-löschen\u0022 class=\u0022anchor\u0022\u003e\u003c\/div\u003e\n    \n    \u003cspan\n        class=\u0022absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100\u0022\u003e\n        \u003ca class=\u0022group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline\u0022 href=\u0022#finalizer-l%c3%b6schen\u0022 aria-label=\u0022Anker\u0022\u003e#\u003c\/a\u003e\n    \u003c\/span\u003e        \n    \n\u003c\/h2\u003e\n\u003cp\u003e´´´bash\nkubectl get linstorsatellites.piraeus.io -o name | sed -e \u0026rsquo;s\/.*\/\/\/g\u0026rsquo; | xargs -I {} kubectl patch linstorsatellites.piraeus.io {} -p \u0026lsquo;{\u0026ldquo;metadata\u0026rdquo;: {\u0026ldquo;finalizers\u0026rdquo;: null}}\u0026rsquo; \u0026ndash;type merge\n´´´\u003c\/p\u003e\n\n\u003ch2 class=\u0022relative group\u0022\u003eUpdate Postgres mit Podman\/Docker \n    \u003cdiv id=\u0022update-postgres-mit-podmandocker\u0022 class=\u0022anchor\u0022\u003e\u003c\/div\u003e\n    \n    \u003cspan\n        class=\u0022absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100\u0022\u003e\n        \u003ca class=\u0022group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline\u0022 href=\u0022#update-postgres-mit-podmandocker\u0022 aria-label=\u0022Anker\u0022\u003e#\u003c\/a\u003e\n    \u003c\/span\u003e        \n    \n\u003c\/h2\u003e\n\u003cp\u003e´´´bash\npodman run \u0026ndash;rm \u0026ndash;name pgauto -it \u003cbr\u003e\n\u0026ndash;mount type=bind,source=.\/,target=\/var\/lib\/postgresql\/data \u003cbr\u003e\n-e POSTGRES_PASSWORD=password \u003cbr\u003e\n-e PGAUTO_ONESHOT=yes \u003cbr\u003e\n-e PGAUTO_REINDEX=no \u003cbr\u003e\npgautoupgrade\/pgautoupgrade:16-bookworm\n´´´\u003c\/p\u003e",
+    "abstract": "\u003ch2 class=\u0022relative group\u0022\u003eHier Sammle ich Snippets, welche mir das Tippen ersparen sollen und für Kubernetes öfter mal gebraucht werden \n    \u003cdiv id=\u0022hier-sammle-ich-snippets-welche-mir-das-tippen-ersparen-sollen-und-für-kubernetes-öfter-mal-gebraucht-werden\u0022 class=\u0022anchor\u0022\u003e\u003c\/div\u003e\n    \n    \u003cspan\n        class=\u0022absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100\u0022\u003e\n        \u003ca class=\u0022group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline\u0022 href=\u0022#hier-sammle-ich-snippets-welche-mir-das-tippen-ersparen-sollen-und-f%c3%bcr-kubernetes-%c3%b6fter-mal-gebraucht-werden\u0022 aria-label=\u0022Anker\u0022\u003e#\u003c\/a\u003e\n    \u003c\/span\u003e        \n    \n\u003c\/h2\u003e",
     "inLanguage": "de-de",
     "url" : "https:\/\/www.zyria.de\/posts\/homelab\/kubernets\/",
     "author" : {
@@ -124,15 +124,15 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
       "name": "Fabrice Kirchner"
     },
     "copyrightYear": "2025",
-    "dateCreated": "2025-07-28T10:38:00\u002b02:00",
-    "datePublished": "2025-07-28T10:38:00\u002b02:00",
+    "dateCreated": "2025-07-28T10:47:46\u002b02:00",
+    "datePublished": "2025-07-28T10:47:46\u002b02:00",
     
-    "dateModified": "2025-07-28T10:38:00\u002b02:00",
+    "dateModified": "2025-07-28T10:47:46\u002b02:00",
     
     "keywords": ["Kubernetes","Homelab","K3s"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "77"
+    "wordCount": "97"
   }]
   </script>
 
@@ -674,7 +674,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2025-07-28T10:38:00&#43;02:00">28 Juli 2025</time><span class="px-2 text-primary-500">&middot;</span><span>77 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
+      <time datetime="2025-07-28T10:47:46&#43;02:00">28 Juli 2025</time><span class="px-2 text-primary-500">&middot;</span><span>97 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
 
 
   
@@ -842,6 +842,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
     class="min-w-[220px] py-2 border-dotted ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
     <nav id="TableOfContents">
   <ul>
+    <li><a href="#hier-sammle-ich-snippets-welche-mir-das-tippen-ersparen-sollen-und-für-kubernetes-öfter-mal-gebraucht-werden">Hier Sammle ich Snippets, welche mir das Tippen ersparen sollen und für Kubernetes öfter mal gebraucht werden</a></li>
     <li><a href="#finalizer-löschen">Finalizer löschen</a></li>
     <li><a href="#update-postgres-mit-podmandocker">Update Postgres mit Podman/Docker</a></li>
     <li><a href="#zeige-alle-nodes-mit-dem-label-performance">Zeige alle Nodes mit dem Label performance</a></li>
@@ -859,6 +860,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
     class="py-2 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
     <nav id="TableOfContents">
   <ul>
+    <li><a href="#hier-sammle-ich-snippets-welche-mir-das-tippen-ersparen-sollen-und-für-kubernetes-öfter-mal-gebraucht-werden">Hier Sammle ich Snippets, welche mir das Tippen ersparen sollen und für Kubernetes öfter mal gebraucht werden</a></li>
     <li><a href="#finalizer-löschen">Finalizer löschen</a></li>
     <li><a href="#update-postgres-mit-podmandocker">Update Postgres mit Podman/Docker</a></li>
     <li><a href="#zeige-alle-nodes-mit-dem-label-performance">Zeige alle Nodes mit dem Label performance</a></li>
@@ -965,7 +967,16 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
 
 
         <div class="article-content max-w-prose mb-20">
-          
+          <h2 class="relative group">Hier Sammle ich Snippets, welche mir das Tippen ersparen sollen und für Kubernetes öfter mal gebraucht werden 
+    <div id="hier-sammle-ich-snippets-welche-mir-das-tippen-ersparen-sollen-und-für-kubernetes-öfter-mal-gebraucht-werden" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#hier-sammle-ich-snippets-welche-mir-das-tippen-ersparen-sollen-und-f%c3%bcr-kubernetes-%c3%b6fter-mal-gebraucht-werden" aria-label="Anker">#</a>
+    </span>        
+    
+</h2>
+
 <h2 class="relative group">Finalizer löschen 
     <div id="finalizer-löschen" class="anchor"></div>
     
@@ -975,10 +986,8 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
     </span>        
     
 </h2>
-<p>´´´bash
-kubectl get linstorsatellites.piraeus.io -o name | sed -e &rsquo;s/.*///g&rsquo; | xargs -I {} kubectl patch linstorsatellites.piraeus.io {} -p &lsquo;{&ldquo;metadata&rdquo;: {&ldquo;finalizers&rdquo;: null}}&rsquo; &ndash;type merge
-´´´</p>
-
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">kubectl get linstorsatellites.piraeus.io -o name <span class="p">|</span> sed -e <span class="s1">&#39;s/.*\///g&#39;</span> <span class="p">|</span> xargs -I <span class="o">{}</span> kubectl patch linstorsatellites.piraeus.io <span class="o">{}</span> -p <span class="s1">&#39;{&#34;metadata&#34;: {&#34;finalizers&#34;: null}}&#39;</span> --type merge
+</span></span></code></pre></div>
 <h2 class="relative group">Update Postgres mit Podman/Docker 
     <div id="update-postgres-mit-podmandocker" class="anchor"></div>
     
@@ -988,15 +997,13 @@ kubectl get linstorsatellites.piraeus.io -o name | sed -e &rsquo;s/.*///g&rsquo;
     </span>        
     
 </h2>
-<p>´´´bash
-podman run &ndash;rm &ndash;name pgauto -it <br>
-&ndash;mount type=bind,source=./,target=/var/lib/postgresql/data <br>
--e POSTGRES_PASSWORD=password <br>
--e PGAUTO_ONESHOT=yes <br>
--e PGAUTO_REINDEX=no <br>
-pgautoupgrade/pgautoupgrade:16-bookworm
-´´´</p>
-
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">podman run --rm --name pgauto -it <span class="se">\
+</span></span></span><span class="line"><span class="ln">2</span><span class="cl"><span class="se"></span>  --mount <span class="nv">type</span><span class="o">=</span>bind,source<span class="o">=</span>./,target<span class="o">=</span>/var/lib/postgresql/data <span class="se">\
+</span></span></span><span class="line"><span class="ln">3</span><span class="cl"><span class="se"></span>  -e <span class="nv">POSTGRES_PASSWORD</span><span class="o">=</span>password <span class="se">\
+</span></span></span><span class="line"><span class="ln">4</span><span class="cl"><span class="se"></span>  -e <span class="nv">PGAUTO_ONESHOT</span><span class="o">=</span>yes <span class="se">\
+</span></span></span><span class="line"><span class="ln">5</span><span class="cl"><span class="se"></span>  -e <span class="nv">PGAUTO_REINDEX</span><span class="o">=</span>no <span class="se">\
+</span></span></span><span class="line"><span class="ln">6</span><span class="cl"><span class="se"></span>  pgautoupgrade/pgautoupgrade:16-bookworm
+</span></span></code></pre></div>
 <h2 class="relative group">Zeige alle Nodes mit dem Label performance 
     <div id="zeige-alle-nodes-mit-dem-label-performance" class="anchor"></div>
     
@@ -1006,10 +1013,8 @@ pgautoupgrade/pgautoupgrade:16-bookworm
     </span>        
     
 </h2>
-<p>´´´bash
-kubectl get nodes -o=jsonpath=&quot;{range .items[*]}{.metadata.name}: {.metadata.labels.performance}{&rsquo;\n&rsquo;}{end}&quot;
-´´´</p>
-
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">kubectl get nodes -o<span class="o">=</span><span class="nv">jsonpath</span><span class="o">=</span><span class="s2">&#34;{range .items[*]}{.metadata.name}: {.metadata.labels.performance}{&#39;\n&#39;}{end}&#34;</span>
+</span></span></code></pre></div>
 <h2 class="relative group">Lösche alle Events 
     <div id="lösche-alle-events" class="anchor"></div>
     
@@ -1019,10 +1024,8 @@ kubectl get nodes -o=jsonpath=&quot;{range .items[*]}{.metadata.name}: {.metadat
     </span>        
     
 </h2>
-<p>´´´bash
-kubectl delete events &ndash;all -A
-´´´</p>
-
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">kubectl delete events --all -A
+</span></span></code></pre></div>
           
           
           
