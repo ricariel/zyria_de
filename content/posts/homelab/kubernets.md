@@ -7,7 +7,7 @@ tags:
   - K3s
 ---
 
-## Hier Sammle ich Snippets, welche mir das Tippen ersparen sollen und für Kubernetes öfter mal gebraucht werden
+Hier Sammle ich Snippets, welche mir das Tippen ersparen sollen und für Kubernetes öfter mal gebraucht werden.
 
 <!--more-->
 
