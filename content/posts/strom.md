@@ -53,10 +53,17 @@ Stecker-Pinout (Draufsicht auf Hub/Akku, nicht auf den  Kabelstecker):
 <!--- editorconfig-checker-enable --->
 
 +: Main positive power connection
+
 -: Main negative power connection (also used by battery as communication ground)
+
 G: Ground provided by hub, not connected in battery
+
 1: +5V supply from battery to hub (possibly used during startup on battery power, unconnected on battery bottom port)
+
 2: CAN_L
+
 3: CAN_H
+
 4: Hub button press detection (active low, pulled up by both hub and battery, chained between Öl batteries)
+
 5: Hub presence detection (active low, pulled up by battery, grounded in hub, unconnected on battery bottom port)
