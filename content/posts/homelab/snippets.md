@@ -6,6 +6,12 @@ summary: "All der Kram, der sonst nirgends hin gehört"
 
 ## Snippets
 
+### Ram cache leeren
+
+```bash
+sync; echo 1 > /proc/sys/vm/drop_caches
+```
+
 ### Leeren branch in git erstellen
 
 ```bash

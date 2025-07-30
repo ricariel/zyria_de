@@ -30,3 +30,33 @@ Telegram Austauschgruppe
 [Private Zendure Austauschgruppe](https://t.me/+nEPrpHst6xFmZTky)
 
 [Zendure SolarFlow - Speicher für BKW - Sammelthread](https://www.photovoltaikforum.com/thread/198769-zendure-solarflow-speicher-für-bkw-sammelthread/)
+
+### Steckerlayout Solarflow Batteriesystem
+
+Stecker-Pinout (Draufsicht auf Hub/Akku, nicht auf den  Kabelstecker):
+
+<!--- editorconfig-checker-disable --->
+```text
+    _._._._._._
+   /     _     \
+  /     /G\     \
+ /  _   \_/   _  \
+|  / \       / \  |
+| | + |     | - | |
+|  \_/       \_/  |
+|       (1)       |
+ \(2)         (5)/
+  \   (3) (4)   /
+   \_._._._._._/
+
+```
+<!--- editorconfig-checker-enable --->
+
++: Main positive power connection
+-: Main negative power connection (also used by battery as communication ground)
+G: Ground provided by hub, not connected in battery
+1: +5V supply from battery to hub (possibly used during startup on battery power, unconnected on battery bottom port)
+2: CAN_L
+3: CAN_H
+4: Hub button press detection (active low, pulled up by both hub and battery, chained between Öl batteries)
+5: Hub presence detection (active low, pulled up by battery, grounded in hub, unconnected on battery bottom port)
