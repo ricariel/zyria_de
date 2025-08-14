@@ -1,0 +1,64 @@
+[Unicode]
+Unicode=yes
+[Version]
+signature="$CHICAGO$"
+Revision=1
+
+[System Access]
+; === Kennwortrichtlinien ===
+MinimumPasswordLength = 14
+PasswordComplexity = 1
+PasswordHistorySize = 24
+MaximumPasswordAge = 60
+MinimumPasswordAge = 1
+ClearTextPassword = 0
+; Umkehrbare Verschlüsselung deaktivieren
+
+; === Kontensperrungsrichtlinien ===
+LockoutBadCount = 5
+ResetLockoutCount = 30
+LockoutDuration = 30
+
+[Event Audit]
+; === Überwachungsrichtlinien (Erfolg und Fehler werden protokolliert) ===
+AuditSystemEvents = 3
+AuditLogonEvents = 3
+AuditObjectAccess = 0 ; Kann sehr "gesprächig" sein, nur bei Bedarf aktivieren
+AuditPrivilegeUse = 3
+AuditPolicyChange = 3
+AuditAccountManage = 3
+AuditProcessTracking = 0 ; Sehr ressourcenintensiv, nur für forensische Analyse aktivieren
+AuditAccountLogon = 3
+
+[Registry Values]
+; === UAC (User Account Control) - Verhalten für Administratoren ===
+; 2 = Anmeldeinformationsaufforderung auf dem sicheren Desktop
+MACHINE\Software\Microsoft\Windows\CurrentVersion\Policies\System\ConsentPromptBehaviorAdmin = 4,2
+
+; === LSA (Local Security Authority) Härtung ===
+; Anonyme Enumeration von SAM-Konten verhindern
+MACHINE\SYSTEM\CurrentControlSet\Control\Lsa\RestrictAnonymous = 4,1
+
+; === Anmeldesicherheit ===
+; Letzten Benutzernamen nicht anzeigen
+MACHINE\Software\Microsoft\Windows\CurrentVersion\Policies\System\dontdisplaylastusername = 4,1
+
+; === Gastkonto deaktivieren und umbenennen ===
+; Hinweis: Das Umbenennen erfolgt hier nicht direkt, aber die Richtlinie sorgt dafür,
+; dass das umbenannte Konto weiterhin identifiziert wird. Das Konto sollte manuell
+; oder per Skript umbenannt und deaktiviert werden.
+
+[Privilege Rights]
+; Nur Administratoren dürfen den Computer von einem Remotestandort aus herunterfahren
+SeRemoteShutdownPrivilege = *S-1-5-32-544
+
+; Gastkonto den Zugriff über das Netzwerk verweigern
+SeDenyNetworkLogonRight = *S-1-5-32-546
+
+; Gastkonto die interaktive Remoteanmeldung verweigern
+SeDenyRemoteInteractiveLogonRight = *S-1-5-32-546
+
+[System Services]
+; Beispiel: Deaktivieren eines oft nicht benötigten Dienstes
+; "DiagTrack" = DiagTrack,4 -> 4 = Deaktiviert
+; Fügen Sie hier weitere Dienste hinzu, die Sie deaktivieren möchten.

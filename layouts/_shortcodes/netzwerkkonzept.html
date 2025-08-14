@@ -1,0 +1,546 @@
+<!--
+Hugo Shortcode: netzwerkkonzept.html
+Fügen Sie diesen Code in die Datei /layouts/shortcodes/netzwerkkonzept.html ein.
+-->
+<div class="hugo-interactive-wrapper">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        .hugo-interactive-wrapper {
+            font-family: 'Inter', sans-serif;
+            background-color: #f5f5f4; /* stone-100 */
+            color: #1e293b; /* slate-800 */
+        }
+        .nav-link {
+            transition: all 0.3s ease;
+            border-bottom: 2px solid transparent;
+        }
+        .nav-link.active, .nav-link:hover {
+            color: #1d4ed8; /* blue-700 */
+            border-bottom-color: #1d4ed8; /* blue-700 */
+        }
+        .card {
+            background-color: white;
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        .phase-card {
+            position: relative;
+            padding-left: 2.5rem;
+            border-left: 2px solid #d1d5db; /* gray-300 */
+        }
+        .phase-card::before {
+            content: '';
+            position: absolute;
+            left: -0.7rem;
+            top: 0;
+            width: 1.25rem;
+            height: 1.25rem;
+            border-radius: 9999px;
+            background-color: #f5f5f4; /* stone-100 */
+            border: 2px solid #1d4ed8; /* blue-700 */
+        }
+        .phase-card.active::before {
+            background-color: #1d4ed8; /* blue-700 */
+        }
+        .arch-node {
+            cursor: pointer;
+            transition: all 0.2s ease-in-out;
+        }
+        .arch-node:hover {
+            filter: drop-shadow(0 4px 8px rgba(29, 78, 216, 0.4));
+            transform: scale(1.05);
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px;
+            max-height: 350px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 350px;
+            }
+        }
+    </style>
+
+    <header class="bg-white/80 backdrop-blur-lg shadow-sm sticky top-0 z-50">
+        <nav class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center">
+                    <span class="font-bold text-xl text-blue-700">Zero-Trust-Konzept</span>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="#" class="nav-link active px-3 py-2 rounded-md text-sm font-medium" data-target="overview">Übersicht</a>
+                        <a href="#" class="nav-link px-3 py-2 rounded-md text-sm font-medium" data-target="architecture">Architektur-Säulen</a>
+                        <a href="#" class="nav-link px-3 py-2 rounded-md text-sm font-medium" data-target="implementation">Implementierungsplan</a>
+                        <a href="#" class="nav-link px-3 py-2 rounded-md text-sm font-medium" data-target="acl-explorer">ACL-Explorer</a>
+                    </div>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500">
+                        <span class="sr-only">Menü öffnen</span>
+                        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </nav>
+        <div class="md:hidden hidden" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#" class="nav-link active block px-3 py-2 rounded-md text-base font-medium" data-target="overview">Übersicht</a>
+                <a href="#" class="nav-link block px-3 py-2 rounded-md text-base font-medium" data-target="architecture">Architektur-Säulen</a>
+                <a href="#" class="nav-link block px-3 py-2 rounded-md text-base font-medium" data-target="implementation">Implementierungsplan</a>
+                <a href="#" class="nav-link block px-3 py-2 rounded-md text-base font-medium" data-target="acl-explorer">ACL-Explorer</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mx-auto p-4 sm:p-6 lg:p-8">
+
+        <div id="overview" class="tab-content active">
+            <div class="text-center mb-12">
+                <h1 class="text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl">Vom Perimeter zum Prinzip</h1>
+                <p class="mt-4 max-w-3xl mx-auto text-lg text-slate-600">Eine interaktive Visualisierung des Netzwerkkonzepts nach dem Zero-Trust-Modell. Erkunden Sie, wie Identität zum neuen Sicherheitsperimeter wird und wie Mikrosegmentierung das Unternehmen schützt.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+                <div class="card p-6 text-center">
+                    <div class="text-blue-600 mb-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2">Explizit verifizieren</h3>
+                    <p class="text-sm text-slate-600">Jede Zugriffsanfrage wird authentifiziert und autorisiert, als käme sie aus einem ungesicherten Netzwerk.</p>
+                </div>
+                <div class="card p-6 text-center">
+                    <div class="text-blue-600 mb-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" /></svg>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2">Geringste Rechte</h3>
+                    <p class="text-sm text-slate-600">Benutzer erhalten nur Zugriff auf die Ressourcen, die sie für ihre Arbeit benötigen - nicht mehr und nicht weniger.</p>
+                </div>
+                <div class="card p-6 text-center">
+                    <div class="text-blue-600 mb-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2">Kompromittierung annehmen</h3>
+                    <p class="text-sm text-slate-600">Das Netzwerk wird so segmentiert, dass der Schaden eines Angriffs minimiert wird. Laterale Bewegungen werden verhindert.</p>
+                </div>
+            </div>
+
+            <div class="card p-6 sm:p-8">
+                <h2 class="text-2xl font-bold text-center mb-2">Gesamtarchitektur</h2>
+                <p class="text-center text-slate-600 mb-8 max-w-2xl mx-auto">Dieses Diagramm zeigt die logische Struktur des Netzwerks. Alle Komponenten sind durch ein sicheres Wireguard-Overlay (gestrichelte Linien) verbunden. Klicken Sie auf eine Komponente, um mehr zu erfahren.</p>
+                <div class="relative p-4 bg-slate-50 rounded-lg">
+                    <div class="absolute inset-0 border-2 border-dashed border-slate-300 rounded-lg -z-10"></div>
+                    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
+                        <div class="space-y-4 text-center">
+                            <div class="arch-node card p-4" data-target="architecture" data-subtarget="endpoints">
+                                <h4 class="font-semibold">Standorte & Homeoffice</h4>
+                                <p class="text-xs text-slate-500">Windows Laptops & Drucker</p>
+                            </div>
+                            <div class="h-16 flex items-center justify-center">
+                                <svg class="w-6 h-16 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" stroke-dasharray="4 4" d="M12 4v16m-4-4l4 4 4-4"></path></svg>
+                            </div>
+                        </div>
+
+                        <div class="space-y-4 text-center">
+                            <div class="arch-node card p-4 bg-blue-100 border border-blue-300" data-target="architecture" data-subtarget="network">
+                                <h4 class="font-semibold">Headscale Control Plane</h4>
+                                <p class="text-xs text-slate-500">ACLs & Key Management</p>
+                            </div>
+                            <div class="h-16 flex items-center justify-center">
+                                <svg class="w-16 h-6 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" stroke-dasharray="4 4" d="M4 12h16m-4-4l4 4-4 4"></path></svg>
+                                <svg class="w-16 h-6 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" stroke-dasharray="4 4" d="M20 12H4m4 4l-4-4 4-4"></path></svg>
+                            </div>
+                        </div>
+
+                        <div class="space-y-4 text-center">
+                            <div class="arch-node card p-4" data-target="architecture" data-subtarget="identity">
+                                <h4 class="font-semibold">Authentik IDP</h4>
+                                <p class="text-xs text-slate-500">SSO & MFA</p>
+                            </div>
+                            <div class="h-16 flex items-center justify-center">
+                                <svg class="w-6 h-16 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" stroke-dasharray="4 4" d="M12 4v16m-4-4l4 4 4-4"></path></svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="arch-node card p-6 mt-4 text-center bg-slate-100" data-target="architecture" data-subtarget="workloads">
+                        <h4 class="font-semibold">Zentrale Infrastruktur (Hoster)</h4>
+                        <p class="text-xs text-slate-500">Proxmox (AD, Samba) & K3s Cluster</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="architecture" class="tab-content">
+            <div class="text-center mb-12">
+                <h1 class="text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl">Die 5 Säulen der Architektur</h1>
+                <p class="mt-4 max-w-3xl mx-auto text-lg text-slate-600">Unsere Zero-Trust-Strategie stützt sich auf fünf Kernbereiche. Wählen Sie eine Säule aus, um die technischen Details und die eingesetzten Werkzeuge zu erkunden.</p>
+            </div>
+            <div class="flex flex-col md:flex-row gap-8">
+                <div class="md:w-1/3 lg:w-1/4">
+                    <ul class="space-y-2" id="arch-nav">
+                        <li><button class="w-full text-left p-3 rounded-lg font-medium transition arch-nav-item active" data-subtarget="identity">👤 Identität</button></li>
+                        <li><button class="w-full text-left p-3 rounded-lg font-medium transition arch-nav-item" data-subtarget="devices">💻 Geräte</button></li>
+                        <li><button class="w-full text-left p-3 rounded-lg font-medium transition arch-nav-item" data-subtarget="network">🌐 Netzwerke</button></li>
+                        <li><button class="w-full text-left p-3 rounded-lg font-medium transition arch-nav-item" data-subtarget="workloads">⚙️ Anwendungen & Workloads</button></li>
+                        <li><button class="w-full text-left p-3 rounded-lg font-medium transition arch-nav-item" data-subtarget="data">🗃️ Daten</button></li>
+                    </ul>
+                </div>
+                <div class="flex-1">
+                    <div id="identity" class="card p-6 sm:p-8 arch-content active">
+                        <h2 class="text-2xl font-bold mb-4">👤 Identität: Authentik als zentraler IDP</h2>
+                        <p class="mb-4 text-slate-600">Die Identität ist der neue Perimeter. Authentik wird zur zentralen Autorität für die Authentifizierung und Autorisierung aller Zugriffe. Es integriert das bestehende Active Directory und erzwingt Multi-Faktor-Authentifizierung (MFA).</p>
+                        <div class="chart-container mb-6">
+                            <canvas id="mfaChart"></canvas>
+                        </div>
+                        <h4 class="font-semibold mb-2">Gestaffelte MFA-Strategie</h4>
+                        <p class="text-slate-600 mb-4">Nicht jeder Zugriff erfordert die gleiche Sicherheitsstufe. Authentik-Flows ermöglichen eine risikobasierte MFA-Durchsetzung:</p>
+                        <ul class="list-disc list-inside space-y-2 text-slate-600">
+                            <li><b>Standardzugriff (1FA):</b> Passwort für weniger kritische Ressourcen (z.B. Wiki).</li>
+                            <li><b>Sensibler Zugriff (MFA):</b> Passwort + TOTP/WebAuthn für Fileserver oder Admin-UIs.</li>
+                            <li><b>Bedingter Zugriff:</b> MFA wird nur erzwungen, wenn der Zugriff von einem unbekannten Standort erfolgt.</li>
+                        </ul>
+                    </div>
+                    <div id="devices" class="card p-6 sm:p-8 arch-content">
+                        <h2 class="text-2xl font-bold mb-4">💻 Geräte: Absicherung der Endpunkte</h2>
+                        <p class="mb-4 text-slate-600">Jedes Gerät ist ein potenzieller Angriffsvektor. Alle Firmenlaptops und Server werden als Nodes im sicheren Netzwerk registriert und müssen Mindestsicherheitsstandards erfüllen.</p>
+                        <h4 class="font-semibold mb-2">Härtungsmaßnahmen</h4>
+                        <ul class="list-disc list-inside space-y-2 text-slate-600">
+                            <li><b>Endpoint Management:</b> Zentrale Durchsetzung von Richtlinien wie Festplattenverschlüsselung (BitLocker) und Patch-Management.</li>
+                            <li><b>EDR & Firewall:</b> Einsatz von Endpoint Detection and Response (EDR) und einer zentral verwalteten Host-Firewall.</li>
+                            <li><b>Gerätezustand-Prüfung:</b> Nutzung von Tools zur Überprüfung der Geräte-Compliance als Kriterium für den Zugriff.</li>
+                        </ul>
+                    </div>
+                    <div id="network" class="card p-6 sm:p-8 arch-content">
+                        <h2 class="text-2xl font-bold mb-4">🌐 Netzwerke: Headscale & Wireguard</h2>
+                        <p class="mb-4 text-slate-600">Das Netzwerk selbst wird als nicht vertrauenswürdig betrachtet. Wir errichten ein sicheres Overlay-Netzwerk, das alle Ressourcen verbindet und den gesamten Verkehr Ende-zu-Ende verschlüsselt.</p>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div>
+                                <h4 class="font-semibold">Headscale (Control Plane)</h4>
+                                <p class="text-sm text-slate-600">Verwaltet Geräte, tauscht Schlüssel aus und verteilt Zugriffsregeln (ACLs). Leitet keinen Nutzdatenverkehr.</p>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold">Wireguard (Data Plane)</h4>
+                                <p class="text-sm text-slate-600">Baut direkte, performante Peer-to-Peer-Tunnel zwischen den Geräten auf, sobald die Konfiguration von Headscale erhalten wurde.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="workloads" class="card p-6 sm:p-8 arch-content">
+                        <h2 class="text-2xl font-bold mb-4">⚙️ Anwendungen & Workloads</h2>
+                        <p class="mb-4 text-slate-600">Der Zugriff auf jede einzelne Anwendung wird individuell gesichert. Dies gilt für traditionelle Server wie Samba genauso wie für moderne Dienste im K3s-Cluster.</p>
+                        <h4 class="font-semibold mb-2">Sichere Integration</h4>
+                        <ul class="list-disc list-inside space-y-2 text-slate-600">
+                            <li><b>Server-Isolation:</b> AD- und Samba-Server sind nur über das Wireguard-Netzwerk erreichbar. Die Host-Firewalls blockieren allen anderen Verkehr.</li>
+                            <li><b>K3s-Anbindung:</b> Ein K3s-Node fungiert als Subnet-Router und integriert das Cluster-Netzwerk sicher in das Headscale-Mesh. Der Zugriff auf Dienste erfolgt direkt über ihre ClusterIPs, gesteuert durch Headscale-ACLs.</li>
+                            <li><b>Drucker-Segmentierung:</b> Drucker werden in einem isolierten VLAN betrieben und über einen Subnet-Router sicher angebunden.</li>
+                        </ul>
+                    </div>
+                    <div id="data" class="card p-6 sm:p-8 arch-content">
+                        <h2 class="text-2xl font-bold mb-4">🗃️ Daten: Schutz durch Zugriffskontrolle und Verschlüsselung</h2>
+                        <p class="mb-4 text-slate-600">Die Sicherheit der Daten ist das ultimative Ziel. Der Zugriff wird basierend auf den anderen vier Säulen gesteuert, und die Daten werden sowohl im Ruhezustand als auch während der Übertragung geschützt.</p>
+                        <h4 class="font-semibold mb-2">Schutzmechanismen</h4>
+                        <ul class="list-disc list-inside space-y-2 text-slate-600">
+                            <li><b>Verschlüsselung im Transit:</b> Der gesamte Netzwerkverkehr wird durch Wireguard standardmäßig Ende-zu-Ende verschlüsselt.</li>
+                            <li><b>Verschlüsselung im Ruhezustand:</b> Festplatten auf Servern und Laptops werden mittels BitLocker oder LUKS verschlüsselt.</li>
+                            <li><b>Granulare Berechtigungen:</b> Der Zugriff auf Dateifreigaben wird durch präzise NTFS-Berechtigungen auf Basis von AD-Gruppen gesteuert, zusätzlich zur Netzwerk-Segmentierung.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="implementation" class="tab-content">
+            <div class="text-center mb-12">
+                <h1 class="text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl">Phasenweiser Implementierungsplan</h1>
+                <p class="mt-4 max-w-3xl mx-auto text-lg text-slate-600">Die Umstellung erfolgt schrittweise, um den Betrieb nicht zu stören. Klicken Sie auf eine Phase, um die detaillierten Aufgaben und Ziele anzuzeigen.</p>
+            </div>
+            <div class="space-y-12">
+                <div class="phase-card active" data-phase="1">
+                    <h3 class="text-xl font-semibold text-blue-700">Phase 1: Fundament legen</h3>
+                    <p class="text-sm text-slate-500 mb-2">Dauer: ca. 1-2 Wochen</p>
+                    <div class="phase-details">
+                        <p class="text-slate-600">In dieser initialen Phase werden die zentralen Kontroll- und Identitätssysteme aufgesetzt und ein erster, kleiner Benutzerkreis angebunden.</p>
+                        <ul class="mt-4 list-disc list-inside space-y-1">
+                            <li>Deployment von Headscale und Authentik</li>
+                            <li>Anbindung des Active Directory an Authentik</li>
+                            <li>Registrierung der Server und IT-Admin-Laptops</li>
+                            <li>Erstellung initialer, restriktiver ACLs</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="phase-card" data-phase="2">
+                    <h3 class="text-xl font-semibold">Phase 2: Kernservices migrieren</h3>
+                    <p class="text-sm text-slate-500 mb-2">Dauer: ca. 2-3 Wochen</p>
+                    <div class="phase-details hidden">
+                        <p class="text-slate-600">Die kritische Server-Infrastruktur wird vollständig in das neue Sicherheitsmodell überführt und gehärtet.</p>
+                        <ul class="mt-4 list-disc list-inside space-y-1">
+                            <li>Absicherung des Server-Managements (nur noch via Wireguard)</li>
+                            <li>Erzwingung von MFA für alle Admin-Zugänge</li>
+                            <li>Härtung von Samba und Active Directory Protokollen</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="phase-card" data-phase="3">
+                    <h3 class="text-xl font-semibold">Phase 3: Benutzer-Rollout</h3>
+                    <p class="text-sm text-slate-500 mb-2">Dauer: ca. 4-6 Wochen</p>
+                    <div class="phase-details hidden">
+                        <p class="text-slate-600">Die Mitarbeiter werden schrittweise in das neue Netzwerk integriert und die Zugriffsregeln werden verfeinert.</p>
+                        <ul class="mt-4 list-disc list-inside space-y-1">
+                            <li>Gruppenweiser Rollout der Laptops</li>
+                            <li>Definition granularer ACLs für Abteilungen</li>
+                            <li>Kommunikation und Schulung der Mitarbeiter</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="phase-card" data-phase="4">
+                    <h3 class="text-xl font-semibold">Phase 4: Standortvernetzung</h3>
+                    <p class="text-sm text-slate-500 mb-2">Dauer: ca. 1 Woche pro Standort</p>
+                    <div class="phase-details hidden">
+                        <p class="text-slate-600">Legacy-Geräte wie Drucker werden sicher in die Zero-Trust-Architektur integriert.</p>
+                        <ul class="mt-4 list-disc list-inside space-y-1">
+                            <li>Einrichtung dedizierter Drucker-VLANs</li>
+                            <li>Deployment von Headscale Subnet Routern</li>
+                            <li>Anpassung der ACLs für den Druckerzugriff</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="phase-card" data-phase="5">
+                    <h3 class="text-xl font-semibold">Phase 5: Optimierung & Ausbau</h3>
+                    <p class="text-sm text-slate-500 mb-2">Laufend</p>
+                    <div class="phase-details hidden">
+                        <p class="text-slate-600">Die Architektur wird kontinuierlich erweitert und für Hochverfügbarkeit optimiert.</p>
+                        <ul class="mt-4 list-disc list-inside space-y-1">
+                            <li>Anbindung des K3s-Clusters via Subnet Router</li>
+                            <li>Migration von Anwendungen auf SSO mit Authentik</li>
+                            <li>Umsetzung der HA/DR-Strategien für Authentik und Headscale</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="acl-explorer" class="tab-content">
+            <div class="text-center mb-12">
+                <h1 class="text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl">Interaktiver ACL-Explorer</h1>
+                <p class="mt-4 max-w-3xl mx-auto text-lg text-slate-600">Testen Sie das "Deny by Default"-Prinzip. Wählen Sie eine Quelle und ein Ziel aus, um zu sehen, ob die Verbindung gemäß unserem Regelwerk erlaubt oder blockiert wird.</p>
+            </div>
+
+            <div class="card max-w-3xl mx-auto p-6 sm:p-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                    <div>
+                        <label for="acl-source" class="block text-sm font-medium text-slate-700 mb-1">Quelle (Wer greift zu?)</label>
+                        <select id="acl-source" class="w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500">
+                            <option value="group:admins">IT-Admin (group:admins)</option>
+                            <option value="group:finance">Finanzabteilung (group:finance)</option>
+                            <option value="group:all-employees">Mitarbeiter (group:all-employees)</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="acl-dest" class="block text-sm font-medium text-slate-700 mb-1">Ziel (Worauf wird zugegriffen?)</label>
+                        <select id="acl-dest" class="w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500">
+                            <option value="tag:fileserver-prod:445">Fileserver (SMB Port 445)</option>
+                            <option value="tag:dc:389">Domain Controller (LDAP Port 389)</option>
+                            <option value="tag:printer:9100">Drucker (Port 9100)</option>
+                            <option value="tag:k3s-node:22">K3s Node (SSH Port 22)</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <button id="check-acl-btn" class="bg-blue-600 text-white font-bold py-2 px-6 rounded-lg hover:bg-blue-700 transition">Zugriff prüfen</button>
+                </div>
+                <div id="acl-result" class="mt-8 p-6 rounded-lg text-center hidden">
+                    <h3 id="acl-result-status" class="text-2xl font-bold"></h3>
+                    <p id="acl-result-reason" class="text-slate-600 mt-2"></p>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const wrapper = document.querySelector('.hugo-interactive-wrapper');
+            const navLinks = wrapper.querySelectorAll('.nav-link');
+            const tabContents = wrapper.querySelectorAll('.tab-content');
+            const mobileMenuButton = wrapper.querySelector('#mobile-menu-button');
+            const mobileMenu = wrapper.querySelector('#mobile-menu');
+
+            function switchTab(targetId) {
+                tabContents.forEach(content => {
+                    content.classList.remove('active');
+                    if (content.id === targetId) {
+                        content.classList.add('active');
+                    }
+                });
+
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.dataset.target === targetId) {
+                        link.classList.add('active');
+                    }
+                });
+            }
+
+            navLinks.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const targetId = e.currentTarget.dataset.target;
+                    switchTab(targetId);
+                    if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                });
+            });
+
+            if (mobileMenuButton) {
+                mobileMenuButton.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                });
+            }
+
+            const archNodes = wrapper.querySelectorAll('.arch-node');
+            archNodes.forEach(node => {
+                node.addEventListener('click', () => {
+                    const targetId = node.dataset.target;
+                    const subTargetId = node.dataset.subtarget;
+                    switchTab(targetId);
+                    switchArchTab(subTargetId);
+                });
+            });
+
+            const archNavItems = wrapper.querySelectorAll('.arch-nav-item');
+            const archContents = wrapper.querySelectorAll('.arch-content');
+
+            function switchArchTab(subTargetId) {
+                archContents.forEach(content => {
+                    content.classList.remove('active');
+                    if (content.id === subTargetId) {
+                        content.classList.add('active');
+                    }
+                });
+                archNavItems.forEach(item => {
+                    item.classList.remove('active', 'bg-blue-100', 'text-blue-700');
+                    if (item.dataset.subtarget === subTargetId) {
+                        item.classList.add('active', 'bg-blue-100', 'text-blue-700');
+                    }
+                });
+            }
+
+            archNavItems.forEach(item => {
+                item.addEventListener('click', (e) => {
+                    const subTargetId = e.currentTarget.dataset.subtarget;
+                    switchArchTab(subTargetId);
+                });
+            });
+
+            const phaseCards = wrapper.querySelectorAll('.phase-card');
+            phaseCards.forEach(card => {
+                card.addEventListener('click', () => {
+                    phaseCards.forEach(c => {
+                        c.classList.remove('active');
+                        c.querySelector('.phase-details').classList.add('hidden');
+                    });
+                    card.classList.add('active');
+                    card.querySelector('.phase-details').classList.remove('hidden');
+                });
+            });
+
+            const aclRules = [
+                { action: "accept", src: ["group:admins"], dst: ["*:*"], reason: "Regel 1: Admins haben Vollzugriff." },
+                { action: "accept", src: ["group:finance"], dst: ["tag:fileserver-prod:445"], reason: "Regel 2: Finanzabteilung darf auf den Fileserver (SMB) zugreifen." },
+                { action: "accept", src: ["group:all-employees"], dst: ["tag:printer:9100", "tag:printer:631", "tag:printer:515"], reason: "Regel 3: Alle Mitarbeiter dürfen auf Drucker zugreifen." }
+            ];
+
+            const checkAclBtn = wrapper.querySelector('#check-acl-btn');
+            const aclResultDiv = wrapper.querySelector('#acl-result');
+            const aclStatus = wrapper.querySelector('#acl-result-status');
+            const aclReason = wrapper.querySelector('#acl-result-reason');
+
+            if (checkAclBtn) {
+                checkAclBtn.addEventListener('click', () => {
+                    const source = wrapper.querySelector('#acl-source').value;
+                    const dest = wrapper.querySelector('#acl-dest').value;
+                    let match = false;
+
+                    for (const rule of aclRules) {
+                        if (rule.src.includes(source) || rule.src.includes("group:all-employees") && source !== "group:admins") {
+                            if (rule.dst.includes(dest) || rule.dst.includes("*:*")) {
+                                aclStatus.textContent = "✅ Zugriff ERLAUBT";
+                                aclStatus.className = "text-2xl font-bold text-emerald-600";
+                                aclReason.textContent = rule.reason;
+                                aclResultDiv.className = "mt-8 p-6 rounded-lg text-center bg-emerald-50 border border-emerald-200";
+                                match = true;
+                                break;
+                            }
+                        }
+                    }
+
+                    if (!match) {
+                        aclStatus.textContent = "❌ Zugriff BLOCKIERT";
+                        aclStatus.className = "text-2xl font-bold text-red-600";
+                        aclReason.textContent = "Grund: Keine explizite Regel erlaubt diesen Zugriff (Deny by Default).";
+                        aclResultDiv.className = "mt-8 p-6 rounded-lg text-center bg-red-50 border border-red-200";
+                    }
+                    aclResultDiv.classList.remove('hidden');
+                });
+            }
+
+            const mfaCtx = wrapper.querySelector('#mfaChart')?.getContext('2d');
+            if (mfaCtx) {
+                new Chart(mfaCtx, {
+                    type: 'doughnut',
+                    data: {
+                        labels: ['Standardzugriff (1FA)', 'Sensibler Zugriff (MFA)', 'Bedingter Zugriff (MFA)'],
+                        datasets: [{
+                            label: 'Zugriffsarten',
+                            data: [40, 35, 25],
+                            backgroundColor: [
+                                'rgb(147, 197, 253)', // blue-300
+                                'rgb(59, 130, 246)',  // blue-500
+                                'rgb(29, 78, 216)'    // blue-700
+                            ],
+                            borderColor: '#f5f5f4',
+                            hoverOffset: 4
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            legend: {
+                                position: 'top',
+                            },
+                            title: {
+                                display: true,
+                                text: 'Verteilung der MFA-Strategien'
+                            }
+                        }
+                    }
+                });
+            }
+        });
+    </script>
+</div>
