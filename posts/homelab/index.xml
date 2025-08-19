@@ -12,6 +12,16 @@
     <lastBuildDate>Tue, 01 Jul 2025 13:37:34 +0200</lastBuildDate><atom:link href="https://www.zyria.de/posts/homelab/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Linksammlung</title>
+      <link>https://www.zyria.de/posts/homelab/links/</link>
+      <pubDate>Tue, 19 Aug 2025 10:52:38 +0200</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://www.zyria.de/posts/homelab/links/</guid>
+      <description>Hier sammle ich alle Links die sonst nirgends hin gehören.</description>
+      
+    </item>
+    
+    <item>
       <title>Snippets</title>
       <link>https://www.zyria.de/posts/homelab/snippets/</link>
       <pubDate>Tue, 19 Aug 2025 10:12:30 +0200</pubDate>
