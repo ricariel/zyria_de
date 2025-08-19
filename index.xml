@@ -105,7 +105,7 @@ web(at)zyria.de&lt;/p&gt;
     <item>
       <title>Dmarc-Report</title>
       <link>https://www.zyria.de/posts/homelab/k3s-prod/apps/dmarc-report/readme/</link>
-      <pubDate>Mon, 11 Aug 2025 21:34:51 +0200</pubDate>
+      <pubDate>Tue, 19 Aug 2025 10:27:37 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/posts/homelab/k3s-prod/apps/dmarc-report/readme/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;Dmarc Report Service 
@@ -225,7 +225,7 @@ web(at)zyria.de&lt;/p&gt;
     <item>
       <title>Forgejo</title>
       <link>https://www.zyria.de/posts/homelab/k3s-prod/apps/forgejo/readme/</link>
-      <pubDate>Mon, 11 Aug 2025 21:34:51 +0200</pubDate>
+      <pubDate>Tue, 19 Aug 2025 10:27:37 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/posts/homelab/k3s-prod/apps/forgejo/readme/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;Quelle 
@@ -288,7 +288,7 @@ Repositories zu.&lt;/p&gt;</description>
     <item>
       <title>Hedgedoc</title>
       <link>https://www.zyria.de/posts/homelab/k3s-prod/apps/hedgedoc/readme/</link>
-      <pubDate>Mon, 11 Aug 2025 21:34:51 +0200</pubDate>
+      <pubDate>Tue, 19 Aug 2025 10:27:37 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/posts/homelab/k3s-prod/apps/hedgedoc/readme/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;Quelle 
@@ -342,7 +342,7 @@ Repositories zu.&lt;/p&gt;</description>
     <item>
       <title>k3s Argocd</title>
       <link>https://www.zyria.de/posts/homelab/k3s-prod/apps/argocd/readme/</link>
-      <pubDate>Mon, 11 Aug 2025 21:34:51 +0200</pubDate>
+      <pubDate>Tue, 19 Aug 2025 10:27:37 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/posts/homelab/k3s-prod/apps/argocd/readme/</guid>
       <description>Hier wird jeder Service (mit README.md) kurz notiert</description>
@@ -352,7 +352,7 @@ Repositories zu.&lt;/p&gt;</description>
     <item>
       <title>k3s cert-manager</title>
       <link>https://www.zyria.de/posts/homelab/k3s-prod/apps/cert-manager/readme/</link>
-      <pubDate>Mon, 11 Aug 2025 21:34:51 +0200</pubDate>
+      <pubDate>Tue, 19 Aug 2025 10:27:37 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/posts/homelab/k3s-prod/apps/cert-manager/readme/</guid>
       <description>Hier wird jeder Service (mit README.md) kurz notiert</description>
@@ -362,7 +362,7 @@ Repositories zu.&lt;/p&gt;</description>
     <item>
       <title>k3s coredns</title>
       <link>https://www.zyria.de/posts/homelab/k3s-prod/apps/coredns/readme/</link>
-      <pubDate>Mon, 11 Aug 2025 21:34:51 +0200</pubDate>
+      <pubDate>Tue, 19 Aug 2025 10:27:37 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/posts/homelab/k3s-prod/apps/coredns/readme/</guid>
       <description>Hier wird jeder Service (mit README.md) kurz notiert</description>
@@ -372,7 +372,7 @@ Repositories zu.&lt;/p&gt;</description>
     <item>
       <title>k3s descheduler</title>
       <link>https://www.zyria.de/posts/homelab/k3s-prod/apps/descheduler/readme/</link>
-      <pubDate>Mon, 11 Aug 2025 21:34:51 +0200</pubDate>
+      <pubDate>Tue, 19 Aug 2025 10:27:37 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/posts/homelab/k3s-prod/apps/descheduler/readme/</guid>
       <description>Hier wird jeder Service (mit README.md) kurz notiert</description>
@@ -382,7 +382,7 @@ Repositories zu.&lt;/p&gt;</description>
     <item>
       <title>k3s keel</title>
       <link>https://www.zyria.de/posts/homelab/k3s-prod/apps/keel/readme/</link>
-      <pubDate>Mon, 11 Aug 2025 21:34:51 +0200</pubDate>
+      <pubDate>Tue, 19 Aug 2025 10:27:37 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/posts/homelab/k3s-prod/apps/keel/readme/</guid>
       <description>Hier wird jeder Service (mit README.md) kurz notiert</description>
@@ -392,7 +392,7 @@ Repositories zu.&lt;/p&gt;</description>
     <item>
       <title>k3s main</title>
       <link>https://www.zyria.de/posts/homelab/k3s-prod/apps/k3s/readme/</link>
-      <pubDate>Mon, 11 Aug 2025 21:34:51 +0200</pubDate>
+      <pubDate>Tue, 19 Aug 2025 10:27:37 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/posts/homelab/k3s-prod/apps/k3s/readme/</guid>
       <description>Hier wird jeder Service (mit README.md) kurz notiert</description>
@@ -402,7 +402,7 @@ Repositories zu.&lt;/p&gt;</description>
     <item>
       <title>k3s metallb</title>
       <link>https://www.zyria.de/posts/homelab/k3s-prod/apps/metallb/readme/</link>
-      <pubDate>Mon, 11 Aug 2025 21:34:51 +0200</pubDate>
+      <pubDate>Tue, 19 Aug 2025 10:27:37 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/posts/homelab/k3s-prod/apps/metallb/readme/</guid>
       <description>Hier wird jeder Service (mit README.md) kurz notiert</description>
@@ -412,7 +412,7 @@ Repositories zu.&lt;/p&gt;</description>
     <item>
       <title>k3s mta-sts</title>
       <link>https://www.zyria.de/posts/homelab/k3s-prod/apps/mta-sts/readme/</link>
-      <pubDate>Mon, 11 Aug 2025 21:34:51 +0200</pubDate>
+      <pubDate>Tue, 19 Aug 2025 10:27:37 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/posts/homelab/k3s-prod/apps/mta-sts/readme/</guid>
       <description>Hier wird jeder Service (mit README.md) kurz notiert</description>
@@ -422,7 +422,7 @@ Repositories zu.&lt;/p&gt;</description>
     <item>
       <title>k3s nfs-provisioner</title>
       <link>https://www.zyria.de/posts/homelab/k3s-prod/apps/nfs-provisioner/readme/</link>
-      <pubDate>Mon, 11 Aug 2025 21:34:51 +0200</pubDate>
+      <pubDate>Tue, 19 Aug 2025 10:27:37 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/posts/homelab/k3s-prod/apps/nfs-provisioner/readme/</guid>
       <description>Hier wird jeder Service (mit README.md) kurz notiert</description>
@@ -432,7 +432,7 @@ Repositories zu.&lt;/p&gt;</description>
     <item>
       <title>k3s Prometheus</title>
       <link>https://www.zyria.de/posts/homelab/k3s-prod/apps/prometheus/readme/</link>
-      <pubDate>Mon, 11 Aug 2025 21:34:51 +0200</pubDate>
+      <pubDate>Tue, 19 Aug 2025 10:27:37 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/posts/homelab/k3s-prod/apps/prometheus/readme/</guid>
       <description>Hier wird jeder Service (mit README.md) kurz notiert</description>
@@ -442,7 +442,7 @@ Repositories zu.&lt;/p&gt;</description>
     <item>
       <title>k3s reloader</title>
       <link>https://www.zyria.de/posts/homelab/k3s-prod/apps/reloader/readme/</link>
-      <pubDate>Mon, 11 Aug 2025 21:34:51 +0200</pubDate>
+      <pubDate>Tue, 19 Aug 2025 10:27:37 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/posts/homelab/k3s-prod/apps/reloader/readme/</guid>
       <description>Hier wird jeder Service (mit README.md) kurz notiert</description>
@@ -452,7 +452,7 @@ Repositories zu.&lt;/p&gt;</description>
     <item>
       <title>k3s system-upgrade-controller</title>
       <link>https://www.zyria.de/posts/homelab/k3s-prod/apps/system-upgrade-controller/readme/</link>
-      <pubDate>Mon, 11 Aug 2025 21:34:51 +0200</pubDate>
+      <pubDate>Tue, 19 Aug 2025 10:27:37 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/posts/homelab/k3s-prod/apps/system-upgrade-controller/readme/</guid>
       <description>Hier wird jeder Service (mit README.md) kurz notiert</description>
@@ -462,7 +462,7 @@ Repositories zu.&lt;/p&gt;</description>
     <item>
       <title>k3s Traefik</title>
       <link>https://www.zyria.de/posts/homelab/k3s-prod/apps/traefik/readme/</link>
-      <pubDate>Mon, 11 Aug 2025 21:34:51 +0200</pubDate>
+      <pubDate>Tue, 19 Aug 2025 10:27:37 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/posts/homelab/k3s-prod/apps/traefik/readme/</guid>
       <description>Hier wird jeder Service (mit README.md) kurz notiert</description>
@@ -472,7 +472,7 @@ Repositories zu.&lt;/p&gt;</description>
     <item>
       <title>k3s whoami</title>
       <link>https://www.zyria.de/posts/homelab/k3s-prod/apps/whoami/readme/</link>
-      <pubDate>Mon, 11 Aug 2025 21:34:51 +0200</pubDate>
+      <pubDate>Tue, 19 Aug 2025 10:27:37 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/posts/homelab/k3s-prod/apps/whoami/readme/</guid>
       <description>Hier wird jeder Service (mit README.md) kurz notiert</description>
@@ -482,7 +482,7 @@ Repositories zu.&lt;/p&gt;</description>
     <item>
       <title>Mailstack</title>
       <link>https://www.zyria.de/posts/homelab/k3s-prod/apps/mailstack/readme/</link>
-      <pubDate>Mon, 11 Aug 2025 21:34:51 +0200</pubDate>
+      <pubDate>Tue, 19 Aug 2025 10:27:37 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/posts/homelab/k3s-prod/apps/mailstack/readme/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;Funktion 
@@ -524,7 +524,7 @@ setzen:&lt;/p&gt;</description>
     <item>
       <title>Maintenance Page</title>
       <link>https://www.zyria.de/posts/homelab/k3s-prod/apps/maintenance-page/readme/</link>
-      <pubDate>Mon, 11 Aug 2025 21:34:51 +0200</pubDate>
+      <pubDate>Tue, 19 Aug 2025 10:27:37 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/posts/homelab/k3s-prod/apps/maintenance-page/readme/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;Quelle 
@@ -589,7 +589,7 @@ setzen:&lt;/p&gt;</description>
     <item>
       <title>Pihole</title>
       <link>https://www.zyria.de/posts/homelab/k3s-prod/apps/pihole/pihole/</link>
-      <pubDate>Mon, 11 Aug 2025 21:34:51 +0200</pubDate>
+      <pubDate>Tue, 19 Aug 2025 10:27:37 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/posts/homelab/k3s-prod/apps/pihole/pihole/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;Quelle 
@@ -647,7 +647,7 @@ setzen:&lt;/p&gt;</description>
     <item>
       <title>Roundcube Webmail</title>
       <link>https://www.zyria.de/posts/homelab/k3s-prod/apps/roundcube/readme/</link>
-      <pubDate>Mon, 11 Aug 2025 21:34:51 +0200</pubDate>
+      <pubDate>Tue, 19 Aug 2025 10:27:37 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/posts/homelab/k3s-prod/apps/roundcube/readme/</guid>
       <description>&lt;h3 class=&#34;relative group&#34;&gt;Status 
@@ -775,7 +775,7 @@ setzen:&lt;/p&gt;</description>
     <item>
       <title>Unifi Controller</title>
       <link>https://www.zyria.de/posts/homelab/k3s-prod/apps/unifi-controller/readme/</link>
-      <pubDate>Mon, 11 Aug 2025 21:34:51 +0200</pubDate>
+      <pubDate>Tue, 19 Aug 2025 10:27:37 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/posts/homelab/k3s-prod/apps/unifi-controller/readme/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;Unifi Controller 
@@ -895,7 +895,7 @@ setzen:&lt;/p&gt;</description>
     <item>
       <title>Uptime Kuma</title>
       <link>https://www.zyria.de/posts/homelab/k3s-prod/apps/uptime-kuma/readme/</link>
-      <pubDate>Mon, 11 Aug 2025 21:34:51 +0200</pubDate>
+      <pubDate>Tue, 19 Aug 2025 10:27:37 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/posts/homelab/k3s-prod/apps/uptime-kuma/readme/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;Quelle 
@@ -958,7 +958,7 @@ der IT.&lt;/p&gt;</description>
     <item>
       <title>Wireguard</title>
       <link>https://www.zyria.de/posts/homelab/k3s-prod/apps/wireguard/readme/</link>
-      <pubDate>Mon, 11 Aug 2025 21:34:51 +0200</pubDate>
+      <pubDate>Tue, 19 Aug 2025 10:27:37 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/posts/homelab/k3s-prod/apps/wireguard/readme/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;Quelle 
@@ -1024,7 +1024,7 @@ der IT.&lt;/p&gt;</description>
     <item>
       <title>Zammad</title>
       <link>https://www.zyria.de/posts/homelab/k3s-prod/apps/zammad/readme/</link>
-      <pubDate>Mon, 11 Aug 2025 21:34:51 +0200</pubDate>
+      <pubDate>Tue, 19 Aug 2025 10:27:37 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/posts/homelab/k3s-prod/apps/zammad/readme/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;Quelle 
@@ -1078,10 +1078,150 @@ der IT.&lt;/p&gt;</description>
     <item>
       <title>Snippets</title>
       <link>https://www.zyria.de/posts/homelab/snippets/</link>
-      <pubDate>Wed, 30 Jul 2025 12:53:51 +0200</pubDate>
+      <pubDate>Tue, 19 Aug 2025 10:12:30 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/posts/homelab/snippets/</guid>
       <description>All der Kram, der sonst nirgends hin gehört</description>
+      
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://www.zyria.de/posts/homelab/netzwerk/</link>
+      <pubDate>Thu, 14 Aug 2025 11:42:35 +0200</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://www.zyria.de/posts/homelab/netzwerk/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Netzwerk</title>
+      <link>https://www.zyria.de/posts/netzwerk/</link>
+      <pubDate>Thu, 14 Aug 2025 11:42:35 +0200</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://www.zyria.de/posts/netzwerk/</guid>
+      <description>&lt;div class=&#34;hugo-interactive-wrapper&#34;&gt;
+    &lt;meta charset=&#34;UTF-8&#34;&gt;
+    &lt;meta name=&#34;viewport&#34; content=&#34;width=device-width, initial-scale=1.0&#34;&gt;
+    &lt;script src=&#34;https://cdn.tailwindcss.com&#34;&gt;&lt;/script&gt;
+    &lt;link rel=&#34;preconnect&#34; href=&#34;https://fonts.googleapis.com&#34;&gt;
+    &lt;link rel=&#34;preconnect&#34; href=&#34;https://fonts.gstatic.com&#34; crossorigin&gt;
+    &lt;link href=&#34;https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap&#34; rel=&#34;stylesheet&#34;&gt;
+    &lt;script src=&#34;https://cdn.jsdelivr.net/npm/chart.js&#34;&gt;&lt;/script&gt;
+    &lt;style&gt;
+        .hugo-interactive-wrapper {
+            font-family: &#39;Inter&#39;, sans-serif;
+            background-color: #f5f5f4;  
+            color: #1e293b;  
+        }
+        .nav-link {
+            transition: all 0.3s ease;
+            border-bottom: 2px solid transparent;
+        }
+        .nav-link.active, .nav-link:hover {
+            color: #1d4ed8;  
+            border-bottom-color: #1d4ed8;  
+        }
+        .card {
+            background-color: white;
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        .phase-card {
+            position: relative;
+            padding-left: 2.5rem;
+            border-left: 2px solid #d1d5db;  
+        }
+        .phase-card::before {
+            content: &#39;&#39;;
+            position: absolute;
+            left: -0.7rem;
+            top: 0;
+            width: 1.25rem;
+            height: 1.25rem;
+            border-radius: 9999px;
+            background-color: #f5f5f4;  
+            border: 2px solid #1d4ed8;  
+        }
+        .phase-card.active::before {
+            background-color: #1d4ed8;  
+        }
+        .arch-node {
+            cursor: pointer;
+            transition: all 0.2s ease-in-out;
+        }
+        .arch-node:hover {
+            filter: drop-shadow(0 4px 8px rgba(29, 78, 216, 0.4));
+            transform: scale(1.05);
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px;
+            max-height: 350px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 350px;
+            }
+        }
+    &lt;/style&gt;
+
+    &lt;header class=&#34;bg-white/80 backdrop-blur-lg shadow-sm sticky top-0 z-50&#34;&gt;
+        &lt;nav class=&#34;container mx-auto px-4 sm:px-6 lg:px-8&#34;&gt;
+            &lt;div class=&#34;flex items-center justify-between h-16&#34;&gt;
+                &lt;div class=&#34;flex items-center&#34;&gt;
+                    &lt;span class=&#34;font-bold text-xl text-blue-700&#34;&gt;Zero-Trust-Konzept&lt;/span&gt;
+                &lt;/div&gt;
+                &lt;div class=&#34;hidden md:block&#34;&gt;
+                    &lt;div class=&#34;ml-10 flex items-baseline space-x-4&#34;&gt;
+                        &lt;a href=&#34;#&#34; class=&#34;nav-link active px-3 py-2 rounded-md text-sm font-medium&#34; data-target=&#34;overview&#34;&gt;Übersicht&lt;/a&gt;
+                        &lt;a href=&#34;#&#34; class=&#34;nav-link px-3 py-2 rounded-md text-sm font-medium&#34; data-target=&#34;architecture&#34;&gt;Architektur-Säulen&lt;/a&gt;
+                        &lt;a href=&#34;#&#34; class=&#34;nav-link px-3 py-2 rounded-md text-sm font-medium&#34; data-target=&#34;implementation&#34;&gt;Implementierungsplan&lt;/a&gt;
+                        &lt;a href=&#34;#&#34; class=&#34;nav-link px-3 py-2 rounded-md text-sm font-medium&#34; data-target=&#34;acl-explorer&#34;&gt;ACL-Explorer&lt;/a&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class=&#34;md:hidden&#34;&gt;
+                    &lt;button id=&#34;mobile-menu-button&#34; class=&#34;inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500&#34;&gt;
+                        &lt;span class=&#34;sr-only&#34;&gt;Menü öffnen&lt;/span&gt;
+                        &lt;svg class=&#34;h-6 w-6&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; fill=&#34;none&#34; viewBox=&#34;0 0 24 24&#34; stroke=&#34;currentColor&#34; aria-hidden=&#34;true&#34;&gt;
+                            &lt;path stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; stroke-width=&#34;2&#34; d=&#34;M4 6h16M4 12h16m-7 6h7&#34; /&gt;
+                        &lt;/svg&gt;
+                    &lt;/button&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/nav&gt;
+        &lt;div class=&#34;md:hidden hidden&#34; id=&#34;mobile-menu&#34;&gt;
+            &lt;div class=&#34;px-2 pt-2 pb-3 space-y-1 sm:px-3&#34;&gt;
+                &lt;a href=&#34;#&#34; class=&#34;nav-link active block px-3 py-2 rounded-md text-base font-medium&#34; data-target=&#34;overview&#34;&gt;Übersicht&lt;/a&gt;
+                &lt;a href=&#34;#&#34; class=&#34;nav-link block px-3 py-2 rounded-md text-base font-medium&#34; data-target=&#34;architecture&#34;&gt;Architektur-Säulen&lt;/a&gt;
+                &lt;a href=&#34;#&#34; class=&#34;nav-link block px-3 py-2 rounded-md text-base font-medium&#34; data-target=&#34;implementation&#34;&gt;Implementierungsplan&lt;/a&gt;
+                &lt;a href=&#34;#&#34; class=&#34;nav-link block px-3 py-2 rounded-md text-base font-medium&#34; data-target=&#34;acl-explorer&#34;&gt;ACL-Explorer&lt;/a&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/header&gt;
+
+    &lt;main class=&#34;container mx-auto p-4 sm:p-6 lg:p-8&#34;&gt;
+
+        &lt;div id=&#34;overview&#34; class=&#34;tab-content active&#34;&gt;
+            &lt;div class=&#34;text-center mb-12&#34;&gt;
+                &lt;h1 class=&#34;text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl&#34;&gt;Vom Perimeter zum Prinzip&lt;/h1&gt;
+                &lt;p class=&#34;mt-4 max-w-3xl mx-auto text-lg text-slate-600&#34;&gt;Eine interaktive Visualisierung des Netzwerkkonzepts nach dem Zero-Trust-Modell. Erkunden Sie, wie Identität zum neuen Sicherheitsperimeter wird und wie Mikrosegmentierung das Unternehmen schützt.&lt;/p&gt;</description>
       
     </item>
     

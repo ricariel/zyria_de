@@ -16,13 +16,13 @@
   </url>
   <url>
     <loc>https://www.zyria.de/datenschutz/</loc>
-    <lastmod>2025-08-11T21:34:51+02:00</lastmod>
+    <lastmod>2025-08-19T10:27:37+02:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.zyria.de/impressum/</loc>
-    <lastmod>2025-08-11T21:34:51+02:00</lastmod>
+    <lastmod>2025-08-19T10:27:37+02:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
@@ -34,163 +34,175 @@
   </url>
   <url>
     <loc>https://www.zyria.de/posts/homelab/k3s-prod/apps/dmarc-report/readme/</loc>
-    <lastmod>2025-08-11T21:34:51+02:00</lastmod>
+    <lastmod>2025-08-19T10:27:37+02:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.zyria.de/posts/homelab/k3s-prod/apps/forgejo/readme/</loc>
-    <lastmod>2025-08-11T21:34:51+02:00</lastmod>
+    <lastmod>2025-08-19T10:27:37+02:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.zyria.de/posts/homelab/k3s-prod/apps/hedgedoc/readme/</loc>
-    <lastmod>2025-08-11T21:34:51+02:00</lastmod>
+    <lastmod>2025-08-19T10:27:37+02:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.zyria.de/posts/homelab/k3s-prod/apps/argocd/readme/</loc>
-    <lastmod>2025-08-11T21:34:51+02:00</lastmod>
+    <lastmod>2025-08-19T10:27:37+02:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.zyria.de/posts/homelab/k3s-prod/apps/cert-manager/readme/</loc>
-    <lastmod>2025-08-11T21:34:51+02:00</lastmod>
+    <lastmod>2025-08-19T10:27:37+02:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.zyria.de/posts/homelab/k3s-prod/apps/coredns/readme/</loc>
-    <lastmod>2025-08-11T21:34:51+02:00</lastmod>
+    <lastmod>2025-08-19T10:27:37+02:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.zyria.de/posts/homelab/k3s-prod/apps/descheduler/readme/</loc>
-    <lastmod>2025-08-11T21:34:51+02:00</lastmod>
+    <lastmod>2025-08-19T10:27:37+02:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.zyria.de/posts/homelab/k3s-prod/</loc>
-    <lastmod>2025-08-11T21:34:51+02:00</lastmod>
+    <lastmod>2025-08-19T10:27:37+02:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.zyria.de/posts/homelab/k3s-prod/apps/keel/readme/</loc>
-    <lastmod>2025-08-11T21:34:51+02:00</lastmod>
+    <lastmod>2025-08-19T10:27:37+02:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.zyria.de/posts/homelab/k3s-prod/apps/k3s/readme/</loc>
-    <lastmod>2025-08-11T21:34:51+02:00</lastmod>
+    <lastmod>2025-08-19T10:27:37+02:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.zyria.de/posts/homelab/k3s-prod/apps/metallb/readme/</loc>
-    <lastmod>2025-08-11T21:34:51+02:00</lastmod>
+    <lastmod>2025-08-19T10:27:37+02:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.zyria.de/posts/homelab/k3s-prod/apps/mta-sts/readme/</loc>
-    <lastmod>2025-08-11T21:34:51+02:00</lastmod>
+    <lastmod>2025-08-19T10:27:37+02:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.zyria.de/posts/homelab/k3s-prod/apps/nfs-provisioner/readme/</loc>
-    <lastmod>2025-08-11T21:34:51+02:00</lastmod>
+    <lastmod>2025-08-19T10:27:37+02:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.zyria.de/posts/homelab/k3s-prod/apps/prometheus/readme/</loc>
-    <lastmod>2025-08-11T21:34:51+02:00</lastmod>
+    <lastmod>2025-08-19T10:27:37+02:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.zyria.de/posts/homelab/k3s-prod/apps/reloader/readme/</loc>
-    <lastmod>2025-08-11T21:34:51+02:00</lastmod>
+    <lastmod>2025-08-19T10:27:37+02:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.zyria.de/posts/homelab/k3s-prod/apps/system-upgrade-controller/readme/</loc>
-    <lastmod>2025-08-11T21:34:51+02:00</lastmod>
+    <lastmod>2025-08-19T10:27:37+02:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.zyria.de/posts/homelab/k3s-prod/apps/traefik/readme/</loc>
-    <lastmod>2025-08-11T21:34:51+02:00</lastmod>
+    <lastmod>2025-08-19T10:27:37+02:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.zyria.de/posts/homelab/k3s-prod/apps/whoami/readme/</loc>
-    <lastmod>2025-08-11T21:34:51+02:00</lastmod>
+    <lastmod>2025-08-19T10:27:37+02:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.zyria.de/posts/homelab/k3s-prod/apps/mailstack/readme/</loc>
-    <lastmod>2025-08-11T21:34:51+02:00</lastmod>
+    <lastmod>2025-08-19T10:27:37+02:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.zyria.de/posts/homelab/k3s-prod/apps/maintenance-page/readme/</loc>
-    <lastmod>2025-08-11T21:34:51+02:00</lastmod>
+    <lastmod>2025-08-19T10:27:37+02:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.zyria.de/posts/homelab/k3s-prod/apps/pihole/pihole/</loc>
-    <lastmod>2025-08-11T21:34:51+02:00</lastmod>
+    <lastmod>2025-08-19T10:27:37+02:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.zyria.de/posts/homelab/k3s-prod/apps/roundcube/readme/</loc>
-    <lastmod>2025-08-11T21:34:51+02:00</lastmod>
+    <lastmod>2025-08-19T10:27:37+02:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.zyria.de/posts/homelab/k3s-prod/apps/unifi-controller/readme/</loc>
-    <lastmod>2025-08-11T21:34:51+02:00</lastmod>
+    <lastmod>2025-08-19T10:27:37+02:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.zyria.de/posts/homelab/k3s-prod/apps/uptime-kuma/readme/</loc>
-    <lastmod>2025-08-11T21:34:51+02:00</lastmod>
+    <lastmod>2025-08-19T10:27:37+02:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.zyria.de/posts/homelab/k3s-prod/apps/wireguard/readme/</loc>
-    <lastmod>2025-08-11T21:34:51+02:00</lastmod>
+    <lastmod>2025-08-19T10:27:37+02:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.zyria.de/posts/homelab/k3s-prod/apps/zammad/readme/</loc>
-    <lastmod>2025-08-11T21:34:51+02:00</lastmod>
+    <lastmod>2025-08-19T10:27:37+02:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.zyria.de/posts/homelab/snippets/</loc>
-    <lastmod>2025-07-30T12:53:51+02:00</lastmod>
+    <lastmod>2025-08-19T10:12:30+02:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.zyria.de/posts/homelab/netzwerk/</loc>
+    <lastmod>2025-08-14T11:42:35+02:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.zyria.de/posts/netzwerk/</loc>
+    <lastmod>2025-08-14T11:42:35+02:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
