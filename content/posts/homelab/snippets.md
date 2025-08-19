@@ -6,6 +6,22 @@ summary: "All der Kram, der sonst nirgends hin gehört"
 
 ## Snippets
 
+### Container bauen mit Podman[^1]
+
+```bash
+export IMAGE_VERSION=$(git tag --sort=-version:refname | grep -E '^[0-9]+\.[0-9]+\.[0-9]+$' | sort -V | tail -n 1)
+
+podman manifest create keel:${IMAGE_VERSION}
+
+podman build --platform linux/amd64,linux/arm64 --manifest localhost/keel:${IMAGE_VERSION} -f Dockerfile
+
+podman manifest push localhost/keel:${IMAGE_VERSION} docker://git.zyria.de/pyrox/keel:${IMAGE_VERSION}
+
+podman manifest push localhost/keel:${IMAGE_VERSION} docker://docker.io/ricariel/keel:${IMAGE_VERSION}
+```
+
+[^1]: [https://blog.while-true-do.io/podman-multi-arch-images/](https://blog.while-true-do.io/podman-multi-arch-images/)
+
 ### Ram cache leeren
 
 ```bash

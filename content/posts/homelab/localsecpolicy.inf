@@ -8,9 +8,9 @@ Revision=1
 ; === Kennwortrichtlinien ===
 MinimumPasswordLength = 14
 PasswordComplexity = 1
-PasswordHistorySize = 24
+PasswordHistorySize = 0
 MaximumPasswordAge = 60
-MinimumPasswordAge = 1
+MinimumPasswordAge = 0
 ClearTextPassword = 0
 ; Umkehrbare Verschlüsselung deaktivieren
 
