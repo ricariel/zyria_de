@@ -19,7 +19,7 @@
 
   
   <meta name="description" content="Dieses Dokument beschreibt die Bereitstellung von Forgejo Runner, einem Daemon zum Ausführen von CI/CD-Jobs für Forgejo-Instanzen.">
-  <meta name="keywords" content="kubernetes,k3s,software,homelab,">
+  <meta name="keywords" content="kubernetes,k3s,gitops,argocd,helm,kustomize,homelab,produktion,">
   
   
   <link rel="canonical" href="https://www.zyria.de/posts/homelab/k3s-prod/apps/forgejo-runner/readme/">
@@ -121,12 +121,14 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   <meta property="og:locale" content="de_de">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
-    <meta property="article:published_time" content="2025-08-25T23:46:44+02:00">
-    <meta property="article:modified_time" content="2025-08-25T23:46:44+02:00">
+    <meta property="article:published_time" content="2025-08-26T01:09:06+02:00">
+    <meta property="article:modified_time" content="2025-08-26T01:09:06+02:00">
     <meta property="article:tag" content="Kubernetes">
     <meta property="article:tag" content="K3s">
-    <meta property="article:tag" content="Software">
-    <meta property="article:tag" content="Homelab">
+    <meta property="article:tag" content="Gitops">
+    <meta property="article:tag" content="Argocd">
+    <meta property="article:tag" content="Helm">
+    <meta property="article:tag" content="Kustomize">
 
   
   <meta name="twitter:card" content="summary">
@@ -149,15 +151,15 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
       "name": "Fabrice Kirchner"
     },
     "copyrightYear": "2025",
-    "dateCreated": "2025-08-25T23:46:44\u002b02:00",
-    "datePublished": "2025-08-25T23:46:44\u002b02:00",
+    "dateCreated": "2025-08-26T01:09:06\u002b02:00",
+    "datePublished": "2025-08-26T01:09:06\u002b02:00",
     
-    "dateModified": "2025-08-25T23:46:44\u002b02:00",
+    "dateModified": "2025-08-26T01:09:06\u002b02:00",
     
-    "keywords": ["kubernetes","k3s","software","homelab"],
+    "keywords": ["kubernetes","k3s","gitops","argocd","helm","kustomize","homelab","produktion"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "322"
+    "wordCount": "301"
   }]
   </script>
 
@@ -624,7 +626,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   
   <li class="inline">
     <a class="hover:underline decoration-neutral-300 dark:underline-neutral-600" href="/posts/homelab/k3s-prod/"
-      >k3s Cluster</a
+      >k3s-prod: Kubernetes Cluster Konfiguration und Anwendungsbereitstellung</a
     ><span class="px-1 text-primary-500">/</span>
   </li>
 
@@ -695,7 +697,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2025-08-25T23:46:44&#43;02:00">25 August 2025</time><span class="px-2 text-primary-500">&middot;</span><span>322 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
+      <time datetime="2025-08-26T01:09:06&#43;02:00">26 August 2025</time><span class="px-2 text-primary-500">&middot;</span><span>301 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
 
 
   
@@ -801,11 +803,41 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
 </a
               >
             
-              <a class="relative mt-[0.5rem] mr-2" href="/tags/software/"
+              <a class="relative mt-[0.5rem] mr-2" href="/tags/gitops/"
                 ><span class="flex cursor-pointer">
   <span
     class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-    Software
+    Gitops
+  </span>
+</span>
+</a
+              >
+            
+              <a class="relative mt-[0.5rem] mr-2" href="/tags/argocd/"
+                ><span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Argocd
+  </span>
+</span>
+</a
+              >
+            
+              <a class="relative mt-[0.5rem] mr-2" href="/tags/helm/"
+                ><span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Helm
+  </span>
+</span>
+</a
+              >
+            
+              <a class="relative mt-[0.5rem] mr-2" href="/tags/kustomize/"
+                ><span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Kustomize
   </span>
 </span>
 </a
@@ -816,6 +848,16 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   <span
     class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
     Homelab
+  </span>
+</span>
+</a
+              >
+            
+              <a class="relative mt-[0.5rem] mr-2" href="/tags/produktion/"
+                ><span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Produktion
   </span>
 </span>
 </a
@@ -1058,7 +1100,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
     </span>        
     
 </h3>
-<p>Die Bereitstellung verwendet ein benutzerdefiniertes Helm-Chart aus einem privaten Repository (<code>https://git.zyria.de/api/packages/pyrox/helm</code>).</p>
+<p>Die Bereitstellung verwendet ein benutzerdefiniertes Helm-Chart aus einem privaten Repository.</p>
 
 <h3 class="relative group">Dokumentation 
     <div id="dokumentation" class="anchor"></div>
@@ -1083,7 +1125,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
     </span>        
     
 </h3>
-<p>Dieser Dienst stellt Runner für die Ausführung von CI/CD-Pipelines bereit. Es sind zwei Instanzen konfiguriert: eine für die lokale Forgejo-Instanz (<code>git.zyria.de</code>) und eine weitere für Codeberg (<code>codeberg.org</code>).</p>
+<p>Dieser Dienst stellt Runner für die Ausführung von CI/CD-Pipelines bereit. Es sind zwei Instanzen konfiguriert: eine für die lokale Forgejo-Instanz und eine weitere für Codeberg.</p>
 
 <h3 class="relative group">Lokale Anpassungen 
     <div id="lokale-anpassungen" class="anchor"></div>
@@ -1112,7 +1154,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
 <ul>
 <li><strong>Instanzen</strong>: Es werden zwei Runner-Deployments erstellt:
 <ol>
-<li><code>forgejo-runner</code>: Verbindet sich mit der lokalen Instanz <code>https://git.zyria.de</code>.</li>
+<li><code>forgejo-runner</code>: Verbindet sich mit der lokalen Instanz.</li>
 <li><code>forgejo-runner-codeberg</code>: Verbindet sich mit der öffentlichen Instanz <code>https://codeberg.org</code>.</li>
 </ol>
 </li>
@@ -1131,7 +1173,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
     </span>        
     
 </h3>
-<p>Der Dienst wird als Helm-Chart aus einem privaten Repository (<code>https://git.zyria.de/api/packages/pyrox/helm</code>) bereitgestellt. Die Bereitstellung wird durch die <code>kustomization.yaml</code>-Datei verwaltet.</p>
+<p>Der Dienst wird als Helm-Chart aus einem privaten Repository bereitgestellt. Die Bereitstellung wird durch die <code>kustomization.yaml</code>-Datei verwaltet.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">kubectl kustomize --enable-helm apps/forgejo-runner <span class="p">|</span> kubectl apply -n forgejo-runner -f -
 </span></span></code></pre></div>
 <h3 class="relative group">Abhängigkeiten 
@@ -1145,8 +1187,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
 </h3>
 <ul>
 <li><strong>Forgejo</strong>: Eine laufende Forgejo-Instanz, bei der sich die Runner registrieren können.</li>
-<li><strong>Docker</strong>: Auf den Kubernetes-Worker-Nodes, auf denen die Runner laufen, muss eine Docker-Engine verfügbar sein, damit die Runner Docker-Container für die Jobs starten können.
-<strong>Warnung:</strong> Die <code>values.yaml</code>- und <code>values-codeberg.yaml</code>-Dateien enthalten sensible Informationen, einschließlich Runner-Tokens. Gehen Sie äußerst vorsichtig damit um.</li>
+<li><strong>Docker</strong>: Auf den Kubernetes-Worker-Nodes, auf denen die Runner laufen, muss eine Docker-Engine verfügbar sein, damit die Runner Docker-Container für die Jobs starten können.</li>
 </ul>
 
           
@@ -1371,7 +1412,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
                 >
                 <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
                   
-                    <time datetime="2025-08-25T23:46:44&#43;02:00">25 August 2025</time>
+                    <time datetime="2025-08-26T01:09:06&#43;02:00">26 August 2025</time>
                   
                 </span>
               </span>
@@ -1387,7 +1428,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
                 >
                 <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
                   
-                    <time datetime="2025-08-25T23:46:44&#43;02:00">25 August 2025</time>
+                    <time datetime="2025-08-26T01:09:06&#43;02:00">26 August 2025</time>
                   
                 </span>
               </span>

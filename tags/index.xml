@@ -9,12 +9,42 @@
     <managingEditor>fabrice@zyria.de (Fabrice Kirchner)</managingEditor>
     <webMaster>fabrice@zyria.de (Fabrice Kirchner)</webMaster>
     
-    <lastBuildDate>Mon, 25 Aug 2025 23:46:44 +0200</lastBuildDate><atom:link href="https://www.zyria.de/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 26 Aug 2025 01:09:06 +0200</lastBuildDate><atom:link href="https://www.zyria.de/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Argocd</title>
+      <link>https://www.zyria.de/tags/argocd/</link>
+      <pubDate>Tue, 26 Aug 2025 01:09:06 +0200</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://www.zyria.de/tags/argocd/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Gitops</title>
+      <link>https://www.zyria.de/tags/gitops/</link>
+      <pubDate>Tue, 26 Aug 2025 01:09:06 +0200</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://www.zyria.de/tags/gitops/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Helm</title>
+      <link>https://www.zyria.de/tags/helm/</link>
+      <pubDate>Tue, 26 Aug 2025 01:09:06 +0200</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://www.zyria.de/tags/helm/</guid>
+      <description></description>
+      
+    </item>
     
     <item>
       <title>Homelab</title>
       <link>https://www.zyria.de/tags/homelab/</link>
-      <pubDate>Mon, 25 Aug 2025 23:46:44 +0200</pubDate>
+      <pubDate>Tue, 26 Aug 2025 01:09:06 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/tags/homelab/</guid>
       <description></description>
@@ -24,7 +54,7 @@
     <item>
       <title>K3s</title>
       <link>https://www.zyria.de/tags/k3s/</link>
-      <pubDate>Mon, 25 Aug 2025 23:46:44 +0200</pubDate>
+      <pubDate>Tue, 26 Aug 2025 01:09:06 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/tags/k3s/</guid>
       <description></description>
@@ -34,7 +64,7 @@
     <item>
       <title>Kubernetes</title>
       <link>https://www.zyria.de/tags/kubernetes/</link>
-      <pubDate>Mon, 25 Aug 2025 23:46:44 +0200</pubDate>
+      <pubDate>Tue, 26 Aug 2025 01:09:06 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/tags/kubernetes/</guid>
       <description></description>
@@ -42,11 +72,21 @@
     </item>
     
     <item>
-      <title>Software</title>
-      <link>https://www.zyria.de/tags/software/</link>
-      <pubDate>Mon, 25 Aug 2025 23:46:44 +0200</pubDate>
+      <title>Kustomize</title>
+      <link>https://www.zyria.de/tags/kustomize/</link>
+      <pubDate>Tue, 26 Aug 2025 01:09:06 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://www.zyria.de/tags/software/</guid>
+      <guid>https://www.zyria.de/tags/kustomize/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Produktion</title>
+      <link>https://www.zyria.de/tags/produktion/</link>
+      <pubDate>Tue, 26 Aug 2025 01:09:06 +0200</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://www.zyria.de/tags/produktion/</guid>
       <description></description>
       
     </item>
@@ -117,6 +157,16 @@
       <pubDate>Tue, 01 Jul 2025 13:37:34 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://www.zyria.de/tags/service/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Software</title>
+      <link>https://www.zyria.de/tags/software/</link>
+      <pubDate>Tue, 01 Jul 2025 13:37:34 +0200</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://www.zyria.de/tags/software/</guid>
       <description></description>
       
     </item>

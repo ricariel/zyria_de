@@ -14,12 +14,12 @@
   <meta name="theme-color">
 
   
-  <title>UniFi Network Application &middot; Zyria</title>
-    <meta name="title" content="UniFi Network Application &middot; Zyria">
+  <title>UniFi Netzwerk-Anwendung &middot; Zyria</title>
+    <meta name="title" content="UniFi Netzwerk-Anwendung &middot; Zyria">
 
   
-  <meta name="description" content="This document describes the UniFi Network Application deployment, a software-defined networking (SDN) platform for managing UniFi devices.">
-  <meta name="keywords" content="kubernetes,k3s,software,homelab,">
+  <meta name="description" content="Dieses Dokument beschreibt die Bereitstellung der UniFi Netzwerk-Anwendung, einer Software-Defined Networking (SDN)-Plattform zur Verwaltung von UniFi-Geräten.">
+  <meta name="keywords" content="kubernetes,k3s,gitops,argocd,helm,kustomize,homelab,produktion,">
   
   
   <link rel="canonical" href="https://www.zyria.de/posts/homelab/k3s-prod/apps/unifi-controller/readme/">
@@ -116,32 +116,34 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   
   <meta property="og:url" content="https://www.zyria.de/posts/homelab/k3s-prod/apps/unifi-controller/readme/">
   <meta property="og:site_name" content="Zyria">
-  <meta property="og:title" content="UniFi Network Application">
-  <meta property="og:description" content="Documentation for the UniFi Network Application deployment">
+  <meta property="og:title" content="UniFi Netzwerk-Anwendung">
+  <meta property="og:description" content="Dokumentation für die Bereitstellung der UniFi Netzwerk-Anwendung">
   <meta property="og:locale" content="de_de">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
-    <meta property="article:published_time" content="2025-08-25T23:46:44+02:00">
-    <meta property="article:modified_time" content="2025-08-25T23:46:44+02:00">
+    <meta property="article:published_time" content="2025-08-26T01:09:06+02:00">
+    <meta property="article:modified_time" content="2025-08-26T01:09:06+02:00">
     <meta property="article:tag" content="Kubernetes">
     <meta property="article:tag" content="K3s">
-    <meta property="article:tag" content="Software">
-    <meta property="article:tag" content="Homelab">
+    <meta property="article:tag" content="Gitops">
+    <meta property="article:tag" content="Argocd">
+    <meta property="article:tag" content="Helm">
+    <meta property="article:tag" content="Kustomize">
 
   
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="UniFi Network Application">
-  <meta name="twitter:description" content="Documentation for the UniFi Network Application deployment">
+  <meta name="twitter:title" content="UniFi Netzwerk-Anwendung">
+  <meta name="twitter:description" content="Dokumentation für die Bereitstellung der UniFi Netzwerk-Anwendung">
 
   <script type="application/ld+json">
   [{
     "@context": "https://schema.org",
     "@type": "Article",
     "articleSection": "Beiträge",
-    "name": "UniFi Network Application",
-    "headline": "UniFi Network Application",
-    "description": "Documentation for the UniFi Network Application deployment",
-    "abstract": "This document describes the UniFi Network Application deployment, a software-defined networking (SDN) platform for managing UniFi devices.",
+    "name": "UniFi Netzwerk-Anwendung",
+    "headline": "UniFi Netzwerk-Anwendung",
+    "description": "Dokumentation für die Bereitstellung der UniFi Netzwerk-Anwendung",
+    "abstract": "Dieses Dokument beschreibt die Bereitstellung der UniFi Netzwerk-Anwendung, einer Software-Defined Networking (SDN)-Plattform zur Verwaltung von UniFi-Geräten.",
     "inLanguage": "de-de",
     "url" : "https:\/\/www.zyria.de\/posts\/homelab\/k3s-prod\/apps\/unifi-controller\/readme\/",
     "author" : {
@@ -149,15 +151,15 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
       "name": "Fabrice Kirchner"
     },
     "copyrightYear": "2025",
-    "dateCreated": "2025-08-25T23:46:44\u002b02:00",
-    "datePublished": "2025-08-25T23:46:44\u002b02:00",
+    "dateCreated": "2025-08-26T01:09:06\u002b02:00",
+    "datePublished": "2025-08-26T01:09:06\u002b02:00",
     
-    "dateModified": "2025-08-25T23:46:44\u002b02:00",
+    "dateModified": "2025-08-26T01:09:06\u002b02:00",
     
-    "keywords": ["kubernetes","k3s","software","homelab"],
+    "keywords": ["kubernetes","k3s","gitops","argocd","helm","kustomize","homelab","produktion"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "392"
+    "wordCount": "350"
   }]
   </script>
 
@@ -624,14 +626,14 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   
   <li class="inline">
     <a class="hover:underline decoration-neutral-300 dark:underline-neutral-600" href="/posts/homelab/k3s-prod/"
-      >k3s Cluster</a
+      >k3s-prod: Kubernetes Cluster Konfiguration und Anwendungsbereitstellung</a
     ><span class="px-1 text-primary-500">/</span>
   </li>
 
   
   <li class="hidden">
     <a class="hover:underline decoration-neutral-300 dark:underline-neutral-600" href="/posts/homelab/k3s-prod/apps/unifi-controller/readme/"
-      >UniFi Network Application</a
+      >UniFi Netzwerk-Anwendung</a
     ><span class="px-1 text-primary-500">/</span>
   </li>
 
@@ -640,7 +642,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
 
       
       <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
-        UniFi Network Application
+        UniFi Netzwerk-Anwendung
       </h1>
       <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
         
@@ -695,7 +697,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2025-08-25T23:46:44&#43;02:00">25 August 2025</time><span class="px-2 text-primary-500">&middot;</span><span>392 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
+      <time datetime="2025-08-26T01:09:06&#43;02:00">26 August 2025</time><span class="px-2 text-primary-500">&middot;</span><span>350 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
 
 
   
@@ -801,11 +803,41 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
 </a
               >
             
-              <a class="relative mt-[0.5rem] mr-2" href="/tags/software/"
+              <a class="relative mt-[0.5rem] mr-2" href="/tags/gitops/"
                 ><span class="flex cursor-pointer">
   <span
     class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-    Software
+    Gitops
+  </span>
+</span>
+</a
+              >
+            
+              <a class="relative mt-[0.5rem] mr-2" href="/tags/argocd/"
+                ><span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Argocd
+  </span>
+</span>
+</a
+              >
+            
+              <a class="relative mt-[0.5rem] mr-2" href="/tags/helm/"
+                ><span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Helm
+  </span>
+</span>
+</a
+              >
+            
+              <a class="relative mt-[0.5rem] mr-2" href="/tags/kustomize/"
+                ><span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Kustomize
   </span>
 </span>
 </a
@@ -816,6 +848,16 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   <span
     class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
     Homelab
+  </span>
+</span>
+</a
+              >
+            
+              <a class="relative mt-[0.5rem] mr-2" href="/tags/produktion/"
+                ><span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Produktion
   </span>
 </span>
 </a
@@ -858,12 +900,12 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
     class="min-w-[220px] py-2 border-dotted ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#unifi-network-application">UniFi Network Application</a>
+    <li><a href="#unifi-netzwerk-anwendung">UniFi Netzwerk-Anwendung</a>
       <ul>
         <li><a href="#status">Status</a></li>
         <li><a href="#deployment">Deployment</a></li>
-        <li><a href="#components">Components</a></li>
-        <li><a href="#source">Source</a></li>
+        <li><a href="#komponenten">Komponenten</a></li>
+        <li><a href="#quelle">Quelle</a></li>
         <li><a href="#dokumentation">Dokumentation</a></li>
         <li><a href="#funktion">Funktion</a></li>
         <li><a href="#lokale-anpassungen">Lokale Anpassungen</a>
@@ -888,12 +930,12 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
     class="py-2 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#unifi-network-application">UniFi Network Application</a>
+    <li><a href="#unifi-netzwerk-anwendung">UniFi Netzwerk-Anwendung</a>
       <ul>
         <li><a href="#status">Status</a></li>
         <li><a href="#deployment">Deployment</a></li>
-        <li><a href="#components">Components</a></li>
-        <li><a href="#source">Source</a></li>
+        <li><a href="#komponenten">Komponenten</a></li>
+        <li><a href="#quelle">Quelle</a></li>
         <li><a href="#dokumentation">Dokumentation</a></li>
         <li><a href="#funktion">Funktion</a></li>
         <li><a href="#lokale-anpassungen">Lokale Anpassungen</a>
@@ -1006,16 +1048,16 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
 
         <div class="article-content max-w-prose mb-20">
           
-<h2 class="relative group">UniFi Network Application 
-    <div id="unifi-network-application" class="anchor"></div>
+<h2 class="relative group">UniFi Netzwerk-Anwendung 
+    <div id="unifi-netzwerk-anwendung" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#unifi-network-application" aria-label="Anker">#</a>
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#unifi-netzwerk-anwendung" aria-label="Anker">#</a>
     </span>        
     
 </h2>
-<p>The UniFi Network Application (formerly UniFi Controller) is a software-defined networking (SDN) platform developed by Ubiquiti. It serves as a central management interface for UniFi networking devices, including gateways, switches, and Wi-Fi access points.</p>
+<p>Die UniFi Netzwerk-Anwendung (ehemals UniFi Controller) ist eine von Ubiquiti entwickelte Software-Defined Networking (SDN)-Plattform. Sie dient als zentrale Verwaltungsschnittstelle für UniFi-Netzwerkgeräte, einschließlich Gateways, Switches und Wi-Fi-Zugangspunkte.</p>
 
 <h3 class="relative group">Status 
     <div id="status" class="anchor"></div>
@@ -1128,36 +1170,36 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
 </figure>
 </p>
 
-<h3 class="relative group">Components 
-    <div id="components" class="anchor"></div>
+<h3 class="relative group">Komponenten 
+    <div id="komponenten" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#components" aria-label="Anker">#</a>
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#komponenten" aria-label="Anker">#</a>
     </span>        
     
 </h3>
-<p>This UniFi Network Application deployment includes:</p>
+<p>Diese UniFi Netzwerk-Anwendung-Bereitstellung umfasst:</p>
 <ul>
-<li><strong>UniFi Network Application:</strong> The core application for managing UniFi devices.</li>
-<li><strong>MongoDB:</strong> The database used by the UniFi Network Application to store its data.</li>
+<li><strong>UniFi Netzwerk-Anwendung:</strong> Die Kernanwendung zur Verwaltung von UniFi-Geräten.</li>
+<li><strong>MongoDB:</strong> Die Datenbank, die von der UniFi Netzwerk-Anwendung zur Speicherung ihrer Daten verwendet wird.</li>
 </ul>
 
-<h3 class="relative group">Source 
-    <div id="source" class="anchor"></div>
+<h3 class="relative group">Quelle 
+    <div id="quelle" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#source" aria-label="Anker">#</a>
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#quelle" aria-label="Anker">#</a>
     </span>        
     
 </h3>
 <ul>
-<li><strong>UniFi Network Application:</strong> <a
+<li><strong>UniFi Netzwerk-Anwendung:</strong> <a
   href="https://ui.com/unifi-network/default"
     target="_blank"
   >Ubiquiti Official Website</a></li>
-<li><strong>LinuxServer.io UniFi Network Application Image:</strong> <a
+<li><strong>LinuxServer.io UniFi Netzwerk-Anwendung Image:</strong> <a
   href="https://hub.docker.com/r/linuxserver/unifi-network-application"
     target="_blank"
   >Docker Hub</a></li>
@@ -1202,11 +1244,11 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
     
 </h3>
 <ul>
-<li>Persistent storage for configuration and MongoDB data is configured using <code>hostPath</code> volumes, pointing to an NFS share.</li>
-<li>The deployment exposes both an Ingress for web access and a LoadBalancer service for direct access and device communication.</li>
-<li>The LoadBalancer service is configured with specific IPv4 and IPv6 addresses using MetalLB.</li>
-<li>Several ports are exposed for UniFi device communication (STUN, device communication, web administration, AP discovery, L2 network).</li>
-<li>A custom <code>mongoinit</code> ConfigMap is used to initialize the MongoDB database with a specific user.</li>
+<li>Persistenter Speicher für Konfigurations- und MongoDB-Daten wird über <code>hostPath</code>-Volumes konfiguriert, die auf einen NFS-Share zeigen.</li>
+<li>Das Deployment stellt sowohl einen Ingress für den Webzugriff als auch einen LoadBalancer-Dienst für den direkten Zugriff und die Gerätekommunikation bereit.</li>
+<li>Der LoadBalancer-Dienst ist mit spezifischen IPv4- und IPv6-Adressen unter Verwendung von MetalLB konfiguriert.</li>
+<li>Mehrere Ports sind für die UniFi-Gerätekommunikation freigegeben (STUN, Gerätekommunikation, Webadministration, AP-Erkennung, L2-Netzwerk).</li>
+<li>Eine benutzerdefinierte <code>mongoinit</code> ConfigMap wird verwendet, um die MongoDB-Datenbank mit einem bestimmten Benutzer zu initialisieren.</li>
 </ul>
 
 <h4 class="relative group">Wichtige Einstellungen 
@@ -1219,8 +1261,8 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
     
 </h4>
 <ul>
-<li><strong>Service-Typ</strong>: Der Controller wird über einen <code>LoadBalancer</code>-Service mit einer dedizierten IP-Adresse (<code>192.168.178.23</code>) im lokalen Netzwerk bereitgestellt. Dies ist notwendig, damit die UniFi-Geräte den Controller zuverlässig finden können (über den &ldquo;Inform Host&rdquo;).</li>
-<li><strong>Ingress</strong>: Zusätzlich ist die Weboberfläche über einen Ingress mit dem Hostnamen <code>unifi.zyria.de</code> erreichbar.</li>
+<li><strong>Service-Typ</strong>: Der Controller wird über einen <code>LoadBalancer</code>-Service mit einer dedizierten IP-Adresse im lokalen Netzwerk bereitgestellt. Dies ist notwendig, damit die UniFi-Geräte den Controller zuverlässig finden können (über den &ldquo;Inform Host&rdquo;).</li>
+<li><strong>Ingress</strong>: Zusätzlich ist die Weboberfläche über einen Ingress mit einem Hostnamen erreichbar.</li>
 <li><strong>Zeitzone</strong>: Die Zeitzone ist auf <code>Europe/Berlin</code> gesetzt.</li>
 <li><strong>Speicher</strong>: Die Konfiguration des Controllers wird auf einem bestehenden Persistent Volume Claim (<code>unifi-controller-config</code>) gespeichert.</li>
 </ul>
@@ -1247,13 +1289,12 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
     
 </h3>
 <ul>
-<li>A running Kubernetes cluster.</li>
-<li>A configured Ingress controller (e.g., Traefik).</li>
-<li>A certificate management solution (e.g., cert-manager) to provide TLS certificates, as configured in <code>certs.yaml</code>.</li>
-<li>MetalLB for LoadBalancer IP allocation.</li>
-<li>An NFS server for persistent storage.</li>
+<li>Ein laufender Kubernetes-Cluster.</li>
+<li>Ein konfigurierter Ingress-Controller (z.B. Traefik).</li>
+<li>Eine Zertifikatsmanagement-Lösung (z.B. cert-manager) zur Bereitstellung von TLS-Zertifikaten.</li>
+<li>MetalLB für die Zuweisung von LoadBalancer-IPs.</li>
+<li>Ein NFS-Server für persistenten Speicher.</li>
 </ul>
-<p><strong>Warning:</strong> The <code>values.yaml</code> file contains sensitive information, including MongoDB passwords. Handle with care.</p>
 
           
           
@@ -1262,7 +1303,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
               <a
                 target="_blank"
                 class="m-1 rounded bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-                href="mailto:fabrice@zyria.de?subject=Reply%20to%20UniFi%20Network%20Application">
+                href="mailto:fabrice@zyria.de?subject=Reply%20to%20UniFi%20Netzwerk-Anwendung">
                 Reply by Email
               </a>
             </strong>
@@ -1477,7 +1518,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
                 >
                 <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
                   
-                    <time datetime="2025-08-25T23:46:44&#43;02:00">25 August 2025</time>
+                    <time datetime="2025-08-26T01:09:06&#43;02:00">26 August 2025</time>
                   
                 </span>
               </span>
@@ -1493,7 +1534,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
                 >
                 <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
                   
-                    <time datetime="2025-08-25T23:46:44&#43;02:00">25 August 2025</time>
+                    <time datetime="2025-08-26T01:09:06&#43;02:00">26 August 2025</time>
                   
                 </span>
               </span>

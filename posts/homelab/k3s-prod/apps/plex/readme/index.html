@@ -18,8 +18,8 @@
     <meta name="title" content="Plex Media Server &middot; Zyria">
 
   
-  <meta name="description" content="This document describes the Plex Media Server deployment, a popular application for organizing and streaming media.">
-  <meta name="keywords" content="kubernetes,k3s,software,homelab,">
+  <meta name="description" content="Dieses Dokument beschreibt die Bereitstellung des Plex Media Servers, einer beliebten Anwendung zum Organisieren und Streamen von Medien.">
+  <meta name="keywords" content="kubernetes,k3s,gitops,argocd,helm,kustomize,homelab,produktion,">
   
   
   <link rel="canonical" href="https://www.zyria.de/posts/homelab/k3s-prod/apps/plex/readme/">
@@ -121,12 +121,14 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   <meta property="og:locale" content="de_de">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
-    <meta property="article:published_time" content="2025-08-25T23:46:44+02:00">
-    <meta property="article:modified_time" content="2025-08-25T23:46:44+02:00">
+    <meta property="article:published_time" content="2025-08-26T01:09:06+02:00">
+    <meta property="article:modified_time" content="2025-08-26T01:09:06+02:00">
     <meta property="article:tag" content="Kubernetes">
     <meta property="article:tag" content="K3s">
-    <meta property="article:tag" content="Software">
-    <meta property="article:tag" content="Homelab">
+    <meta property="article:tag" content="Gitops">
+    <meta property="article:tag" content="Argocd">
+    <meta property="article:tag" content="Helm">
+    <meta property="article:tag" content="Kustomize">
 
   
   <meta name="twitter:card" content="summary">
@@ -141,7 +143,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
     "name": "Plex Media Server",
     "headline": "Plex Media Server",
     "description": "Documentation for the Plex Media Server deployment",
-    "abstract": "This document describes the Plex Media Server deployment, a popular application for organizing and streaming media.",
+    "abstract": "Dieses Dokument beschreibt die Bereitstellung des Plex Media Servers, einer beliebten Anwendung zum Organisieren und Streamen von Medien.",
     "inLanguage": "de-de",
     "url" : "https:\/\/www.zyria.de\/posts\/homelab\/k3s-prod\/apps\/plex\/readme\/",
     "author" : {
@@ -149,15 +151,15 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
       "name": "Fabrice Kirchner"
     },
     "copyrightYear": "2025",
-    "dateCreated": "2025-08-25T23:46:44\u002b02:00",
-    "datePublished": "2025-08-25T23:46:44\u002b02:00",
+    "dateCreated": "2025-08-26T01:09:06\u002b02:00",
+    "datePublished": "2025-08-26T01:09:06\u002b02:00",
     
-    "dateModified": "2025-08-25T23:46:44\u002b02:00",
+    "dateModified": "2025-08-26T01:09:06\u002b02:00",
     
-    "keywords": ["kubernetes","k3s","software","homelab"],
+    "keywords": ["kubernetes","k3s","gitops","argocd","helm","kustomize","homelab","produktion"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "257"
+    "wordCount": "244"
   }]
   </script>
 
@@ -624,7 +626,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   
   <li class="inline">
     <a class="hover:underline decoration-neutral-300 dark:underline-neutral-600" href="/posts/homelab/k3s-prod/"
-      >k3s Cluster</a
+      >k3s-prod: Kubernetes Cluster Konfiguration und Anwendungsbereitstellung</a
     ><span class="px-1 text-primary-500">/</span>
   </li>
 
@@ -695,7 +697,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2025-08-25T23:46:44&#43;02:00">25 August 2025</time><span class="px-2 text-primary-500">&middot;</span><span>257 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
+      <time datetime="2025-08-26T01:09:06&#43;02:00">26 August 2025</time><span class="px-2 text-primary-500">&middot;</span><span>244 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
 
 
   
@@ -801,11 +803,41 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
 </a
               >
             
-              <a class="relative mt-[0.5rem] mr-2" href="/tags/software/"
+              <a class="relative mt-[0.5rem] mr-2" href="/tags/gitops/"
                 ><span class="flex cursor-pointer">
   <span
     class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-    Software
+    Gitops
+  </span>
+</span>
+</a
+              >
+            
+              <a class="relative mt-[0.5rem] mr-2" href="/tags/argocd/"
+                ><span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Argocd
+  </span>
+</span>
+</a
+              >
+            
+              <a class="relative mt-[0.5rem] mr-2" href="/tags/helm/"
+                ><span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Helm
+  </span>
+</span>
+</a
+              >
+            
+              <a class="relative mt-[0.5rem] mr-2" href="/tags/kustomize/"
+                ><span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Kustomize
   </span>
 </span>
 </a
@@ -816,6 +848,16 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   <span
     class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
     Homelab
+  </span>
+</span>
+</a
+              >
+            
+              <a class="relative mt-[0.5rem] mr-2" href="/tags/produktion/"
+                ><span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Produktion
   </span>
 </span>
 </a
@@ -1135,7 +1177,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
     
 </h3>
 <p>Die Anwendung wird als generisches <code>app-template</code> Helm-Chart von <a
-  href="https://bjw-s-labs.github.io/helm-charts"
+  href="https://bjw-s.github.io/helm-charts"
     target="_blank"
   >BJW-S Labs</a> bereitgestellt. Das verwendete Docker-Image ist <code>ghcr.io/linuxserver/plex</code>.</p>
 
@@ -1186,9 +1228,9 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
 </h4>
 <ul>
 <li><strong>LoadBalancer</strong>: Der Plex-Server ist über einen <code>LoadBalancer</code>-Service auf Port <code>32400</code> im lokalen Netzwerk erreichbar, um eine optimale Streaming-Leistung zu gewährleisten.</li>
-<li><strong>Ingress</strong>: Zusätzlich ist die Weboberfläche über einen Ingress mit dem Hostnamen <code>plex.zyria.de</code> erreichbar.</li>
+<li><strong>Ingress</strong>: Zusätzlich ist die Weboberfläche über einen Ingress mit einem Hostnamen erreichbar.</li>
 <li><strong>Hardware-Transcoding</strong>: Das <code>/dev/dri</code>-Gerät des Host-Systems wird in den Pod durchgereicht. Dies ermöglicht es Plex, die integrierte GPU (Intel Quick Sync Video) für die Hardware-beschleunigte Videotranskodierung zu nutzen, was die CPU-Last erheblich reduziert.</li>
-<li><strong>Speicher</strong>: Die Plex-Konfiguration sowie die Medienbibliotheken (Filme, TV-Serien) werden von einem NFS-Share unter <code>/srv/plex_nfs/</code> gemountet.</li>
+<li><strong>Speicher</strong>: Die Plex-Konfiguration sowie die Medienbibliotheken (Filme, TV-Serien) werden von einem NFS-Share gemountet.</li>
 </ul>
 
 <h3 class="relative group">Installation 
@@ -1213,11 +1255,11 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
     
 </h3>
 <ul>
-<li>A running Kubernetes cluster.</li>
-<li>A configured Ingress controller (e.g., Traefik).</li>
-<li>A certificate management solution (e.g., cert-manager) to provide TLS certificates, as configured in <code>certs.yaml</code>.</li>
-<li>MetalLB for LoadBalancer IP allocation.</li>
-<li>An NFS server for persistent storage.</li>
+<li>Ein laufender Kubernetes-Cluster.</li>
+<li>Ein konfigurierter Ingress-Controller (z.B. Traefik).</li>
+<li>Eine Zertifikatsmanagement-Lösung (z.B. cert-manager) zur Bereitstellung von TLS-Zertifikaten.</li>
+<li>MetalLB für LoadBalancer IP-Zuweisung.</li>
+<li>Ein NFS-Server für persistente Speicherung.</li>
 </ul>
 
           
@@ -1442,7 +1484,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
                 >
                 <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
                   
-                    <time datetime="2025-08-25T23:46:44&#43;02:00">25 August 2025</time>
+                    <time datetime="2025-08-26T01:09:06&#43;02:00">26 August 2025</time>
                   
                 </span>
               </span>
@@ -1458,7 +1500,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
                 >
                 <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
                   
-                    <time datetime="2025-08-25T23:46:44&#43;02:00">25 August 2025</time>
+                    <time datetime="2025-08-26T01:09:06&#43;02:00">26 August 2025</time>
                   
                 </span>
               </span>

@@ -19,7 +19,7 @@
 
   
   <meta name="description" content="Dieses Dokument beschreibt die Bereitstellung von Authentik, einem quelloffenen Identitätsanbieter (IdP).">
-  <meta name="keywords" content="kubernetes,k3s,software,homelab,">
+  <meta name="keywords" content="kubernetes,k3s,gitops,argocd,helm,kustomize,homelab,produktion,">
   
   
   <link rel="canonical" href="https://www.zyria.de/posts/homelab/k3s-prod/apps/authentik/readme/">
@@ -121,12 +121,14 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   <meta property="og:locale" content="de_de">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
-    <meta property="article:published_time" content="2025-08-25T23:46:44+02:00">
-    <meta property="article:modified_time" content="2025-08-25T23:46:44+02:00">
+    <meta property="article:published_time" content="2025-08-26T01:09:06+02:00">
+    <meta property="article:modified_time" content="2025-08-26T01:09:06+02:00">
     <meta property="article:tag" content="Kubernetes">
     <meta property="article:tag" content="K3s">
-    <meta property="article:tag" content="Software">
-    <meta property="article:tag" content="Homelab">
+    <meta property="article:tag" content="Gitops">
+    <meta property="article:tag" content="Argocd">
+    <meta property="article:tag" content="Helm">
+    <meta property="article:tag" content="Kustomize">
 
   
   <meta name="twitter:card" content="summary">
@@ -149,15 +151,15 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
       "name": "Fabrice Kirchner"
     },
     "copyrightYear": "2025",
-    "dateCreated": "2025-08-25T23:46:44\u002b02:00",
-    "datePublished": "2025-08-25T23:46:44\u002b02:00",
+    "dateCreated": "2025-08-26T01:09:06\u002b02:00",
+    "datePublished": "2025-08-26T01:09:06\u002b02:00",
     
-    "dateModified": "2025-08-25T23:46:44\u002b02:00",
+    "dateModified": "2025-08-26T01:09:06\u002b02:00",
     
-    "keywords": ["kubernetes","k3s","software","homelab"],
+    "keywords": ["kubernetes","k3s","gitops","argocd","helm","kustomize","homelab","produktion"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "302"
+    "wordCount": "280"
   }]
   </script>
 
@@ -624,7 +626,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   
   <li class="inline">
     <a class="hover:underline decoration-neutral-300 dark:underline-neutral-600" href="/posts/homelab/k3s-prod/"
-      >k3s Cluster</a
+      >k3s-prod: Kubernetes Cluster Konfiguration und Anwendungsbereitstellung</a
     ><span class="px-1 text-primary-500">/</span>
   </li>
 
@@ -695,7 +697,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2025-08-25T23:46:44&#43;02:00">25 August 2025</time><span class="px-2 text-primary-500">&middot;</span><span>302 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
+      <time datetime="2025-08-26T01:09:06&#43;02:00">26 August 2025</time><span class="px-2 text-primary-500">&middot;</span><span>280 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
 
 
   
@@ -801,11 +803,41 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
 </a
               >
             
-              <a class="relative mt-[0.5rem] mr-2" href="/tags/software/"
+              <a class="relative mt-[0.5rem] mr-2" href="/tags/gitops/"
                 ><span class="flex cursor-pointer">
   <span
     class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-    Software
+    Gitops
+  </span>
+</span>
+</a
+              >
+            
+              <a class="relative mt-[0.5rem] mr-2" href="/tags/argocd/"
+                ><span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Argocd
+  </span>
+</span>
+</a
+              >
+            
+              <a class="relative mt-[0.5rem] mr-2" href="/tags/helm/"
+                ><span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Helm
+  </span>
+</span>
+</a
+              >
+            
+              <a class="relative mt-[0.5rem] mr-2" href="/tags/kustomize/"
+                ><span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Kustomize
   </span>
 </span>
 </a
@@ -816,6 +848,16 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   <span
     class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
     Homelab
+  </span>
+</span>
+</a
+              >
+            
+              <a class="relative mt-[0.5rem] mr-2" href="/tags/produktion/"
+                ><span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Produktion
   </span>
 </span>
 </a
@@ -1215,9 +1257,9 @@ Das Helm-Chart stammt aus dem <a
     
 </h4>
 <ul>
-<li><strong>Ingress</strong>: Der Zugriff auf die Authentik-Weboberfläche wird über einen Ingress mit dem Hostnamen <code>auth.zyria.de</code> ermöglicht und durch Traefik verwaltet.</li>
-<li><strong>Datenbank</strong>: Authentik verwendet eine dedizierte PostgreSQL-Datenbank, die als Teil des Helm-Charts bereitgestellt wird. Die Daten werden persistent auf dem Volume <code>authentik-db</code> gespeichert.</li>
-<li><strong>Redis</strong>: Für Caching und Hintergrundaufgaben wird eine dedizierte Redis-Instanz verwendet, deren Daten auf dem Volume <code>authentik-redis</code> gespeichert werden.</li>
+<li><strong>Ingress</strong>: Der Zugriff auf die Authentik-Weboberfläche wird über einen Ingress mit einem Hostnamen ermöglicht und durch Traefik verwaltet.</li>
+<li><strong>Datenbank</strong>: Authentik verwendet eine dedizierte PostgreSQL-Datenbank, die als Teil des Helm-Charts bereitgestellt wird. Die Daten werden persistent auf einem Volume gespeichert.</li>
+<li><strong>Redis</strong>: Für Caching und Hintergrundaufgaben wird eine dedizierte Redis-Instanz verwendet, deren Daten auf einem Volume gespeichert werden.</li>
 <li><strong>E-Mail</strong>: SMTP ist für den Versand von Benachrichtigungen und Passwort-Resets konfiguriert.</li>
 </ul>
 
@@ -1248,7 +1290,6 @@ Das Helm-Chart stammt aus dem <a
 <li>Eine Zertifikatsmanagement-Lösung (z.B. cert-manager) zur Bereitstellung von TLS-Zertifikaten.</li>
 <li>Ein SMTP-Server für E-Mail-Benachrichtigungen.</li>
 </ul>
-<p><strong>Warnung:</strong> Die <code>values.yaml</code>-Datei enthält sensible Informationen, einschließlich des geheimen Schlüssels, E-Mail-Passwörtern und PostgreSQL-Passwörtern. Gehen Sie äußerst vorsichtig damit um.</p>
 
           
           
@@ -1472,7 +1513,7 @@ Das Helm-Chart stammt aus dem <a
                 >
                 <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
                   
-                    <time datetime="2025-08-25T23:46:44&#43;02:00">25 August 2025</time>
+                    <time datetime="2025-08-26T01:09:06&#43;02:00">26 August 2025</time>
                   
                 </span>
               </span>
@@ -1488,7 +1529,7 @@ Das Helm-Chart stammt aus dem <a
                 >
                 <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
                   
-                    <time datetime="2025-08-25T23:46:44&#43;02:00">25 August 2025</time>
+                    <time datetime="2025-08-26T01:09:06&#43;02:00">26 August 2025</time>
                   
                 </span>
               </span>

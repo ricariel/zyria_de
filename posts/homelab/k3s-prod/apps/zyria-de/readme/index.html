@@ -14,12 +14,12 @@
   <meta name="theme-color">
 
   
-  <title>zyria.de Website &middot; Zyria</title>
-    <meta name="title" content="zyria.de Website &middot; Zyria">
+  <title>zyria.de Webseite &middot; Zyria</title>
+    <meta name="title" content="zyria.de Webseite &middot; Zyria">
 
   
-  <meta name="description" content="This document describes the deployment of the static website for zyria.de, with content synchronized from a Git repository.">
-  <meta name="keywords" content="kubernetes,k3s,software,homelab,">
+  <meta name="description" content="Dieses Dokument beschreibt die Bereitstellung der statischen Webseite für zyria.de, deren Inhalt aus einem Git-Repository synchronisiert wird.">
+  <meta name="keywords" content="kubernetes,k3s,gitops,argocd,helm,kustomize,homelab,produktion,">
   
   
   <link rel="canonical" href="https://www.zyria.de/posts/homelab/k3s-prod/apps/zyria-de/readme/">
@@ -116,32 +116,34 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   
   <meta property="og:url" content="https://www.zyria.de/posts/homelab/k3s-prod/apps/zyria-de/readme/">
   <meta property="og:site_name" content="Zyria">
-  <meta property="og:title" content="zyria.de Website">
-  <meta property="og:description" content="Documentation for the zyria.de website deployment">
+  <meta property="og:title" content="zyria.de Webseite">
+  <meta property="og:description" content="Dokumentation für die Bereitstellung der zyria.de Webseite">
   <meta property="og:locale" content="de_de">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
-    <meta property="article:published_time" content="2025-08-25T23:46:44+02:00">
-    <meta property="article:modified_time" content="2025-08-25T23:46:44+02:00">
+    <meta property="article:published_time" content="2025-08-26T01:09:06+02:00">
+    <meta property="article:modified_time" content="2025-08-26T01:09:06+02:00">
     <meta property="article:tag" content="Kubernetes">
     <meta property="article:tag" content="K3s">
-    <meta property="article:tag" content="Software">
-    <meta property="article:tag" content="Homelab">
+    <meta property="article:tag" content="Gitops">
+    <meta property="article:tag" content="Argocd">
+    <meta property="article:tag" content="Helm">
+    <meta property="article:tag" content="Kustomize">
 
   
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="zyria.de Website">
-  <meta name="twitter:description" content="Documentation for the zyria.de website deployment">
+  <meta name="twitter:title" content="zyria.de Webseite">
+  <meta name="twitter:description" content="Dokumentation für die Bereitstellung der zyria.de Webseite">
 
   <script type="application/ld+json">
   [{
     "@context": "https://schema.org",
     "@type": "Article",
     "articleSection": "Beiträge",
-    "name": "zyria.de Website",
-    "headline": "zyria.de Website",
-    "description": "Documentation for the zyria.de website deployment",
-    "abstract": "This document describes the deployment of the static website for zyria.de, with content synchronized from a Git repository.",
+    "name": "zyria.de Webseite",
+    "headline": "zyria.de Webseite",
+    "description": "Dokumentation für die Bereitstellung der zyria.de Webseite",
+    "abstract": "Dieses Dokument beschreibt die Bereitstellung der statischen Webseite für zyria.de, deren Inhalt aus einem Git-Repository synchronisiert wird.",
     "inLanguage": "de-de",
     "url" : "https:\/\/www.zyria.de\/posts\/homelab\/k3s-prod\/apps\/zyria-de\/readme\/",
     "author" : {
@@ -149,15 +151,15 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
       "name": "Fabrice Kirchner"
     },
     "copyrightYear": "2025",
-    "dateCreated": "2025-08-25T23:46:44\u002b02:00",
-    "datePublished": "2025-08-25T23:46:44\u002b02:00",
+    "dateCreated": "2025-08-26T01:09:06\u002b02:00",
+    "datePublished": "2025-08-26T01:09:06\u002b02:00",
     
-    "dateModified": "2025-08-25T23:46:44\u002b02:00",
+    "dateModified": "2025-08-26T01:09:06\u002b02:00",
     
-    "keywords": ["kubernetes","k3s","software","homelab"],
+    "keywords": ["kubernetes","k3s","gitops","argocd","helm","kustomize","homelab","produktion"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "292"
+    "wordCount": "284"
   }]
   </script>
 
@@ -624,14 +626,14 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   
   <li class="inline">
     <a class="hover:underline decoration-neutral-300 dark:underline-neutral-600" href="/posts/homelab/k3s-prod/"
-      >k3s Cluster</a
+      >k3s-prod: Kubernetes Cluster Konfiguration und Anwendungsbereitstellung</a
     ><span class="px-1 text-primary-500">/</span>
   </li>
 
   
   <li class="hidden">
     <a class="hover:underline decoration-neutral-300 dark:underline-neutral-600" href="/posts/homelab/k3s-prod/apps/zyria-de/readme/"
-      >zyria.de Website</a
+      >zyria.de Webseite</a
     ><span class="px-1 text-primary-500">/</span>
   </li>
 
@@ -640,7 +642,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
 
       
       <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
-        zyria.de Website
+        zyria.de Webseite
       </h1>
       <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
         
@@ -695,7 +697,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2025-08-25T23:46:44&#43;02:00">25 August 2025</time><span class="px-2 text-primary-500">&middot;</span><span>292 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
+      <time datetime="2025-08-26T01:09:06&#43;02:00">26 August 2025</time><span class="px-2 text-primary-500">&middot;</span><span>284 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
 
 
   
@@ -801,11 +803,41 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
 </a
               >
             
-              <a class="relative mt-[0.5rem] mr-2" href="/tags/software/"
+              <a class="relative mt-[0.5rem] mr-2" href="/tags/gitops/"
                 ><span class="flex cursor-pointer">
   <span
     class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-    Software
+    Gitops
+  </span>
+</span>
+</a
+              >
+            
+              <a class="relative mt-[0.5rem] mr-2" href="/tags/argocd/"
+                ><span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Argocd
+  </span>
+</span>
+</a
+              >
+            
+              <a class="relative mt-[0.5rem] mr-2" href="/tags/helm/"
+                ><span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Helm
+  </span>
+</span>
+</a
+              >
+            
+              <a class="relative mt-[0.5rem] mr-2" href="/tags/kustomize/"
+                ><span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Kustomize
   </span>
 </span>
 </a
@@ -816,6 +848,16 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   <span
     class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
     Homelab
+  </span>
+</span>
+</a
+              >
+            
+              <a class="relative mt-[0.5rem] mr-2" href="/tags/produktion/"
+                ><span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Produktion
   </span>
 </span>
 </a
@@ -858,7 +900,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
     class="min-w-[220px] py-2 border-dotted ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#zyriade-website">zyria.de Website</a>
+    <li><a href="#zyriade-webseite">zyria.de Webseite</a>
       <ul>
         <li><a href="#status">Status</a></li>
         <li><a href="#deployment">Deployment</a></li>
@@ -887,7 +929,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
     class="py-2 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#zyriade-website">zyria.de Website</a>
+    <li><a href="#zyriade-webseite">zyria.de Webseite</a>
       <ul>
         <li><a href="#status">Status</a></li>
         <li><a href="#deployment">Deployment</a></li>
@@ -1004,16 +1046,16 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
 
         <div class="article-content max-w-prose mb-20">
           
-<h2 class="relative group">zyria.de Website 
-    <div id="zyriade-website" class="anchor"></div>
+<h2 class="relative group">zyria.de Webseite 
+    <div id="zyriade-webseite" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#zyriade-website" aria-label="Anker">#</a>
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#zyriade-webseite" aria-label="Anker">#</a>
     </span>        
     
 </h2>
-<p>This application serves the static website for <code>zyria.de</code>. The content is synchronized from a Git repository using <code>git-sync</code>.</p>
+<p>Diese Anwendung stellt die statische Webseite für <code>zyria.de</code> bereit. Der Inhalt wird aus einem Git-Repository mittels <code>git-sync</code> synchronisiert.</p>
 
 <h3 class="relative group">Status 
     <div id="status" class="anchor"></div>
@@ -1136,7 +1178,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
     
 </h3>
 <p>Die Anwendung wird als generisches <code>app-template</code> Helm-Chart von <a
-  href="https://bjw-s-labs.github.io/helm-charts"
+  href="https://bjw-s.github.io/helm-charts"
     target="_blank"
   >BJW-S Labs</a> bereitgestellt.
 Es wird ein Webserver (Nginx) installiert, welcher eine statische Seite ausliefert.</p>
@@ -1226,9 +1268,9 @@ Es wird ein Webserver (Nginx) installiert, welcher eine statische Seite ausliefe
     
 </h3>
 <ul>
-<li>A running Kubernetes cluster.</li>
-<li>A configured Ingress controller (e.g., Traefik).</li>
-<li>A certificate management solution (e.g., cert-manager) to provide TLS certificates, as configured in <code>certs.yaml</code>.</li>
+<li>Ein laufender Kubernetes-Cluster.</li>
+<li>Ein konfigurierter Ingress-Controller (z.B. Traefik).</li>
+<li>Eine Zertifikatsmanagement-Lösung (z.B. cert-manager) zur Bereitstellung von TLS-Zertifikaten.</li>
 </ul>
 
           
@@ -1238,7 +1280,7 @@ Es wird ein Webserver (Nginx) installiert, welcher eine statische Seite ausliefe
               <a
                 target="_blank"
                 class="m-1 rounded bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-                href="mailto:fabrice@zyria.de?subject=Reply%20to%20zyria.de%20Website">
+                href="mailto:fabrice@zyria.de?subject=Reply%20to%20zyria.de%20Webseite">
                 Reply by Email
               </a>
             </strong>
@@ -1448,7 +1490,7 @@ Es wird ein Webserver (Nginx) installiert, welcher eine statische Seite ausliefe
                 >
                 <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
                   
-                    <time datetime="2025-08-25T23:46:44&#43;02:00">25 August 2025</time>
+                    <time datetime="2025-08-26T01:09:06&#43;02:00">26 August 2025</time>
                   
                 </span>
               </span>
