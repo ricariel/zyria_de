@@ -121,8 +121,8 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   <meta property="og:locale" content="de_de">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
-    <meta property="article:published_time" content="2025-08-25T10:41:32+02:00">
-    <meta property="article:modified_time" content="2025-08-25T10:41:32+02:00">
+    <meta property="article:published_time" content="2025-08-25T23:46:44+02:00">
+    <meta property="article:modified_time" content="2025-08-25T23:46:44+02:00">
     <meta property="article:tag" content="Kubernetes">
     <meta property="article:tag" content="K3s">
     <meta property="article:tag" content="Software">
@@ -149,15 +149,15 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
       "name": "Fabrice Kirchner"
     },
     "copyrightYear": "2025",
-    "dateCreated": "2025-08-25T10:41:32\u002b02:00",
-    "datePublished": "2025-08-25T10:41:32\u002b02:00",
+    "dateCreated": "2025-08-25T23:46:44\u002b02:00",
+    "datePublished": "2025-08-25T23:46:44\u002b02:00",
     
-    "dateModified": "2025-08-25T10:41:32\u002b02:00",
+    "dateModified": "2025-08-25T23:46:44\u002b02:00",
     
     "keywords": ["kubernetes","k3s","software","homelab"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "279"
+    "wordCount": "351"
   }]
   </script>
 
@@ -695,7 +695,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2025-08-25T10:41:32&#43;02:00">25 August 2025</time><span class="px-2 text-primary-500">&middot;</span><span>279 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
+      <time datetime="2025-08-25T23:46:44&#43;02:00">25 August 2025</time><span class="px-2 text-primary-500">&middot;</span><span>351 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
 
 
   
@@ -858,15 +858,20 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
     class="min-w-[220px] py-2 border-dotted ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#traefik-ingress-controller">Traefik Ingress Controller</a>
+    <li><a href="#traefik">Traefik</a>
       <ul>
         <li><a href="#status">Status</a></li>
-        <li><a href="#source">Source</a></li>
-        <li><a href="#documentation">Documentation</a></li>
-        <li><a href="#function">Function</a></li>
-        <li><a href="#local-modifications">Local modifications</a></li>
+        <li><a href="#deployment">Deployment</a></li>
+        <li><a href="#quelle">Quelle</a></li>
+        <li><a href="#dokumentation">Dokumentation</a></li>
+        <li><a href="#funktion">Funktion</a></li>
+        <li><a href="#lokale-anpassungen">Lokale Anpassungen</a>
+          <ul>
+            <li><a href="#wichtige-einstellungen">Wichtige Einstellungen</a></li>
+          </ul>
+        </li>
         <li><a href="#installation">Installation</a></li>
-        <li><a href="#dependencies">Dependencies</a></li>
+        <li><a href="#abhängigkeiten">Abhängigkeiten</a></li>
       </ul>
     </li>
   </ul>
@@ -882,15 +887,20 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
     class="py-2 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#traefik-ingress-controller">Traefik Ingress Controller</a>
+    <li><a href="#traefik">Traefik</a>
       <ul>
         <li><a href="#status">Status</a></li>
-        <li><a href="#source">Source</a></li>
-        <li><a href="#documentation">Documentation</a></li>
-        <li><a href="#function">Function</a></li>
-        <li><a href="#local-modifications">Local modifications</a></li>
+        <li><a href="#deployment">Deployment</a></li>
+        <li><a href="#quelle">Quelle</a></li>
+        <li><a href="#dokumentation">Dokumentation</a></li>
+        <li><a href="#funktion">Funktion</a></li>
+        <li><a href="#lokale-anpassungen">Lokale Anpassungen</a>
+          <ul>
+            <li><a href="#wichtige-einstellungen">Wichtige Einstellungen</a></li>
+          </ul>
+        </li>
         <li><a href="#installation">Installation</a></li>
-        <li><a href="#dependencies">Dependencies</a></li>
+        <li><a href="#abhängigkeiten">Abhängigkeiten</a></li>
       </ul>
     </li>
   </ul>
@@ -994,12 +1004,12 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
 
         <div class="article-content max-w-prose mb-20">
           
-<h2 class="relative group">Traefik Ingress Controller 
-    <div id="traefik-ingress-controller" class="anchor"></div>
+<h2 class="relative group">Traefik 
+    <div id="traefik" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#traefik-ingress-controller" aria-label="Anker">#</a>
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#traefik" aria-label="Anker">#</a>
     </span>        
     
 </h2>
@@ -1022,7 +1032,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
 
 
 <figure>
-    <img class="my-0 rounded-md" loading="lazy" alt="Status" src="https://status.zyria.de/api/badge/XXX/status">
+    <img class="my-0 rounded-md" loading="lazy" alt="Status" src="https://status.zyria.de/api/badge/85/status">
 
   
 </figure>
@@ -1035,7 +1045,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
 
 
 <figure>
-    <img class="my-0 rounded-md" loading="lazy" alt="Uptime" src="https://status.zyria.de/api/badge/XXX/uptime">
+    <img class="my-0 rounded-md" loading="lazy" alt="Uptime" src="https://status.zyria.de/api/badge/85/uptime">
 
   
 </figure>
@@ -1048,7 +1058,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
 
 
 <figure>
-    <img class="my-0 rounded-md" loading="lazy" alt="Ping" src="https://status.zyria.de/api/badge/XXX/ping">
+    <img class="my-0 rounded-md" loading="lazy" alt="Ping" src="https://status.zyria.de/api/badge/85/ping">
 
   
 </figure>
@@ -1061,7 +1071,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
 
 
 <figure>
-    <img class="my-0 rounded-md" loading="lazy" alt="Avg Response Time" src="https://status.zyria.de/api/badge/XXX/avg-response">
+    <img class="my-0 rounded-md" loading="lazy" alt="Avg Response Time" src="https://status.zyria.de/api/badge/85/avg-response">
 
   
 </figure>
@@ -1074,7 +1084,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
 
 
 <figure>
-    <img class="my-0 rounded-md" loading="lazy" alt="Certificate Expiration" src="https://status.zyria.de/api/badge/XXX/cert-exp">
+    <img class="my-0 rounded-md" loading="lazy" alt="Certificate Expiration" src="https://status.zyria.de/api/badge/85/cert-exp">
 
   
 </figure>
@@ -1087,76 +1097,112 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
 
 
 <figure>
-    <img class="my-0 rounded-md" loading="lazy" alt="Response Time" src="https://status.zyria.de/api/badge/XXX/response">
+    <img class="my-0 rounded-md" loading="lazy" alt="Response Time" src="https://status.zyria.de/api/badge/85/response">
 
   
 </figure>
 </p>
 
-<h3 class="relative group">Source 
-    <div id="source" class="anchor"></div>
+<h3 class="relative group">Deployment 
+    <div id="deployment" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#source" aria-label="Anker">#</a>
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#deployment" aria-label="Anker">#</a>
     </span>        
     
 </h3>
-<p>The project is based on the <a
-  href="https://traefik.io/"
-    target="_blank"
-  >Traefik Official Website</a>.
-The Helm chart is from the <a
+<p>
+
+
+
+
+
+
+<figure>
+    <img class="my-0 rounded-md" loading="lazy" alt="Argo Deployment" src="https://argocd.zyria.de/api/badge?name=traefik&amp;revision=true&amp;showAppName=true&amp;width=150">
+
+  
+</figure>
+</p>
+
+<h3 class="relative group">Quelle 
+    <div id="quelle" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#quelle" aria-label="Anker">#</a>
+    </span>        
+    
+</h3>
+<p>Die Anwendung wird als Helm-Chart von <a
   href="https://traefik.github.io/charts"
     target="_blank"
-  >Traefik Helm Charts repository</a>.</p>
+  >Traefik Labs</a> bezogen.</p>
 
-<h3 class="relative group">Documentation 
-    <div id="documentation" class="anchor"></div>
+<h3 class="relative group">Dokumentation 
+    <div id="dokumentation" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#documentation" aria-label="Anker">#</a>
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#dokumentation" aria-label="Anker">#</a>
     </span>        
     
 </h3>
-<ul>
-<li><a
+<p>Die offizielle Dokumentation von Traefik ist unter <a
   href="https://doc.traefik.io/traefik/"
     target="_blank"
-  >Traefik Documentation</a></li>
+  >doc.traefik.io/traefik/</a> zu finden.</p>
+<ul>
 <li><a
   href="https://github.com/traefik/traefik"
     target="_blank"
   >Traefik GitHub Repository</a></li>
 </ul>
 
-<h3 class="relative group">Function 
-    <div id="function" class="anchor"></div>
+<h3 class="relative group">Funktion 
+    <div id="funktion" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#function" aria-label="Anker">#</a>
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#funktion" aria-label="Anker">#</a>
     </span>        
     
 </h3>
-<p>This service acts as the Ingress Controller for the Kubernetes cluster, routing external traffic to the appropriate services. It handles SSL termination, load balancing, and applies various middlewares for security and traffic management. It also exposes the Traefik dashboard for monitoring and management.</p>
+<p>Traefik ist das &ldquo;Eingangstor&rdquo; zum Kubernetes-Cluster. Es lauscht auf den Ports 80 und 443 auf den Cluster-Nodes und leitet eingehende HTTP/S-Anfragen basierend auf dem Hostnamen und dem Pfad an den richtigen internen Service weiter. Die Konfiguration erfolgt dynamisch: Traefik überwacht die Kubernetes-API auf <code>Ingress</code>- und <code>IngressRoute</code>-Ressourcen und passt seine Routing-Regeln automatisch an, wenn neue Dienste bereitgestellt oder entfernt werden.</p>
 
-<h3 class="relative group">Local modifications 
-    <div id="local-modifications" class="anchor"></div>
+<h3 class="relative group">Lokale Anpassungen 
+    <div id="lokale-anpassungen" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#local-modifications" aria-label="Anker">#</a>
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#lokale-anpassungen" aria-label="Anker">#</a>
     </span>        
     
 </h3>
+<p>Die Konfiguration erfolgt über die <code>values.yaml</code>- und <code>middlewares.yaml</code>-Dateien.</p>
+
+<h4 class="relative group">Wichtige Einstellungen 
+    <div id="wichtige-einstellungen" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#wichtige-einstellungen" aria-label="Anker">#</a>
+    </span>        
+    
+</h4>
 <ul>
-<li>The <code>values.yaml</code> file configures Traefik to use Kubernetes Ingress, CRD, and Gateway API providers. It defines various entrypoints (web, websecure, alternate ports, and a specific one for Synapse).</li>
-<li>It uses MetalLB for LoadBalancer IP allocation for the main Traefik service.</li>
-<li>Custom <code>IngressRoute</code> resources are defined for the Traefik dashboard and for exposing an external Proxmox VE instance.</li>
-<li>Several custom <code>Middleware</code> resources are defined for IP filtering, HTTP to HTTPS redirection, security headers, basic authentication, and integration with Authentik.</li>
-<li>The <code>traefik-services-ip.yaml</code> defines a dedicated LoadBalancer service for Traefik.</li>
+<li><strong>Deployment-Art</strong>: Traefik wird als <code>DaemonSet</code> bereitgestellt. Das bedeutet, dass auf jedem Node im Cluster ein Traefik-Pod läuft, was für eine hohe Verfügbarkeit und eine gleichmäßige Verteilung des eingehenden Traffics sorgt.</li>
+<li><strong>EntryPoints</strong>: Es sind drei EntryPoints definiert:
+<ul>
+<li><code>web</code> (Port 80): Für unverschlüsselten HTTP-Traffic (wird typischerweise auf HTTPS umgeleitet).</li>
+<li><code>websecure</code> (Port 443): Für verschlüsselten HTTPS-Traffic.</li>
+<li><code>synapse</code> (Port 8448): Ein dedizierter TCP-EntryPoint für die Matrix-Synapse-Föderation.</li>
+</ul>
+</li>
+<li><strong>Provider</strong>: Sowohl der <code>kubernetesCRD</code>-Provider (für <code>IngressRoute</code>, <code>Middleware</code>, etc.) als auch der <code>kubernetesIngress</code>-Provider (für Standard-<code>Ingress</code>-Ressourcen) sind aktiviert.</li>
+<li><strong>Middlewares</strong>: In <code>middlewares.yaml</code> werden globale Middlewares definiert, die auf IngressRoutes angewendet werden können. Dazu gehören wahrscheinlich Middlewares für die Authentifizierung über Authentik oder für die Beschränkung des Zugriffs auf lokale Netzwerke.</li>
+<li><strong>Persistenz</strong>: Persistenz ist aktiviert, um z.B. ACME-Zertifikate (von Let&rsquo;s Encrypt) zu speichern.</li>
 </ul>
 
 <h3 class="relative group">Installation 
@@ -1168,17 +1214,15 @@ The Helm chart is from the <a
     </span>        
     
 </h3>
-<p>The service is deployed as a Helm chart from the <a
-  href="https://traefik.github.io/charts"
-    target="_blank"
-  >Traefik Helm Charts repository</a>. The deployment, including custom resources, is managed by the <code>kustomization.yaml</code> file.</p>
-
-<h3 class="relative group">Dependencies 
-    <div id="dependencies" class="anchor"></div>
+<p>Die Anwendung wird mittels Kustomize und Helm durch ArgoCD im Kubernetes-Cluster bereitgestellt. Die Konfiguration befindet sich im <code>apps/traefik</code>-Verzeichnis. Eine manuelle Installation kann mit folgendem Befehl durchgeführt werden:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">kubectl kustomize --enable-helm apps/traefik <span class="p">|</span> kubectl apply -n kube-system -f -
+</span></span></code></pre></div>
+<h3 class="relative group">Abhängigkeiten 
+    <div id="abhängigkeiten" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#dependencies" aria-label="Anker">#</a>
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#abh%c3%a4ngigkeiten" aria-label="Anker">#</a>
     </span>        
     
 </h3>
@@ -1412,7 +1456,7 @@ The Helm chart is from the <a
                 >
                 <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
                   
-                    <time datetime="2025-08-25T10:41:32&#43;02:00">25 August 2025</time>
+                    <time datetime="2025-08-25T23:46:44&#43;02:00">25 August 2025</time>
                   
                 </span>
               </span>
@@ -1428,7 +1472,7 @@ The Helm chart is from the <a
                 >
                 <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
                   
-                    <time datetime="2025-08-25T10:41:32&#43;02:00">25 August 2025</time>
+                    <time datetime="2025-08-25T23:46:44&#43;02:00">25 August 2025</time>
                   
                 </span>
               </span>

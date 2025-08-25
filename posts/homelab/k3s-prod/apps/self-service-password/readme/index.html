@@ -14,8 +14,8 @@
   <meta name="theme-color">
 
   
-  <title>Self-Service Password &middot; Zyria</title>
-    <meta name="title" content="Self-Service Password &middot; Zyria">
+  <title>Self Service Password &middot; Zyria</title>
+    <meta name="title" content="Self Service Password &middot; Zyria">
 
   
   <meta name="description" content="This document describes the deployment of LTB Self-Service Password, a web application for users to manage their own passwords in an LDAP directory.">
@@ -116,13 +116,13 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   
   <meta property="og:url" content="https://www.zyria.de/posts/homelab/k3s-prod/apps/self-service-password/readme/">
   <meta property="og:site_name" content="Zyria">
-  <meta property="og:title" content="Self-Service Password">
+  <meta property="og:title" content="Self Service Password">
   <meta property="og:description" content="Documentation for the Self-Service Password deployment">
   <meta property="og:locale" content="de_de">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
-    <meta property="article:published_time" content="2025-08-25T10:41:32+02:00">
-    <meta property="article:modified_time" content="2025-08-25T10:41:32+02:00">
+    <meta property="article:published_time" content="2025-08-25T23:46:44+02:00">
+    <meta property="article:modified_time" content="2025-08-25T23:46:44+02:00">
     <meta property="article:tag" content="Kubernetes">
     <meta property="article:tag" content="K3s">
     <meta property="article:tag" content="Software">
@@ -130,7 +130,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
 
   
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Self-Service Password">
+  <meta name="twitter:title" content="Self Service Password">
   <meta name="twitter:description" content="Documentation for the Self-Service Password deployment">
 
   <script type="application/ld+json">
@@ -138,8 +138,8 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
     "@context": "https://schema.org",
     "@type": "Article",
     "articleSection": "Beiträge",
-    "name": "Self-Service Password",
-    "headline": "Self-Service Password",
+    "name": "Self Service Password",
+    "headline": "Self Service Password",
     "description": "Documentation for the Self-Service Password deployment",
     "abstract": "This document describes the deployment of LTB Self-Service Password, a web application for users to manage their own passwords in an LDAP directory.",
     "inLanguage": "de-de",
@@ -149,15 +149,15 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
       "name": "Fabrice Kirchner"
     },
     "copyrightYear": "2025",
-    "dateCreated": "2025-08-25T10:41:32\u002b02:00",
-    "datePublished": "2025-08-25T10:41:32\u002b02:00",
+    "dateCreated": "2025-08-25T23:46:44\u002b02:00",
+    "datePublished": "2025-08-25T23:46:44\u002b02:00",
     
-    "dateModified": "2025-08-25T10:41:32\u002b02:00",
+    "dateModified": "2025-08-25T23:46:44\u002b02:00",
     
     "keywords": ["kubernetes","k3s","software","homelab"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "222"
+    "wordCount": "308"
   }]
   </script>
 
@@ -631,7 +631,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   
   <li class="hidden">
     <a class="hover:underline decoration-neutral-300 dark:underline-neutral-600" href="/posts/homelab/k3s-prod/apps/self-service-password/readme/"
-      >Self-Service Password</a
+      >Self Service Password</a
     ><span class="px-1 text-primary-500">/</span>
   </li>
 
@@ -640,7 +640,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
 
       
       <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
-        Self-Service Password
+        Self Service Password
       </h1>
       <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
         
@@ -695,7 +695,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2025-08-25T10:41:32&#43;02:00">25 August 2025</time><span class="px-2 text-primary-500">&middot;</span><span>222 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
+      <time datetime="2025-08-25T23:46:44&#43;02:00">25 August 2025</time><span class="px-2 text-primary-500">&middot;</span><span>308 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
 
 
   
@@ -858,15 +858,20 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
     class="min-w-[220px] py-2 border-dotted ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#self-service-password">Self-Service Password</a>
+    <li><a href="#self-service-password">Self Service Password</a>
       <ul>
         <li><a href="#status">Status</a></li>
-        <li><a href="#source">Source</a></li>
-        <li><a href="#documentation">Documentation</a></li>
-        <li><a href="#function">Function</a></li>
-        <li><a href="#local-modifications">Local modifications</a></li>
+        <li><a href="#deployment">Deployment</a></li>
+        <li><a href="#quelle">Quelle</a></li>
+        <li><a href="#dokumentation">Dokumentation</a></li>
+        <li><a href="#funktion">Funktion</a></li>
+        <li><a href="#lokale-anpassungen">Lokale Anpassungen</a>
+          <ul>
+            <li><a href="#wichtige-einstellungen">Wichtige Einstellungen</a></li>
+          </ul>
+        </li>
         <li><a href="#installation">Installation</a></li>
-        <li><a href="#dependencies">Dependencies</a></li>
+        <li><a href="#abhängigkeiten">Abhängigkeiten</a></li>
       </ul>
     </li>
   </ul>
@@ -882,15 +887,20 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
     class="py-2 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#self-service-password">Self-Service Password</a>
+    <li><a href="#self-service-password">Self Service Password</a>
       <ul>
         <li><a href="#status">Status</a></li>
-        <li><a href="#source">Source</a></li>
-        <li><a href="#documentation">Documentation</a></li>
-        <li><a href="#function">Function</a></li>
-        <li><a href="#local-modifications">Local modifications</a></li>
+        <li><a href="#deployment">Deployment</a></li>
+        <li><a href="#quelle">Quelle</a></li>
+        <li><a href="#dokumentation">Dokumentation</a></li>
+        <li><a href="#funktion">Funktion</a></li>
+        <li><a href="#lokale-anpassungen">Lokale Anpassungen</a>
+          <ul>
+            <li><a href="#wichtige-einstellungen">Wichtige Einstellungen</a></li>
+          </ul>
+        </li>
         <li><a href="#installation">Installation</a></li>
-        <li><a href="#dependencies">Dependencies</a></li>
+        <li><a href="#abhängigkeiten">Abhängigkeiten</a></li>
       </ul>
     </li>
   </ul>
@@ -994,7 +1004,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
 
         <div class="article-content max-w-prose mb-20">
           
-<h2 class="relative group">Self-Service Password 
+<h2 class="relative group">Self Service Password 
     <div id="self-service-password" class="anchor"></div>
     
     <span
@@ -1022,7 +1032,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
 
 
 <figure>
-    <img class="my-0 rounded-md" loading="lazy" alt="Status" src="https://status.zyria.de/api/badge/XXX/status">
+    <img class="my-0 rounded-md" loading="lazy" alt="Status" src="https://status.zyria.de/api/badge/170/status">
 
   
 </figure>
@@ -1035,7 +1045,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
 
 
 <figure>
-    <img class="my-0 rounded-md" loading="lazy" alt="Uptime" src="https://status.zyria.de/api/badge/XXX/uptime">
+    <img class="my-0 rounded-md" loading="lazy" alt="Uptime" src="https://status.zyria.de/api/badge/170/uptime">
 
   
 </figure>
@@ -1048,7 +1058,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
 
 
 <figure>
-    <img class="my-0 rounded-md" loading="lazy" alt="Ping" src="https://status.zyria.de/api/badge/XXX/ping">
+    <img class="my-0 rounded-md" loading="lazy" alt="Ping" src="https://status.zyria.de/api/badge/170/ping">
 
   
 </figure>
@@ -1061,7 +1071,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
 
 
 <figure>
-    <img class="my-0 rounded-md" loading="lazy" alt="Avg Response Time" src="https://status.zyria.de/api/badge/XXX/avg-response">
+    <img class="my-0 rounded-md" loading="lazy" alt="Avg Response Time" src="https://status.zyria.de/api/badge/170/avg-response">
 
   
 </figure>
@@ -1074,7 +1084,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
 
 
 <figure>
-    <img class="my-0 rounded-md" loading="lazy" alt="Certificate Expiration" src="https://status.zyria.de/api/badge/XXX/cert-exp">
+    <img class="my-0 rounded-md" loading="lazy" alt="Certificate Expiration" src="https://status.zyria.de/api/badge/170/cert-exp">
 
   
 </figure>
@@ -1087,22 +1097,49 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
 
 
 <figure>
-    <img class="my-0 rounded-md" loading="lazy" alt="Response Time" src="https://status.zyria.de/api/badge/XXX/response">
+    <img class="my-0 rounded-md" loading="lazy" alt="Response Time" src="https://status.zyria.de/api/badge/170/response">
 
   
 </figure>
 </p>
 
-<h3 class="relative group">Source 
-    <div id="source" class="anchor"></div>
+<h3 class="relative group">Deployment 
+    <div id="deployment" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#source" aria-label="Anker">#</a>
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#deployment" aria-label="Anker">#</a>
     </span>        
     
 </h3>
-<p>The project is part of the <a
+<p>
+
+
+
+
+
+
+<figure>
+    <img class="my-0 rounded-md" loading="lazy" alt="Argo Deployment" src="https://argocd.zyria.de/api/badge?name=self-service-password&amp;revision=true&amp;showAppName=true&amp;width=150">
+
+  
+</figure>
+</p>
+
+<h3 class="relative group">Quelle 
+    <div id="quelle" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#quelle" aria-label="Anker">#</a>
+    </span>        
+    
+</h3>
+<p>Die Anwendung wird als generisches <code>app-template</code> Helm-Chart von <a
+  href="https://bjw-s-labs.github.io/helm-charts"
+    target="_blank"
+  >BJW-S Labs</a> bereitgestellt. Das verwendete Docker-Image ist <code>ldaptive/self-service-password</code>.
+The project is part of the <a
   href="https://ltb-project.org/"
     target="_blank"
   >LDAP Tool Box (LTB) project</a>.
@@ -1111,49 +1148,55 @@ The Docker image used is <a
     target="_blank"
   >docker.io/ltbproject/self-service-password</a>.</p>
 
-<h3 class="relative group">Documentation 
-    <div id="documentation" class="anchor"></div>
+<h3 class="relative group">Dokumentation 
+    <div id="dokumentation" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#documentation" aria-label="Anker">#</a>
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#dokumentation" aria-label="Anker">#</a>
     </span>        
     
 </h3>
-<ul>
-<li><a
+<p>Die Dokumentation für Self Service Password ist auf der <a
   href="https://ltb-project.org/documentation/self-service-password"
     target="_blank"
-  >LTB Self-Service Password Official Website</a></li>
-<li><a
-  href="https://github.com/ltb-project/self-service-password"
-    target="_blank"
-  >GitHub Repository</a></li>
-</ul>
+  >Projekt-Webseite</a> zu finden.</p>
 
-<h3 class="relative group">Function 
-    <div id="function" class="anchor"></div>
+<h3 class="relative group">Funktion 
+    <div id="funktion" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#function" aria-label="Anker">#</a>
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#funktion" aria-label="Anker">#</a>
     </span>        
     
 </h3>
-<p>This service provides a web interface for users to securely change their LDAP passwords. It supports various LDAP directories, including Active Directory, and can enforce password policies. It is accessible at <code>ssp.zyria.de</code>.</p>
+<p>Diese Anwendung stellt eine einfache Weboberfläche zur Verfügung, auf der Benutzer ihren Benutzernamen eingeben können. Wenn der Benutzer im angebundenen LDAP-Verzeichnis gefunden wird, sendet die Anwendung eine E-Mail mit einem Token an die hinterlegte E-Mail-Adresse. Mit diesem Token kann der Benutzer dann auf einer zweiten Seite ein neues Passwort für seinen Account setzen.</p>
 
-<h3 class="relative group">Local modifications 
-    <div id="local-modifications" class="anchor"></div>
+<h3 class="relative group">Lokale Anpassungen 
+    <div id="lokale-anpassungen" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#local-modifications" aria-label="Anker">#</a>
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#lokale-anpassungen" aria-label="Anker">#</a>
     </span>        
     
 </h3>
+<p>Die Konfiguration erfolgt über die <code>values.yaml</code>-Datei, in der die Konfigurationsdatei <code>config.php</code> als ConfigMap definiert ist.</p>
+
+<h4 class="relative group">Wichtige Einstellungen 
+    <div id="wichtige-einstellungen" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#wichtige-einstellungen" aria-label="Anker">#</a>
+    </span>        
+    
+</h4>
 <ul>
-<li>The <code>values.yaml</code> file contains the configuration for the Self-Service Password application, including LDAP server details, bind credentials, and password policy settings.</li>
-<li>The <code>ssp.conf.php</code> file, which holds the main configuration, is managed as a ConfigMap and mounted into the container.</li>
+<li><strong>Ingress</strong>: Der Zugriff auf die Weboberfläche wird über einen Ingress mit dem Hostnamen <code>ssp.zyria.de</code> ermöglicht.</li>
+<li><strong>LDAP-Konfiguration</strong>: Die <code>config.php</code> enthält alle notwendigen Parameter für die Verbindung zum LDAP-Server, einschließlich Host, Port, Bind-DN und Such-Basis.</li>
+<li><strong>SMTP-Konfiguration</strong>: In der <code>config.php</code> sind ebenfalls die SMTP-Server-Einstellungen für den Versand der Token-E-Mails hinterlegt.</li>
 </ul>
 
 <h3 class="relative group">Installation 
@@ -1165,17 +1208,15 @@ The Docker image used is <a
     </span>        
     
 </h3>
-<p>The service is deployed as a Helm chart using the <code>app-template</code> from the <a
-  href="https://bjw-s.github.io/helm-charts/"
-    target="_blank"
-  >bjw-s-labs repository</a>. The deployment is managed by the <code>kustomization.yaml</code> file.</p>
-
-<h3 class="relative group">Dependencies 
-    <div id="dependencies" class="anchor"></div>
+<p>Die Anwendung wird mittels Kustomize und Helm durch ArgoCD im Kubernetes-Cluster bereitgestellt. Die Konfiguration befindet sich im <code>apps/self-service-password</code>-Verzeichnis. Eine manuelle Installation kann mit folgendem Befehl durchgeführt werden:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">kubectl kustomize --enable-helm apps/self-service-password <span class="p">|</span> kubectl apply -n self-service-password -f -
+</span></span></code></pre></div>
+<h3 class="relative group">Abhängigkeiten 
+    <div id="abhängigkeiten" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#dependencies" aria-label="Anker">#</a>
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#abh%c3%a4ngigkeiten" aria-label="Anker">#</a>
     </span>        
     
 </h3>
@@ -1194,7 +1235,7 @@ The Docker image used is <a
               <a
                 target="_blank"
                 class="m-1 rounded bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-                href="mailto:fabrice@zyria.de?subject=Reply%20to%20Self-Service%20Password">
+                href="mailto:fabrice@zyria.de?subject=Reply%20to%20Self%20Service%20Password">
                 Reply by Email
               </a>
             </strong>
@@ -1409,7 +1450,7 @@ The Docker image used is <a
                 >
                 <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
                   
-                    <time datetime="2025-08-25T10:41:32&#43;02:00">25 August 2025</time>
+                    <time datetime="2025-08-25T23:46:44&#43;02:00">25 August 2025</time>
                   
                 </span>
               </span>
@@ -1425,7 +1466,7 @@ The Docker image used is <a
                 >
                 <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
                   
-                    <time datetime="2025-08-25T10:41:32&#43;02:00">25 August 2025</time>
+                    <time datetime="2025-08-25T23:46:44&#43;02:00">25 August 2025</time>
                   
                 </span>
               </span>

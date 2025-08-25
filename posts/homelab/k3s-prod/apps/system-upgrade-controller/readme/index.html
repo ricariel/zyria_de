@@ -121,8 +121,8 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   <meta property="og:locale" content="de_de">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
-    <meta property="article:published_time" content="2025-08-25T10:41:32+02:00">
-    <meta property="article:modified_time" content="2025-08-25T10:41:32+02:00">
+    <meta property="article:published_time" content="2025-08-25T23:46:44+02:00">
+    <meta property="article:modified_time" content="2025-08-25T23:46:44+02:00">
     <meta property="article:tag" content="Kubernetes">
     <meta property="article:tag" content="K3s">
     <meta property="article:tag" content="Software">
@@ -149,15 +149,15 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
       "name": "Fabrice Kirchner"
     },
     "copyrightYear": "2025",
-    "dateCreated": "2025-08-25T10:41:32\u002b02:00",
-    "datePublished": "2025-08-25T10:41:32\u002b02:00",
+    "dateCreated": "2025-08-25T23:46:44\u002b02:00",
+    "datePublished": "2025-08-25T23:46:44\u002b02:00",
     
-    "dateModified": "2025-08-25T10:41:32\u002b02:00",
+    "dateModified": "2025-08-25T23:46:44\u002b02:00",
     
     "keywords": ["kubernetes","k3s","software","homelab"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "181"
+    "wordCount": "292"
   }]
   </script>
 
@@ -695,7 +695,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2025-08-25T10:41:32&#43;02:00">25 August 2025</time><span class="px-2 text-primary-500">&middot;</span><span>181 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
+      <time datetime="2025-08-25T23:46:44&#43;02:00">25 August 2025</time><span class="px-2 text-primary-500">&middot;</span><span>292 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
 
 
   
@@ -860,13 +860,17 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   <ul>
     <li><a href="#system-upgrade-controller">System Upgrade Controller</a>
       <ul>
-        <li><a href="#status">Status</a></li>
-        <li><a href="#source">Source</a></li>
-        <li><a href="#documentation">Documentation</a></li>
-        <li><a href="#function">Function</a></li>
-        <li><a href="#local-modifications">Local modifications</a></li>
+        <li><a href="#deployment">Deployment</a></li>
+        <li><a href="#quelle">Quelle</a></li>
+        <li><a href="#dokumentation">Dokumentation</a></li>
+        <li><a href="#funktion">Funktion</a></li>
+        <li><a href="#lokale-anpassungen">Lokale Anpassungen</a>
+          <ul>
+            <li><a href="#wichtige-einstellungen">Wichtige Einstellungen</a></li>
+          </ul>
+        </li>
         <li><a href="#installation">Installation</a></li>
-        <li><a href="#dependencies">Dependencies</a></li>
+        <li><a href="#abhängigkeiten">Abhängigkeiten</a></li>
       </ul>
     </li>
   </ul>
@@ -884,13 +888,17 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   <ul>
     <li><a href="#system-upgrade-controller">System Upgrade Controller</a>
       <ul>
-        <li><a href="#status">Status</a></li>
-        <li><a href="#source">Source</a></li>
-        <li><a href="#documentation">Documentation</a></li>
-        <li><a href="#function">Function</a></li>
-        <li><a href="#local-modifications">Local modifications</a></li>
+        <li><a href="#deployment">Deployment</a></li>
+        <li><a href="#quelle">Quelle</a></li>
+        <li><a href="#dokumentation">Dokumentation</a></li>
+        <li><a href="#funktion">Funktion</a></li>
+        <li><a href="#lokale-anpassungen">Lokale Anpassungen</a>
+          <ul>
+            <li><a href="#wichtige-einstellungen">Wichtige Einstellungen</a></li>
+          </ul>
+        </li>
         <li><a href="#installation">Installation</a></li>
-        <li><a href="#dependencies">Dependencies</a></li>
+        <li><a href="#abhängigkeiten">Abhängigkeiten</a></li>
       </ul>
     </li>
   </ul>
@@ -1005,12 +1013,12 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
 </h2>
 <p>The Rancher System Upgrade Controller is a Kubernetes-native upgrade controller for nodes. It introduces a new Custom Resource Definition (CRD) called &ldquo;Plan&rdquo; to define upgrade policies, allowing for automated and controlled upgrades of Kubernetes clusters.</p>
 
-<h3 class="relative group">Status 
-    <div id="status" class="anchor"></div>
+<h3 class="relative group">Deployment 
+    <div id="deployment" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#status" aria-label="Anker">#</a>
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#deployment" aria-label="Anker">#</a>
     </span>        
     
 </h3>
@@ -1022,97 +1030,18 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
 
 
 <figure>
-    <img class="my-0 rounded-md" loading="lazy" alt="Status" src="https://status.zyria.de/api/badge/XXX/status">
-
-  
-</figure>
-
-
-
-
-
-
-
-
-<figure>
-    <img class="my-0 rounded-md" loading="lazy" alt="Uptime" src="https://status.zyria.de/api/badge/XXX/uptime">
-
-  
-</figure>
-
-
-
-
-
-
-
-
-<figure>
-    <img class="my-0 rounded-md" loading="lazy" alt="Ping" src="https://status.zyria.de/api/badge/XXX/ping">
-
-  
-</figure>
-
-
-
-
-
-
-
-
-<figure>
-    <img class="my-0 rounded-md" loading="lazy" alt="Avg Response Time" src="https://status.zyria.de/api/badge/XXX/avg-response">
-
-  
-</figure>
-
-
-
-
-
-
-
-
-<figure>
-    <img class="my-0 rounded-md" loading="lazy" alt="Certificate Expiration" src="https://status.zyria.de/api/badge/XXX/cert-exp">
-
-  
-</figure>
-
-
-
-
-
-
-
-
-<figure>
-    <img class="my-0 rounded-md" loading="lazy" alt="Response Time" src="https://status.zyria.de/api/badge/XXX/response">
+    <img class="my-0 rounded-md" loading="lazy" alt="Argo Deployment" src="https://argocd.zyria.de/api/badge?name=system-upgrade-controller&amp;revision=true&amp;showAppName=true&amp;width=150">
 
   
 </figure>
 </p>
 
-<h3 class="relative group">Source 
-    <div id="source" class="anchor"></div>
+<h3 class="relative group">Quelle 
+    <div id="quelle" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#source" aria-label="Anker">#</a>
-    </span>        
-    
-</h3>
-<p>The project is based on the <a
-  href="https://github.com/rancher/system-upgrade-controller"
-    target="_blank"
-  >rancher/system-upgrade-controller</a> GitHub repository.</p>
-
-<h3 class="relative group">Documentation 
-    <div id="documentation" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#documentation" aria-label="Anker">#</a>
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#quelle" aria-label="Anker">#</a>
     </span>        
     
 </h3>
@@ -1127,30 +1056,61 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   >Rancher Documentation on System Upgrade Controller</a></li>
 </ul>
 
-<h3 class="relative group">Function 
-    <div id="function" class="anchor"></div>
+<h3 class="relative group">Dokumentation 
+    <div id="dokumentation" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#function" aria-label="Anker">#</a>
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#dokumentation" aria-label="Anker">#</a>
     </span>        
     
 </h3>
-<p>This controller automates the upgrade process for Kubernetes nodes (both control-plane and agent nodes). It uses &ldquo;Plans&rdquo; to define the upgrade strategy, including the target image, concurrency, and node selection.</p>
+<p>Die Dokumentation für den Controller ist auf <a
+  href="https://github.com/rancher/system-upgrade-controller"
+    target="_blank"
+  >GitHub</a> zu finden.</p>
 
-<h3 class="relative group">Local modifications 
-    <div id="local-modifications" class="anchor"></div>
+<h3 class="relative group">Funktion 
+    <div id="funktion" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#local-modifications" aria-label="Anker">#</a>
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#funktion" aria-label="Anker">#</a>
     </span>        
     
 </h3>
+<p>Dieser Controller automatisiert die Aktualisierung des zugrundeliegenden Kubernetes-Systems (k3s). Er funktioniert, indem er <code>Plan</code>-Custom-Ressourcen überwacht. Ein <code>Plan</code> definiert, wie ein Upgrade durchgeführt werden soll, einschließlich:</p>
 <ul>
-<li>The deployment directly applies YAML manifests from the official GitHub repository.</li>
-<li>A patch is applied to add Keel annotations for automated updates of the controller itself.</li>
-<li>The <code>plan.yaml</code> file defines specific upgrade plans for server and agent nodes, targeting the stable K3s release channel.</li>
+<li><strong>Version</strong>: Die Zielversion von k3s.</li>
+<li><strong>Concurrency</strong>: Wie viele Nodes gleichzeitig aktualisiert werden dürfen.</li>
+<li><strong>Node Selector</strong>: Welche Nodes aktualisiert werden sollen (z.B. zuerst die Control-Plane, dann die Worker).</li>
+<li><strong>Upgrade-Befehl</strong>: Das Skript, das auf dem Node ausgeführt wird, um das Upgrade durchzuführen.</li>
+</ul>
+<p>Wenn ein <code>Plan</code> im Cluster erstellt oder geändert wird, erstellt der Controller für jeden ausgewählten Node einen Job, der den Node sperrt (<code>cordon</code>), die Workloads darauf beendet (<code>drain</code>), das Upgrade-Skript ausführt und den Node anschließend wieder freigibt (<code>uncordon</code>).</p>
+
+<h3 class="relative group">Lokale Anpassungen 
+    <div id="lokale-anpassungen" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#lokale-anpassungen" aria-label="Anker">#</a>
+    </span>        
+    
+</h3>
+<p>Die Konfiguration erfolgt über die <code>values.yaml</code>- und <code>plans.yaml</code>-Dateien.</p>
+
+<h4 class="relative group">Wichtige Einstellungen 
+    <div id="wichtige-einstellungen" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#wichtige-einstellungen" aria-label="Anker">#</a>
+    </span>        
+    
+</h4>
+<ul>
+<li><strong><code>plans.yaml</code></strong>: Diese Datei enthält die eigentlichen Upgrade-Pläne. Es gibt typischerweise separate Pläne für die Control-Plane-Nodes und die Worker-Nodes, um ein gestaffeltes Upgrade zu ermöglichen und die Cluster-Verfügbarkeit zu gewährleisten.</li>
+<li><strong>Tolerations</strong>: Der Controller-Pod hat Tolerations für <code>CriticalAddonsOnly</code>, um sicherzustellen, dass er auch auf dedizierten Control-Plane-Nodes laufen kann.</li>
 </ul>
 
 <h3 class="relative group">Installation 
@@ -1162,20 +1122,19 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
     </span>        
     
 </h3>
-<p>The controller is deployed by applying the YAML manifests directly from the official GitHub repository, as managed by the <code>kustomization.yaml</code> file.</p>
-
-<h3 class="relative group">Dependencies 
-    <div id="dependencies" class="anchor"></div>
+<p>Die Anwendung wird mittels Kustomize und Helm durch ArgoCD im Kubernetes-Cluster bereitgestellt. Die Konfiguration befindet sich im <code>apps/system-upgrade-controller</code>-Verzeichnis. Eine manuelle Installation kann mit folgendem Befehl durchgeführt werden:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">kubectl kustomize --enable-helm apps/system-upgrade-controller <span class="p">|</span> kubectl apply -n system-upgrade -f -
+</span></span></code></pre></div>
+<h3 class="relative group">Abhängigkeiten 
+    <div id="abhängigkeiten" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#dependencies" aria-label="Anker">#</a>
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#abh%c3%a4ngigkeiten" aria-label="Anker">#</a>
     </span>        
     
 </h3>
-<ul>
-<li>A running Kubernetes cluster (specifically designed for K3s upgrades in this configuration).</li>
-</ul>
+<p>Der Controller ist eine eigenständige Anwendung, die tief in die Verwaltung des Kubernetes-Clusters eingreift. Er hat keine externen Anwendungsabhängigkeiten.</p>
 
           
           
@@ -1399,7 +1358,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
                 >
                 <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
                   
-                    <time datetime="2025-08-25T10:41:32&#43;02:00">25 August 2025</time>
+                    <time datetime="2025-08-25T23:46:44&#43;02:00">25 August 2025</time>
                   
                 </span>
               </span>
@@ -1415,7 +1374,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
                 >
                 <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
                   
-                    <time datetime="2025-08-25T10:41:32&#43;02:00">25 August 2025</time>
+                    <time datetime="2025-08-25T23:46:44&#43;02:00">25 August 2025</time>
                   
                 </span>
               </span>

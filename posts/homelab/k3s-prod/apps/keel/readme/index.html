@@ -14,11 +14,11 @@
   <meta name="theme-color">
 
   
-  <title>k3s keel &middot; Zyria</title>
-    <meta name="title" content="k3s keel &middot; Zyria">
+  <title>Keel &middot; Zyria</title>
+    <meta name="title" content="Keel &middot; Zyria">
 
   
-  <meta name="description" content="Hier wird jeder Service (mit README.md) kurz notiert">
+  <meta name="description" content="Keel überwacht Container-Image-Repositories und Helm-Charts auf neue Versionen und aktualisiert die entsprechenden Deployments im Cluster automatisch gemäß den definierten Policies.">
   <meta name="keywords" content="kubernetes,k3s,software,homelab,">
   
   
@@ -116,13 +116,13 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   
   <meta property="og:url" content="https://www.zyria.de/posts/homelab/k3s-prod/apps/keel/readme/">
   <meta property="og:site_name" content="Zyria">
-  <meta property="og:title" content="k3s keel">
-  <meta property="og:description" content="Dokumentation meiner Kubernetes Komponente im Homelab">
+  <meta property="og:title" content="Keel">
+  <meta property="og:description" content="Automatisiert die Aktualisierung von Kubernetes-Workloads und Helm-Releases.">
   <meta property="og:locale" content="de_de">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
-    <meta property="article:published_time" content="2025-08-25T10:41:32+02:00">
-    <meta property="article:modified_time" content="2025-08-25T10:41:32+02:00">
+    <meta property="article:published_time" content="2025-08-25T23:46:44+02:00">
+    <meta property="article:modified_time" content="2025-08-25T23:46:44+02:00">
     <meta property="article:tag" content="Kubernetes">
     <meta property="article:tag" content="K3s">
     <meta property="article:tag" content="Software">
@@ -130,18 +130,18 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
 
   
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="k3s keel">
-  <meta name="twitter:description" content="Dokumentation meiner Kubernetes Komponente im Homelab">
+  <meta name="twitter:title" content="Keel">
+  <meta name="twitter:description" content="Automatisiert die Aktualisierung von Kubernetes-Workloads und Helm-Releases.">
 
   <script type="application/ld+json">
   [{
     "@context": "https://schema.org",
     "@type": "Article",
     "articleSection": "Beiträge",
-    "name": "k3s keel",
-    "headline": "k3s keel",
-    "description": "Dokumentation meiner Kubernetes Komponente im Homelab",
-    "abstract": "Hier wird jeder Service (mit README.md) kurz notiert",
+    "name": "Keel",
+    "headline": "Keel",
+    "description": "Automatisiert die Aktualisierung von Kubernetes-Workloads und Helm-Releases.",
+    "abstract": "Keel überwacht Container-Image-Repositories und Helm-Charts auf neue Versionen und aktualisiert die entsprechenden Deployments im Cluster automatisch gemäß den definierten Policies.",
     "inLanguage": "de-de",
     "url" : "https:\/\/www.zyria.de\/posts\/homelab\/k3s-prod\/apps\/keel\/readme\/",
     "author" : {
@@ -149,15 +149,15 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
       "name": "Fabrice Kirchner"
     },
     "copyrightYear": "2025",
-    "dateCreated": "2025-08-25T10:41:32\u002b02:00",
-    "datePublished": "2025-08-25T10:41:32\u002b02:00",
+    "dateCreated": "2025-08-25T23:46:44\u002b02:00",
+    "datePublished": "2025-08-25T23:46:44\u002b02:00",
     
-    "dateModified": "2025-08-25T10:41:32\u002b02:00",
+    "dateModified": "2025-08-25T23:46:44\u002b02:00",
     
     "keywords": ["kubernetes","k3s","software","homelab"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "24"
+    "wordCount": "227"
   }]
   </script>
 
@@ -631,7 +631,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   
   <li class="hidden">
     <a class="hover:underline decoration-neutral-300 dark:underline-neutral-600" href="/posts/homelab/k3s-prod/apps/keel/readme/"
-      >k3s keel</a
+      >Keel</a
     ><span class="px-1 text-primary-500">/</span>
   </li>
 
@@ -640,7 +640,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
 
       
       <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
-        k3s keel
+        Keel
       </h1>
       <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
         
@@ -695,7 +695,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2025-08-25T10:41:32&#43;02:00">25 August 2025</time><span class="px-2 text-primary-500">&middot;</span><span>24 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
+      <time datetime="2025-08-25T23:46:44&#43;02:00">25 August 2025</time><span class="px-2 text-primary-500">&middot;</span><span>227 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
 
 
   
@@ -858,11 +858,19 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
     class="min-w-[220px] py-2 border-dotted ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#keel">keel</a>
+    <li><a href="#keel">Keel</a>
       <ul>
         <li><a href="#status">Status</a></li>
-        <li><a href="#herkunft">Herkunft</a></li>
-        <li><a href="#aufgabe">Aufgabe</a></li>
+        <li><a href="#deployment">Deployment</a></li>
+        <li><a href="#quelle">Quelle</a></li>
+        <li><a href="#dokumentation">Dokumentation</a></li>
+        <li><a href="#funktion">Funktion</a></li>
+        <li><a href="#lokale-anpassungen">Lokale Anpassungen</a>
+          <ul>
+            <li><a href="#wichtige-einstellungen">Wichtige Einstellungen</a></li>
+          </ul>
+        </li>
+        <li><a href="#installation">Installation</a></li>
         <li><a href="#abhängigkeiten">Abhängigkeiten</a></li>
       </ul>
     </li>
@@ -879,11 +887,19 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
     class="py-2 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#keel">keel</a>
+    <li><a href="#keel">Keel</a>
       <ul>
         <li><a href="#status">Status</a></li>
-        <li><a href="#herkunft">Herkunft</a></li>
-        <li><a href="#aufgabe">Aufgabe</a></li>
+        <li><a href="#deployment">Deployment</a></li>
+        <li><a href="#quelle">Quelle</a></li>
+        <li><a href="#dokumentation">Dokumentation</a></li>
+        <li><a href="#funktion">Funktion</a></li>
+        <li><a href="#lokale-anpassungen">Lokale Anpassungen</a>
+          <ul>
+            <li><a href="#wichtige-einstellungen">Wichtige Einstellungen</a></li>
+          </ul>
+        </li>
+        <li><a href="#installation">Installation</a></li>
         <li><a href="#abhängigkeiten">Abhängigkeiten</a></li>
       </ul>
     </li>
@@ -988,7 +1004,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
 
         <div class="article-content max-w-prose mb-20">
           
-<h2 class="relative group">keel 
+<h2 class="relative group">Keel 
     <div id="keel" class="anchor"></div>
     
     <span
@@ -1086,31 +1102,107 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
 </figure>
 </p>
 
-<h3 class="relative group">Herkunft 
-    <div id="herkunft" class="anchor"></div>
+<h3 class="relative group">Deployment 
+    <div id="deployment" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#herkunft" aria-label="Anker">#</a>
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#deployment" aria-label="Anker">#</a>
     </span>        
     
 </h3>
-<p>Hersteller: <a
-  href="https://keel.sh"
+<p>
+
+
+
+
+
+
+<figure>
+    <img class="my-0 rounded-md" loading="lazy" alt="Argo Deployment" src="https://argocd.zyria.de/api/badge?name=keel&amp;revision=true&amp;showAppName=true&amp;width=150">
+
+  
+</figure>
+</p>
+
+<h3 class="relative group">Quelle 
+    <div id="quelle" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#quelle" aria-label="Anker">#</a>
+    </span>        
+    
+</h3>
+<p>Die Anwendung wird als Helm-Chart von <a
+  href="https://charts.keel.sh"
     target="_blank"
-  >https://keel.sh</a></p>
+  >keel.sh</a> bezogen.</p>
 
-<h3 class="relative group">Aufgabe 
-    <div id="aufgabe" class="anchor"></div>
+<h3 class="relative group">Dokumentation 
+    <div id="dokumentation" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#aufgabe" aria-label="Anker">#</a>
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#dokumentation" aria-label="Anker">#</a>
     </span>        
     
 </h3>
-<p>Überwacht die Image Versionen und erneuert bei Bedarf die laufenden Container.</p>
+<p>Die offizielle Dokumentation von Keel ist unter <a
+  href="https://keel.sh/docs/"
+    target="_blank"
+  >keel.sh/docs</a> zu finden.</p>
 
+<h3 class="relative group">Funktion 
+    <div id="funktion" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#funktion" aria-label="Anker">#</a>
+    </span>        
+    
+</h3>
+<p>Keel automatisiert den Prozess der Anwendungsaktualisierung. Es kann so konfiguriert werden, dass es Docker-Registries auf neue Image-Tags überwacht. Wenn ein neues Image gefunden wird, das einer vordefinierten Policy entspricht (z.B. <code>semver</code>), aktualisiert Keel das entsprechende Deployment, StatefulSet, etc. im Kubernetes-Cluster. In diesem Setup wird Keel hauptsächlich durch Annotationen an den jeweiligen Workloads gesteuert.</p>
+
+<h3 class="relative group">Lokale Anpassungen 
+    <div id="lokale-anpassungen" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#lokale-anpassungen" aria-label="Anker">#</a>
+    </span>        
+    
+</h3>
+<p>Die Konfiguration erfolgt über die <code>values.yaml</code>-Datei.</p>
+
+<h4 class="relative group">Wichtige Einstellungen 
+    <div id="wichtige-einstellungen" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#wichtige-einstellungen" aria-label="Anker">#</a>
+    </span>        
+    
+</h4>
+<ul>
+<li><strong>Polling</strong>: Keel ist so konfiguriert, dass es stündlich nach Updates sucht (<code>@every 1h</code>).</li>
+<li><strong>Helm-Provider</strong>: Die Unterstützung für Helm v3 ist aktiviert, sodass Keel auch Helm-Releases aktualisieren kann.</li>
+<li><strong>Self-Update</strong>: Keel ist so konfiguriert, dass es sich selbst automatisch auf die neueste Version aktualisiert (<code>policy: force</code>).</li>
+<li><strong>Ingress</strong>: Der Zugriff auf die Keel-Weboberfläche wird über einen Ingress mit dem Hostnamen <code>keel.zyria.de</code> ermöglicht. Der Zugriff ist durch Authentik geschützt.</li>
+</ul>
+
+<h3 class="relative group">Installation 
+    <div id="installation" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#installation" aria-label="Anker">#</a>
+    </span>        
+    
+</h3>
+<p>Die Anwendung wird mittels Kustomize und Helm durch ArgoCD im Kubernetes-Cluster bereitgestellt. Die Konfiguration befindet sich im <code>apps/keel</code>-Verzeichnis. Eine manuelle Installation kann mit folgendem Befehl durchgeführt werden:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">kubectl kustomize --enable-helm apps/keel <span class="p">|</span> kubectl apply -n keel -f -
+</span></span></code></pre></div>
 <h3 class="relative group">Abhängigkeiten 
     <div id="abhängigkeiten" class="anchor"></div>
     
@@ -1120,7 +1212,11 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
     </span>        
     
 </h3>
-<p>keine</p>
+<ul>
+<li><strong>Traefik</strong>: Wird als Ingress-Controller für den externen Zugriff benötigt.</li>
+<li><strong>Authentik</strong>: Wird zur Absicherung des Web-Frontends verwendet.</li>
+<li><strong>cert-manager</strong>: Wird für die automatische Bereitstellung von TLS-Zertifikaten benötigt.</li>
+</ul>
 
           
           
@@ -1129,7 +1225,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
               <a
                 target="_blank"
                 class="m-1 rounded bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-                href="mailto:fabrice@zyria.de?subject=Reply%20to%20k3s%20keel">
+                href="mailto:fabrice@zyria.de?subject=Reply%20to%20Keel">
                 Reply by Email
               </a>
             </strong>
@@ -1329,7 +1425,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
       <div class="flex justify-between pt-3">
         <span>
           
-            <a class="flex group mr-3" href="/posts/homelab/k3s-prod/apps/k3s/readme/">
+            <a class="flex group mr-3" href="/posts/homelab/k3s-prod/apps/descheduler/readme/">
               <span
                 class="mr-3 text-neutral-700 group-hover:text-primary-600 ltr:inline rtl:hidden dark:text-neutral dark:group-hover:text-primary-400"
                 >&larr;</span
@@ -1340,11 +1436,11 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
               >
               <span class="flex flex-col">
                 <span class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
-                  >k3s main</span
+                  >Kubernetes Descheduler</span
                 >
                 <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
                   
-                    <time datetime="2025-08-25T10:41:32&#43;02:00">25 August 2025</time>
+                    <time datetime="2025-08-25T23:46:44&#43;02:00">25 August 2025</time>
                   
                 </span>
               </span>
@@ -1353,14 +1449,14 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
         </span>
         <span>
           
-            <a class="flex text-right group ml-3" href="/posts/homelab/k3s-prod/apps/hedgedoc/readme/">
+            <a class="flex text-right group ml-3" href="/posts/homelab/k3s-prod/apps/k3s/readme/">
               <span class="flex flex-col">
                 <span class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
-                  >HedgeDoc</span
+                  >k3s Konfiguration</span
                 >
                 <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
                   
-                    <time datetime="2025-08-25T10:41:32&#43;02:00">25 August 2025</time>
+                    <time datetime="2025-08-25T23:46:44&#43;02:00">25 August 2025</time>
                   
                 </span>
               </span>

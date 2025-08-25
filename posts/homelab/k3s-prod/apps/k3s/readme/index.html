@@ -14,11 +14,11 @@
   <meta name="theme-color">
 
   
-  <title>k3s main &middot; Zyria</title>
-    <meta name="title" content="k3s main &middot; Zyria">
+  <title>k3s Konfiguration &middot; Zyria</title>
+    <meta name="title" content="k3s Konfiguration &middot; Zyria">
 
   
-  <meta name="description" content="Hier wird jeder Service (mit README.md) kurz notiert">
+  <meta name="description" content="Dieser Ordner enthält grundlegende Konfigurationen für den k3s Kubernetes-Cluster, einschließlich des Local Path Provisioners und einer virtuellen IP für den Kubernetes API-Server.">
   <meta name="keywords" content="kubernetes,k3s,software,homelab,">
   
   
@@ -116,13 +116,13 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   
   <meta property="og:url" content="https://www.zyria.de/posts/homelab/k3s-prod/apps/k3s/readme/">
   <meta property="og:site_name" content="Zyria">
-  <meta property="og:title" content="k3s main">
-  <meta property="og:description" content="Dokumentation meiner Kubernetes Komponente im Homelab">
+  <meta property="og:title" content="k3s Konfiguration">
+  <meta property="og:description" content="Basis-Konfiguration und Add-ons für die k3s-Distribution.">
   <meta property="og:locale" content="de_de">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
-    <meta property="article:published_time" content="2025-08-25T10:41:32+02:00">
-    <meta property="article:modified_time" content="2025-08-25T10:41:32+02:00">
+    <meta property="article:published_time" content="2025-08-25T23:46:44+02:00">
+    <meta property="article:modified_time" content="2025-08-25T23:46:44+02:00">
     <meta property="article:tag" content="Kubernetes">
     <meta property="article:tag" content="K3s">
     <meta property="article:tag" content="Software">
@@ -130,18 +130,18 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
 
   
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="k3s main">
-  <meta name="twitter:description" content="Dokumentation meiner Kubernetes Komponente im Homelab">
+  <meta name="twitter:title" content="k3s Konfiguration">
+  <meta name="twitter:description" content="Basis-Konfiguration und Add-ons für die k3s-Distribution.">
 
   <script type="application/ld+json">
   [{
     "@context": "https://schema.org",
     "@type": "Article",
     "articleSection": "Beiträge",
-    "name": "k3s main",
-    "headline": "k3s main",
-    "description": "Dokumentation meiner Kubernetes Komponente im Homelab",
-    "abstract": "Hier wird jeder Service (mit README.md) kurz notiert",
+    "name": "k3s Konfiguration",
+    "headline": "k3s Konfiguration",
+    "description": "Basis-Konfiguration und Add-ons für die k3s-Distribution.",
+    "abstract": "Dieser Ordner enthält grundlegende Konfigurationen für den k3s Kubernetes-Cluster, einschließlich des Local Path Provisioners und einer virtuellen IP für den Kubernetes API-Server.",
     "inLanguage": "de-de",
     "url" : "https:\/\/www.zyria.de\/posts\/homelab\/k3s-prod\/apps\/k3s\/readme\/",
     "author" : {
@@ -149,15 +149,15 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
       "name": "Fabrice Kirchner"
     },
     "copyrightYear": "2025",
-    "dateCreated": "2025-08-25T10:41:32\u002b02:00",
-    "datePublished": "2025-08-25T10:41:32\u002b02:00",
+    "dateCreated": "2025-08-25T23:46:44\u002b02:00",
+    "datePublished": "2025-08-25T23:46:44\u002b02:00",
     
-    "dateModified": "2025-08-25T10:41:32\u002b02:00",
+    "dateModified": "2025-08-25T23:46:44\u002b02:00",
     
     "keywords": ["kubernetes","k3s","software","homelab"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "31"
+    "wordCount": "216"
   }]
   </script>
 
@@ -631,7 +631,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   
   <li class="hidden">
     <a class="hover:underline decoration-neutral-300 dark:underline-neutral-600" href="/posts/homelab/k3s-prod/apps/k3s/readme/"
-      >k3s main</a
+      >k3s Konfiguration</a
     ><span class="px-1 text-primary-500">/</span>
   </li>
 
@@ -640,7 +640,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
 
       
       <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
-        k3s main
+        k3s Konfiguration
       </h1>
       <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
         
@@ -695,7 +695,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2025-08-25T10:41:32&#43;02:00">25 August 2025</time><span class="px-2 text-primary-500">&middot;</span><span>31 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
+      <time datetime="2025-08-25T23:46:44&#43;02:00">25 August 2025</time><span class="px-2 text-primary-500">&middot;</span><span>216 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
 
 
   
@@ -858,15 +858,18 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
     class="min-w-[220px] py-2 border-dotted ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#k3s">k3s</a>
+    <li><a href="#k3s-konfiguration">k3s Konfiguration</a>
       <ul>
-        <li><a href="#herkunft">Herkunft</a></li>
-        <li><a href="#aufgabe">Aufgabe</a>
+        <li><a href="#deployment">Deployment</a></li>
+        <li><a href="#quelle">Quelle</a></li>
+        <li><a href="#dokumentation">Dokumentation</a></li>
+        <li><a href="#funktion">Funktion</a></li>
+        <li><a href="#lokale-anpassungen">Lokale Anpassungen</a>
           <ul>
-            <li><a href="#local-pathyaml">local-path.yaml</a></li>
-            <li><a href="#kubernetes-vipyaml">kubernetes-vip.yaml</a></li>
+            <li><a href="#wichtige-komponenten">Wichtige Komponenten</a></li>
           </ul>
         </li>
+        <li><a href="#installation">Installation</a></li>
         <li><a href="#abhängigkeiten">Abhängigkeiten</a></li>
       </ul>
     </li>
@@ -883,15 +886,18 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
     class="py-2 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#k3s">k3s</a>
+    <li><a href="#k3s-konfiguration">k3s Konfiguration</a>
       <ul>
-        <li><a href="#herkunft">Herkunft</a></li>
-        <li><a href="#aufgabe">Aufgabe</a>
+        <li><a href="#deployment">Deployment</a></li>
+        <li><a href="#quelle">Quelle</a></li>
+        <li><a href="#dokumentation">Dokumentation</a></li>
+        <li><a href="#funktion">Funktion</a></li>
+        <li><a href="#lokale-anpassungen">Lokale Anpassungen</a>
           <ul>
-            <li><a href="#local-pathyaml">local-path.yaml</a></li>
-            <li><a href="#kubernetes-vipyaml">kubernetes-vip.yaml</a></li>
+            <li><a href="#wichtige-komponenten">Wichtige Komponenten</a></li>
           </ul>
         </li>
+        <li><a href="#installation">Installation</a></li>
         <li><a href="#abhängigkeiten">Abhängigkeiten</a></li>
       </ul>
     </li>
@@ -996,59 +1002,116 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
 
         <div class="article-content max-w-prose mb-20">
           
-<h2 class="relative group">k3s 
-    <div id="k3s" class="anchor"></div>
+<h2 class="relative group">k3s Konfiguration 
+    <div id="k3s-konfiguration" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#k3s" aria-label="Anker">#</a>
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#k3s-konfiguration" aria-label="Anker">#</a>
     </span>        
     
 </h2>
 
-<h3 class="relative group">Herkunft 
-    <div id="herkunft" class="anchor"></div>
+<h3 class="relative group">Deployment 
+    <div id="deployment" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#herkunft" aria-label="Anker">#</a>
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#deployment" aria-label="Anker">#</a>
     </span>        
     
 </h3>
-<p>Cluster</p>
+<p>
 
-<h3 class="relative group">Aufgabe 
-    <div id="aufgabe" class="anchor"></div>
+
+
+
+
+
+<figure>
+    <img class="my-0 rounded-md" loading="lazy" alt="Argo Deployment" src="https://argocd.zyria.de/api/badge?name=k3s&amp;revision=true&amp;showAppName=true&amp;width=150">
+
+  
+</figure>
+</p>
+
+<h3 class="relative group">Quelle 
+    <div id="quelle" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#aufgabe" aria-label="Anker">#</a>
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#quelle" aria-label="Anker">#</a>
     </span>        
     
 </h3>
+<p>Die Konfigurationen werden direkt als Kubernetes-Manifeste und über ein benutzerdefiniertes Helm-Chart aus einem privaten Repository auf <code>git.zyria.de</code> bereitgestellt.</p>
 
-<h4 class="relative group">local-path.yaml 
-    <div id="local-pathyaml" class="anchor"></div>
+<h3 class="relative group">Dokumentation 
+    <div id="dokumentation" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#local-pathyaml" aria-label="Anker">#</a>
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#dokumentation" aria-label="Anker">#</a>
     </span>        
     
-</h4>
-<p>Modifikation der k3s StorageClass und der dazugehörigen Config.</p>
+</h3>
+<p>Die offizielle Dokumentation von k3s ist unter <a
+  href="https://docs.k3s.io/"
+    target="_blank"
+  >docs.k3s.io</a> zu finden.</p>
 
-<h4 class="relative group">kubernetes-vip.yaml 
-    <div id="kubernetes-vipyaml" class="anchor"></div>
+<h3 class="relative group">Funktion 
+    <div id="funktion" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#kubernetes-vipyaml" aria-label="Anker">#</a>
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#funktion" aria-label="Anker">#</a>
+    </span>        
+    
+</h3>
+<p>Dieser Chart und die zugehörigen Manifeste definieren Kernkomponenten der k3s-Installation, die über den Standard hinausgehen.</p>
+
+<h3 class="relative group">Lokale Anpassungen 
+    <div id="lokale-anpassungen" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#lokale-anpassungen" aria-label="Anker">#</a>
+    </span>        
+    
+</h3>
+<p>Die Konfiguration erfolgt über die in diesem Verzeichnis enthaltenen YAML-Dateien.</p>
+
+<h4 class="relative group">Wichtige Komponenten 
+    <div id="wichtige-komponenten" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#wichtige-komponenten" aria-label="Anker">#</a>
     </span>        
     
 </h4>
-<p>Bereitstellen einer Floating IP für die Kubernetes API</p>
+<ul>
+<li><strong>Local Path Provisioner</strong>: Die Datei <code>local-path.yaml</code> installiert den <a
+  href="https://github.com/rancher/local-path-provisioner"
+    target="_blank"
+  >Local Path Provisioner</a>. Dieser stellt eine einfache Möglichkeit dar, persistente Volumes mithilfe des lokalen Speichers auf den jeweiligen Kubernetes-Nodes zu erstellen. Er ist der Standard-StorageClass im Cluster.</li>
+<li><strong>Kubernetes VIP</strong>: Die Datei <code>kubernetes-vip.yaml</code> definiert einen <code>Service</code> vom Typ <code>LoadBalancer</code> für den Kubernetes API-Server (<code>kubernetes.default.svc</code>). Dies weist dem API-Server eine stabile virtuelle IP-Adresse (VIP) aus dem Metallb-Adresspool zu. Dies vereinfacht den Zugriff auf die API von außerhalb des Clusters.</li>
+<li><strong>k3s Helm Chart</strong>: Ein Platzhalter-Chart, das möglicherweise für zukünftige, direkt mit k3s zusammenhängende Konfigurationen verwendet wird.</li>
+</ul>
 
+<h3 class="relative group">Installation 
+    <div id="installation" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#installation" aria-label="Anker">#</a>
+    </span>        
+    
+</h3>
+<p>Die Komponenten werden durch ArgoCD im Kubernetes-Cluster bereitgestellt. Die Konfiguration befindet sich im <code>apps/k3s</code>-Verzeichnis. Eine manuelle Installation kann mit folgendem Befehl durchgeführt werden:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">kubectl kustomize --enable-helm apps/k3s <span class="p">|</span> kubectl apply -n kube-system -f -
+</span></span></code></pre></div>
 <h3 class="relative group">Abhängigkeiten 
     <div id="abhängigkeiten" class="anchor"></div>
     
@@ -1058,7 +1121,10 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
     </span>        
     
 </h3>
-<p>Storage: /srv/traefik/</p>
+<ul>
+<li><strong>k3s</strong>: Eine laufende k3s-Installation ist die Grundvoraussetzung.</li>
+<li><strong>Metallb</strong>: Wird benötigt, um dem <code>kubernetes-vip</code>-Service eine externe IP-Adresse zuzuweisen.</li>
+</ul>
 
           
           
@@ -1067,7 +1133,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
               <a
                 target="_blank"
                 class="m-1 rounded bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-                href="mailto:fabrice@zyria.de?subject=Reply%20to%20k3s%20main">
+                href="mailto:fabrice@zyria.de?subject=Reply%20to%20k3s%20Konfiguration">
                 Reply by Email
               </a>
             </strong>
@@ -1267,7 +1333,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
       <div class="flex justify-between pt-3">
         <span>
           
-            <a class="flex group mr-3" href="/posts/homelab/k3s-prod/apps/descheduler/readme/">
+            <a class="flex group mr-3" href="/posts/homelab/k3s-prod/apps/keel/readme/">
               <span
                 class="mr-3 text-neutral-700 group-hover:text-primary-600 ltr:inline rtl:hidden dark:text-neutral dark:group-hover:text-primary-400"
                 >&larr;</span
@@ -1278,11 +1344,11 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
               >
               <span class="flex flex-col">
                 <span class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
-                  >Kubernetes Descheduler</span
+                  >Keel</span
                 >
                 <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
                   
-                    <time datetime="2025-08-25T10:41:32&#43;02:00">25 August 2025</time>
+                    <time datetime="2025-08-25T23:46:44&#43;02:00">25 August 2025</time>
                   
                 </span>
               </span>
@@ -1291,14 +1357,14 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
         </span>
         <span>
           
-            <a class="flex text-right group ml-3" href="/posts/homelab/k3s-prod/apps/keel/readme/">
+            <a class="flex text-right group ml-3" href="/posts/homelab/k3s-prod/apps/ittools/readme/">
               <span class="flex flex-col">
                 <span class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
-                  >k3s keel</span
+                  >IT-Tools</span
                 >
                 <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
                   
-                    <time datetime="2025-08-25T10:41:32&#43;02:00">25 August 2025</time>
+                    <time datetime="2025-08-25T23:46:44&#43;02:00">25 August 2025</time>
                   
                 </span>
               </span>

@@ -18,7 +18,7 @@
     <meta name="title" content="CoreDNS &middot; Zyria">
 
   
-  <meta name="description" content="Dieses Dokument beschreibt die Bereitstellung von CoreDNS, einem flexiblen, erweiterbaren DNS-Server für Kubernetes.">
+  <meta name="description" content="CoreDNS dient als primärer DNS-Server für die Service Discovery innerhalb des Kubernetes-Clusters und löst sowohl interne als auch externe DNS-Anfragen auf.">
   <meta name="keywords" content="kubernetes,k3s,software,homelab,">
   
   
@@ -117,12 +117,12 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   <meta property="og:url" content="https://www.zyria.de/posts/homelab/k3s-prod/apps/coredns/readme/">
   <meta property="og:site_name" content="Zyria">
   <meta property="og:title" content="CoreDNS">
-  <meta property="og:description" content="Dokumentation für die Bereitstellung von CoreDNS">
+  <meta property="og:description" content="Ein flexibler und erweiterbarer DNS-Server für Kubernetes.">
   <meta property="og:locale" content="de_de">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
-    <meta property="article:published_time" content="2025-08-25T10:41:32+02:00">
-    <meta property="article:modified_time" content="2025-08-25T10:41:32+02:00">
+    <meta property="article:published_time" content="2025-08-25T23:46:44+02:00">
+    <meta property="article:modified_time" content="2025-08-25T23:46:44+02:00">
     <meta property="article:tag" content="Kubernetes">
     <meta property="article:tag" content="K3s">
     <meta property="article:tag" content="Software">
@@ -131,7 +131,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="CoreDNS">
-  <meta name="twitter:description" content="Dokumentation für die Bereitstellung von CoreDNS">
+  <meta name="twitter:description" content="Ein flexibler und erweiterbarer DNS-Server für Kubernetes.">
 
   <script type="application/ld+json">
   [{
@@ -140,8 +140,8 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
     "articleSection": "Beiträge",
     "name": "CoreDNS",
     "headline": "CoreDNS",
-    "description": "Dokumentation für die Bereitstellung von CoreDNS",
-    "abstract": "Dieses Dokument beschreibt die Bereitstellung von CoreDNS, einem flexiblen, erweiterbaren DNS-Server für Kubernetes.",
+    "description": "Ein flexibler und erweiterbarer DNS-Server für Kubernetes.",
+    "abstract": "CoreDNS dient als primärer DNS-Server für die Service Discovery innerhalb des Kubernetes-Clusters und löst sowohl interne als auch externe DNS-Anfragen auf.",
     "inLanguage": "de-de",
     "url" : "https:\/\/www.zyria.de\/posts\/homelab\/k3s-prod\/apps\/coredns\/readme\/",
     "author" : {
@@ -149,15 +149,15 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
       "name": "Fabrice Kirchner"
     },
     "copyrightYear": "2025",
-    "dateCreated": "2025-08-25T10:41:32\u002b02:00",
-    "datePublished": "2025-08-25T10:41:32\u002b02:00",
+    "dateCreated": "2025-08-25T23:46:44\u002b02:00",
+    "datePublished": "2025-08-25T23:46:44\u002b02:00",
     
-    "dateModified": "2025-08-25T10:41:32\u002b02:00",
+    "dateModified": "2025-08-25T23:46:44\u002b02:00",
     
     "keywords": ["kubernetes","k3s","software","homelab"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "171"
+    "wordCount": "255"
   }]
   </script>
 
@@ -695,7 +695,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2025-08-25T10:41:32&#43;02:00">25 August 2025</time><span class="px-2 text-primary-500">&middot;</span><span>171 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
+      <time datetime="2025-08-25T23:46:44&#43;02:00">25 August 2025</time><span class="px-2 text-primary-500">&middot;</span><span>255 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
 
 
   
@@ -860,12 +860,15 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   <ul>
     <li><a href="#coredns">CoreDNS</a>
       <ul>
-        <li><a href="#status">Status</a></li>
         <li><a href="#deployment">Deployment</a></li>
         <li><a href="#quelle">Quelle</a></li>
         <li><a href="#dokumentation">Dokumentation</a></li>
         <li><a href="#funktion">Funktion</a></li>
-        <li><a href="#lokale-anpassungen">Lokale Anpassungen</a></li>
+        <li><a href="#lokale-anpassungen">Lokale Anpassungen</a>
+          <ul>
+            <li><a href="#wichtige-einstellungen">Wichtige Einstellungen</a></li>
+          </ul>
+        </li>
         <li><a href="#installation">Installation</a></li>
         <li><a href="#abhängigkeiten">Abhängigkeiten</a></li>
       </ul>
@@ -885,12 +888,15 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   <ul>
     <li><a href="#coredns">CoreDNS</a>
       <ul>
-        <li><a href="#status">Status</a></li>
         <li><a href="#deployment">Deployment</a></li>
         <li><a href="#quelle">Quelle</a></li>
         <li><a href="#dokumentation">Dokumentation</a></li>
         <li><a href="#funktion">Funktion</a></li>
-        <li><a href="#lokale-anpassungen">Lokale Anpassungen</a></li>
+        <li><a href="#lokale-anpassungen">Lokale Anpassungen</a>
+          <ul>
+            <li><a href="#wichtige-einstellungen">Wichtige Einstellungen</a></li>
+          </ul>
+        </li>
         <li><a href="#installation">Installation</a></li>
         <li><a href="#abhängigkeiten">Abhängigkeiten</a></li>
       </ul>
@@ -1005,95 +1011,6 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
     </span>        
     
 </h2>
-<p>CoreDNS ist ein flexibler, erweiterbarer DNS-Server, der als DNS-Server für Kubernetes-Cluster dient. Er kann DNS-Anfragen für Dienste und Pods innerhalb des Clusters auflösen und auch externe DNS-Anfragen weiterleiten.</p>
-
-<h3 class="relative group">Status 
-    <div id="status" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#status" aria-label="Anker">#</a>
-    </span>        
-    
-</h3>
-<p>
-
-
-
-
-
-
-<figure>
-    <img class="my-0 rounded-md" loading="lazy" alt="Status" src="https://status.zyria.de/api/badge/__STATUS_ID___/status">
-
-  
-</figure>
-
-
-
-
-
-
-
-
-<figure>
-    <img class="my-0 rounded-md" loading="lazy" alt="Verfügbarkeit" src="https://status.zyria.de/api/badge/__STATUS_ID___/uptime">
-
-  
-</figure>
-
-
-
-
-
-
-
-
-<figure>
-    <img class="my-0 rounded-md" loading="lazy" alt="Ping" src="https://status.zyria.de/api/badge/__STATUS_ID___/ping">
-
-  
-</figure>
-
-
-
-
-
-
-
-
-<figure>
-    <img class="my-0 rounded-md" loading="lazy" alt="Durchschn. Antwortzeit" src="https://status.zyria.de/api/badge/__STATUS_ID___/avg-response">
-
-  
-</figure>
-
-
-
-
-
-
-
-
-<figure>
-    <img class="my-0 rounded-md" loading="lazy" alt="Zertifikatsablauf" src="https://status.zyria.de/api/badge/__STATUS_ID___/cert-exp">
-
-  
-</figure>
-
-
-
-
-
-
-
-
-<figure>
-    <img class="my-0 rounded-md" loading="lazy" alt="Antwortzeit" src="https://status.zyria.de/api/badge/__STATUS_ID___/response">
-
-  
-</figure>
-</p>
 
 <h3 class="relative group">Deployment 
     <div id="deployment" class="anchor"></div>
@@ -1112,7 +1029,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
 
 
 <figure>
-    <img class="my-0 rounded-md" loading="lazy" alt="Argo Deployment" src="https://argocd.zyria.de/api/badge?name=__STATUS_ARGO___&amp;revision=true&amp;showAppName=true&amp;width=150">
+    <img class="my-0 rounded-md" loading="lazy" alt="Argo Deployment" src="https://argocd.zyria.de/api/badge?name=coredns&amp;revision=true&amp;showAppName=true&amp;width=150">
 
   
 </figure>
@@ -1165,7 +1082,7 @@ Das Helm-Chart stammt aus dem <a
     </span>        
     
 </h3>
-<p>Dieser Dienst ist der zentrale DNS-Server für den Kubernetes-Cluster. Er löst interne Dienstnamen in IP-Adressen auf, leitet externe Anfragen weiter und kann auch benutzerdefinierte DNS-Einträge verwalten.</p>
+<p>CoreDNS ist ein fundamentaler Bestandteil des Kubernetes-Clusters und verantwortlich für die Namensauflösung (DNS). Es ermöglicht Pods und Services, sich gegenseitig über ihre Namen zu finden (z.B. <code>my-service.my-namespace.svc.cluster.local</code>). Es ist so konfiguriert, dass es Anfragen für interne Cluster-Domains beantwortet und alle anderen Anfragen an Upstream-DNS-Server weiterleitet.</p>
 
 <h3 class="relative group">Lokale Anpassungen 
     <div id="lokale-anpassungen" class="anchor"></div>
@@ -1176,10 +1093,29 @@ Das Helm-Chart stammt aus dem <a
     </span>        
     
 </h3>
+<p>Die Konfiguration erfolgt über die <code>values.yaml</code>-Datei.</p>
+
+<h4 class="relative group">Wichtige Einstellungen 
+    <div id="wichtige-einstellungen" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#wichtige-einstellungen" aria-label="Anker">#</a>
+    </span>        
+    
+</h4>
 <ul>
-<li>Die <code>values.yaml</code>-Datei konfiguriert die CoreDNS-Plugins, einschließlich <code>kubernetes</code> für die Auflösung von Cluster-Diensten, <code>hosts</code> für benutzerdefinierte Host-Einträge und <code>forward</code> für die Weiterleitung externer Anfragen.</li>
-<li>Der Dienst ist als Dual-Stack-Dienst konfiguriert und verwendet spezifische Cluster-IPs für IPv4 und IPv6.</li>
-<li>Es sind Toleranzen für Control-Plane-Knoten konfiguriert, um die Bereitstellung auf diesen Knoten zu ermöglichen.</li>
+<li><strong>Replikas</strong>: Es werden drei Replikate von CoreDNS betrieben, um Hochverfügbarkeit zu gewährleisten.</li>
+<li><strong>Dual-Stack</strong>: Der Service ist für den Dual-Stack-Betrieb (IPv4 und IPv6) konfiguriert.</li>
+<li><strong>Plugins</strong>: Eine Reihe von Plugins ist aktiviert, darunter:
+<ul>
+<li><code>kubernetes</code>: Für die Auflösung von Kubernetes-Services und -Pods.</li>
+<li><code>forward</code>: Leitet Anfragen, die nicht vom <code>kubernetes</code>-Plugin aufgelöst werden können, an die DNS-Server in <code>/etc/resolv.conf</code> weiter.</li>
+<li><code>cache</code>: Cacht DNS-Antworten, um die Latenz zu verringern und die Last auf den Upstream-Servern zu reduzieren.</li>
+<li><code>prometheus</code>: Stellt Metriken für das Monitoring bereit.</li>
+</ul>
+</li>
+<li><strong>Scheduling</strong>: CoreDNS-Pods werden bevorzugt auf den Control-Plane-Nodes ausgeführt und sind über <code>topologySpreadConstraints</code> auf verschiedene Nodes und Zonen verteilt, um die Ausfallsicherheit zu erhöhen.</li>
 </ul>
 
 <h3 class="relative group">Installation 
@@ -1191,11 +1127,9 @@ Das Helm-Chart stammt aus dem <a
     </span>        
     
 </h3>
-<p>Der Dienst wird als Helm-Chart aus dem <a
-  href="https://coredns.github.io/helm"
-    target="_blank"
-  >CoreDNS Helm Charts Repository</a> bereitgestellt. Die Bereitstellung, einschließlich der CRDs, wird durch die <code>kustomization.yaml</code>-Datei verwaltet.</p>
-
+<p>Die Anwendung wird mittels Kustomize und Helm durch ArgoCD im Kubernetes-Cluster bereitgestellt. Die Konfiguration befindet sich im <code>apps/coredns</code>-Verzeichnis. Eine manuelle Installation kann mit folgendem Befehl durchgeführt werden:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">kubectl kustomize --enable-helm apps/coredns <span class="p">|</span> kubectl apply -n kube-system -f -
+</span></span></code></pre></div>
 <h3 class="relative group">Abhängigkeiten 
     <div id="abhängigkeiten" class="anchor"></div>
     
@@ -1205,9 +1139,7 @@ Das Helm-Chart stammt aus dem <a
     </span>        
     
 </h3>
-<ul>
-<li>Ein laufender Kubernetes-Cluster.</li>
-</ul>
+<p>CoreDNS ist eine Kernkomponente von Kubernetes und hat keine externen Anwendungsabhängigkeiten, ist aber für die Funktion fast aller anderen Anwendungen im Cluster kritisch.</p>
 
           
           
@@ -1431,7 +1363,7 @@ Das Helm-Chart stammt aus dem <a
                 >
                 <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
                   
-                    <time datetime="2025-08-25T10:41:32&#43;02:00">25 August 2025</time>
+                    <time datetime="2025-08-25T23:46:44&#43;02:00">25 August 2025</time>
                   
                 </span>
               </span>
@@ -1447,7 +1379,7 @@ Das Helm-Chart stammt aus dem <a
                 >
                 <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
                   
-                    <time datetime="2025-08-25T10:41:32&#43;02:00">25 August 2025</time>
+                    <time datetime="2025-08-25T23:46:44&#43;02:00">25 August 2025</time>
                   
                 </span>
               </span>

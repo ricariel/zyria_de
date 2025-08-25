@@ -14,11 +14,11 @@
   <meta name="theme-color">
 
   
-  <title>MetalLB on k3s &middot; Zyria</title>
-    <meta name="title" content="MetalLB on k3s &middot; Zyria">
+  <title>MetalLB &middot; Zyria</title>
+    <meta name="title" content="MetalLB &middot; Zyria">
 
   
-  <meta name="description" content="Documentation of the MetalLB Kubernetes component.">
+  <meta name="description" content="MetalLB ermöglicht die Verwendung von Kubernetes-Services vom Typ `LoadBalancer` in Clustern, die nicht bei einem Cloud-Anbieter laufen, indem es IP-Adressen aus einem konfigurierten Pool zuweist.">
   <meta name="keywords" content="kubernetes,k3s,software,homelab,">
   
   
@@ -116,13 +116,13 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   
   <meta property="og:url" content="https://www.zyria.de/posts/homelab/k3s-prod/apps/metallb/readme/">
   <meta property="og:site_name" content="Zyria">
-  <meta property="og:title" content="MetalLB on k3s">
-  <meta property="og:description" content="Documentation of the MetalLB Kubernetes component.">
+  <meta property="og:title" content="MetalLB">
+  <meta property="og:description" content="Ein Load-Balancer für Bare-Metal-Kubernetes-Cluster.">
   <meta property="og:locale" content="de_de">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
-    <meta property="article:published_time" content="2025-08-25T10:41:32+02:00">
-    <meta property="article:modified_time" content="2025-08-25T10:41:32+02:00">
+    <meta property="article:published_time" content="2025-08-25T23:46:44+02:00">
+    <meta property="article:modified_time" content="2025-08-25T23:46:44+02:00">
     <meta property="article:tag" content="Kubernetes">
     <meta property="article:tag" content="K3s">
     <meta property="article:tag" content="Software">
@@ -130,18 +130,18 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
 
   
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="MetalLB on k3s">
-  <meta name="twitter:description" content="Documentation of the MetalLB Kubernetes component.">
+  <meta name="twitter:title" content="MetalLB">
+  <meta name="twitter:description" content="Ein Load-Balancer für Bare-Metal-Kubernetes-Cluster.">
 
   <script type="application/ld+json">
   [{
     "@context": "https://schema.org",
     "@type": "Article",
     "articleSection": "Beiträge",
-    "name": "MetalLB on k3s",
-    "headline": "MetalLB on k3s",
-    "description": "Documentation of the MetalLB Kubernetes component.",
-    "abstract": "\u003ch2 class=\u0022relative group\u0022\u003eMetalLB \n    \u003cdiv id=\u0022metallb\u0022 class=\u0022anchor\u0022\u003e\u003c\/div\u003e\n    \n    \u003cspan\n        class=\u0022absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none\u0022\u003e\n        \u003ca class=\u0022group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline\u0022 href=\u0022#metallb\u0022 aria-label=\u0022Anker\u0022\u003e#\u003c\/a\u003e\n    \u003c\/span\u003e        \n    \n\u003c\/h2\u003e\n\u003cp\u003eThis directory contains the configuration for installing and managing \u003ca\n  href=\u0022httpss:\/\/metallb.io\/\u0022\u003eMetalLB\u003c\/a\u003e in a Kubernetes cluster. The configuration is managed with \u003ca\n  href=\u0022httpss:\/\/kustomize.io\/\u0022\u003eKustomize\u003c\/a\u003e and installs MetalLB using the official \u003ca\n  href=\u0022httpss:\/\/metallb.github.io\/metallb\u0022\u003eHelm chart\u003c\/a\u003e.\u003c\/p\u003e\n\n\u003ch3 class=\u0022relative group\u0022\u003ePurpose \n    \u003cdiv id=\u0022purpose\u0022 class=\u0022anchor\u0022\u003e\u003c\/div\u003e\n    \n    \u003cspan\n        class=\u0022absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none\u0022\u003e\n        \u003ca class=\u0022group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline\u0022 href=\u0022#purpose\u0022 aria-label=\u0022Anker\u0022\u003e#\u003c\/a\u003e\n    \u003c\/span\u003e        \n    \n\u003c\/h3\u003e\n\u003cp\u003eMetalLB provides a load-balancer for bare-metal Kubernetes clusters. It allows services of type \u003ccode\u003eLoadBalancer\u003c\/code\u003e to receive external IP addresses from a predefined pool, as if they were running in a cloud environment. This setup uses L2 mode to announce IP addresses on the local network.\u003c\/p\u003e",
+    "name": "MetalLB",
+    "headline": "MetalLB",
+    "description": "Ein Load-Balancer für Bare-Metal-Kubernetes-Cluster.",
+    "abstract": "MetalLB ermöglicht die Verwendung von Kubernetes-Services vom Typ \u003ccode\u003eLoadBalancer\u003c\/code\u003e in Clustern, die nicht bei einem Cloud-Anbieter laufen, indem es IP-Adressen aus einem konfigurierten Pool zuweist.",
     "inLanguage": "de-de",
     "url" : "https:\/\/www.zyria.de\/posts\/homelab\/k3s-prod\/apps\/metallb\/readme\/",
     "author" : {
@@ -149,15 +149,15 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
       "name": "Fabrice Kirchner"
     },
     "copyrightYear": "2025",
-    "dateCreated": "2025-08-25T10:41:32\u002b02:00",
-    "datePublished": "2025-08-25T10:41:32\u002b02:00",
+    "dateCreated": "2025-08-25T23:46:44\u002b02:00",
+    "datePublished": "2025-08-25T23:46:44\u002b02:00",
     
-    "dateModified": "2025-08-25T10:41:32\u002b02:00",
+    "dateModified": "2025-08-25T23:46:44\u002b02:00",
     
     "keywords": ["kubernetes","k3s","software","homelab"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "243"
+    "wordCount": "234"
   }]
   </script>
 
@@ -631,7 +631,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   
   <li class="hidden">
     <a class="hover:underline decoration-neutral-300 dark:underline-neutral-600" href="/posts/homelab/k3s-prod/apps/metallb/readme/"
-      >MetalLB on k3s</a
+      >MetalLB</a
     ><span class="px-1 text-primary-500">/</span>
   </li>
 
@@ -640,7 +640,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
 
       
       <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
-        MetalLB on k3s
+        MetalLB
       </h1>
       <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
         
@@ -695,7 +695,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2025-08-25T10:41:32&#43;02:00">25 August 2025</time><span class="px-2 text-primary-500">&middot;</span><span>243 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
+      <time datetime="2025-08-25T23:46:44&#43;02:00">25 August 2025</time><span class="px-2 text-primary-500">&middot;</span><span>234 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
 
 
   
@@ -860,11 +860,17 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   <ul>
     <li><a href="#metallb">MetalLB</a>
       <ul>
-        <li><a href="#purpose">Purpose</a></li>
-        <li><a href="#directory-structure">Directory Structure</a></li>
-        <li><a href="#configuration">Configuration</a></li>
-        <li><a href="#usage">Usage</a></li>
-        <li><a href="#dependencies">Dependencies</a></li>
+        <li><a href="#deployment">Deployment</a></li>
+        <li><a href="#quelle">Quelle</a></li>
+        <li><a href="#dokumentation">Dokumentation</a></li>
+        <li><a href="#funktion">Funktion</a></li>
+        <li><a href="#lokale-anpassungen">Lokale Anpassungen</a>
+          <ul>
+            <li><a href="#wichtige-einstellungen">Wichtige Einstellungen</a></li>
+          </ul>
+        </li>
+        <li><a href="#installation">Installation</a></li>
+        <li><a href="#abhängigkeiten">Abhängigkeiten</a></li>
       </ul>
     </li>
   </ul>
@@ -882,11 +888,17 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   <ul>
     <li><a href="#metallb">MetalLB</a>
       <ul>
-        <li><a href="#purpose">Purpose</a></li>
-        <li><a href="#directory-structure">Directory Structure</a></li>
-        <li><a href="#configuration">Configuration</a></li>
-        <li><a href="#usage">Usage</a></li>
-        <li><a href="#dependencies">Dependencies</a></li>
+        <li><a href="#deployment">Deployment</a></li>
+        <li><a href="#quelle">Quelle</a></li>
+        <li><a href="#dokumentation">Dokumentation</a></li>
+        <li><a href="#funktion">Funktion</a></li>
+        <li><a href="#lokale-anpassungen">Lokale Anpassungen</a>
+          <ul>
+            <li><a href="#wichtige-einstellungen">Wichtige Einstellungen</a></li>
+          </ul>
+        </li>
+        <li><a href="#installation">Installation</a></li>
+        <li><a href="#abhängigkeiten">Abhängigkeiten</a></li>
       </ul>
     </li>
   </ul>
@@ -999,48 +1011,89 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
     </span>        
     
 </h2>
-<p>This directory contains the configuration for installing and managing <a
-  href="httpss://metallb.io/">MetalLB</a> in a Kubernetes cluster. The configuration is managed with <a
-  href="httpss://kustomize.io/">Kustomize</a> and installs MetalLB using the official <a
-  href="httpss://metallb.github.io/metallb">Helm chart</a>.</p>
 
-<h3 class="relative group">Purpose 
-    <div id="purpose" class="anchor"></div>
+<h3 class="relative group">Deployment 
+    <div id="deployment" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#purpose" aria-label="Anker">#</a>
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#deployment" aria-label="Anker">#</a>
     </span>        
     
 </h3>
-<p>MetalLB provides a load-balancer for bare-metal Kubernetes clusters. It allows services of type <code>LoadBalancer</code> to receive external IP addresses from a predefined pool, as if they were running in a cloud environment. This setup uses L2 mode to announce IP addresses on the local network.</p>
+<p>
 
-<h3 class="relative group">Directory Structure 
-    <div id="directory-structure" class="anchor"></div>
+
+
+
+
+
+<figure>
+    <img class="my-0 rounded-md" loading="lazy" alt="Argo Deployment" src="https://argocd.zyria.de/api/badge?name=metallb&amp;revision=true&amp;showAppName=true&amp;width=150">
+
+  
+</figure>
+</p>
+
+<h3 class="relative group">Quelle 
+    <div id="quelle" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#directory-structure" aria-label="Anker">#</a>
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#quelle" aria-label="Anker">#</a>
     </span>        
     
 </h3>
-<ul>
-<li><code>kustomization.yaml</code>: The main Kustomize file that assembles all resources and configurations.</li>
-<li><code>values.yaml</code>: Overrides the default values of the MetalLB Helm chart. This is where log levels and the FRR configuration are adjusted.</li>
-<li><code>ips.yaml</code>: Defines the <code>IPAddressPool</code> with the IP ranges to be used and the <code>L2Advertisement</code> for announcing the addresses.</li>
-<li><code>namespace.yaml</code>: Creates the <code>metallb-system</code> namespace where MetalLB is installed.</li>
-<li><code>charts/</code>: This directory is empty and is used by Kustomize to store the downloaded Helm charts.</li>
-</ul>
+<p>Die Anwendung wird als Helm-Chart von <a
+  href="https://metallb.github.io/metallb"
+    target="_blank"
+  >metallb.github.io</a> bezogen.</p>
 
-<h3 class="relative group">Configuration 
-    <div id="configuration" class="anchor"></div>
+<h3 class="relative group">Dokumentation 
+    <div id="dokumentation" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#configuration" aria-label="Anker">#</a>
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#dokumentation" aria-label="Anker">#</a>
     </span>        
     
 </h3>
+<p>Die offizielle Dokumentation von MetalLB ist unter <a
+  href="https://metallb.universe.tf/"
+    target="_blank"
+  >metallb.universe.tf</a> zu finden.</p>
+
+<h3 class="relative group">Funktion 
+    <div id="funktion" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#funktion" aria-label="Anker">#</a>
+    </span>        
+    
+</h3>
+<p>MetalLB ist eine essenzielle Komponente für diesen Cluster. Es implementiert die Funktionalität eines Netzwerk-Load-Balancers. Wenn ein Service vom Typ <code>LoadBalancer</code> erstellt wird, weist MetalLB ihm eine externe IP-Adresse aus einem vordefinierten Adresspool zu. Es arbeitet im L2-Modus, was bedeutet, dass ein Node im Cluster die Verantwortung für die zugewiesene Service-IP übernimmt und den Traffic an den entsprechenden Service weiterleitet.</p>
+
+<h3 class="relative group">Lokale Anpassungen 
+    <div id="lokale-anpassungen" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#lokale-anpassungen" aria-label="Anker">#</a>
+    </span>        
+    
+</h3>
+<p>Die Konfiguration der IP-Adresspools erfolgt nicht über dieses Helm-Chart, sondern vermutlich direkt über <code>IPAddressPool</code>- und <code>L2Advertisement</code>-Custom-Ressourcen, die separat im Cluster angewendet werden.</p>
+
+<h4 class="relative group">Wichtige Einstellungen 
+    <div id="wichtige-einstellungen" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#wichtige-einstellungen" aria-label="Anker">#</a>
+    </span>        
+    
+</h4>
 <ul>
 <li><strong>Namespace:</strong> <code>metallb-system</code></li>
 <li><strong>Helm Chart:</strong> <code>metallb/metallb</code></li>
@@ -1055,28 +1108,28 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
 <li><strong>FRR:</strong> Free Range Routing (FRR) is enabled for the speaker.</li>
 </ul>
 
-<h3 class="relative group">Usage 
-    <div id="usage" class="anchor"></div>
+<h3 class="relative group">Installation 
+    <div id="installation" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#usage" aria-label="Anker">#</a>
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#installation" aria-label="Anker">#</a>
     </span>        
     
 </h3>
-<p>To apply the configuration, you can run the following command from the root of the repository:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">kubectl apply -k apps/metallb
+<p>Die Anwendung wird mittels Kustomize und Helm durch ArgoCD im Kubernetes-Cluster bereitgestellt. Die Konfiguration befindet sich im <code>apps/metallb</code>-Verzeichnis. Eine manuelle Installation kann mit folgendem Befehl durchgeführt werden:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">kubectl kustomize --enable-helm apps/metallb <span class="p">|</span> kubectl apply -n metallb-system -f -
 </span></span></code></pre></div>
-<h3 class="relative group">Dependencies 
-    <div id="dependencies" class="anchor"></div>
+<h3 class="relative group">Abhängigkeiten 
+    <div id="abhängigkeiten" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#dependencies" aria-label="Anker">#</a>
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#abh%c3%a4ngigkeiten" aria-label="Anker">#</a>
     </span>        
     
 </h3>
-<p>There are no direct dependencies on other components in this cluster.</p>
+<p>MetalLB ist eine grundlegende Netzwerkinfrastruktur-Komponente und hat keine externen Anwendungsabhängigkeiten. Viele andere Dienste in diesem Cluster sind jedoch von MetalLB abhängig, um externe IP-Adressen zu erhalten.</p>
 
           
           
@@ -1085,7 +1138,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
               <a
                 target="_blank"
                 class="m-1 rounded bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-                href="mailto:fabrice@zyria.de?subject=Reply%20to%20MetalLB%20on%20k3s">
+                href="mailto:fabrice@zyria.de?subject=Reply%20to%20MetalLB">
                 Reply by Email
               </a>
             </strong>
@@ -1285,7 +1338,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
       <div class="flex justify-between pt-3">
         <span>
           
-            <a class="flex group mr-3" href="/posts/homelab/k3s-prod/apps/mta-sts/readme/">
+            <a class="flex group mr-3" href="/posts/homelab/k3s-prod/apps/mosquitto/readme/">
               <span
                 class="mr-3 text-neutral-700 group-hover:text-primary-600 ltr:inline rtl:hidden dark:text-neutral dark:group-hover:text-primary-400"
                 >&larr;</span
@@ -1296,11 +1349,11 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
               >
               <span class="flex flex-col">
                 <span class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
-                  >MTA-STS Policy Server</span
+                  >Mosquitto</span
                 >
                 <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
                   
-                    <time datetime="2025-08-25T10:41:32&#43;02:00">25 August 2025</time>
+                    <time datetime="2025-08-25T23:46:44&#43;02:00">25 August 2025</time>
                   
                 </span>
               </span>
@@ -1309,14 +1362,14 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
         </span>
         <span>
           
-            <a class="flex text-right group ml-3" href="/posts/homelab/k3s-prod/apps/maintenance-page/readme/">
+            <a class="flex text-right group ml-3" href="/posts/homelab/k3s-prod/apps/matrix-admin/readme/">
               <span class="flex flex-col">
                 <span class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
-                  >Maintenance Page</span
+                  >Matrix Synapse Admin</span
                 >
                 <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
                   
-                    <time datetime="2025-08-25T10:41:32&#43;02:00">25 August 2025</time>
+                    <time datetime="2025-08-25T23:46:44&#43;02:00">25 August 2025</time>
                   
                 </span>
               </span>

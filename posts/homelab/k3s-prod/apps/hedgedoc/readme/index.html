@@ -121,8 +121,8 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   <meta property="og:locale" content="de_de">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
-    <meta property="article:published_time" content="2025-08-25T10:41:32+02:00">
-    <meta property="article:modified_time" content="2025-08-25T10:41:32+02:00">
+    <meta property="article:published_time" content="2025-08-25T23:46:44+02:00">
+    <meta property="article:modified_time" content="2025-08-25T23:46:44+02:00">
     <meta property="article:tag" content="Kubernetes">
     <meta property="article:tag" content="K3s">
     <meta property="article:tag" content="Software">
@@ -149,15 +149,15 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
       "name": "Fabrice Kirchner"
     },
     "copyrightYear": "2025",
-    "dateCreated": "2025-08-25T10:41:32\u002b02:00",
-    "datePublished": "2025-08-25T10:41:32\u002b02:00",
+    "dateCreated": "2025-08-25T23:46:44\u002b02:00",
+    "datePublished": "2025-08-25T23:46:44\u002b02:00",
     
-    "dateModified": "2025-08-25T10:41:32\u002b02:00",
+    "dateModified": "2025-08-25T23:46:44\u002b02:00",
     
     "keywords": ["kubernetes","k3s","software","homelab"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "198"
+    "wordCount": "315"
   }]
   </script>
 
@@ -695,7 +695,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2025-08-25T10:41:32&#43;02:00">25 August 2025</time><span class="px-2 text-primary-500">&middot;</span><span>198 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
+      <time datetime="2025-08-25T23:46:44&#43;02:00">25 August 2025</time><span class="px-2 text-primary-500">&middot;</span><span>315 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
 
 
   
@@ -865,7 +865,12 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
         <li><a href="#quelle">Quelle</a></li>
         <li><a href="#dokumentation">Dokumentation</a></li>
         <li><a href="#funktion">Funktion</a></li>
-        <li><a href="#lokale-anpassungen">Lokale Anpassungen</a></li>
+        <li><a href="#lokale-anpassungen">Lokale Anpassungen</a>
+          <ul>
+            <li><a href="#wichtige-umgebungsvariablen">Wichtige Umgebungsvariablen</a></li>
+            <li><a href="#wichtige-einstellungen">Wichtige Einstellungen</a></li>
+          </ul>
+        </li>
         <li><a href="#installation">Installation</a></li>
         <li><a href="#abhängigkeiten">Abhängigkeiten</a></li>
       </ul>
@@ -890,7 +895,12 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
         <li><a href="#quelle">Quelle</a></li>
         <li><a href="#dokumentation">Dokumentation</a></li>
         <li><a href="#funktion">Funktion</a></li>
-        <li><a href="#lokale-anpassungen">Lokale Anpassungen</a></li>
+        <li><a href="#lokale-anpassungen">Lokale Anpassungen</a>
+          <ul>
+            <li><a href="#wichtige-umgebungsvariablen">Wichtige Umgebungsvariablen</a></li>
+            <li><a href="#wichtige-einstellungen">Wichtige Einstellungen</a></li>
+          </ul>
+        </li>
         <li><a href="#installation">Installation</a></li>
         <li><a href="#abhängigkeiten">Abhängigkeiten</a></li>
       </ul>
@@ -1024,7 +1034,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
 
 
 <figure>
-    <img class="my-0 rounded-md" loading="lazy" alt="Status" src="https://status.zyria.de/api/badge/__STATUS_ID___/status">
+    <img class="my-0 rounded-md" loading="lazy" alt="Status" src="https://status.zyria.de/api/badge/131/status">
 
   
 </figure>
@@ -1037,7 +1047,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
 
 
 <figure>
-    <img class="my-0 rounded-md" loading="lazy" alt="Verfügbarkeit" src="https://status.zyria.de/api/badge/__STATUS_ID___/uptime">
+    <img class="my-0 rounded-md" loading="lazy" alt="Uptime" src="https://status.zyria.de/api/badge/131/uptime">
 
   
 </figure>
@@ -1050,7 +1060,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
 
 
 <figure>
-    <img class="my-0 rounded-md" loading="lazy" alt="Ping" src="https://status.zyria.de/api/badge/__STATUS_ID___/ping">
+    <img class="my-0 rounded-md" loading="lazy" alt="Ping" src="https://status.zyria.de/api/badge/131/ping">
 
   
 </figure>
@@ -1063,7 +1073,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
 
 
 <figure>
-    <img class="my-0 rounded-md" loading="lazy" alt="Durchschn. Antwortzeit" src="https://status.zyria.de/api/badge/__STATUS_ID___/avg-response">
+    <img class="my-0 rounded-md" loading="lazy" alt="Avg Response Time" src="https://status.zyria.de/api/badge/131/avg-response">
 
   
 </figure>
@@ -1076,7 +1086,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
 
 
 <figure>
-    <img class="my-0 rounded-md" loading="lazy" alt="Zertifikatsablauf" src="https://status.zyria.de/api/badge/__STATUS_ID___/cert-exp">
+    <img class="my-0 rounded-md" loading="lazy" alt="Certificate Expiration" src="https://status.zyria.de/api/badge/131/cert-exp">
 
   
 </figure>
@@ -1089,7 +1099,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
 
 
 <figure>
-    <img class="my-0 rounded-md" loading="lazy" alt="Antwortzeit" src="https://status.zyria.de/api/badge/__STATUS_ID___/response">
+    <img class="my-0 rounded-md" loading="lazy" alt="Response Time" src="https://status.zyria.de/api/badge/131/response">
 
   
 </figure>
@@ -1112,7 +1122,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
 
 
 <figure>
-    <img class="my-0 rounded-md" loading="lazy" alt="Argo Deployment" src="https://argocd.zyria.de/api/badge?name=__STATUS_ARGO___&amp;revision=true&amp;showAppName=true&amp;width=150">
+    <img class="my-0 rounded-md" loading="lazy" alt="Argo Deployment" src="https://argocd.zyria.de/api/badge?name=hedgedoc&amp;revision=true&amp;showAppName=true&amp;width=150">
 
   
 </figure>
@@ -1127,6 +1137,10 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
     </span>        
     
 </h3>
+<p>Die Anwendung wird als generisches <code>app-template</code> Helm-Chart von <a
+  href="https://bjw-s-labs.github.io/helm-charts"
+    target="_blank"
+  >BJW-S Labs</a> bereitgestellt.</p>
 <p>Das Projekt basiert auf der <a
   href="https://hedgedoc.org/"
     target="_blank"
@@ -1149,11 +1163,11 @@ PostgreSQL: <a
     </span>        
     
 </h3>
-<ul>
-<li><a
+<p>Die offizielle Dokumentation von HedgeDoc ist unter <a
   href="https://docs.hedgedoc.org/"
     target="_blank"
-  >HedgeDoc Dokumentation</a></li>
+  >docs.hedgedoc.org</a> zu finden.</p>
+<ul>
 <li><a
   href="https://github.com/hedgedoc/hedgedoc"
     target="_blank"
@@ -1169,7 +1183,7 @@ PostgreSQL: <a
     </span>        
     
 </h3>
-<p>Dieser Dienst bietet eine Plattform für die kollaborative Erstellung und Bearbeitung von Markdown-Dokumenten in Echtzeit. Er ist über <code>md.zyria.de</code> zugänglich.</p>
+<p>HedgeDoc dient als Plattform für die kollaborative Erstellung von Notizen, Dokumentationen und Präsentationen im Markdown-Format. Es ist ideal für Meetings, Brainstorming-Sitzungen oder das gemeinsame Verfassen von Texten. Die fertigen Dokumente können einfach geteilt und exportiert werden.</p>
 
 <h3 class="relative group">Lokale Anpassungen 
     <div id="lokale-anpassungen" class="anchor"></div>
@@ -1180,10 +1194,38 @@ PostgreSQL: <a
     </span>        
     
 </h3>
+<p>Die Konfiguration erfolgt über Umgebungsvariablen in der <code>values.yaml</code>-Datei.</p>
+
+<h4 class="relative group">Wichtige Umgebungsvariablen 
+    <div id="wichtige-umgebungsvariablen" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#wichtige-umgebungsvariablen" aria-label="Anker">#</a>
+    </span>        
+    
+</h4>
 <ul>
-<li>Die <code>values.yaml</code>-Datei enthält die Konfiguration für die HedgeDoc-Instanz, einschließlich Datenbankverbindungen, OAuth2-Einstellungen und LDAP-Integration.</li>
-<li>Die Persistenz für Uploads und die PostgreSQL-Datenbank wird über <code>hostPath</code> Volumes verwaltet, die auf NFS-Shares verweisen.</li>
-<li>Die Bereitstellung ist für den Zugriff über <code>md.zyria.de</code> konfiguriert.</li>
+<li><code>CMD_DB_URL</code>: Die Verbindungs-URL zur PostgreSQL-Datenbank.</li>
+<li><code>CMD_DOMAIN</code>: Die öffentliche Domain der Anwendung (<code>md.zyria.de</code>).</li>
+<li><code>CMD_OAUTH2_*</code>: Konfiguriert die Authentifizierung über Authentik (OIDC), um Single Sign-On zu ermöglichen.</li>
+<li><code>CMD_ALLOW_ANONYMOUS</code>: Ist auf <code>false</code> gesetzt, sodass nur authentifizierte Benutzer Dokumente erstellen und bearbeiten können.</li>
+</ul>
+
+<h4 class="relative group">Wichtige Einstellungen 
+    <div id="wichtige-einstellungen" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#wichtige-einstellungen" aria-label="Anker">#</a>
+    </span>        
+    
+</h4>
+<ul>
+<li><strong>Ingress</strong>: Der Zugriff auf die Weboberfläche wird über einen Ingress mit dem Hostnamen <code>md.zyria.de</code> ermöglicht.</li>
+<li><strong>Authentifizierung</strong>: Die Benutzeranmeldung erfolgt ausschließlich über Authentik (SSO). Eine lokale Registrierung ist deaktiviert.</li>
+<li><strong>Datenbank</strong>: Eine PostgreSQL-Datenbank läuft als Sidecar-Container.</li>
+<li><strong>Speicher</strong>: Sowohl die hochgeladenen Dateien als auch die Datenbank werden persistent auf einem HostPath-Volume unter <code>/srv/container_nfs/hedgedoc</code> gespeichert.</li>
 </ul>
 
 <h3 class="relative group">Installation 
@@ -1195,11 +1237,9 @@ PostgreSQL: <a
     </span>        
     
 </h3>
-<p>Der Dienst wird als Helm-Chart unter Verwendung des <code>app-template</code> aus dem <a
-  href="https://bjw-s.github.io/helm-charts/"
-    target="_blank"
-  >bjw-s-labs Repository</a> bereitgestellt. Die Bereitstellung wird durch die <code>kustomization.yaml</code>-Datei verwaltet.</p>
-
+<p>Die Anwendung wird mittels Kustomize und Helm durch ArgoCD im Kubernetes-Cluster bereitgestellt. Die Konfiguration befindet sich im <code>apps/hedgedoc</code>-Verzeichnis. Eine manuelle Installation kann mit folgendem Befehl durchgeführt werden:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">kubectl kustomize --enable-helm apps/hedgedoc <span class="p">|</span> kubectl apply -n hedgedoc -f -
+</span></span></code></pre></div>
 <h3 class="relative group">Abhängigkeiten 
     <div id="abhängigkeiten" class="anchor"></div>
     
@@ -1426,7 +1466,7 @@ PostgreSQL: <a
       <div class="flex justify-between pt-3">
         <span>
           
-            <a class="flex group mr-3" href="/posts/homelab/k3s-prod/apps/keel/readme/">
+            <a class="flex group mr-3" href="/posts/homelab/k3s-prod/apps/home-assistant/readme/">
               <span
                 class="mr-3 text-neutral-700 group-hover:text-primary-600 ltr:inline rtl:hidden dark:text-neutral dark:group-hover:text-primary-400"
                 >&larr;</span
@@ -1437,11 +1477,11 @@ PostgreSQL: <a
               >
               <span class="flex flex-col">
                 <span class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
-                  >k3s keel</span
+                  >Home Assistant</span
                 >
                 <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
                   
-                    <time datetime="2025-08-25T10:41:32&#43;02:00">25 August 2025</time>
+                    <time datetime="2025-08-25T23:46:44&#43;02:00">25 August 2025</time>
                   
                 </span>
               </span>
@@ -1457,7 +1497,7 @@ PostgreSQL: <a
                 >
                 <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
                   
-                    <time datetime="2025-08-25T10:41:32&#43;02:00">25 August 2025</time>
+                    <time datetime="2025-08-25T23:46:44&#43;02:00">25 August 2025</time>
                   
                 </span>
               </span>

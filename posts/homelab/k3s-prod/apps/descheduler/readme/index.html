@@ -121,8 +121,8 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   <meta property="og:locale" content="de_de">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
-    <meta property="article:published_time" content="2025-08-25T10:41:32+02:00">
-    <meta property="article:modified_time" content="2025-08-25T10:41:32+02:00">
+    <meta property="article:published_time" content="2025-08-25T23:46:44+02:00">
+    <meta property="article:modified_time" content="2025-08-25T23:46:44+02:00">
     <meta property="article:tag" content="Kubernetes">
     <meta property="article:tag" content="K3s">
     <meta property="article:tag" content="Software">
@@ -149,15 +149,15 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
       "name": "Fabrice Kirchner"
     },
     "copyrightYear": "2025",
-    "dateCreated": "2025-08-25T10:41:32\u002b02:00",
-    "datePublished": "2025-08-25T10:41:32\u002b02:00",
+    "dateCreated": "2025-08-25T23:46:44\u002b02:00",
+    "datePublished": "2025-08-25T23:46:44\u002b02:00",
     
-    "dateModified": "2025-08-25T10:41:32\u002b02:00",
+    "dateModified": "2025-08-25T23:46:44\u002b02:00",
     
     "keywords": ["kubernetes","k3s","software","homelab"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "163"
+    "wordCount": "276"
   }]
   </script>
 
@@ -695,7 +695,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2025-08-25T10:41:32&#43;02:00">25 August 2025</time><span class="px-2 text-primary-500">&middot;</span><span>163 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
+      <time datetime="2025-08-25T23:46:44&#43;02:00">25 August 2025</time><span class="px-2 text-primary-500">&middot;</span><span>276 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
 
 
   
@@ -860,12 +860,15 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   <ul>
     <li><a href="#kubernetes-descheduler">Kubernetes Descheduler</a>
       <ul>
-        <li><a href="#status">Status</a></li>
         <li><a href="#deployment">Deployment</a></li>
         <li><a href="#quelle">Quelle</a></li>
         <li><a href="#dokumentation">Dokumentation</a></li>
         <li><a href="#funktion">Funktion</a></li>
-        <li><a href="#lokale-anpassungen">Lokale Anpassungen</a></li>
+        <li><a href="#lokale-anpassungen">Lokale Anpassungen</a>
+          <ul>
+            <li><a href="#wichtige-einstellungen">Wichtige Einstellungen</a></li>
+          </ul>
+        </li>
         <li><a href="#installation">Installation</a></li>
         <li><a href="#abhängigkeiten">Abhängigkeiten</a></li>
       </ul>
@@ -885,12 +888,15 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   <ul>
     <li><a href="#kubernetes-descheduler">Kubernetes Descheduler</a>
       <ul>
-        <li><a href="#status">Status</a></li>
         <li><a href="#deployment">Deployment</a></li>
         <li><a href="#quelle">Quelle</a></li>
         <li><a href="#dokumentation">Dokumentation</a></li>
         <li><a href="#funktion">Funktion</a></li>
-        <li><a href="#lokale-anpassungen">Lokale Anpassungen</a></li>
+        <li><a href="#lokale-anpassungen">Lokale Anpassungen</a>
+          <ul>
+            <li><a href="#wichtige-einstellungen">Wichtige Einstellungen</a></li>
+          </ul>
+        </li>
         <li><a href="#installation">Installation</a></li>
         <li><a href="#abhängigkeiten">Abhängigkeiten</a></li>
       </ul>
@@ -1007,94 +1013,6 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
 </h2>
 <p>Der Kubernetes Descheduler ist ein Tool, das die Pod-Platzierung in einem Cluster optimiert, indem es Pods, die nicht den definierten Richtlinien entsprechen, entfernt. Dies hilft, die Ressourcennutzung zu verbessern und die Cluster-Gesundheit zu erhalten.</p>
 
-<h3 class="relative group">Status 
-    <div id="status" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#status" aria-label="Anker">#</a>
-    </span>        
-    
-</h3>
-<p>
-
-
-
-
-
-
-<figure>
-    <img class="my-0 rounded-md" loading="lazy" alt="Status" src="https://status.zyria.de/api/badge/__STATUS_ID___/status">
-
-  
-</figure>
-
-
-
-
-
-
-
-
-<figure>
-    <img class="my-0 rounded-md" loading="lazy" alt="Verfügbarkeit" src="https://status.zyria.de/api/badge/__STATUS_ID___/uptime">
-
-  
-</figure>
-
-
-
-
-
-
-
-
-<figure>
-    <img class="my-0 rounded-md" loading="lazy" alt="Ping" src="https://status.zyria.de/api/badge/__STATUS_ID___/ping">
-
-  
-</figure>
-
-
-
-
-
-
-
-
-<figure>
-    <img class="my-0 rounded-md" loading="lazy" alt="Durchschn. Antwortzeit" src="https://status.zyria.de/api/badge/__STATUS_ID___/avg-response">
-
-  
-</figure>
-
-
-
-
-
-
-
-
-<figure>
-    <img class="my-0 rounded-md" loading="lazy" alt="Zertifikatsablauf" src="https://status.zyria.de/api/badge/__STATUS_ID___/cert-exp">
-
-  
-</figure>
-
-
-
-
-
-
-
-
-<figure>
-    <img class="my-0 rounded-md" loading="lazy" alt="Antwortzeit" src="https://status.zyria.de/api/badge/__STATUS_ID___/response">
-
-  
-</figure>
-</p>
-
 <h3 class="relative group">Deployment 
     <div id="deployment" class="anchor"></div>
     
@@ -1112,7 +1030,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
 
 
 <figure>
-    <img class="my-0 rounded-md" loading="lazy" alt="Argo Deployment" src="https://argocd.zyria.de/api/badge?name=__STATUS_ARGO___&amp;revision=true&amp;showAppName=true&amp;width=150">
+    <img class="my-0 rounded-md" loading="lazy" alt="Argo Deployment" src="https://argocd.zyria.de/api/badge?name=descheduler&amp;revision=true&amp;showAppName=true&amp;width=150">
 
   
 </figure>
@@ -1165,7 +1083,7 @@ Das Helm-Chart stammt aus dem <a
     </span>        
     
 </h3>
-<p>Der Descheduler läuft periodisch als CronJob und überprüft die Pod-Platzierung anhand konfigurierbarer Richtlinien. Er kann Pods evakuieren, die beispielsweise zu viele Restarts haben, gegen Node-Affinitäten verstoßen oder die Node-Auslastung optimieren.</p>
+<p>Der Kubernetes Descheduler läuft als CronJob und prüft den Cluster regelmäßig auf Pods, die basierend auf den definierten Policies umverteilt werden sollten. Dies hilft, die Ressourcennutzung zu optimieren und die Cluster-Stabilität zu verbessern. Zum Beispiel kann er Pods von Knoten entfernen, die unter- oder überausgelastet sind, oder Pods, die Anti-Affinity-Regeln verletzen.</p>
 
 <h3 class="relative group">Lokale Anpassungen 
     <div id="lokale-anpassungen" class="anchor"></div>
@@ -1176,10 +1094,28 @@ Das Helm-Chart stammt aus dem <a
     </span>        
     
 </h3>
+<p>Die Konfiguration erfolgt über die <code>values.yaml</code>-Datei.</p>
+
+<h4 class="relative group">Wichtige Einstellungen 
+    <div id="wichtige-einstellungen" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#wichtige-einstellungen" aria-label="Anker">#</a>
+    </span>        
+    
+</h4>
 <ul>
-<li>Die <code>values.yaml</code>-Datei konfiguriert den Descheduler als CronJob, der alle 2 Minuten ausgeführt wird.</li>
-<li>Es sind verschiedene Descheduler-Richtlinien aktiviert, darunter <code>RemoveDuplicates</code>, <code>RemovePodsHavingTooManyRestarts</code>, <code>LowNodeUtilization</code> und <code>HighNodeUtilization</code>.</li>
-<li>Die <code>priorityClassName</code> ist auf <code>system-cluster-critical</code> gesetzt.</li>
+<li><strong>Betriebsart</strong>: Der Descheduler wird als <code>CronJob</code> ausgeführt, der alle zwei Minuten läuft.</li>
+<li><strong>Prioritätsklasse</strong>: Er läuft mit der Prioritätsklasse <code>system-cluster-critical</code>, um sicherzustellen, dass er bei Ressourcenknappheit nicht verdrängt wird.</li>
+<li><strong>Aktivierte Strategien</strong>:
+<ul>
+<li><code>RemoveDuplicates</code>: Entfernt doppelte Pods, die auf demselben Knoten laufen.</li>
+<li><code>RemovePodsHavingTooManyRestarts</code>: Entfernt Pods mit einer hohen Anzahl von Neustarts (mehr als 50).</li>
+<li><code>RemovePodsViolatingNodeAffinity</code>, <code>RemovePodsViolatingNodeTaints</code>, <code>RemovePodsViolatingInterPodAntiAffinity</code>, <code>RemovePodsViolatingTopologySpreadConstraint</code>: Stellt sicher, dass Pods, die gegen (Anti-)Affinity-, Taint- oder Topologie-Regeln verstoßen, neu geplant werden.</li>
+<li><code>LowNodeUtilization</code> &amp; <code>HighNodeUtilization</code>: Versucht, Pods von unter- und überausgelasteten Knoten zu verschieben, um eine ausgeglichenere Ressourcennutzung zu erreichen.</li>
+</ul>
+</li>
 </ul>
 
 <h3 class="relative group">Installation 
@@ -1191,11 +1127,9 @@ Das Helm-Chart stammt aus dem <a
     </span>        
     
 </h3>
-<p>Der Dienst wird als Helm-Chart aus dem <a
-  href="https://kubernetes-sigs.github.io/descheduler/"
-    target="_blank"
-  >Kubernetes Descheduler Helm Charts Repository</a> bereitgestellt. Die Bereitstellung wird durch die <code>kustomization.yaml</code>-Datei verwaltet.</p>
-
+<p>Die Anwendung wird mittels Kustomize und Helm durch ArgoCD im Kubernetes-Cluster bereitgestellt. Die Konfiguration befindet sich im <code>apps/descheduler</code>-Verzeichnis. Eine manuelle Installation kann mit folgendem Befehl durchgeführt werden:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">kubectl kustomize --enable-helm apps/descheduler <span class="p">|</span> kubectl apply -n descheduler -f -
+</span></span></code></pre></div>
 <h3 class="relative group">Abhängigkeiten 
     <div id="abhängigkeiten" class="anchor"></div>
     
@@ -1205,9 +1139,7 @@ Das Helm-Chart stammt aus dem <a
     </span>        
     
 </h3>
-<ul>
-<li>Ein laufender Kubernetes-Cluster.</li>
-</ul>
+<p>Der Descheduler hat keine direkten Anwendungsabhängigkeiten, interagiert aber eng mit dem Kubernetes Scheduler.</p>
 
           
           
@@ -1416,7 +1348,7 @@ Das Helm-Chart stammt aus dem <a
       <div class="flex justify-between pt-3">
         <span>
           
-            <a class="flex group mr-3" href="/posts/homelab/k3s-prod/apps/mailstack/readme/">
+            <a class="flex group mr-3" href="/posts/homelab/k3s-prod/apps/longhorn/readme/">
               <span
                 class="mr-3 text-neutral-700 group-hover:text-primary-600 ltr:inline rtl:hidden dark:text-neutral dark:group-hover:text-primary-400"
                 >&larr;</span
@@ -1427,11 +1359,11 @@ Das Helm-Chart stammt aus dem <a
               >
               <span class="flex flex-col">
                 <span class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
-                  >Mailstack</span
+                  >Longhorn</span
                 >
                 <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
                   
-                    <time datetime="2025-08-25T10:41:32&#43;02:00">25 August 2025</time>
+                    <time datetime="2025-08-25T23:46:44&#43;02:00">25 August 2025</time>
                   
                 </span>
               </span>
@@ -1440,14 +1372,14 @@ Das Helm-Chart stammt aus dem <a
         </span>
         <span>
           
-            <a class="flex text-right group ml-3" href="/posts/homelab/k3s-prod/apps/k3s/readme/">
+            <a class="flex text-right group ml-3" href="/posts/homelab/k3s-prod/apps/keel/readme/">
               <span class="flex flex-col">
                 <span class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
-                  >k3s main</span
+                  >Keel</span
                 >
                 <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
                   
-                    <time datetime="2025-08-25T10:41:32&#43;02:00">25 August 2025</time>
+                    <time datetime="2025-08-25T23:46:44&#43;02:00">25 August 2025</time>
                   
                 </span>
               </span>

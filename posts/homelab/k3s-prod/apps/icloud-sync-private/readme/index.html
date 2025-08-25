@@ -14,11 +14,11 @@
   <meta name="theme-color">
 
   
-  <title> &middot; Zyria</title>
-    <meta name="title" content=" &middot; Zyria">
+  <title>iCloud Sync (Privat) &middot; Zyria</title>
+    <meta name="title" content="iCloud Sync (Privat) &middot; Zyria">
 
   
-  <meta name="description" content="Öffentliches Notizbuch von Fabrice Kirchner">
+  <meta name="description" content="Dieser Dienst verwendet `icloudpd`, um alle Fotos und Videos aus einem spezifischen iCloud-Konto herunterzuladen und sie in einem Verzeichnis auf dem NFS-Server zu speichern, das wiederum in Nextcloud eingebunden ist.">
   <meta name="keywords" content="kubernetes,k3s,software,homelab,">
   
   
@@ -116,15 +116,13 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   
   <meta property="og:url" content="https://www.zyria.de/posts/homelab/k3s-prod/apps/icloud-sync-private/readme/">
   <meta property="og:site_name" content="Zyria">
-  <meta property="og:title" content="Zyria">
-  <meta property="og:description" content="iCloud Photo Downloader (Private) # This application uses icloudpd to download photos and videos from a private iCloud account and sync them to a local directory.
-For more information on icloudpd, see the GitHub repository.
-Helm Chart # This application is deployed using the app-template Helm chart from the bjw-s-labs repository.">
+  <meta property="og:title" content="iCloud Sync (Privat)">
+  <meta property="og:description" content="Synchronisiert Fotos aus einem privaten iCloud-Konto mit einem lokalen Speicher.">
   <meta property="og:locale" content="de_de">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
-    <meta property="article:published_time" content="2025-08-25T10:41:32+02:00">
-    <meta property="article:modified_time" content="2025-08-25T10:41:32+02:00">
+    <meta property="article:published_time" content="2025-08-25T23:46:44+02:00">
+    <meta property="article:modified_time" content="2025-08-25T23:46:44+02:00">
     <meta property="article:tag" content="Kubernetes">
     <meta property="article:tag" content="K3s">
     <meta property="article:tag" content="Software">
@@ -132,20 +130,18 @@ Helm Chart # This application is deployed using the app-template Helm chart from
 
   
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Zyria">
-  <meta name="twitter:description" content="iCloud Photo Downloader (Private) # This application uses icloudpd to download photos and videos from a private iCloud account and sync them to a local directory.
-For more information on icloudpd, see the GitHub repository.
-Helm Chart # This application is deployed using the app-template Helm chart from the bjw-s-labs repository.">
+  <meta name="twitter:title" content="iCloud Sync (Privat)">
+  <meta name="twitter:description" content="Synchronisiert Fotos aus einem privaten iCloud-Konto mit einem lokalen Speicher.">
 
   <script type="application/ld+json">
   [{
     "@context": "https://schema.org",
     "@type": "Article",
     "articleSection": "Beiträge",
-    "name": "",
-    "headline": "",
-    
-    "abstract": "\u003ch1 class=\u0022relative group\u0022\u003eiCloud Photo Downloader (Private) \n    \u003cdiv id=\u0022icloud-photo-downloader-private\u0022 class=\u0022anchor\u0022\u003e\u003c\/div\u003e\n    \n    \u003cspan\n        class=\u0022absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none\u0022\u003e\n        \u003ca class=\u0022group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline\u0022 href=\u0022#icloud-photo-downloader-private\u0022 aria-label=\u0022Anker\u0022\u003e#\u003c\/a\u003e\n    \u003c\/span\u003e        \n    \n\u003c\/h1\u003e\n\u003cp\u003eThis application uses \u003ccode\u003eicloudpd\u003c\/code\u003e to download photos and videos from a private iCloud account and sync them to a local directory.\u003c\/p\u003e\n\u003cp\u003eFor more information on \u003ccode\u003eicloudpd\u003c\/code\u003e, see the \u003ca\n  href=\u0022https:\/\/github.com\/icloud-py\/icloud_photos_downloader\u0022\n    target=\u0022_blank\u0022\n  \u003eGitHub repository\u003c\/a\u003e.\u003c\/p\u003e\n\n\u003ch2 class=\u0022relative group\u0022\u003eHelm Chart \n    \u003cdiv id=\u0022helm-chart\u0022 class=\u0022anchor\u0022\u003e\u003c\/div\u003e\n    \n    \u003cspan\n        class=\u0022absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none\u0022\u003e\n        \u003ca class=\u0022group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline\u0022 href=\u0022#helm-chart\u0022 aria-label=\u0022Anker\u0022\u003e#\u003c\/a\u003e\n    \u003c\/span\u003e        \n    \n\u003c\/h2\u003e\n\u003cp\u003eThis application is deployed using the \u003ccode\u003eapp-template\u003c\/code\u003e Helm chart from the \u003ca\n  href=\u0022https:\/\/bjw-s.github.io\/helm-charts\/\u0022\n    target=\u0022_blank\u0022\n  \u003ebjw-s-labs repository\u003c\/a\u003e.\u003c\/p\u003e",
+    "name": "iCloud Sync (Privat)",
+    "headline": "iCloud Sync (Privat)",
+    "description": "Synchronisiert Fotos aus einem privaten iCloud-Konto mit einem lokalen Speicher.",
+    "abstract": "Dieser Dienst verwendet \u003ccode\u003eicloudpd\u003c\/code\u003e, um alle Fotos und Videos aus einem spezifischen iCloud-Konto herunterzuladen und sie in einem Verzeichnis auf dem NFS-Server zu speichern, das wiederum in Nextcloud eingebunden ist.",
     "inLanguage": "de-de",
     "url" : "https:\/\/www.zyria.de\/posts\/homelab\/k3s-prod\/apps\/icloud-sync-private\/readme\/",
     "author" : {
@@ -153,15 +149,15 @@ Helm Chart # This application is deployed using the app-template Helm chart from
       "name": "Fabrice Kirchner"
     },
     "copyrightYear": "2025",
-    "dateCreated": "2025-08-25T10:41:32\u002b02:00",
-    "datePublished": "2025-08-25T10:41:32\u002b02:00",
+    "dateCreated": "2025-08-25T23:46:44\u002b02:00",
+    "datePublished": "2025-08-25T23:46:44\u002b02:00",
     
-    "dateModified": "2025-08-25T10:41:32\u002b02:00",
+    "dateModified": "2025-08-25T23:46:44\u002b02:00",
     
     "keywords": ["kubernetes","k3s","software","homelab"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "95"
+    "wordCount": "256"
   }]
   </script>
 
@@ -635,7 +631,7 @@ Helm Chart # This application is deployed using the app-template Helm chart from
   
   <li class="hidden">
     <a class="hover:underline decoration-neutral-300 dark:underline-neutral-600" href="/posts/homelab/k3s-prod/apps/icloud-sync-private/readme/"
-      >posts</a
+      >iCloud Sync (Privat)</a
     ><span class="px-1 text-primary-500">/</span>
   </li>
 
@@ -644,7 +640,7 @@ Helm Chart # This application is deployed using the app-template Helm chart from
 
       
       <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
-        
+        iCloud Sync (Privat)
       </h1>
       <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
         
@@ -699,7 +695,7 @@ Helm Chart # This application is deployed using the app-template Helm chart from
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2025-08-25T10:41:32&#43;02:00">25 August 2025</time><span class="px-2 text-primary-500">&middot;</span><span>95 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
+      <time datetime="2025-08-25T23:46:44&#43;02:00">25 August 2025</time><span class="px-2 text-primary-500">&middot;</span><span>256 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
 
 
   
@@ -862,8 +858,22 @@ Helm Chart # This application is deployed using the app-template Helm chart from
     class="min-w-[220px] py-2 border-dotted ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#helm-chart">Helm Chart</a></li>
-    <li><a href="#configuration">Configuration</a></li>
+    <li><a href="#icloud-sync-privat">iCloud Sync (Privat)</a>
+      <ul>
+        <li><a href="#deployment">Deployment</a></li>
+        <li><a href="#quelle">Quelle</a></li>
+        <li><a href="#dokumentation">Dokumentation</a></li>
+        <li><a href="#funktion">Funktion</a></li>
+        <li><a href="#lokale-anpassungen">Lokale Anpassungen</a>
+          <ul>
+            <li><a href="#wichtige-startargumente">Wichtige Startargumente</a></li>
+            <li><a href="#wichtige-einstellungen">Wichtige Einstellungen</a></li>
+          </ul>
+        </li>
+        <li><a href="#installation">Installation</a></li>
+        <li><a href="#abhängigkeiten">Abhängigkeiten</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
   </div>
@@ -877,8 +887,22 @@ Helm Chart # This application is deployed using the app-template Helm chart from
     class="py-2 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#helm-chart">Helm Chart</a></li>
-    <li><a href="#configuration">Configuration</a></li>
+    <li><a href="#icloud-sync-privat">iCloud Sync (Privat)</a>
+      <ul>
+        <li><a href="#deployment">Deployment</a></li>
+        <li><a href="#quelle">Quelle</a></li>
+        <li><a href="#dokumentation">Dokumentation</a></li>
+        <li><a href="#funktion">Funktion</a></li>
+        <li><a href="#lokale-anpassungen">Lokale Anpassungen</a>
+          <ul>
+            <li><a href="#wichtige-startargumente">Wichtige Startargumente</a></li>
+            <li><a href="#wichtige-einstellungen">Wichtige Einstellungen</a></li>
+          </ul>
+        </li>
+        <li><a href="#installation">Installation</a></li>
+        <li><a href="#abhängigkeiten">Abhängigkeiten</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
   </div>
@@ -980,46 +1004,149 @@ Helm Chart # This application is deployed using the app-template Helm chart from
 
         <div class="article-content max-w-prose mb-20">
           
-<h1 class="relative group">iCloud Photo Downloader (Private) 
-    <div id="icloud-photo-downloader-private" class="anchor"></div>
+<h2 class="relative group">iCloud Sync (Privat) 
+    <div id="icloud-sync-privat" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#icloud-photo-downloader-private" aria-label="Anker">#</a>
-    </span>        
-    
-</h1>
-<p>This application uses <code>icloudpd</code> to download photos and videos from a private iCloud account and sync them to a local directory.</p>
-<p>For more information on <code>icloudpd</code>, see the <a
-  href="https://github.com/icloud-py/icloud_photos_downloader"
-    target="_blank"
-  >GitHub repository</a>.</p>
-
-<h2 class="relative group">Helm Chart 
-    <div id="helm-chart" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#helm-chart" aria-label="Anker">#</a>
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#icloud-sync-privat" aria-label="Anker">#</a>
     </span>        
     
 </h2>
-<p>This application is deployed using the <code>app-template</code> Helm chart from the <a
-  href="https://bjw-s.github.io/helm-charts/"
-    target="_blank"
-  >bjw-s-labs repository</a>.</p>
 
-<h2 class="relative group">Configuration 
-    <div id="configuration" class="anchor"></div>
+<h3 class="relative group">Deployment 
+    <div id="deployment" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#configuration" aria-label="Anker">#</a>
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#deployment" aria-label="Anker">#</a>
     </span>        
     
-</h2>
-<p>The application&rsquo;s configuration is managed in the <code>values.yaml</code> file. This file contains settings for the <code>icloudpd</code> tool, including the sync interval, directory paths, and notification settings.</p>
-<p><strong>Warning:</strong> This <code>values.yaml</code> file contains sensitive information, including iCloud credentials and SMTP details. Handle with care.</p>
+</h3>
+<p>
+
+
+
+
+
+
+<figure>
+    <img class="my-0 rounded-md" loading="lazy" alt="Argo Deployment" src="https://argocd.zyria.de/api/badge?name=icloud-sync-private&amp;revision=true&amp;showAppName=true&amp;width=150">
+
+  
+</figure>
+</p>
+
+<h3 class="relative group">Quelle 
+    <div id="quelle" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#quelle" aria-label="Anker">#</a>
+    </span>        
+    
+</h3>
+<p>Die Anwendung wird als generisches <code>app-template</code> Helm-Chart von <a
+  href="https://bjw-s-labs.github.io/helm-charts"
+    target="_blank"
+  >BJW-S Labs</a> bereitgestellt. Das verwendete Docker-Image ist <code>icloudpd/icloudpd</code>.</p>
+
+<h3 class="relative group">Dokumentation 
+    <div id="dokumentation" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#dokumentation" aria-label="Anker">#</a>
+    </span>        
+    
+</h3>
+<p>Die Dokumentation für <code>icloudpd</code> ist auf <a
+  href="https://github.com/icloud-photos-downloader/icloud_photos_downloader"
+    target="_blank"
+  >GitHub</a> zu finden.</p>
+
+<h3 class="relative group">Funktion 
+    <div id="funktion" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#funktion" aria-label="Anker">#</a>
+    </span>        
+    
+</h3>
+<p>Dieser Dienst läuft als Hintergrundprozess und synchronisiert in regelmäßigen Abständen (alle 12 Stunden) die Fotomediathek eines privaten Apple iCloud-Kontos. Neue Fotos und Videos werden automatisch heruntergeladen. Die Synchronisation erfolgt in ein Verzeichnis, das direkt in die Dateistruktur von Nextcloud gemountet ist, sodass die Fotos nahtlos dort erscheinen.</p>
+
+<h3 class="relative group">Lokale Anpassungen 
+    <div id="lokale-anpassungen" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#lokale-anpassungen" aria-label="Anker">#</a>
+    </span>        
+    
+</h3>
+<p>Die Konfiguration erfolgt über die <code>values.yaml</code>-Datei, hauptsächlich über die Startargumente des Containers.</p>
+
+<h4 class="relative group">Wichtige Startargumente 
+    <div id="wichtige-startargumente" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#wichtige-startargumente" aria-label="Anker">#</a>
+    </span>        
+    
+</h4>
+<ul>
+<li><code>--watch-with-interval 43200</code>: Startet den Synchronisationsprozess alle 43200 Sekunden (12 Stunden).</li>
+<li><code>--username</code> / <code>--password</code>: Die Anmeldeinformationen für das iCloud-Konto.</li>
+<li><code>--directory /data</code>: Das Zielverzeichnis für die heruntergeladenen Fotos innerhalb des Pods.</li>
+<li><code>--cookie-directory /cookie</code>: Ein persistentes Verzeichnis zum Speichern der Authentifizierungs-Cookies, um 2FA-Abfragen zu minimieren.</li>
+<li><code>--smtp-*</code>: Konfiguriert den Versand von E-Mail-Benachrichtigungen bei Fehlern oder erfolgreicher Synchronisation.</li>
+</ul>
+
+<h4 class="relative group">Wichtige Einstellungen 
+    <div id="wichtige-einstellungen" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#wichtige-einstellungen" aria-label="Anker">#</a>
+    </span>        
+    
+</h4>
+<ul>
+<li><strong>Speicher</strong>:
+<ul>
+<li>Das Datenverzeichnis (<code>/data</code>) wird auf ein NFS-Verzeichnis gemountet, das dem Fotoordner eines Nextcloud-Benutzers entspricht (<code>/srv/container_nfs/nextcloud/data/fabrice@zyria.de/files/Photos/iCloudPrivat</code>).</li>
+<li>Das Cookie-Verzeichnis (<code>/cookie</code>) wird ebenfalls auf ein persistentes NFS-Verzeichnis gemountet.</li>
+</ul>
+</li>
+</ul>
+
+<h3 class="relative group">Installation 
+    <div id="installation" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#installation" aria-label="Anker">#</a>
+    </span>        
+    
+</h3>
+<p>Die Anwendung wird mittels Kustomize und Helm durch ArgoCD im Kubernetes-Cluster bereitgestellt. Die Konfiguration befindet sich im <code>apps/icloud-sync-private</code>-Verzeichnis. Eine manuelle Installation kann mit folgendem Befehl durchgeführt werden:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">kubectl kustomize --enable-helm apps/icloud-sync-private <span class="p">|</span> kubectl apply -n icloud-sync-private -f -
+</span></span></code></pre></div>
+<h3 class="relative group">Abhängigkeiten 
+    <div id="abhängigkeiten" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#abh%c3%a4ngigkeiten" aria-label="Anker">#</a>
+    </span>        
+    
+</h3>
+<ul>
+<li><strong>NFS</strong>: Ein NFS-Server wird für das persistente Speichern der Fotos und der Authentifizierungs-Cookies benötigt.</li>
+<li><strong>Nextcloud</strong>: Obwohl keine direkte Abhängigkeit, ist das Zielverzeichnis so gewählt, dass es mit einer Nextcloud-Instanz harmoniert.</li>
+</ul>
 
           
           
@@ -1028,7 +1155,7 @@ Helm Chart # This application is deployed using the app-template Helm chart from
               <a
                 target="_blank"
                 class="m-1 rounded bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-                href="mailto:fabrice@zyria.de?subject=Reply%20to%20">
+                href="mailto:fabrice@zyria.de?subject=Reply%20to%20iCloud%20Sync%20%28Privat%29">
                 Reply by Email
               </a>
             </strong>
@@ -1228,7 +1355,7 @@ Helm Chart # This application is deployed using the app-template Helm chart from
       <div class="flex justify-between pt-3">
         <span>
           
-            <a class="flex group mr-3" href="/posts/homelab/k3s-prod/apps/icloud-sync-shared/readme/">
+            <a class="flex group mr-3" href="/posts/homelab/k3s-prod/apps/ittools/readme/">
               <span
                 class="mr-3 text-neutral-700 group-hover:text-primary-600 ltr:inline rtl:hidden dark:text-neutral dark:group-hover:text-primary-400"
                 >&larr;</span
@@ -1239,11 +1366,11 @@ Helm Chart # This application is deployed using the app-template Helm chart from
               >
               <span class="flex flex-col">
                 <span class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
-                  ></span
+                  >IT-Tools</span
                 >
                 <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
                   
-                    <time datetime="2025-08-25T10:41:32&#43;02:00">25 August 2025</time>
+                    <time datetime="2025-08-25T23:46:44&#43;02:00">25 August 2025</time>
                   
                 </span>
               </span>
@@ -1252,14 +1379,14 @@ Helm Chart # This application is deployed using the app-template Helm chart from
         </span>
         <span>
           
-            <a class="flex text-right group ml-3" href="/posts/homelab/k3s-prod/apps/hx53-de/readme/">
+            <a class="flex text-right group ml-3" href="/posts/homelab/k3s-prod/apps/icloud-sync-shared/readme/">
               <span class="flex flex-col">
                 <span class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
-                  ></span
+                  >iCloud Sync (Geteilt)</span
                 >
                 <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
                   
-                    <time datetime="2025-08-25T10:41:32&#43;02:00">25 August 2025</time>
+                    <time datetime="2025-08-25T23:46:44&#43;02:00">25 August 2025</time>
                   
                 </span>
               </span>

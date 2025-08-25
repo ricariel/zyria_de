@@ -121,8 +121,8 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   <meta property="og:locale" content="de_de">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
-    <meta property="article:published_time" content="2025-08-25T10:41:32+02:00">
-    <meta property="article:modified_time" content="2025-08-25T10:41:32+02:00">
+    <meta property="article:published_time" content="2025-08-25T23:46:44+02:00">
+    <meta property="article:modified_time" content="2025-08-25T23:46:44+02:00">
     <meta property="article:tag" content="Kubernetes">
     <meta property="article:tag" content="K3s">
     <meta property="article:tag" content="Software">
@@ -149,15 +149,15 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
       "name": "Fabrice Kirchner"
     },
     "copyrightYear": "2025",
-    "dateCreated": "2025-08-25T10:41:32\u002b02:00",
-    "datePublished": "2025-08-25T10:41:32\u002b02:00",
+    "dateCreated": "2025-08-25T23:46:44\u002b02:00",
+    "datePublished": "2025-08-25T23:46:44\u002b02:00",
     
-    "dateModified": "2025-08-25T10:41:32\u002b02:00",
+    "dateModified": "2025-08-25T23:46:44\u002b02:00",
     
     "keywords": ["kubernetes","k3s","software","homelab"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "177"
+    "wordCount": "322"
   }]
   </script>
 
@@ -695,7 +695,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2025-08-25T10:41:32&#43;02:00">25 August 2025</time><span class="px-2 text-primary-500">&middot;</span><span>177 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
+      <time datetime="2025-08-25T23:46:44&#43;02:00">25 August 2025</time><span class="px-2 text-primary-500">&middot;</span><span>322 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
 
 
   
@@ -860,12 +860,15 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   <ul>
     <li><a href="#forgejo-runner">Forgejo Runner</a>
       <ul>
-        <li><a href="#status">Status</a></li>
         <li><a href="#deployment">Deployment</a></li>
         <li><a href="#quelle">Quelle</a></li>
         <li><a href="#dokumentation">Dokumentation</a></li>
         <li><a href="#funktion">Funktion</a></li>
-        <li><a href="#lokale-anpassungen">Lokale Anpassungen</a></li>
+        <li><a href="#lokale-anpassungen">Lokale Anpassungen</a>
+          <ul>
+            <li><a href="#wichtige-einstellungen">Wichtige Einstellungen</a></li>
+          </ul>
+        </li>
         <li><a href="#installation">Installation</a></li>
         <li><a href="#abhängigkeiten">Abhängigkeiten</a></li>
       </ul>
@@ -885,12 +888,15 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   <ul>
     <li><a href="#forgejo-runner">Forgejo Runner</a>
       <ul>
-        <li><a href="#status">Status</a></li>
         <li><a href="#deployment">Deployment</a></li>
         <li><a href="#quelle">Quelle</a></li>
         <li><a href="#dokumentation">Dokumentation</a></li>
         <li><a href="#funktion">Funktion</a></li>
-        <li><a href="#lokale-anpassungen">Lokale Anpassungen</a></li>
+        <li><a href="#lokale-anpassungen">Lokale Anpassungen</a>
+          <ul>
+            <li><a href="#wichtige-einstellungen">Wichtige Einstellungen</a></li>
+          </ul>
+        </li>
         <li><a href="#installation">Installation</a></li>
         <li><a href="#abhängigkeiten">Abhängigkeiten</a></li>
       </ul>
@@ -1007,94 +1013,6 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
 </h2>
 <p>Ein Forgejo Runner ist ein Daemon, der mit einer Forgejo-Instanz zusammenarbeitet, um CI/CD (Continuous Integration/Continuous Delivery)-Jobs auszuführen. Er ruft Workflows von der Forgejo-Instanz ab, führt sie in einer isolierten Umgebung aus und sendet dann Protokolle und den endgültigen Status zurück.</p>
 
-<h3 class="relative group">Status 
-    <div id="status" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#status" aria-label="Anker">#</a>
-    </span>        
-    
-</h3>
-<p>
-
-
-
-
-
-
-<figure>
-    <img class="my-0 rounded-md" loading="lazy" alt="Status" src="https://status.zyria.de/api/badge/__STATUS_ID___/status">
-
-  
-</figure>
-
-
-
-
-
-
-
-
-<figure>
-    <img class="my-0 rounded-md" loading="lazy" alt="Verfügbarkeit" src="https://status.zyria.de/api/badge/__STATUS_ID___/uptime">
-
-  
-</figure>
-
-
-
-
-
-
-
-
-<figure>
-    <img class="my-0 rounded-md" loading="lazy" alt="Ping" src="https://status.zyria.de/api/badge/__STATUS_ID___/ping">
-
-  
-</figure>
-
-
-
-
-
-
-
-
-<figure>
-    <img class="my-0 rounded-md" loading="lazy" alt="Durchschn. Antwortzeit" src="https://status.zyria.de/api/badge/__STATUS_ID___/avg-response">
-
-  
-</figure>
-
-
-
-
-
-
-
-
-<figure>
-    <img class="my-0 rounded-md" loading="lazy" alt="Zertifikatsablauf" src="https://status.zyria.de/api/badge/__STATUS_ID___/cert-exp">
-
-  
-</figure>
-
-
-
-
-
-
-
-
-<figure>
-    <img class="my-0 rounded-md" loading="lazy" alt="Antwortzeit" src="https://status.zyria.de/api/badge/__STATUS_ID___/response">
-
-  
-</figure>
-</p>
-
 <h3 class="relative group">Deployment 
     <div id="deployment" class="anchor"></div>
     
@@ -1112,7 +1030,20 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
 
 
 <figure>
-    <img class="my-0 rounded-md" loading="lazy" alt="Argo Deployment" src="https://argocd.zyria.de/api/badge?name=__STATUS_ARGO___&amp;revision=true&amp;showAppName=true&amp;width=150">
+    <img class="my-0 rounded-md" loading="lazy" alt="Argo Deployment" src="https://argocd.zyria.de/api/badge?name=forgejo-runner&amp;revision=true&amp;showAppName=true&amp;width=150">
+
+  
+</figure>
+
+
+
+
+
+
+
+
+<figure>
+    <img class="my-0 rounded-md" loading="lazy" alt="Argo Deployment" src="https://argocd.zyria.de/api/badge?name=forgejo-runner-codeberg&amp;revision=true&amp;showAppName=true&amp;width=150">
 
   
 </figure>
@@ -1138,12 +1069,10 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
     </span>        
     
 </h3>
-<ul>
-<li><a
-  href="https://forgejo.org/docs/latest/admin/actions/"
+<p>Die Dokumentation für den Runner ist Teil der <a
+  href="https://forgejo.org/docs/next/actions/runner/"
     target="_blank"
-  >Offizielle Forgejo Dokumentation</a></li>
-</ul>
+  >Forgejo-Dokumentation</a>.</p>
 
 <h3 class="relative group">Funktion 
     <div id="funktion" class="anchor"></div>
@@ -1171,6 +1100,28 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
 <li>Beide Instanzen verwenden Docker-in-Docker (DinD) für die Ausführung von Jobs.</li>
 </ul>
 
+<h4 class="relative group">Wichtige Einstellungen 
+    <div id="wichtige-einstellungen" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#wichtige-einstellungen" aria-label="Anker">#</a>
+    </span>        
+    
+</h4>
+<ul>
+<li><strong>Instanzen</strong>: Es werden zwei Runner-Deployments erstellt:
+<ol>
+<li><code>forgejo-runner</code>: Verbindet sich mit der lokalen Instanz <code>https://git.zyria.de</code>.</li>
+<li><code>forgejo-runner-codeberg</code>: Verbindet sich mit der öffentlichen Instanz <code>https://codeberg.org</code>.</li>
+</ol>
+</li>
+<li><strong>Replikas</strong>: Für die lokale Instanz werden 3 Runner-Replikate betrieben, um parallele Job-Ausführung zu ermöglichen.</li>
+<li><strong>Node Selector</strong>: Die Runner werden auf Nodes mit dem Label <code>performance: high</code> ausgeführt, um eine schnelle Job-Ausführung zu gewährleisten.</li>
+<li><strong>Labels</strong>: Die Runner sind mit einer Vielzahl von Labels konfiguriert, die auf verschiedene Docker-Images von <code>catthehacker/ubuntu</code> verweisen. Diese Images sind speziell für die Verwendung mit Gitea/Forgejo Actions vorbereitet.</li>
+<li><strong>Docker-in-Docker</strong>: Die Runner laufen im <code>privileged</code>-Modus und mit <code>host</code>-Netzwerk, um Docker-Befehle innerhalb der CI-Jobs ausführen zu können (Docker-in-Docker).</li>
+</ul>
+
 <h3 class="relative group">Installation 
     <div id="installation" class="anchor"></div>
     
@@ -1181,7 +1132,8 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
     
 </h3>
 <p>Der Dienst wird als Helm-Chart aus einem privaten Repository (<code>https://git.zyria.de/api/packages/pyrox/helm</code>) bereitgestellt. Die Bereitstellung wird durch die <code>kustomization.yaml</code>-Datei verwaltet.</p>
-
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">kubectl kustomize --enable-helm apps/forgejo-runner <span class="p">|</span> kubectl apply -n forgejo-runner -f -
+</span></span></code></pre></div>
 <h3 class="relative group">Abhängigkeiten 
     <div id="abhängigkeiten" class="anchor"></div>
     
@@ -1192,10 +1144,10 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
     
 </h3>
 <ul>
-<li>Ein laufender Kubernetes-Cluster.</li>
-<li>Eine Forgejo-Instanz (lokal oder Codeberg).</li>
+<li><strong>Forgejo</strong>: Eine laufende Forgejo-Instanz, bei der sich die Runner registrieren können.</li>
+<li><strong>Docker</strong>: Auf den Kubernetes-Worker-Nodes, auf denen die Runner laufen, muss eine Docker-Engine verfügbar sein, damit die Runner Docker-Container für die Jobs starten können.
+<strong>Warnung:</strong> Die <code>values.yaml</code>- und <code>values-codeberg.yaml</code>-Dateien enthalten sensible Informationen, einschließlich Runner-Tokens. Gehen Sie äußerst vorsichtig damit um.</li>
 </ul>
-<p><strong>Warnung:</strong> Die <code>values.yaml</code>- und <code>values-codeberg.yaml</code>-Dateien enthalten sensible Informationen, einschließlich Runner-Tokens. Gehen Sie äußerst vorsichtig damit um.</p>
 
           
           
@@ -1419,7 +1371,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
                 >
                 <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
                   
-                    <time datetime="2025-08-25T10:41:32&#43;02:00">25 August 2025</time>
+                    <time datetime="2025-08-25T23:46:44&#43;02:00">25 August 2025</time>
                   
                 </span>
               </span>
@@ -1435,7 +1387,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
                 >
                 <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
                   
-                    <time datetime="2025-08-25T10:41:32&#43;02:00">25 August 2025</time>
+                    <time datetime="2025-08-25T23:46:44&#43;02:00">25 August 2025</time>
                   
                 </span>
               </span>

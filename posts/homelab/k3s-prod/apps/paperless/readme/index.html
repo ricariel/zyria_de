@@ -121,8 +121,8 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   <meta property="og:locale" content="de_de">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
-    <meta property="article:published_time" content="2025-08-25T10:41:32+02:00">
-    <meta property="article:modified_time" content="2025-08-25T10:41:32+02:00">
+    <meta property="article:published_time" content="2025-08-25T23:46:44+02:00">
+    <meta property="article:modified_time" content="2025-08-25T23:46:44+02:00">
     <meta property="article:tag" content="Kubernetes">
     <meta property="article:tag" content="K3s">
     <meta property="article:tag" content="Software">
@@ -149,15 +149,15 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
       "name": "Fabrice Kirchner"
     },
     "copyrightYear": "2025",
-    "dateCreated": "2025-08-25T10:41:32\u002b02:00",
-    "datePublished": "2025-08-25T10:41:32\u002b02:00",
+    "dateCreated": "2025-08-25T23:46:44\u002b02:00",
+    "datePublished": "2025-08-25T23:46:44\u002b02:00",
     
-    "dateModified": "2025-08-25T10:41:32\u002b02:00",
+    "dateModified": "2025-08-25T23:46:44\u002b02:00",
     
     "keywords": ["kubernetes","k3s","software","homelab"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "278"
+    "wordCount": "392"
   }]
   </script>
 
@@ -695,7 +695,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2025-08-25T10:41:32&#43;02:00">25 August 2025</time><span class="px-2 text-primary-500">&middot;</span><span>278 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
+      <time datetime="2025-08-25T23:46:44&#43;02:00">25 August 2025</time><span class="px-2 text-primary-500">&middot;</span><span>392 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
 
 
   
@@ -861,13 +861,18 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
     <li><a href="#paperless-ngx">Paperless-ngx</a>
       <ul>
         <li><a href="#status">Status</a></li>
+        <li><a href="#deployment">Deployment</a></li>
         <li><a href="#components">Components</a></li>
         <li><a href="#source">Source</a></li>
-        <li><a href="#documentation">Documentation</a></li>
-        <li><a href="#function">Function</a></li>
-        <li><a href="#local-modifications">Local modifications</a></li>
+        <li><a href="#dokumentation">Dokumentation</a></li>
+        <li><a href="#funktion">Funktion</a></li>
+        <li><a href="#lokale-anpassungen">Lokale Anpassungen</a>
+          <ul>
+            <li><a href="#wichtige-einstellungen">Wichtige Einstellungen</a></li>
+          </ul>
+        </li>
         <li><a href="#installation">Installation</a></li>
-        <li><a href="#dependencies">Dependencies</a></li>
+        <li><a href="#abhängigkeiten">Abhängigkeiten</a></li>
       </ul>
     </li>
   </ul>
@@ -886,13 +891,18 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
     <li><a href="#paperless-ngx">Paperless-ngx</a>
       <ul>
         <li><a href="#status">Status</a></li>
+        <li><a href="#deployment">Deployment</a></li>
         <li><a href="#components">Components</a></li>
         <li><a href="#source">Source</a></li>
-        <li><a href="#documentation">Documentation</a></li>
-        <li><a href="#function">Function</a></li>
-        <li><a href="#local-modifications">Local modifications</a></li>
+        <li><a href="#dokumentation">Dokumentation</a></li>
+        <li><a href="#funktion">Funktion</a></li>
+        <li><a href="#lokale-anpassungen">Lokale Anpassungen</a>
+          <ul>
+            <li><a href="#wichtige-einstellungen">Wichtige Einstellungen</a></li>
+          </ul>
+        </li>
         <li><a href="#installation">Installation</a></li>
-        <li><a href="#dependencies">Dependencies</a></li>
+        <li><a href="#abhängigkeiten">Abhängigkeiten</a></li>
       </ul>
     </li>
   </ul>
@@ -1024,7 +1034,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
 
 
 <figure>
-    <img class="my-0 rounded-md" loading="lazy" alt="Status" src="https://status.zyria.de/api/badge/XXX/status">
+    <img class="my-0 rounded-md" loading="lazy" alt="Status" src="https://status.zyria.de/api/badge/169/status">
 
   
 </figure>
@@ -1037,7 +1047,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
 
 
 <figure>
-    <img class="my-0 rounded-md" loading="lazy" alt="Uptime" src="https://status.zyria.de/api/badge/XXX/uptime">
+    <img class="my-0 rounded-md" loading="lazy" alt="Uptime" src="https://status.zyria.de/api/badge/169/uptime">
 
   
 </figure>
@@ -1050,7 +1060,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
 
 
 <figure>
-    <img class="my-0 rounded-md" loading="lazy" alt="Ping" src="https://status.zyria.de/api/badge/XXX/ping">
+    <img class="my-0 rounded-md" loading="lazy" alt="Ping" src="https://status.zyria.de/api/badge/169/ping">
 
   
 </figure>
@@ -1063,7 +1073,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
 
 
 <figure>
-    <img class="my-0 rounded-md" loading="lazy" alt="Avg Response Time" src="https://status.zyria.de/api/badge/XXX/avg-response">
+    <img class="my-0 rounded-md" loading="lazy" alt="Avg Response Time" src="https://status.zyria.de/api/badge/169/avg-response">
 
   
 </figure>
@@ -1076,7 +1086,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
 
 
 <figure>
-    <img class="my-0 rounded-md" loading="lazy" alt="Certificate Expiration" src="https://status.zyria.de/api/badge/XXX/cert-exp">
+    <img class="my-0 rounded-md" loading="lazy" alt="Certificate Expiration" src="https://status.zyria.de/api/badge/169/cert-exp">
 
   
 </figure>
@@ -1089,7 +1099,30 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
 
 
 <figure>
-    <img class="my-0 rounded-md" loading="lazy" alt="Response Time" src="https://status.zyria.de/api/badge/XXX/response">
+    <img class="my-0 rounded-md" loading="lazy" alt="Response Time" src="https://status.zyria.de/api/badge/169/response">
+
+  
+</figure>
+</p>
+
+<h3 class="relative group">Deployment 
+    <div id="deployment" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#deployment" aria-label="Anker">#</a>
+    </span>        
+    
+</h3>
+<p>
+
+
+
+
+
+
+<figure>
+    <img class="my-0 rounded-md" loading="lazy" alt="Argo Deployment" src="https://argocd.zyria.de/api/badge?name=paperless&amp;revision=true&amp;showAppName=true&amp;width=150">
 
   
 </figure>
@@ -1104,7 +1137,11 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
     </span>        
     
 </h3>
-<p>This Paperless-ngx instance consists of several components:</p>
+<p>Die Anwendung wird als generisches <code>app-template</code> Helm-Chart von <a
+  href="https://bjw-s-labs.github.io/helm-charts"
+    target="_blank"
+  >BJW-S Labs</a> bereitgestellt. Das verwendete Docker-Image ist <code>ghcr.io/paperless-ngx/paperless-ngx</code>.
+This Paperless-ngx instance consists of several components:</p>
 <ul>
 <li><strong>Paperless-ngx:</strong> The core application for document management.</li>
 <li><strong>PostgreSQL:</strong> The relational database for storing document metadata.</li>
@@ -1145,15 +1182,19 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   >Official Docker Image</a></li>
 </ul>
 
-<h3 class="relative group">Documentation 
-    <div id="documentation" class="anchor"></div>
+<h3 class="relative group">Dokumentation 
+    <div id="dokumentation" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#documentation" aria-label="Anker">#</a>
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#dokumentation" aria-label="Anker">#</a>
     </span>        
     
 </h3>
+<p>Die offizielle Dokumentation von Paperless-ngx ist unter <a
+  href="https://docs.paperless-ngx.com/"
+    target="_blank"
+  >docs.paperless-ngx.com</a> zu finden.</p>
 <ul>
 <li><a
   href="https://docs.paperless-ngx.com/"
@@ -1177,29 +1218,52 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   >Redis Documentation</a></li>
 </ul>
 
-<h3 class="relative group">Function 
-    <div id="function" class="anchor"></div>
+<h3 class="relative group">Funktion 
+    <div id="funktion" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#function" aria-label="Anker">#</a>
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#funktion" aria-label="Anker">#</a>
     </span>        
     
 </h3>
-<p>This service provides a comprehensive solution for digitizing and managing documents. It automates the process of scanning, organizing, and archiving documents, making them searchable and easily retrievable. It is accessible at <code>paperless.zyria.de</code>.</p>
-
-<h3 class="relative group">Local modifications 
-    <div id="local-modifications" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#local-modifications" aria-label="Anker">#</a>
-    </span>        
-    
-</h3>
+<p>Paperless-ngx ist ein System zur Archivierung digitaler Dokumente. Es überwacht einen &ldquo;consume&rdquo;-Ordner auf neue Dateien (z.B. von einem Netzwerkscanner). Neue Dokumente werden verarbeitet:</p>
 <ul>
-<li>Persistent storage for media, consume, data, Redis, and PostgreSQL is configured using <code>hostPath</code> volumes, pointing to an NFS share.</li>
-<li>The <code>values.yaml</code> file contains specific environment variables and configurations for Paperless-ngx, Gotenberg, and Tika.</li>
+<li><strong>OCR</strong>: Der Textinhalt wird mittels optischer Zeichenerkennung (OCR) extrahiert, um das Dokument durchsuchbar zu machen.</li>
+<li><strong>Tagging</strong>: Basierend auf dem Inhalt werden automatisch Tags, Korrespondenten und Dokumententypen zugewiesen.</li>
+<li><strong>Archivierung</strong>: Das Originaldokument und die OCR-Daten werden gespeichert und über eine Weboberfläche zugänglich gemacht.</li>
+</ul>
+<p>Der Dienst besteht aus mehreren Containern:</p>
+<ul>
+<li><strong>Paperless-ngx</strong>: Die Hauptanwendung.</li>
+<li><strong>PostgreSQL</strong>: Die Datenbank.</li>
+<li><strong>Redis</strong>: Message-Broker für Hintergrundaufgaben.</li>
+<li><strong>Gotenberg &amp; Tika</strong>: Dienste zur Konvertierung von Office-Dokumenten und anderen Formaten in PDFs für die Verarbeitung.</li>
+</ul>
+
+<h3 class="relative group">Lokale Anpassungen 
+    <div id="lokale-anpassungen" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#lokale-anpassungen" aria-label="Anker">#</a>
+    </span>        
+    
+</h3>
+<p>Die Konfiguration erfolgt über Umgebungsvariablen in der <code>values.yaml</code>-Datei.</p>
+
+<h4 class="relative group">Wichtige Einstellungen 
+    <div id="wichtige-einstellungen" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#wichtige-einstellungen" aria-label="Anker">#</a>
+    </span>        
+    
+</h4>
+<ul>
+<li><strong>Ingress</strong>: Der Zugriff auf die Weboberfläche wird über einen Ingress mit dem Hostnamen <code>paperless.zyria.de</code> ermöglicht.</li>
+<li><strong>Speicher</strong>: Alle persistenten Daten (Dokumente, Datenbank, etc.) werden auf einem NFS-Share unter <code>/srv/container_nfs/paperless/</code> gespeichert.</li>
 </ul>
 
 <h3 class="relative group">Installation 
@@ -1211,17 +1275,15 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
     </span>        
     
 </h3>
-<p>The service is deployed as a Helm chart using the <code>app-template</code> from the <a
-  href="https://bjw-s.github.io/helm-charts/"
-    target="_blank"
-  >bjw-s-labs repository</a>. The deployment is managed by the <code>kustomization.yaml</code> file.</p>
-
-<h3 class="relative group">Dependencies 
-    <div id="dependencies" class="anchor"></div>
+<p>Die Anwendung wird mittels Kustomize und Helm durch ArgoCD im Kubernetes-Cluster bereitgestellt. Die Konfiguration befindet sich im <code>apps/paperless</code>-Verzeichnis. Eine manuelle Installation kann mit folgendem Befehl durchgeführt werden:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">kubectl kustomize --enable-helm apps/paperless <span class="p">|</span> kubectl apply -n paperless -f -
+</span></span></code></pre></div>
+<h3 class="relative group">Abhängigkeiten 
+    <div id="abhängigkeiten" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#dependencies" aria-label="Anker">#</a>
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#abh%c3%a4ngigkeiten" aria-label="Anker">#</a>
     </span>        
     
 </h3>
@@ -1455,7 +1517,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
                 >
                 <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
                   
-                    <time datetime="2025-08-25T10:41:32&#43;02:00">25 August 2025</time>
+                    <time datetime="2025-08-25T23:46:44&#43;02:00">25 August 2025</time>
                   
                 </span>
               </span>
@@ -1471,7 +1533,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
                 >
                 <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
                   
-                    <time datetime="2025-08-25T10:41:32&#43;02:00">25 August 2025</time>
+                    <time datetime="2025-08-25T23:46:44&#43;02:00">25 August 2025</time>
                   
                 </span>
               </span>

@@ -18,7 +18,7 @@
     <meta name="title" content="Mailstack &middot; Zyria">
 
   
-  <meta name="description" content="Beschreibung des Mailstacks">
+  <meta name="description" content="Dieser Mailstack integriert mehrere Komponenten wie Postfix, Dovecot, Rspamd und ClamAV, um einen robusten und sicheren E-Mail-Dienst mit Spam- und Virenfilterung bereitzustellen.">
   <meta name="keywords" content="kubernetes,k3s,software,homelab,">
   
   
@@ -117,12 +117,12 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   <meta property="og:url" content="https://www.zyria.de/posts/homelab/k3s-prod/apps/mailstack/readme/">
   <meta property="og:site_name" content="Zyria">
   <meta property="og:title" content="Mailstack">
-  <meta property="og:description" content="Beschreibung des Mailstacks">
+  <meta property="og:description" content="Ein vollständiger, containerisierter E-Mail-Server-Stack.">
   <meta property="og:locale" content="de_de">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
-    <meta property="article:published_time" content="2025-08-25T10:41:32+02:00">
-    <meta property="article:modified_time" content="2025-08-25T10:41:32+02:00">
+    <meta property="article:published_time" content="2025-08-25T23:46:44+02:00">
+    <meta property="article:modified_time" content="2025-08-25T23:46:44+02:00">
     <meta property="article:tag" content="Kubernetes">
     <meta property="article:tag" content="K3s">
     <meta property="article:tag" content="Software">
@@ -131,7 +131,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Mailstack">
-  <meta name="twitter:description" content="Beschreibung des Mailstacks">
+  <meta name="twitter:description" content="Ein vollständiger, containerisierter E-Mail-Server-Stack.">
 
   <script type="application/ld+json">
   [{
@@ -140,8 +140,8 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
     "articleSection": "Beiträge",
     "name": "Mailstack",
     "headline": "Mailstack",
-    "description": "Beschreibung des Mailstacks",
-    "abstract": "\u003ch2 class=\u0022relative group\u0022\u003eNutzerteil \n    \u003cdiv id=\u0022nutzerteil\u0022 class=\u0022anchor\u0022\u003e\u003c\/div\u003e\n    \n    \u003cspan\n        class=\u0022absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none\u0022\u003e\n        \u003ca class=\u0022group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline\u0022 href=\u0022#nutzerteil\u0022 aria-label=\u0022Anker\u0022\u003e#\u003c\/a\u003e\n    \u003c\/span\u003e        \n    \n\u003c\/h2\u003e\n\n\u003ch3 class=\u0022relative group\u0022\u003eEinleitung und Geltungsbereich \n    \u003cdiv id=\u0022einleitung-und-geltungsbereich\u0022 class=\u0022anchor\u0022\u003e\u003c\/div\u003e\n    \n    \u003cspan\n        class=\u0022absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none\u0022\u003e\n        \u003ca class=\u0022group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline\u0022 href=\u0022#einleitung-und-geltungsbereich\u0022 aria-label=\u0022Anker\u0022\u003e#\u003c\/a\u003e\n    \u003c\/span\u003e        \n    \n\u003c\/h3\u003e\n\u003cp\u003eDieses Dokument beschreibt die technische Konfiguration, die administrativen Prozesse und die Nutzungsrichtlinien für das E-Mail-System. Es richtet sich an IT-Administratoren, den IT-Support sowie an alle Mitarbeiter als Leitfaden für die ordnungsgemäße Nutzung des E-Mail-Dienstes.\u003c\/p\u003e",
+    "description": "Ein vollständiger, containerisierter E-Mail-Server-Stack.",
+    "abstract": "Dieser Mailstack integriert mehrere Komponenten wie Postfix, Dovecot, Rspamd und ClamAV, um einen robusten und sicheren E-Mail-Dienst mit Spam- und Virenfilterung bereitzustellen.",
     "inLanguage": "de-de",
     "url" : "https:\/\/www.zyria.de\/posts\/homelab\/k3s-prod\/apps\/mailstack\/readme\/",
     "author" : {
@@ -149,15 +149,15 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
       "name": "Fabrice Kirchner"
     },
     "copyrightYear": "2025",
-    "dateCreated": "2025-08-25T10:41:32\u002b02:00",
-    "datePublished": "2025-08-25T10:41:32\u002b02:00",
+    "dateCreated": "2025-08-25T23:46:44\u002b02:00",
+    "datePublished": "2025-08-25T23:46:44\u002b02:00",
     
-    "dateModified": "2025-08-25T10:41:32\u002b02:00",
+    "dateModified": "2025-08-25T23:46:44\u002b02:00",
     
     "keywords": ["kubernetes","k3s","software","homelab"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "1444"
+    "wordCount": "1797"
   }]
   </script>
 
@@ -695,7 +695,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2025-08-25T10:41:32&#43;02:00">25 August 2025</time><span class="px-2 text-primary-500">&middot;</span><span>1444 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
+      <time datetime="2025-08-25T23:46:44&#43;02:00">25 August 2025</time><span class="px-2 text-primary-500">&middot;</span><span>1797 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
 
 
   
@@ -858,6 +858,21 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
     class="min-w-[220px] py-2 border-dotted ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
     <nav id="TableOfContents">
   <ul>
+    <li><a href="#mailstack">Mailstack</a>
+      <ul>
+        <li><a href="#deployment">Deployment</a></li>
+        <li><a href="#quelle">Quelle</a></li>
+        <li><a href="#dokumentation">Dokumentation</a></li>
+        <li><a href="#funktion">Funktion</a></li>
+        <li><a href="#lokale-anpassungen">Lokale Anpassungen</a>
+          <ul>
+            <li><a href="#wichtige-einstellungen">Wichtige Einstellungen</a></li>
+          </ul>
+        </li>
+        <li><a href="#installation">Installation</a></li>
+        <li><a href="#abhängigkeiten">Abhängigkeiten</a></li>
+      </ul>
+    </li>
     <li><a href="#nutzerteil">Nutzerteil</a>
       <ul>
         <li><a href="#einleitung-und-geltungsbereich">Einleitung und Geltungsbereich</a></li>
@@ -924,6 +939,21 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
     class="py-2 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
     <nav id="TableOfContents">
   <ul>
+    <li><a href="#mailstack">Mailstack</a>
+      <ul>
+        <li><a href="#deployment">Deployment</a></li>
+        <li><a href="#quelle">Quelle</a></li>
+        <li><a href="#dokumentation">Dokumentation</a></li>
+        <li><a href="#funktion">Funktion</a></li>
+        <li><a href="#lokale-anpassungen">Lokale Anpassungen</a>
+          <ul>
+            <li><a href="#wichtige-einstellungen">Wichtige Einstellungen</a></li>
+          </ul>
+        </li>
+        <li><a href="#installation">Installation</a></li>
+        <li><a href="#abhängigkeiten">Abhängigkeiten</a></li>
+      </ul>
+    </li>
     <li><a href="#nutzerteil">Nutzerteil</a>
       <ul>
         <li><a href="#einleitung-und-geltungsbereich">Einleitung und Geltungsbereich</a></li>
@@ -1078,6 +1108,140 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
 
         <div class="article-content max-w-prose mb-20">
           
+<h2 class="relative group">Mailstack 
+    <div id="mailstack" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#mailstack" aria-label="Anker">#</a>
+    </span>        
+    
+</h2>
+
+<h3 class="relative group">Deployment 
+    <div id="deployment" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#deployment" aria-label="Anker">#</a>
+    </span>        
+    
+</h3>
+<p>
+
+
+
+
+
+
+<figure>
+    <img class="my-0 rounded-md" loading="lazy" alt="Argo Deployment" src="https://argocd.zyria.de/api/badge?name=mailstack&amp;revision=true&amp;showAppName=true&amp;width=150">
+
+  
+</figure>
+</p>
+
+<h3 class="relative group">Quelle 
+    <div id="quelle" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#quelle" aria-label="Anker">#</a>
+    </span>        
+    
+</h3>
+<p>Die Anwendung wird als benutzerdefiniertes Helm-Chart aus einem privaten Repository auf <code>git.zyria.de</code> bezogen. Es bündelt verschiedene Open-Source-Mail-Komponenten.</p>
+
+<h3 class="relative group">Dokumentation 
+    <div id="dokumentation" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#dokumentation" aria-label="Anker">#</a>
+    </span>        
+    
+</h3>
+<p>Die Konfiguration basiert auf dem <a
+  href="https://mailu.io/"
+    target="_blank"
+  >Mailu</a> Projekt, wurde aber stark angepasst. Die Dokumentation der einzelnen Komponenten (Postfix, Dovecot, etc.) ist auf deren jeweiligen Projekt-Webseiten zu finden.</p>
+
+<h3 class="relative group">Funktion 
+    <div id="funktion" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#funktion" aria-label="Anker">#</a>
+    </span>        
+    
+</h3>
+<p>Der Mailstack ist für den gesamten E-Mail-Verkehr der gehosteten Domains zuständig. Er besteht aus mehreren ineinandergreifenden Diensten:</p>
+<ul>
+<li><strong>Postfix</strong>: Der Mail Transfer Agent (MTA), der E-Mails über SMTP empfängt und versendet.</li>
+<li><strong>Dovecot</strong>: Der Mail Delivery Agent (MDA), der E-Mails in den Postfächern der Benutzer ablegt und den Zugriff über IMAP ermöglicht. Dient auch zur SASL-Authentifizierung für Postfix.</li>
+<li><strong>Rspamd</strong>: Ein fortschrittliches Spam-Filtersystem. Es prüft eingehende E-Mails auf Spam-Merkmale, signiert ausgehende E-Mails mit DKIM und stellt eine Weboberfläche zur Verwaltung bereit.</li>
+<li><strong>ClamAV</strong>: Ein Virenscanner, der E-Mail-Anhänge auf Malware überprüft.</li>
+<li><strong>Unbound</strong>: Ein lokaler DNS-Resolver, der für DNS-Abfragen (z.B. für RBLs) verwendet wird.</li>
+<li><strong>Redis</strong>: Dient als schneller Cache und Speicher für Rspamd.</li>
+</ul>
+
+<h3 class="relative group">Lokale Anpassungen 
+    <div id="lokale-anpassungen" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#lokale-anpassungen" aria-label="Anker">#</a>
+    </span>        
+    
+</h3>
+<p>Die Konfiguration ist sehr umfangreich und erfolgt über die <code>values.yaml</code>-Datei, sowie diverse ConfigMaps und Secrets.</p>
+
+<h4 class="relative group">Wichtige Einstellungen 
+    <div id="wichtige-einstellungen" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#wichtige-einstellungen" aria-label="Anker">#</a>
+    </span>        
+    
+</h4>
+<ul>
+<li><strong>LoadBalancer</strong>: Die Mail-Ports (SMTP, IMAP) werden über einen <code>LoadBalancer</code>-Service mit einer dedizierten externen IP-Adresse bereitgestellt.</li>
+<li><strong>Ingress</strong>: Die Weboberflächen von Rspamd und dem Autodiscover-Dienst sind über Ingresses erreichbar. Der Zugriff auf Rspamd ist durch Authentik geschützt.</li>
+<li><strong>LDAP-Integration</strong>: Postfix und Dovecot sind mit einem LDAP-Server integriert, um Benutzer, Aliase und Weiterleitungen zu verwalten.</li>
+<li><strong>Speicher</strong>: Alle persistenten Daten (Mail-Speicher, Konfigurationen, Rspamd-Daten) werden auf einem NFS-Share unter <code>/srv/container_nfs/mailstack/</code> gespeichert.</li>
+<li><strong>Sicherheit</strong>: Ausgehende E-Mails werden mit DKIM signiert und es wird MTA-STS für eine sichere E-Mail-Zustellung verwendet.</li>
+</ul>
+
+<h3 class="relative group">Installation 
+    <div id="installation" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#installation" aria-label="Anker">#</a>
+    </span>        
+    
+</h3>
+<p>Die Anwendung wird mittels Kustomize und Helm durch ArgoCD im Kubernetes-Cluster bereitgestellt. Die Konfiguration befindet sich im <code>apps/mailstack</code>-Verzeichnis. Eine manuelle Installation kann mit folgendem Befehl durchgeführt werden:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">kubectl kustomize --enable-helm apps/mailstack <span class="p">|</span> kubectl apply -n mailstack -f -
+</span></span></code></pre></div>
+<h3 class="relative group">Abhängigkeiten 
+    <div id="abhängigkeiten" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#abh%c3%a4ngigkeiten" aria-label="Anker">#</a>
+    </span>        
+    
+</h3>
+<ul>
+<li><strong>LDAP-Server</strong>: Ein externer LDAP-Server wird für die Benutzerverwaltung benötigt.</li>
+<li><strong>Traefik</strong>: Wird als Ingress-Controller für den externen Zugriff auf die Web-UIs benötigt.</li>
+<li><strong>Metallb</strong>: Wird benötigt, um dem Mail-Service eine externe IP-Adresse zuzuweisen.</li>
+<li><strong>NFS</strong>: Ein NFS-Server wird für das persistente Speichern aller Daten benötigt.</li>
+<li><strong>Authentik</strong>: Wird zur Absicherung der Rspamd-Weboberfläche verwendet.</li>
+</ul>
+
 <h2 class="relative group">Nutzerteil 
     <div id="nutzerteil" class="anchor"></div>
     
@@ -1590,11 +1754,11 @@ setzen:</p>
 </h5>
 
 <h6 class="relative group">Quelle 
-    <div id="quelle" class="anchor"></div>
+    <div id="quelle-1" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#quelle" aria-label="Anker">#</a>
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#quelle-1" aria-label="Anker">#</a>
     </span>        
     
 </h6>
@@ -1618,11 +1782,11 @@ setzen:</p>
   >Repo</a></p>
 
 <h6 class="relative group">Funktion 
-    <div id="funktion" class="anchor"></div>
+    <div id="funktion-1" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#funktion" aria-label="Anker">#</a>
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#funktion-1" aria-label="Anker">#</a>
     </span>        
     
 </h6>
@@ -1639,11 +1803,11 @@ setzen:</p>
 </h5>
 
 <h6 class="relative group">Quelle 
-    <div id="quelle-1" class="anchor"></div>
+    <div id="quelle-2" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#quelle-1" aria-label="Anker">#</a>
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#quelle-2" aria-label="Anker">#</a>
     </span>        
     
 </h6>
@@ -1667,11 +1831,11 @@ setzen:</p>
   >Repo</a></p>
 
 <h6 class="relative group">Funktion 
-    <div id="funktion-1" class="anchor"></div>
+    <div id="funktion-2" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#funktion-1" aria-label="Anker">#</a>
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#funktion-2" aria-label="Anker">#</a>
     </span>        
     
 </h6>
@@ -1688,11 +1852,11 @@ setzen:</p>
 </h5>
 
 <h6 class="relative group">Quelle 
-    <div id="quelle-2" class="anchor"></div>
+    <div id="quelle-3" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#quelle-2" aria-label="Anker">#</a>
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#quelle-3" aria-label="Anker">#</a>
     </span>        
     
 </h6>
@@ -1716,11 +1880,11 @@ setzen:</p>
   >Repo</a></p>
 
 <h6 class="relative group">Funktion 
-    <div id="funktion-2" class="anchor"></div>
+    <div id="funktion-3" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#funktion-2" aria-label="Anker">#</a>
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#funktion-3" aria-label="Anker">#</a>
     </span>        
     
 </h6>
@@ -2103,7 +2267,7 @@ setzen:</p>
                 >
                 <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
                   
-                    <time datetime="2025-08-25T10:41:32&#43;02:00">25 August 2025</time>
+                    <time datetime="2025-08-25T23:46:44&#43;02:00">25 August 2025</time>
                   
                 </span>
               </span>
@@ -2112,14 +2276,14 @@ setzen:</p>
         </span>
         <span>
           
-            <a class="flex text-right group ml-3" href="/posts/homelab/k3s-prod/apps/descheduler/readme/">
+            <a class="flex text-right group ml-3" href="/posts/homelab/k3s-prod/apps/longhorn/readme/">
               <span class="flex flex-col">
                 <span class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
-                  >Kubernetes Descheduler</span
+                  >Longhorn</span
                 >
                 <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
                   
-                    <time datetime="2025-08-25T10:41:32&#43;02:00">25 August 2025</time>
+                    <time datetime="2025-08-25T23:46:44&#43;02:00">25 August 2025</time>
                   
                 </span>
               </span>
