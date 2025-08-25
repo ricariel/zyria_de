@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Windows on Zyria</title>
-    <link>https://www.zyria.de/tags/windows/</link>
+    <link>https://zyria.de/tags/windows/</link>
     <description>Recent content in Windows on Zyria</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>de-de</language>
     <managingEditor>fabrice@zyria.de (Fabrice Kirchner)</managingEditor>
     <webMaster>fabrice@zyria.de (Fabrice Kirchner)</webMaster>
     
-    <lastBuildDate>Tue, 01 Jul 2025 13:37:34 +0200</lastBuildDate><atom:link href="https://www.zyria.de/tags/windows/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 01 Jul 2025 13:37:34 +0200</lastBuildDate><atom:link href="https://zyria.de/tags/windows/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Setup Windows Client</title>
-      <link>https://www.zyria.de/posts/homelab/setup_windows/</link>
+      <link>https://zyria.de/posts/homelab/setup_windows/</link>
       <pubDate>Tue, 01 Jul 2025 13:37:34 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://www.zyria.de/posts/homelab/setup_windows/</guid>
+      <guid>https://zyria.de/posts/homelab/setup_windows/</guid>
       <description>&lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;Windows Rechner mit Professional Version kaufen (Aufgeräumt wird über Ansible)&lt;/p&gt;
@@ -46,10 +46,10 @@
     
     <item>
       <title>Windows autologon</title>
-      <link>https://www.zyria.de/posts/homelab/windows_autologon/</link>
+      <link>https://zyria.de/posts/homelab/windows_autologon/</link>
       <pubDate>Tue, 01 Jul 2025 13:37:34 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://www.zyria.de/posts/homelab/windows_autologon/</guid>
+      <guid>https://zyria.de/posts/homelab/windows_autologon/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;AutoLogon 
     &lt;div id=&#34;autologon&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
     

@@ -2,231 +2,231 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Zyria</title>
-    <link>https://www.zyria.de/tags/</link>
+    <link>https://zyria.de/tags/</link>
     <description>Recent content in Tags on Zyria</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>de-de</language>
     <managingEditor>fabrice@zyria.de (Fabrice Kirchner)</managingEditor>
     <webMaster>fabrice@zyria.de (Fabrice Kirchner)</webMaster>
     
-    <lastBuildDate>Tue, 26 Aug 2025 01:09:06 +0200</lastBuildDate><atom:link href="https://www.zyria.de/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 26 Aug 2025 01:53:09 +0200</lastBuildDate><atom:link href="https://zyria.de/tags/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Argocd</title>
-      <link>https://www.zyria.de/tags/argocd/</link>
-      <pubDate>Tue, 26 Aug 2025 01:09:06 +0200</pubDate>
+      <link>https://zyria.de/tags/argocd/</link>
+      <pubDate>Tue, 26 Aug 2025 01:53:09 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://www.zyria.de/tags/argocd/</guid>
+      <guid>https://zyria.de/tags/argocd/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Gitops</title>
-      <link>https://www.zyria.de/tags/gitops/</link>
-      <pubDate>Tue, 26 Aug 2025 01:09:06 +0200</pubDate>
+      <link>https://zyria.de/tags/gitops/</link>
+      <pubDate>Tue, 26 Aug 2025 01:53:09 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://www.zyria.de/tags/gitops/</guid>
+      <guid>https://zyria.de/tags/gitops/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Helm</title>
-      <link>https://www.zyria.de/tags/helm/</link>
-      <pubDate>Tue, 26 Aug 2025 01:09:06 +0200</pubDate>
+      <link>https://zyria.de/tags/helm/</link>
+      <pubDate>Tue, 26 Aug 2025 01:53:09 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://www.zyria.de/tags/helm/</guid>
+      <guid>https://zyria.de/tags/helm/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Homelab</title>
-      <link>https://www.zyria.de/tags/homelab/</link>
-      <pubDate>Tue, 26 Aug 2025 01:09:06 +0200</pubDate>
+      <link>https://zyria.de/tags/homelab/</link>
+      <pubDate>Tue, 26 Aug 2025 01:53:09 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://www.zyria.de/tags/homelab/</guid>
+      <guid>https://zyria.de/tags/homelab/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>K3s</title>
-      <link>https://www.zyria.de/tags/k3s/</link>
-      <pubDate>Tue, 26 Aug 2025 01:09:06 +0200</pubDate>
+      <link>https://zyria.de/tags/k3s/</link>
+      <pubDate>Tue, 26 Aug 2025 01:53:09 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://www.zyria.de/tags/k3s/</guid>
+      <guid>https://zyria.de/tags/k3s/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Kubernetes</title>
-      <link>https://www.zyria.de/tags/kubernetes/</link>
-      <pubDate>Tue, 26 Aug 2025 01:09:06 +0200</pubDate>
+      <link>https://zyria.de/tags/kubernetes/</link>
+      <pubDate>Tue, 26 Aug 2025 01:53:09 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://www.zyria.de/tags/kubernetes/</guid>
+      <guid>https://zyria.de/tags/kubernetes/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Kustomize</title>
-      <link>https://www.zyria.de/tags/kustomize/</link>
-      <pubDate>Tue, 26 Aug 2025 01:09:06 +0200</pubDate>
+      <link>https://zyria.de/tags/kustomize/</link>
+      <pubDate>Tue, 26 Aug 2025 01:53:09 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://www.zyria.de/tags/kustomize/</guid>
+      <guid>https://zyria.de/tags/kustomize/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Produktion</title>
-      <link>https://www.zyria.de/tags/produktion/</link>
-      <pubDate>Tue, 26 Aug 2025 01:09:06 +0200</pubDate>
+      <link>https://zyria.de/tags/produktion/</link>
+      <pubDate>Tue, 26 Aug 2025 01:53:09 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://www.zyria.de/tags/produktion/</guid>
+      <guid>https://zyria.de/tags/produktion/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Über Mich</title>
-      <link>https://www.zyria.de/tags/%C3%BCber-mich/</link>
+      <link>https://zyria.de/tags/%C3%BCber-mich/</link>
       <pubDate>Tue, 01 Jul 2025 17:06:46 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://www.zyria.de/tags/%C3%BCber-mich/</guid>
+      <guid>https://zyria.de/tags/%C3%BCber-mich/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Active Directory</title>
-      <link>https://www.zyria.de/tags/active-directory/</link>
+      <link>https://zyria.de/tags/active-directory/</link>
       <pubDate>Tue, 01 Jul 2025 13:37:34 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://www.zyria.de/tags/active-directory/</guid>
+      <guid>https://zyria.de/tags/active-directory/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Extern</title>
-      <link>https://www.zyria.de/tags/extern/</link>
+      <link>https://zyria.de/tags/extern/</link>
       <pubDate>Tue, 01 Jul 2025 13:37:34 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://www.zyria.de/tags/extern/</guid>
+      <guid>https://zyria.de/tags/extern/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Hardware</title>
-      <link>https://www.zyria.de/tags/hardware/</link>
+      <link>https://zyria.de/tags/hardware/</link>
       <pubDate>Tue, 01 Jul 2025 13:37:34 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://www.zyria.de/tags/hardware/</guid>
+      <guid>https://zyria.de/tags/hardware/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Maschinen</title>
-      <link>https://www.zyria.de/tags/maschinen/</link>
+      <link>https://zyria.de/tags/maschinen/</link>
       <pubDate>Tue, 01 Jul 2025 13:37:34 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://www.zyria.de/tags/maschinen/</guid>
+      <guid>https://zyria.de/tags/maschinen/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Samba</title>
-      <link>https://www.zyria.de/tags/samba/</link>
+      <link>https://zyria.de/tags/samba/</link>
       <pubDate>Tue, 01 Jul 2025 13:37:34 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://www.zyria.de/tags/samba/</guid>
+      <guid>https://zyria.de/tags/samba/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Service</title>
-      <link>https://www.zyria.de/tags/service/</link>
+      <link>https://zyria.de/tags/service/</link>
       <pubDate>Tue, 01 Jul 2025 13:37:34 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://www.zyria.de/tags/service/</guid>
+      <guid>https://zyria.de/tags/service/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Software</title>
-      <link>https://www.zyria.de/tags/software/</link>
+      <link>https://zyria.de/tags/software/</link>
       <pubDate>Tue, 01 Jul 2025 13:37:34 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://www.zyria.de/tags/software/</guid>
+      <guid>https://zyria.de/tags/software/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Vpn</title>
-      <link>https://www.zyria.de/tags/vpn/</link>
+      <link>https://zyria.de/tags/vpn/</link>
       <pubDate>Tue, 01 Jul 2025 13:37:34 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://www.zyria.de/tags/vpn/</guid>
+      <guid>https://zyria.de/tags/vpn/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Windows</title>
-      <link>https://www.zyria.de/tags/windows/</link>
+      <link>https://zyria.de/tags/windows/</link>
       <pubDate>Tue, 01 Jul 2025 13:37:34 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://www.zyria.de/tags/windows/</guid>
+      <guid>https://zyria.de/tags/windows/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Datenschutz</title>
-      <link>https://www.zyria.de/tags/datenschutz/</link>
+      <link>https://zyria.de/tags/datenschutz/</link>
       <pubDate>Fri, 21 Jul 2023 15:17:40 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://www.zyria.de/tags/datenschutz/</guid>
+      <guid>https://zyria.de/tags/datenschutz/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Legal</title>
-      <link>https://www.zyria.de/tags/legal/</link>
+      <link>https://zyria.de/tags/legal/</link>
       <pubDate>Fri, 21 Jul 2023 15:17:40 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://www.zyria.de/tags/legal/</guid>
+      <guid>https://zyria.de/tags/legal/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Rechtstexte</title>
-      <link>https://www.zyria.de/tags/rechtstexte/</link>
+      <link>https://zyria.de/tags/rechtstexte/</link>
       <pubDate>Fri, 21 Jul 2023 15:17:40 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://www.zyria.de/tags/rechtstexte/</guid>
+      <guid>https://zyria.de/tags/rechtstexte/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Impressum</title>
-      <link>https://www.zyria.de/tags/impressum/</link>
+      <link>https://zyria.de/tags/impressum/</link>
       <pubDate>Fri, 21 Jul 2023 14:41:15 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://www.zyria.de/tags/impressum/</guid>
+      <guid>https://zyria.de/tags/impressum/</guid>
       <description></description>
       
     </item>

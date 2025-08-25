@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Datenschutz on Zyria</title>
-    <link>https://www.zyria.de/tags/datenschutz/</link>
+    <link>https://zyria.de/tags/datenschutz/</link>
     <description>Recent content in Datenschutz on Zyria</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>de-de</language>
     <managingEditor>fabrice@zyria.de (Fabrice Kirchner)</managingEditor>
     <webMaster>fabrice@zyria.de (Fabrice Kirchner)</webMaster>
     
-    <lastBuildDate>Fri, 21 Jul 2023 15:17:40 +0200</lastBuildDate><atom:link href="https://www.zyria.de/tags/datenschutz/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 21 Jul 2023 15:17:40 +0200</lastBuildDate><atom:link href="https://zyria.de/tags/datenschutz/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Datenschutzerklärung</title>
-      <link>https://www.zyria.de/datenschutz/</link>
+      <link>https://zyria.de/datenschutz/</link>
       <pubDate>Fri, 21 Jul 2023 15:17:40 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://www.zyria.de/datenschutz/</guid>
+      <guid>https://zyria.de/datenschutz/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;Einleitung 
     &lt;div id=&#34;einleitung&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
     

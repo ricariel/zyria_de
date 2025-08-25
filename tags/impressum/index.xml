@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Impressum on Zyria</title>
-    <link>https://www.zyria.de/tags/impressum/</link>
+    <link>https://zyria.de/tags/impressum/</link>
     <description>Recent content in Impressum on Zyria</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>de-de</language>
     <managingEditor>fabrice@zyria.de (Fabrice Kirchner)</managingEditor>
     <webMaster>fabrice@zyria.de (Fabrice Kirchner)</webMaster>
     
-    <lastBuildDate>Fri, 21 Jul 2023 14:41:15 +0200</lastBuildDate><atom:link href="https://www.zyria.de/tags/impressum/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 21 Jul 2023 14:41:15 +0200</lastBuildDate><atom:link href="https://zyria.de/tags/impressum/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Impressum</title>
-      <link>https://www.zyria.de/impressum/</link>
+      <link>https://zyria.de/impressum/</link>
       <pubDate>Fri, 21 Jul 2023 14:41:15 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://www.zyria.de/impressum/</guid>
+      <guid>https://zyria.de/impressum/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;Diensteanbieter 
     &lt;div id=&#34;diensteanbieter&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
     
@@ -48,7 +48,7 @@ web(at)zyria.de&lt;/p&gt;
   href=&#34;https://kirchner.social/@fabrice&#34;
     target=&#34;_blank&#34;
   &gt;fabrice&lt;/a&gt;&lt;/p&gt;
-&lt;img src=&#34;https://www.zyria.de/qr_30e536884bbd0a86.png&#34; width=&#34;154&#34; height=&#34;154&#34; alt=&#34;QR Code der vCard von Fabrice Kirchner&#34;&gt;
+&lt;img src=&#34;https://zyria.de/qr_30e536884bbd0a86.png&#34; width=&#34;154&#34; height=&#34;154&#34; alt=&#34;QR Code der vCard von Fabrice Kirchner&#34;&gt;
 &lt;p&gt;&lt;a
   href=&#34;https://datenschutz-generator.de/&#34;title=&#34;Rechtstext von Dr. Schwenke - für weitere Informationen bitte anklicken.&#34;
     target=&#34;_blank&#34;

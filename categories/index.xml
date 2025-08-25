@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Zyria</title>
-    <link>https://www.zyria.de/categories/</link>
+    <link>https://zyria.de/categories/</link>
     <description>Recent content in Categories on Zyria</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>de-de</language>
     <managingEditor>fabrice@zyria.de (Fabrice Kirchner)</managingEditor>
     <webMaster>fabrice@zyria.de (Fabrice Kirchner)</webMaster>
     
-    <lastBuildDate>Tue, 26 Aug 2025 01:09:06 +0200</lastBuildDate><atom:link href="https://www.zyria.de/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 26 Aug 2025 01:53:09 +0200</lastBuildDate><atom:link href="https://zyria.de/categories/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>K3s-Prod</title>
-      <link>https://www.zyria.de/categories/k3s-prod/</link>
-      <pubDate>Tue, 26 Aug 2025 01:09:06 +0200</pubDate>
+      <link>https://zyria.de/categories/k3s-prod/</link>
+      <pubDate>Tue, 26 Aug 2025 01:53:09 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://www.zyria.de/categories/k3s-prod/</guid>
+      <guid>https://zyria.de/categories/k3s-prod/</guid>
       <description></description>
       
     </item>

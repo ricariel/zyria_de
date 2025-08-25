@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Samba on Zyria</title>
-    <link>https://www.zyria.de/tags/samba/</link>
+    <link>https://zyria.de/tags/samba/</link>
     <description>Recent content in Samba on Zyria</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>de-de</language>
     <managingEditor>fabrice@zyria.de (Fabrice Kirchner)</managingEditor>
     <webMaster>fabrice@zyria.de (Fabrice Kirchner)</webMaster>
     
-    <lastBuildDate>Tue, 01 Jul 2025 13:37:34 +0200</lastBuildDate><atom:link href="https://www.zyria.de/tags/samba/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 01 Jul 2025 13:37:34 +0200</lastBuildDate><atom:link href="https://zyria.de/tags/samba/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Samba Schema</title>
-      <link>https://www.zyria.de/posts/homelab/samba-schema/</link>
+      <link>https://zyria.de/posts/homelab/samba-schema/</link>
       <pubDate>Tue, 01 Jul 2025 13:37:34 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://www.zyria.de/posts/homelab/samba-schema/</guid>
+      <guid>https://zyria.de/posts/homelab/samba-schema/</guid>
       <description>Active Directory Schema Erweiterungen</description>
       
     </item>

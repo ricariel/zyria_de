@@ -2,81 +2,81 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Kleines Homelab on Zyria</title>
-    <link>https://www.zyria.de/posts/homelab/</link>
+    <link>https://zyria.de/posts/homelab/</link>
     <description>Recent content in Kleines Homelab on Zyria</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>de-de</language>
     <managingEditor>fabrice@zyria.de (Fabrice Kirchner)</managingEditor>
     <webMaster>fabrice@zyria.de (Fabrice Kirchner)</webMaster>
     
-    <lastBuildDate>Tue, 01 Jul 2025 13:37:34 +0200</lastBuildDate><atom:link href="https://www.zyria.de/posts/homelab/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 01 Jul 2025 13:37:34 +0200</lastBuildDate><atom:link href="https://zyria.de/posts/homelab/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Linksammlung</title>
-      <link>https://www.zyria.de/posts/homelab/links/</link>
+      <link>https://zyria.de/posts/homelab/links/</link>
       <pubDate>Tue, 19 Aug 2025 10:52:38 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://www.zyria.de/posts/homelab/links/</guid>
+      <guid>https://zyria.de/posts/homelab/links/</guid>
       <description>Hier sammle ich alle Links die sonst nirgends hin gehören.</description>
       
     </item>
     
     <item>
       <title>Snippets</title>
-      <link>https://www.zyria.de/posts/homelab/snippets/</link>
+      <link>https://zyria.de/posts/homelab/snippets/</link>
       <pubDate>Tue, 19 Aug 2025 10:12:30 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://www.zyria.de/posts/homelab/snippets/</guid>
+      <guid>https://zyria.de/posts/homelab/snippets/</guid>
       <description>All der Kram, der sonst nirgends hin gehört</description>
       
     </item>
     
     <item>
       <title></title>
-      <link>https://www.zyria.de/posts/homelab/netzwerk/</link>
+      <link>https://zyria.de/posts/homelab/netzwerk/</link>
       <pubDate>Thu, 14 Aug 2025 11:42:35 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://www.zyria.de/posts/homelab/netzwerk/</guid>
+      <guid>https://zyria.de/posts/homelab/netzwerk/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Kubernetes Snippets</title>
-      <link>https://www.zyria.de/posts/homelab/kubernets/</link>
+      <link>https://zyria.de/posts/homelab/kubernets/</link>
       <pubDate>Mon, 28 Jul 2025 23:11:58 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://www.zyria.de/posts/homelab/kubernets/</guid>
+      <guid>https://zyria.de/posts/homelab/kubernets/</guid>
       <description>&lt;p&gt;Hier Sammle ich Snippets, welche mir das Tippen ersparen sollen und für Kubernetes öfter mal gebraucht werden.&lt;/p&gt;</description>
       
     </item>
     
     <item>
       <title>Hardware im Homelab</title>
-      <link>https://www.zyria.de/posts/homelab/hardware/</link>
+      <link>https://zyria.de/posts/homelab/hardware/</link>
       <pubDate>Tue, 01 Jul 2025 13:37:34 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://www.zyria.de/posts/homelab/hardware/</guid>
+      <guid>https://zyria.de/posts/homelab/hardware/</guid>
       <description>&lt;p&gt;Hier findet man eine Übersicht über die im Homelab verwendete Hardware.&lt;/p&gt;</description>
       
     </item>
     
     <item>
       <title>Hetzner Server</title>
-      <link>https://www.zyria.de/posts/homelab/hetzner_install/</link>
+      <link>https://zyria.de/posts/homelab/hetzner_install/</link>
       <pubDate>Tue, 01 Jul 2025 13:37:34 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://www.zyria.de/posts/homelab/hetzner_install/</guid>
+      <guid>https://zyria.de/posts/homelab/hetzner_install/</guid>
       <description>Anbei ist der Ablauf beschrieben einen Hetzner Server in das System einzubinden.</description>
       
     </item>
     
     <item>
       <title>Logins</title>
-      <link>https://www.zyria.de/posts/homelab/login/</link>
+      <link>https://zyria.de/posts/homelab/login/</link>
       <pubDate>Tue, 01 Jul 2025 13:37:34 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://www.zyria.de/posts/homelab/login/</guid>
+      <guid>https://zyria.de/posts/homelab/login/</guid>
       <description>&lt;p&gt;Alle Zugangsdaten sind entweder in der Persönlichen Keepass Datendank (für
 personalisierte Logindaten) oder in der IT Datenbank. Der Login auf die Server
 geschieht über SSH Schlüssel. Ein Login mit dem Passwort ist nicht vorgesehen.&lt;/p&gt;
@@ -95,40 +95,40 @@ werden.&lt;/p&gt;</description>
     
     <item>
       <title>Passwörter</title>
-      <link>https://www.zyria.de/posts/homelab/passworter/</link>
+      <link>https://zyria.de/posts/homelab/passworter/</link>
       <pubDate>Tue, 01 Jul 2025 13:37:34 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://www.zyria.de/posts/homelab/passworter/</guid>
+      <guid>https://zyria.de/posts/homelab/passworter/</guid>
       <description>Umgang mit Passwörtern</description>
       
     </item>
     
     <item>
       <title>Samba Schema</title>
-      <link>https://www.zyria.de/posts/homelab/samba-schema/</link>
+      <link>https://zyria.de/posts/homelab/samba-schema/</link>
       <pubDate>Tue, 01 Jul 2025 13:37:34 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://www.zyria.de/posts/homelab/samba-schema/</guid>
+      <guid>https://zyria.de/posts/homelab/samba-schema/</guid>
       <description>Active Directory Schema Erweiterungen</description>
       
     </item>
     
     <item>
       <title>Server</title>
-      <link>https://www.zyria.de/posts/homelab/server/</link>
+      <link>https://zyria.de/posts/homelab/server/</link>
       <pubDate>Tue, 01 Jul 2025 13:37:34 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://www.zyria.de/posts/homelab/server/</guid>
+      <guid>https://zyria.de/posts/homelab/server/</guid>
       <description>&lt;p&gt;Alle Maschinen dienen der Virtualisierung von diversen Systemen. Wir brauche die Flexibilität Systeme schnell skalieren zu können und auch durch neue zu ersetzen.&lt;/p&gt;</description>
       
     </item>
     
     <item>
       <title>Server-,Diensteverwaltung</title>
-      <link>https://www.zyria.de/posts/homelab/verwaltung/</link>
+      <link>https://zyria.de/posts/homelab/verwaltung/</link>
       <pubDate>Tue, 01 Jul 2025 13:37:34 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://www.zyria.de/posts/homelab/verwaltung/</guid>
+      <guid>https://zyria.de/posts/homelab/verwaltung/</guid>
       <description>&lt;p&gt;Wir verwenden zur generellen Verwaltung von Servern Ansible. Für manche Dienste
 ist es jedoch notwendig oder praktikabler dies über vorhandene Portale zu
 realisieren.&lt;/p&gt;
@@ -156,10 +156,10 @@ alle relevanten Änderungen durchführen.&lt;/p&gt;</description>
     
     <item>
       <title>Setup Windows Client</title>
-      <link>https://www.zyria.de/posts/homelab/setup_windows/</link>
+      <link>https://zyria.de/posts/homelab/setup_windows/</link>
       <pubDate>Tue, 01 Jul 2025 13:37:34 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://www.zyria.de/posts/homelab/setup_windows/</guid>
+      <guid>https://zyria.de/posts/homelab/setup_windows/</guid>
       <description>&lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;Windows Rechner mit Professional Version kaufen (Aufgeräumt wird über Ansible)&lt;/p&gt;
@@ -189,20 +189,20 @@ alle relevanten Änderungen durchführen.&lt;/p&gt;</description>
     
     <item>
       <title>Software</title>
-      <link>https://www.zyria.de/posts/homelab/software/</link>
+      <link>https://zyria.de/posts/homelab/software/</link>
       <pubDate>Tue, 01 Jul 2025 13:37:34 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://www.zyria.de/posts/homelab/software/</guid>
+      <guid>https://zyria.de/posts/homelab/software/</guid>
       <description>&lt;p&gt;Die eingesetzte Software partiell dokumentiert.&lt;/p&gt;</description>
       
     </item>
     
     <item>
       <title>Windows autologon</title>
-      <link>https://www.zyria.de/posts/homelab/windows_autologon/</link>
+      <link>https://zyria.de/posts/homelab/windows_autologon/</link>
       <pubDate>Tue, 01 Jul 2025 13:37:34 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://www.zyria.de/posts/homelab/windows_autologon/</guid>
+      <guid>https://zyria.de/posts/homelab/windows_autologon/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;AutoLogon 
     &lt;div id=&#34;autologon&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
     
@@ -227,20 +227,20 @@ aus.&lt;/p&gt;
     
     <item>
       <title>WireGuard mit systemd</title>
-      <link>https://www.zyria.de/posts/homelab/wireguard_mit_systemd/</link>
+      <link>https://zyria.de/posts/homelab/wireguard_mit_systemd/</link>
       <pubDate>Tue, 01 Jul 2025 13:37:34 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://www.zyria.de/posts/homelab/wireguard_mit_systemd/</guid>
+      <guid>https://zyria.de/posts/homelab/wireguard_mit_systemd/</guid>
       <description>&lt;p&gt;Für eine WireGuard-Verbindung mit systemd-networkd und systemd-resolved.&lt;/p&gt;</description>
       
     </item>
     
     <item>
       <title>Erste Hilfe</title>
-      <link>https://www.zyria.de/posts/homelab/erste_hilfe/</link>
+      <link>https://zyria.de/posts/homelab/erste_hilfe/</link>
       <pubDate>Thu, 19 Oct 2023 13:28:04 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://www.zyria.de/posts/homelab/erste_hilfe/</guid>
+      <guid>https://zyria.de/posts/homelab/erste_hilfe/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;Erster Schritt 
     &lt;div id=&#34;erster-schritt&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
     

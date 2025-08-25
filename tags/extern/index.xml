@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Extern on Zyria</title>
-    <link>https://www.zyria.de/tags/extern/</link>
+    <link>https://zyria.de/tags/extern/</link>
     <description>Recent content in Extern on Zyria</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>de-de</language>
     <managingEditor>fabrice@zyria.de (Fabrice Kirchner)</managingEditor>
     <webMaster>fabrice@zyria.de (Fabrice Kirchner)</webMaster>
     
-    <lastBuildDate>Tue, 01 Jul 2025 13:37:34 +0200</lastBuildDate><atom:link href="https://www.zyria.de/tags/extern/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 01 Jul 2025 13:37:34 +0200</lastBuildDate><atom:link href="https://zyria.de/tags/extern/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Hetzner Server</title>
-      <link>https://www.zyria.de/posts/homelab/hetzner_install/</link>
+      <link>https://zyria.de/posts/homelab/hetzner_install/</link>
       <pubDate>Tue, 01 Jul 2025 13:37:34 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://www.zyria.de/posts/homelab/hetzner_install/</guid>
+      <guid>https://zyria.de/posts/homelab/hetzner_install/</guid>
       <description>Anbei ist der Ablauf beschrieben einen Hetzner Server in das System einzubinden.</description>
       
     </item>
     
     <item>
       <title>Server-,Diensteverwaltung</title>
-      <link>https://www.zyria.de/posts/homelab/verwaltung/</link>
+      <link>https://zyria.de/posts/homelab/verwaltung/</link>
       <pubDate>Tue, 01 Jul 2025 13:37:34 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://www.zyria.de/posts/homelab/verwaltung/</guid>
+      <guid>https://zyria.de/posts/homelab/verwaltung/</guid>
       <description>&lt;p&gt;Wir verwenden zur generellen Verwaltung von Servern Ansible. Für manche Dienste
 ist es jedoch notwendig oder praktikabler dies über vorhandene Portale zu
 realisieren.&lt;/p&gt;

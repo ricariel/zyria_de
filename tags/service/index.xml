@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Service on Zyria</title>
-    <link>https://www.zyria.de/tags/service/</link>
+    <link>https://zyria.de/tags/service/</link>
     <description>Recent content in Service on Zyria</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>de-de</language>
     <managingEditor>fabrice@zyria.de (Fabrice Kirchner)</managingEditor>
     <webMaster>fabrice@zyria.de (Fabrice Kirchner)</webMaster>
     
-    <lastBuildDate>Tue, 01 Jul 2025 13:37:34 +0200</lastBuildDate><atom:link href="https://www.zyria.de/tags/service/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 01 Jul 2025 13:37:34 +0200</lastBuildDate><atom:link href="https://zyria.de/tags/service/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Logins</title>
-      <link>https://www.zyria.de/posts/homelab/login/</link>
+      <link>https://zyria.de/posts/homelab/login/</link>
       <pubDate>Tue, 01 Jul 2025 13:37:34 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://www.zyria.de/posts/homelab/login/</guid>
+      <guid>https://zyria.de/posts/homelab/login/</guid>
       <description>&lt;p&gt;Alle Zugangsdaten sind entweder in der Persönlichen Keepass Datendank (für
 personalisierte Logindaten) oder in der IT Datenbank. Der Login auf die Server
 geschieht über SSH Schlüssel. Ein Login mit dem Passwort ist nicht vorgesehen.&lt;/p&gt;
@@ -35,20 +35,20 @@ werden.&lt;/p&gt;</description>
     
     <item>
       <title>Passwörter</title>
-      <link>https://www.zyria.de/posts/homelab/passworter/</link>
+      <link>https://zyria.de/posts/homelab/passworter/</link>
       <pubDate>Tue, 01 Jul 2025 13:37:34 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://www.zyria.de/posts/homelab/passworter/</guid>
+      <guid>https://zyria.de/posts/homelab/passworter/</guid>
       <description>Umgang mit Passwörtern</description>
       
     </item>
     
     <item>
       <title>Erste Hilfe</title>
-      <link>https://www.zyria.de/posts/homelab/erste_hilfe/</link>
+      <link>https://zyria.de/posts/homelab/erste_hilfe/</link>
       <pubDate>Thu, 19 Oct 2023 13:28:04 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://www.zyria.de/posts/homelab/erste_hilfe/</guid>
+      <guid>https://zyria.de/posts/homelab/erste_hilfe/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;Erster Schritt 
     &lt;div id=&#34;erster-schritt&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
     
