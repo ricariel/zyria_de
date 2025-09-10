@@ -11,6 +11,14 @@ Hier Sammle ich Snippets, welche mir das Tippen ersparen sollen und für Kuberne
 
 <!--more-->
 
+## OCI Helm Chart in Forgejo importieren
+
+```bash
+helm pull oci://codeberg.org/wrenix/helm-charts/forgejo-runner --version 0.6.6
+helm push *.tgz oci://git.zyria.de/pyrox
+helm cm-push *.tgz zyria
+```
+
 ## Finalizer löschen
 
 ```bash
