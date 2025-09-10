@@ -12,6 +12,16 @@
     <lastBuildDate>Tue, 01 Jul 2025 13:37:34 +0200</lastBuildDate><atom:link href="https://zyria.de/posts/homelab/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Kubernetes Snippets</title>
+      <link>https://zyria.de/posts/homelab/kubernets/</link>
+      <pubDate>Wed, 10 Sep 2025 12:15:52 +0200</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://zyria.de/posts/homelab/kubernets/</guid>
+      <description>&lt;p&gt;Hier Sammle ich Snippets, welche mir das Tippen ersparen sollen und für Kubernetes öfter mal gebraucht werden.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
       <title>Linksammlung</title>
       <link>https://zyria.de/posts/homelab/links/</link>
       <pubDate>Tue, 19 Aug 2025 10:52:38 +0200</pubDate>
@@ -38,16 +48,6 @@
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/posts/homelab/netzwerk/</guid>
       <description></description>
-      
-    </item>
-    
-    <item>
-      <title>Kubernetes Snippets</title>
-      <link>https://zyria.de/posts/homelab/kubernets/</link>
-      <pubDate>Mon, 28 Jul 2025 23:11:58 +0200</pubDate>
-      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://zyria.de/posts/homelab/kubernets/</guid>
-      <description>&lt;p&gt;Hier Sammle ich Snippets, welche mir das Tippen ersparen sollen und für Kubernetes öfter mal gebraucht werden.&lt;/p&gt;</description>
       
     </item>
     

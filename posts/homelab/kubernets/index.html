@@ -121,8 +121,8 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   <meta property="og:locale" content="de_de">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
-    <meta property="article:published_time" content="2025-07-28T23:11:58+02:00">
-    <meta property="article:modified_time" content="2025-07-28T23:11:58+02:00">
+    <meta property="article:published_time" content="2025-09-10T12:15:52+02:00">
+    <meta property="article:modified_time" content="2025-09-10T12:15:52+02:00">
     <meta property="article:tag" content="Kubernetes">
     <meta property="article:tag" content="Homelab">
     <meta property="article:tag" content="K3s">
@@ -148,15 +148,15 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
       "name": "Fabrice Kirchner"
     },
     "copyrightYear": "2025",
-    "dateCreated": "2025-07-28T23:11:58\u002b02:00",
-    "datePublished": "2025-07-28T23:11:58\u002b02:00",
+    "dateCreated": "2025-09-10T12:15:52\u002b02:00",
+    "datePublished": "2025-09-10T12:15:52\u002b02:00",
     
-    "dateModified": "2025-07-28T23:11:58\u002b02:00",
+    "dateModified": "2025-09-10T12:15:52\u002b02:00",
     
     "keywords": ["Kubernetes","Homelab","K3s"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "106"
+    "wordCount": "126"
   }]
   </script>
 
@@ -685,7 +685,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2025-07-28T23:11:58&#43;02:00">28 Juli 2025</time><span class="px-2 text-primary-500">&middot;</span><span>106 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
+      <time datetime="2025-09-10T12:15:52&#43;02:00">10 September 2025</time><span class="px-2 text-primary-500">&middot;</span><span>126 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
 
 
   
@@ -826,6 +826,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
     class="min-w-[220px] py-2 border-dotted ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
     <nav id="TableOfContents">
   <ul>
+    <li><a href="#oci-helm-chart-in-forgejo-importieren">OCI Helm Chart in Forgejo importieren</a></li>
     <li><a href="#finalizer-löschen">Finalizer löschen</a></li>
     <li><a href="#update-postgres-mit-podmandocker">Update Postgres mit Podman/Docker</a></li>
     <li><a href="#zeige-alle-nodes-mit-dem-label-performance">Zeige alle Nodes mit dem Label performance</a></li>
@@ -844,6 +845,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
     class="py-2 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
     <nav id="TableOfContents">
   <ul>
+    <li><a href="#oci-helm-chart-in-forgejo-importieren">OCI Helm Chart in Forgejo importieren</a></li>
     <li><a href="#finalizer-löschen">Finalizer löschen</a></li>
     <li><a href="#update-postgres-mit-podmandocker">Update Postgres mit Podman/Docker</a></li>
     <li><a href="#zeige-alle-nodes-mit-dem-label-performance">Zeige alle Nodes mit dem Label performance</a></li>
@@ -951,6 +953,19 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
         <div class="article-content max-w-prose mb-20">
           <p>Hier Sammle ich Snippets, welche mir das Tippen ersparen sollen und für Kubernetes öfter mal gebraucht werden.</p>
 
+<h2 class="relative group">OCI Helm Chart in Forgejo importieren 
+    <div id="oci-helm-chart-in-forgejo-importieren" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#oci-helm-chart-in-forgejo-importieren" aria-label="Anker">#</a>
+    </span>        
+    
+</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">helm pull oci://codeberg.org/wrenix/helm-charts/forgejo-runner --version 0.6.6
+</span></span><span class="line"><span class="ln">2</span><span class="cl">helm push *.tgz oci://git.zyria.de/pyrox
+</span></span><span class="line"><span class="ln">3</span><span class="cl">helm cm-push *.tgz zyria
+</span></span></code></pre></div>
 <h2 class="relative group">Finalizer löschen 
     <div id="finalizer-löschen" class="anchor"></div>
     
@@ -1218,7 +1233,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
       <div class="flex justify-between pt-3">
         <span>
           
-            <a class="flex group mr-3" href="/posts/homelab/hardware/">
+            <a class="flex group mr-3" href="/posts/homelab/links/">
               <span
                 class="mr-3 text-neutral-700 group-hover:text-primary-600 ltr:inline rtl:hidden dark:text-neutral dark:group-hover:text-primary-400"
                 >&larr;</span
@@ -1229,11 +1244,11 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
               >
               <span class="flex flex-col">
                 <span class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
-                  >Hardware im Homelab</span
+                  >Linksammlung</span
                 >
                 <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
                   
-                    <time datetime="2025-07-01T13:37:34&#43;02:00">1 Juli 2025</time>
+                    <time datetime="2025-08-19T10:52:38&#43;02:00">19 August 2025</time>
                   
                 </span>
               </span>
@@ -1241,27 +1256,6 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
           
         </span>
         <span>
-          
-            <a class="flex text-right group ml-3" href="/posts/homelab/netzwerk/">
-              <span class="flex flex-col">
-                <span class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
-                  ></span
-                >
-                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
-                  
-                    <time datetime="2025-08-14T11:42:35&#43;02:00">14 August 2025</time>
-                  
-                </span>
-              </span>
-              <span
-                class="ml-3 text-neutral-700 group-hover:text-primary-600 ltr:inline rtl:hidden dark:text-neutral dark:group-hover:text-primary-400"
-                >&rarr;</span
-              >
-              <span
-                class="mr-3 text-neutral-700 group-hover:text-primary-600 ltr:hidden rtl:inline dark:text-neutral dark:group-hover:text-primary-400"
-                >&larr;</span
-              >
-            </a>
           
         </span>
       </div>
