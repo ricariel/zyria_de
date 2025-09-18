@@ -6,6 +6,37 @@ summary: "All der Kram, der sonst nirgends hin gehört"
 
 ## Snippets
 
+### SSH nur mit Passwort
+
+```bash
+ssh -o PubkeyAuthentication=no -o PreferredAuthentications=password
+```
+
+### Download Spam
+
+```bash
+wget -q -N -P /var/lib/spamassassin/training/downloads/ http://untroubled.org/spam/$$(date +%%Y-%%m.7z -d 'last month')
+wget -q -N -P /var/lib/spamassassin/training/downloads/ http://untroubled.org/spam/$$(date +%%Y-%%m.7z)
+```
+
+### Mastodon Wartung
+
+```bash
+bundle exec rake db:migrate
+tootctl statuses remove --days=7
+tootctl preview_cards remove --days=7
+tootctl media  remove --days=14
+tootctl media remove-orphans
+tootctl cache clear
+tootctl accounts cull
+```
+
+### Podman Kubernetes Manifest starten mit systemd
+
+```bash
+systemctl enable --now podman-kube@$(systemd-escape $(pwd)/).service
+```
+
 ### Container bauen mit Podman[^1]
 
 ```bash

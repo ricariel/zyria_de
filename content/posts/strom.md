@@ -60,3 +60,17 @@ Stecker-Pinout (Draufsicht auf Hub/Akku, nicht auf den  Kabelstecker):
 - 3: CAN_H
 - 4: Hub button press detection (active low, pulled up by both hub and battery, chained between Öl batteries)
 - 5: Hub presence detection (active low, pulled up by battery, grounded in hub, unconnected on battery bottom port)
+
+### Solarflow Mqtt Zugangsdaten
+
+```python
+# Mqtt Username = device_id
+# Password=
+
+#!/usr/bin/python
+import hashlib
+device_id = "<DEVICEID>"
+md5_hash = hashlib.md5(device_id.encode()).hexdigest().upper()[8:24]
+print(md5_hash)
+
+```
