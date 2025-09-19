@@ -2,8 +2,8 @@ git.zyria.de/pyrox/hugo-default-coder v0.0.0-20250919074730-73be33e69f9b h1:/H5D
 git.zyria.de/pyrox/hugo-default-coder v0.0.0-20250919074730-73be33e69f9b/go.mod h1:Y7qQuCK09h4tITlXuem2aXju0GL6/phMWq1/uy0uewk=
 git.zyria.de/pyrox/hugo-legal v0.0.0-20250910063251-f456dc28e7d3 h1:IHV/Z5/5GY4AlRivZnnaVY2SREpSsOHUDY2y1VaA0LI=
 git.zyria.de/pyrox/hugo-legal v0.0.0-20250910063251-f456dc28e7d3/go.mod h1:1MFdE30Bzx583p3qHNQCQPOG2pMoDmms/4xqYiUtqOk=
-git.zyria.de/pyrox/hugo-shortcodes v0.0.0-20250919084649-bf0e4fda8ab6 h1:3zSsl4G8fhSR1URpQZRnndFaHYQJmVN8Mt9dIpPnWJg=
-git.zyria.de/pyrox/hugo-shortcodes v0.0.0-20250919084649-bf0e4fda8ab6/go.mod h1:V2R75xLAXqOdvHSkKtqc0AqaCUof6704G2ELS6Huis4=
+git.zyria.de/pyrox/hugo-shortcodes v0.0.0-20250919085248-9ca7409575e1 h1:yQDpaD9yaMt7LMmxJY0MGILQYLx4M4KDb8xS19mXoTk=
+git.zyria.de/pyrox/hugo-shortcodes v0.0.0-20250919085248-9ca7409575e1/go.mod h1:V2R75xLAXqOdvHSkKtqc0AqaCUof6704G2ELS6Huis4=
 git.zyria.de/pyrox/k3s-prod v0.0.0-20250917141736-4dae3720622c h1:Iwv6lUOD3LJq8V7zm7B+VVlne2/COW8o6XqJzK5pG9Y=
 git.zyria.de/pyrox/k3s-prod v0.0.0-20250917141736-4dae3720622c/go.mod h1:lM6OkgyZUD2079ubnXJYR7VJUxPW3peobWUYXCHfIBE=
 github.com/FortAwesome/Font-Awesome v0.0.0-20241216213156-af620534bfc3 h1:/iluJkJiyTAdnqrw3Yi9rH2HNHhrrtCmj8VJe7I6o3w=
