@@ -6,6 +6,8 @@ summary: "All der Kram, der sonst nirgends hin gehört"
 
 ## Snippets
 
+{{< links file="it" >}}
+
 ### SSH nur mit Passwort
 
 ```bash
@@ -165,14 +167,6 @@ vgcreate vg-name /dev/mapper/crypt-root
 lvcreate -n root -L 4G vg-name
 lvcreate -n var-log -l100%FREE vg-name
 ```
-
-#### LVM vergrößern
-
-[Link](https://www.thomas-krenn.com/de/wiki/LVM_vergrößern)
-
-### Backup
-
-[BorgBackup bei Hetzner](https://wiki.hetzner.de/index.php/BorgBackup)
 
 ### Git
 

@@ -1,0 +1,18 @@
+---
+- group: "IT Links"
+  links:
+    - title: "Microsoft Administrator Sites"
+      url: "https://msportals.io"
+      description: "Sammlunk von Microsoft Portalen"
+    - title: "Microsoft Technische Dokumentation"
+      url: "https://learn.microsoft.com/de-de/docs/"
+      description: "Learning Portal Microsoft"
+    - title: "Samba Wiki"
+      url: "https://wiki.samba.org/index.php/Main_Page"
+      description: "Das Samba Wiki"
+    - title: "LVM vergrößern"
+      url: "https://www.thomas-krenn.com/de/wiki/LVM_vergrößern"
+      description: "Erklärung wie man ein LVM vergrößert"
+    - title: "Borgbackup bei Hetzner"
+      url: "https://wiki.hetzner.de/index.php/BorgBackup"
+      description: "Borgbackup mit einer Storagebox bei Hetzner einrichten"
