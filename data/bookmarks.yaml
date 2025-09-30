@@ -1,0 +1,921 @@
+---
+- Privat:
+  - Neuer Ordner:
+    - title: Entwickler-Dokumentationen und technische Hilfen für JTL-Produkte
+      url: https://www.jtl-software.de/hilfecenter/entwickler-dokumentation
+    - title: Login | Lexware
+      url: https://app.lexoffice.de/sign-in/authenticate?redirect=%2Ffis%2Folb4%2F%23%2Ftransactionswop%2Fcd67e3bd-5d49-46a3-a167-6cea4ecd6664%3Fassignments%3Dfalse
+    - title: 'Windows TCP/IP-Implementierung: Reset kann die Netzwerkleistung erhöhen – Borns IT- und Windows-Blog'
+      url: https://www.borncity.com/blog/2024/09/04/windows-tcp-ip-implementierung-reset-kann-die-netzwerkleistung-erhhen/
+    - title: Portainer
+      url: https://portainer.casa-due-pur.de:9443/#!/44/docker/stacks/testshop?id=185&type=2&regular=true&external=false&orphaned=false
+    - title: https://app.lexoffice.de/fis/olb4/#/transactionswop/c821386f-67ad-4890-a2b9-344995d02b31?assignments=false
+      url: https://app.lexoffice.de/fis/olb4/#/transactionswop/c821386f-67ad-4890-a2b9-344995d02b31?assignments=false
+    - title: https://app.lexoffice.de/fis/olb4/#/transactionswop/0a8fde7f-7b57-4a86-96c2-7cb3ddb69242?assignments=false
+      url: https://app.lexoffice.de/fis/olb4/#/transactionswop/0a8fde7f-7b57-4a86-96c2-7cb3ddb69242?assignments=false
+    - title: MyFRITZ!Net
+      url: https://www.myfritz.net/devices/
+    - title: '11 Jahre ist es her… - Erinnerung - Google Fotos'
+      url: https://photos.google.com/memory/featured/AF1QipOXhrYXjcWqoWVGXeGeB5N7KHu31FaQwYFlr2KkSw/photo/AF1QipOTv4c4Op6UwtzfFFxGYNf5ZjuHvNYC1bU-m38J
+    - title: filmfriend
+      url: https://www.filmfriend.de/de/pages/kollektionen
+    - title: https://github.com/chaossocial/about/blob/master/blocked_instances.md
+      url: https://github.com/chaossocial/about/blob/master/blocked_instances.md
+    - title: 'Builds a preseeded Debian ISO. Place both in the same folder, install xorriso and whois packages. · GitHub'
+      url: https://gist.github.com/quonic/cc0f73e167b140c68e4e31ff0b71024d
+    - title: 'Per Tools: Verdächtige Mailanhänge ohne Risiko untersuchen und entschärfen | heise online'
+      url: https://www.heise.de/ratgeber/Per-Tools-Verdaechtige-Mailanhaenge-ohne-Risiko-untersuchen-und-entschaerfen-7241534.html
+    - title: Uptime Kuma
+      url: https://status.casa-due-pur.com/dashboard
+    - title: jelbo/Windows10Tweaks
+      url: https://github.com/jelbo/Windows10Tweaks
+    - title: 'Michał "rysiek" Woźniak / libresilient · GitLab'
+      url: https://gitlab.com/rysiekpl/libresilient
+    - title: 'GitHub: Where the world builds software · GitHub'
+      url: https://github.com/
+    - title: 'Page not found · GitHub · GitHub'
+      url: https://github.com/leshniak/nft-blacklist/blob/master/update-blacklist.sh
+
+    - title: Adding IPv6 to a keepalived and haproxy cluster - Raymii.org
+      url: https://raymii.org/s/articles/Adding_IPv6_to_a_keepalived_and_haproxy_cluster.html
+    - title: 'Alien vergewaltigt: SSH Keys verwalten mit RPM und Debian Paketen |'
+      url: http://linux-aha.de/wordpress/2010/09/10/alien-vergewaltigt-ssh-keys-verwalten-mit-rpm-und-debian-paketen/
+    - title: andreasheil/hetzner-install · GitHub
+      url: https://github.com/andreasheil/hetzner-install
+    - title: arduino-esp32/esp32_pinmap.png at master · espressif/arduino-esp32 · GitHub
+      url: https://github.com/espressif/arduino-esp32/blob/master/docs/esp32_pinmap.png
+    - title: Autokonfiguration von Apple iPhone, iPad oder iPod [Linux - Wissensdatenbank]
+      url: http://dokuwiki.nausch.org/doku.php/centos:mail_c6:autoconfig_3
+    - title: Awesome Sysadmin | Curated list of awesome lists | Project-Awesome.org
+      url: https://project-awesome.org/n1trux/awesome-sysadmin#automation
+    - title: awesome-sysadmin2/README.md at master · epcim/awesome-sysadmin2 · GitHub
+      url: https://github.com/epcim/awesome-sysadmin2/blob/master/README.md#distributed-filesystems
+    - title: Barrierefreies Web
+      url: http://barrierefrei.e-workers.de/
+    - title: Best Practices in der IT-Administration, Version 2019 :: Grazer Linuxtage 2019 :: pretalx
+      url: https://pretalx.linuxtage.at/glt19/talk/YNSEM3/
+    - title: browsershots.org
+      url: http://browsershots.org/website/
+    - title: BSI - M 4 Maßnahmenkatalog Hardware und Software - IT-Grundschutz-Kataloge - M 4.333 Sichere Konfiguration von Winbind unter Samba
+      url: https://www.bsi.bund.de/DE/Themen/ITGrundschutz/ITGrundschutzKataloge/Inhalt/_content/m/m04/m04333.html
+    - title: 'Building Browsergames: The Registration Page (PHP) | Building Browsergames'
+      url: http://buildingbrowsergames.com/2008/04/17/building-browsergames-the-registration-page-php/
+    - title: Burgvogel - Messer made in Solingen
+      url: https://www.burgvogel-shop.de/shopping_cart.php
+    - title: c't Desinfect 2015 erstellt USB Stick mit Version 2014?
+      url: http://thinkpad-forum.de/threads/188506-c-t-Desinfect-2015-erstellt-USB-Stick-mit-Version-2014
+    - title: Caching und Compressing Optimierung in der .htaccess | Webmaster, Security und Technik Blog
+      url: http://www.sjmp.de/software/caching-und-compressing-optimierung-in-der-htaccess/?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+tobiaskoelligan%2FaPmA+%28Webmaster%2C+Security+und+Technik+Blog%29
+    - title: Case Study: Failover using VRRP — Keepalived 1.4.3 documentation
+      url: http://www.keepalived.org/doc/case_study_failover.html
+    - title: Ceph Cluster unter Debian Wheezy installieren - adminForge
+      url: http://adminforge.de/raid/ceph/ceph-cluster-unter-debian-wheezy-installieren/
+    - title: 'Ceph: mix SATA and SSD within the same box | Sébastien Han'
+      url: https://www.sebastien-han.fr/blog/2014/08/25/ceph-mix-sata-and-ssd-within-the-same-box/
+    - title: Certificate Authority (CA) with OpenSSL
+      url: https://www.debian-administration.org/article/618/Certificate_Authority_CA_with_OpenSSL
+    - title: 'Chroot users with OpenSSH: An easier way to confine users to their home directories | Linux and Open Source | TechRepublic.com'
+      url: http://blogs.techrepublic.com.com/opensource/?p=229
+    - title: cl01 - Proxmox Virtual Environment
+      url: https://cl01.casa-due-pur.de:8006/#v1:0:=node%2Fcl02:4:43:::::5
+    - title: 'Client-Images auf dem Server anlegen :: Diskless PC mit Debian :: Tutorials bei php2all.de'
+      url: http://www.php2all.de/tutorialpage-44-client-images-auf-dem-server-anlegen.html
+    - title: Cluster Manager - Proxmox VE
+      url: https://pve.proxmox.com/wiki/Cluster_Manager
+    - title: Color Scheme Designer 3
+      url: http://colorschemedesigner.com/
+    - title: Comparison of TLS implementations - Wikipedia
+      url: https://en.wikipedia.org/wiki/Comparison_of_TLS_implementations
+    - title: Configuration Types — ESPHome
+      url: https://esphome.io/guides/configuration-types.html
+    - title: Configuring OpenSSH with OATH and public keys (2 factor authentication) — insecure.ws
+      url: https://www.insecure.ws/linux/openssh_oath.html
+    - title: Configuring the Salt Minion
+      url: https://docs.saltstack.com/en/latest/ref/configuration/minion.html
+    - title: Cool spawn, diamonds, npc village, desert temple minecraft seed 1.8, 1.7.10 - Seeds - Minecraft Discussion - Minecraft Forum - Minecraft Forum
+      url: http://www.minecraftforum.net/forums/minecraft-discussion/seeds/2125126-cool-spawn-diamonds-npc-village-desert-temple
+    - title: Core Networks GmbH - Webinterface
+      url: https://iface.core-networks.de/products/domainmanager/dnszone/377de80f-d609-11e8-b06e-5254000ceab0
+    - title: core/10-ssl.conf at master · dovecot/core
+      url: https://github.com/dovecot/core/blob/master/doc/example-config/conf.d/10-ssl.conf
+    - title: cppreference.com
+      url: http://en.cppreference.com/w/
+    - title: Create a Ceph filesystem — Ceph Documentation
+      url: http://docs.ceph.com/docs/master/cephfs/createfs/
+    - title: Create a Debian LXC container and install a SaltStack master to it · GitHub
+      url: https://gist.github.com/HansAdema/03d0daae49e8677a7da3b065196f8630
+    - title: create_image.sh · main · Interessengemeinschaft Betrieb von Containern (IG BvC) / Standard Images / Grund-Images / Debian · GitLab
+      url: https://gitlab.opencode.de/ig-bvc/standard-images/grund-images/debian/-/blob/main/create_image.sh
+    - title: crt.sh | Zyria.de
+      url: https://crt.sh/?q=Zyria.de
+    - title: Cryptosense Discovery
+      url: https://discovery.cryptosense.com/analyze/www.zyria.de/3ff401b/standard/nist
+    - title: CSS Cross Browser Fonts using CSS3 @font-face
+      url: http://randsco.com/index.php/2009/07/04/p680
+    - title: Customising your Drupal maintenance page | technology.blue-bag.com
+      url: http://technology.blue-bag.com/customising-your-drupal-maintenance-page
+    - title: Cyberschutzraum
+      url: https://www.cyberschutzraum.de/
+    - title: Dan Rodney's List of Mac OS X Keyboard Shortcuts & Keystrokes
+      url: http://www.danrodney.com/mac/
+    - title: Daniel P. Berrangé » Blog Archive » Providing IPv6 connectivity to virtual guests with libvirt and KVM
+      url: https://www.berrange.com/posts/2011/06/16/providing-ipv6-connectivity-to-virtual-guests-with-libvirt-and-kvm/
+    - title: Dateien aus dem Terminal heraus in den Müll schieben | Linux und Ich
+      url: http://linuxundich.de/de/ubuntu/dateien-aus-dem-terminal-heraus-in-den-mull-schieben/
+    - title: Datennutzung - Data Comfort Free
+      url: http://pass.telekom.de/home
+    - title: dayid's screen and tmux cheat sheet
+      url: http://www.dayid.org/os/notes/tm.html
+    - title: 'DBMail: fast and scalable sql based mail services'
+      url: http://www.dbmail.org/
+    - title: 'DCP - An Open Source Mac way ....: Apple Support Communities'
+      url: https://discussions.apple.com/thread/2360650?start=0&tstart=0
+    - title: Debian -- Software-Pakete in »jessie-backports-sloppy«
+      url: https://packages.debian.org/jessie-backports-sloppy/allpackages
+    - title: Debian on the MacBookPro8,2
+      url: http://dentifrice.poivron.org/laptops/macbookpro8,2/
+    - title: Debian Raspberry Pi Maintainers / Raspberry Pi image specs · GitLab
+      url: https://salsa.debian.org/raspi-team/image-specs
+    - title: debian-keepalived.md
+      url: https://gist.github.com/scyto/cfe4f1645cb2cd820134238bd3c2596a
+    - title: 'debootstrap(8): Bootstrap basic Debian system - Linux man page'
+      url: http://linux.die.net/man/8/debootstrap
+    - title: diafygi/gethttpsforfree: Source code for https://gethttpsforfree.com/
+      url: https://github.com/diafygi/gethttpsforfree
+    - title: Dim (and brighten) lights via a remote - Home Assistant
+      url: https://www.home-assistant.io/cookbook/dim_and_brighten_lights/
+    - title: Disabling DHCP on a LibVirt setup | Everything is a Freaking DNS problem
+      url: http://www.krisbuytaert.be/blog/disabling-dhcp-libvirt-setup/
+    - title: DLH.Net - PC Cheats
+      url: http://dlh.net/chtdb/chtview.php?lang=ger&typ=FAQ&sys=pc&cap=&search=&match=&layout=&disp=g27014&page=4
+    - title: 'Dmitriy Morozovsky: DNSBL server for Postfix'
+      url: http://morozovsky.blogspot.de/2007/10/dnsbl-server-for-postfix.html
+    - title: DNS Dynamic Update (DNS and BIND, 4th Edition)
+      url: http://docstore.mik.ua/orelly/networking_2ndEd/dns/ch10_02.htm
+    - title: DNS-01 challenge with certbot hooks - Client dev - Let's Encrypt Community Support
+      url: https://community.letsencrypt.org/t/dns-01-challenge-with-certbot-hooks/36915
+    - title: 'DNS-based challange for verification of LetsEncrypt/SSL-certs? - Issuance Tech - Let''s Encrypt Community Support'
+      url: https://community.letsencrypt.org/t/dns-based-challange-for-verification-of-letsencrypt-ssl-certs/28561
+    - title: dnsupdate is meant to replace nsupdate, the standard DDNS update tool created by BIND authors ISC. While nsupdate does the job it is awkward to wrap in scripts and its usage in general is just not very intuitive. dnsupdate is meant to work well from the c
+      url: https://gist.github.com/pklaus/4619865
+    - title: Docker container networking | Docker Documentation
+      url: https://docs.docker.com/v17.09/engine/userguide/networking/#bridge-networks
+    - title: Docker with Saltstack
+      url: https://opsnotice.xyz/docker-with-saltstack/
+    - title: Dokumentation – heise „socialSharePrivacy“–Plug-In
+      url: http://www.heise.de/extras/socialshareprivacy/
+    - title: dotfiles/setup.sh at master · tankywoo/dotfiles
+      url: https://github.com/tankywoo/dotfiles/blob/master/setup.sh
+    - title: Dovecot, Postfix - Mit LDAP zum Active Directory - debinux.de
+      url: https://www.debinux.de/2014/11/dovecot-postfix-mit-ldap-zum-active-directory/
+    - title: 'DRBD:Recovery'
+      url: http://drbd.linbit.com/home/recovery/
+    - title: Drupal Blueprint theme playing SEO nicely with other modules | technology.blue-bag.com
+      url: http://technology.blue-bag.com/drupal-blueprint-theme-playing-seo-nicely-other-modules
+    - title: E-Mail Anbieter Vergleich (mit SSL/STARTTLS) · SSL-Tools
+      url: https://de.ssl-tools.net/providers
+    - title: eferdman/dehydrated-hook-ddns-tsig: dnspython hook for dehydrated shell script
+      url: https://github.com/eferdman/dehydrated-hook-ddns-tsig
+    - title: Einfaches Single-Sign-On Teil 1 - (Open)LDAP
+      url: http://www.guido-flohr.net/einfaches-single-sign-on-teil-1-openldap/
+    - title: Enable repository updating for supported Linux server distributions | Plex Support
+      url: https://support.plex.tv/articles/235974187-enable-repository-updating-for-supported-linux-server-distributions/
+    - title: esp32_mqtt_eq3/README.md at master · softypit/esp32_mqtt_eq3 · GitHub
+      url: https://github.com/softypit/esp32_mqtt_eq3/blob/master/README.md
+    - title: ESP8266 - Joy-IT
+      url: https://joy-it.net/de/products/SBC-ESP8266
+    - title: 'ESPHome: Zum DIY Smart-Home in wenigen Schritten :: Grazer Linuxtage 2019 :: pretalx'
+      url: https://pretalx.linuxtage.at/glt19/talk/W3GLEX/
+    - title: Espressif 8266 — PlatformIO 4.1.1b9 documentation
+      url: http://docs.platformio.org/en/latest/platforms/espressif8266.html
+    - title: 'Essential System Administration, 3rd Edition - Free Download eBook - pdf'
+      url: http://www.it-ebooks.info/book/2190/
+    - title: 'Excelformeln - FORMELN - Übersicht - Finanzmathematik (5) - Einen annuitätischen Tilgungsplan erstellen'
+      url: http://www.excelformeln.de/formeln.html?welcher=209
+    - title: execute PHP online - functions-online
+      url: http://www.functions-online.com/
+    - title: 'extremeshok/clamav-unofficial-sigs: ClamAV Unofficial Signatures Updater maintained by eXtremeSHOK.com'
+      url: https://github.com/extremeshok/clamav-unofficial-sigs
+    - title: FAI - Fully Automatic Installation
+      url: https://fai-project.org/
+    - title: 'FAQ der Newsgroups de.comp.lang.php.* - Überblick'
+      url: http://www.php-faq.de/index.html
+    - title: File Finder
+      url: https://github.com/kharkevich/letsencrypt-proxmox/find/master
+    - title: Find and Replace with Sed
+      url: http://www.brunolinux.com/02-The_Terminal/Find_and%20Replace_with_Sed.html
+    - title: Find packages installed from a certain repository with aptitude - Super User
+      url: http://superuser.com/questions/132346/find-packages-installed-from-a-certain-repository-with-aptitude
+    - title: 'fmdlc/saltstack-cheatsheet: SaltStack Cheat Sheet Plus'
+      url: https://github.com/fmdlc/saltstack-cheatsheet
+    - title: Font Squirrel | Create Your Own @font-face Kits
+      url: http://www.fontsquirrel.com/fontface/generator
+    - title: FortiTo – Educational Technology
+      url: http://www.fortito.com/buzz/
+    - title: 'forum.blocklist.de • Thema anzeigen - Listen von blocklist.de per DNS abfragen/einbinden'
+      url: https://forum.blocklist.de/viewtopic.php?f=11&t=17
+    - title: 'forum.blocklist.de • Thema anzeigen - scriptkiddies & reporting'
+      url: https://forum.blocklist.de/viewtopic.php?f=4&t=217
+    - title: FREEDUP.org - allows you to reclaim space on your drives
+      url: http://freedup.org/
+    - title: FreeIPA
+      url: https://www.freeipa.org/page/Main_Page
+    - title: 'Galileo Computing - <openbook> - Bücher online lesen und herunterladen'
+      url: http://www.galileocomputing.de/katalog/openbook
+    - title: GeekLab » How to use chained SSL certificates
+      url: http://www.geeklab.info/2011/01/how-to-use-chained-ssl-certificates/
+    - title: Generate Mozilla Security Recommended Web Server Configuration Files
+      url: https://mozilla.github.io/server-side-tls/ssl-config-generator/
+    - title: Gesamtliste - vhbonline.de
+      url: https://vhbonline.org/vhb4you/vhb-jourqual/vhb-jourqual-3/gesamtliste
+    - title: Get Licensing Ready
+      url: https://getlicensingready.com/TestIntro.aspx
+    - title: Getting Started - schema.org
+      url: http://schema.org/docs/gs.html
+    - title: Git - Einrichten des Servers
+      url: https://git-scm.com/book/de/v2/Git-auf-dem-Server-Einrichten-des-Servers
+    - title: Git Repositories gemeinsam nutzen - AlphaNodes
+      url: http://alphanodes.de/git-repositories-gemeinsam-nutzen
+    - title: 'GitHub - AlessandroZ/LaZagne: Credentials recovery project'
+      url: https://github.com/AlessandroZ/LaZagne
+    - title: 'GitHub - alkivi-sas/unifi-formula: Salt Formula to manage Ubiquity Unifi'
+      url: https://github.com/alkivi-sas/unifi-formula
+    - title: 'GitHub - Andreas-Bresch/vmailManage: This Symfony based code helps you to manage your vmail server (Dovecot, Postfix, MySQL).'
+      url: https://github.com/Andreas-Bresch/vmailManage
+    - title: 'GitHub - awesome-selfhosted/awesome-selfhosted: A list of Free Software network services and web applications which can be hosted locally. Selfhosting is the process of hosting and managing applications instead of renting from Software-as-a-Service providers'
+      url: https://github.com/awesome-selfhosted/awesome-selfhosted
+    - title: 'GitHub - HeinleinSupport/olefy: olefy - oletools verify over TCP socket'
+      url: https://github.com/HeinleinSupport/olefy
+    - title: 'GitHub - kahun/awesome-sysadmin: A curated list of amazingly awesome open source sysadmin resources inspired by Awesome PHP.'
+      url: https://github.com/kahun/awesome-sysadmin
+    - title: 'GitHub - r-pufky/salt-unifi-formula: Manage Ubiquiti unifi with saltstack.'
+      url: https://github.com/r-pufky/salt-unifi-formula
+    - title: GitHub - whiskerz007/proxmox_hassio_lxc
+      url: https://github.com/whiskerz007/proxmox_hassio_lxc
+    - title: 'GnuTLS 3.6.1: Encryption algorithms used in the record layer'
+      url: https://gnutls.org/manual/html_node/Encryption-algorithms-used-in-the-record-layer.html
+    - title: 'GnuTLS 3.6.1: Priority Strings'
+      url: https://gnutls.org/manual/html_node/Priority-Strings.html
+    - title: 'GnuTLS 3.6.2: Supported ciphersuites'
+      url: https://www.gnutls.org/manual/html_node/Supported-ciphersuites.html
+    - title: GPGMail | GPGTools (OpenPGP Tools for Apple OS X)
+      url: https://www.gpgtools.org/gpgmail/index.html
+    - title: gpx.studio — the online GPX file editor
+      url: https://gpx.studio/
+    - title: Grant - Daypackrucksack - Deuter
+      url: http://www.deuter.com/DE/de/daypack/grant-80604.html
+    - title: 'GUIdebook: Graphical User Interface gallery'
+      url: http://guidebookgallery.org/
+    - title: 'Hardenize Report: zyria.de'
+      url: https://www.hardenize.com/report/zyria.de/1588266038
+    - title: 'Hardenize Report: zyria.de'
+      url: https://www.hardenize.com/report/zyria.de/1661503586#domain_caa
+    - title: 'Hardenize: Making web site security easy and fun'
+      url: https://www.hardenize.com/
+    - title: heise Netze - 30.06.09 - Festplattenplatz via iSCSI
+      url: http://www.heise.de/netze/artikel/Festplattenplatz-via-iSCSI-221563.html
+    - title: heise Security - 21.07.09 - SSH vor Brute-Force-Angriffen schützen
+      url: http://www.heise.de/security/SSH-vor-Brute-Force-Angriffen-schuetzen--/artikel/142155
+    - title: help.ubuntu.com
+      url: https://help.ubuntu.com/community/Kerberos
+    - title: 'HeMan/ipa-dns-hook: Hook for Dehydrated to use FreeIPA for dns-01'
+      url: https://github.com/HeMan/ipa-dns-hook
+    - title: Hetzner Online Community
+      url: https://community.hetzner.com/
+    - title: Hetzner Online GmbH - Robot
+      url: https://robot.your-server.de/server
+    - title: Hetzner Online GmbH - Status-Webseite
+      url: https://www.hetzner-status.de/
+    - title: Hetzner root server full disk encryption with cryptsetup LUKS | Kizajournal | Kiza's page
+      url: https://kiza.eu/journal/entry/697
+    - title: Highly Available NFS Cluster on Debian Wheezy
+      url: https://sigterm.sh/2014/02/01/highly-available-nfs-cluster-on-debian-wheezy/
+    - title: hook_css_alter | system.api.php | Drupal 7 | Drupal API
+      url: https://api.drupal.org/api/drupal/modules%21system%21system.api.php/function/hook_css_alter/7
+    - title: How To Compile A Kernel - Debian Etch | HowtoForge - Linux Howtos and Tutorials
+      url: http://www.howtoforge.com/kernel_compilation_debian_etch
+    - title: How to enable TLS/SSL encryption with Glusterfs storage cluster on Linux - nixCraft
+      url: https://www.cyberciti.biz/faq/how-to-enable-tlsssl-encryption-with-glusterfs-storage-cluster-on-linux/
+    - title: How to Install an OpenLDAP server on Debian Wheezy
+      url: http://midactstech.blogspot.de/2013/07/how-to-install-openldap-server-on.html
+    - title: 'How to re-sync the Mysql DB if Master and slave have different database incase of Mysql replication? - Stack Overflow'
+      url: http://stackoverflow.com/questions/2366018/how-to-re-sync-the-mysql-db-if-master-and-slave-have-different-database-incase-o
+    - title: How To Repair MySQL Replication | HowtoForge - Linux Howtos and Tutorials
+      url: http://www.howtoforge.com/how-to-repair-mysql-replication
+    - title: How to secure debian with two factor authentication (TOTP/HOTP)
+      url: https://gist.github.com/andrewlkho/e9a8c996c4bc1df23cd2
+    - title: How To Set Up Highly Available Web Servers with Keepalived and Floating IPs on Ubuntu 14.04 | DigitalOcean
+      url: https://www.digitalocean.com/community/tutorials/how-to-set-up-highly-available-web-servers-with-keepalived-and-floating-ips-on-ubuntu-14-04
+    - title: How to setup a VPN server using WireGuard (with NAT and IPv6)
+      url: https://angristan.xyz/how-to-setup-vpn-server-wireguard-nat-ipv6/
+    - title: How to Write Doc Comments for the Javadoc Tool
+      url: http://www.oracle.com/technetwork/java/javase/documentation/index-137868.html
+    - title: 'How-to setup MySQL HA by using keepalived | Alex Zeng''s Blog'
+      url: https://alexzeng.wordpress.com/2012/10/31/how-to-setup-mysql-ha-by-using-keepalived/
+    - title: 'How-to: completely automating certificate renewals on Debian - Server - Let''s Encrypt Community Support'
+      url: https://community.letsencrypt.org/t/how-to-completely-automating-certificate-renewals-on-debian/5615
+    - title: HOWTO unlock LUKS encrypted root partition via ssh
+      url: http://gpl.coulmann.de/ssh_luks_unlock.html
+    - title: 'Howto: Asterisk als SIP-Telefonanlage mit Sipgate und 1und1 | Fabian Fischer'
+      url: https://fabianfischer.de/howto-asterisk-als-sip-telefonanlage-mit-sipgate-und-1und1/
+    - title: 'Howto: Chroot SFTP Zugang mit openssh ohne shell (ssh) Zugang | madapez'
+      url: http://madapez.com/it/linux/howto-chroot-sftp-zugang-openssh-ohne-shell-ssh/
+    - title: HowtoForge Linux Tutorials » Wie man sich mit monit bei einem Serverabsturz per SMS warnen lässt
+      url: http://www.howtoforge.de/howto/wie-man-sich-mit-monit-per-sms-warnen-lasst-bei-einem-serverabsturz/
+    - title: HSTS Preload Submission
+      url: https://hstspreload.appspot.com/
+    - title: 'HSTS: Header Strict Transport Security für Webserver einrichten | Heinlein Support - Unser Linux-Blog für Admins'
+      url: http://www.heinlein-support.de/blog/security/hsts-header-strict-transport-security-fuer-webserver-einrichten/
+    - title: htaccess rewrite, htaccess
+      url: http://www.askapache.com/htaccess/ultimate-htaccess-file-sample.html
+    - title: http://dciwam.de/checkliste/
+      url: http://dciwam.de/checkliste/
+    - title: http://www.csszengarden.com/
+      url: http://www.csszengarden.com/
+    - title: HTTPS Certificate Configuration (Version 4.x and newer) - Proxmox VE
+      url: https://pve.proxmox.com/wiki/HTTPS_Certificate_Configuration_(Version_4.x_and_newer)
+    - title: https://ente.limmat.ch/ftp/pub/software/bash/letsencrypt/letsencrypt_acme_dns-01_challenge_hook
+      url: https://ente.limmat.ch/ftp/pub/software/bash/letsencrypt/letsencrypt_acme_dns-01_challenge_hook
+    - title: https://feeds.dshield.org/block.txt
+      url: https://feeds.dshield.org/block.txt
+    - title: hx53.de - SSL / HTTPS Check · SSL-Tools
+      url: https://de.ssl-tools.net/webservers/hx53.de
+    - title: Hybrid Graphics Linux in Launchpad
+      url: https://launchpad.net/~hybrid-graphics-linux
+    - title: HybridGraphics - Community Ubuntu Documentation
+      url: https://help.ubuntu.com/community/HybridGraphics
+    - title: 'ianling/letsencrypt-dns-bind9: A python2 script that handles Let''s Encrypt''s dns-01 challenge hooks for a BIND9 server.'
+      url: https://github.com/ianling/letsencrypt-dns-bind9
+    - title: Identity Management Guide - Red Hat Customer Portal
+      url: https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/6/html-single/identity_management_guide/index
+    - title: Impfen per Netzwerk | heise Security
+      url: http://www.heise.de/security/artikel/Desinfec-t-vom-Linux-Server-booten-1658049.html
+    - title: Index of /downloads
+      url: https://www.blocklist.de/downloads/
+    - title: Index of /lists/dnsbl
+      url: http://lists.blocklist.de/lists/dnsbl/
+    - title: Index of /Public/Desinfect2015/
+      url: http://cdprojekte.mattiasschlenker.de/Public/Desinfect2015/
+    - title: Ingress Intel Map
+      url: https://www.ingress.com/intel
+    - title: Install a Centralized Log Server with Rsyslog in Debian 9
+      url: https://www.howtoforge.com/tutorial/rsyslog-centralized-log-server-in-debian-9/
+    - title: Install Debian 9 (Stretch) via PXE Network Boot Server
+      url: https://www.howtoforge.com/tutorial/install-debian-9-stretch-via-pxe-network-boot-server/
+    - title: Install Hetzner mit eigenem Image | florian @it
+      url: http://blog.schaal-24.de/backup/install-hetzner-mit-eigenem-image/
+    - title: Installing macOS Catalina 10.15 on Proxmox 6.1 or 6.2 using OpenCore – Nicholas Sherlock
+      url: https://www.nicksherlock.com/2020/04/installing-macos-catalina-on-proxmox-with-opencore/
+    - title: intensivstation :: CSS Templates
+      url: http://www.intensivstation.ch/templates/
+    - title: Interfaces, frontends, and tools - Git SCM Wiki
+      url: https://git.wiki.kernel.org/index.php/InterfacesFrontendsAndTools#WebInterface
+    - title: Intervallschachtelungen
+      url: http://www.math.uni-sb.de/ag/wittstock/lehre/WS00/analysis1/Vorlesung/node34.html
+    - title: IP <-> Country database at LUDOST.NET
+      url: https://ip.ludost.net/
+    - title: IPMI HOWTO for Debian GNU/Linux on the Intel SR2300 (Server Board SE7501WV2)
+      url: http://buttersideup.com/docs/howto/IPMI_on_Debian.html
+    - title: IPsec zwischen AVM Fritz!Box und strongSwan - Seffner & Schlesier | Seffner & Schlesier
+      url: https://seffner-schlesier.de/news/ipsec-zwischen-avm-fritzbox-und-strongswan/
+    - title: IPv6 - Set Up An IPv6 LAN with Linux | Jumping Bean - We Build, We Support, We Train
+      url: https://www.jumpingbean.co.za/blogs/mark/set-up-ipv6-lan-with-linux
+    - title: Isolating sudo messages from syslog
+      url: http://www.debian-administration.org/article/676/Isolating_sudo_messages_from_syslog
+    - title: 'ITSCO: gebrauchte Hardware, hochwertige gebrauchte Notebooks & Laptops bei ITSCO'
+      url: http://www.itsco.de/
+    - title: Java Platform SE 6
+      url: http://java.sun.com/javase/6/docs/api/
+    - title: Johannes Endres / FileLink for Nextcloud and ownCloud · GitLab
+      url: https://gitlab.com/joendres/filelink-nextcloud
+    - title: 'Journey of Life: StrongSwan Configuration Guide'
+      url: http://tiebing.blogspot.de/2011/12/strongswanconfiguration-guide-recently.html
+    - title: Kapitel 5. Netzwerkkonfiguration
+      url: https://www.debian.org/doc/manuals/debian-reference/ch05.de.html
+    - title: Keyboard shortcuts - Mac Guides
+      url: http://guides.macrumors.com/Keyboard_shortcuts
+    - title: Keycloak - Downloads
+      url: https://www.keycloak.org/downloads.html
+    - title: KLOTH.NET - How to build an own DNSBL
+      url: http://www.kloth.net/internet/dnsbl-howto.php
+    - title: KOMA-Script Wiki .:. goLaTeX - Mein LaTeX-Forum
+      url: http://www.golatex.de/wiki/index.php?title=KOMA-Script
+    - title: Kompendium zum Internetrecht aktualisiert
+      url: http://www.hostblogger.de/blog/archives/4180-Kompendium-zum-Internetrecht-aktualisiert.html
+    - title: 'konstruktoid/hardening: Hardening Ubuntu. Systemd edition.'
+      url: https://github.com/konstruktoid/hardening
+    - title: Kontakt – Augenblicke by Ewa
+      url: https://augenblicke-by-ewa.de/?page_id=72
+    - title: Kostenlose IT Bücher – Thomas-Krenn-Wiki
+      url: https://www.thomas-krenn.com/de/wiki/Kostenlose_IT_B%C3%BCcher
+    - title: Kostenlose Vorlage & Muster für Eigenbeleg & Ersatzbeleg
+      url: https://www.lexoffice.de/service/vorlage-eigenbeleg-ersatzbeleg/
+    - title: Kostenloser Antivirenproxy schützt vor Webangriffen | heise Security
+      url: http://www.heise.de/security/artikel/Kostenloser-Antivirenproxy-schuetzt-vor-Webangriffen-1015088.html
+    - title: Kundencenter JTL-Software-GmbH
+      url: https://kundencenter.jtl-software.de/
+    - title: Kurzanleitung VNC via SSH-Tunnel
+      url: http://www.cs.uni-potsdam.de/ti/lehre/05-ALuP-I/anleitung_vncssh.html
+    - title: LDAP Authentication In Linux
+      url: https://www.howtoforge.com/linux_ldap_authentication
+    - title: Let's Encrypt certificate on the FreeIPA web interface
+      url: https://blog.soholabs.org/lets-encrypt-and-the-freeipa-web-gui/
+    - title: 'lf159, SystemAdministration: LDAP unter Linux - Einführung'
+      url: http://www.linuxfocus.org/Deutsch/July2000/article159.shtml
+    - title: 'Linux Hybrid Graphics: Using acpi_call module to switch on/off discrete graphics card in Linux'
+      url: http://linux-hybrid-graphics.blogspot.com/2010/07/using-acpicall-module-to-switch-onoff.html
+    - title: 'Linux-Praxisbuch: Lightweight Directory Access Protocol – Wikibooks, Sammlung freier Lehr-, Sach- und Fachbücher'
+      url: https://de.wikibooks.org/wiki/Linux-Praxisbuch:_Lightweight_Directory_Access_Protocol
+    - title: live cd - Unpack ISO image, edit some files, repack an ISO so that it still boots - Ask Ubuntu
+      url: http://askubuntu.com/questions/572149/unpack-iso-image-edit-some-files-repack-an-iso-so-that-it-still-boots
+    - title: Login - Hetzner Online
+      url: https://accounts.hetzner.com/login
+    - title: 'luisgf/hpkp-python: An HPKP pin generator in Python 3.x'
+      url: https://github.com/luisgf/hpkp-python
+    - title: Luxushotel 5-Sterne Superior | Wald & Schlosshotel Friedrichsruhe
+      url: https://www.schlosshotel-friedrichsruhe.de/
+    - title: Lynis - Security auditing tool for Linux, macOS, and Unix-based systems - CISOfy
+      url: https://cisofy.com/lynis/
+    - title: Mac-OS-Kompendium – Wikibooks, Sammlung freier Lehr-, Sach- und Fachbücher
+      url: http://de.wikibooks.org/wiki/Mac-OS-Kompendium
+    - title: Mail4us.net - MyRoundcube Plugins Generic Installation Guide
+      url: http://mail4us.net/myroundcube/
+    - title: Mailserver für einen Homeserver [mein.homelinux.com Wiki]
+      url: http://mein.homelinux.com/wiki/mailserver/mailserver#sieve
+    - title: Manual Page - fetchmail(man)
+      url: http://www.fetchmail.info/fetchmail-man.html
+    - title: MariaDB master/master GTID based replication with keepalived VIP | FromDual
+      url: https://www.fromdual.com/mariadb-master-master-gtid-based-replication-with-keepalived-vip
+    - title: MariaDB(MySQL) Master-Master Replication | Marko Sutic's Oracle Blog
+      url: http://msutic.blogspot.de/2015/02/mariadbmysql-master-master-replication.html
+    - title: Marianns & Daniels Hochzeitshomepage
+      url: http://tiberian.ch/hochzeit/
+    - title: Matt rants
+      url: http://www.over-yonder.net/~fullermd/rants/
+    - title: MBits – Michael Breker IT Services
+      url: https://www.mbits.solutions/
+    - title: meyerweb.com
+      url: http://meyerweb.com/eric/thoughts/
+    - title: Michael Stapelbergs Website
+      url: https://michael.stapelberg.de/mxallowd/
+    - title: mindreframer/hetzner-stuff · GitHub
+      url: https://github.com/mindreframer/hetzner-stuff
+    - title: Mit LDAP Accounts für Unix und Windows zentral... » Linux-Magazin
+      url: http://www.linux-magazin.de/Ausgaben/2002/04/Zentrale-Meldestelle
+    - title: mitp-Verlag | Der Onlineshop für IT, Business und Fotografie
+      url: https://www.mitp.de/index.php?&redirected=1
+    - title: Mozilla Observatory :: Scan Results for casa-due-pur.de
+      url: https://observatory.mozilla.org/analyze/casa-due-pur.de#third-party
+    - title: "Multiboot USB-Stick: Desinfec't 2014 einrichten - Good to Know Database"
+      url: http://www.gtkdb.de/index_7_2587.html
+    - title: 'Multiboot USB-Stick: USB-Stick vorbereiten - Good to Know Database'
+      url: http://www.gtkdb.de/index_7_1184.html
+    - title: munki
+      url: https://github.com/munki
+    - title: 'MySQL 5.5: Master-Master-Replikation | StefanKonarski.de'
+      url: http://stefankonarski.de/content/mysql-55-master-master-replikation
+    - title: 'MySQL-Server: Platte voll … | Gerds Blog'
+      url: http://blog.it4sport.de/2009/11/01/mysql-server-platte-voll/
+    - title: Netzwerktechnik & Elektromaterial bei KabelScheune
+      url: https://www.kabelscheune.de/
+    - title: 'neurobin/letsacme: A tiny script to issue and renew TLS/SSL certs from Let''s Encrypt'
+      url: https://github.com/neurobin/letsacme
+    - title: Nextcloud Talk mit eigenem TURN-Server (coturn) » DecaTec
+      url: https://decatec.de/home-server/nextcloud-talk-mit-eigenem-turn-server-coturn/
+    - title: NodeMCU ESP32
+      url: http://anleitung.joy-it.net/?goods=nodemcu-esp32
+    - title: Observatory by Mozilla :: Scan Results for www.zyria.de
+      url: https://observatory.mozilla.org/analyze.html?host=www.zyria.de
+    - title: 'OEM:SLP Keys'
+      url: http://d-fault.nl/Keys.aspx
+    - title: OpenVPN - adminstories
+      url: http://adminstories.de/index.php?/archives/85-OpenVPN.html
+    - title: Otto Portal
+      url: https://portal.otto.market/sec-api/auth/realms/otto-partner/protocol/openid-connect/auth?redirect_uri=https%3A%2F%2Fportal.otto.market%2Fparseauth&response_type=code&client_id=token-otto&state=eyJub25jZSI6IjI1MGg5dER0cm5palREWV8iLCJyZXF1ZXN0ZWRVcmkiOiIvIn0&scope=openid%20email%20profile&code_challenge_method=S256&code_challenge=o78yu4gdlIqANeyQZ04P9fwS-2ioMhfriEQKEZdFRcA
+    - title: ownCloud - mein.homelinux.com Wiki
+      url: http://mein.homelinux.com/wiki/cloud/owncloud
+    - title: PHP 5.4.0 mit Traits, Webserver und Dtrace « NEWS « Linux-Magazin Online
+      url: http://www.linux-magazin.de/NEWS/PHP-5.4.0-mit-Traits-Webserver-und-Dtrace
+    - title: PHPIDS » Web Application Security 2.0
+      url: http://php-ids.org/
+    - title: Plugin Central - Notepad++ Wiki
+      url: http://docs.notepad-plus-plus.org/index.php/Plugin_Central
+    - title: Postfix Virtual Domain Hosting Howto
+      url: http://www.postfix.org/VIRTUAL_README.html
+    - title: Preseed / preseed-scripts · GitLab
+      url: https://gitlab.com/preseed/preseed-scripts/-/tree/master
+    - title: Preseed Debian 9 – UEFI with Encrypted LVM [Chuck Nemeth]
+      url: https://www.chucknemeth.com/linux/distribution/debian/debian-9-preseed-uefi-encrypted-lvm
+    - title: Produkte kategorisieren - Google Merchant Center-Hilfe
+      url: http://support.google.com/merchants/bin/answer.py?hl=de&answer=160081&topic=2473824&ctx=topic
+    - title: Projekte und Themenkapitel [Linux - Wissensdatenbank]
+      url: http://dokuwiki.nausch.org/doku.php/wiki:start
+    - title: Pros and cons of online assessment tools for web server security · InfoSec Handbook – information security blog
+      url: https://infosec-handbook.eu/blog/online-assessment-tools/
+    - title: Proxmox Cluster and Firewall Configuration | Proxmox Support Forum
+      url: https://forum.proxmox.com/threads/proxmox-cluster-and-firewall-configuration.9232/
+    - title: Proxmox Cluster File System (pmxcfs) - Proxmox VE
+      url: https://pve.proxmox.com/wiki/Proxmox_Cluster_File_System_(pmxcfs)
+    - title: Proxmox clustering and nested virtualization - DevOps
+      url: https://icicimov.github.io/blog/virtualization/Proxmox-clustering-and-nested-virtualization/
+    - title: pyrodex/hetzner · GitHub
+      url: https://github.com/pyrodex/hetzner
+    - title: Python 3 – Das umfassende Handbuch von Ernesti und Kaiser | Rheinwerk
+      url: https://www.rheinwerk-verlag.de/python-3_4467/
+    - title: qcow2 Disk Image mounten
+      url: http://www.netzkompetenz.ch/ubuntu/qcow2-disk-image-mounten/
+    - title: 'Quick-Tip: Linux NAT in Four Steps using iptables'
+      url: https://www.revsys.com/writings/quicktips/nat.html
+    - title: Raspberry Pi als AD-Controller fürs NAS | David Herminghaus
+      url: http://david.herminghaus.de/de/anleitung/raspberry-pi-active-directory-controller-samba4-bind9
+    - title: 'Re: ISO-Image für neue Boot-DVD erzeugen | Forum - heise online'
+      url: http://www.heise.de/forum/heise-Security/Themen-Hilfe/Desinfect/Re-ISO-Image-fuer-neue-Boot-DVD-erzeugen/posting-2135072/show/
+    - title: Rechargeable Li-ion Batteries - Maker Advisor
+      url: https://makeradvisor.com/tools/rechargeable-li-ion-batteries/
+    - title: Rechneronline - Nützliche Rechner
+      url: http://rechneronline.de/
+    - title: Red Hat Connect for Business Partners
+      url: https://partnercenter.redhat.com/NFR_Redirect
+    - title: Redundante Default Routen und Lastverteilung unter Linux | Gerds Blog
+      url: http://blog.it4sport.de/2010/01/07/redundante-default-routen-und-lastverteilung-unter-linux/?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+it4sport%2FaNze+%28Gerds+Blog%29
+    - title: Registry to PowerShell converter
+      url: https://reg2ps.azurewebsites.net/
+    - title: Regular expression - DHTMLgoodies.com
+      url: http://www.dhtmlgoodies.com/scripts/regular-expression/regular-expression.html
+    - title: Report for zyria.de
+      url: http://www.dnsinspect.com/zyria.de/1450007344
+    - title: report-uri.com
+      url: https://report-uri.com/home/tools
+    - title: ResizeEncryptedPartitions - Community Help Wiki
+      url: https://help.ubuntu.com/community/ResizeEncryptedPartitions
+    - title: Results for http://zyria.de/ - PrivacyScore
+      url: https://privacyscore.org/site/98394/
+    - title: RGB2R — Roots go back to the roots — Retro-Gaming in Heidelberg
+      url: http://rgb2r.noname-ev.de/
+    - title: Ring of Saturn Internetworking
+      url: https://networking.ringofsaturn.com/
+    - title: Run software on the tty1 console instead of getty login on Ubuntu 14.04 and 16.04 - Raymii.org
+      url: https://raymii.org/s/tutorials/Run_software_on_tty1_console_instead_of_login_getty.html
+    - title: Running your own RBL DNS blacklist using rbldnsd
+      url: http://www.blue-quartz.com/rbl/
+    - title: 'SafeCurves: Introduction'
+      url: https://safecurves.cr.yp.to/index.html
+    - title: Salt Cheat Sheet - mrxpalmeiras
+      url: https://sites.google.com/site/mrxpalmeiras/saltstack/salt-cheat-sheet
+    - title: salt.states.git
+      url: https://docs.saltstack.com/en/latest/ref/states/all/salt.states.git.html
+    - title: SaltStack Formulas
+      url: https://github.com/salt-formulas
+    - title: SaltStack Formulas
+      url: https://github.com/saltstack-formulas/
+    - title: saltstack sudo module
+      url: https://gist.github.com/perfecto25/f7a682cb5dca17bdd9c0bd5aa6394bd1
+    - title: Samba4 Domain Password Policy
+      url: https://oitibs.com/samba4-domain-password-policy/
+    - title: Schädlingssuche mit Desinfec’t 2014 | c't
+      url: http://www.heise.de/ct/ausgabe/2014-12-Schaedlingssuche-mit-Desinfec-t-2014-2189627.html
+    - title: Search · hetzner · GitHub
+      url: https://github.com/search?utf8=%E2%9C%93&q=hetzner
+    - title: Securing Debian Manual
+      url: https://www.debian.org/doc/manuals/securing-debian-howto/index.de.html#contents
+    - title: 'SecuriteInfo.com : compte client'
+      url: https://www.securiteinfo.com/clients/customers/account
+    - title: security/security.php at master · lazlolazlolazlo/security · GitHub
+      url: https://github.com/lazlolazlolazlo/security/blob/master/security.php
+    - title: SensePost | Macro-less code exec in msword
+      url: https://sensepost.com/blog/2017/macro-less-code-exec-in-msword/
+    - title: Setting up an NFS Server and Client on Debian Wheezy
+      url: https://www.howtoforge.com/install_nfs_server_and_client_on_debian_wheezy
+    - title: Shelly Door Window - Four Pack | Shelly Shop Europe
+      url: https://shop.shelly.cloud/shelly-door-window-wifi-smart-home-automation
+    - title: Sicherheit einfach gemacht · crunchweb
+      url: http://www.crunchweb.de/2009/01/sicherheit-einfach-gemacht/
+    - title: Sicherheit unter Linux
+      url: http://www.fh-wedel.de/~si/seminare/ws99/Ausarbeitung/secure/secure0.html
+    - title: Sieve Mailfilter für Dovecot installieren und konfigurieren
+      url: https://thomas-leister.de/internet/sieve-mailfilter-fuer-dovecot-installieren-und-konfigurieren/
+    - title: Sign in to GitHub · GitHub
+      url: https://github.com/login?return_to=https%3A%2F%2Fgithub.com%2Fsettings%2Frepositories
+    - title: Signing .mobileconfig Profiles With Keychain Certificates | OS X Dominion: Mastering OS X Management
+      url: https://osxdominion.wordpress.com/2015/04/21/signing-mobileconfig-profiles-with-keychain-certificates/
+    - title: sips(1) OS X Manual Page
+      url: https://developer.apple.com/library/mac/#documentation/Darwin/Reference/ManPages/man1/sips.1.html
+    - title: Smarte Türklingel - Alte Sprechanlage smart machen - Panbachi
+      url: https://www.panbachi.de/smarte-tuerklingel-alte-sprechanlage-smart-machen/
+    - title: SMTP Relaying Via a Smarthost
+      url: http://www.lexspoon.org/linux/smtp-relay.html
+    - title: smurfmonitor/dns-iptables-rules · GitHub
+      url: https://github.com/smurfmonitor/dns-iptables-rules
+    - title: 'Sorting algorithms/Quicksort - Rosetta Code'
+      url: http://rosettacode.org/wiki/Sorting_algorithms/Quicksort#Scala
+    - title: SQL Server Can Run Databases from Network Shares & NAS - Brent Ozar Unlimited® by Brent Ozar Unlimited®
+      url: https://www.brentozar.com/archive/2012/01/sql-server-databases-on-network-shares-nas/
+    - title: SSH_VPN - Community Ubuntu Documentation
+      url: https://help.ubuntu.com/community/SSH_VPN
+    - title: 'SSL Server Test: www.casa-due-pur.de (Powered by Qualys SSL Labs)'
+      url: https://www.ssllabs.com/ssltest/analyze.html?d=www.casa-due-pur.de
+    - title: SSL/TLS Server Test of www.zyria.de
+      url: https://www.htbridge.com/ssl/?id=Kp80f7ZN
+    - title: strimpak/dragndrop_attachments
+      url: https://github.com/strimpak/dragndrop_attachments
+    - title: Syncing a fork - User Documentation
+      url: https://help.github.com/articles/syncing-a-fork/
+    - title: syste
+      url: https://github.com/pigmonkey/dotfiles
+    - title: 'szepeviktor/rc: .rc files and other dotfiles'
+      url: https://github.com/szepeviktor/rc
+    - title: 'szepeviktor/windows-workstation: Prepare my Windows 10 workstation'
+      url: https://github.com/szepeviktor/windows-workstation
+    - title: Test ha/both-active
+      url: https://www.strongswan.org/testing/testresults/ha/both-active/
+    - title: The Perfect Server - Ubuntu 13.04 (Apache2, BIND, Dovecot, ISPConfig 3) - Page 4 | HowtoForge - Linux Howtos and Tutorials
+      url: http://www.howtoforge.com/perfect-server-ubuntu-13.04-apache2-bind-dovecot-ispconfig-3-p4
+    - title: The Spectrum of Financial Dependence and Independence · Collaborative Fund
+      url: https://www.collaborativefund.com/blog/the-spectrum-of-financial-dependence-and-independence/
+    - title: The StyleWorks { Herzlich Willkommen }
+      url: http://www.thestyleworks.de/index.shtml
+    - title: The Ultimate Uplink Guide
+      url: http://guide.modlink.net/section1.php
+    - title: tmux shortcuts & cheatsheet
+      url: https://gist.github.com/MohamedAlaa/2961058
+    - title: 'Tools für die Homepage: Disclaimer-Baukasten, Impressumsgenerator und Homepage-Check | Webmaster, Security und Technik Blog'
+      url: http://www.sjmp.de/internet/tools-fuer-die-homepage-disclaimer-baukasten-impressumsgenerator-und-homepage-check/
+    - title: tralios/Report_JUNK
+      url: https://github.com/tralios/Report_JUNK
+    - title: trinler.net - the source of information
+      url: http://www.trinler.net/
+    - title: Tür-Fenster-Kontakt-Sensor auf 433 MHz Basis | Robins Blog – Technik und Multimedia
+      url: https://blog.moneybag.de/tuer-fenster-kontakt-sensor-auf-433-mhz-basis/
+    - title: umount/message_label · GitHub
+      url: https://github.com/umount/message_label
+    - title: UniFi - How to further customize USG configuration with config.gateway.json – Ubiquiti Networks Support and Help Center
+      url: https://help.ubnt.com/hc/en-us/articles/215458888-UniFi-How-to-further-customize-USG-configuration-with-config-gateway-json
+    - title: Unitopiawiki
+      url: http://unitopia.intelligense.de/wiki/Hauptseite
+    - title: Universal IKEv2 Server Configuration
+      url: https://hub.zhovner.com/geek/universal-ikev2-server-configuration/
+    - title: Uplink Cheats, Codes, Hints & Secrets for PC - Cheatchannel
+      url: http://www.cheatchannel.com/files/uplink.htm
+    - title: Upside-Down-Ternet
+      url: http://www.ex-parrot.com/pete/upside-down-ternet.html
+    - title: usb-modboot/README.md at master · schierlm/usb-modboot · GitHub
+      url: https://github.com/schierlm/usb-modboot/blob/master/README.md
+    - title: User Guide — Certbot 0.19.0.dev0 documentation
+      url: https://certbot.eff.org/docs/using.html#pre-and-post-validation-hooks
+    - title: Using PowerShell to Install Printers | PDQ
+      url: https://www.pdq.com/blog/using-powershell-to-install-printers/
+    - title: Using SORBS
+      url: http://www.sorbs.net/general/using.shtml
+    - title: Web Server Security Test of zyria.de
+      url: https://www.htbridge.com/websec/?id=xlowiPim
+    - title: Webmaster Tools — Support — WordPress.com
+      url: http://en.support.wordpress.com/webmaster-tools/
+    - title: Webserver-Umzug mit minimaler Ausfallzeit | iX
+      url: http://www.heise.de/ix/artikel/Freundliche-Uebernahme-1245291.html
+    - title: 'Why Can''t I Browse the Internet when Using a GRE Tunnel? - Cisco'
+      url: https://www.cisco.com/c/en/us/support/docs/ip/generic-routing-encapsulation-gre/13725-56.html
+    - title: wireguard VPN-Server mit IPv6
+      url: https://meet-unix.org/2019-03-21-wireguard-vpn-server.html
+    - title: 'Wordpress CLI : Install and Manage wordpress from the commandline (shell / bash / terminal) | eXtremeSHOK.com'
+      url: https://extremeshok.com/5692/wordpress-cli-install-manage-wordpress-commandline/
+    - title: ‎www.makikiweb.com/ipv6/ipv4_access_from_ipv6_with_jool.html
+      url: http://www.makikiweb.com/ipv6/ipv4_access_from_ipv6_with_jool.html
+    - title: www.netflix-codes.com
+      url: https://www.netflix-codes.com/
+    - title: www.ssoeasy.com
+      url: https://www.ssoeasy.com/partner-ready-network/samba-single-sign-on/
+    - title: DebianInstaller/NetbootAssistant - Debian Wiki
+      url: https://wiki.debian.org/DebianInstaller/NetbootAssistant
+    - title: HA Cluster erstellen – DebianforumWiki
+      url: https://wiki.debianforum.de/HA_Cluster_erstellen
+    - title: BasicConfiguration - Dovecot Wiki
+      url: https://wiki.dovecot.org/BasicConfiguration
+    - title: Authenticating against Active Directory using winbind
+      url: https://wiki.freeradius.org/guide/Active-Directory-direct-via-winbind
+    - title: Security/Server Side TLS - MozillaWiki
+      url: https://wiki.mozilla.org/Security/Server_Side_TLS
+    - title: 'esp32:start [muCCC-Wiki]'
+      url: https://wiki.muc.ccc.de/esp32:start
+    - title: 'ipsec.conf: conn Reference - ConnSection - strongSwan'
+      url: https://wiki.strongswan.org/projects/strongswan/wiki/ConnSection
+    - title: CustomizeLiveInitrd - Ubuntu Wiki
+      url: https://wiki.ubuntu.com/CustomizeLiveInitrd
+    - title: LUKS › Wiki › ubuntuusers.de
+      url: https://wiki.ubuntuusers.de/LUKS
+    - title: ACL - Dovecot Wiki
+      url: https://wiki2.dovecot.org/ACL
+    - title: Windows Printserver (Druckserver) Konfiguration per Befehl PRINTMBR in Datei exportieren - Windows FAQ
+      url: https://www.windows-faq.de/2018/10/09/windows-printserver-druckserver-konfiguration-per-befehl-printmbr-in-datei-exportieren/
+    - title: 'Windows NT Login Script Tricks and Tips :: Logon :: Admin Tips :: Windows NT :: Windows Server 2012/2008/2003/2000/XP/NT Administrator Knowledge Base :: KBase Tips :: WindowsNetworking.com'
+      url: http://www.windowsnetworking.com/kbase/WindowsTips/WindowsNT/AdminTips/Logon/WindowsNTLoginScriptTricksandTips.html
+    - title: ISPmail tutorial for Debian Lenny | literacy and subleties for open-source bigots and other weirdos
+      url: http://workaround.org/ispmail/lenny
+    - title: Simple awk cheat sheet – Ascii for Breakfast
+      url: http://www.xenuser.org/simple-awk-cheat-sheet/
+    - title: Salt Formulas | yet.org
+      url: http://www.yet.org/2016/09/salt-formulas/
+    - title: Fork, Exec and Process control
+      url: http://www.yolinux.com/TUTORIALS/ForkExecProcesses.html
+    - title: Personal ipv6 Tunnel Broker with OpenVPN
+      url: http://www.zagbot.com/openvpn_ipv6_tunnel.html
+    - title: Reparatur Feuerzeuge - Official Zippo Shop
+      url: https://www.zippo.de/de/content/75-reparatur-feuerzeuge
+    - title: ViMbAdmin :: Virtual Mailbox Administration
+      url: http://www.vimbadmin.net/
+    - title: Visei Blog » Mac OS X Time Machine backup on a Debian server
+      url: http://visei.com/2012/09/mac-os-x-time-machine-backup-on-a-debian-server/
+    - title: Media Queries
+      url: http://www.w3.org/TR/css3-mediaqueries/
+    - title: Niantic Wayfarer - Niantic Wayfarer
+      url: https://wayfarer.nianticlabs.com/
+    - title: 'Demo: Pure CSS3 Gradient Dropdown Menu (No Image Used)'
+      url: http://www.webdesignerwall.com/demo/css3-dropdown-menu/css-gradient-dropdown.html
+    - title: Einführung in Django - Django Framework Tutorial - Frameworks - Tutorials, Tipps und Tricks für Webmaster auf Webmasterpro.de
+      url: http://www.webmasterpro.de/coding/article/framework-einfuehrung-in-django.html
+    - title: Linear Gradients
+      url: http://westciv.com/tools/gradients/index-moz.html
+    - title: Setting up Explicit Squid Proxy - Alpine Linux
+      url: https://wiki.alpinelinux.org/wiki/Setting_up_Explicit_Squid_Proxy
+    - title: ApacheVirtualHostMysql - Httpd Wiki
+      url: http://wiki.apache.org/httpd/ApacheVirtualHostMysql
+    - title: Inhalt - Wiki.chrisge.org
+      url: https://wiki.chrisge.org/
+  - CDP:
+    - title: '[Sammelthread] HP ProLiant ML10 v2 G3240/i3-4150/E3-1220v3/E3-1241v3'
+      url: http://www.hardwareluxx.de/community/f101/hp-proliant-ml10-v2-g3240-i3-4150-e3-1220v3-e3-1241v3-1084044.html
+    - title: Uptime Kuma
+      url: https://status.casa-due-pur.de/
+  - Tools:
+    - title: 2FA QR code generator
+      url: https://stefansundin.github.io/2fa-qr/
+    - title: Debian GNU/Linux Anwenderhandbuch
+      url: https://debiananwenderhandbuch.de/
+    - title: Abschreibungstabelle - Nutzungsdauer Anlagegüter - lexoffice
+      url: https://www.lexoffice.de/service/abschreibungstabelle/
+    - title: Abmahnbeantworter
+      url: https://abmahnbeantworter.ccc.de/
+    - title: 'Applied Crypto Hardening: bettercrypto.org'
+      url: https://bettercrypto.org/
+    - title: Favicon Generator for perfect icons on all browsers
+      url: https://realfavicongenerator.net/
+    - title: kpfleming.systemd_networkd.network role – Manages systemd-networkd networks. — Collections documentation
+      url: https://kpfleming.github.io/ansible-systemd-networkd/network_role.html#
+    - title: ▷ Ferien & Feiertage Deutschland - Bester Urlaubsplaner!
+      url: https://www.holidayomat.com/ferien-feiertage-deutschland/
+    - title: Linksammlung rund um Strom · Zyria
+      url: http://localhost:1313/posts/strom/
+  - Fail2ban:
+    - title: 5nafu/fail2fan-blocklist-importer · GitHub
+      url: https://github.com/5nafu/fail2fan-blocklist-importer
+    - title: 'Fail2ban:Community Portal - Fail2ban'
+      url: http://www.fail2ban.org/wiki/index.php/Fail2ban:Community_Portal#apache_w00t_w00t_messages_jail_-_regex_and_filter
+    - title: fail2ban/config/filter.d at master · fail2ban/fail2ban
+      url: https://github.com/fail2ban/fail2ban/tree/master/config/filter.d
+    - title: 'forum.blocklist.de • Thema anzeigen - Fail2Ban mit den Beispiel-Config installieren'
+      url: https://forum.blocklist.de/viewtopic.php?f=11&t=3
+    - title: 'forum.blocklist.de • Thema anzeigen - Import Blocklist to fail2ban (PHP Cronjob)'
+      url: https://forum.blocklist.de/viewtopic.php?f=11&t=107
+    - title: Login to your Account on www.blocklist.de
+      url: https://www.blocklist.de/en/profile/index.html?sid=8eb63bab6de913494cb981a876904df0&i=d
+    - title: www.blocklist.de -- Fail2Ban-Reporting Service (we sent Reports from Attacks on Postfix, SSH, Apache-Attacks, Spambots, irc-Bots, Reg-Bots, DDos and more) from Fail2Ban via X-ARF.
+      url: http://www.blocklist.de/en/index.html
+    - title: API für www.blocklist.de. Abfrage von Server oder User-Statistiken.
+      url: https://www.blocklist.de/de/api.html#dns
+    - title: '#bbcan177_ms1 by BBcan177, malware IPs list, at FireHOL IP Lists'
+      url: http://iplists.firehol.org/?ipset=bbcan177_ms1
+  - Exim:
+    - title: Configure and Administer the Greylist Daemon (greylistd) for Exim
+      url: http://greylistd.sourceforge.net/README.html
+    - title: 'debian:exim4 [DBMail]'
+      url: http://www.dbmail.org/dokuwiki/doku.php?id=debian:exim4
+    - title: 'debianforum.de • Thema anzeigen - Fehler: exim4+ spamassassin + sa-exim + clamav'
+      url: http://debianforum.de/forum/viewtopic.php?f=8&t=125672
+    - title: demime/malware in acl_not_smtp
+      url: http://exim-users.exim.narkive.com/kZipoSdA/demime-malware-in-acl-not-smtp
+    - title: demime/malware in acl_not_smtp | exim | users
+      url: http://www.gossamer-threads.com/lists/exim/users/28509
+    - title: dkim
+      url: https://fossies.org/linux/exim/doc/spec.txt
+    - title: 'E-Mail: Greylisting mit Exim und greylistd'
+      url: http://th-h.de/infos/email/exim-greylistd.php
+    - title: Exim 4 for Debian
+      url: file:///usr/share/doc/exim4-base/README.Debian.html
+    - title: Exim 4 for Debian
+      url: http://pkg-exim4.alioth.debian.org/README/README.Debian.html
+    - title: Exim 4.50 Specification chapter 40
+      url: http://www.exim.org/exim-html-4.50/doc/html/spec_40.html
+    - title: Exim Cheatsheet
+      url: http://bradthemad.org/tech/notes/exim_cheatsheet.php
+    - title: exim/experimental-spec.txt at master · Exim/exim
+      url: https://github.com/Exim/exim/blob/master/doc/doc-txt/experimental-spec.txt
+    - title: 'EximConfig v2.5: Fight back against spam with EximConfig and SA-Exim!'
+      url: http://www.jcdigita.com/eximconfig/
+    - title: Final ACLs
+      url: https://www.tldp.org/HOWTO/Spam-Filtering-for-MX/exim-final.html
+    - title: Greylisting with exim4
+      url: https://www.debian-administration.org/article/167/Greylisting_with_exim4
+    - title: Home · Exim/exim Wiki
+      url: https://github.com/Exim/exim/wiki
+    - title: HOWTO - Using DNS Block Lists (DNSBLs)
+      url: http://www.exim.org/howto/rbl.html
+    - title: 'Howto: My Vexim customizations'
+      url: http://axel.sjostedt.no/misc/dev/vexim-customizations/
+    - title: http://marc.merlins.org/linux/exim/files/sa-exim-cvs/README.greylisting
+      url: http://marc.merlins.org/linux/exim/files/sa-exim-cvs/README.greylisting
+    - title: https://www.maretmanu.org/homepage/inform/exim-spam.php
+      url: https://www.maretmanu.org/homepage/inform/exim-spam.php
+    - title: ISP Mail Server mit Exim 4, Dovecot, MySQL und SpamAssassin auf Debian GNU/Linux etch
+      url: http://developer.gauner.org/ispmail-exim/
+    - title: lena.kiev.ua/Lena-eximconf-run.txt
+      url: http://lena.kiev.ua/Lena-eximconf-run.txt
+    - title: LUG Untermain
+      url: http://www.lug-untermain.de/howto/exim.php
+    - title: Mailserver configuration with Debian, Exim, ClamAV & dspam
+      url: http://www.pseudorandom.co.uk/2006/mailserver/
+    - title: NO_TITLE
+      url: http://marc.merlins.org/linux/exim/exim4-conf/exim4.conf
+    - title: Projects/Mailserver with Debian, Exim, spamassassin, greylistd, DKIM, SRS, SPF, DMARC, forwarding, LDAP, dovecot, LMTP, disk crypto - Bitlair
+      url: https://bitlair.nl/Projects/Mailserver_with_Debian,_Exim,_spamassassin,_greylistd,_DKIM,_SRS,_SPF,_DMARC,_forwarding,_LDAP,_dovecot,_LMTP,_disk_crypto#Adding_Sending_Rewriting_Scheme_.28SRS.29
+    - title: Rejecting viral email at SMTP time with exim4
+      url: https://www.debian-administration.org/article/141/Rejecting_viral_email_at_SMTP_time_with_exim4
+    - title: Saving copies of all email using Exim | R.I.Pienaar
+      url: https://www.devco.net/archives/2006/03/24/saving_copies_of_all_email_using_exim.php
+    - title: Spam Filtering for Mail Exchangers
+      url: http://www.ibiblio.org/pub/Linux/docs/HOWTO/other-formats/html_single/Spam-Filtering-for-MX.html#exim
+    - title: Spam filtering with Exim
+      url: http://www.sput.nl/software/exim.html
+    - title: SpamAssassin/Integrating SpamAssassin with Exim - WikiContent
+      url: http://commons.oreilly.com/wiki/index.php/SpamAssassin/Integrating_SpamAssassin_with_Exim
+    - title: 'Stonki: Ubuntu 9.04 Exim / Dovecot Howto'
+      url: http://www.stonki.de/computer/mailserver/ubuntu-904-exim-dovecot-howto/
+    - title: 'Suffixe für lokale Nutzer mit Exim: user-irgendwas@domain « chris personal blag'
+      url: http://blag.0x42.org/2010/07/02/suffixe-fur-lokale-nutzer-mit-exim-user-irgendwasdomain/
+    - title: Ubuntu/Debian Exim4 with Spam Filters, Virus Scanner, Virtual Domain Alias Files and Message Size Limits per Domain | Koivi.com
+      url: http://koivi.com/exim-4-on-ubuntu-debian
+    - title: VExim and Debian GNU/Linux
+      url: http://stefans.datenbruch.de/rootserver/vexim.shtml
+    - title: 'vexim/vexim2: Virtual Exim 2'
+      url: https://github.com/vexim/vexim2
+    - title: www.linuxmantra.com/2012/07/add-disclaimer-in-exim.html?m=1
+      url: http://www.linuxmantra.com/2012/07/add-disclaimer-in-exim.html?m=1
+    - title: www.renardias.com/exim-nospam-novirus/exim4.conf
+      url: http://www.renardias.com/exim-nospam-novirus/exim4.conf
+    - title: AclHeloTricks - Exim Wiki
+      url: http://wiki.exim.org/AclHeloTricks
+    - title: Exim - HerzbubeWiki
+      url: http://wiki.herzbube.ch/index.php/Exim
+    - title: EximConfig - KmpWiki
+      url: http://wiki.kmp.or.at/EximConfig
+    - title: Combining Exim4 with Spamassassin
+      url: https://www.win.tue.nl/~martijna/Debianstuff/
+    - title: Exim configuration at the University of Cambridge
+      url: http://www-uxsup.csx.cam.ac.uk/~fanf2/hermes/doc/talks/2005-02-eximconf/paper.html
+    - title: 'Exim4/postfix: Kleines Mailqueue HowTo — wyden.com'
+      url: http://www.wyden.com/linux/mailserver/exim4-kleines-mailqueue-howto
+    - title: Projects/Mailserver with Debian, Exim, spamassassin, greylistd, DKIM, SRS, SPF, DMARC, forwarding, LDAP, dovecot, LMTP, disk crypto - Bitlair wiki
+      url: https://wiki.bitlair.nl/Pages/Projects/Mailserver_with_Debian,_Exim,_spamassassin,_greylistd,_DKIM,_SRS,_SPF,_DMARC,_forwarding,_LDAP,_dovecot,_LMTP,_disk_crypto
+    - title: 'Signatures - Sanesecurity ClamAV: Phishing, Spam & Malware Signatures'
+      url: http://sanesecurity.com/usage/signatures/
+    - title: abuse.ch - The Swiss Security Blog
+      url: https://www.abuse.ch/
+  - Microsoft:
+    - title: Azure subscription limits and quotas | Microsoft Docs
+      url: https://docs.microsoft.com/en-us/azure/azure-subscription-service-limits
+    - title: Bereitstellungsratgeber für Office 365-Dienste | Microsoft Docs
+      url: https://docs.microsoft.com/de-de/office365/enterprise/deployment-advisors-for-office-365
+    - title: Commercial Licensing Terms
+      url: https://www.microsoft.com/licensing/terms/productoffering
+    - title: Create a SQL Server Database on a network shared drive | Varun Dhawan's Blog
+      url: https://blogs.msdn.microsoft.com/varund/2010/09/02/create-a-sql-server-database-on-a-network-shared-drive/
+    - title: Digital Collaboration Academy | Microsoft | Weiterbildungsangebote für Microsoft Partner
+      url: https://www.microsoft.com/de-de/partner/readiness/digital-collaboration-academy/default.aspx
+    - title: Events - Microsoft Partner Community
+      url: https://www.microsoftpartnercommunity.com/t5/Events/ct-p/events
+    - title: https://www.microsoftvolumelicensing.com
+      url: https://www.microsoftvolumelicensing.com
+    - title: Kursansicht
+      url: https://partneruniversity.microsoft.com/?whr=uri:MicrosoftAccount&courseId=14461&scoId=dXsXmk7lB_2704778676&channel=MicrosoftPartnerNetwork
+    - title: Licensing Documents
+      url: https://www.microsoft.com/licensing/docs/customeragreement
+    - title: Licensing Terms | Microsoft Volume Licensing
+      url: https://www.microsoft.com/en-us/licensing/product-licensing/products
+    - title: Lizensierung von Microsoft 365 für kleine und mittlere Unternehmen | Microsoft Docs
+      url: https://docs.microsoft.com/de-de/office365/servicedescriptions/microsoft-365-service-descriptions/licensing-microsoft-365-in-smb
+    - title: Microsoft 365- und Office 365-Dienstbeschreibungen | Microsoft Docs
+      url: https://docs.microsoft.com/de-de/office365/servicedescriptions/office-365-service-descriptions-technet-library
+    - title: 'Microsoft 365- und Office 365-Plattformdienstbeschreibung | Microsoft Docs'
+      url: https://docs.microsoft.com/de-de/office365/servicedescriptions/office-365-platform-service-description/office-365-platform-service-description#:~:text=The%20Microsoft%20365%20and%20Office,Skype%20for%20Business%20Online%E2%80%94to
+    - title: Microsoft Advanced Support für Partner
+      url: https://partner.microsoft.com/de-de/support/advanced-cloud-support
+    - title: Microsoft Infostand | Weiterbildungsangebote für Microsoft Partner
+      url: https://www.microsoft.com/de-de/partner/readiness/infostand.aspx
+    - title: News
+      url: https://partner.microsoft.com/de-de/news#/
+    - title: Partner Center-Dokumentation - Partner Center | Microsoft Docs
+      url: https://docs.microsoft.com/de-de/partner-center/
+    - title: Partner Network resources
+      url: https://partner.microsoft.com/en-gb/asset#/?search=Teams
+    - title: Planen der automatischen Konfiguration von Benutzerkonten in Outlook 2010
+      url: http://technet.microsoft.com/de-de/library/cc511507.aspx
+    - title: 'Vorgehensweise: Wiederherstellen einer differenziellen Datenbanksicherung (Transact-SQL)'
+      url: https://technet.microsoft.com/de-de/library/ms178105(v=sql.105).aspx

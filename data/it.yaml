@@ -10,6 +10,8 @@
       url: "https://wiki.samba.org/index.php/Main_Page"
     - title: "LVM vergrößern"
       url: "https://www.thomas-krenn.com/de/wiki/LVM_vergrößern"
+    - title: "Proxmox Festplatte vergrößern"
+      url: "https://pve.proxmox.com/wiki/Resize_disks"
     - title: "Borgbackup bei Hetzner"
       url: "https://wiki.hetzner.de/index.php/BorgBackup"
       description: "Borgbackup mit einer Storagebox bei Hetzner einrichten"
@@ -37,3 +39,30 @@
   links:
     - title: "Manage all your installed software at one place with Homebrew Bundle"
       url: "https://pumpingco.de/blog/brewfile/"
+
+- group: "Logcheck"
+  links:
+    - title: bootstrap.sh/rootfs/etc/logcheck/ignore.d.server at master · Samayel/bootstrap.sh
+      url: https://github.com/Samayel/bootstrap.sh/tree/master/rootfs/etc/logcheck/ignore.d.server
+    - title: 'bwesterb/x-logcheck: Extra ignore rules for logcheck'
+      url: https://github.com/bwesterb/x-logcheck
+    - title: 'fabi125/logcheck-rules: My personal set of additional logcheck rules'
+      url: https://github.com/fabi125/logcheck-rules
+    - title: 'frlan/logcheck-local-rules: A collection of addition local rules'
+      url: https://github.com/frlan/logcheck-local-rules
+    - title: 'Logcheck'
+      url: http://logcheck.org/git.html
+    - title: logcheck-ignores/dovecot-extra at master · kheiken/logcheck-ignores
+      url: https://github.com/kheiken/logcheck-ignores/blob/master/dovecot-extra
+    - title: logcheck-rules/ignore.d.server at master · Pilat66/logcheck-rules
+      url: https://github.com/Pilat66/logcheck-rules/tree/master/ignore.d.server
+    - title: logcheck-rules/rules at master · trilader/logcheck-rules
+      url: https://github.com/trilader/logcheck-rules/tree/master/rules
+    - title: logcheck/rulefiles/linux/ignore.d.server at master · dnnr/logcheck
+      url: https://github.com/dnnr/logcheck/tree/master/rulefiles/linux/ignore.d.server
+    - title: logcheck/rulefiles/linux/ignore.d.server at master · tbarbette/logcheck
+      url: https://github.com/tbarbette/logcheck/tree/master/rulefiles/linux/ignore.d.server
+    - title: 'muokata/logcheck-extra: extra logcheck rules'
+      url: https://github.com/muokata/logcheck-extra
+    - title: my-logcheck-rules/ignore.d.server at master · sylvestre/my-logcheck-rules
+      url: https://github.com/sylvestre/my-logcheck-rules/tree/master/ignore.d.server
