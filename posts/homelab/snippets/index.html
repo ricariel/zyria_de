@@ -1882,13 +1882,16 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
     
 </h3>
 <blockquote>
-<p>mkfs.ext4 /dev/md0</p></blockquote>
+<p>mkfs.ext4 /dev/md0</p>
+</blockquote>
 <p>oder</p>
 <blockquote>
-<p>yes | mkfs.ext4 -L boot /dev/md0</p></blockquote>
+<p>yes | mkfs.ext4 -L boot /dev/md0</p>
+</blockquote>
 <p>Swap:</p>
 <blockquote>
-<p>mkswap -f /dev/vg-name/swap</p></blockquote>
+<p>mkswap -f /dev/vg-name/swap</p>
+</blockquote>
 
 <h3 class="relative group">Festplatten Verschlüsselung 
     <div id="festplatten-verschlüsselung" class="anchor"></div>
@@ -1910,7 +1913,8 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
     
 </h4>
 <blockquote>
-<p>cryptsetup &ndash;batch-mode -c aes-cbc-essiv:sha256 -s 256 -y luksFormat /dev/nvme0n1p4</p></blockquote>
+<p>cryptsetup &ndash;batch-mode -c aes-cbc-essiv:sha256 -s 256 -y luksFormat /dev/nvme0n1p4</p>
+</blockquote>
 
 <h4 class="relative group">öffnen 
     <div id="öffnen" class="anchor"></div>
@@ -1922,7 +1926,8 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
     
 </h4>
 <blockquote>
-<p>cryptsetup luksOpen /dev/md1 crypt-root</p></blockquote>
+<p>cryptsetup luksOpen /dev/md1 crypt-root</p>
+</blockquote>
 
 <h3 class="relative group">Festplatte Partitionieren 
     <div id="festplatte-partitionieren" class="anchor"></div>
