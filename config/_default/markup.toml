@@ -7,15 +7,17 @@
 
   hardWraps = false
 
-  [goldmark.extensions]
-    [goldmark.extensions.passthrough]
-      enable = true
-      [goldmark.extensions.passthrough.delimiters]
-        block = [['\[', '\]'], ['$$', '$$']]
-        inline = [['\(', '\)']]
+[goldmark.extensions]
+  [goldmark.extensions.passthrough]
+    enable = true
+    [goldmark.extensions.passthrough.delimiters]
+      block = [['\[', '\]'], ['$$', '$$']]
+      inline = [['\(', '\)']]
 
-[goldmark.parser.attribute]
-block = true
+[goldmark.parser]
+  [goldmark.parser.attribute]
+    block = true
+    image = true
 
 [tableOfContents]
   startLevel = 2
