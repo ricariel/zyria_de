@@ -43,7 +43,7 @@ Auch wenn meine Leidenschaft der Technik gehört, sind meine größte Inspiratio
 
 #### Technisches Hilfswerk (THW)
 
-Mit Stolz engagiere ich mich ehrenamtlich im **Technischen Hilfswerk (THW)**, der Zivil- und Katastrophenschutzorganisation Deutschlands. Meine ehrenamtliche Heimat ist der **Ortsverband Marburg**. Dort gehöre ich dem **Zugtrupp** an, der Führungseinheit des Technischen Zuges, und unterstütze den Zugführer bei der Koordination und Leitung von Einsätzen. So helfen wir Menschen in Notlagen schnell und effektiv.
+Mit Stolz engagiere ich mich ehrenamtlich im **[Technischen Hilfswerk (THW)](https://www.thw.de)**, der Zivil- und Katastrophenschutzorganisation Deutschlands. Meine ehrenamtliche Heimat ist der **[Ortsverband Marburg](https://ov-marburg.thw.de)**. Dort gehöre ich dem **[Zugtrupp](https://thwiki.org/t=Zugtrupp)** an, der Führungseinheit des Technischen Zuges, und unterstütze den Zugführer bei der Koordination und Leitung von Einsätzen. So helfen wir Menschen in Notlagen schnell und effektiv.
 
 Durch mein Engagement möchte ich einen aktiven Beitrag für die Sicherheit und den Zusammenhalt in unserer Gesellschaft leisten.
 
