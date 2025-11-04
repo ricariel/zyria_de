@@ -96,18 +96,6 @@ path = "git.zyria.de/pyrox/hugo-default-coder"
   source = "layouts"
   target = "layouts"
 
-# import shortcode
-[[imports]]
-path = "github.com/google/docsy"
-
-  [[imports.mounts]]
-  source = "i18n"
-  target = "i18n"
-
-  [[imports.mounts]]
-  source = "layouts/_shortcodes/readfile.html"
-  target = "layouts/_shortcodes/readfile.html"
-
 # Import legal texts
 [[imports]]
 path = "git.zyria.de/pyrox/hugo-legal"
