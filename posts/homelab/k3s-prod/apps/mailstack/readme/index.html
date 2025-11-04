@@ -14,165 +14,22 @@
   <meta name="theme-color">
 
   
-  <title>Mailstack &middot; Zyria</title>
+  
+    <title>Mailstack &middot; Zyria</title>
     <meta name="title" content="Mailstack &middot; Zyria">
+  
 
   
-  <meta name="description" content="Dieser Mailstack integriert mehrere Komponenten wie Postfix, Dovecot, Rspamd und ClamAV, um einen robusten und sicheren E-Mail-Dienst mit Spam- und Virenfilterung bereitzustellen.">
-  <meta name="keywords" content="kubernetes,k3s,gitops,argocd,helm,kustomize,homelab,produktion,">
+  
+    <meta name="description" content="Dieser Mailstack integriert mehrere Komponenten wie Postfix, Dovecot, Rspamd und ClamAV, um einen robusten und sicheren E-Mail-Dienst mit Spam- und Virenfilterung bereitzustellen.">
+  
+  
+    <meta name="keywords" content="kubernetes,k3s,gitops,argocd,helm,kustomize,homelab,produktion,">
+  
   
   
   <link rel="canonical" href="https://zyria.de/posts/homelab/k3s-prod/apps/mailstack/readme/">
   
-  
-  
-  
-  
-  
-  
-  
-  
-    
-  
-  
-    
-    
-  
-  
-  <link
-    type="text/css"
-    rel="stylesheet"
-    href="/css/main.bundle.min.322484a88ea713311a6662e8ee3c16b582e4611fabd820a5c2c0ad5d7ef9d8c0d8f93e41d67532d8c83429172f075e7c9ff08599d69910fc1f2ef84a78e017ad.css"
-    integrity="sha512-MiSEqI6nEzEaZmLo7jwWtYLkYR&#43;r2CClwsCtXX752MDY&#43;T5B1nUy2Mg0KRcvB158n/CFmdaZEPwfLvhKeOAXrQ==">
-
-  
-  
-  <script
-    type="text/javascript"
-    src="/js/appearance.min.516a16745bea5a9bd011138d254cc0fd3973cd55ce6e15f3dec763e7c7c2c7448f8fe7b54cca811cb821b0c7e12cd161caace1dd794ac3d34d40937cbcc9ee12.js"
-    integrity="sha512-UWoWdFvqWpvQERONJUzA/TlzzVXObhXz3sdj58fCx0SPj&#43;e1TMqBHLghsMfhLNFhyqzh3XlKw9NNQJN8vMnuEg=="></script>
-  
-  
-  
-    
-    
-    <script
-      type="text/javascript"
-      src="/js/zen-mode.min.9814dee9614d32aeb56239d118edfe20acd6231424f9b19c2dd48835038414130a5e946c0d1c9087d60e60e31840c9babfd217e3d4b95643dc8d651a71ccdf4a.js"
-      integrity="sha512-mBTe6WFNMq61YjnRGO3&#43;IKzWIxQk&#43;bGcLdSINQOEFBMKXpRsDRyQh9YOYOMYQMm6v9IX49S5VkPcjWUacczfSg=="></script>
-  
-  
-    
-    
-    
-  
-  
-    
-    
-  
-  
-  
-  
-  
-  
-  
-  
-  
-    
-    <script
-      defer
-      type="text/javascript"
-      id="script-bundle"
-      src="/js/main.bundle.min.f99aa39bcfb5d16a28ec2236bd358df5e465058a67f58b42534a3b15882a6a3513791fd27248c6b5b5cef06337f714070d4784fb776f44d930309b64cce1a2e0.js"
-      integrity="sha512-&#43;Zqjm8&#43;10Woo7CI2vTWN9eRlBYpn9YtCU0o7FYgqajUTeR/SckjGtbXO8GM39xQHDUeE&#43;3dvRNkwMJtkzOGi4A=="
-      data-copy="Kopieren"
-      data-copied="Kopiert"></script>
-  
-  
-    
-    <script src="/lib/zoom/zoom.min.umd.a527109b68c082a70f3697716dd72a9d5aa8b545cf800cecbbc7399f2ca6f6e0ce3e431f2062b48bbfa47c9ea42822714060bef309be073f49b9c0e30d318d7b.js" integrity="sha512-pScQm2jAgqcPNpdxbdcqnVqotUXPgAzsu8c5nyym9uDOPkMfIGK0i7&#43;kfJ6kKCJxQGC&#43;8wm&#43;Bz9JucDjDTGNew=="></script>
-  
-
-  
-  
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" sizes="any">
-<link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
-<link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
-
-<link rel="apple-touch-icon" href="/apple-touch-icon.png">
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-
-
-<link
-rel="manifest"
-href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f67173529c181bf04.json"
-
-  integrity="sha256-ep4Hzh9zhmiZF2At3Fp1dQrYQuYF/3ZPZxc1KcGBvwQ="
-
-/>
-
-<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
-
-  
-
-  
-  
-  
-  
-  
-  
-
-  
-  <meta property="og:url" content="https://zyria.de/posts/homelab/k3s-prod/apps/mailstack/readme/">
-  <meta property="og:site_name" content="Zyria">
-  <meta property="og:title" content="Mailstack">
-  <meta property="og:description" content="Ein vollständiger, containerisierter E-Mail-Server-Stack.">
-  <meta property="og:locale" content="de_de">
-  <meta property="og:type" content="article">
-    <meta property="article:section" content="posts">
-    <meta property="article:published_time" content="2025-10-27T02:16:57+01:00">
-    <meta property="article:modified_time" content="2025-10-27T02:16:57+01:00">
-    <meta property="article:tag" content="Kubernetes">
-    <meta property="article:tag" content="K3s">
-    <meta property="article:tag" content="Gitops">
-    <meta property="article:tag" content="Argocd">
-    <meta property="article:tag" content="Helm">
-    <meta property="article:tag" content="Kustomize">
-
-  
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Mailstack">
-  <meta name="twitter:description" content="Ein vollständiger, containerisierter E-Mail-Server-Stack.">
-
-  <script type="application/ld+json">
-  [{
-    "@context": "https://schema.org",
-    "@type": "Article",
-    "articleSection": "Beiträge",
-    "name": "Mailstack",
-    "headline": "Mailstack",
-    "description": "Ein vollständiger, containerisierter E-Mail-Server-Stack.",
-    "abstract": "Dieser Mailstack integriert mehrere Komponenten wie Postfix, Dovecot, Rspamd und ClamAV, um einen robusten und sicheren E-Mail-Dienst mit Spam- und Virenfilterung bereitzustellen.",
-    "inLanguage": "de-de",
-    "url" : "https:\/\/zyria.de\/posts\/homelab\/k3s-prod\/apps\/mailstack\/readme\/",
-    "author" : {
-      "@type": "Person",
-      "name": "Fabrice Kirchner"
-    },
-    "copyrightYear": "2025",
-    "dateCreated": "2025-10-27T02:16:57\u002b01:00",
-    "datePublished": "2025-10-27T02:16:57\u002b01:00",
-    
-    "dateModified": "2025-10-27T02:16:57\u002b01:00",
-    
-    "keywords": ["kubernetes","k3s","gitops","argocd","helm","kustomize","homelab","produktion"],
-    
-    "mainEntityOfPage": "true",
-    "wordCount": "1797"
-  }]
-  </script>
-
-
 
   
   
@@ -229,6 +86,125 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   
 
   
+  <meta property="og:url" content="https://zyria.de/posts/homelab/k3s-prod/apps/mailstack/readme/">
+  <meta property="og:site_name" content="Zyria">
+  <meta property="og:title" content="Mailstack">
+  <meta property="og:description" content="Ein vollständiger, containerisierter E-Mail-Server-Stack.">
+  <meta property="og:locale" content="de_de">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-11-04T10:23:51+01:00">
+    <meta property="article:modified_time" content="2025-11-04T10:23:51+01:00">
+    <meta property="article:tag" content="Kubernetes">
+    <meta property="article:tag" content="K3s">
+    <meta property="article:tag" content="Gitops">
+    <meta property="article:tag" content="Argocd">
+    <meta property="article:tag" content="Helm">
+    <meta property="article:tag" content="Kustomize">
+
+  
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Mailstack">
+  <meta name="twitter:description" content="Ein vollständiger, containerisierter E-Mail-Server-Stack.">
+
+  
+  
+  
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+  
+    
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+    
+  
+  
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="/css/main.bundle.min.27df05b3b72639271ffcb5c5df021606d8800bf9f25e1dada4d273625191578024e8f44c8456d033c7504243c72dfaa37378b277e069cc0ced848853e0fb10ed.css"
+    integrity="sha512-J98Fs7cmOScf/LXF3wIWBtiAC/nyXh2tpNJzYlGRV4Ak6PRMhFbQM8dQQkPHLfqjc3iyd&#43;BpzAzthIhT4PsQ7Q==">
+
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/appearance.min.6f41174b3a05b680820fe08cadbfa5fb7a7ca347b76a0955cdc68b9d8aca1ce24f0547e138cea33bcc7904d551a90afcb1cc7f2d9fe8557075d501419046c08c.js"
+    integrity="sha512-b0EXSzoFtoCCD&#43;CMrb&#43;l&#43;3p8o0e3aglVzcaLnYrKHOJPBUfhOM6jO8x5BNVRqQr8scx/LZ/oVXB11QFBkEbAjA=="></script>
+  
+  
+  
+  
+  
+    
+    <script
+      type="text/javascript"
+      src="/js/zen-mode.min.9814dee9614d32aeb56239d118edfe20acd6231424f9b19c2dd48835038414130a5e946c0d1c9087d60e60e31840c9babfd217e3d4b95643dc8d651a71ccdf4a.js"
+      integrity="sha512-mBTe6WFNMq61YjnRGO3&#43;IKzWIxQk&#43;bGcLdSINQOEFBMKXpRsDRyQh9YOYOMYQMm6v9IX49S5VkPcjWUacczfSg=="></script>
+  
+  
+    
+    <script src="/lib/zoom/zoom.min.umd.a527109b68c082a70f3697716dd72a9d5aa8b545cf800cecbbc7399f2ca6f6e0ce3e431f2062b48bbfa47c9ea42822714060bef309be073f49b9c0e30d318d7b.js" integrity="sha512-pScQm2jAgqcPNpdxbdcqnVqotUXPgAzsu8c5nyym9uDOPkMfIGK0i7&#43;kfJ6kKCJxQGC&#43;8wm&#43;Bz9JucDjDTGNew=="></script>
+  
+
+  
+  
+  
+    
+  
+  
+    
+  
+  
+    
+  
+  
+  
+  
+  
+  
+    
+    <script
+      defer
+      type="text/javascript"
+      id="script-bundle"
+      src="/js/main.bundle.min.9cc802d09f28c6af56ceee7bc6e320a39251fdae98243f2a9942f221ac57a9f49c51609699a91794a7b2580ee1deaa8e4d794a68ffa94aa317c66e893ce51e02.js"
+      integrity="sha512-nMgC0J8oxq9Wzu57xuMgo5JR/a6YJD8qmULyIaxXqfScUWCWmakXlKeyWA7h3qqOTXlKaP&#43;pSqMXxm6JPOUeAg=="
+      data-copy="Kopieren"
+      data-copied="Kopiert"></script>
+  
+
+  
   
 
 <script src="/lib/jquery/jquery.slim.min.b0dca576e87d7eaa5850ae4e61759c065786cdb6489d68fcc82240539eebd5da522bdb4fda085ffd245808c8fe2acb2516408eb774ef26b5f6015fc6737c0ea8.js" integrity="sha512-sNylduh9fqpYUK5OYXWcBleGzbZInWj8yCJAU57r1dpSK9tP2ghf/SRYCMj&#43;KsslFkCOt3TvJrX2AV/Gc3wOqA=="></script>
@@ -274,10 +250,65 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
 
   
   
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" sizes="any">
+<link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+
+
+<link
+rel="manifest"
+href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f67173529c181bf04.json"
+
+  integrity="sha256-ep4Hzh9zhmiZF2At3Fp1dQrYQuYF/3ZPZxc1KcGBvwQ="
+
+/>
+
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+  
+
+  
+  <script type="application/ld+json">
+  [{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "articleSection": "Beiträge",
+    "name": "Mailstack",
+    "headline": "Mailstack",
+    "description": "Ein vollständiger, containerisierter E-Mail-Server-Stack.",
+    "abstract": "Dieser Mailstack integriert mehrere Komponenten wie Postfix, Dovecot, Rspamd und ClamAV, um einen robusten und sicheren E-Mail-Dienst mit Spam- und Virenfilterung bereitzustellen.",
+    "inLanguage": "de-de",
+    "url" : "https:\/\/zyria.de\/posts\/homelab\/k3s-prod\/apps\/mailstack\/readme\/",
+    "author" : {
+      "@type": "Person",
+      "name": "Fabrice Kirchner"
+    },
+    "copyrightYear": "2025",
+    "dateCreated": "2025-11-04T10:23:51\u002b01:00",
+    "datePublished": "2025-11-04T10:23:51\u002b01:00",
+    
+    "dateModified": "2025-11-04T10:23:51\u002b01:00",
+    
+    "keywords": ["kubernetes","k3s","gitops","argocd","helm","kustomize","homelab","produktion"],
+    
+    "mainEntityOfPage": "true",
+    "wordCount": "1797"
+  }]
+  </script>
+
+
+
+  
+  
+    
 
 
 
 
+  
 
   
   
@@ -291,8 +322,27 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   
   
 </head>
-<body
-    class="flex flex-col h-screen px-6 m-auto text-lg leading-7 max-w-7xl bg-neutral text-neutral-900 dark:bg-neutral-800 dark:text-neutral sm:px-14 md:px-24 lg:px-32 scrollbar-thin scrollbar-track-neutral-200 scrollbar-thumb-neutral-400 dark:scrollbar-track-neutral-800 dark:scrollbar-thumb-neutral-600">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <body class="flex flex-col h-screen m-auto leading-7 max-w-7xl px-6 sm:px-14 md:px-24 lg:px-32 text-lg bg-neutral text-neutral-900 dark:bg-neutral-800 dark:text-neutral scrollbar-thin scrollbar-track-neutral-200 scrollbar-thumb-neutral-400 dark:scrollbar-track-neutral-800 dark:scrollbar-thumb-neutral-600">
     <div id="the-top" class="absolute flex self-center">
       <a
         class="px-3 py-1 text-sm -translate-y-8 rounded-b-lg bg-primary-200 focus:translate-y-0 dark:bg-neutral-600"
@@ -318,7 +368,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
 
 
 <div
-  class="main-menu flex items-center justify-between px-4 py-6 sm:px-6 md:justify-start gap-x-3 pt-[2px] pr-0 pb-[3px] pl-0">
+  class="main-menu flex items-center justify-between py-6 md:justify-start gap-x-3 pt-[2px] pr-2 md:pr-4 pb-[3px] pl-0">
   
   
 
@@ -338,11 +388,15 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   <a
   href="/about/"
   
-  class="flex items-center hover:text-primary-600 dark:hover:text-primary-400">
+  class="flex items-center hover:text-primary-600 dark:hover:text-primary-400"
+  aria-label="Über mich"
+  title="Über mich">
   
-  <p class="text-base font-medium" title="Über mich">
-    Über mich
-  </p>
+  
+    <p class="text-base font-medium">
+      Über mich
+    </p>
+  
 </a>
 
 
@@ -352,11 +406,15 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   <a
   href="/posts/"
   
-  class="flex items-center hover:text-primary-600 dark:hover:text-primary-400">
+  class="flex items-center hover:text-primary-600 dark:hover:text-primary-400"
+  aria-label="Beiträge"
+  title="Beiträge">
   
-  <p class="text-base font-medium" title="Beiträge">
-    Beiträge
-  </p>
+  
+    <p class="text-base font-medium">
+      Beiträge
+    </p>
+  
 </a>
 
 
@@ -366,11 +424,15 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   <a
   href="/datenschutz/"
   
-  class="flex items-center hover:text-primary-600 dark:hover:text-primary-400">
+  class="flex items-center hover:text-primary-600 dark:hover:text-primary-400"
+  aria-label="Datenschutzerklärung"
+  title="Datenschutzerklärung">
   
-  <p class="text-base font-medium" title="Datenschutzerklärung">
-    Datenschutzerklärung
-  </p>
+  
+    <p class="text-base font-medium">
+      Datenschutzerklärung
+    </p>
+  
 </a>
 
 
@@ -380,11 +442,15 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   <a
   href="/impressum/"
   
-  class="flex items-center hover:text-primary-600 dark:hover:text-primary-400">
+  class="flex items-center hover:text-primary-600 dark:hover:text-primary-400"
+  aria-label="Impressum"
+  title="Impressum">
   
-  <p class="text-base font-medium" title="Impressum">
-    Impressum
-  </p>
+  
+    <p class="text-base font-medium">
+      Impressum
+    </p>
+  
 </a>
 
 
@@ -394,11 +460,15 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   <a
   href="https://status.zyria.de"
   target="_blank"
-  class="flex items-center hover:text-primary-600 dark:hover:text-primary-400">
+  class="flex items-center hover:text-primary-600 dark:hover:text-primary-400"
+  aria-label="Statusseite"
+  title="">
   
-  <p class="text-base font-medium" title="">
-    Statusseite
-  </p>
+  
+    <p class="text-base font-medium">
+      Statusseite
+    </p>
+  
 </a>
 
 
@@ -506,11 +576,15 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   <a
     href="/about/"
     
-    class="flex items-center hover:text-primary-600 dark:hover:text-primary-400">
+    class="flex items-center hover:text-primary-600 dark:hover:text-primary-400"
+    aria-label="Über mich"
+    title="Über mich">
     
-    <p class="text-bg font-bg" title="Über mich">
-      Über mich
-    </p>
+    
+      <p class="text-bg font-bg">
+        Über mich
+      </p>
+    
   </a>
 </li>
 
@@ -522,11 +596,15 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   <a
     href="/posts/"
     
-    class="flex items-center hover:text-primary-600 dark:hover:text-primary-400">
+    class="flex items-center hover:text-primary-600 dark:hover:text-primary-400"
+    aria-label="Beiträge"
+    title="Beiträge">
     
-    <p class="text-bg font-bg" title="Beiträge">
-      Beiträge
-    </p>
+    
+      <p class="text-bg font-bg">
+        Beiträge
+      </p>
+    
   </a>
 </li>
 
@@ -538,11 +616,15 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   <a
     href="/datenschutz/"
     
-    class="flex items-center hover:text-primary-600 dark:hover:text-primary-400">
+    class="flex items-center hover:text-primary-600 dark:hover:text-primary-400"
+    aria-label="Datenschutzerklärung"
+    title="Datenschutzerklärung">
     
-    <p class="text-bg font-bg" title="Datenschutzerklärung">
-      Datenschutzerklärung
-    </p>
+    
+      <p class="text-bg font-bg">
+        Datenschutzerklärung
+      </p>
+    
   </a>
 </li>
 
@@ -554,11 +636,15 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   <a
     href="/impressum/"
     
-    class="flex items-center hover:text-primary-600 dark:hover:text-primary-400">
+    class="flex items-center hover:text-primary-600 dark:hover:text-primary-400"
+    aria-label="Impressum"
+    title="Impressum">
     
-    <p class="text-bg font-bg" title="Impressum">
-      Impressum
-    </p>
+    
+      <p class="text-bg font-bg">
+        Impressum
+      </p>
+    
   </a>
 </li>
 
@@ -572,11 +658,15 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
     
       target="_blank"
     
-    class="flex items-center hover:text-primary-600 dark:hover:text-primary-400">
+    class="flex items-center hover:text-primary-600 dark:hover:text-primary-400"
+    aria-label="Statusseite"
+    title="">
     
-    <p class="text-bg font-bg" title="">
-      Statusseite
-    </p>
+    
+      <p class="text-bg font-bg">
+        Statusseite
+      </p>
+    
   </a>
 </li>
 
@@ -610,7 +700,36 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
       
       
         
+
+
+
+
+
+
+
   
+  
+    
+  
+    
+  
+    
+  
+    
+  
+
+
+
+  
+  
+
+
+
+
+  
+
+
+
 
       
     
@@ -687,10 +806,9 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   
   
   
-
-  
-  
     
+  
+
   
 
   
@@ -723,7 +841,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2025-10-27T02:16:57&#43;01:00">27 Oktober 2025</time><span class="px-2 text-primary-500">&middot;</span><span>1797 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
+      <time datetime="2025-11-04T10:23:51&#43;01:00">4 November 2025</time><span class="px-2 text-primary-500">&middot;</span><span>1797 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
 
 
   
@@ -742,9 +860,9 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   <span
     id="zen-mode-button"
     class="text-lg hover:text-primary-500"
-    title=""
-    data-title-i18n-disable=""
-    data-title-i18n-enable="">
+    title="Zen-Modus aktivieren"
+    data-title-i18n-disable="Zen-Modus aktivieren"
+    data-title-i18n-enable="Zen-Modus deaktivieren">
     <span class="inline-block align-text-bottom"><span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="50px" height="50px">
     <path fill="currentColor" d="M 12.980469 4 C 9.1204688 4 5.9804688 7.14 5.9804688 11 L 6 26 L 9.9804688 26 L 9.9804688 11 C 9.9804688 9.35 11.320469 8 12.980469 8 L 40.019531 8 C 41.679531 8 43.019531 9.35 43.019531 11 L 43.019531 39 C 43.019531 40.65 41.679531 42 40.019531 42 L 29 42 C 29 43.54 28.420938 44.94 27.460938 46 L 40.019531 46 C 43.879531 46 47.019531 42.86 47.019531 39 L 47.019531 11 C 47.019531 7.14 43.879531 4 40.019531 4 L 12.980469 4 z M 7 28 C 4.794 28 3 29.794 3 32 L 3 42 C 3 44.206 4.794 46 7 46 L 23 46 C 25.206 46 27 44.206 27 42 L 27 32 C 27 29.794 25.206 28 23 28 L 7 28 z M 7 32 L 23 32 L 23.001953 42 L 7 42 L 7 32 z"/>
 </svg></span></span>
@@ -902,8 +1020,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
       
       
       
-      
-        <div class="order-first lg:ml-auto px-0 lg:order-last lg:ps-8">
+        <div class="order-first lg:ml-auto px-0 lg:order-last lg:ps-8 lg:max-w-2xs">
           <div class="toc ps-5 print:hidden lg:sticky lg:top-10">
             
               <details
@@ -1083,11 +1200,23 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
     const TOC_LINK_SELECTOR = 'a[href^="#"]'
     const NESTED_LIST_SELECTOR = 'li ul'
     const ACTIVE_CLASS = 'active'
+    let isJumpingToAnchor = false
 
     function getActiveAnchorId(anchors, offsetRatio) {
       const threshold = window.scrollY + window.innerHeight * offsetRatio
       const tocLinks = [...document.querySelectorAll('#TableOfContents a[href^="#"]')]
       const tocIds = new Set(tocLinks.map(link => link.getAttribute('href').substring(1)))
+
+      if (isJumpingToAnchor) {
+        for (let i = 0; i < anchors.length; i++) {
+          const anchor = anchors[i]
+          if (!tocIds.has(anchor.id)) continue
+          const top = anchor.getBoundingClientRect().top + window.scrollY
+          if (Math.abs(window.scrollY - top) < 100) {
+            return anchor.id
+          }
+        }
+      }
 
       for (let i = anchors.length - 1; i >= 0; i--) {
         const top = anchors[i].getBoundingClientRect().top + window.scrollY
@@ -1135,6 +1264,12 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
         toc.querySelectorAll(NESTED_LIST_SELECTOR).forEach(ul => ul.style.display = 'none')
       }
 
+      links.forEach(link => {
+        link.addEventListener('click', () => {
+          isJumpingToAnchor = true
+        })
+      })
+
       const config = {
         toc,
         anchors,
@@ -1157,7 +1292,6 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
 
 
             
-            
           </div>
         </div>
       
@@ -1168,57 +1302,53 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
 
         <div class="article-content max-w-prose mb-20">
           
-<h2 class="relative group">Mailstack 
+<h2 class="relative group">Mailstack
     <div id="mailstack" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#mailstack" aria-label="Anker">#</a>
-    </span>        
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#mailstack" aria-label="Anker">#</a>
+    </span>
     
 </h2>
 
-<h3 class="relative group">Deployment 
+<h3 class="relative group">Deployment
     <div id="deployment" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#deployment" aria-label="Anker">#</a>
-    </span>        
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#deployment" aria-label="Anker">#</a>
+    </span>
     
 </h3>
-<p>
-
-
-
-
-
-
-<figure>
-    <img class="my-0 rounded-md" loading="lazy" alt="Argo Deployment" src="https://argocd.zyria.de/api/badge?name=mailstack&amp;revision=true&amp;showAppName=true&amp;width=150">
-
-  
-</figure>
+<p><figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="Argo Deployment"
+    src="https://argocd.zyria.de/api/badge?name=mailstack&amp;revision=true&amp;showAppName=true&amp;width=150"
+    ></figure>
 </p>
 
-<h3 class="relative group">Quelle 
+<h3 class="relative group">Quelle
     <div id="quelle" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#quelle" aria-label="Anker">#</a>
-    </span>        
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#quelle" aria-label="Anker">#</a>
+    </span>
     
 </h3>
 <p>Die Anwendung wird als benutzerdefiniertes Helm-Chart aus einem privaten Repository auf <code>git.zyria.de</code> bezogen. Es bündelt verschiedene Open-Source-Mail-Komponenten.</p>
 
-<h3 class="relative group">Dokumentation 
+<h3 class="relative group">Dokumentation
     <div id="dokumentation" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#dokumentation" aria-label="Anker">#</a>
-    </span>        
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#dokumentation" aria-label="Anker">#</a>
+    </span>
     
 </h3>
 <p>Die Konfiguration basiert auf dem <a
@@ -1226,13 +1356,13 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
     target="_blank"
   >Mailu</a> Projekt, wurde aber stark angepasst. Die Dokumentation der einzelnen Komponenten (Postfix, Dovecot, etc.) ist auf deren jeweiligen Projekt-Webseiten zu finden.</p>
 
-<h3 class="relative group">Funktion 
+<h3 class="relative group">Funktion
     <div id="funktion" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#funktion" aria-label="Anker">#</a>
-    </span>        
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#funktion" aria-label="Anker">#</a>
+    </span>
     
 </h3>
 <p>Der Mailstack ist für den gesamten E-Mail-Verkehr der gehosteten Domains zuständig. Er besteht aus mehreren ineinandergreifenden Diensten:</p>
@@ -1245,24 +1375,24 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
 <li><strong>Redis</strong>: Dient als schneller Cache und Speicher für Rspamd.</li>
 </ul>
 
-<h3 class="relative group">Lokale Anpassungen 
+<h3 class="relative group">Lokale Anpassungen
     <div id="lokale-anpassungen" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#lokale-anpassungen" aria-label="Anker">#</a>
-    </span>        
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#lokale-anpassungen" aria-label="Anker">#</a>
+    </span>
     
 </h3>
 <p>Die Konfiguration ist sehr umfangreich und erfolgt über die <code>values.yaml</code>-Datei, sowie diverse ConfigMaps und Secrets.</p>
 
-<h4 class="relative group">Wichtige Einstellungen 
+<h4 class="relative group">Wichtige Einstellungen
     <div id="wichtige-einstellungen" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#wichtige-einstellungen" aria-label="Anker">#</a>
-    </span>        
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#wichtige-einstellungen" aria-label="Anker">#</a>
+    </span>
     
 </h4>
 <ul>
@@ -1273,25 +1403,25 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
 <li><strong>Sicherheit</strong>: Ausgehende E-Mails werden mit DKIM signiert und es wird MTA-STS für eine sichere E-Mail-Zustellung verwendet.</li>
 </ul>
 
-<h3 class="relative group">Installation 
+<h3 class="relative group">Installation
     <div id="installation" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#installation" aria-label="Anker">#</a>
-    </span>        
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#installation" aria-label="Anker">#</a>
+    </span>
     
 </h3>
 <p>Die Anwendung wird mittels Kustomize und Helm durch ArgoCD im Kubernetes-Cluster bereitgestellt. Die Konfiguration befindet sich im <code>apps/mailstack</code>-Verzeichnis. Eine manuelle Installation kann mit folgendem Befehl durchgeführt werden:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">kubectl kustomize --enable-helm apps/mailstack <span class="p">|</span> kubectl apply -n mailstack -f -
 </span></span></code></pre></div>
-<h3 class="relative group">Abhängigkeiten 
+<h3 class="relative group">Abhängigkeiten
     <div id="abhängigkeiten" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#abh%c3%a4ngigkeiten" aria-label="Anker">#</a>
-    </span>        
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#abh%c3%a4ngigkeiten" aria-label="Anker">#</a>
+    </span>
     
 </h3>
 <ul>
@@ -1302,35 +1432,35 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
 <li><strong>Authentik</strong>: Wird zur Absicherung der Rspamd-Weboberfläche verwendet.</li>
 </ul>
 
-<h2 class="relative group">Nutzerteil 
+<h2 class="relative group">Nutzerteil
     <div id="nutzerteil" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#nutzerteil" aria-label="Anker">#</a>
-    </span>        
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#nutzerteil" aria-label="Anker">#</a>
+    </span>
     
 </h2>
 
-<h3 class="relative group">Einleitung und Geltungsbereich 
+<h3 class="relative group">Einleitung und Geltungsbereich
     <div id="einleitung-und-geltungsbereich" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#einleitung-und-geltungsbereich" aria-label="Anker">#</a>
-    </span>        
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#einleitung-und-geltungsbereich" aria-label="Anker">#</a>
+    </span>
     
 </h3>
 <p>Dieses Dokument beschreibt die technische Konfiguration, die administrativen Prozesse und die Nutzungsrichtlinien für das E-Mail-System. Es richtet sich an IT-Administratoren, den IT-Support sowie an alle Mitarbeiter als Leitfaden für die ordnungsgemäße Nutzung des E-Mail-Dienstes.</p>
 <p>Ziel ist es, einen stabilen, sicheren und effizienten E-Mail-Verkehr zu gewährleisten und klare Anweisungen für Standardprozeduren bereitzustellen.</p>
 
-<h3 class="relative group">Systemübersicht 
+<h3 class="relative group">Systemübersicht
     <div id="systemübersicht" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#system%c3%bcbersicht" aria-label="Anker">#</a>
-    </span>        
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#system%c3%bcbersicht" aria-label="Anker">#</a>
+    </span>
     
 </h3>
 <p>Die E-Mail-Infrastruktur ist vollständig lokal (&ldquo;on-premises&rdquo;) und basiert auf den folgenden Open-Source-Komponenten:</p>
@@ -1363,24 +1493,24 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
 </li>
 </ul>
 
-<h3 class="relative group">Benutzer- und Postfachverwaltung 
+<h3 class="relative group">Benutzer- und Postfachverwaltung
     <div id="benutzer--und-postfachverwaltung" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#benutzer--und-postfachverwaltung" aria-label="Anker">#</a>
-    </span>        
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#benutzer--und-postfachverwaltung" aria-label="Anker">#</a>
+    </span>
     
 </h3>
 <p>Die Verwaltung von Postfächern erfolgt durch die IT-Administration über Systemskripte, die mit der zentralen Benutzerdatenbank interagieren.</p>
 
-<h4 class="relative group">Anlage eines neuen Postfach 
+<h4 class="relative group">Anlage eines neuen Postfach
     <div id="anlage-eines-neuen-postfach" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#anlage-eines-neuen-postfach" aria-label="Anker">#</a>
-    </span>        
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#anlage-eines-neuen-postfach" aria-label="Anker">#</a>
+    </span>
     
 </h4>
 <ol>
@@ -1398,13 +1528,13 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
 </li>
 </ol>
 
-<h4 class="relative group">Deaktivierung eines Postfachs (Offboarding) 
+<h4 class="relative group">Deaktivierung eines Postfachs (Offboarding)
     <div id="deaktivierung-eines-postfachs-offboarding" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#deaktivierung-eines-postfachs-offboarding" aria-label="Anker">#</a>
-    </span>        
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#deaktivierung-eines-postfachs-offboarding" aria-label="Anker">#</a>
+    </span>
     
 </h4>
 <ol>
@@ -1427,13 +1557,13 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
 </li>
 </ol>
 
-<h3 class="relative group">Konfigurationsanleitungen 
+<h3 class="relative group">Konfigurationsanleitungen
     <div id="konfigurationsanleitungen" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#konfigurationsanleitungen" aria-label="Anker">#</a>
-    </span>        
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#konfigurationsanleitungen" aria-label="Anker">#</a>
+    </span>
     
 </h3>
 <p>Für die Einrichtung Ihres E-Mail-Kontos benötigen Sie die folgenden Server-Einstellungen:</p>
@@ -1472,13 +1602,13 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
 </li>
 </ul>
 
-<h3 class="relative group">Sicherheitsrichtlinien und Best Practices 
+<h3 class="relative group">Sicherheitsrichtlinien und Best Practices
     <div id="sicherheitsrichtlinien-und-best-practices" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#sicherheitsrichtlinien-und-best-practices" aria-label="Anker">#</a>
-    </span>        
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#sicherheitsrichtlinien-und-best-practices" aria-label="Anker">#</a>
+    </span>
     
 </h3>
 <ul>
@@ -1512,13 +1642,13 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
 </li>
 </ul>
 
-<h3 class="relative group">Backup und Wiederherstellung 
+<h3 class="relative group">Backup und Wiederherstellung
     <div id="backup-und-wiederherstellung" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#backup-und-wiederherstellung" aria-label="Anker">#</a>
-    </span>        
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#backup-und-wiederherstellung" aria-label="Anker">#</a>
+    </span>
     
 </h3>
 <ul>
@@ -1539,23 +1669,23 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
 </ul>
 <p><strong>Wiederherstellung von E-Mails:</strong> Gelöschte E-Mails können nicht vom Benutzer selbst wiederhergestellt werden. Bitte kontaktieren Sie den IT-Support mit einer genauen Angabe der E-Mail (Absender, Betreff, ungefähres Datum), damit diese aus dem Backup wiederhergestellt werden kann.</p>
 
-<h2 class="relative group">IT Teil 
+<h2 class="relative group">IT Teil
     <div id="it-teil" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#it-teil" aria-label="Anker">#</a>
-    </span>        
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#it-teil" aria-label="Anker">#</a>
+    </span>
     
 </h2>
 
-<h3 class="relative group">Architektur 
+<h3 class="relative group">Architektur
     <div id="architektur" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#architektur" aria-label="Anker">#</a>
-    </span>        
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#architektur" aria-label="Anker">#</a>
+    </span>
     
 </h3>
 <p>Der Mailstack wird auf mehreren virtuellen Maschinen als Kubernetes (<a
@@ -1581,77 +1711,77 @@ Da Dovecot und Postfix die gleiche IP Adressen haben sollen und beide Container 
 </span></span><span class="line"><span class="ln">11</span><span class="cl">    Postfix (MTA)-&gt;&gt;+Dovecot (MDA): Zustellung via LMTP
 </span></span><span class="line"><span class="ln">12</span><span class="cl">    Dovecot (MDA)-&gt;&gt;+Maildir (Speicher): Speichert E-Mail
 </span></span></code></pre></div>
-<h3 class="relative group">Vorhandene Infrastruktur (Out of scope für dieses Dokument) 
+<h3 class="relative group">Vorhandene Infrastruktur (Out of scope für dieses Dokument)
     <div id="vorhandene-infrastruktur-out-of-scope-für-dieses-dokument" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#vorhandene-infrastruktur-out-of-scope-f%c3%bcr-dieses-dokument" aria-label="Anker">#</a>
-    </span>        
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#vorhandene-infrastruktur-out-of-scope-f%c3%bcr-dieses-dokument" aria-label="Anker">#</a>
+    </span>
     
 </h3>
 
-<h4 class="relative group">Zeitsynchronisation (NTP - Network Time Protocol) 
+<h4 class="relative group">Zeitsynchronisation (NTP - Network Time Protocol)
     <div id="zeitsynchronisation-ntp---network-time-protocol" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#zeitsynchronisation-ntp---network-time-protocol" aria-label="Anker">#</a>
-    </span>        
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#zeitsynchronisation-ntp---network-time-protocol" aria-label="Anker">#</a>
+    </span>
     
 </h4>
 <p>Eine exakte und synchronisierte Systemzeit ist entscheidend für korrekte Zeitstempel in E-Mail-Headern, die Analyse von Logdateien und die Gültigkeit von Authentifizierungstickets</p>
 
-<h4 class="relative group">Transportverschlüsselung (TLS/SSL) 
+<h4 class="relative group">Transportverschlüsselung (TLS/SSL)
     <div id="transportverschlüsselung-tlsssl" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#transportverschl%c3%bcsselung-tlsssl" aria-label="Anker">#</a>
-    </span>        
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#transportverschl%c3%bcsselung-tlsssl" aria-label="Anker">#</a>
+    </span>
     
 </h4>
 <p>Verschlüsselt die Kommunikation zwischen E-Mail-Clients und dem Server sowie zwischen den Mailservern untereinander (via STARTTLS). Dies schützt Anmeldedaten und E-Mail-Inhalte vor dem Mitlesen.</p>
 
-<h4 class="relative group">Zentrale Benutzerauthentifizierung (LDAP / Active Directory 
+<h4 class="relative group">Zentrale Benutzerauthentifizierung (LDAP / Active Directory
     <div id="zentrale-benutzerauthentifizierung-ldap--active-directory" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#zentrale-benutzerauthentifizierung-ldap--active-directory" aria-label="Anker">#</a>
-    </span>        
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#zentrale-benutzerauthentifizierung-ldap--active-directory" aria-label="Anker">#</a>
+    </span>
     
 </h4>
 <p>Anstatt Benutzerkonten und Passwörter lokal auf dem Mailserver zu verwalten, kann der Server an einen zentralen Verzeichnisdienst angebunden werden.</p>
 
-<h4 class="relative group">Monitoring und Logging 
+<h4 class="relative group">Monitoring und Logging
     <div id="monitoring-und-logging" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#monitoring-und-logging" aria-label="Anker">#</a>
-    </span>        
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#monitoring-und-logging" aria-label="Anker">#</a>
+    </span>
     
 </h4>
 <p>Eine lückenlose Protokollierung aller Vorgänge ist für die Fehleranalyse (z.B. bei Zustellproblemen) und die Erkennung von Sicherheitsvorfällen (z.B. kompromittierte Konten) unerlässlich.</p>
 
-<h3 class="relative group">DNS Konfiguration 
+<h3 class="relative group">DNS Konfiguration
     <div id="dns-konfiguration" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#dns-konfiguration" aria-label="Anker">#</a>
-    </span>        
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#dns-konfiguration" aria-label="Anker">#</a>
+    </span>
     
 </h3>
 
-<h4 class="relative group">Folgende DNS Einträge müssen gesetzt werden 
+<h4 class="relative group">Folgende DNS Einträge müssen gesetzt werden
     <div id="folgende-dns-einträge-müssen-gesetzt-werden" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#folgende-dns-eintr%c3%a4ge-m%c3%bcssen-gesetzt-werden" aria-label="Anker">#</a>
-    </span>        
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#folgende-dns-eintr%c3%a4ge-m%c3%bcssen-gesetzt-werden" aria-label="Anker">#</a>
+    </span>
     
 </h4>
 <p>Alle Einträge müssen in den entsprechenden Zonen gesetzt werden, für welche der Mailserver zuständig sein soll.</p>
@@ -1725,13 +1855,13 @@ Da Dovecot und Postfix die gleiche IP Adressen haben sollen und beide Container 
     target="_blank"
   >CNAME</a> Eintrag.</p>
 
-<h3 class="relative group">Dienste welche mit dem Mailstack interagieren 
+<h3 class="relative group">Dienste welche mit dem Mailstack interagieren
     <div id="dienste-welche-mit-dem-mailstack-interagieren" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#dienste-welche-mit-dem-mailstack-interagieren" aria-label="Anker">#</a>
-    </span>        
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#dienste-welche-mit-dem-mailstack-interagieren" aria-label="Anker">#</a>
+    </span>
     
 </h3>
 <ul>
@@ -1744,13 +1874,13 @@ Policy bereitzustellen</li>
   href="https://zyria.de/posts/homelab/k3s-prod/apps/roundcube/readme/">Roundcube Webmail</a></li>
 </ul>
 
-<h3 class="relative group">Wer hat eigentlich auf welche Mailbox Zugriff? 
+<h3 class="relative group">Wer hat eigentlich auf welche Mailbox Zugriff?
     <div id="wer-hat-eigentlich-auf-welche-mailbox-zugriff" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#wer-hat-eigentlich-auf-welche-mailbox-zugriff" aria-label="Anker">#</a>
-    </span>        
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#wer-hat-eigentlich-auf-welche-mailbox-zugriff" aria-label="Anker">#</a>
+    </span>
     
 </h3>
 <p>Nutzer können Ihr Mailboxen beliebig mit anderen Nutzern teilen. Die IT hat
@@ -1763,7 +1893,7 @@ setzen:</p>
 
 
 
-	
+  
 
 
 
@@ -1783,43 +1913,43 @@ setzen:</p>
 
 
 
-<h3 class="relative group">Betrieb und Wartung 
+<h3 class="relative group">Betrieb und Wartung
     <div id="betrieb-und-wartung" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#betrieb-und-wartung" aria-label="Anker">#</a>
-    </span>        
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#betrieb-und-wartung" aria-label="Anker">#</a>
+    </span>
     
 </h3>
 
-<h4 class="relative group">Wichtige Komponenten (Spam/Virus-Schutz) 
+<h4 class="relative group">Wichtige Komponenten (Spam/Virus-Schutz)
     <div id="wichtige-komponenten-spamvirus-schutz" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#wichtige-komponenten-spamvirus-schutz" aria-label="Anker">#</a>
-    </span>        
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#wichtige-komponenten-spamvirus-schutz" aria-label="Anker">#</a>
+    </span>
     
 </h4>
 
-<h5 class="relative group">Anti-Spam, Anti-Virus Rspamd 
+<h5 class="relative group">Anti-Spam, Anti-Virus Rspamd
     <div id="anti-spam-anti-virus-rspamd" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#anti-spam-anti-virus-rspamd" aria-label="Anker">#</a>
-    </span>        
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#anti-spam-anti-virus-rspamd" aria-label="Anker">#</a>
+    </span>
     
 </h5>
 
-<h6 class="relative group">Quelle 
+<h6 class="relative group">Quelle
     <div id="quelle-1" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#quelle-1" aria-label="Anker">#</a>
-    </span>        
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#quelle-1" aria-label="Anker">#</a>
+    </span>
     
 </h6>
 <p><a
@@ -1827,13 +1957,13 @@ setzen:</p>
     target="_blank"
   >Docker Hub</a></p>
 
-<h6 class="relative group">Repository 
+<h6 class="relative group">Repository
     <div id="repository" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#repository" aria-label="Anker">#</a>
-    </span>        
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#repository" aria-label="Anker">#</a>
+    </span>
     
 </h6>
 <p><a
@@ -1841,34 +1971,34 @@ setzen:</p>
     target="_blank"
   >Repo</a></p>
 
-<h6 class="relative group">Funktion 
+<h6 class="relative group">Funktion
     <div id="funktion-1" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#funktion-1" aria-label="Anker">#</a>
-    </span>        
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#funktion-1" aria-label="Anker">#</a>
+    </span>
     
 </h6>
 <p>Spam/Malware Filter</p>
 
-<h5 class="relative group">MDA, IMAP, Sieve Dovecot 
+<h5 class="relative group">MDA, IMAP, Sieve Dovecot
     <div id="mda-imap-sieve-dovecot" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#mda-imap-sieve-dovecot" aria-label="Anker">#</a>
-    </span>        
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#mda-imap-sieve-dovecot" aria-label="Anker">#</a>
+    </span>
     
 </h5>
 
-<h6 class="relative group">Quelle 
+<h6 class="relative group">Quelle
     <div id="quelle-2" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#quelle-2" aria-label="Anker">#</a>
-    </span>        
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#quelle-2" aria-label="Anker">#</a>
+    </span>
     
 </h6>
 <p><a
@@ -1876,13 +2006,13 @@ setzen:</p>
     target="_blank"
   >Docker Hub</a></p>
 
-<h6 class="relative group">Repository 
+<h6 class="relative group">Repository
     <div id="repository-1" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#repository-1" aria-label="Anker">#</a>
-    </span>        
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#repository-1" aria-label="Anker">#</a>
+    </span>
     
 </h6>
 <p><a
@@ -1890,34 +2020,34 @@ setzen:</p>
     target="_blank"
   >Repo</a></p>
 
-<h6 class="relative group">Funktion 
+<h6 class="relative group">Funktion
     <div id="funktion-2" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#funktion-2" aria-label="Anker">#</a>
-    </span>        
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#funktion-2" aria-label="Anker">#</a>
+    </span>
     
 </h6>
 <p>Dovecot fungiert in diesem Setup als MDA, Sieve und IMAP Server.</p>
 
-<h5 class="relative group">MTA Postfix 
+<h5 class="relative group">MTA Postfix
     <div id="mta-postfix" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#mta-postfix" aria-label="Anker">#</a>
-    </span>        
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#mta-postfix" aria-label="Anker">#</a>
+    </span>
     
 </h5>
 
-<h6 class="relative group">Quelle 
+<h6 class="relative group">Quelle
     <div id="quelle-3" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#quelle-3" aria-label="Anker">#</a>
-    </span>        
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#quelle-3" aria-label="Anker">#</a>
+    </span>
     
 </h6>
 <p><a
@@ -1925,13 +2055,13 @@ setzen:</p>
     target="_blank"
   >Docker Hub</a></p>
 
-<h6 class="relative group">Repository 
+<h6 class="relative group">Repository
     <div id="repository-2" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#repository-2" aria-label="Anker">#</a>
-    </span>        
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#repository-2" aria-label="Anker">#</a>
+    </span>
     
 </h6>
 <p><a
@@ -1939,56 +2069,56 @@ setzen:</p>
     target="_blank"
   >Repo</a></p>
 
-<h6 class="relative group">Funktion 
+<h6 class="relative group">Funktion
     <div id="funktion-3" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#funktion-3" aria-label="Anker">#</a>
-    </span>        
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#funktion-3" aria-label="Anker">#</a>
+    </span>
     
 </h6>
 <p>Postfix ist der Mail Transfer Agent (MTA). Er nimmt E-Mails von externen Servern entgegen, leitet sie zur Prüfung an Rspamd weiter und übergibt sie anschließend zur lokalen Zustellung an Dovecot. Er ist ebenfalls für den Versand ausgehender E-Mails zuständig.</p>
 
-<h4 class="relative group">Backup &amp; Wiederherstellung 
+<h4 class="relative group">Backup &amp; Wiederherstellung
     <div id="backup--wiederherstellung" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#backup--wiederherstellung" aria-label="Anker">#</a>
-    </span>        
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#backup--wiederherstellung" aria-label="Anker">#</a>
+    </span>
     
 </h4>
 
-<h5 class="relative group">Was wird gesichert 
+<h5 class="relative group">Was wird gesichert
     <div id="was-wird-gesichert" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#was-wird-gesichert" aria-label="Anker">#</a>
-    </span>        
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#was-wird-gesichert" aria-label="Anker">#</a>
+    </span>
     
 </h5>
 <p>Gesichert werden sollen lediglich Nutzerdaten. Die Konfiguration sowie das Deployment selbst sind in Git Repositories und werden extern gesichert.</p>
 
-<h5 class="relative group">Wie wird gesichert 
+<h5 class="relative group">Wie wird gesichert
     <div id="wie-wird-gesichert" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#wie-wird-gesichert" aria-label="Anker">#</a>
-    </span>        
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#wie-wird-gesichert" aria-label="Anker">#</a>
+    </span>
     
 </h5>
 <p>Backup erfolgt durch VEEAM auf Fileserver Ebene. Eine Sicherung der Nodes oder PV Daten ist nicht notwendig.</p>
 
-<h5 class="relative group">Wie sieht der Restore-Prozess aus 
+<h5 class="relative group">Wie sieht der Restore-Prozess aus
     <div id="wie-sieht-der-restore-prozess-aus" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#wie-sieht-der-restore-prozess-aus" aria-label="Anker">#</a>
-    </span>        
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#wie-sieht-der-restore-prozess-aus" aria-label="Anker">#</a>
+    </span>
     
 </h5>
 <ol>
@@ -2013,24 +2143,24 @@ setzen:</p>
 </li>
 </ol>
 
-<h3 class="relative group">Troubleshooting 
+<h3 class="relative group">Troubleshooting
     <div id="troubleshooting" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#troubleshooting" aria-label="Anker">#</a>
-    </span>        
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#troubleshooting" aria-label="Anker">#</a>
+    </span>
     
 </h3>
 <p>Dieser Abschnitt beschreibt die ersten Schritte zur Analyse von häufigen Problemen.</p>
 
-<h4 class="relative group">Logs prüfen 
+<h4 class="relative group">Logs prüfen
     <div id="logs-prüfen" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#logs-pr%c3%bcfen" aria-label="Anker">#</a>
-    </span>        
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#logs-pr%c3%bcfen" aria-label="Anker">#</a>
+    </span>
     
 </h4>
 <p>Der erste Schritt bei Problemen ist immer die Analyse der Log-Dateien der jeweiligen Container. Annahme ist, dass die Pods im Namespace <code>mailstack</code> laufen.</p>
@@ -2040,13 +2170,13 @@ setzen:</p>
 </span></span><span class="line"><span class="ln">4</span><span class="cl"><span class="c1"># Logs von Rspamd prüfen</span>
 </span></span><span class="line"><span class="ln">5</span><span class="cl">kubectl logs -f -n mailstack &lt;rspamd-pod-name&gt;
 </span></span></code></pre></div>
-<h4 class="relative group">Mail-Warteschlange (Queue) prüfen 
+<h4 class="relative group">Mail-Warteschlange (Queue) prüfen
     <div id="mail-warteschlange-queue-prüfen" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#mail-warteschlange-queue-pr%c3%bcfen" aria-label="Anker">#</a>
-    </span>        
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#mail-warteschlange-queue-pr%c3%bcfen" aria-label="Anker">#</a>
+    </span>
     
 </h4>
 <p>Wenn E-Mails nicht versendet werden oder sich verzögern, gibt die Postfix-Warteschlange Aufschluss über die Ursache.</p>
@@ -2059,24 +2189,24 @@ setzen:</p>
 </span></span><span class="line"><span class="ln">7</span><span class="cl"><span class="c1"># Eine bestimmte Nachricht in der Queue genauer ansehen</span>
 </span></span><span class="line"><span class="ln">8</span><span class="cl">postcat -q &lt;QUEUE_ID&gt;
 </span></span></code></pre></div>
-<h3 class="relative group">Troubleshooting 
+<h3 class="relative group">Troubleshooting
     <div id="troubleshooting-1" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#troubleshooting-1" aria-label="Anker">#</a>
-    </span>        
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#troubleshooting-1" aria-label="Anker">#</a>
+    </span>
     
 </h3>
 <p>Dieser Abschnitt beschreibt die ersten Schritte zur Analyse von häufigen Problemen.</p>
 
-<h4 class="relative group">Logs prüfen 
+<h4 class="relative group">Logs prüfen
     <div id="logs-prüfen-1" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#logs-pr%c3%bcfen-1" aria-label="Anker">#</a>
-    </span>        
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#logs-pr%c3%bcfen-1" aria-label="Anker">#</a>
+    </span>
     
 </h4>
 <p>Der erste Schritt bei Problemen ist immer die Analyse der Log-Dateien der jeweiligen Container. Annahme ist, dass die Pods im Namespace <code>mailstack</code> laufen.</p>
@@ -2086,13 +2216,13 @@ setzen:</p>
 </span></span><span class="line"><span class="ln">4</span><span class="cl"><span class="c1"># Logs von Rspamd prüfen</span>
 </span></span><span class="line"><span class="ln">5</span><span class="cl">kubectl logs -f -n mailstack &lt;rspamd-pod-name&gt;
 </span></span></code></pre></div>
-<h4 class="relative group">Mail-Warteschlange (Queue) prüfen 
+<h4 class="relative group">Mail-Warteschlange (Queue) prüfen
     <div id="mail-warteschlange-queue-prüfen-1" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#mail-warteschlange-queue-pr%c3%bcfen-1" aria-label="Anker">#</a>
-    </span>        
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#mail-warteschlange-queue-pr%c3%bcfen-1" aria-label="Anker">#</a>
+    </span>
     
 </h4>
 <p>Wenn E-Mails nicht versendet werden oder sich verzögern, gibt die Postfix-Warteschlange Aufschluss über die Ursache.</p>
@@ -2140,6 +2270,7 @@ setzen:</p>
     
     
       
+      
         
       
       <img
@@ -2147,7 +2278,8 @@ setzen:</p>
         width="96"
         height="96"
         alt="Fabrice Kirchner"
-        src="/images/chibi-head_hu_c9b7f3db40f37b6c.jpg">
+        src="/images/chibi-head_hu_c9b7f3db40f37b6c.jpg"
+        data-zoom-src="/images/chibi-head.jpg">
     
   
   <div class="place-self-center">
@@ -2318,52 +2450,36 @@ setzen:</p>
     <div class="pt-8">
       <hr class="border-dotted border-neutral-300 dark:border-neutral-600">
       <div class="flex justify-between pt-3">
-        <span>
+        <span class="flex flex-col">
           
-            <a class="flex group mr-3" href="/posts/homelab/k3s-prod/apps/maintenance-page/readme/">
-              <span
-                class="mr-3 text-neutral-700 group-hover:text-primary-600 ltr:inline rtl:hidden dark:text-neutral dark:group-hover:text-primary-400"
-                >&larr;</span
-              >
-              <span
-                class="ml-3 text-neutral-700 group-hover:text-primary-600 ltr:hidden rtl:inline dark:text-neutral dark:group-hover:text-primary-400"
-                >&rarr;</span
-              >
-              <span class="flex flex-col">
-                <span class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
-                  >Maintenance Page</span
-                >
-                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
-                  
-                    <time datetime="2025-10-27T02:16:57&#43;01:00">27 Oktober 2025</time>
-                  
-                </span>
+            <a
+              class="flex text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+              href="/posts/homelab/k3s-prod/apps/maintenance-page/readme/">
+              <span class="leading-6">
+                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;Maintenance Page
               </span>
             </a>
+            
+              <span class="ms-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
+                <time datetime="2025-11-04T10:23:51&#43;01:00">4 November 2025</time>
+              </span>
+            
           
         </span>
-        <span>
+        <span class="flex flex-col items-end">
           
-            <a class="flex text-right group ml-3" href="/posts/homelab/k3s-prod/apps/longhorn/readme/">
-              <span class="flex flex-col">
-                <span class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
-                  >Longhorn</span
-                >
-                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
-                  
-                    <time datetime="2025-10-27T02:16:57&#43;01:00">27 Oktober 2025</time>
-                  
-                </span>
+            <a
+              class="flex text-right text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+              href="/posts/homelab/k3s-prod/apps/longhorn/readme/">
+              <span class="leading-6">
+                Longhorn&ensp;<span class="inline-block rtl:rotate-180">&rarr;</span>
               </span>
-              <span
-                class="ml-3 text-neutral-700 group-hover:text-primary-600 ltr:inline rtl:hidden dark:text-neutral dark:group-hover:text-primary-400"
-                >&rarr;</span
-              >
-              <span
-                class="mr-3 text-neutral-700 group-hover:text-primary-600 ltr:hidden rtl:inline dark:text-neutral dark:group-hover:text-primary-400"
-                >&larr;</span
-              >
             </a>
+            
+              <span class="me-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
+                <time datetime="2025-11-04T10:23:51&#43;01:00">4 November 2025</time>
+              </span>
+            
           
         </span>
       </div>
@@ -2375,10 +2491,22 @@ setzen:</p>
     </footer>
   </article>
 
-        <div id="top-scroller" class="pointer-events-none absolute top-[110vh] bottom-0 w-12 ltr:right-0 rtl:left-0 z-10">
+        
+
+
+  
+
+
+
+
+
+
+<div
+  id="scroll-to-top"
+  class="fixed bottom-6 end-6 z-50 transform translate-y-4 opacity-0 duration-200">
   <a
     href="#the-top"
-    class="pointer-events-auto sticky top-[calc(100vh-5.5rem)] flex h-12 w-12 mb-16 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+    class="pointer-events-auto flex h-12 w-12 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
     aria-label="Zum Anfang scrollen"
     title="Zum Anfang scrollen">
     &uarr;
