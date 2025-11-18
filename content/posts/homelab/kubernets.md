@@ -11,6 +11,14 @@ Hier Sammle ich Snippets, welche mir das Tippen ersparen sollen und für Kuberne
 
 <!--more-->
 
+## Lösche alte ReplicaSets
+
+```bash
+
+kubectl get rs --all-namespaces -o wide | awk '$3==0 && $4==0 && $5==0 {print "-n", $1, $2}' | xargs -L1 kubectl delete rs
+
+```
+
 ## OCI Helm Chart in Forgejo importieren
 
 ```bash
