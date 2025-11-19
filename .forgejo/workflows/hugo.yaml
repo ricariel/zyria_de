@@ -40,7 +40,7 @@ jobs:
 
       - uses: actions/setup-node@2028fbc5c25fe9cf00d9f06a71cc4710d4507903 # v6
         with:
-          node-version: '22'
+          node-version: '24'
           cache: 'npm'
           # The action defaults to search for the dependency file (package-lock.json,
           # npm-shrinkwrap.json or yarn.lock) in the repository root, and uses its
