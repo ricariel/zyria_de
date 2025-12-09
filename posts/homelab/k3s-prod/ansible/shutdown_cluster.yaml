@@ -1,0 +1,128 @@
+---
+- name: Graceful Cluster Shutdown Protocol (Geordnetes Herunterfahren)
+  hosts: localhost
+  connection: local
+  gather_facts: no
+  vars:
+    # Pfad zur Kubeconfig - Anpassen falls notwendig
+    kubeconfig_path: "~/.kube/config"
+    longhorn_ns: "longhorn-system"
+    argocd_ns: "argocd"
+    detachment_timeout: 300
+
+  tasks:
+    # ---------------------------------------------------------
+    # Phase 1: ArgoCD Reconciliation Suspendieren
+    # ---------------------------------------------------------
+    - name: Prüfe Status des ArgoCD Application Controllers
+      kubernetes.core.k8s_info:
+        kubeconfig: "{{ kubeconfig_path }}"
+        kind: StatefulSet
+        namespace: "{{ argocd_ns }}"
+        name: argocd-application-controller
+      register: argocd_controller_state
+
+    - name: Skaliere ArgoCD Application Controller auf 0 (Pause Reconciliation)
+      kubernetes.core.k8s_scale:
+        kubeconfig: "{{ kubeconfig_path }}"
+        api_version: apps/v1
+        kind: StatefulSet
+        name: argocd-application-controller
+        namespace: "{{ argocd_ns }}"
+        replicas: 0
+        wait: yes
+      when: argocd_controller_state.resources | length > 0
+      tags: [argocd]
+
+    # ---------------------------------------------------------
+    # Phase 2: Skalieren der Stateful Workloads
+    # ---------------------------------------------------------
+    - name: Hole alle Deployments im Cluster
+      kubernetes.core.k8s_info:
+        kubeconfig: "{{ kubeconfig_path }}"
+        kind: Deployment
+      register: all_deployments
+
+    - name: Hole alle StatefulSets im Cluster
+      kubernetes.core.k8s_info:
+        kubeconfig: "{{ kubeconfig_path }}"
+        kind: StatefulSet
+      register: all_statefulsets
+
+    - name: Skaliere alle User-Deployments auf 0 herunter
+      kubernetes.core.k8s_scale:
+        kubeconfig: "{{ kubeconfig_path }}"
+        api_version: apps/v1
+        kind: Deployment
+        name: "{{ item.metadata.name }}"
+        namespace: "{{ item.metadata.namespace }}"
+        replicas: 0
+        wait: yes
+      loop: "{{ all_deployments.resources }}"
+      loop_control:
+        label: "{{ item.metadata.namespace }}/{{ item.metadata.name }}"
+      when:
+        - item.metadata.namespace not in ['kube-system', 'longhorn-system', 'argocd', 'monitoring']
+        - item.spec.replicas > 0
+      ignore_errors: yes
+      tags: [workloads]
+
+    - name: Skaliere alle User-StatefulSets auf 0 herunter
+      kubernetes.core.k8s_scale:
+        kubeconfig: "{{ kubeconfig_path }}"
+        api_version: apps/v1
+        kind: StatefulSet
+        name: "{{ item.metadata.name }}"
+        namespace: "{{ item.metadata.namespace }}"
+        replicas: 0
+        wait: yes
+      loop: "{{ all_statefulsets.resources }}"
+      loop_control:
+        label: "{{ item.metadata.namespace }}/{{ item.metadata.name }}"
+      when:
+        - item.metadata.namespace not in ['kube-system', 'longhorn-system', 'argocd', 'monitoring']
+        - item.spec.replicas > 0
+      tags: [workloads]
+
+    # ---------------------------------------------------------
+    # Phase 3: Verifikation des Longhorn Volume Detachments
+    # ---------------------------------------------------------
+    - name: Warte darauf, dass alle Longhorn Volumes den Status 'detached' haben
+      kubernetes.core.k8s_info:
+        kubeconfig: "{{ kubeconfig_path }}"
+        api_version: longhorn.io/v1beta2
+        kind: Volume
+        namespace: "{{ longhorn_ns }}"
+      register: longhorn_volumes
+      until: "longhorn_volumes.resources | json_query('[?status.state!=\\'detached\\']') | length == 0"
+      retries: "{{ (detachment_timeout / 10) | int }}"
+      delay: 10
+      msg: "Warte auf Detachment. Prüfen Sie auf hängende Pods, falls dies fehlschlägt."
+      tags: [storage]
+
+# ---------------------------------------------------------
+# Phase 4: Stop k3s Services auf den physischen Nodes
+# ---------------------------------------------------------
+- name: Stop k3s Services und Shutdown Nodes
+  hosts: all
+  become: yes
+  gather_facts: no
+  tags: [infrastructure]
+  tasks:
+    - name: Stoppe k3s-agent (Worker Nodes)
+      ansible.builtin.systemd:
+        name: k3s-agent
+        state: stopped
+      when: "'k3s_agent' in group_names"
+      ignore_errors: yes
+
+    - name: Stoppe k3s (Server/Master Nodes)
+      ansible.builtin.systemd:
+        name: k3s
+        state: stopped
+      when: "'k3s_server' in group_names"
+
+    - name: Shutdown Operating System
+      community.general.shutdown:
+        delay: 1
+        msg: "Automatischer Shutdown durch Ansible Playbook"

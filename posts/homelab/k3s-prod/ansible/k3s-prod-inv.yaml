@@ -1,0 +1,86 @@
+---
+k3s_cluster:
+  children:
+    server:
+      hosts:
+        control1.zyria.de:
+          ansible_host: 192.168.178.151
+        control2.zyria.de:
+          ansible_host: 192.168.178.152
+        control3.zyria.de:
+          ansible_host: 192.168.178.153
+    agent:
+      hosts:
+        worker1.zyria.de:
+          ansible_host: 192.168.178.161
+        worker2.zyria.de:
+          ansible_host: 192.168.178.162
+#        worker3.zyria.de:
+#          ansible_host: 192.168.178.163
+#        worker4.zyria.de:
+#          ansible_host: 192.168.178.164
+
+
+  # Required Vars
+  vars:
+    ansible_port: 22
+    ansible_user: root
+    k3s_version: v1.33.5+k3s1
+    token: !vault |
+          $ANSIBLE_VAULT;1.1;AES256
+          37303231303839393633303836613065333935663261333739616666393064336563323731363766
+          3862613432663337386635643865623665656365313331640a616531616261656232346433613634
+          61633732343565356566383131626234376266636437643235623962303432366631333532363236
+          3835616133663539380a616138343632633534376231396437353639626138313034346534393538
+          30396666396332613764643265386164613161396561626162326462623630633238623565366430
+          62663431396639373736656466303937643063353362336533636335383362616137336134616537
+          34373638333833633730333738636330646263343535613739366665313362616662326235363361
+          63333865633333663562
+    api_endpoint: "192.168.178.90"
+    extra_server_args: ""
+    extra_agent_args: ""
+
+  # Optional vars
+    cluster_context: prod.zyria.de
+    # api_port: 6443
+    # k3s_server_location: /var/lib/rancher/k3s
+    # systemd_dir: /etc/systemd/system
+    # extra_service_envs: [ 'ENV_VAR1=VALUE1', 'ENV_VAR2=VALUE2' ]
+    # Manifests or Airgap should be either full paths or relative to the playbook directory.
+    # List of locally available manifests to apply to the cluster, useful for PVCs or Traefik modifications.
+    # extra_manifests: [ '/path/to/manifest1.yaml', '/path/to/manifest2.yaml' ]
+    # airgap_dir: /tmp/k3s-airgap-images
+    # user_kubectl: true, by default kubectl is symlinked and configured for use by ansible_user. Set to false to only kubectl via root user.
+    server_config_yaml: |
+      # This is now an inner yaml file. Maintain the indentation.
+      # YAML here will be placed as the content of /etc/rancher/k3s/config.yaml
+      # See https://docs.k3s.io/installation/configuration#configuration-file
+      disable:
+        - traefik
+        - servicelb
+        - coredns
+      cluster-cidr: 10.44.0.0/16,fd21:da66:909b::/48
+      service-cidr: 10.45.0.0/16,fd21:da66:64::/112
+      tls-san:
+        - "2003:a:b16:4700:be24:11ff:fec8:ae7f"
+        - "192.168.178.151"
+        - "192.168.178.152"
+        - "192.168.178.153"
+        - "192.168.178.90"
+        - "2003:a:b16:4700::90"
+      write-kubeconfig-mode: 644
+      flannel-ipv6-masq: true
+      flannel-backend: wireguard-native
+      kubelet-arg: "node-ip=0.0.0.0"
+      kube-proxy-arg:
+        - ipvs-strict-arp=true
+      embedded-registry: true
+      node-name: "{{ inventory_hostname }}"
+    registries_config_yaml: |
+      mirrors:
+        docker.io:
+        quay.io:
+        ghcr.io:
+        gcr.io:
+        registry.k8s.io:
+        public.ecr.aws:

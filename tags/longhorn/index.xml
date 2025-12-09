@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Longhorn on Zyria</title>
+    <link>https://zyria.de/tags/longhorn/</link>
+    <description>Recent content in Longhorn on Zyria</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>de-de</language>
+    <managingEditor>fabrice@zyria.de (Fabrice Kirchner)</managingEditor>
+    <webMaster>fabrice@zyria.de (Fabrice Kirchner)</webMaster>
+    
+    <lastBuildDate>Sun, 27 Oct 2024 10:00:00 +0100</lastBuildDate><atom:link href="https://zyria.de/tags/longhorn/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Operational Lifecycle Management: Orchestrierter Shutdown für Kubernetes</title>
+      <link>https://zyria.de/posts/homelab/k3s-prod/ansible/shutdown-startup/</link>
+      <pubDate>Sun, 27 Oct 2024 10:00:00 +0100</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://zyria.de/posts/homelab/k3s-prod/ansible/shutdown-startup/</guid>
+      <description>Ein technischer Leitfaden für das geordnete Herunterfahren und Wiederanfahren eines Kubernetes-Clusters (k3s/Longhorn/ArgoCD) zur Vermeidung von Datenkorruption.</description>
+      
+    </item>
+    
+  </channel>
+</rss>

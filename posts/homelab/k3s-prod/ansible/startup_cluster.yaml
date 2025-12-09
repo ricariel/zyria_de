@@ -1,0 +1,82 @@
+---
+- name: Graceful Cluster Startup Protocol (Startvorgang)
+  hosts: all
+  become: yes
+  tags: [infrastructure]
+  tasks:
+    # ---------------------------------------------------------
+    # Phase 1: Nodes Booten und k3s Starten
+    # ---------------------------------------------------------
+    # Voraussetzung: Nodes sind via Wake-on-LAN oder physisch gestartet
+
+    - name: Starte k3s (Server/Master)
+      ansible.builtin.systemd:
+        name: k3s
+        state: started
+        enabled: yes
+      when: "'k3s_server' in group_names"
+
+    - name: Starte k3s-agent (Worker)
+      ansible.builtin.systemd:
+        name: k3s-agent
+        state: started
+        enabled: yes
+      when: "'k3s_agent' in group_names"
+
+- name: Orchestrate Workload Recovery
+  hosts: localhost
+  connection: local
+  gather_facts: no
+  vars:
+    kubeconfig_path: "~/.kube/config"
+    longhorn_ns: "longhorn-system"
+    argocd_ns: "argocd"
+
+  tasks:
+    # ---------------------------------------------------------
+    # Phase 2: Verifikation der Storage-Gesundheit
+    # ---------------------------------------------------------
+    - name: Warte bis Longhorn Nodes 'Ready' sind
+      kubernetes.core.k8s_info:
+        kubeconfig: "{{ kubeconfig_path }}"
+        api_version: longhorn.io/v1beta2
+        kind: Node
+        namespace: "{{ longhorn_ns }}"
+      register: lh_nodes
+      until: lh_nodes.resources | length > 0
+      retries: 30
+      delay: 10
+      tags: [storage]
+
+    - name: Warte auf Longhorn System Pods
+      kubernetes.core.k8s_info:
+        kubeconfig: "{{ kubeconfig_path }}"
+        kind: Pod
+        namespace: "{{ longhorn_ns }}"
+        field_selectors:
+          - status.phase=Running
+      register: lh_pods
+      until: lh_pods.resources | length >= 3
+      retries: 30
+      delay: 10
+
+    # ---------------------------------------------------------
+    # Phase 3: ArgoCD Reaktivierung
+    # ---------------------------------------------------------
+    # Durch das Hochskalieren erkennt ArgoCD den Drift (0 vs 1 im Git)
+    # und stellt die Applikationen automatisch wieder her.
+
+    - name: Skaliere ArgoCD Application Controller auf 1
+      kubernetes.core.k8s_scale:
+        kubeconfig: "{{ kubeconfig_path }}"
+        api_version: apps/v1
+        kind: StatefulSet
+        name: argocd-application-controller
+        namespace: "{{ argocd_ns }}"
+        replicas: 1
+        wait: yes
+      tags: [argocd]
+
+    - name: Warte auf ArgoCD Reconciliation
+      ansible.builtin.debug:
+        msg: "ArgoCD Controller neugestartet. Auto-Sync wird nun initiiert."
