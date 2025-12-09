@@ -119,4 +119,4 @@ path = "git.zyria.de/pyrox/k3s-prod"
   [[imports.mounts]]
   source = "."
   target = "content/posts/homelab/k3s-prod/"
-  includeFiles = [ "apps/*/README.md",  "apps/*/*.sh", "ansible/README.md" ]
+  includeFiles = [ "apps/*/README.md",  "apps/*/*.sh", "ansible/*.md", "ansible/*.yaml" ]
