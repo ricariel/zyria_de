@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       # CHEKCOUT REPOSITORY
-      - uses: https://github.com/actions/checkout@93cb6efe18208431cddfb8368fd83d5badbf9bfd # v5
+      - uses: https://github.com/actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6
         with:
           submodules: true
           fetch-depth: 0
@@ -53,7 +53,7 @@ jobs:
       #- run: npm install postcss postcss-cli @fullhuman/postcss-purgecss --save
 
       - name: Checkout target repo
-        uses: https://github.com/actions/checkout@93cb6efe18208431cddfb8368fd83d5badbf9bfd # v5
+        uses: https://github.com/actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6
         with:
           repository: ${{ env.GITHUB_REPOSITORY }}
           github-server-url: ${{ env. GITHUB_SERVER_URL }}
