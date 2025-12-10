@@ -50,12 +50,6 @@ repos:
     hooks:
       - id: dockerfilelint
         stages: [pre-commit]
-  - repo: https://github.com/ansible/ansible-lint
-    rev: v6.20.0 # put latest release tag from https://github.com/ansible/ansible-lint/releases/
-    hooks:
-      - id: ansible-lint
-        additional_dependencies:
-          - netaddr
   - repo: https://github.com/IamTheFij/ansible-pre-commit.git
     rev: v0.1.2
     hooks:
