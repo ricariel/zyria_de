@@ -12,8 +12,8 @@ jobs:
   mirror:
     runs-on: ubuntu-latest
     steps:
-      - name: Mirror to codeberg
-        uses: https://git.zyria.de/pyrox/actions/mirror@main
+      - name: Mirror
+        uses: https://git.zyria.de/pyrox/actions/mirror@v1.0
         with:
           target_repo_url: git@github.com:ricariel/${{ github.event.repository.name }}.git
           ssh_private_key: ${{ secrets.ZYRIA_GITHUB_SSH }}

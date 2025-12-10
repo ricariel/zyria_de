@@ -11,6 +11,6 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: https://git.zyria.de/pyrox/actions/hugo@main
+      - uses: https://git.zyria.de/pyrox/actions/hugo@v1.0
         with:
           ZYRIA_TOKEN: ${{ secrets.ZYRIA_TOKEN }}
