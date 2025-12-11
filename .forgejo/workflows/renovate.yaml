@@ -15,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Run renovate
-        uses: https://git.zyria.de/pyrox/actions/renovate@v1.0
+        uses: https://git.zyria.de/pyrox/actions/renovate@ccf2c8cd72cc1a31cec10eb5371c2489be6356cf # v1.0
         with:
           gh-token: ${{ secrets.GITHUB }}
           token: ${{ secrets.RENOVATE_TOKEN }}
