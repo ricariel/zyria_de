@@ -54,9 +54,17 @@ sed -i 's:bookworm:trixie:' /etc/apt/sources.list.d/*.list
 
 ```bash
 apt update
-apt upgrade --without-new-pkgs
 
-apt full-upgrade
+# Möglicher Zwischenschritt
+# apt upgrade --without-new-pkgs
+
+apt upgrade
+
+
+# Möglicher Zwischenschritt
+# apt full-upgrade
+
+apt dist-upgrade
 ```
 
 ## Netzwerkinterface prüfen
