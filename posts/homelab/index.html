@@ -941,7 +941,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2025-12-11T02:13:07&#43;01:00">11 Dezember 2025</time><span class="px-2 text-primary-500">&middot;</span><span>386 Wörter</span>
+      <time datetime="2025-12-13T11:53:11&#43;01:00">13 Dezember 2025</time><span class="px-2 text-primary-500">&middot;</span><span>386 Wörter</span>
     
 
     
@@ -1085,6 +1085,190 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
     </div>
     
       <div class="prose dark:prose-invert max-w-fit py-1">Zentrale Verwaltung eines k3s Kubernetes Clusters und seiner Anwendungen durch GitOps mit ArgoCD, Helm und Kustomize.</div>
+    
+  </div>
+  <div class="px-6 pt-4 pb-2"></div>
+</article>
+
+            
+              
+
+
+
+
+
+
+
+
+  
+  
+  
+
+
+
+
+
+
+
+
+  
+  
+    
+
+    
+    
+      
+      
+        
+      
+        
+      
+        
+      
+    
+
+    
+    
+      
+      
+    
+
+    
+    
+      
+    
+  
+
+
+
+<article class="flex flex-col md:flex-row relative overflow-hidden rounded-md border-2 border-neutral-200 dark:border-neutral-700">
+  
+  <div class=" p-4">
+    <header class="items-center text-start text-xl font-semibold">
+      <a
+        
+          href="/posts/homelab/debian-upgrade/"
+        
+        class="not-prose before:absolute before:inset-0 decoration-primary-500 dark:text-neutral text-xl font-bold text-neutral-800 hover:underline hover:underline-offset-2">
+        <h2>
+          Debian Upgrade
+          
+        </h2>
+      </a>
+      
+      
+    </header>
+    <div class="text-sm text-neutral-500 dark:text-neutral-400">
+      
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="2025-12-13T11:51:26&#43;01:00">13 Dezember 2025</time><span class="px-2 text-primary-500">&middot;</span><span>176 Wörter</span>
+    
+
+    
+    
+  </div>
+
+  
+    <div class="flex flex-row flex-wrap items-center">
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+  
+
+  
+  
+    <div class="flex flex-row flex-wrap items-center">
+      
+        
+      
+        
+          
+        
+      
+        
+      
+        
+          
+            
+              <a class="relative mt-[0.5rem] me-2" href="/tags/homelab/">
+                <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Homelab
+  </span>
+</span>
+
+              </a>
+            
+          
+        
+      
+    </div>
+  
+
+  
+  
+
+
+
+    </div>
+    
+      <div class="prose dark:prose-invert max-w-fit py-1">Wie man Debian zuverlässig auf den Stand bringt. Danke an doku.lrz.de die dies bei jedem Release aufschreiben.
+Debian stellt auch eine Anleitung zur Verfügung.
+Proxmox hat für jedes Release einen Wiki Artikel. Auf für den Proxmox Backup Server.
+Vorbereitungen # 1apt update 2apt full-upgrade Paketquellen aktualisieren # Versionen # Versionsnummer Versionsname Replace 9 Stretch :%s/stretch/buster/ 10 buster :%s/buster/bullseye/ 11 bullseye :%s/bullseye/bookworm/ 12 bookworm :%s/bookworm/trixie/ Default sources.list # 1cat &lt;&lt;EOF &gt; /etc/apt/sources.list 2deb http://deb.debian.org/debian trixie main contrib non-free non-free-firmware 3deb http://deb.debian.org/debian trixie-updates main contrib non-free non-free-firmware 4deb http://deb.debian.org/debian-security/ trixie-security main contrib non-free non-free-firmware 5EOF Alle Sources ändern # 1sed -i &#39;s:bookworm:trixie:&#39; /etc/apt/sources.list 2sed -i &#39;s:bookworm:trixie:&#39; /etc/apt/sources.list.d/*.list Apt Preferences prüfen # /etc/apt/preferences.d/*
+</div>
     
   </div>
   <div class="px-6 pt-4 pb-2"></div>

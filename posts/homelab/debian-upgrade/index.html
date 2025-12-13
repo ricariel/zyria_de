@@ -15,20 +15,20 @@
 
   
   
-    <title>Forgejo Runner &middot; Zyria</title>
-    <meta name="title" content="Forgejo Runner &middot; Zyria">
+    <title>Debian Upgrade &middot; Zyria</title>
+    <meta name="title" content="Debian Upgrade &middot; Zyria">
   
 
   
   
-    <meta name="description" content="Dieses Dokument beschreibt die Bereitstellung von Forgejo Runner, einem Daemon zum Ausführen von CI/CD-Jobs für Forgejo-Instanzen.">
+    <meta name="description" content="Debian Upgrade">
   
   
-    <meta name="keywords" content="kubernetes,k3s,gitops,argocd,helm,kustomize,homelab,produktion,">
+    <meta name="keywords" content="homelab,">
   
   
   
-  <link rel="canonical" href="https://zyria.de/posts/homelab/k3s-prod/apps/forgejo-runner/readme/">
+  <link rel="canonical" href="https://zyria.de/posts/homelab/debian-upgrade/">
   
 
   
@@ -86,26 +86,21 @@
   
 
   
-  <meta property="og:url" content="https://zyria.de/posts/homelab/k3s-prod/apps/forgejo-runner/readme/">
+  <meta property="og:url" content="https://zyria.de/posts/homelab/debian-upgrade/">
   <meta property="og:site_name" content="Zyria">
-  <meta property="og:title" content="Forgejo Runner">
-  <meta property="og:description" content="Dokumentation für die Bereitstellung von Forgejo Runner">
+  <meta property="og:title" content="Debian Upgrade">
+  <meta property="og:description" content="Debian Upgrade">
   <meta property="og:locale" content="de_de">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
-    <meta property="article:published_time" content="2025-12-13T11:53:11+01:00">
-    <meta property="article:modified_time" content="2025-12-13T11:53:11+01:00">
-    <meta property="article:tag" content="Kubernetes">
-    <meta property="article:tag" content="K3s">
-    <meta property="article:tag" content="Gitops">
-    <meta property="article:tag" content="Argocd">
-    <meta property="article:tag" content="Helm">
-    <meta property="article:tag" content="Kustomize">
+    <meta property="article:published_time" content="2025-12-13T11:51:26+01:00">
+    <meta property="article:modified_time" content="2025-12-13T11:51:26+01:00">
+    <meta property="article:tag" content="Homelab">
 
   
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Forgejo Runner">
-  <meta name="twitter:description" content="Dokumentation für die Bereitstellung von Forgejo Runner">
+  <meta name="twitter:title" content="Debian Upgrade">
+  <meta name="twitter:description" content="Debian Upgrade">
 
   
   
@@ -276,26 +271,26 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
     "@context": "https://schema.org",
     "@type": "Article",
     "articleSection": "Beiträge",
-    "name": "Forgejo Runner",
-    "headline": "Forgejo Runner",
-    "description": "Dokumentation für die Bereitstellung von Forgejo Runner",
-    "abstract": "Dieses Dokument beschreibt die Bereitstellung von Forgejo Runner, einem Daemon zum Ausführen von CI\/CD-Jobs für Forgejo-Instanzen.",
+    "name": "Debian Upgrade",
+    "headline": "Debian Upgrade",
+    "description": "Debian Upgrade",
+    "abstract": "\u003cp\u003eWie man Debian zuverlässig auf den Stand bringt. Danke an \u003ca\n  href=\u0022https:\/\/doku.lrz.de\/upgrade-auf-debian-13-trixie-1921298568.html\u0022\n    target=\u0022_blank\u0022\n  \u003edoku.lrz.de\u003c\/a\u003e die dies bei jedem Release aufschreiben.\u003c\/p\u003e\n\u003cp\u003eDebian stellt auch eine \u003ca\n  href=\u0022https:\/\/www.debian.org\/releases\/stable\/release-notes\/upgrading.de.html\u0022\n    target=\u0022_blank\u0022\n  \u003eAnleitung\u003c\/a\u003e zur Verfügung.\u003c\/p\u003e\n\u003cp\u003eProxmox hat für jedes Release einen \u003ca\n  href=\u0022https:\/\/pve.proxmox.com\/wiki\/Category:Upgrade\u0022\n    target=\u0022_blank\u0022\n  \u003eWiki\u003c\/a\u003e Artikel. Auf für den \u003ca\n  href=\u0022https:\/\/pbs.proxmox.com\/wiki\/Category:Upgrade\u0022\n    target=\u0022_blank\u0022\n  \u003eProxmox Backup Server\u003c\/a\u003e.\u003c\/p\u003e\n\n\u003ch2 class=\u0022relative group\u0022\u003eVorbereitungen\n    \u003cdiv id=\u0022vorbereitungen\u0022 class=\u0022anchor\u0022\u003e\u003c\/div\u003e\n    \n    \u003cspan\n        class=\u0022absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none\u0022\u003e\n        \u003ca class=\u0022text-primary-300 dark:text-neutral-700 !no-underline\u0022 href=\u0022#vorbereitungen\u0022 aria-label=\u0022Anker\u0022\u003e#\u003c\/a\u003e\n    \u003c\/span\u003e\n    \n\u003c\/h2\u003e\n\u003cdiv class=\u0022highlight\u0022\u003e\u003cpre tabindex=\u00220\u0022 class=\u0022chroma\u0022\u003e\u003ccode class=\u0022language-bash\u0022 data-lang=\u0022bash\u0022\u003e\u003cspan class=\u0022line\u0022\u003e\u003cspan class=\u0022ln\u0022\u003e1\u003c\/span\u003e\u003cspan class=\u0022cl\u0022\u003eapt update\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan class=\u0022line\u0022\u003e\u003cspan class=\u0022ln\u0022\u003e2\u003c\/span\u003e\u003cspan class=\u0022cl\u0022\u003eapt full-upgrade\n\u003c\/span\u003e\u003c\/span\u003e\u003c\/code\u003e\u003c\/pre\u003e\u003c\/div\u003e\n\u003ch2 class=\u0022relative group\u0022\u003ePaketquellen aktualisieren\n    \u003cdiv id=\u0022paketquellen-aktualisieren\u0022 class=\u0022anchor\u0022\u003e\u003c\/div\u003e\n    \n    \u003cspan\n        class=\u0022absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none\u0022\u003e\n        \u003ca class=\u0022text-primary-300 dark:text-neutral-700 !no-underline\u0022 href=\u0022#paketquellen-aktualisieren\u0022 aria-label=\u0022Anker\u0022\u003e#\u003c\/a\u003e\n    \u003c\/span\u003e\n    \n\u003c\/h2\u003e\n\n\u003ch3 class=\u0022relative group\u0022\u003eVersionen\n    \u003cdiv id=\u0022versionen\u0022 class=\u0022anchor\u0022\u003e\u003c\/div\u003e\n    \n    \u003cspan\n        class=\u0022absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none\u0022\u003e\n        \u003ca class=\u0022text-primary-300 dark:text-neutral-700 !no-underline\u0022 href=\u0022#versionen\u0022 aria-label=\u0022Anker\u0022\u003e#\u003c\/a\u003e\n    \u003c\/span\u003e\n    \n\u003c\/h3\u003e\n\u003ctable\u003e\n  \u003cthead\u003e\n      \u003ctr\u003e\n          \u003cth\u003eVersionsnummer\u003c\/th\u003e\n          \u003cth\u003eVersionsname\u003c\/th\u003e\n          \u003cth\u003eReplace\u003c\/th\u003e\n      \u003c\/tr\u003e\n  \u003c\/thead\u003e\n  \u003ctbody\u003e\n      \u003ctr\u003e\n          \u003ctd\u003e9\u003c\/td\u003e\n          \u003ctd\u003eStretch\u003c\/td\u003e\n          \u003ctd\u003e:%s\/stretch\/buster\/\u003c\/td\u003e\n      \u003c\/tr\u003e\n      \u003ctr\u003e\n          \u003ctd\u003e10\u003c\/td\u003e\n          \u003ctd\u003ebuster\u003c\/td\u003e\n          \u003ctd\u003e:%s\/buster\/bullseye\/\u003c\/td\u003e\n      \u003c\/tr\u003e\n      \u003ctr\u003e\n          \u003ctd\u003e11\u003c\/td\u003e\n          \u003ctd\u003ebullseye\u003c\/td\u003e\n          \u003ctd\u003e:%s\/bullseye\/bookworm\/\u003c\/td\u003e\n      \u003c\/tr\u003e\n      \u003ctr\u003e\n          \u003ctd\u003e12\u003c\/td\u003e\n          \u003ctd\u003ebookworm\u003c\/td\u003e\n          \u003ctd\u003e:%s\/bookworm\/trixie\/\u003c\/td\u003e\n      \u003c\/tr\u003e\n  \u003c\/tbody\u003e\n\u003c\/table\u003e\n\n\u003ch3 class=\u0022relative group\u0022\u003eDefault sources.list\n    \u003cdiv id=\u0022default-sourceslist\u0022 class=\u0022anchor\u0022\u003e\u003c\/div\u003e\n    \n    \u003cspan\n        class=\u0022absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none\u0022\u003e\n        \u003ca class=\u0022text-primary-300 dark:text-neutral-700 !no-underline\u0022 href=\u0022#default-sourceslist\u0022 aria-label=\u0022Anker\u0022\u003e#\u003c\/a\u003e\n    \u003c\/span\u003e\n    \n\u003c\/h3\u003e\n\u003cdiv class=\u0022highlight\u0022\u003e\u003cpre tabindex=\u00220\u0022 class=\u0022chroma\u0022\u003e\u003ccode class=\u0022language-bash\u0022 data-lang=\u0022bash\u0022\u003e\u003cspan class=\u0022line\u0022\u003e\u003cspan class=\u0022ln\u0022\u003e1\u003c\/span\u003e\u003cspan class=\u0022cl\u0022\u003ecat \u003cspan class=\u0022s\u0022\u003e\u0026lt;\u0026lt;EOF \u0026gt; \/etc\/apt\/sources.list\n\u003c\/span\u003e\u003c\/span\u003e\u003c\/span\u003e\u003cspan class=\u0022line\u0022\u003e\u003cspan class=\u0022ln\u0022\u003e2\u003c\/span\u003e\u003cspan class=\u0022cl\u0022\u003e\u003cspan class=\u0022s\u0022\u003edeb http:\/\/deb.debian.org\/debian trixie main contrib non-free non-free-firmware\n\u003c\/span\u003e\u003c\/span\u003e\u003c\/span\u003e\u003cspan class=\u0022line\u0022\u003e\u003cspan class=\u0022ln\u0022\u003e3\u003c\/span\u003e\u003cspan class=\u0022cl\u0022\u003e\u003cspan class=\u0022s\u0022\u003edeb http:\/\/deb.debian.org\/debian trixie-updates main contrib non-free non-free-firmware\n\u003c\/span\u003e\u003c\/span\u003e\u003c\/span\u003e\u003cspan class=\u0022line\u0022\u003e\u003cspan class=\u0022ln\u0022\u003e4\u003c\/span\u003e\u003cspan class=\u0022cl\u0022\u003e\u003cspan class=\u0022s\u0022\u003edeb http:\/\/deb.debian.org\/debian-security\/ trixie-security main contrib non-free non-free-firmware\n\u003c\/span\u003e\u003c\/span\u003e\u003c\/span\u003e\u003cspan class=\u0022line\u0022\u003e\u003cspan class=\u0022ln\u0022\u003e5\u003c\/span\u003e\u003cspan class=\u0022cl\u0022\u003e\u003cspan class=\u0022s\u0022\u003eEOF\u003c\/span\u003e\n\u003c\/span\u003e\u003c\/span\u003e\u003c\/code\u003e\u003c\/pre\u003e\u003c\/div\u003e\n\u003ch3 class=\u0022relative group\u0022\u003eAlle Sources ändern\n    \u003cdiv id=\u0022alle-sources-ändern\u0022 class=\u0022anchor\u0022\u003e\u003c\/div\u003e\n    \n    \u003cspan\n        class=\u0022absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none\u0022\u003e\n        \u003ca class=\u0022text-primary-300 dark:text-neutral-700 !no-underline\u0022 href=\u0022#alle-sources-%c3%a4ndern\u0022 aria-label=\u0022Anker\u0022\u003e#\u003c\/a\u003e\n    \u003c\/span\u003e\n    \n\u003c\/h3\u003e\n\u003cdiv class=\u0022highlight\u0022\u003e\u003cpre tabindex=\u00220\u0022 class=\u0022chroma\u0022\u003e\u003ccode class=\u0022language-bash\u0022 data-lang=\u0022bash\u0022\u003e\u003cspan class=\u0022line\u0022\u003e\u003cspan class=\u0022ln\u0022\u003e1\u003c\/span\u003e\u003cspan class=\u0022cl\u0022\u003esed -i \u003cspan class=\u0022s1\u0022\u003e\u0026#39;s:bookworm:trixie:\u0026#39;\u003c\/span\u003e \/etc\/apt\/sources.list\n\u003c\/span\u003e\u003c\/span\u003e\u003cspan class=\u0022line\u0022\u003e\u003cspan class=\u0022ln\u0022\u003e2\u003c\/span\u003e\u003cspan class=\u0022cl\u0022\u003esed -i \u003cspan class=\u0022s1\u0022\u003e\u0026#39;s:bookworm:trixie:\u0026#39;\u003c\/span\u003e \/etc\/apt\/sources.list.d\/*.list\n\u003c\/span\u003e\u003c\/span\u003e\u003c\/code\u003e\u003c\/pre\u003e\u003c\/div\u003e\n\u003ch3 class=\u0022relative group\u0022\u003eApt Preferences prüfen\n    \u003cdiv id=\u0022apt-preferences-prüfen\u0022 class=\u0022anchor\u0022\u003e\u003c\/div\u003e\n    \n    \u003cspan\n        class=\u0022absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none\u0022\u003e\n        \u003ca class=\u0022text-primary-300 dark:text-neutral-700 !no-underline\u0022 href=\u0022#apt-preferences-pr%c3%bcfen\u0022 aria-label=\u0022Anker\u0022\u003e#\u003c\/a\u003e\n    \u003c\/span\u003e\n    \n\u003c\/h3\u003e\n\u003cp\u003e\/etc\/apt\/preferences.d\/*\u003c\/p\u003e",
     "inLanguage": "de-de",
-    "url" : "https://zyria.de/posts/homelab/k3s-prod/apps/forgejo-runner/readme/",
+    "url" : "https://zyria.de/posts/homelab/debian-upgrade/",
     "author" : {
       "@type": "Person",
       "name": "Fabrice Kirchner"
     },
     "copyrightYear": "2025",
-    "dateCreated": "2025-12-13T11:53:11\u002b01:00",
-    "datePublished": "2025-12-13T11:53:11\u002b01:00",
+    "dateCreated": "2025-12-13T11:51:26\u002b01:00",
+    "datePublished": "2025-12-13T11:51:26\u002b01:00",
     
-    "dateModified": "2025-12-13T11:53:11\u002b01:00",
+    "dateModified": "2025-12-13T11:51:26\u002b01:00",
     
-    "keywords": ["kubernetes","k3s","gitops","argocd","helm","kustomize","homelab","produktion"],
+    "keywords": ["homelab"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "301"
+    "wordCount": "176"
   }]
   </script>
 
@@ -746,8 +741,6 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   
     
   
-    
-  
   <li class="hidden">
     <a class="hover:underline decoration-neutral-300 dark:underline-neutral-600" href="/"
       >Eine (scheinbar) leere Homepage</a
@@ -769,16 +762,9 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   </li>
 
   
-  <li class="inline">
-    <a class="hover:underline decoration-neutral-300 dark:underline-neutral-600" href="/posts/homelab/k3s-prod/"
-      >k3s-prod: Kubernetes Cluster Konfiguration und Anwendungsbereitstellung</a
-    ><span class="px-1 text-primary-500">/</span>
-  </li>
-
-  
   <li class="hidden">
-    <a class="hover:underline decoration-neutral-300 dark:underline-neutral-600" href="/posts/homelab/k3s-prod/apps/forgejo-runner/readme/"
-      >Forgejo Runner</a
+    <a class="hover:underline decoration-neutral-300 dark:underline-neutral-600" href="/posts/homelab/debian-upgrade/"
+      >Debian Upgrade</a
     ><span class="px-1 text-primary-500">/</span>
   </li>
 
@@ -787,7 +773,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
 
       
       <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
-        Forgejo Runner
+        Debian Upgrade
       </h1>
       <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
         
@@ -841,7 +827,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2025-12-13T11:53:11&#43;01:00">13 Dezember 2025</time><span class="px-2 text-primary-500">&middot;</span><span>301 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
+      <time datetime="2025-12-13T11:51:26&#43;01:00">13 Dezember 2025</time><span class="px-2 text-primary-500">&middot;</span><span>176 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
 
 
   
@@ -849,7 +835,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
 
 <span class="mb-[2px]">
   <a
-    href="https://git.zyria.de/pyrox/zyria_de/src/branch/main/content/posts/homelab/k3s-prod/apps/forgejo-runner/README.md"
+    href="https://git.zyria.de/pyrox/zyria_de/src/branch/main/content/posts/homelab/debian-upgrade.md"
     class="text-lg hover:text-primary-500"
     rel="noopener noreferrer"
     target="_blank"
@@ -899,100 +885,18 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
       
         
           
-            
-              <a class="relative mt-[0.5rem] me-2" href="/categories/k3s-prod/">
-                <span class="flex cursor-pointer">
-  <span
-    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-    K3s-Prod
-  </span>
-</span>
-
-              </a>
-            
-          
         
       
         
       
         
           
-            
-              <a class="relative mt-[0.5rem] me-2" href="/tags/kubernetes/">
-                <span class="flex cursor-pointer">
-  <span
-    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-    Kubernetes
-  </span>
-</span>
-
-              </a>
-            
-              <a class="relative mt-[0.5rem] me-2" href="/tags/k3s/">
-                <span class="flex cursor-pointer">
-  <span
-    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-    K3s
-  </span>
-</span>
-
-              </a>
-            
-              <a class="relative mt-[0.5rem] me-2" href="/tags/gitops/">
-                <span class="flex cursor-pointer">
-  <span
-    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-    Gitops
-  </span>
-</span>
-
-              </a>
-            
-              <a class="relative mt-[0.5rem] me-2" href="/tags/argocd/">
-                <span class="flex cursor-pointer">
-  <span
-    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-    Argocd
-  </span>
-</span>
-
-              </a>
-            
-              <a class="relative mt-[0.5rem] me-2" href="/tags/helm/">
-                <span class="flex cursor-pointer">
-  <span
-    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-    Helm
-  </span>
-</span>
-
-              </a>
-            
-              <a class="relative mt-[0.5rem] me-2" href="/tags/kustomize/">
-                <span class="flex cursor-pointer">
-  <span
-    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-    Kustomize
-  </span>
-</span>
-
-              </a>
             
               <a class="relative mt-[0.5rem] me-2" href="/tags/homelab/">
                 <span class="flex cursor-pointer">
   <span
     class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
     Homelab
-  </span>
-</span>
-
-              </a>
-            
-              <a class="relative mt-[0.5rem] me-2" href="/tags/produktion/">
-                <span class="flex cursor-pointer">
-  <span
-    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-    Produktion
   </span>
 </span>
 
@@ -1035,19 +939,22 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
     class="min-w-[220px] py-2 border-dotted border-s-1 -ms-5 ps-5 dark:border-neutral-600">
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#forgejo-runner">Forgejo Runner</a>
+    <li><a href="#vorbereitungen">Vorbereitungen</a></li>
+    <li><a href="#paketquellen-aktualisieren">Paketquellen aktualisieren</a>
       <ul>
-        <li><a href="#deployment">Deployment</a></li>
-        <li><a href="#quelle">Quelle</a></li>
-        <li><a href="#dokumentation">Dokumentation</a></li>
-        <li><a href="#funktion">Funktion</a></li>
-        <li><a href="#lokale-anpassungen">Lokale Anpassungen</a>
-          <ul>
-            <li><a href="#wichtige-einstellungen">Wichtige Einstellungen</a></li>
-          </ul>
-        </li>
-        <li><a href="#installation">Installation</a></li>
-        <li><a href="#abhängigkeiten">Abhängigkeiten</a></li>
+        <li><a href="#versionen">Versionen</a></li>
+        <li><a href="#default-sourceslist">Default sources.list</a></li>
+        <li><a href="#alle-sources-ändern">Alle Sources ändern</a></li>
+        <li><a href="#apt-preferences-prüfen">Apt Preferences prüfen</a></li>
+      </ul>
+    </li>
+    <li><a href="#upgrade-durchführen">Upgrade durchführen</a></li>
+    <li><a href="#netzwerkinterface-prüfen">Netzwerkinterface prüfen</a></li>
+    <li><a href="#neues-sources-format-realisieren">Neues sources Format realisieren</a></li>
+    <li><a href="#nach-dem-update">Nach dem Update</a>
+      <ul>
+        <li><a href="#übersprungene-neue-konfigurationen-prüfen">Übersprungene neue Konfigurationen prüfen</a></li>
+        <li><a href="#pakete-aufräumen">Pakete aufräumen</a></li>
       </ul>
     </li>
   </ul>
@@ -1063,19 +970,22 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
     class="py-2 border-dotted border-neutral-300 border-s-1 -ms-5 ps-5 dark:border-neutral-600">
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#forgejo-runner">Forgejo Runner</a>
+    <li><a href="#vorbereitungen">Vorbereitungen</a></li>
+    <li><a href="#paketquellen-aktualisieren">Paketquellen aktualisieren</a>
       <ul>
-        <li><a href="#deployment">Deployment</a></li>
-        <li><a href="#quelle">Quelle</a></li>
-        <li><a href="#dokumentation">Dokumentation</a></li>
-        <li><a href="#funktion">Funktion</a></li>
-        <li><a href="#lokale-anpassungen">Lokale Anpassungen</a>
-          <ul>
-            <li><a href="#wichtige-einstellungen">Wichtige Einstellungen</a></li>
-          </ul>
-        </li>
-        <li><a href="#installation">Installation</a></li>
-        <li><a href="#abhängigkeiten">Abhängigkeiten</a></li>
+        <li><a href="#versionen">Versionen</a></li>
+        <li><a href="#default-sourceslist">Default sources.list</a></li>
+        <li><a href="#alle-sources-ändern">Alle Sources ändern</a></li>
+        <li><a href="#apt-preferences-prüfen">Apt Preferences prüfen</a></li>
+      </ul>
+    </li>
+    <li><a href="#upgrade-durchführen">Upgrade durchführen</a></li>
+    <li><a href="#netzwerkinterface-prüfen">Netzwerkinterface prüfen</a></li>
+    <li><a href="#neues-sources-format-realisieren">Neues sources Format realisieren</a></li>
+    <li><a href="#nach-dem-update">Nach dem Update</a>
+      <ul>
+        <li><a href="#übersprungene-neue-konfigurationen-prüfen">Übersprungene neue Konfigurationen prüfen</a></li>
+        <li><a href="#pakete-aufräumen">Pakete aufräumen</a></li>
       </ul>
     </li>
   </ul>
@@ -1195,144 +1105,199 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
         
 
         <div class="article-content max-w-prose mb-20">
-          
-<h2 class="relative group">Forgejo Runner
-    <div id="forgejo-runner" class="anchor"></div>
+          <p>Wie man Debian zuverlässig auf den Stand bringt. Danke an <a
+  href="https://doku.lrz.de/upgrade-auf-debian-13-trixie-1921298568.html"
+    target="_blank"
+  >doku.lrz.de</a> die dies bei jedem Release aufschreiben.</p>
+<p>Debian stellt auch eine <a
+  href="https://www.debian.org/releases/stable/release-notes/upgrading.de.html"
+    target="_blank"
+  >Anleitung</a> zur Verfügung.</p>
+<p>Proxmox hat für jedes Release einen <a
+  href="https://pve.proxmox.com/wiki/Category:Upgrade"
+    target="_blank"
+  >Wiki</a> Artikel. Auf für den <a
+  href="https://pbs.proxmox.com/wiki/Category:Upgrade"
+    target="_blank"
+  >Proxmox Backup Server</a>.</p>
+
+<h2 class="relative group">Vorbereitungen
+    <div id="vorbereitungen" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#forgejo-runner" aria-label="Anker">#</a>
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#vorbereitungen" aria-label="Anker">#</a>
     </span>
     
 </h2>
-<p>Ein Forgejo Runner ist ein Daemon, der mit einer Forgejo-Instanz zusammenarbeitet, um CI/CD (Continuous Integration/Continuous Delivery)-Jobs auszuführen. Er ruft Workflows von der Forgejo-Instanz ab, führt sie in einer isolierten Umgebung aus und sendet dann Protokolle und den endgültigen Status zurück.</p>
-
-<h3 class="relative group">Deployment
-    <div id="deployment" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#deployment" aria-label="Anker">#</a>
-    </span>
-    
-</h3>
-<p><figure><img
-    class="my-0 rounded-md"
-    loading="lazy"
-    decoding="async"
-    fetchpriority="low"
-    alt="Argo Deployment"
-    src="https://argocd.zyria.de/api/badge?name=forgejo-runner&amp;revision=true&amp;showAppName=true&amp;width=150"
-    ></figure>
-
-<figure><img
-    class="my-0 rounded-md"
-    loading="lazy"
-    decoding="async"
-    fetchpriority="low"
-    alt="Argo Deployment"
-    src="https://argocd.zyria.de/api/badge?name=forgejo-runner-codeberg&amp;revision=true&amp;showAppName=true&amp;width=150"
-    ></figure>
-</p>
-
-<h3 class="relative group">Quelle
-    <div id="quelle" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#quelle" aria-label="Anker">#</a>
-    </span>
-    
-</h3>
-<p>Die Bereitstellung verwendet ein benutzerdefiniertes Helm-Chart aus einem privaten Repository.</p>
-
-<h3 class="relative group">Dokumentation
-    <div id="dokumentation" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#dokumentation" aria-label="Anker">#</a>
-    </span>
-    
-</h3>
-<p>Die Dokumentation für den Runner ist Teil der <a
-  href="https://forgejo.org/docs/next/actions/runner/"
-    target="_blank"
-  >Forgejo-Dokumentation</a>.</p>
-
-<h3 class="relative group">Funktion
-    <div id="funktion" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#funktion" aria-label="Anker">#</a>
-    </span>
-    
-</h3>
-<p>Dieser Dienst stellt Runner für die Ausführung von CI/CD-Pipelines bereit. Es sind zwei Instanzen konfiguriert: eine für die lokale Forgejo-Instanz und eine weitere für Codeberg.</p>
-
-<h3 class="relative group">Lokale Anpassungen
-    <div id="lokale-anpassungen" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#lokale-anpassungen" aria-label="Anker">#</a>
-    </span>
-    
-</h3>
-<ul>
-<li>Die <code>values.yaml</code>-Datei enthält die Konfiguration für die Haupt-Runner-Instanz, einschließlich der Verbindung zur Forgejo-Instanz und der Runner-Labels.</li>
-<li>Die <code>values-codeberg.yaml</code>-Datei enthält die Konfiguration für die Codeberg-Runner-Instanz.</li>
-<li>Beide Instanzen verwenden Docker-in-Docker (DinD) für die Ausführung von Jobs.</li>
-</ul>
-
-<h4 class="relative group">Wichtige Einstellungen
-    <div id="wichtige-einstellungen" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#wichtige-einstellungen" aria-label="Anker">#</a>
-    </span>
-    
-</h4>
-<ul>
-<li><strong>Instanzen</strong>: Es werden zwei Runner-Deployments erstellt:
-<ol>
-<li><code>forgejo-runner</code>: Verbindet sich mit der lokalen Instanz.</li>
-<li><code>forgejo-runner-codeberg</code>: Verbindet sich mit der öffentlichen Instanz <code>https://codeberg.org</code>.</li>
-</ol>
-</li>
-<li><strong>Replikas</strong>: Für die lokale Instanz werden 3 Runner-Replikate betrieben, um parallele Job-Ausführung zu ermöglichen.</li>
-<li><strong>Node Selector</strong>: Die Runner werden auf Nodes mit dem Label <code>performance: high</code> ausgeführt, um eine schnelle Job-Ausführung zu gewährleisten.</li>
-<li><strong>Labels</strong>: Die Runner sind mit einer Vielzahl von Labels konfiguriert, die auf verschiedene Docker-Images von <code>catthehacker/ubuntu</code> verweisen. Diese Images sind speziell für die Verwendung mit Gitea/Forgejo Actions vorbereitet.</li>
-<li><strong>Docker-in-Docker</strong>: Die Runner laufen im <code>privileged</code>-Modus und mit <code>host</code>-Netzwerk, um Docker-Befehle innerhalb der CI-Jobs ausführen zu können (Docker-in-Docker).</li>
-</ul>
-
-<h3 class="relative group">Installation
-    <div id="installation" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#installation" aria-label="Anker">#</a>
-    </span>
-    
-</h3>
-<p>Der Dienst wird als Helm-Chart aus einem privaten Repository bereitgestellt. Die Bereitstellung wird durch die <code>kustomization.yaml</code>-Datei verwaltet.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">kubectl kustomize --enable-helm apps/forgejo-runner <span class="p">|</span> kubectl apply -n forgejo-runner -f -
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">apt update
+</span></span><span class="line"><span class="ln">2</span><span class="cl">apt full-upgrade
 </span></span></code></pre></div>
-<h3 class="relative group">Abhängigkeiten
-    <div id="abhängigkeiten" class="anchor"></div>
+<h2 class="relative group">Paketquellen aktualisieren
+    <div id="paketquellen-aktualisieren" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#abh%c3%a4ngigkeiten" aria-label="Anker">#</a>
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#paketquellen-aktualisieren" aria-label="Anker">#</a>
+    </span>
+    
+</h2>
+
+<h3 class="relative group">Versionen
+    <div id="versionen" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#versionen" aria-label="Anker">#</a>
     </span>
     
 </h3>
-<ul>
-<li><strong>Forgejo</strong>: Eine laufende Forgejo-Instanz, bei der sich die Runner registrieren können.</li>
-<li><strong>Docker</strong>: Auf den Kubernetes-Worker-Nodes, auf denen die Runner laufen, muss eine Docker-Engine verfügbar sein, damit die Runner Docker-Container für die Jobs starten können.</li>
-</ul>
+<table>
+  <thead>
+      <tr>
+          <th>Versionsnummer</th>
+          <th>Versionsname</th>
+          <th>Replace</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>9</td>
+          <td>Stretch</td>
+          <td>:%s/stretch/buster/</td>
+      </tr>
+      <tr>
+          <td>10</td>
+          <td>buster</td>
+          <td>:%s/buster/bullseye/</td>
+      </tr>
+      <tr>
+          <td>11</td>
+          <td>bullseye</td>
+          <td>:%s/bullseye/bookworm/</td>
+      </tr>
+      <tr>
+          <td>12</td>
+          <td>bookworm</td>
+          <td>:%s/bookworm/trixie/</td>
+      </tr>
+  </tbody>
+</table>
+
+<h3 class="relative group">Default sources.list
+    <div id="default-sourceslist" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#default-sourceslist" aria-label="Anker">#</a>
+    </span>
+    
+</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">cat <span class="s">&lt;&lt;EOF &gt; /etc/apt/sources.list
+</span></span></span><span class="line"><span class="ln">2</span><span class="cl"><span class="s">deb http://deb.debian.org/debian trixie main contrib non-free non-free-firmware
+</span></span></span><span class="line"><span class="ln">3</span><span class="cl"><span class="s">deb http://deb.debian.org/debian trixie-updates main contrib non-free non-free-firmware
+</span></span></span><span class="line"><span class="ln">4</span><span class="cl"><span class="s">deb http://deb.debian.org/debian-security/ trixie-security main contrib non-free non-free-firmware
+</span></span></span><span class="line"><span class="ln">5</span><span class="cl"><span class="s">EOF</span>
+</span></span></code></pre></div>
+<h3 class="relative group">Alle Sources ändern
+    <div id="alle-sources-ändern" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#alle-sources-%c3%a4ndern" aria-label="Anker">#</a>
+    </span>
+    
+</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">sed -i <span class="s1">&#39;s:bookworm:trixie:&#39;</span> /etc/apt/sources.list
+</span></span><span class="line"><span class="ln">2</span><span class="cl">sed -i <span class="s1">&#39;s:bookworm:trixie:&#39;</span> /etc/apt/sources.list.d/*.list
+</span></span></code></pre></div>
+<h3 class="relative group">Apt Preferences prüfen
+    <div id="apt-preferences-prüfen" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#apt-preferences-pr%c3%bcfen" aria-label="Anker">#</a>
+    </span>
+    
+</h3>
+<p>/etc/apt/preferences.d/*</p>
+<p>/etc/apt/preferences</p>
+
+<h2 class="relative group">Upgrade durchführen
+    <div id="upgrade-durchführen" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#upgrade-durchf%c3%bchren" aria-label="Anker">#</a>
+    </span>
+    
+</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">apt update
+</span></span><span class="line"><span class="ln">2</span><span class="cl">apt upgrade --without-new-pkgs
+</span></span><span class="line"><span class="ln">3</span><span class="cl">
+</span></span><span class="line"><span class="ln">4</span><span class="cl">apt full-upgrade
+</span></span></code></pre></div>
+<h2 class="relative group">Netzwerkinterface prüfen
+    <div id="netzwerkinterface-prüfen" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#netzwerkinterface-pr%c3%bcfen" aria-label="Anker">#</a>
+    </span>
+    
+</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">udevadm test-builtin net_setup_link /sys/class/net/enp1s0
+</span></span></code></pre></div>
+<h2 class="relative group">Neues sources Format realisieren
+    <div id="neues-sources-format-realisieren" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#neues-sources-format-realisieren" aria-label="Anker">#</a>
+    </span>
+    
+</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">apt modernize-sources
+</span></span><span class="line"><span class="ln">2</span><span class="cl">
+</span></span><span class="line"><span class="ln">3</span><span class="cl">apt update
+</span></span><span class="line"><span class="ln">4</span><span class="cl">
+</span></span><span class="line"><span class="ln">5</span><span class="cl">rm /etc/apt/sources.list.bak /etc/apt/sources.list.d/*.bak
+</span></span></code></pre></div>
+<h2 class="relative group">Nach dem Update
+    <div id="nach-dem-update" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#nach-dem-update" aria-label="Anker">#</a>
+    </span>
+    
+</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">systemctl reboot
+</span></span><span class="line"><span class="ln">2</span><span class="cl">systemctl -a --failed
+</span></span><span class="line"><span class="ln">3</span><span class="cl">journalctl -b -p notice
+</span></span></code></pre></div>
+<h3 class="relative group">Übersprungene neue Konfigurationen prüfen
+    <div id="übersprungene-neue-konfigurationen-prüfen" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%c3%bcbersprungene-neue-konfigurationen-pr%c3%bcfen" aria-label="Anker">#</a>
+    </span>
+    
+</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">find /etc -name <span class="s2">&#34;*.dpkg-dist&#34;</span>
+</span></span></code></pre></div>
+<h3 class="relative group">Pakete aufräumen
+    <div id="pakete-aufräumen" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#pakete-aufr%c3%a4umen" aria-label="Anker">#</a>
+    </span>
+    
+</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">apt autoremove
+</span></span></code></pre></div><p>Per apt oder aptitude Pakete aufräumen</p>
 
           
           
@@ -1341,7 +1306,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
               <a
                 target="_blank"
                 class="m-1 rounded bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-                href="mailto:fabrice@zyria.de?subject=Reply%20to%20Forgejo%20Runner">
+                href="mailto:fabrice@zyria.de?subject=Reply%20to%20Debian%20Upgrade">
                 Per E-Mail antworten
               </a>
             </strong>
@@ -1537,8 +1502,8 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
           type="text/javascript"
           src="/js/page.min.54b6f4371722649edbe871e431d8670d670878c22be8f36e229fe53cc9b786fe25a834def5e6de621f7a3e37b72bc8cd73839aa5ed907ed6cbd45cd3e1b0fa20.js"
           integrity="sha512-VLb0NxciZJ7b6HHkMdhnDWcIeMIr6PNuIp/lPMm3hv4lqDTe9ebeYh96Pje3K8jNc4Oape2QftbL1FzT4bD6IA=="
-          data-oid="views_posts/homelab/k3s-prod/apps/forgejo-runner/README.md"
-          data-oid-likes="likes_posts/homelab/k3s-prod/apps/forgejo-runner/README.md"></script>
+          data-oid="views_posts/homelab/debian-upgrade.md"
+          data-oid-likes="likes_posts/homelab/debian-upgrade.md"></script>
       
     </section>
 
@@ -1556,32 +1521,19 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
           
             <a
               class="flex text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
-              href="/posts/homelab/k3s-prod/apps/headscale/readme/">
+              href="/posts/homelab/kubernets/">
               <span class="leading-6">
-                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;Headscale
+                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;Kubernetes Snippets
               </span>
             </a>
             
               <span class="ms-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
-                <time datetime="2025-12-13T11:53:11&#43;01:00">13 Dezember 2025</time>
+                <time datetime="2025-11-18T14:19:10&#43;01:00">18 November 2025</time>
               </span>
             
           
         </span>
         <span class="flex flex-col items-end">
-          
-            <a
-              class="flex text-right text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
-              href="/posts/homelab/k3s-prod/apps/forgejo/readme/">
-              <span class="leading-6">
-                Forgejo&ensp;<span class="inline-block rtl:rotate-180">&rarr;</span>
-              </span>
-            </a>
-            
-              <span class="me-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
-                <time datetime="2025-12-13T11:53:11&#43;01:00">13 Dezember 2025</time>
-              </span>
-            
           
         </span>
       </div>

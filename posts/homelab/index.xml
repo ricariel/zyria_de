@@ -12,6 +12,131 @@
     <lastBuildDate>Tue, 01 Jul 2025 13:37:34 +0200</lastBuildDate><atom:link href="https://zyria.de/posts/homelab/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Debian Upgrade</title>
+      <link>https://zyria.de/posts/homelab/debian-upgrade/</link>
+      <pubDate>Sat, 13 Dec 2025 11:51:26 +0100</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://zyria.de/posts/homelab/debian-upgrade/</guid>
+      <description>&lt;p&gt;Wie man Debian zuverlässig auf den Stand bringt. Danke an &lt;a
+  href=&#34;https://doku.lrz.de/upgrade-auf-debian-13-trixie-1921298568.html&#34;
+    target=&#34;_blank&#34;
+  &gt;doku.lrz.de&lt;/a&gt; die dies bei jedem Release aufschreiben.&lt;/p&gt;
+&lt;p&gt;Debian stellt auch eine &lt;a
+  href=&#34;https://www.debian.org/releases/stable/release-notes/upgrading.de.html&#34;
+    target=&#34;_blank&#34;
+  &gt;Anleitung&lt;/a&gt; zur Verfügung.&lt;/p&gt;
+&lt;p&gt;Proxmox hat für jedes Release einen &lt;a
+  href=&#34;https://pve.proxmox.com/wiki/Category:Upgrade&#34;
+    target=&#34;_blank&#34;
+  &gt;Wiki&lt;/a&gt; Artikel. Auf für den &lt;a
+  href=&#34;https://pbs.proxmox.com/wiki/Category:Upgrade&#34;
+    target=&#34;_blank&#34;
+  &gt;Proxmox Backup Server&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 class=&#34;relative group&#34;&gt;Vorbereitungen
+    &lt;div id=&#34;vorbereitungen&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;
+        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#vorbereitungen&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;
+    
+&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;apt update
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;apt full-upgrade
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2 class=&#34;relative group&#34;&gt;Paketquellen aktualisieren
+    &lt;div id=&#34;paketquellen-aktualisieren&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;
+        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#paketquellen-aktualisieren&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;
+    
+&lt;/h2&gt;
+
+&lt;h3 class=&#34;relative group&#34;&gt;Versionen
+    &lt;div id=&#34;versionen&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;
+        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#versionen&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;
+    
+&lt;/h3&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;Versionsnummer&lt;/th&gt;
+          &lt;th&gt;Versionsname&lt;/th&gt;
+          &lt;th&gt;Replace&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;9&lt;/td&gt;
+          &lt;td&gt;Stretch&lt;/td&gt;
+          &lt;td&gt;:%s/stretch/buster/&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;10&lt;/td&gt;
+          &lt;td&gt;buster&lt;/td&gt;
+          &lt;td&gt;:%s/buster/bullseye/&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;11&lt;/td&gt;
+          &lt;td&gt;bullseye&lt;/td&gt;
+          &lt;td&gt;:%s/bullseye/bookworm/&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;12&lt;/td&gt;
+          &lt;td&gt;bookworm&lt;/td&gt;
+          &lt;td&gt;:%s/bookworm/trixie/&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h3 class=&#34;relative group&#34;&gt;Default sources.list
+    &lt;div id=&#34;default-sourceslist&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;
+        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#default-sourceslist&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;
+    
+&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;cat &lt;span class=&#34;s&#34;&gt;&amp;lt;&amp;lt;EOF &amp;gt; /etc/apt/sources.list
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s&#34;&gt;deb http://deb.debian.org/debian trixie main contrib non-free non-free-firmware
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s&#34;&gt;deb http://deb.debian.org/debian trixie-updates main contrib non-free non-free-firmware
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;4&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s&#34;&gt;deb http://deb.debian.org/debian-security/ trixie-security main contrib non-free non-free-firmware
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;5&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s&#34;&gt;EOF&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3 class=&#34;relative group&#34;&gt;Alle Sources ändern
+    &lt;div id=&#34;alle-sources-ändern&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;
+        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#alle-sources-%c3%a4ndern&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;
+    
+&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;sed -i &lt;span class=&#34;s1&#34;&gt;&amp;#39;s:bookworm:trixie:&amp;#39;&lt;/span&gt; /etc/apt/sources.list
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;sed -i &lt;span class=&#34;s1&#34;&gt;&amp;#39;s:bookworm:trixie:&amp;#39;&lt;/span&gt; /etc/apt/sources.list.d/*.list
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3 class=&#34;relative group&#34;&gt;Apt Preferences prüfen
+    &lt;div id=&#34;apt-preferences-prüfen&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;
+        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#apt-preferences-pr%c3%bcfen&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;
+    
+&lt;/h3&gt;
+&lt;p&gt;/etc/apt/preferences.d/*&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
       <title>Kubernetes Snippets</title>
       <link>https://zyria.de/posts/homelab/kubernets/</link>
       <pubDate>Tue, 18 Nov 2025 14:19:10 +0100</pubDate>
