@@ -9,12 +9,12 @@
     <managingEditor>fabrice@zyria.de (Fabrice Kirchner)</managingEditor>
     <webMaster>fabrice@zyria.de (Fabrice Kirchner)</webMaster>
     
-    <lastBuildDate>Mon, 05 Jan 2026 09:51:42 +0100</lastBuildDate><atom:link href="https://zyria.de/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 06 Jan 2026 08:31:36 +0100</lastBuildDate><atom:link href="https://zyria.de/tags/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Argocd</title>
       <link>https://zyria.de/tags/argocd/</link>
-      <pubDate>Mon, 05 Jan 2026 09:51:42 +0100</pubDate>
+      <pubDate>Tue, 06 Jan 2026 08:31:36 +0100</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/tags/argocd/</guid>
       <description></description>
@@ -24,7 +24,7 @@
     <item>
       <title>Gitops</title>
       <link>https://zyria.de/tags/gitops/</link>
-      <pubDate>Mon, 05 Jan 2026 09:51:42 +0100</pubDate>
+      <pubDate>Tue, 06 Jan 2026 08:31:36 +0100</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/tags/gitops/</guid>
       <description></description>
@@ -34,7 +34,7 @@
     <item>
       <title>Helm</title>
       <link>https://zyria.de/tags/helm/</link>
-      <pubDate>Mon, 05 Jan 2026 09:51:42 +0100</pubDate>
+      <pubDate>Tue, 06 Jan 2026 08:31:36 +0100</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/tags/helm/</guid>
       <description></description>
@@ -44,7 +44,7 @@
     <item>
       <title>Homelab</title>
       <link>https://zyria.de/tags/homelab/</link>
-      <pubDate>Mon, 05 Jan 2026 09:51:42 +0100</pubDate>
+      <pubDate>Tue, 06 Jan 2026 08:31:36 +0100</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/tags/homelab/</guid>
       <description></description>
@@ -54,7 +54,7 @@
     <item>
       <title>K3s</title>
       <link>https://zyria.de/tags/k3s/</link>
-      <pubDate>Mon, 05 Jan 2026 09:51:42 +0100</pubDate>
+      <pubDate>Tue, 06 Jan 2026 08:31:36 +0100</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/tags/k3s/</guid>
       <description></description>
@@ -64,7 +64,7 @@
     <item>
       <title>Kubernetes</title>
       <link>https://zyria.de/tags/kubernetes/</link>
-      <pubDate>Mon, 05 Jan 2026 09:51:42 +0100</pubDate>
+      <pubDate>Tue, 06 Jan 2026 08:31:36 +0100</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/tags/kubernetes/</guid>
       <description></description>
@@ -74,7 +74,7 @@
     <item>
       <title>Kustomize</title>
       <link>https://zyria.de/tags/kustomize/</link>
-      <pubDate>Mon, 05 Jan 2026 09:51:42 +0100</pubDate>
+      <pubDate>Tue, 06 Jan 2026 08:31:36 +0100</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/tags/kustomize/</guid>
       <description></description>
@@ -84,7 +84,7 @@
     <item>
       <title>Produktion</title>
       <link>https://zyria.de/tags/produktion/</link>
-      <pubDate>Mon, 05 Jan 2026 09:51:42 +0100</pubDate>
+      <pubDate>Tue, 06 Jan 2026 08:31:36 +0100</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/tags/produktion/</guid>
       <description></description>
