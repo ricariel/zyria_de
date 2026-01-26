@@ -7,16 +7,12 @@
       url: https://app.lexoffice.de/sign-in/authenticate?redirect=%2Ffis%2Folb4%2F%23%2Ftransactionswop%2Fcd67e3bd-5d49-46a3-a167-6cea4ecd6664%3Fassignments%3Dfalse
     - title: 'Windows TCP/IP-Implementierung: Reset kann die Netzwerkleistung erhöhen – Borns IT- und Windows-Blog'
       url: https://www.borncity.com/blog/2024/09/04/windows-tcp-ip-implementierung-reset-kann-die-netzwerkleistung-erhhen/
-    - title: Portainer
-      url: https://portainer.casa-due-pur.de:9443/#!/44/docker/stacks/testshop?id=185&type=2&regular=true&external=false&orphaned=false
     - title: https://app.lexoffice.de/fis/olb4/#/transactionswop/c821386f-67ad-4890-a2b9-344995d02b31?assignments=false
       url: https://app.lexoffice.de/fis/olb4/#/transactionswop/c821386f-67ad-4890-a2b9-344995d02b31?assignments=false
     - title: https://app.lexoffice.de/fis/olb4/#/transactionswop/0a8fde7f-7b57-4a86-96c2-7cb3ddb69242?assignments=false
       url: https://app.lexoffice.de/fis/olb4/#/transactionswop/0a8fde7f-7b57-4a86-96c2-7cb3ddb69242?assignments=false
     - title: MyFRITZ!Net
       url: https://www.myfritz.net/devices/
-    - title: '11 Jahre ist es her… - Erinnerung - Google Fotos'
-      url: https://photos.google.com/memory/featured/AF1QipOXhrYXjcWqoWVGXeGeB5N7KHu31FaQwYFlr2KkSw/photo/AF1QipOTv4c4Op6UwtzfFFxGYNf5ZjuHvNYC1bU-m38J
     - title: filmfriend
       url: https://www.filmfriend.de/de/pages/kollektionen
     - title: https://github.com/chaossocial/about/blob/master/blocked_instances.md
@@ -25,8 +21,6 @@
       url: https://gist.github.com/quonic/cc0f73e167b140c68e4e31ff0b71024d
     - title: 'Per Tools: Verdächtige Mailanhänge ohne Risiko untersuchen und entschärfen | heise online'
       url: https://www.heise.de/ratgeber/Per-Tools-Verdaechtige-Mailanhaenge-ohne-Risiko-untersuchen-und-entschaerfen-7241534.html
-    - title: Uptime Kuma
-      url: https://status.casa-due-pur.com/dashboard
     - title: jelbo/Windows10Tweaks
       url: https://github.com/jelbo/Windows10Tweaks
     - title: 'Michał "rysiek" Woźniak / libresilient · GitLab'
@@ -76,8 +70,6 @@
       url: https://www.debian-administration.org/article/618/Certificate_Authority_CA_with_OpenSSL
     - title: 'Chroot users with OpenSSH: An easier way to confine users to their home directories | Linux and Open Source | TechRepublic.com'
       url: http://blogs.techrepublic.com.com/opensource/?p=229
-    - title: cl01 - Proxmox Virtual Environment
-      url: https://cl01.casa-due-pur.de:8006/#v1:0:=node%2Fcl02:4:43:::::5
     - title: 'Client-Images auf dem Server anlegen :: Diskless PC mit Debian :: Tutorials bei php2all.de'
       url: http://www.php2all.de/tutorialpage-44-client-images-auf-dem-server-anlegen.html
     - title: Cluster Manager - Proxmox VE
@@ -743,8 +735,6 @@
   - CDP:
     - title: '[Sammelthread] HP ProLiant ML10 v2 G3240/i3-4150/E3-1220v3/E3-1241v3'
       url: http://www.hardwareluxx.de/community/f101/hp-proliant-ml10-v2-g3240-i3-4150-e3-1220v3-e3-1241v3-1084044.html
-    - title: Uptime Kuma
-      url: https://status.casa-due-pur.de/
   - Tools:
     - title: 2FA QR code generator
       url: https://stefansundin.github.io/2fa-qr/

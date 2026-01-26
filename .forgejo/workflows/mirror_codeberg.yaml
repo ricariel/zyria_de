@@ -1,12 +1,11 @@
 ---
-name: Mirror to Codeberg
+name: Mirror
 
 on:
   push:
     branches:
       - main
       - master
-
 jobs:
   mirror:
     runs-on: ubuntu-latest
