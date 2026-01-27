@@ -93,8 +93,8 @@
   <meta property="og:locale" content="de_de">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
-    <meta property="article:published_time" content="2025-12-13T11:57:20+01:00">
-    <meta property="article:modified_time" content="2025-12-13T11:57:20+01:00">
+    <meta property="article:published_time" content="2026-01-27T14:06:57+01:00">
+    <meta property="article:modified_time" content="2026-01-27T14:06:57+01:00">
     <meta property="article:tag" content="Homelab">
 
   
@@ -281,16 +281,16 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
       "@type": "Person",
       "name": "Fabrice Kirchner"
     },
-    "copyrightYear": "2025",
-    "dateCreated": "2025-12-13T11:57:20\u002b01:00",
-    "datePublished": "2025-12-13T11:57:20\u002b01:00",
+    "copyrightYear": "2026",
+    "dateCreated": "2026-01-27T14:06:57\u002b01:00",
+    "datePublished": "2026-01-27T14:06:57\u002b01:00",
     
-    "dateModified": "2025-12-13T11:57:20\u002b01:00",
+    "dateModified": "2026-01-27T14:06:57\u002b01:00",
     
     "keywords": ["homelab"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "192"
+    "wordCount": "206"
   }]
   </script>
 
@@ -827,7 +827,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2025-12-13T11:57:20&#43;01:00">13 Dezember 2025</time><span class="px-2 text-primary-500">&middot;</span><span>192 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
+      <time datetime="2026-01-27T14:06:57&#43;01:00">27 Januar 2026</time><span class="px-2 text-primary-500">&middot;</span><span>206 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
 
 
   
@@ -951,6 +951,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
     <li><a href="#upgrade-durchführen">Upgrade durchführen</a></li>
     <li><a href="#netzwerkinterface-prüfen">Netzwerkinterface prüfen</a></li>
     <li><a href="#neues-sources-format-realisieren">Neues sources Format realisieren</a></li>
+    <li><a href="#falls-cryptsetup-genutzt-wird">Falls Cryptsetup genutzt wird</a></li>
     <li><a href="#nach-dem-update">Nach dem Update</a>
       <ul>
         <li><a href="#übersprungene-neue-konfigurationen-prüfen">Übersprungene neue Konfigurationen prüfen</a></li>
@@ -982,6 +983,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
     <li><a href="#upgrade-durchführen">Upgrade durchführen</a></li>
     <li><a href="#netzwerkinterface-prüfen">Netzwerkinterface prüfen</a></li>
     <li><a href="#neues-sources-format-realisieren">Neues sources Format realisieren</a></li>
+    <li><a href="#falls-cryptsetup-genutzt-wird">Falls Cryptsetup genutzt wird</a></li>
     <li><a href="#nach-dem-update">Nach dem Update</a>
       <ul>
         <li><a href="#übersprungene-neue-konfigurationen-prüfen">Übersprungene neue Konfigurationen prüfen</a></li>
@@ -1270,6 +1272,19 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
 </span></span><span class="line"><span class="ln">3</span><span class="cl">apt update
 </span></span><span class="line"><span class="ln">4</span><span class="cl">
 </span></span><span class="line"><span class="ln">5</span><span class="cl">rm /etc/apt/sources.list.bak /etc/apt/sources.list.d/*.bak
+</span></span></code></pre></div>
+<h2 class="relative group">Falls Cryptsetup genutzt wird
+    <div id="falls-cryptsetup-genutzt-wird" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#falls-cryptsetup-genutzt-wird" aria-label="Anker">#</a>
+    </span>
+    
+</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">apt install systemd-cryptsetup
+</span></span><span class="line"><span class="ln">2</span><span class="cl">systemctl daemon-reload
+</span></span><span class="line"><span class="ln">3</span><span class="cl">update-initramfs -k all -u
 </span></span></code></pre></div>
 <h2 class="relative group">Nach dem Update
     <div id="nach-dem-update" class="anchor"></div>
