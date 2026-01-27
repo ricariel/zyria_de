@@ -83,6 +83,14 @@ apt update
 rm /etc/apt/sources.list.bak /etc/apt/sources.list.d/*.bak
 ```
 
+## Falls Cryptsetup genutzt wird
+
+```bash
+apt install systemd-cryptsetup
+systemctl daemon-reload
+update-initramfs -k all -u
+```
+
 ## Nach dem Update
 
 ```bash
