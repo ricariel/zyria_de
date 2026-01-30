@@ -12,6 +12,16 @@
     <lastBuildDate>Tue, 01 Jul 2025 13:37:34 +0200</lastBuildDate><atom:link href="https://zyria.de/posts/homelab/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Windows Snippets</title>
+      <link>https://zyria.de/posts/homelab/windows_snippets/</link>
+      <pubDate>Fri, 30 Jan 2026 14:24:56 +0100</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://zyria.de/posts/homelab/windows_snippets/</guid>
+      <description>All der Kram, der sonst nirgends hin gehört</description>
+      
+    </item>
+    
+    <item>
       <title>Debian Upgrade</title>
       <link>https://zyria.de/posts/homelab/debian-upgrade/</link>
       <pubDate>Tue, 27 Jan 2026 14:06:57 +0100</pubDate>
@@ -162,16 +172,6 @@
     
 &lt;/h2&gt;
 &lt;p&gt;Diese Anleitung beschreibt den Prozess, wie man einen fabrikneuen Windows-Rechner (im &amp;ldquo;Out-of-Box Experience&amp;rdquo;-Modus, OOBE) einrichtet, die erzwungene Anmeldung mit einem Microsoft-Konto umgeht und den Rechner anschließend in eine lokale Active Directory-Domäne aufnimmt.&lt;/p&gt;</description>
-      
-    </item>
-    
-    <item>
-      <title>Windows Snippets</title>
-      <link>https://zyria.de/posts/homelab/windows_snippets/</link>
-      <pubDate>Tue, 04 Nov 2025 10:07:02 +0100</pubDate>
-      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://zyria.de/posts/homelab/windows_snippets/</guid>
-      <description>All der Kram, der sonst nirgends hin gehört</description>
       
     </item>
     
