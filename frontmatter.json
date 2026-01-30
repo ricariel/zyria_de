@@ -32,5 +32,6 @@
       "path": "[[workspace]]/content"
     }
   ],
-  "frontMatter.git.enabled": true
+  "frontMatter.git.enabled": true,
+  "frontMatter.panel.openOnSupportedFile": true
 }
