@@ -115,7 +115,7 @@ web(at)zyria.de&lt;/p&gt;
     <item>
       <title>Ansible Konfiguration für k3s-prod</title>
       <link>https://zyria.de/posts/homelab/k3s-prod/ansible/readme/</link>
-      <pubDate>Wed, 04 Feb 2026 10:32:55 +0100</pubDate>
+      <pubDate>Mon, 09 Feb 2026 01:08:33 +0100</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/posts/homelab/k3s-prod/ansible/readme/</guid>
       <description>Automatisierung der k3s Cluster-Bereitstellung und -Verwaltung mit Ansible.</description>
@@ -125,7 +125,7 @@ web(at)zyria.de&lt;/p&gt;
     <item>
       <title>Ansible Semaphore</title>
       <link>https://zyria.de/posts/homelab/k3s-prod/apps/ansible-semaphore/readme/</link>
-      <pubDate>Wed, 04 Feb 2026 10:32:55 +0100</pubDate>
+      <pubDate>Mon, 09 Feb 2026 01:08:33 +0100</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/posts/homelab/k3s-prod/apps/ansible-semaphore/readme/</guid>
       <description>Dieses Dokument beschreibt die Bereitstellung von Ansible Semaphore, einer webbasierten Benutzeroberfläche zur Verwaltung und Ausführung von Ansible Playbooks.</description>
@@ -135,7 +135,7 @@ web(at)zyria.de&lt;/p&gt;
     <item>
       <title>ArgoCD</title>
       <link>https://zyria.de/posts/homelab/k3s-prod/apps/argocd/readme/</link>
-      <pubDate>Wed, 04 Feb 2026 10:32:55 +0100</pubDate>
+      <pubDate>Mon, 09 Feb 2026 01:08:33 +0100</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/posts/homelab/k3s-prod/apps/argocd/readme/</guid>
       <description>Dieses Dokument beschreibt die Bereitstellung von Argo CD, einem deklarativen GitOps-Continuous-Delivery-Tool für Kubernetes.</description>
@@ -145,7 +145,7 @@ web(at)zyria.de&lt;/p&gt;
     <item>
       <title>Authentik</title>
       <link>https://zyria.de/posts/homelab/k3s-prod/apps/authentik/readme/</link>
-      <pubDate>Wed, 04 Feb 2026 10:32:55 +0100</pubDate>
+      <pubDate>Mon, 09 Feb 2026 01:08:33 +0100</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/posts/homelab/k3s-prod/apps/authentik/readme/</guid>
       <description>Dieses Dokument beschreibt die Bereitstellung von Authentik, einem quelloffenen Identitätsanbieter (IdP).</description>
@@ -155,7 +155,7 @@ web(at)zyria.de&lt;/p&gt;
     <item>
       <title>Cert-Manager</title>
       <link>https://zyria.de/posts/homelab/k3s-prod/apps/cert-manager/readme/</link>
-      <pubDate>Wed, 04 Feb 2026 10:32:55 +0100</pubDate>
+      <pubDate>Mon, 09 Feb 2026 01:08:33 +0100</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/posts/homelab/k3s-prod/apps/cert-manager/readme/</guid>
       <description>Dieses Dokument beschreibt die Bereitstellung von Cert-Manager, einem nativen Kubernetes-Zertifikatsmanagement-Tool.</description>
@@ -165,7 +165,7 @@ web(at)zyria.de&lt;/p&gt;
     <item>
       <title>CoreDNS</title>
       <link>https://zyria.de/posts/homelab/k3s-prod/apps/coredns/readme/</link>
-      <pubDate>Wed, 04 Feb 2026 10:32:55 +0100</pubDate>
+      <pubDate>Mon, 09 Feb 2026 01:08:33 +0100</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/posts/homelab/k3s-prod/apps/coredns/readme/</guid>
       <description>CoreDNS dient als primärer DNS-Server für die Service Discovery innerhalb des Kubernetes-Clusters und löst sowohl interne als auch externe DNS-Anfragen auf.</description>
@@ -175,7 +175,7 @@ web(at)zyria.de&lt;/p&gt;
     <item>
       <title>CoreDNS</title>
       <link>https://zyria.de/posts/homelab/k3s-prod/apps/nameserver.unbound/readme/</link>
-      <pubDate>Wed, 04 Feb 2026 10:32:55 +0100</pubDate>
+      <pubDate>Mon, 09 Feb 2026 01:08:33 +0100</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/posts/homelab/k3s-prod/apps/nameserver.unbound/readme/</guid>
       <description>CoreDNS dient als primärer DNS-Server für die Service Discovery innerhalb des Kubernetes-Clusters und löst sowohl interne als auch externe DNS-Anfragen auf.</description>
@@ -185,7 +185,7 @@ web(at)zyria.de&lt;/p&gt;
     <item>
       <title>CoreDNS</title>
       <link>https://zyria.de/posts/homelab/k3s-prod/apps/nameserver/readme/</link>
-      <pubDate>Wed, 04 Feb 2026 10:32:55 +0100</pubDate>
+      <pubDate>Mon, 09 Feb 2026 01:08:33 +0100</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/posts/homelab/k3s-prod/apps/nameserver/readme/</guid>
       <description>CoreDNS dient als primärer DNS-Server für die Service Discovery innerhalb des Kubernetes-Clusters und löst sowohl interne als auch externe DNS-Anfragen auf.</description>
@@ -195,7 +195,7 @@ web(at)zyria.de&lt;/p&gt;
     <item>
       <title>DMARC Report</title>
       <link>https://zyria.de/posts/homelab/k3s-prod/apps/dmarc-report/readme/</link>
-      <pubDate>Wed, 04 Feb 2026 10:32:55 +0100</pubDate>
+      <pubDate>Mon, 09 Feb 2026 01:08:33 +0100</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/posts/homelab/k3s-prod/apps/dmarc-report/readme/</guid>
       <description>Dieses Dokument beschreibt die Bereitstellung des DMARC Report Tools, das DMARC-Berichte verarbeitet und visualisiert.</description>
@@ -205,7 +205,7 @@ web(at)zyria.de&lt;/p&gt;
     <item>
       <title>Endpoint Copier Operator</title>
       <link>https://zyria.de/posts/homelab/k3s-prod/apps/endpoint-copier-operator/readme/</link>
-      <pubDate>Wed, 04 Feb 2026 10:32:55 +0100</pubDate>
+      <pubDate>Mon, 09 Feb 2026 01:08:33 +0100</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/posts/homelab/k3s-prod/apps/endpoint-copier-operator/readme/</guid>
       <description>Dieses Dokument beschreibt die Bereitstellung des SUSE Endpoint Copier Operators, der Kubernetes Services und deren Endpunkte synchronisiert.</description>
@@ -215,7 +215,7 @@ web(at)zyria.de&lt;/p&gt;
     <item>
       <title>Forgejo</title>
       <link>https://zyria.de/posts/homelab/k3s-prod/apps/forgejo/readme/</link>
-      <pubDate>Wed, 04 Feb 2026 10:32:55 +0100</pubDate>
+      <pubDate>Mon, 09 Feb 2026 01:08:33 +0100</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/posts/homelab/k3s-prod/apps/forgejo/readme/</guid>
       <description>Dieses Dokument beschreibt die Bereitstellung von Forgejo, einer quelloffenen, selbst gehosteten Git-Plattform.</description>
@@ -225,7 +225,7 @@ web(at)zyria.de&lt;/p&gt;
     <item>
       <title>Forgejo Runner</title>
       <link>https://zyria.de/posts/homelab/k3s-prod/apps/forgejo-runner/readme/</link>
-      <pubDate>Wed, 04 Feb 2026 10:32:55 +0100</pubDate>
+      <pubDate>Mon, 09 Feb 2026 01:08:33 +0100</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/posts/homelab/k3s-prod/apps/forgejo-runner/readme/</guid>
       <description>Dieses Dokument beschreibt die Bereitstellung von Forgejo Runner, einem Daemon zum Ausführen von CI/CD-Jobs für Forgejo-Instanzen.</description>
@@ -235,7 +235,7 @@ web(at)zyria.de&lt;/p&gt;
     <item>
       <title>Headscale</title>
       <link>https://zyria.de/posts/homelab/k3s-prod/apps/headscale/readme/</link>
-      <pubDate>Wed, 04 Feb 2026 10:32:55 +0100</pubDate>
+      <pubDate>Mon, 09 Feb 2026 01:08:33 +0100</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/posts/homelab/k3s-prod/apps/headscale/readme/</guid>
       <description>Dieses Dokument beschreibt die Bereitstellung von Headscale, einer quelloffenen, selbst gehosteten Implementierung des Tailscale Control Servers.</description>
@@ -245,7 +245,7 @@ web(at)zyria.de&lt;/p&gt;
     <item>
       <title>HedgeDoc</title>
       <link>https://zyria.de/posts/homelab/k3s-prod/apps/hedgedoc/readme/</link>
-      <pubDate>Wed, 04 Feb 2026 10:32:55 +0100</pubDate>
+      <pubDate>Mon, 09 Feb 2026 01:08:33 +0100</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/posts/homelab/k3s-prod/apps/hedgedoc/readme/</guid>
       <description>Dieses Dokument beschreibt die Bereitstellung von HedgeDoc, einem kollaborativen Markdown-Editor.</description>
@@ -255,7 +255,7 @@ web(at)zyria.de&lt;/p&gt;
     <item>
       <title>Home Assistant</title>
       <link>https://zyria.de/posts/homelab/k3s-prod/apps/home-assistant/readme/</link>
-      <pubDate>Wed, 04 Feb 2026 10:32:55 +0100</pubDate>
+      <pubDate>Mon, 09 Feb 2026 01:08:33 +0100</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/posts/homelab/k3s-prod/apps/home-assistant/readme/</guid>
       <description>Home Assistant ist das Gehirn des Smart Homes. Es ermöglicht die Steuerung und Automatisierung einer Vielzahl von Geräten und Diensten und stellt eine zentrale Benutzeroberfläche bereit.</description>
@@ -265,7 +265,7 @@ web(at)zyria.de&lt;/p&gt;
     <item>
       <title>hx53.de</title>
       <link>https://zyria.de/posts/homelab/k3s-prod/apps/hx53-de/readme/</link>
-      <pubDate>Wed, 04 Feb 2026 10:32:55 +0100</pubDate>
+      <pubDate>Mon, 09 Feb 2026 01:08:33 +0100</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/posts/homelab/k3s-prod/apps/hx53-de/readme/</guid>
       <description>Dieser Dienst hostet die Webseite hx53.de. Der Inhalt der Seite wird aus einem Git-Repository geklont und von einem Nginx-Webserver ausgeliefert.</description>
@@ -275,7 +275,7 @@ web(at)zyria.de&lt;/p&gt;
     <item>
       <title>IT-Tools</title>
       <link>https://zyria.de/posts/homelab/k3s-prod/apps/ittools/readme/</link>
-      <pubDate>Wed, 04 Feb 2026 10:32:55 +0100</pubDate>
+      <pubDate>Mon, 09 Feb 2026 01:08:33 +0100</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/posts/homelab/k3s-prod/apps/ittools/readme/</guid>
       <description>IT-Tools ist eine rein clientseitige Webanwendung, die eine Vielzahl von Werkzeugen wie Konverter, Formatierer, Generatoren und vieles mehr für den täglichen Gebrauch bereitstellt.</description>
@@ -285,7 +285,7 @@ web(at)zyria.de&lt;/p&gt;
     <item>
       <title>k3s Konfiguration</title>
       <link>https://zyria.de/posts/homelab/k3s-prod/apps/k3s/readme/</link>
-      <pubDate>Wed, 04 Feb 2026 10:32:55 +0100</pubDate>
+      <pubDate>Mon, 09 Feb 2026 01:08:33 +0100</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/posts/homelab/k3s-prod/apps/k3s/readme/</guid>
       <description>Dieser Ordner enthält grundlegende Konfigurationen für den k3s Kubernetes-Cluster, einschließlich des Local Path Provisioners und einer virtuellen IP für den Kubernetes API-Server.</description>
@@ -295,7 +295,7 @@ web(at)zyria.de&lt;/p&gt;
     <item>
       <title>Keel</title>
       <link>https://zyria.de/posts/homelab/k3s-prod/apps/keel/readme/</link>
-      <pubDate>Wed, 04 Feb 2026 10:32:55 +0100</pubDate>
+      <pubDate>Mon, 09 Feb 2026 01:08:33 +0100</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/posts/homelab/k3s-prod/apps/keel/readme/</guid>
       <description>Keel überwacht Container-Image-Repositories und Helm-Charts auf neue Versionen und aktualisiert die entsprechenden Deployments im Cluster automatisch gemäß den definierten Policies.</description>
@@ -305,7 +305,7 @@ web(at)zyria.de&lt;/p&gt;
     <item>
       <title>Kubernetes Descheduler</title>
       <link>https://zyria.de/posts/homelab/k3s-prod/apps/descheduler/readme/</link>
-      <pubDate>Wed, 04 Feb 2026 10:32:55 +0100</pubDate>
+      <pubDate>Mon, 09 Feb 2026 01:08:33 +0100</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/posts/homelab/k3s-prod/apps/descheduler/readme/</guid>
       <description>Dieses Dokument beschreibt die Bereitstellung des Kubernetes Deschedulers, eines Tools zur Optimierung der Pod-Platzierung in einem Cluster.</description>
@@ -315,7 +315,7 @@ web(at)zyria.de&lt;/p&gt;
     <item>
       <title>Longhorn</title>
       <link>https://zyria.de/posts/homelab/k3s-prod/apps/longhorn/readme/</link>
-      <pubDate>Wed, 04 Feb 2026 10:32:55 +0100</pubDate>
+      <pubDate>Mon, 09 Feb 2026 01:08:33 +0100</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/posts/homelab/k3s-prod/apps/longhorn/readme/</guid>
       <description>Longhorn bietet hochverfügbaren, persistenten Blockspeicher für stateful Anwendungen im Kubernetes-Cluster, indem es den lokalen Speicherplatz der Worker-Nodes nutzt und über das Netzwerk repliziert.</description>
@@ -325,7 +325,7 @@ web(at)zyria.de&lt;/p&gt;
     <item>
       <title>Mailstack</title>
       <link>https://zyria.de/posts/homelab/k3s-prod/apps/mailstack/readme/</link>
-      <pubDate>Wed, 04 Feb 2026 10:32:55 +0100</pubDate>
+      <pubDate>Mon, 09 Feb 2026 01:08:33 +0100</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/posts/homelab/k3s-prod/apps/mailstack/readme/</guid>
       <description>Dieser Mailstack integriert mehrere Komponenten wie Postfix, Dovecot, Rspamd und ClamAV, um einen robusten und sicheren E-Mail-Dienst mit Spam- und Virenfilterung bereitzustellen.</description>
@@ -335,7 +335,7 @@ web(at)zyria.de&lt;/p&gt;
     <item>
       <title>Maintenance Page</title>
       <link>https://zyria.de/posts/homelab/k3s-prod/apps/maintenance-page/readme/</link>
-      <pubDate>Wed, 04 Feb 2026 10:32:55 +0100</pubDate>
+      <pubDate>Mon, 09 Feb 2026 01:08:33 +0100</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/posts/homelab/k3s-prod/apps/maintenance-page/readme/</guid>
       <description>Dieser Dienst stellt eine generische Wartungsseite bereit, die von Traefik als Fallback für nicht erreichbare Dienste oder bei Fehlern wie 404 (Not Found) angezeigt werden kann.</description>
@@ -345,7 +345,7 @@ web(at)zyria.de&lt;/p&gt;
     <item>
       <title>Mastodon</title>
       <link>https://zyria.de/posts/homelab/k3s-prod/apps/mastodon/readme/</link>
-      <pubDate>Wed, 04 Feb 2026 10:32:55 +0100</pubDate>
+      <pubDate>Mon, 09 Feb 2026 01:08:33 +0100</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/posts/homelab/k3s-prod/apps/mastodon/readme/</guid>
       <description>Mastodon ist eine Open-Source-Alternative zu kommerziellen sozialen Netzwerken. Es ermöglicht Benutzern, eigene, unabhängige Server (Instanzen) zu betreiben, die über das ActivityPub-Protokoll miteinander kommunizieren können (Föderation).</description>
@@ -355,7 +355,7 @@ web(at)zyria.de&lt;/p&gt;
     <item>
       <title>Matrix</title>
       <link>https://zyria.de/posts/homelab/k3s-prod/apps/matrix/readme/</link>
-      <pubDate>Wed, 04 Feb 2026 10:32:55 +0100</pubDate>
+      <pubDate>Mon, 09 Feb 2026 01:08:33 +0100</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/posts/homelab/k3s-prod/apps/matrix/readme/</guid>
       <description>Diese Anwendung stellt einen Matrix-Homeserver (Synapse) und einen Web-Client (Element) bereit, um einen föderierten, Ende-zu-Ende-verschlüsselten Chat-Dienst zu betreiben.</description>
@@ -365,7 +365,7 @@ web(at)zyria.de&lt;/p&gt;
     <item>
       <title>Matrix Synapse Admin</title>
       <link>https://zyria.de/posts/homelab/k3s-prod/apps/matrix-admin/readme/</link>
-      <pubDate>Wed, 04 Feb 2026 10:32:55 +0100</pubDate>
+      <pubDate>Mon, 09 Feb 2026 01:08:33 +0100</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/posts/homelab/k3s-prod/apps/matrix-admin/readme/</guid>
       <description>Synapse Admin bietet eine einfache grafische Oberfläche, um Benutzer und Räume auf einem Synapse Homeserver zu verwalten, ohne die Admin-API direkt verwenden zu müssen.</description>
@@ -375,7 +375,7 @@ web(at)zyria.de&lt;/p&gt;
     <item>
       <title>MetalLB</title>
       <link>https://zyria.de/posts/homelab/k3s-prod/apps/metallb/readme/</link>
-      <pubDate>Wed, 04 Feb 2026 10:32:55 +0100</pubDate>
+      <pubDate>Mon, 09 Feb 2026 01:08:33 +0100</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/posts/homelab/k3s-prod/apps/metallb/readme/</guid>
       <description>MetalLB ermöglicht die Verwendung von Kubernetes-Services vom Typ &lt;code&gt;LoadBalancer&lt;/code&gt; in Clustern, die nicht bei einem Cloud-Anbieter laufen, indem es IP-Adressen aus einem konfigurierten Pool zuweist.</description>
@@ -385,7 +385,7 @@ web(at)zyria.de&lt;/p&gt;
     <item>
       <title>Mosquitto</title>
       <link>https://zyria.de/posts/homelab/k3s-prod/apps/mosquitto/readme/</link>
-      <pubDate>Wed, 04 Feb 2026 10:32:55 +0100</pubDate>
+      <pubDate>Mon, 09 Feb 2026 01:08:33 +0100</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/posts/homelab/k3s-prod/apps/mosquitto/readme/</guid>
       <description>Mosquitto dient als zentraler Message Broker für das MQTT-Protokoll und ermöglicht die Kommunikation zwischen verschiedenen IoT-Geräten und -Diensten im Smart Home.</description>
@@ -395,7 +395,7 @@ web(at)zyria.de&lt;/p&gt;
     <item>
       <title>MTA-STS Policy Server</title>
       <link>https://zyria.de/posts/homelab/k3s-prod/apps/mta-sts/readme/</link>
-      <pubDate>Wed, 04 Feb 2026 10:32:55 +0100</pubDate>
+      <pubDate>Mon, 09 Feb 2026 01:08:33 +0100</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/posts/homelab/k3s-prod/apps/mta-sts/readme/</guid>
       <description>Dieser Dienst verwendet einen Nginx-Server, um eine statische &lt;code&gt;mta-sts.txt&lt;/code&gt;-Datei unter dem &lt;code&gt;.well-known&lt;/code&gt;-Pfad für verschiedene Domains zu veröffentlichen und so die E-Mail-Sicherheit zu erhöhen.</description>
@@ -405,7 +405,7 @@ web(at)zyria.de&lt;/p&gt;
     <item>
       <title>Nextcloud</title>
       <link>https://zyria.de/posts/homelab/k3s-prod/apps/nextcloud/readme/</link>
-      <pubDate>Wed, 04 Feb 2026 10:32:55 +0100</pubDate>
+      <pubDate>Mon, 09 Feb 2026 01:08:33 +0100</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/posts/homelab/k3s-prod/apps/nextcloud/readme/</guid>
       <description>Nextcloud ist das Gehirn des Smart Homes. Es ermöglicht die Steuerung und Automatisierung einer Vielzahl von Geräten und Diensten und stellt eine zentrale Benutzeroberfläche bereit.</description>
@@ -415,7 +415,7 @@ web(at)zyria.de&lt;/p&gt;
     <item>
       <title>NFS Subdir External Provisioner</title>
       <link>https://zyria.de/posts/homelab/k3s-prod/apps/nfs-provisioner/readme/</link>
-      <pubDate>Wed, 04 Feb 2026 10:32:55 +0100</pubDate>
+      <pubDate>Mon, 09 Feb 2026 01:08:33 +0100</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/posts/homelab/k3s-prod/apps/nfs-provisioner/readme/</guid>
       <description>This document describes the deployment of the NFS Subdir External Provisioner, which enables dynamic provisioning of Persistent Volumes using an existing NFS server.</description>
@@ -425,7 +425,7 @@ web(at)zyria.de&lt;/p&gt;
     <item>
       <title>OpenDTU</title>
       <link>https://zyria.de/posts/homelab/k3s-prod/apps/opendtu/readme/</link>
-      <pubDate>Wed, 04 Feb 2026 10:32:55 +0100</pubDate>
+      <pubDate>Mon, 09 Feb 2026 01:08:33 +0100</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/posts/homelab/k3s-prod/apps/opendtu/readme/</guid>
       <description>Dieser Dienst stellt eine Weboberfläche bereit, die Daten von einem OpenDTU-Gerät empfängt, in einer Datenbank speichert und zur Visualisierung und Analyse anzeigt.</description>
@@ -435,7 +435,7 @@ web(at)zyria.de&lt;/p&gt;
     <item>
       <title>Paperless-ngx</title>
       <link>https://zyria.de/posts/homelab/k3s-prod/apps/paperless/readme/</link>
-      <pubDate>Wed, 04 Feb 2026 10:32:55 +0100</pubDate>
+      <pubDate>Mon, 09 Feb 2026 01:08:33 +0100</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/posts/homelab/k3s-prod/apps/paperless/readme/</guid>
       <description>This document describes the Paperless-ngx deployment, a document management system that transforms physical documents into searchable digital archives.</description>
@@ -445,7 +445,7 @@ web(at)zyria.de&lt;/p&gt;
     <item>
       <title>Pi-hole</title>
       <link>https://zyria.de/posts/homelab/k3s-prod/apps/pihole/pihole/</link>
-      <pubDate>Wed, 04 Feb 2026 10:32:55 +0100</pubDate>
+      <pubDate>Mon, 09 Feb 2026 01:08:33 +0100</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/posts/homelab/k3s-prod/apps/pihole/pihole/</guid>
       <description>This document describes the Pi-hole deployment, a network-wide ad blocker and DNS sinkhole.</description>
@@ -455,7 +455,7 @@ web(at)zyria.de&lt;/p&gt;
     <item>
       <title>Plex Media Server</title>
       <link>https://zyria.de/posts/homelab/k3s-prod/apps/plex/readme/</link>
-      <pubDate>Wed, 04 Feb 2026 10:32:55 +0100</pubDate>
+      <pubDate>Mon, 09 Feb 2026 01:08:33 +0100</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/posts/homelab/k3s-prod/apps/plex/readme/</guid>
       <description>Dieses Dokument beschreibt die Bereitstellung des Plex Media Servers, einer beliebten Anwendung zum Organisieren und Streamen von Medien.</description>
@@ -465,7 +465,7 @@ web(at)zyria.de&lt;/p&gt;
     <item>
       <title>Prometheus</title>
       <link>https://zyria.de/posts/homelab/k3s-prod/apps/prometheus/readme/</link>
-      <pubDate>Wed, 04 Feb 2026 10:32:55 +0100</pubDate>
+      <pubDate>Mon, 09 Feb 2026 01:08:33 +0100</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/posts/homelab/k3s-prod/apps/prometheus/readme/</guid>
       <description>This document describes the Prometheus deployment, an open-source monitoring and alerting toolkit.</description>
@@ -475,7 +475,7 @@ web(at)zyria.de&lt;/p&gt;
     <item>
       <title>quaecki.de Website</title>
       <link>https://zyria.de/posts/homelab/k3s-prod/apps/quaecki-de/readme/</link>
-      <pubDate>Wed, 04 Feb 2026 10:32:55 +0100</pubDate>
+      <pubDate>Mon, 09 Feb 2026 01:08:33 +0100</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/posts/homelab/k3s-prod/apps/quaecki-de/readme/</guid>
       <description>This document describes the deployment of the static website for quaecki.de.</description>
@@ -485,7 +485,7 @@ web(at)zyria.de&lt;/p&gt;
     <item>
       <title>Reloader</title>
       <link>https://zyria.de/posts/homelab/k3s-prod/apps/reloader/readme/</link>
-      <pubDate>Wed, 04 Feb 2026 10:32:55 +0100</pubDate>
+      <pubDate>Mon, 09 Feb 2026 01:08:33 +0100</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/posts/homelab/k3s-prod/apps/reloader/readme/</guid>
       <description>Dieses Dokument beschreibt die Bereitstellung des Reloader, eines Kubernetes-Controllers, der Pod-Neustarts bei ConfigMap- oder Secret-Updates automatisiert.</description>
@@ -495,7 +495,7 @@ web(at)zyria.de&lt;/p&gt;
     <item>
       <title>Roundcube Webmail</title>
       <link>https://zyria.de/posts/homelab/k3s-prod/apps/roundcube/readme/</link>
-      <pubDate>Wed, 04 Feb 2026 10:32:55 +0100</pubDate>
+      <pubDate>Mon, 09 Feb 2026 01:08:33 +0100</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/posts/homelab/k3s-prod/apps/roundcube/readme/</guid>
       <description>This document describes the Roundcube Webmail deployment, an open-source, browser-based IMAP email client.</description>
@@ -505,7 +505,7 @@ web(at)zyria.de&lt;/p&gt;
     <item>
       <title>Self Service Password</title>
       <link>https://zyria.de/posts/homelab/k3s-prod/apps/self-service-password/readme/</link>
-      <pubDate>Wed, 04 Feb 2026 10:32:55 +0100</pubDate>
+      <pubDate>Mon, 09 Feb 2026 01:08:33 +0100</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/posts/homelab/k3s-prod/apps/self-service-password/readme/</guid>
       <description>This document describes the deployment of LTB Self-Service Password, a web application for users to manage their own passwords in an LDAP directory.</description>
@@ -515,7 +515,7 @@ web(at)zyria.de&lt;/p&gt;
     <item>
       <title>SolarChart Website</title>
       <link>https://zyria.de/posts/homelab/k3s-prod/apps/solarchart-de/readme/</link>
-      <pubDate>Wed, 04 Feb 2026 10:32:55 +0100</pubDate>
+      <pubDate>Mon, 09 Feb 2026 01:08:33 +0100</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/posts/homelab/k3s-prod/apps/solarchart-de/readme/</guid>
       <description>Dieses Dokument beschreibt die Bereitstellung der statischen Webseite für SolarChart, die Solarprognosedaten bereitstellt.</description>
@@ -525,7 +525,7 @@ web(at)zyria.de&lt;/p&gt;
     <item>
       <title>SolarFlow Topic Mapper (ACE1500)</title>
       <link>https://zyria.de/posts/homelab/k3s-prod/apps/ace1500/readme/</link>
-      <pubDate>Wed, 04 Feb 2026 10:32:55 +0100</pubDate>
+      <pubDate>Mon, 09 Feb 2026 01:08:33 +0100</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/posts/homelab/k3s-prod/apps/ace1500/readme/</guid>
       <description>Dieses Dokument beschreibt die Bereitstellung einer benutzerdefinierten SolarFlow Topic Mapper-Anwendung für ein spezifisches SolarFlow-Gerät (ACE1500).</description>
@@ -535,7 +535,7 @@ web(at)zyria.de&lt;/p&gt;
     <item>
       <title>SolarFlow Topic Mapper (SF1200)</title>
       <link>https://zyria.de/posts/homelab/k3s-prod/apps/sf1200/readme/</link>
-      <pubDate>Wed, 04 Feb 2026 10:32:55 +0100</pubDate>
+      <pubDate>Mon, 09 Feb 2026 01:08:33 +0100</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/posts/homelab/k3s-prod/apps/sf1200/readme/</guid>
       <description>Dieser Dienst verbindet sich mit dem lokalen MQTT-Broker und mappt die spezifischen, geräteabhängigen MQTT-Topics des Zendure SolarFlow Systems auf generische, leichter verständliche Topics um.</description>
@@ -545,7 +545,7 @@ web(at)zyria.de&lt;/p&gt;
     <item>
       <title>SolarFlow Topic Mapper (SF2000-2)</title>
       <link>https://zyria.de/posts/homelab/k3s-prod/apps/sf2000-2/readme/</link>
-      <pubDate>Wed, 04 Feb 2026 10:32:55 +0100</pubDate>
+      <pubDate>Mon, 09 Feb 2026 01:08:33 +0100</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/posts/homelab/k3s-prod/apps/sf2000-2/readme/</guid>
       <description>Dieser Dienst verbindet sich mit dem lokalen MQTT-Broker und mappt die spezifischen, geräteabhängigen MQTT-Topics des Zendure SolarFlow Systems auf generische, leichter verständliche Topics um.</description>
@@ -555,7 +555,7 @@ web(at)zyria.de&lt;/p&gt;
     <item>
       <title>SolarFlow Topic Mapper (SF2000)</title>
       <link>https://zyria.de/posts/homelab/k3s-prod/apps/sf2000/readme/</link>
-      <pubDate>Wed, 04 Feb 2026 10:32:55 +0100</pubDate>
+      <pubDate>Mon, 09 Feb 2026 01:08:33 +0100</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/posts/homelab/k3s-prod/apps/sf2000/readme/</guid>
       <description>Dieser Dienst verbindet sich mit dem lokalen MQTT-Broker und mappt die spezifischen, geräteabhängigen MQTT-Topics des Zendure SolarFlow Systems auf generische, leichter verständliche Topics um.</description>
@@ -565,7 +565,7 @@ web(at)zyria.de&lt;/p&gt;
     <item>
       <title>System Upgrade Controller</title>
       <link>https://zyria.de/posts/homelab/k3s-prod/apps/system-upgrade-controller/readme/</link>
-      <pubDate>Wed, 04 Feb 2026 10:32:55 +0100</pubDate>
+      <pubDate>Mon, 09 Feb 2026 01:08:33 +0100</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/posts/homelab/k3s-prod/apps/system-upgrade-controller/readme/</guid>
       <description>This document describes the deployment of the Rancher System Upgrade Controller, a Kubernetes-native upgrade controller for nodes.</description>
@@ -575,7 +575,7 @@ web(at)zyria.de&lt;/p&gt;
     <item>
       <title>Traefik Ingress Controller</title>
       <link>https://zyria.de/posts/homelab/k3s-prod/apps/traefik/readme/</link>
-      <pubDate>Wed, 04 Feb 2026 10:32:55 +0100</pubDate>
+      <pubDate>Mon, 09 Feb 2026 01:08:33 +0100</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/posts/homelab/k3s-prod/apps/traefik/readme/</guid>
       <description>This document describes the Traefik Ingress Controller deployment, a modern load balancer and reverse proxy for Kubernetes.</description>
@@ -585,7 +585,7 @@ web(at)zyria.de&lt;/p&gt;
     <item>
       <title>Trivy Operator</title>
       <link>https://zyria.de/posts/homelab/k3s-prod/apps/trivy/readme/</link>
-      <pubDate>Wed, 04 Feb 2026 10:32:55 +0100</pubDate>
+      <pubDate>Mon, 09 Feb 2026 01:08:33 +0100</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/posts/homelab/k3s-prod/apps/trivy/readme/</guid>
       <description>Dieses Dokument beschreibt die Bereitstellung des Trivy Operators, eines Kubernetes-nativen Sicherheitstools, das Ihren Cluster kontinuierlich auf Sicherheitsprobleme scannt.</description>
@@ -595,7 +595,7 @@ web(at)zyria.de&lt;/p&gt;
     <item>
       <title>UniFi Netzwerk-Anwendung</title>
       <link>https://zyria.de/posts/homelab/k3s-prod/apps/unifi-controller/readme/</link>
-      <pubDate>Wed, 04 Feb 2026 10:32:55 +0100</pubDate>
+      <pubDate>Mon, 09 Feb 2026 01:08:33 +0100</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/posts/homelab/k3s-prod/apps/unifi-controller/readme/</guid>
       <description>Dieses Dokument beschreibt die Bereitstellung der UniFi Netzwerk-Anwendung, einer Software-Defined Networking (SDN)-Plattform zur Verwaltung von UniFi-Geräten.</description>
@@ -605,7 +605,7 @@ web(at)zyria.de&lt;/p&gt;
     <item>
       <title>Uptime Kuma</title>
       <link>https://zyria.de/posts/homelab/k3s-prod/apps/uptime-kuma/readme/</link>
-      <pubDate>Wed, 04 Feb 2026 10:32:55 +0100</pubDate>
+      <pubDate>Mon, 09 Feb 2026 01:08:33 +0100</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/posts/homelab/k3s-prod/apps/uptime-kuma/readme/</guid>
       <description>This document describes the Uptime Kuma deployment, a self-hosted, open-source monitoring tool for tracking service uptime and performance.</description>
@@ -615,7 +615,7 @@ web(at)zyria.de&lt;/p&gt;
     <item>
       <title>whoami</title>
       <link>https://zyria.de/posts/homelab/k3s-prod/apps/whoami/readme/</link>
-      <pubDate>Wed, 04 Feb 2026 10:32:55 +0100</pubDate>
+      <pubDate>Mon, 09 Feb 2026 01:08:33 +0100</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/posts/homelab/k3s-prod/apps/whoami/readme/</guid>
       <description>whoami ist ein minimaler Webserver, der HTTP-Request-Header, Hostname und IP-Adresse des Pods anzeigt. Er wird hauptsächlich für Debugging-Zwecke im Kontext von Ingress und Netzwerk-Routing verwendet.</description>
@@ -625,7 +625,7 @@ web(at)zyria.de&lt;/p&gt;
     <item>
       <title>WireGuard VPN Server</title>
       <link>https://zyria.de/posts/homelab/k3s-prod/apps/wireguard/readme/</link>
-      <pubDate>Wed, 04 Feb 2026 10:32:55 +0100</pubDate>
+      <pubDate>Mon, 09 Feb 2026 01:08:33 +0100</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/posts/homelab/k3s-prod/apps/wireguard/readme/</guid>
       <description>This document describes the WireGuard VPN Server deployment, a modern, fast, and secure VPN protocol.</description>
@@ -635,7 +635,7 @@ web(at)zyria.de&lt;/p&gt;
     <item>
       <title>Zammad Helpdesk</title>
       <link>https://zyria.de/posts/homelab/k3s-prod/apps/zammad/readme/</link>
-      <pubDate>Wed, 04 Feb 2026 10:32:55 +0100</pubDate>
+      <pubDate>Mon, 09 Feb 2026 01:08:33 +0100</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/posts/homelab/k3s-prod/apps/zammad/readme/</guid>
       <description>This document describes the Zammad Helpdesk deployment, an open-source, web-based helpdesk and customer support system.</description>
@@ -645,7 +645,7 @@ web(at)zyria.de&lt;/p&gt;
     <item>
       <title>zyria.de Webseite</title>
       <link>https://zyria.de/posts/homelab/k3s-prod/apps/zyria-de/readme/</link>
-      <pubDate>Wed, 04 Feb 2026 10:32:55 +0100</pubDate>
+      <pubDate>Mon, 09 Feb 2026 01:08:33 +0100</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/posts/homelab/k3s-prod/apps/zyria-de/readme/</guid>
       <description>Dieses Dokument beschreibt die Bereitstellung der statischen Webseite für zyria.de, deren Inhalt aus einem Git-Repository synchronisiert wird.</description>
