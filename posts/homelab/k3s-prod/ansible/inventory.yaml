@@ -13,8 +13,8 @@ k3s_cluster:
       hosts:
         worker1.zyria.de:
           ansible_host: 192.168.178.161
-        worker2.zyria.de:
-          ansible_host: 192.168.178.162
+#        worker2.zyria.de:
+#          ansible_host: 192.168.178.162
 #        worker3.zyria.de:
 #          ansible_host: 192.168.178.163
 #        worker4.zyria.de:
@@ -25,7 +25,7 @@ k3s_cluster:
   vars:
     ansible_port: 22
     ansible_user: root
-    k3s_version: v1.33.5+k3s1
+    k3s_version: v1.35.0+k3s1
     token: !vault |
           $ANSIBLE_VAULT;1.1;AES256
           37303231303839393633303836613065333935663261333739616666393064336563323731363766
@@ -36,7 +36,7 @@ k3s_cluster:
           62663431396639373736656466303937643063353362336533636335383362616137336134616537
           34373638333833633730333738636330646263343535613739366665313362616662326235363361
           63333865633333663562
-    api_endpoint: "192.168.178.90"
+    api_endpoint: "192.168.178.151"
     extra_server_args: ""
     extra_agent_args: ""
 
@@ -66,10 +66,12 @@ k3s_cluster:
         - "192.168.178.151"
         - "192.168.178.152"
         - "192.168.178.153"
-        - "192.168.178.90"
-        - "2003:a:b16:4700::90"
+        - "192.168.178.29"
+        - "2003:a:b16:4700::29"
+        - "2003:a:b16:4700:be24:11ff:fe63:f371"
       write-kubeconfig-mode: 644
       flannel-ipv6-masq: true
+      flannel-iface: eth0
       flannel-backend: wireguard-native
       kubelet-arg: "node-ip=0.0.0.0"
       kube-proxy-arg:

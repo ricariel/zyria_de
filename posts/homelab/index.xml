@@ -9,7 +9,7 @@
     <managingEditor>fabrice@zyria.de (Fabrice Kirchner)</managingEditor>
     <webMaster>fabrice@zyria.de (Fabrice Kirchner)</webMaster>
     
-    <lastBuildDate>Tue, 01 Jul 2025 13:37:34 +0200</lastBuildDate><atom:link href="https://zyria.de/posts/homelab/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 30 Jan 2026 14:24:56 +0100</lastBuildDate><atom:link href="https://zyria.de/posts/homelab/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Windows Snippets</title>
@@ -27,122 +27,7 @@
       <pubDate>Tue, 27 Jan 2026 14:06:57 +0100</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/posts/homelab/debian-upgrade/</guid>
-      <description>&lt;p&gt;Wie man Debian zuverlässig auf den Stand bringt. Danke an &lt;a
-  href=&#34;https://doku.lrz.de/upgrade-auf-debian-13-trixie-1921298568.html&#34;
-    target=&#34;_blank&#34;
-  &gt;doku.lrz.de&lt;/a&gt; die dies bei jedem Release aufschreiben.&lt;/p&gt;
-&lt;p&gt;Debian stellt auch eine &lt;a
-  href=&#34;https://www.debian.org/releases/stable/release-notes/upgrading.de.html&#34;
-    target=&#34;_blank&#34;
-  &gt;Anleitung&lt;/a&gt; zur Verfügung.&lt;/p&gt;
-&lt;p&gt;Proxmox hat für jedes Release einen &lt;a
-  href=&#34;https://pve.proxmox.com/wiki/Category:Upgrade&#34;
-    target=&#34;_blank&#34;
-  &gt;Wiki&lt;/a&gt; Artikel. Auf für den &lt;a
-  href=&#34;https://pbs.proxmox.com/wiki/Category:Upgrade&#34;
-    target=&#34;_blank&#34;
-  &gt;Proxmox Backup Server&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h2 class=&#34;relative group&#34;&gt;Vorbereitungen
-    &lt;div id=&#34;vorbereitungen&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
-    
-    &lt;span
-        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;
-        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#vorbereitungen&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;
-    &lt;/span&gt;
-    
-&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;apt update
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;apt full-upgrade
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h2 class=&#34;relative group&#34;&gt;Paketquellen aktualisieren
-    &lt;div id=&#34;paketquellen-aktualisieren&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
-    
-    &lt;span
-        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;
-        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#paketquellen-aktualisieren&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;
-    &lt;/span&gt;
-    
-&lt;/h2&gt;
-
-&lt;h3 class=&#34;relative group&#34;&gt;Versionen
-    &lt;div id=&#34;versionen&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
-    
-    &lt;span
-        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;
-        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#versionen&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;
-    &lt;/span&gt;
-    
-&lt;/h3&gt;
-&lt;table&gt;
-  &lt;thead&gt;
-      &lt;tr&gt;
-          &lt;th&gt;Versionsnummer&lt;/th&gt;
-          &lt;th&gt;Versionsname&lt;/th&gt;
-          &lt;th&gt;Replace&lt;/th&gt;
-      &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-      &lt;tr&gt;
-          &lt;td&gt;9&lt;/td&gt;
-          &lt;td&gt;Stretch&lt;/td&gt;
-          &lt;td&gt;:%s/stretch/buster/&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;10&lt;/td&gt;
-          &lt;td&gt;buster&lt;/td&gt;
-          &lt;td&gt;:%s/buster/bullseye/&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;11&lt;/td&gt;
-          &lt;td&gt;bullseye&lt;/td&gt;
-          &lt;td&gt;:%s/bullseye/bookworm/&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;12&lt;/td&gt;
-          &lt;td&gt;bookworm&lt;/td&gt;
-          &lt;td&gt;:%s/bookworm/trixie/&lt;/td&gt;
-      &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h3 class=&#34;relative group&#34;&gt;Default sources.list
-    &lt;div id=&#34;default-sourceslist&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
-    
-    &lt;span
-        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;
-        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#default-sourceslist&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;
-    &lt;/span&gt;
-    
-&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;cat &lt;span class=&#34;s&#34;&gt;&amp;lt;&amp;lt;EOF &amp;gt; /etc/apt/sources.list
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s&#34;&gt;deb http://deb.debian.org/debian trixie main contrib non-free non-free-firmware
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s&#34;&gt;deb http://deb.debian.org/debian trixie-updates main contrib non-free non-free-firmware
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;4&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s&#34;&gt;deb http://deb.debian.org/debian-security/ trixie-security main contrib non-free non-free-firmware
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;5&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s&#34;&gt;EOF&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h3 class=&#34;relative group&#34;&gt;Alle Sources ändern
-    &lt;div id=&#34;alle-sources-ändern&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
-    
-    &lt;span
-        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;
-        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#alle-sources-%c3%a4ndern&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;
-    &lt;/span&gt;
-    
-&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;sed -i &lt;span class=&#34;s1&#34;&gt;&amp;#39;s:bookworm:trixie:&amp;#39;&lt;/span&gt; /etc/apt/sources.list
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;sed -i &lt;span class=&#34;s1&#34;&gt;&amp;#39;s:bookworm:trixie:&amp;#39;&lt;/span&gt; /etc/apt/sources.list.d/*.list
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h3 class=&#34;relative group&#34;&gt;Apt Preferences prüfen
-    &lt;div id=&#34;apt-preferences-prüfen&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
-    
-    &lt;span
-        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;
-        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#apt-preferences-pr%c3%bcfen&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;
-    &lt;/span&gt;
-    
-&lt;/h3&gt;
-&lt;p&gt;/etc/apt/preferences.d/*&lt;/p&gt;</description>
+      <description>&lt;p&gt;Wie man Debian zuverlässig auf den Stand bringt. Danke an &lt;a href=&#34;https://doku.lrz.de/upgrade-auf-debian-13-trixie-1921298568.html&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;doku.lrz.de&lt;/a&gt; die dies bei jedem Release aufschreiben.&lt;/p&gt;&#xA;&lt;p&gt;Debian stellt auch eine &lt;a href=&#34;https://www.debian.org/releases/stable/release-notes/upgrading.de.html&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;Anleitung&lt;/a&gt; zur Verfügung.&lt;/p&gt;&#xA;&lt;p&gt;Proxmox hat für jedes Release einen &lt;a href=&#34;https://pve.proxmox.com/wiki/Category:Upgrade&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;Wiki&lt;/a&gt; Artikel. Auf für den &lt;a href=&#34;https://pbs.proxmox.com/wiki/Category:Upgrade&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;Proxmox Backup Server&lt;/a&gt;.&lt;/p&gt;&#xA;&#xA;&lt;h2 class=&#34;relative group&#34;&gt;Vorbereitungen&#xA;    &lt;div id=&#34;vorbereitungen&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#vorbereitungen&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;div class=&#34;highlight-wrapper&#34;&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;apt update&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;apt full-upgrade&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&#xA;&#xA;&lt;h2 class=&#34;relative group&#34;&gt;Paketquellen aktualisieren&#xA;    &lt;div id=&#34;paketquellen-aktualisieren&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#paketquellen-aktualisieren&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&#xA;&lt;h3 class=&#34;relative group&#34;&gt;Versionen&#xA;    &lt;div id=&#34;versionen&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#versionen&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h3&gt;&#xA;&lt;table&gt;&#xA;  &lt;thead&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;th&gt;Versionsnummer&lt;/th&gt;&#xA;          &lt;th&gt;Versionsname&lt;/th&gt;&#xA;          &lt;th&gt;Replace&lt;/th&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/thead&gt;&#xA;  &lt;tbody&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;9&lt;/td&gt;&#xA;          &lt;td&gt;Stretch&lt;/td&gt;&#xA;          &lt;td&gt;:%s/stretch/buster/&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;10&lt;/td&gt;&#xA;          &lt;td&gt;buster&lt;/td&gt;&#xA;          &lt;td&gt;:%s/buster/bullseye/&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;11&lt;/td&gt;&#xA;          &lt;td&gt;bullseye&lt;/td&gt;&#xA;          &lt;td&gt;:%s/bullseye/bookworm/&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;12&lt;/td&gt;&#xA;          &lt;td&gt;bookworm&lt;/td&gt;&#xA;          &lt;td&gt;:%s/bookworm/trixie/&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/tbody&gt;&#xA;&lt;/table&gt;&#xA;&#xA;&lt;h3 class=&#34;relative group&#34;&gt;Default sources.list&#xA;    &lt;div id=&#34;default-sourceslist&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#default-sourceslist&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h3&gt;&#xA;&lt;div class=&#34;highlight-wrapper&#34;&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;cat &lt;span class=&#34;s&#34;&gt;&amp;lt;&amp;lt;EOF &amp;gt; /etc/apt/sources.list&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s&#34;&gt;deb http://deb.debian.org/debian trixie main contrib non-free non-free-firmware&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s&#34;&gt;deb http://deb.debian.org/debian trixie-updates main contrib non-free non-free-firmware&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;4&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s&#34;&gt;deb http://deb.debian.org/debian-security/ trixie-security main contrib non-free non-free-firmware&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;5&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s&#34;&gt;EOF&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&#xA;&#xA;&lt;h3 class=&#34;relative group&#34;&gt;Alle Sources ändern&#xA;    &lt;div id=&#34;alle-sources-ändern&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#alle-sources-%c3%a4ndern&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h3&gt;&#xA;&lt;div class=&#34;highlight-wrapper&#34;&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;sed -i &lt;span class=&#34;s1&#34;&gt;&amp;#39;s:bookworm:trixie:&amp;#39;&lt;/span&gt; /etc/apt/sources.list&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;sed -i &lt;span class=&#34;s1&#34;&gt;&amp;#39;s:bookworm:trixie:&amp;#39;&lt;/span&gt; /etc/apt/sources.list.d/*.list&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&#xA;&#xA;&lt;h3 class=&#34;relative group&#34;&gt;Apt Preferences prüfen&#xA;    &lt;div id=&#34;apt-preferences-prüfen&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#apt-preferences-pr%c3%bcfen&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h3&gt;&#xA;&lt;p&gt;/etc/apt/preferences.d/*&lt;/p&gt;</description>
       
     </item>
     
@@ -162,16 +47,7 @@
       <pubDate>Tue, 04 Nov 2025 10:07:02 +0100</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/posts/homelab/windows_install/</guid>
-      <description>&lt;h2 class=&#34;relative group&#34;&gt;Anleitung: Neuen Windows-Rechner in Active Directory (AD) aufnehmen
-    &lt;div id=&#34;anleitung-neuen-windows-rechner-in-active-directory-ad-aufnehmen&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
-    
-    &lt;span
-        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;
-        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#anleitung-neuen-windows-rechner-in-active-directory-ad-aufnehmen&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;
-    &lt;/span&gt;
-    
-&lt;/h2&gt;
-&lt;p&gt;Diese Anleitung beschreibt den Prozess, wie man einen fabrikneuen Windows-Rechner (im &amp;ldquo;Out-of-Box Experience&amp;rdquo;-Modus, OOBE) einrichtet, die erzwungene Anmeldung mit einem Microsoft-Konto umgeht und den Rechner anschließend in eine lokale Active Directory-Domäne aufnimmt.&lt;/p&gt;</description>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;Anleitung: Neuen Windows-Rechner in Active Directory (AD) aufnehmen&#xA;    &lt;div id=&#34;anleitung-neuen-windows-rechner-in-active-directory-ad-aufnehmen&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#anleitung-neuen-windows-rechner-in-active-directory-ad-aufnehmen&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;Diese Anleitung beschreibt den Prozess, wie man einen fabrikneuen Windows-Rechner (im &amp;ldquo;Out-of-Box Experience&amp;rdquo;-Modus, OOBE) einrichtet, die erzwungene Anmeldung mit einem Microsoft-Konto umgeht und den Rechner anschließend in eine lokale Active Directory-Domäne aufnimmt.&lt;/p&gt;</description>
       
     </item>
     
@@ -221,19 +97,7 @@
       <pubDate>Tue, 01 Jul 2025 13:37:34 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/posts/homelab/login/</guid>
-      <description>&lt;p&gt;Alle Zugangsdaten sind entweder in der Persönlichen Keepass Datendank (für
-personalisierte Logindaten) oder in der IT Datenbank. Der Login auf die Server
-geschieht über SSH Schlüssel. Ein Login mit dem Passwort ist nicht vorgesehen.&lt;/p&gt;
-&lt;p&gt;Für den externen Zugriff ist der Login über &lt;a
-  href=&#34;https://vpn.zyria.de&#34;
-    target=&#34;_blank&#34;
-  &gt;VPN&lt;/a&gt; oder einem Bastion Host
-&lt;a
-  href=&#34;mailto:bastion@vpn.zyria.de&#34;&gt;bastion@vpn.zyria.de&lt;/a&gt;:3022 möglich. &lt;/p&gt;
-&lt;p&gt;Generell sollte jedoch ein Login auf die Server nur zum Suchen von Fehlern
-stattfinden. Die Verwaltung erfolgt ausschliesslich über Ansible. Jede händisch
-durchgeführte Änderung muss im Nachhinein in Ansible eingepflegt und getestet
-werden.&lt;/p&gt;</description>
+      <description>&lt;p&gt;Alle Zugangsdaten sind entweder in der Persönlichen Keepass Datendank (für&#xA;personalisierte Logindaten) oder in der IT Datenbank. Der Login auf die Server&#xA;geschieht über SSH Schlüssel. Ein Login mit dem Passwort ist nicht vorgesehen.&lt;/p&gt;&#xA;&lt;p&gt;Für den externen Zugriff ist der Login über &lt;a href=&#34;https://vpn.zyria.de&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;VPN&lt;/a&gt; oder einem Bastion Host&#xA;&lt;a href=&#34;mailto:bastion@vpn.zyria.de&#34; &gt;bastion@vpn.zyria.de&lt;/a&gt;:3022 möglich. &lt;/p&gt;&#xA;&lt;p&gt;Generell sollte jedoch ein Login auf die Server nur zum Suchen von Fehlern&#xA;stattfinden. Die Verwaltung erfolgt ausschliesslich über Ansible. Jede händisch&#xA;durchgeführte Änderung muss im Nachhinein in Ansible eingepflegt und getestet&#xA;werden.&lt;/p&gt;</description>
       
     </item>
     
@@ -273,28 +137,7 @@ werden.&lt;/p&gt;</description>
       <pubDate>Tue, 01 Jul 2025 13:37:34 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/posts/homelab/verwaltung/</guid>
-      <description>&lt;p&gt;Wir verwenden zur generellen Verwaltung von Servern Ansible. Für manche Dienste
-ist es jedoch notwendig oder praktikabler dies über vorhandene Portale zu
-realisieren.&lt;/p&gt;
-
-&lt;h2 class=&#34;relative group&#34;&gt;Core-Networks (DNS)
-    &lt;div id=&#34;core-networks-dns&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
-    
-    &lt;span
-        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;
-        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#core-networks-dns&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;
-    &lt;/span&gt;
-    
-&lt;/h2&gt;
-&lt;p&gt;Unsere DNS Server werden bei &lt;a
-  href=&#34;https://www.core-networks.de&#34;
-    target=&#34;_blank&#34;
-  &gt;Core-Networks&lt;/a&gt;
-gehostet. In deren &lt;a
-  href=&#34;https://iface.core-networks.de&#34;
-    target=&#34;_blank&#34;
-  &gt;Webinterface&lt;/a&gt; lassen sich
-alle relevanten Änderungen durchführen.&lt;/p&gt;</description>
+      <description>&lt;p&gt;Wir verwenden zur generellen Verwaltung von Servern Ansible. Für manche Dienste&#xA;ist es jedoch notwendig oder praktikabler dies über vorhandene Portale zu&#xA;realisieren.&lt;/p&gt;&#xA;&#xA;&lt;h2 class=&#34;relative group&#34;&gt;Core-Networks (DNS)&#xA;    &lt;div id=&#34;core-networks-dns&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#core-networks-dns&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;Unsere DNS Server werden bei &lt;a href=&#34;https://www.core-networks.de&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;Core-Networks&lt;/a&gt;&#xA;gehostet. In deren &lt;a href=&#34;https://iface.core-networks.de&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;Webinterface&lt;/a&gt; lassen sich&#xA;alle relevanten Änderungen durchführen.&lt;/p&gt;</description>
       
     </item>
     
@@ -304,30 +147,7 @@ alle relevanten Änderungen durchführen.&lt;/p&gt;</description>
       <pubDate>Tue, 01 Jul 2025 13:37:34 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/posts/homelab/setup_windows/</guid>
-      <description>&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;Windows Rechner mit Professional Version kaufen (Aufgeräumt wird über Ansible)&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Windows Rechner vollständig laden&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Beim ersten Anschalten lokalen Benutzer oder Domäne auswählen.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Lokaler Benutzer ist der Hauptnutzer des Gerätes.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Kennwort wird in der IT Datenbank gesichert&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Alle Datensammelei während des Setups verbieten&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Rechner in Domäne aufnehmen&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Ansible Setup Script starten (liegt im ansible-main Repo unter files)&lt;/p&gt;</description>
+      <description>&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Windows Rechner mit Professional Version kaufen (Aufgeräumt wird über Ansible)&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Windows Rechner vollständig laden&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Beim ersten Anschalten lokalen Benutzer oder Domäne auswählen.&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Lokaler Benutzer ist der Hauptnutzer des Gerätes.&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Kennwort wird in der IT Datenbank gesichert&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Alle Datensammelei während des Setups verbieten&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Rechner in Domäne aufnehmen&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Ansible Setup Script starten (liegt im ansible-main Repo unter files)&lt;/p&gt;</description>
       
     </item>
     
@@ -347,25 +167,7 @@ alle relevanten Änderungen durchführen.&lt;/p&gt;</description>
       <pubDate>Tue, 01 Jul 2025 13:37:34 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/posts/homelab/windows_autologon/</guid>
-      <description>&lt;h2 class=&#34;relative group&#34;&gt;AutoLogon
-    &lt;div id=&#34;autologon&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
-    
-    &lt;span
-        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;
-        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#autologon&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;
-    &lt;/span&gt;
-    
-&lt;/h2&gt;
-&lt;p&gt;Erstelle eine .reg Datei mit folgendem Inhalt und führe sie auf dem Zielrechner
-aus.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-registry&#34; data-lang=&#34;registry&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;Windows Registry Editor Version 5.00
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;HKEY_LOCAL_MACHINE&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon]&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;4&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;na&#34;&gt;&amp;#34;AutoAdminLogon&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;1&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;5&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;na&#34;&gt;&amp;#34;DefaultUserName&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;BENUTZERNAME&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;6&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;na&#34;&gt;&amp;#34;DefaultDomainName&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;DOMÄNE&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;7&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;na&#34;&gt;&amp;#34;DefaultPassword&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;*****&amp;#39;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;AutoLogon&#xA;    &lt;div id=&#34;autologon&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#autologon&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;Erstelle eine .reg Datei mit folgendem Inhalt und führe sie auf dem Zielrechner&#xA;aus.&lt;/p&gt;&#xA;&lt;div class=&#34;highlight-wrapper&#34;&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-registry&#34; data-lang=&#34;registry&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;Windows Registry Editor Version 5.00&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;HKEY_LOCAL_MACHINE&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon]&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;4&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;na&#34;&gt;&amp;#34;AutoAdminLogon&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;1&amp;#34;&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;5&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;na&#34;&gt;&amp;#34;DefaultUserName&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;BENUTZERNAME&amp;#34;&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;6&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;na&#34;&gt;&amp;#34;DefaultDomainName&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;DOMÄNE&amp;#34;&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;7&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;na&#34;&gt;&amp;#34;DefaultPassword&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;*****&amp;#39;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</description>
       
     </item>
     
@@ -385,65 +187,7 @@ aus.&lt;/p&gt;
       <pubDate>Thu, 19 Oct 2023 13:28:04 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/posts/homelab/erste_hilfe/</guid>
-      <description>&lt;h2 class=&#34;relative group&#34;&gt;Erster Schritt
-    &lt;div id=&#34;erster-schritt&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
-    
-    &lt;span
-        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;
-        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#erster-schritt&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;
-    &lt;/span&gt;
-    
-&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Läuft das Gerät?&lt;/li&gt;
-&lt;li&gt;Hast du das Gerät einmal neu gestartet? Abmelden und anmelden reicht nicht
-aus!&lt;/li&gt;
-&lt;li&gt;Sind alle Kabel angeschlossen und richtig eingesteckt?&lt;/li&gt;
-&lt;li&gt;Ist der Bildschirm angeschaltet?&lt;/li&gt;
-&lt;li&gt;Was hast du getan, bevor das Gerät nicht mehr ging?&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 class=&#34;relative group&#34;&gt;Zweiter Schritt
-    &lt;div id=&#34;zweiter-schritt&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
-    
-    &lt;span
-        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;
-        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#zweiter-schritt&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;
-    &lt;/span&gt;
-    
-&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a
-  href=&#34;https://status.zyria.com/status/index&#34;
-    target=&#34;_blank&#34;
-  &gt;Statusseite checken&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 class=&#34;relative group&#34;&gt;Dritter Schritt
-    &lt;div id=&#34;dritter-schritt&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
-    
-    &lt;span
-        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;
-        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#dritter-schritt&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;
-    &lt;/span&gt;
-    
-&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Neustart des Rechners == (nach jeder Änderung!) ==&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 class=&#34;relative group&#34;&gt;Vierter Schritt
-    &lt;div id=&#34;vierter-schritt&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
-    
-    &lt;span
-        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;
-        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#vierter-schritt&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;
-    &lt;/span&gt;
-    
-&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Evtl. ausstehende Updates ausführen&lt;/li&gt;
-&lt;/ul&gt;</description>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;Erster Schritt&#xA;    &lt;div id=&#34;erster-schritt&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#erster-schritt&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Läuft das Gerät?&lt;/li&gt;&#xA;&lt;li&gt;Hast du das Gerät einmal neu gestartet? Abmelden und anmelden reicht nicht&#xA;aus!&lt;/li&gt;&#xA;&lt;li&gt;Sind alle Kabel angeschlossen und richtig eingesteckt?&lt;/li&gt;&#xA;&lt;li&gt;Ist der Bildschirm angeschaltet?&lt;/li&gt;&#xA;&lt;li&gt;Was hast du getan, bevor das Gerät nicht mehr ging?&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&#xA;&lt;h2 class=&#34;relative group&#34;&gt;Zweiter Schritt&#xA;    &lt;div id=&#34;zweiter-schritt&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#zweiter-schritt&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://status.zyria.com/status/index&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;Statusseite checken&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&#xA;&lt;h2 class=&#34;relative group&#34;&gt;Dritter Schritt&#xA;    &lt;div id=&#34;dritter-schritt&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#dritter-schritt&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Neustart des Rechners == (nach jeder Änderung!) ==&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&#xA;&lt;h2 class=&#34;relative group&#34;&gt;Vierter Schritt&#xA;    &lt;div id=&#34;vierter-schritt&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#vierter-schritt&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Evtl. ausstehende Updates ausführen&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
       
     </item>
     

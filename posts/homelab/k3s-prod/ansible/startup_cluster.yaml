@@ -1,34 +1,34 @@
 ---
-- name: Graceful Cluster Startup Protocol (Startvorgang)
-  hosts: all
-  become: yes
-  tags: [infrastructure]
-  tasks:
-    # ---------------------------------------------------------
-    # Phase 1: Nodes Booten und k3s Starten
-    # ---------------------------------------------------------
-    # Voraussetzung: Nodes sind via Wake-on-LAN oder physisch gestartet
-
-    - name: Starte k3s (Server/Master)
-      ansible.builtin.systemd:
-        name: k3s
-        state: started
-        enabled: yes
-      when: "'k3s_server' in group_names"
-
-    - name: Starte k3s-agent (Worker)
-      ansible.builtin.systemd:
-        name: k3s-agent
-        state: started
-        enabled: yes
-      when: "'k3s_agent' in group_names"
+# - name: Graceful Cluster Startup Protocol (Startvorgang)
+#   hosts: all
+#   become: true
+#   tags: [infrastructure]
+#   tasks:
+#     # ---------------------------------------------------------
+#     # Phase 1: Nodes Booten und k3s Starten
+#     # ---------------------------------------------------------
+#     # Voraussetzung: Nodes sind via Wake-on-LAN oder physisch gestartet
+#
+#     - name: Starte k3s (Server/Master)
+#       ansible.builtin.systemd:
+#         name: k3s
+#         state: started
+#         enabled: true
+#       when: "'k3s_server' in group_names"
+#
+#     - name: Starte k3s-agent (Worker)
+#       ansible.builtin.systemd:
+#         name: k3s-agent
+#         state: started
+#         enabled: true
+#       when: "'k3s_agent' in group_names"
 
 - name: Orchestrate Workload Recovery
   hosts: localhost
   connection: local
-  gather_facts: no
+  gather_facts: false
   vars:
-    kubeconfig_path: "~/.kube/config"
+    kubeconfig_path: /Users/fabrice/.kube/prod.zyria.de
     longhorn_ns: "longhorn-system"
     argocd_ns: "argocd"
 
@@ -74,7 +74,7 @@
         name: argocd-application-controller
         namespace: "{{ argocd_ns }}"
         replicas: 1
-        wait: yes
+        wait: true
       tags: [argocd]
 
     - name: Warte auf ArgoCD Reconciliation

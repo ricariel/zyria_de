@@ -17,16 +17,7 @@
       <pubDate>Tue, 04 Nov 2025 10:07:02 +0100</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/posts/homelab/windows_install/</guid>
-      <description>&lt;h2 class=&#34;relative group&#34;&gt;Anleitung: Neuen Windows-Rechner in Active Directory (AD) aufnehmen
-    &lt;div id=&#34;anleitung-neuen-windows-rechner-in-active-directory-ad-aufnehmen&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
-    
-    &lt;span
-        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;
-        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#anleitung-neuen-windows-rechner-in-active-directory-ad-aufnehmen&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;
-    &lt;/span&gt;
-    
-&lt;/h2&gt;
-&lt;p&gt;Diese Anleitung beschreibt den Prozess, wie man einen fabrikneuen Windows-Rechner (im &amp;ldquo;Out-of-Box Experience&amp;rdquo;-Modus, OOBE) einrichtet, die erzwungene Anmeldung mit einem Microsoft-Konto umgeht und den Rechner anschließend in eine lokale Active Directory-Domäne aufnimmt.&lt;/p&gt;</description>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;Anleitung: Neuen Windows-Rechner in Active Directory (AD) aufnehmen&#xA;    &lt;div id=&#34;anleitung-neuen-windows-rechner-in-active-directory-ad-aufnehmen&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#anleitung-neuen-windows-rechner-in-active-directory-ad-aufnehmen&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;Diese Anleitung beschreibt den Prozess, wie man einen fabrikneuen Windows-Rechner (im &amp;ldquo;Out-of-Box Experience&amp;rdquo;-Modus, OOBE) einrichtet, die erzwungene Anmeldung mit einem Microsoft-Konto umgeht und den Rechner anschließend in eine lokale Active Directory-Domäne aufnimmt.&lt;/p&gt;</description>
       
     </item>
     
@@ -36,30 +27,7 @@
       <pubDate>Tue, 01 Jul 2025 13:37:34 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/posts/homelab/setup_windows/</guid>
-      <description>&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;Windows Rechner mit Professional Version kaufen (Aufgeräumt wird über Ansible)&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Windows Rechner vollständig laden&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Beim ersten Anschalten lokalen Benutzer oder Domäne auswählen.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Lokaler Benutzer ist der Hauptnutzer des Gerätes.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Kennwort wird in der IT Datenbank gesichert&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Alle Datensammelei während des Setups verbieten&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Rechner in Domäne aufnehmen&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Ansible Setup Script starten (liegt im ansible-main Repo unter files)&lt;/p&gt;</description>
+      <description>&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Windows Rechner mit Professional Version kaufen (Aufgeräumt wird über Ansible)&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Windows Rechner vollständig laden&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Beim ersten Anschalten lokalen Benutzer oder Domäne auswählen.&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Lokaler Benutzer ist der Hauptnutzer des Gerätes.&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Kennwort wird in der IT Datenbank gesichert&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Alle Datensammelei während des Setups verbieten&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Rechner in Domäne aufnehmen&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Ansible Setup Script starten (liegt im ansible-main Repo unter files)&lt;/p&gt;</description>
       
     </item>
     
@@ -69,25 +37,7 @@
       <pubDate>Tue, 01 Jul 2025 13:37:34 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/posts/homelab/windows_autologon/</guid>
-      <description>&lt;h2 class=&#34;relative group&#34;&gt;AutoLogon
-    &lt;div id=&#34;autologon&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
-    
-    &lt;span
-        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;
-        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#autologon&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;
-    &lt;/span&gt;
-    
-&lt;/h2&gt;
-&lt;p&gt;Erstelle eine .reg Datei mit folgendem Inhalt und führe sie auf dem Zielrechner
-aus.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-registry&#34; data-lang=&#34;registry&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;Windows Registry Editor Version 5.00
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;HKEY_LOCAL_MACHINE&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon]&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;4&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;na&#34;&gt;&amp;#34;AutoAdminLogon&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;1&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;5&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;na&#34;&gt;&amp;#34;DefaultUserName&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;BENUTZERNAME&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;6&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;na&#34;&gt;&amp;#34;DefaultDomainName&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;DOMÄNE&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;7&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;na&#34;&gt;&amp;#34;DefaultPassword&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;*****&amp;#39;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;AutoLogon&#xA;    &lt;div id=&#34;autologon&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#autologon&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;Erstelle eine .reg Datei mit folgendem Inhalt und führe sie auf dem Zielrechner&#xA;aus.&lt;/p&gt;&#xA;&lt;div class=&#34;highlight-wrapper&#34;&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-registry&#34; data-lang=&#34;registry&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;Windows Registry Editor Version 5.00&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;HKEY_LOCAL_MACHINE&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon]&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;4&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;na&#34;&gt;&amp;#34;AutoAdminLogon&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;1&amp;#34;&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;5&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;na&#34;&gt;&amp;#34;DefaultUserName&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;BENUTZERNAME&amp;#34;&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;6&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;na&#34;&gt;&amp;#34;DefaultDomainName&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;DOMÄNE&amp;#34;&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;7&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;na&#34;&gt;&amp;#34;DefaultPassword&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;*****&amp;#39;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</description>
       
     </item>
     

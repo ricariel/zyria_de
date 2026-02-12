@@ -9,7 +9,7 @@
     <managingEditor>fabrice@zyria.de (Fabrice Kirchner)</managingEditor>
     <webMaster>fabrice@zyria.de (Fabrice Kirchner)</webMaster>
     
-    <lastBuildDate>Fri, 21 Jul 2023 14:41:15 +0200</lastBuildDate><atom:link href="https://zyria.de/tags/impressum/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 12 Feb 2026 11:24:58 +0100</lastBuildDate><atom:link href="https://zyria.de/tags/impressum/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Impressum</title>
@@ -17,42 +17,7 @@
       <pubDate>Fri, 21 Jul 2023 14:41:15 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/impressum/</guid>
-      <description>&lt;h2 class=&#34;relative group&#34;&gt;Diensteanbieter
-    &lt;div id=&#34;diensteanbieter&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
-    
-    &lt;span
-        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;
-        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#diensteanbieter&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;
-    &lt;/span&gt;
-    
-&lt;/h2&gt;
-&lt;p&gt;Fabrice Kirchner&lt;br&gt;
-Haingasse 3&lt;br&gt;
-35287 Amöneburg&lt;/p&gt;
-
-&lt;h2 class=&#34;relative group&#34;&gt;Kontaktmöglichkeiten
-    &lt;div id=&#34;kontaktmöglichkeiten&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
-    
-    &lt;span
-        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;
-        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#kontaktm%c3%b6glichkeiten&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;
-    &lt;/span&gt;
-    
-&lt;/h2&gt;
-&lt;p&gt;E-Mail-Adresse:&lt;br&gt;
-web(at)zyria.de&lt;/p&gt;
-&lt;p&gt;Telefon:&lt;br&gt;
-0160 5513991&lt;/p&gt;
-&lt;p&gt;Mastodon:&lt;br&gt;
-&lt;a
-  href=&#34;https://kirchner.social/@fabrice&#34;
-    target=&#34;_blank&#34;
-  &gt;fabrice&lt;/a&gt;&lt;/p&gt;
-&lt;img src=&#34;https://zyria.de/qr_30e536884bbd0a86.png&#34; width=&#34;154&#34; height=&#34;154&#34; alt=&#34;QR Code der vCard von Fabrice Kirchner&#34;&gt;
-&lt;p&gt;&lt;a
-  href=&#34;https://datenschutz-generator.de/&#34;title=&#34;Rechtstext von Dr. Schwenke - für weitere Informationen bitte anklicken.&#34;
-    target=&#34;_blank&#34;
-  &gt;Erstellt mit kostenlosem Datenschutz-Generator.de von Dr. Thomas Schwenke&lt;/a&gt;&lt;/p&gt;</description>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;Diensteanbieter&#xA;    &lt;div id=&#34;diensteanbieter&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#diensteanbieter&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;Fabrice Kirchner&lt;br&gt;&#xA;Haingasse 3&lt;br&gt;&#xA;35287 Amöneburg&lt;/p&gt;&#xA;&#xA;&lt;h2 class=&#34;relative group&#34;&gt;Kontaktmöglichkeiten&#xA;    &lt;div id=&#34;kontaktmöglichkeiten&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#kontaktm%c3%b6glichkeiten&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;E-Mail-Adresse:&lt;br&gt;&#xA;web(at)zyria.de&lt;/p&gt;&#xA;&lt;p&gt;Telefon:&lt;br&gt;&#xA;0160 5513991&lt;/p&gt;&#xA;&lt;p&gt;Mastodon:&lt;br&gt;&#xA;&lt;a href=&#34;https://kirchner.social/@fabrice&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;fabrice&lt;/a&gt;&lt;/p&gt;&#xA;&lt;img src=&#34;https://zyria.de/qr_30e536884bbd0a86.png&#34; width=&#34;154&#34; height=&#34;154&#34; alt=&#34;QR Code der vCard von Fabrice Kirchner&#34;&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://datenschutz-generator.de/&#34; title=&#34;Rechtstext von Dr. Schwenke - für weitere Informationen bitte anklicken.&#34; target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;Erstellt mit kostenlosem Datenschutz-Generator.de von Dr. Thomas Schwenke&lt;/a&gt;&lt;/p&gt;</description>
       
     </item>
     

@@ -9,7 +9,7 @@
     <managingEditor>fabrice@zyria.de (Fabrice Kirchner)</managingEditor>
     <webMaster>fabrice@zyria.de (Fabrice Kirchner)</webMaster>
     
-    <lastBuildDate>Mon, 09 Feb 2026 01:08:33 +0100</lastBuildDate><atom:link href="https://zyria.de/tags/homelab/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 12 Feb 2026 11:24:59 +0100</lastBuildDate><atom:link href="https://zyria.de/tags/homelab/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Virtuelle Maschinen</title>
@@ -17,432 +17,14 @@
       <pubDate>Tue, 01 Jul 2025 12:10:19 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/posts/homelab/vms/</guid>
-      <description>&lt;table&gt;
-  &lt;thead&gt;
-      &lt;tr&gt;
-          &lt;th&gt;Servername&lt;/th&gt;
-          &lt;th&gt;Hostname&lt;/th&gt;
-          &lt;th&gt;Funktion&lt;/th&gt;
-          &lt;th&gt;System&lt;/th&gt;
-          &lt;th&gt;Notiz&lt;/th&gt;
-      &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;a
-  href=&#34;https://zyria.de/posts/homelab/vms/dev/&#34;&gt;dev&lt;/a&gt;&lt;/td&gt;
-          &lt;td&gt;dev.zyria.de&lt;/td&gt;
-          &lt;td&gt;Docker Host&lt;/td&gt;
-          &lt;td&gt;Debian Stable&lt;/td&gt;
-          &lt;td&gt;IT interne Dienste&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;&lt;a
-  href=&#34;https://zyria.de/posts/homelab/vms/addc/&#34;&gt;addc&lt;/a&gt;&lt;/td&gt;
-          &lt;td&gt;addc.zyria.de&lt;/td&gt;
-          &lt;td&gt;Active Directory, Fileserver&lt;/td&gt;
-          &lt;td&gt;Debian Stable&lt;/td&gt;
-          &lt;td&gt;&lt;/td&gt;
-      &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;</description>
-      
-    </item>
-    
-    <item>
-      <title>Ansible Konfiguration für k3s-prod</title>
-      <link>https://zyria.de/posts/homelab/k3s-prod/ansible/readme/</link>
-      <pubDate>Mon, 09 Feb 2026 01:08:33 +0100</pubDate>
-      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://zyria.de/posts/homelab/k3s-prod/ansible/readme/</guid>
-      <description>Automatisierung der k3s Cluster-Bereitstellung und -Verwaltung mit Ansible.</description>
-      
-    </item>
-    
-    <item>
-      <title>Ansible Semaphore</title>
-      <link>https://zyria.de/posts/homelab/k3s-prod/apps/ansible-semaphore/readme/</link>
-      <pubDate>Mon, 09 Feb 2026 01:08:33 +0100</pubDate>
-      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/ansible-semaphore/readme/</guid>
-      <description>Dieses Dokument beschreibt die Bereitstellung von Ansible Semaphore, einer webbasierten Benutzeroberfläche zur Verwaltung und Ausführung von Ansible Playbooks.</description>
-      
-    </item>
-    
-    <item>
-      <title>ArgoCD</title>
-      <link>https://zyria.de/posts/homelab/k3s-prod/apps/argocd/readme/</link>
-      <pubDate>Mon, 09 Feb 2026 01:08:33 +0100</pubDate>
-      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/argocd/readme/</guid>
-      <description>Dieses Dokument beschreibt die Bereitstellung von Argo CD, einem deklarativen GitOps-Continuous-Delivery-Tool für Kubernetes.</description>
-      
-    </item>
-    
-    <item>
-      <title>Authentik</title>
-      <link>https://zyria.de/posts/homelab/k3s-prod/apps/authentik/readme/</link>
-      <pubDate>Mon, 09 Feb 2026 01:08:33 +0100</pubDate>
-      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/authentik/readme/</guid>
-      <description>Dieses Dokument beschreibt die Bereitstellung von Authentik, einem quelloffenen Identitätsanbieter (IdP).</description>
-      
-    </item>
-    
-    <item>
-      <title>Cert-Manager</title>
-      <link>https://zyria.de/posts/homelab/k3s-prod/apps/cert-manager/readme/</link>
-      <pubDate>Mon, 09 Feb 2026 01:08:33 +0100</pubDate>
-      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/cert-manager/readme/</guid>
-      <description>Dieses Dokument beschreibt die Bereitstellung von Cert-Manager, einem nativen Kubernetes-Zertifikatsmanagement-Tool.</description>
-      
-    </item>
-    
-    <item>
-      <title>CoreDNS</title>
-      <link>https://zyria.de/posts/homelab/k3s-prod/apps/coredns/readme/</link>
-      <pubDate>Mon, 09 Feb 2026 01:08:33 +0100</pubDate>
-      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/coredns/readme/</guid>
-      <description>CoreDNS dient als primärer DNS-Server für die Service Discovery innerhalb des Kubernetes-Clusters und löst sowohl interne als auch externe DNS-Anfragen auf.</description>
-      
-    </item>
-    
-    <item>
-      <title>CoreDNS</title>
-      <link>https://zyria.de/posts/homelab/k3s-prod/apps/nameserver.unbound/readme/</link>
-      <pubDate>Mon, 09 Feb 2026 01:08:33 +0100</pubDate>
-      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/nameserver.unbound/readme/</guid>
-      <description>CoreDNS dient als primärer DNS-Server für die Service Discovery innerhalb des Kubernetes-Clusters und löst sowohl interne als auch externe DNS-Anfragen auf.</description>
-      
-    </item>
-    
-    <item>
-      <title>CoreDNS</title>
-      <link>https://zyria.de/posts/homelab/k3s-prod/apps/nameserver/readme/</link>
-      <pubDate>Mon, 09 Feb 2026 01:08:33 +0100</pubDate>
-      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/nameserver/readme/</guid>
-      <description>CoreDNS dient als primärer DNS-Server für die Service Discovery innerhalb des Kubernetes-Clusters und löst sowohl interne als auch externe DNS-Anfragen auf.</description>
-      
-    </item>
-    
-    <item>
-      <title>DMARC Report</title>
-      <link>https://zyria.de/posts/homelab/k3s-prod/apps/dmarc-report/readme/</link>
-      <pubDate>Mon, 09 Feb 2026 01:08:33 +0100</pubDate>
-      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/dmarc-report/readme/</guid>
-      <description>Dieses Dokument beschreibt die Bereitstellung des DMARC Report Tools, das DMARC-Berichte verarbeitet und visualisiert.</description>
-      
-    </item>
-    
-    <item>
-      <title>Endpoint Copier Operator</title>
-      <link>https://zyria.de/posts/homelab/k3s-prod/apps/endpoint-copier-operator/readme/</link>
-      <pubDate>Mon, 09 Feb 2026 01:08:33 +0100</pubDate>
-      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/endpoint-copier-operator/readme/</guid>
-      <description>Dieses Dokument beschreibt die Bereitstellung des SUSE Endpoint Copier Operators, der Kubernetes Services und deren Endpunkte synchronisiert.</description>
-      
-    </item>
-    
-    <item>
-      <title>Forgejo</title>
-      <link>https://zyria.de/posts/homelab/k3s-prod/apps/forgejo/readme/</link>
-      <pubDate>Mon, 09 Feb 2026 01:08:33 +0100</pubDate>
-      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/forgejo/readme/</guid>
-      <description>Dieses Dokument beschreibt die Bereitstellung von Forgejo, einer quelloffenen, selbst gehosteten Git-Plattform.</description>
-      
-    </item>
-    
-    <item>
-      <title>Forgejo Runner</title>
-      <link>https://zyria.de/posts/homelab/k3s-prod/apps/forgejo-runner/readme/</link>
-      <pubDate>Mon, 09 Feb 2026 01:08:33 +0100</pubDate>
-      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/forgejo-runner/readme/</guid>
-      <description>Dieses Dokument beschreibt die Bereitstellung von Forgejo Runner, einem Daemon zum Ausführen von CI/CD-Jobs für Forgejo-Instanzen.</description>
-      
-    </item>
-    
-    <item>
-      <title>Headscale</title>
-      <link>https://zyria.de/posts/homelab/k3s-prod/apps/headscale/readme/</link>
-      <pubDate>Mon, 09 Feb 2026 01:08:33 +0100</pubDate>
-      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/headscale/readme/</guid>
-      <description>Dieses Dokument beschreibt die Bereitstellung von Headscale, einer quelloffenen, selbst gehosteten Implementierung des Tailscale Control Servers.</description>
-      
-    </item>
-    
-    <item>
-      <title>HedgeDoc</title>
-      <link>https://zyria.de/posts/homelab/k3s-prod/apps/hedgedoc/readme/</link>
-      <pubDate>Mon, 09 Feb 2026 01:08:33 +0100</pubDate>
-      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/hedgedoc/readme/</guid>
-      <description>Dieses Dokument beschreibt die Bereitstellung von HedgeDoc, einem kollaborativen Markdown-Editor.</description>
-      
-    </item>
-    
-    <item>
-      <title>Home Assistant</title>
-      <link>https://zyria.de/posts/homelab/k3s-prod/apps/home-assistant/readme/</link>
-      <pubDate>Mon, 09 Feb 2026 01:08:33 +0100</pubDate>
-      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/home-assistant/readme/</guid>
-      <description>Home Assistant ist das Gehirn des Smart Homes. Es ermöglicht die Steuerung und Automatisierung einer Vielzahl von Geräten und Diensten und stellt eine zentrale Benutzeroberfläche bereit.</description>
-      
-    </item>
-    
-    <item>
-      <title>hx53.de</title>
-      <link>https://zyria.de/posts/homelab/k3s-prod/apps/hx53-de/readme/</link>
-      <pubDate>Mon, 09 Feb 2026 01:08:33 +0100</pubDate>
-      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/hx53-de/readme/</guid>
-      <description>Dieser Dienst hostet die Webseite hx53.de. Der Inhalt der Seite wird aus einem Git-Repository geklont und von einem Nginx-Webserver ausgeliefert.</description>
-      
-    </item>
-    
-    <item>
-      <title>IT-Tools</title>
-      <link>https://zyria.de/posts/homelab/k3s-prod/apps/ittools/readme/</link>
-      <pubDate>Mon, 09 Feb 2026 01:08:33 +0100</pubDate>
-      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/ittools/readme/</guid>
-      <description>IT-Tools ist eine rein clientseitige Webanwendung, die eine Vielzahl von Werkzeugen wie Konverter, Formatierer, Generatoren und vieles mehr für den täglichen Gebrauch bereitstellt.</description>
-      
-    </item>
-    
-    <item>
-      <title>k3s Konfiguration</title>
-      <link>https://zyria.de/posts/homelab/k3s-prod/apps/k3s/readme/</link>
-      <pubDate>Mon, 09 Feb 2026 01:08:33 +0100</pubDate>
-      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/k3s/readme/</guid>
-      <description>Dieser Ordner enthält grundlegende Konfigurationen für den k3s Kubernetes-Cluster, einschließlich des Local Path Provisioners und einer virtuellen IP für den Kubernetes API-Server.</description>
-      
-    </item>
-    
-    <item>
-      <title>k3s-prod: Kubernetes Cluster Konfiguration und Anwendungsbereitstellung</title>
-      <link>https://zyria.de/posts/homelab/k3s-prod/</link>
-      <pubDate>Mon, 09 Feb 2026 01:08:33 +0100</pubDate>
-      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://zyria.de/posts/homelab/k3s-prod/</guid>
-      <description>Zentrale Verwaltung eines k3s Kubernetes Clusters und seiner Anwendungen durch GitOps mit ArgoCD, Helm und Kustomize.</description>
-      
-    </item>
-    
-    <item>
-      <title>Keel</title>
-      <link>https://zyria.de/posts/homelab/k3s-prod/apps/keel/readme/</link>
-      <pubDate>Mon, 09 Feb 2026 01:08:33 +0100</pubDate>
-      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/keel/readme/</guid>
-      <description>Keel überwacht Container-Image-Repositories und Helm-Charts auf neue Versionen und aktualisiert die entsprechenden Deployments im Cluster automatisch gemäß den definierten Policies.</description>
-      
-    </item>
-    
-    <item>
-      <title>Kubernetes Descheduler</title>
-      <link>https://zyria.de/posts/homelab/k3s-prod/apps/descheduler/readme/</link>
-      <pubDate>Mon, 09 Feb 2026 01:08:33 +0100</pubDate>
-      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/descheduler/readme/</guid>
-      <description>Dieses Dokument beschreibt die Bereitstellung des Kubernetes Deschedulers, eines Tools zur Optimierung der Pod-Platzierung in einem Cluster.</description>
-      
-    </item>
-    
-    <item>
-      <title>Longhorn</title>
-      <link>https://zyria.de/posts/homelab/k3s-prod/apps/longhorn/readme/</link>
-      <pubDate>Mon, 09 Feb 2026 01:08:33 +0100</pubDate>
-      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/longhorn/readme/</guid>
-      <description>Longhorn bietet hochverfügbaren, persistenten Blockspeicher für stateful Anwendungen im Kubernetes-Cluster, indem es den lokalen Speicherplatz der Worker-Nodes nutzt und über das Netzwerk repliziert.</description>
-      
-    </item>
-    
-    <item>
-      <title>Mailstack</title>
-      <link>https://zyria.de/posts/homelab/k3s-prod/apps/mailstack/readme/</link>
-      <pubDate>Mon, 09 Feb 2026 01:08:33 +0100</pubDate>
-      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/mailstack/readme/</guid>
-      <description>Dieser Mailstack integriert mehrere Komponenten wie Postfix, Dovecot, Rspamd und ClamAV, um einen robusten und sicheren E-Mail-Dienst mit Spam- und Virenfilterung bereitzustellen.</description>
-      
-    </item>
-    
-    <item>
-      <title>Maintenance Page</title>
-      <link>https://zyria.de/posts/homelab/k3s-prod/apps/maintenance-page/readme/</link>
-      <pubDate>Mon, 09 Feb 2026 01:08:33 +0100</pubDate>
-      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/maintenance-page/readme/</guid>
-      <description>Dieser Dienst stellt eine generische Wartungsseite bereit, die von Traefik als Fallback für nicht erreichbare Dienste oder bei Fehlern wie 404 (Not Found) angezeigt werden kann.</description>
-      
-    </item>
-    
-    <item>
-      <title>Mastodon</title>
-      <link>https://zyria.de/posts/homelab/k3s-prod/apps/mastodon/readme/</link>
-      <pubDate>Mon, 09 Feb 2026 01:08:33 +0100</pubDate>
-      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/mastodon/readme/</guid>
-      <description>Mastodon ist eine Open-Source-Alternative zu kommerziellen sozialen Netzwerken. Es ermöglicht Benutzern, eigene, unabhängige Server (Instanzen) zu betreiben, die über das ActivityPub-Protokoll miteinander kommunizieren können (Föderation).</description>
-      
-    </item>
-    
-    <item>
-      <title>Matrix</title>
-      <link>https://zyria.de/posts/homelab/k3s-prod/apps/matrix/readme/</link>
-      <pubDate>Mon, 09 Feb 2026 01:08:33 +0100</pubDate>
-      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/matrix/readme/</guid>
-      <description>Diese Anwendung stellt einen Matrix-Homeserver (Synapse) und einen Web-Client (Element) bereit, um einen föderierten, Ende-zu-Ende-verschlüsselten Chat-Dienst zu betreiben.</description>
-      
-    </item>
-    
-    <item>
-      <title>Matrix Synapse Admin</title>
-      <link>https://zyria.de/posts/homelab/k3s-prod/apps/matrix-admin/readme/</link>
-      <pubDate>Mon, 09 Feb 2026 01:08:33 +0100</pubDate>
-      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/matrix-admin/readme/</guid>
-      <description>Synapse Admin bietet eine einfache grafische Oberfläche, um Benutzer und Räume auf einem Synapse Homeserver zu verwalten, ohne die Admin-API direkt verwenden zu müssen.</description>
-      
-    </item>
-    
-    <item>
-      <title>MetalLB</title>
-      <link>https://zyria.de/posts/homelab/k3s-prod/apps/metallb/readme/</link>
-      <pubDate>Mon, 09 Feb 2026 01:08:33 +0100</pubDate>
-      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/metallb/readme/</guid>
-      <description>MetalLB ermöglicht die Verwendung von Kubernetes-Services vom Typ &lt;code&gt;LoadBalancer&lt;/code&gt; in Clustern, die nicht bei einem Cloud-Anbieter laufen, indem es IP-Adressen aus einem konfigurierten Pool zuweist.</description>
-      
-    </item>
-    
-    <item>
-      <title>Mosquitto</title>
-      <link>https://zyria.de/posts/homelab/k3s-prod/apps/mosquitto/readme/</link>
-      <pubDate>Mon, 09 Feb 2026 01:08:33 +0100</pubDate>
-      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/mosquitto/readme/</guid>
-      <description>Mosquitto dient als zentraler Message Broker für das MQTT-Protokoll und ermöglicht die Kommunikation zwischen verschiedenen IoT-Geräten und -Diensten im Smart Home.</description>
-      
-    </item>
-    
-    <item>
-      <title>MTA-STS Policy Server</title>
-      <link>https://zyria.de/posts/homelab/k3s-prod/apps/mta-sts/readme/</link>
-      <pubDate>Mon, 09 Feb 2026 01:08:33 +0100</pubDate>
-      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/mta-sts/readme/</guid>
-      <description>Dieser Dienst verwendet einen Nginx-Server, um eine statische &lt;code&gt;mta-sts.txt&lt;/code&gt;-Datei unter dem &lt;code&gt;.well-known&lt;/code&gt;-Pfad für verschiedene Domains zu veröffentlichen und so die E-Mail-Sicherheit zu erhöhen.</description>
-      
-    </item>
-    
-    <item>
-      <title>Nextcloud</title>
-      <link>https://zyria.de/posts/homelab/k3s-prod/apps/nextcloud/readme/</link>
-      <pubDate>Mon, 09 Feb 2026 01:08:33 +0100</pubDate>
-      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/nextcloud/readme/</guid>
-      <description>Nextcloud ist das Gehirn des Smart Homes. Es ermöglicht die Steuerung und Automatisierung einer Vielzahl von Geräten und Diensten und stellt eine zentrale Benutzeroberfläche bereit.</description>
-      
-    </item>
-    
-    <item>
-      <title>NFS Subdir External Provisioner</title>
-      <link>https://zyria.de/posts/homelab/k3s-prod/apps/nfs-provisioner/readme/</link>
-      <pubDate>Mon, 09 Feb 2026 01:08:33 +0100</pubDate>
-      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/nfs-provisioner/readme/</guid>
-      <description>This document describes the deployment of the NFS Subdir External Provisioner, which enables dynamic provisioning of Persistent Volumes using an existing NFS server.</description>
-      
-    </item>
-    
-    <item>
-      <title>OpenDTU</title>
-      <link>https://zyria.de/posts/homelab/k3s-prod/apps/opendtu/readme/</link>
-      <pubDate>Mon, 09 Feb 2026 01:08:33 +0100</pubDate>
-      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/opendtu/readme/</guid>
-      <description>Dieser Dienst stellt eine Weboberfläche bereit, die Daten von einem OpenDTU-Gerät empfängt, in einer Datenbank speichert und zur Visualisierung und Analyse anzeigt.</description>
-      
-    </item>
-    
-    <item>
-      <title>Paperless-ngx</title>
-      <link>https://zyria.de/posts/homelab/k3s-prod/apps/paperless/readme/</link>
-      <pubDate>Mon, 09 Feb 2026 01:08:33 +0100</pubDate>
-      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/paperless/readme/</guid>
-      <description>This document describes the Paperless-ngx deployment, a document management system that transforms physical documents into searchable digital archives.</description>
-      
-    </item>
-    
-    <item>
-      <title>Pi-hole</title>
-      <link>https://zyria.de/posts/homelab/k3s-prod/apps/pihole/pihole/</link>
-      <pubDate>Mon, 09 Feb 2026 01:08:33 +0100</pubDate>
-      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/pihole/pihole/</guid>
-      <description>This document describes the Pi-hole deployment, a network-wide ad blocker and DNS sinkhole.</description>
-      
-    </item>
-    
-    <item>
-      <title>Plex Media Server</title>
-      <link>https://zyria.de/posts/homelab/k3s-prod/apps/plex/readme/</link>
-      <pubDate>Mon, 09 Feb 2026 01:08:33 +0100</pubDate>
-      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/plex/readme/</guid>
-      <description>Dieses Dokument beschreibt die Bereitstellung des Plex Media Servers, einer beliebten Anwendung zum Organisieren und Streamen von Medien.</description>
-      
-    </item>
-    
-    <item>
-      <title>Prometheus</title>
-      <link>https://zyria.de/posts/homelab/k3s-prod/apps/prometheus/readme/</link>
-      <pubDate>Mon, 09 Feb 2026 01:08:33 +0100</pubDate>
-      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/prometheus/readme/</guid>
-      <description>This document describes the Prometheus deployment, an open-source monitoring and alerting toolkit.</description>
-      
-    </item>
-    
-    <item>
-      <title>quaecki.de Website</title>
-      <link>https://zyria.de/posts/homelab/k3s-prod/apps/quaecki-de/readme/</link>
-      <pubDate>Mon, 09 Feb 2026 01:08:33 +0100</pubDate>
-      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/quaecki-de/readme/</guid>
-      <description>This document describes the deployment of the static website for quaecki.de.</description>
-      
-    </item>
-    
-    <item>
-      <title>Reloader</title>
-      <link>https://zyria.de/posts/homelab/k3s-prod/apps/reloader/readme/</link>
-      <pubDate>Mon, 09 Feb 2026 01:08:33 +0100</pubDate>
-      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/reloader/readme/</guid>
-      <description>Dieses Dokument beschreibt die Bereitstellung des Reloader, eines Kubernetes-Controllers, der Pod-Neustarts bei ConfigMap- oder Secret-Updates automatisiert.</description>
+      <description>&lt;table&gt;&#xA;  &lt;thead&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;th&gt;Servername&lt;/th&gt;&#xA;          &lt;th&gt;Hostname&lt;/th&gt;&#xA;          &lt;th&gt;Funktion&lt;/th&gt;&#xA;          &lt;th&gt;System&lt;/th&gt;&#xA;          &lt;th&gt;Notiz&lt;/th&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/thead&gt;&#xA;  &lt;tbody&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;&lt;a href=&#34;https://zyria.de/posts/homelab/vms/dev/&#34; &gt;dev&lt;/a&gt;&lt;/td&gt;&#xA;          &lt;td&gt;dev.zyria.de&lt;/td&gt;&#xA;          &lt;td&gt;Docker Host&lt;/td&gt;&#xA;          &lt;td&gt;Debian Stable&lt;/td&gt;&#xA;          &lt;td&gt;IT interne Dienste&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;&lt;a href=&#34;https://zyria.de/posts/homelab/vms/addc/&#34; &gt;addc&lt;/a&gt;&lt;/td&gt;&#xA;          &lt;td&gt;addc.zyria.de&lt;/td&gt;&#xA;          &lt;td&gt;Active Directory, Fileserver&lt;/td&gt;&#xA;          &lt;td&gt;Debian Stable&lt;/td&gt;&#xA;          &lt;td&gt;&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/tbody&gt;&#xA;&lt;/table&gt;</description>
       
     </item>
     
     <item>
       <title>Roundcube Webmail</title>
       <link>https://zyria.de/posts/homelab/k3s-prod/apps/roundcube/readme/</link>
-      <pubDate>Mon, 09 Feb 2026 01:08:33 +0100</pubDate>
+      <pubDate>Thu, 12 Feb 2026 11:24:59 +0100</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/posts/homelab/k3s-prod/apps/roundcube/readme/</guid>
       <description>This document describes the Roundcube Webmail deployment, an open-source, browser-based IMAP email client.</description>
@@ -452,7 +34,7 @@
     <item>
       <title>Self Service Password</title>
       <link>https://zyria.de/posts/homelab/k3s-prod/apps/self-service-password/readme/</link>
-      <pubDate>Mon, 09 Feb 2026 01:08:33 +0100</pubDate>
+      <pubDate>Thu, 12 Feb 2026 11:24:59 +0100</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/posts/homelab/k3s-prod/apps/self-service-password/readme/</guid>
       <description>This document describes the deployment of LTB Self-Service Password, a web application for users to manage their own passwords in an LDAP directory.</description>
@@ -462,7 +44,7 @@
     <item>
       <title>SolarChart Website</title>
       <link>https://zyria.de/posts/homelab/k3s-prod/apps/solarchart-de/readme/</link>
-      <pubDate>Mon, 09 Feb 2026 01:08:33 +0100</pubDate>
+      <pubDate>Thu, 12 Feb 2026 11:24:59 +0100</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/posts/homelab/k3s-prod/apps/solarchart-de/readme/</guid>
       <description>Dieses Dokument beschreibt die Bereitstellung der statischen Webseite für SolarChart, die Solarprognosedaten bereitstellt.</description>
@@ -470,19 +52,9 @@
     </item>
     
     <item>
-      <title>SolarFlow Topic Mapper (ACE1500)</title>
-      <link>https://zyria.de/posts/homelab/k3s-prod/apps/ace1500/readme/</link>
-      <pubDate>Mon, 09 Feb 2026 01:08:33 +0100</pubDate>
-      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/ace1500/readme/</guid>
-      <description>Dieses Dokument beschreibt die Bereitstellung einer benutzerdefinierten SolarFlow Topic Mapper-Anwendung für ein spezifisches SolarFlow-Gerät (ACE1500).</description>
-      
-    </item>
-    
-    <item>
       <title>SolarFlow Topic Mapper (SF1200)</title>
       <link>https://zyria.de/posts/homelab/k3s-prod/apps/sf1200/readme/</link>
-      <pubDate>Mon, 09 Feb 2026 01:08:33 +0100</pubDate>
+      <pubDate>Thu, 12 Feb 2026 11:24:59 +0100</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/posts/homelab/k3s-prod/apps/sf1200/readme/</guid>
       <description>Dieser Dienst verbindet sich mit dem lokalen MQTT-Broker und mappt die spezifischen, geräteabhängigen MQTT-Topics des Zendure SolarFlow Systems auf generische, leichter verständliche Topics um.</description>
@@ -492,7 +64,7 @@
     <item>
       <title>SolarFlow Topic Mapper (SF2000-2)</title>
       <link>https://zyria.de/posts/homelab/k3s-prod/apps/sf2000-2/readme/</link>
-      <pubDate>Mon, 09 Feb 2026 01:08:33 +0100</pubDate>
+      <pubDate>Thu, 12 Feb 2026 11:24:59 +0100</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/posts/homelab/k3s-prod/apps/sf2000-2/readme/</guid>
       <description>Dieser Dienst verbindet sich mit dem lokalen MQTT-Broker und mappt die spezifischen, geräteabhängigen MQTT-Topics des Zendure SolarFlow Systems auf generische, leichter verständliche Topics um.</description>
@@ -502,7 +74,7 @@
     <item>
       <title>SolarFlow Topic Mapper (SF2000)</title>
       <link>https://zyria.de/posts/homelab/k3s-prod/apps/sf2000/readme/</link>
-      <pubDate>Mon, 09 Feb 2026 01:08:33 +0100</pubDate>
+      <pubDate>Thu, 12 Feb 2026 11:24:59 +0100</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/posts/homelab/k3s-prod/apps/sf2000/readme/</guid>
       <description>Dieser Dienst verbindet sich mit dem lokalen MQTT-Broker und mappt die spezifischen, geräteabhängigen MQTT-Topics des Zendure SolarFlow Systems auf generische, leichter verständliche Topics um.</description>
@@ -512,7 +84,7 @@
     <item>
       <title>System Upgrade Controller</title>
       <link>https://zyria.de/posts/homelab/k3s-prod/apps/system-upgrade-controller/readme/</link>
-      <pubDate>Mon, 09 Feb 2026 01:08:33 +0100</pubDate>
+      <pubDate>Thu, 12 Feb 2026 11:24:59 +0100</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/posts/homelab/k3s-prod/apps/system-upgrade-controller/readme/</guid>
       <description>This document describes the deployment of the Rancher System Upgrade Controller, a Kubernetes-native upgrade controller for nodes.</description>
@@ -522,7 +94,7 @@
     <item>
       <title>Traefik Ingress Controller</title>
       <link>https://zyria.de/posts/homelab/k3s-prod/apps/traefik/readme/</link>
-      <pubDate>Mon, 09 Feb 2026 01:08:33 +0100</pubDate>
+      <pubDate>Thu, 12 Feb 2026 11:24:59 +0100</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/posts/homelab/k3s-prod/apps/traefik/readme/</guid>
       <description>This document describes the Traefik Ingress Controller deployment, a modern load balancer and reverse proxy for Kubernetes.</description>
@@ -532,7 +104,7 @@
     <item>
       <title>Trivy Operator</title>
       <link>https://zyria.de/posts/homelab/k3s-prod/apps/trivy/readme/</link>
-      <pubDate>Mon, 09 Feb 2026 01:08:33 +0100</pubDate>
+      <pubDate>Thu, 12 Feb 2026 11:24:59 +0100</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/posts/homelab/k3s-prod/apps/trivy/readme/</guid>
       <description>Dieses Dokument beschreibt die Bereitstellung des Trivy Operators, eines Kubernetes-nativen Sicherheitstools, das Ihren Cluster kontinuierlich auf Sicherheitsprobleme scannt.</description>
@@ -542,7 +114,7 @@
     <item>
       <title>UniFi Netzwerk-Anwendung</title>
       <link>https://zyria.de/posts/homelab/k3s-prod/apps/unifi-controller/readme/</link>
-      <pubDate>Mon, 09 Feb 2026 01:08:33 +0100</pubDate>
+      <pubDate>Thu, 12 Feb 2026 11:24:59 +0100</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/posts/homelab/k3s-prod/apps/unifi-controller/readme/</guid>
       <description>Dieses Dokument beschreibt die Bereitstellung der UniFi Netzwerk-Anwendung, einer Software-Defined Networking (SDN)-Plattform zur Verwaltung von UniFi-Geräten.</description>
@@ -552,7 +124,7 @@
     <item>
       <title>Uptime Kuma</title>
       <link>https://zyria.de/posts/homelab/k3s-prod/apps/uptime-kuma/readme/</link>
-      <pubDate>Mon, 09 Feb 2026 01:08:33 +0100</pubDate>
+      <pubDate>Thu, 12 Feb 2026 11:24:59 +0100</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/posts/homelab/k3s-prod/apps/uptime-kuma/readme/</guid>
       <description>This document describes the Uptime Kuma deployment, a self-hosted, open-source monitoring tool for tracking service uptime and performance.</description>
@@ -562,7 +134,7 @@
     <item>
       <title>whoami</title>
       <link>https://zyria.de/posts/homelab/k3s-prod/apps/whoami/readme/</link>
-      <pubDate>Mon, 09 Feb 2026 01:08:33 +0100</pubDate>
+      <pubDate>Thu, 12 Feb 2026 11:24:59 +0100</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/posts/homelab/k3s-prod/apps/whoami/readme/</guid>
       <description>whoami ist ein minimaler Webserver, der HTTP-Request-Header, Hostname und IP-Adresse des Pods anzeigt. Er wird hauptsächlich für Debugging-Zwecke im Kontext von Ingress und Netzwerk-Routing verwendet.</description>
@@ -572,7 +144,7 @@
     <item>
       <title>WireGuard VPN Server</title>
       <link>https://zyria.de/posts/homelab/k3s-prod/apps/wireguard/readme/</link>
-      <pubDate>Mon, 09 Feb 2026 01:08:33 +0100</pubDate>
+      <pubDate>Thu, 12 Feb 2026 11:24:59 +0100</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/posts/homelab/k3s-prod/apps/wireguard/readme/</guid>
       <description>This document describes the WireGuard VPN Server deployment, a modern, fast, and secure VPN protocol.</description>
@@ -582,7 +154,7 @@
     <item>
       <title>Zammad Helpdesk</title>
       <link>https://zyria.de/posts/homelab/k3s-prod/apps/zammad/readme/</link>
-      <pubDate>Mon, 09 Feb 2026 01:08:33 +0100</pubDate>
+      <pubDate>Thu, 12 Feb 2026 11:24:59 +0100</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/posts/homelab/k3s-prod/apps/zammad/readme/</guid>
       <description>This document describes the Zammad Helpdesk deployment, an open-source, web-based helpdesk and customer support system.</description>
@@ -592,10 +164,390 @@
     <item>
       <title>zyria.de Webseite</title>
       <link>https://zyria.de/posts/homelab/k3s-prod/apps/zyria-de/readme/</link>
-      <pubDate>Mon, 09 Feb 2026 01:08:33 +0100</pubDate>
+      <pubDate>Thu, 12 Feb 2026 11:24:59 +0100</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/posts/homelab/k3s-prod/apps/zyria-de/readme/</guid>
       <description>Dieses Dokument beschreibt die Bereitstellung der statischen Webseite für zyria.de, deren Inhalt aus einem Git-Repository synchronisiert wird.</description>
+      
+    </item>
+    
+    <item>
+      <title>Ansible Konfiguration für k3s-prod</title>
+      <link>https://zyria.de/posts/homelab/k3s-prod/ansible/readme/</link>
+      <pubDate>Thu, 12 Feb 2026 11:24:58 +0100</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://zyria.de/posts/homelab/k3s-prod/ansible/readme/</guid>
+      <description>Automatisierung der k3s Cluster-Bereitstellung und -Verwaltung mit Ansible.</description>
+      
+    </item>
+    
+    <item>
+      <title>Ansible Semaphore</title>
+      <link>https://zyria.de/posts/homelab/k3s-prod/apps/ansible-semaphore/readme/</link>
+      <pubDate>Thu, 12 Feb 2026 11:24:58 +0100</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/ansible-semaphore/readme/</guid>
+      <description>Dieses Dokument beschreibt die Bereitstellung von Ansible Semaphore, einer webbasierten Benutzeroberfläche zur Verwaltung und Ausführung von Ansible Playbooks.</description>
+      
+    </item>
+    
+    <item>
+      <title>ArgoCD</title>
+      <link>https://zyria.de/posts/homelab/k3s-prod/apps/argocd/readme/</link>
+      <pubDate>Thu, 12 Feb 2026 11:24:58 +0100</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/argocd/readme/</guid>
+      <description>Dieses Dokument beschreibt die Bereitstellung von Argo CD, einem deklarativen GitOps-Continuous-Delivery-Tool für Kubernetes.</description>
+      
+    </item>
+    
+    <item>
+      <title>Authentik</title>
+      <link>https://zyria.de/posts/homelab/k3s-prod/apps/authentik/readme/</link>
+      <pubDate>Thu, 12 Feb 2026 11:24:58 +0100</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/authentik/readme/</guid>
+      <description>Dieses Dokument beschreibt die Bereitstellung von Authentik, einem quelloffenen Identitätsanbieter (IdP).</description>
+      
+    </item>
+    
+    <item>
+      <title>Cert-Manager</title>
+      <link>https://zyria.de/posts/homelab/k3s-prod/apps/cert-manager/readme/</link>
+      <pubDate>Thu, 12 Feb 2026 11:24:58 +0100</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/cert-manager/readme/</guid>
+      <description>Dieses Dokument beschreibt die Bereitstellung von Cert-Manager, einem nativen Kubernetes-Zertifikatsmanagement-Tool.</description>
+      
+    </item>
+    
+    <item>
+      <title>CoreDNS</title>
+      <link>https://zyria.de/posts/homelab/k3s-prod/apps/coredns/readme/</link>
+      <pubDate>Thu, 12 Feb 2026 11:24:58 +0100</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/coredns/readme/</guid>
+      <description>CoreDNS dient als primärer DNS-Server für die Service Discovery innerhalb des Kubernetes-Clusters und löst sowohl interne als auch externe DNS-Anfragen auf.</description>
+      
+    </item>
+    
+    <item>
+      <title>CoreDNS</title>
+      <link>https://zyria.de/posts/homelab/k3s-prod/apps/nameserver/readme/</link>
+      <pubDate>Thu, 12 Feb 2026 11:24:58 +0100</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/nameserver/readme/</guid>
+      <description>CoreDNS dient als primärer DNS-Server für die Service Discovery innerhalb des Kubernetes-Clusters und löst sowohl interne als auch externe DNS-Anfragen auf.</description>
+      
+    </item>
+    
+    <item>
+      <title>DMARC Report</title>
+      <link>https://zyria.de/posts/homelab/k3s-prod/apps/dmarc-report/readme/</link>
+      <pubDate>Thu, 12 Feb 2026 11:24:58 +0100</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/dmarc-report/readme/</guid>
+      <description>Dieses Dokument beschreibt die Bereitstellung des DMARC Report Tools, das DMARC-Berichte verarbeitet und visualisiert.</description>
+      
+    </item>
+    
+    <item>
+      <title>Endpoint Copier Operator</title>
+      <link>https://zyria.de/posts/homelab/k3s-prod/apps/endpoint-copier-operator/readme/</link>
+      <pubDate>Thu, 12 Feb 2026 11:24:58 +0100</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/endpoint-copier-operator/readme/</guid>
+      <description>Dieses Dokument beschreibt die Bereitstellung des SUSE Endpoint Copier Operators, der Kubernetes Services und deren Endpunkte synchronisiert.</description>
+      
+    </item>
+    
+    <item>
+      <title>Forgejo</title>
+      <link>https://zyria.de/posts/homelab/k3s-prod/apps/forgejo/readme/</link>
+      <pubDate>Thu, 12 Feb 2026 11:24:58 +0100</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/forgejo/readme/</guid>
+      <description>Dieses Dokument beschreibt die Bereitstellung von Forgejo, einer quelloffenen, selbst gehosteten Git-Plattform.</description>
+      
+    </item>
+    
+    <item>
+      <title>Forgejo Runner</title>
+      <link>https://zyria.de/posts/homelab/k3s-prod/apps/forgejo-runner/readme/</link>
+      <pubDate>Thu, 12 Feb 2026 11:24:58 +0100</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/forgejo-runner/readme/</guid>
+      <description>Dieses Dokument beschreibt die Bereitstellung von Forgejo Runner, einem Daemon zum Ausführen von CI/CD-Jobs für Forgejo-Instanzen.</description>
+      
+    </item>
+    
+    <item>
+      <title>Headscale</title>
+      <link>https://zyria.de/posts/homelab/k3s-prod/apps/headscale/readme/</link>
+      <pubDate>Thu, 12 Feb 2026 11:24:58 +0100</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/headscale/readme/</guid>
+      <description>Dieses Dokument beschreibt die Bereitstellung von Headscale, einer quelloffenen, selbst gehosteten Implementierung des Tailscale Control Servers.</description>
+      
+    </item>
+    
+    <item>
+      <title>HedgeDoc</title>
+      <link>https://zyria.de/posts/homelab/k3s-prod/apps/hedgedoc/readme/</link>
+      <pubDate>Thu, 12 Feb 2026 11:24:58 +0100</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/hedgedoc/readme/</guid>
+      <description>Dieses Dokument beschreibt die Bereitstellung von HedgeDoc, einem kollaborativen Markdown-Editor.</description>
+      
+    </item>
+    
+    <item>
+      <title>Home Assistant</title>
+      <link>https://zyria.de/posts/homelab/k3s-prod/apps/home-assistant/readme/</link>
+      <pubDate>Thu, 12 Feb 2026 11:24:58 +0100</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/home-assistant/readme/</guid>
+      <description>Home Assistant ist das Gehirn des Smart Homes. Es ermöglicht die Steuerung und Automatisierung einer Vielzahl von Geräten und Diensten und stellt eine zentrale Benutzeroberfläche bereit.</description>
+      
+    </item>
+    
+    <item>
+      <title>hx53.de</title>
+      <link>https://zyria.de/posts/homelab/k3s-prod/apps/hx53-de/readme/</link>
+      <pubDate>Thu, 12 Feb 2026 11:24:58 +0100</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/hx53-de/readme/</guid>
+      <description>Dieser Dienst hostet die Webseite hx53.de. Der Inhalt der Seite wird aus einem Git-Repository geklont und von einem Nginx-Webserver ausgeliefert.</description>
+      
+    </item>
+    
+    <item>
+      <title>IT-Tools</title>
+      <link>https://zyria.de/posts/homelab/k3s-prod/apps/ittools/readme/</link>
+      <pubDate>Thu, 12 Feb 2026 11:24:58 +0100</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/ittools/readme/</guid>
+      <description>IT-Tools ist eine rein clientseitige Webanwendung, die eine Vielzahl von Werkzeugen wie Konverter, Formatierer, Generatoren und vieles mehr für den täglichen Gebrauch bereitstellt.</description>
+      
+    </item>
+    
+    <item>
+      <title>k3s Konfiguration</title>
+      <link>https://zyria.de/posts/homelab/k3s-prod/apps/k3s/readme/</link>
+      <pubDate>Thu, 12 Feb 2026 11:24:58 +0100</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/k3s/readme/</guid>
+      <description>Dieser Ordner enthält grundlegende Konfigurationen für den k3s Kubernetes-Cluster, einschließlich des Local Path Provisioners und einer virtuellen IP für den Kubernetes API-Server.</description>
+      
+    </item>
+    
+    <item>
+      <title>k3s-prod: Kubernetes Cluster Konfiguration und Anwendungsbereitstellung</title>
+      <link>https://zyria.de/posts/homelab/k3s-prod/</link>
+      <pubDate>Thu, 12 Feb 2026 11:24:58 +0100</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://zyria.de/posts/homelab/k3s-prod/</guid>
+      <description>Zentrale Verwaltung eines k3s Kubernetes Clusters und seiner Anwendungen durch GitOps mit ArgoCD, Helm und Kustomize.</description>
+      
+    </item>
+    
+    <item>
+      <title>Keel</title>
+      <link>https://zyria.de/posts/homelab/k3s-prod/apps/keel/readme/</link>
+      <pubDate>Thu, 12 Feb 2026 11:24:58 +0100</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/keel/readme/</guid>
+      <description>Keel überwacht Container-Image-Repositories und Helm-Charts auf neue Versionen und aktualisiert die entsprechenden Deployments im Cluster automatisch gemäß den definierten Policies.</description>
+      
+    </item>
+    
+    <item>
+      <title>Kubernetes Descheduler</title>
+      <link>https://zyria.de/posts/homelab/k3s-prod/apps/descheduler/readme/</link>
+      <pubDate>Thu, 12 Feb 2026 11:24:58 +0100</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/descheduler/readme/</guid>
+      <description>Dieses Dokument beschreibt die Bereitstellung des Kubernetes Deschedulers, eines Tools zur Optimierung der Pod-Platzierung in einem Cluster.</description>
+      
+    </item>
+    
+    <item>
+      <title>Longhorn</title>
+      <link>https://zyria.de/posts/homelab/k3s-prod/apps/longhorn/readme/</link>
+      <pubDate>Thu, 12 Feb 2026 11:24:58 +0100</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/longhorn/readme/</guid>
+      <description>Longhorn bietet hochverfügbaren, persistenten Blockspeicher für stateful Anwendungen im Kubernetes-Cluster, indem es den lokalen Speicherplatz der Worker-Nodes nutzt und über das Netzwerk repliziert.</description>
+      
+    </item>
+    
+    <item>
+      <title>Mailstack</title>
+      <link>https://zyria.de/posts/homelab/k3s-prod/apps/mailstack/readme/</link>
+      <pubDate>Thu, 12 Feb 2026 11:24:58 +0100</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/mailstack/readme/</guid>
+      <description>Dieser Mailstack integriert mehrere Komponenten wie Postfix, Dovecot, Rspamd und ClamAV, um einen robusten und sicheren E-Mail-Dienst mit Spam- und Virenfilterung bereitzustellen.</description>
+      
+    </item>
+    
+    <item>
+      <title>Maintenance Page</title>
+      <link>https://zyria.de/posts/homelab/k3s-prod/apps/maintenance-page/readme/</link>
+      <pubDate>Thu, 12 Feb 2026 11:24:58 +0100</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/maintenance-page/readme/</guid>
+      <description>Dieser Dienst stellt eine generische Wartungsseite bereit, die von Traefik als Fallback für nicht erreichbare Dienste oder bei Fehlern wie 404 (Not Found) angezeigt werden kann.</description>
+      
+    </item>
+    
+    <item>
+      <title>Mastodon</title>
+      <link>https://zyria.de/posts/homelab/k3s-prod/apps/mastodon/readme/</link>
+      <pubDate>Thu, 12 Feb 2026 11:24:58 +0100</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/mastodon/readme/</guid>
+      <description>Mastodon ist eine Open-Source-Alternative zu kommerziellen sozialen Netzwerken. Es ermöglicht Benutzern, eigene, unabhängige Server (Instanzen) zu betreiben, die über das ActivityPub-Protokoll miteinander kommunizieren können (Föderation).</description>
+      
+    </item>
+    
+    <item>
+      <title>Matrix</title>
+      <link>https://zyria.de/posts/homelab/k3s-prod/apps/matrix/readme/</link>
+      <pubDate>Thu, 12 Feb 2026 11:24:58 +0100</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/matrix/readme/</guid>
+      <description>Diese Anwendung stellt einen Matrix-Homeserver (Synapse) und einen Web-Client (Element) bereit, um einen föderierten, Ende-zu-Ende-verschlüsselten Chat-Dienst zu betreiben.</description>
+      
+    </item>
+    
+    <item>
+      <title>Matrix Synapse Admin</title>
+      <link>https://zyria.de/posts/homelab/k3s-prod/apps/matrix-admin/readme/</link>
+      <pubDate>Thu, 12 Feb 2026 11:24:58 +0100</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/matrix-admin/readme/</guid>
+      <description>Synapse Admin bietet eine einfache grafische Oberfläche, um Benutzer und Räume auf einem Synapse Homeserver zu verwalten, ohne die Admin-API direkt verwenden zu müssen.</description>
+      
+    </item>
+    
+    <item>
+      <title>MetalLB</title>
+      <link>https://zyria.de/posts/homelab/k3s-prod/apps/metallb/readme/</link>
+      <pubDate>Thu, 12 Feb 2026 11:24:58 +0100</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/metallb/readme/</guid>
+      <description>MetalLB ermöglicht die Verwendung von Kubernetes-Services vom Typ &lt;code&gt;LoadBalancer&lt;/code&gt; in Clustern, die nicht bei einem Cloud-Anbieter laufen, indem es IP-Adressen aus einem konfigurierten Pool zuweist.</description>
+      
+    </item>
+    
+    <item>
+      <title>Mosquitto</title>
+      <link>https://zyria.de/posts/homelab/k3s-prod/apps/mosquitto/readme/</link>
+      <pubDate>Thu, 12 Feb 2026 11:24:58 +0100</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/mosquitto/readme/</guid>
+      <description>Mosquitto dient als zentraler Message Broker für das MQTT-Protokoll und ermöglicht die Kommunikation zwischen verschiedenen IoT-Geräten und -Diensten im Smart Home.</description>
+      
+    </item>
+    
+    <item>
+      <title>MTA-STS Policy Server</title>
+      <link>https://zyria.de/posts/homelab/k3s-prod/apps/mta-sts/readme/</link>
+      <pubDate>Thu, 12 Feb 2026 11:24:58 +0100</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/mta-sts/readme/</guid>
+      <description>Dieser Dienst verwendet einen Nginx-Server, um eine statische &lt;code&gt;mta-sts.txt&lt;/code&gt;-Datei unter dem &lt;code&gt;.well-known&lt;/code&gt;-Pfad für verschiedene Domains zu veröffentlichen und so die E-Mail-Sicherheit zu erhöhen.</description>
+      
+    </item>
+    
+    <item>
+      <title>Nextcloud</title>
+      <link>https://zyria.de/posts/homelab/k3s-prod/apps/nextcloud/readme/</link>
+      <pubDate>Thu, 12 Feb 2026 11:24:58 +0100</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/nextcloud/readme/</guid>
+      <description>Nextcloud ist das Gehirn des Smart Homes. Es ermöglicht die Steuerung und Automatisierung einer Vielzahl von Geräten und Diensten und stellt eine zentrale Benutzeroberfläche bereit.</description>
+      
+    </item>
+    
+    <item>
+      <title>OpenDTU</title>
+      <link>https://zyria.de/posts/homelab/k3s-prod/apps/opendtu/readme/</link>
+      <pubDate>Thu, 12 Feb 2026 11:24:58 +0100</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/opendtu/readme/</guid>
+      <description>Dieser Dienst stellt eine Weboberfläche bereit, die Daten von einem OpenDTU-Gerät empfängt, in einer Datenbank speichert und zur Visualisierung und Analyse anzeigt.</description>
+      
+    </item>
+    
+    <item>
+      <title>Paperless-ngx</title>
+      <link>https://zyria.de/posts/homelab/k3s-prod/apps/paperless/readme/</link>
+      <pubDate>Thu, 12 Feb 2026 11:24:58 +0100</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/paperless/readme/</guid>
+      <description>This document describes the Paperless-ngx deployment, a document management system that transforms physical documents into searchable digital archives.</description>
+      
+    </item>
+    
+    <item>
+      <title>Pi-hole</title>
+      <link>https://zyria.de/posts/homelab/k3s-prod/apps/pihole/pihole/</link>
+      <pubDate>Thu, 12 Feb 2026 11:24:58 +0100</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/pihole/pihole/</guid>
+      <description>This document describes the Pi-hole deployment, a network-wide ad blocker and DNS sinkhole.</description>
+      
+    </item>
+    
+    <item>
+      <title>Plex Media Server</title>
+      <link>https://zyria.de/posts/homelab/k3s-prod/apps/plex/readme/</link>
+      <pubDate>Thu, 12 Feb 2026 11:24:58 +0100</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/plex/readme/</guid>
+      <description>Dieses Dokument beschreibt die Bereitstellung des Plex Media Servers, einer beliebten Anwendung zum Organisieren und Streamen von Medien.</description>
+      
+    </item>
+    
+    <item>
+      <title>Prometheus</title>
+      <link>https://zyria.de/posts/homelab/k3s-prod/apps/prometheus/readme/</link>
+      <pubDate>Thu, 12 Feb 2026 11:24:58 +0100</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/prometheus/readme/</guid>
+      <description>This document describes the Prometheus deployment, an open-source monitoring and alerting toolkit.</description>
+      
+    </item>
+    
+    <item>
+      <title>quaecki.de Website</title>
+      <link>https://zyria.de/posts/homelab/k3s-prod/apps/quaecki-de/readme/</link>
+      <pubDate>Thu, 12 Feb 2026 11:24:58 +0100</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/quaecki-de/readme/</guid>
+      <description>This document describes the deployment of the static website for quaecki.de.</description>
+      
+    </item>
+    
+    <item>
+      <title>Reloader</title>
+      <link>https://zyria.de/posts/homelab/k3s-prod/apps/reloader/readme/</link>
+      <pubDate>Thu, 12 Feb 2026 11:24:58 +0100</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/reloader/readme/</guid>
+      <description>Dieses Dokument beschreibt die Bereitstellung des Reloader, eines Kubernetes-Controllers, der Pod-Neustarts bei ConfigMap- oder Secret-Updates automatisiert.</description>
+      
+    </item>
+    
+    <item>
+      <title>SolarFlow Topic Mapper (ACE1500)</title>
+      <link>https://zyria.de/posts/homelab/k3s-prod/apps/ace1500/readme/</link>
+      <pubDate>Thu, 12 Feb 2026 11:24:58 +0100</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/ace1500/readme/</guid>
+      <description>Dieses Dokument beschreibt die Bereitstellung einer benutzerdefinierten SolarFlow Topic Mapper-Anwendung für ein spezifisches SolarFlow-Gerät (ACE1500).</description>
       
     </item>
     
@@ -615,122 +567,7 @@
       <pubDate>Tue, 27 Jan 2026 14:06:57 +0100</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/posts/homelab/debian-upgrade/</guid>
-      <description>&lt;p&gt;Wie man Debian zuverlässig auf den Stand bringt. Danke an &lt;a
-  href=&#34;https://doku.lrz.de/upgrade-auf-debian-13-trixie-1921298568.html&#34;
-    target=&#34;_blank&#34;
-  &gt;doku.lrz.de&lt;/a&gt; die dies bei jedem Release aufschreiben.&lt;/p&gt;
-&lt;p&gt;Debian stellt auch eine &lt;a
-  href=&#34;https://www.debian.org/releases/stable/release-notes/upgrading.de.html&#34;
-    target=&#34;_blank&#34;
-  &gt;Anleitung&lt;/a&gt; zur Verfügung.&lt;/p&gt;
-&lt;p&gt;Proxmox hat für jedes Release einen &lt;a
-  href=&#34;https://pve.proxmox.com/wiki/Category:Upgrade&#34;
-    target=&#34;_blank&#34;
-  &gt;Wiki&lt;/a&gt; Artikel. Auf für den &lt;a
-  href=&#34;https://pbs.proxmox.com/wiki/Category:Upgrade&#34;
-    target=&#34;_blank&#34;
-  &gt;Proxmox Backup Server&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h2 class=&#34;relative group&#34;&gt;Vorbereitungen
-    &lt;div id=&#34;vorbereitungen&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
-    
-    &lt;span
-        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;
-        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#vorbereitungen&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;
-    &lt;/span&gt;
-    
-&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;apt update
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;apt full-upgrade
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h2 class=&#34;relative group&#34;&gt;Paketquellen aktualisieren
-    &lt;div id=&#34;paketquellen-aktualisieren&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
-    
-    &lt;span
-        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;
-        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#paketquellen-aktualisieren&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;
-    &lt;/span&gt;
-    
-&lt;/h2&gt;
-
-&lt;h3 class=&#34;relative group&#34;&gt;Versionen
-    &lt;div id=&#34;versionen&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
-    
-    &lt;span
-        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;
-        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#versionen&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;
-    &lt;/span&gt;
-    
-&lt;/h3&gt;
-&lt;table&gt;
-  &lt;thead&gt;
-      &lt;tr&gt;
-          &lt;th&gt;Versionsnummer&lt;/th&gt;
-          &lt;th&gt;Versionsname&lt;/th&gt;
-          &lt;th&gt;Replace&lt;/th&gt;
-      &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-      &lt;tr&gt;
-          &lt;td&gt;9&lt;/td&gt;
-          &lt;td&gt;Stretch&lt;/td&gt;
-          &lt;td&gt;:%s/stretch/buster/&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;10&lt;/td&gt;
-          &lt;td&gt;buster&lt;/td&gt;
-          &lt;td&gt;:%s/buster/bullseye/&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;11&lt;/td&gt;
-          &lt;td&gt;bullseye&lt;/td&gt;
-          &lt;td&gt;:%s/bullseye/bookworm/&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;12&lt;/td&gt;
-          &lt;td&gt;bookworm&lt;/td&gt;
-          &lt;td&gt;:%s/bookworm/trixie/&lt;/td&gt;
-      &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h3 class=&#34;relative group&#34;&gt;Default sources.list
-    &lt;div id=&#34;default-sourceslist&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
-    
-    &lt;span
-        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;
-        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#default-sourceslist&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;
-    &lt;/span&gt;
-    
-&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;cat &lt;span class=&#34;s&#34;&gt;&amp;lt;&amp;lt;EOF &amp;gt; /etc/apt/sources.list
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s&#34;&gt;deb http://deb.debian.org/debian trixie main contrib non-free non-free-firmware
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s&#34;&gt;deb http://deb.debian.org/debian trixie-updates main contrib non-free non-free-firmware
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;4&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s&#34;&gt;deb http://deb.debian.org/debian-security/ trixie-security main contrib non-free non-free-firmware
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;5&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s&#34;&gt;EOF&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h3 class=&#34;relative group&#34;&gt;Alle Sources ändern
-    &lt;div id=&#34;alle-sources-ändern&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
-    
-    &lt;span
-        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;
-        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#alle-sources-%c3%a4ndern&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;
-    &lt;/span&gt;
-    
-&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;sed -i &lt;span class=&#34;s1&#34;&gt;&amp;#39;s:bookworm:trixie:&amp;#39;&lt;/span&gt; /etc/apt/sources.list
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;sed -i &lt;span class=&#34;s1&#34;&gt;&amp;#39;s:bookworm:trixie:&amp;#39;&lt;/span&gt; /etc/apt/sources.list.d/*.list
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h3 class=&#34;relative group&#34;&gt;Apt Preferences prüfen
-    &lt;div id=&#34;apt-preferences-prüfen&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
-    
-    &lt;span
-        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;
-        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#apt-preferences-pr%c3%bcfen&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;
-    &lt;/span&gt;
-    
-&lt;/h3&gt;
-&lt;p&gt;/etc/apt/preferences.d/*&lt;/p&gt;</description>
+      <description>&lt;p&gt;Wie man Debian zuverlässig auf den Stand bringt. Danke an &lt;a href=&#34;https://doku.lrz.de/upgrade-auf-debian-13-trixie-1921298568.html&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;doku.lrz.de&lt;/a&gt; die dies bei jedem Release aufschreiben.&lt;/p&gt;&#xA;&lt;p&gt;Debian stellt auch eine &lt;a href=&#34;https://www.debian.org/releases/stable/release-notes/upgrading.de.html&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;Anleitung&lt;/a&gt; zur Verfügung.&lt;/p&gt;&#xA;&lt;p&gt;Proxmox hat für jedes Release einen &lt;a href=&#34;https://pve.proxmox.com/wiki/Category:Upgrade&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;Wiki&lt;/a&gt; Artikel. Auf für den &lt;a href=&#34;https://pbs.proxmox.com/wiki/Category:Upgrade&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;Proxmox Backup Server&lt;/a&gt;.&lt;/p&gt;&#xA;&#xA;&lt;h2 class=&#34;relative group&#34;&gt;Vorbereitungen&#xA;    &lt;div id=&#34;vorbereitungen&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#vorbereitungen&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;div class=&#34;highlight-wrapper&#34;&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;apt update&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;apt full-upgrade&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&#xA;&#xA;&lt;h2 class=&#34;relative group&#34;&gt;Paketquellen aktualisieren&#xA;    &lt;div id=&#34;paketquellen-aktualisieren&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#paketquellen-aktualisieren&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&#xA;&lt;h3 class=&#34;relative group&#34;&gt;Versionen&#xA;    &lt;div id=&#34;versionen&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#versionen&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h3&gt;&#xA;&lt;table&gt;&#xA;  &lt;thead&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;th&gt;Versionsnummer&lt;/th&gt;&#xA;          &lt;th&gt;Versionsname&lt;/th&gt;&#xA;          &lt;th&gt;Replace&lt;/th&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/thead&gt;&#xA;  &lt;tbody&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;9&lt;/td&gt;&#xA;          &lt;td&gt;Stretch&lt;/td&gt;&#xA;          &lt;td&gt;:%s/stretch/buster/&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;10&lt;/td&gt;&#xA;          &lt;td&gt;buster&lt;/td&gt;&#xA;          &lt;td&gt;:%s/buster/bullseye/&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;11&lt;/td&gt;&#xA;          &lt;td&gt;bullseye&lt;/td&gt;&#xA;          &lt;td&gt;:%s/bullseye/bookworm/&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;12&lt;/td&gt;&#xA;          &lt;td&gt;bookworm&lt;/td&gt;&#xA;          &lt;td&gt;:%s/bookworm/trixie/&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/tbody&gt;&#xA;&lt;/table&gt;&#xA;&#xA;&lt;h3 class=&#34;relative group&#34;&gt;Default sources.list&#xA;    &lt;div id=&#34;default-sourceslist&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#default-sourceslist&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h3&gt;&#xA;&lt;div class=&#34;highlight-wrapper&#34;&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;cat &lt;span class=&#34;s&#34;&gt;&amp;lt;&amp;lt;EOF &amp;gt; /etc/apt/sources.list&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s&#34;&gt;deb http://deb.debian.org/debian trixie main contrib non-free non-free-firmware&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s&#34;&gt;deb http://deb.debian.org/debian trixie-updates main contrib non-free non-free-firmware&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;4&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s&#34;&gt;deb http://deb.debian.org/debian-security/ trixie-security main contrib non-free non-free-firmware&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;5&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s&#34;&gt;EOF&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&#xA;&#xA;&lt;h3 class=&#34;relative group&#34;&gt;Alle Sources ändern&#xA;    &lt;div id=&#34;alle-sources-ändern&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#alle-sources-%c3%a4ndern&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h3&gt;&#xA;&lt;div class=&#34;highlight-wrapper&#34;&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;sed -i &lt;span class=&#34;s1&#34;&gt;&amp;#39;s:bookworm:trixie:&amp;#39;&lt;/span&gt; /etc/apt/sources.list&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;sed -i &lt;span class=&#34;s1&#34;&gt;&amp;#39;s:bookworm:trixie:&amp;#39;&lt;/span&gt; /etc/apt/sources.list.d/*.list&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&#xA;&#xA;&lt;h3 class=&#34;relative group&#34;&gt;Apt Preferences prüfen&#xA;    &lt;div id=&#34;apt-preferences-prüfen&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#apt-preferences-pr%c3%bcfen&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h3&gt;&#xA;&lt;p&gt;/etc/apt/preferences.d/*&lt;/p&gt;</description>
       
     </item>
     
@@ -750,16 +587,7 @@
       <pubDate>Tue, 04 Nov 2025 10:07:02 +0100</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/posts/homelab/windows_install/</guid>
-      <description>&lt;h2 class=&#34;relative group&#34;&gt;Anleitung: Neuen Windows-Rechner in Active Directory (AD) aufnehmen
-    &lt;div id=&#34;anleitung-neuen-windows-rechner-in-active-directory-ad-aufnehmen&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
-    
-    &lt;span
-        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;
-        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#anleitung-neuen-windows-rechner-in-active-directory-ad-aufnehmen&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;
-    &lt;/span&gt;
-    
-&lt;/h2&gt;
-&lt;p&gt;Diese Anleitung beschreibt den Prozess, wie man einen fabrikneuen Windows-Rechner (im &amp;ldquo;Out-of-Box Experience&amp;rdquo;-Modus, OOBE) einrichtet, die erzwungene Anmeldung mit einem Microsoft-Konto umgeht und den Rechner anschließend in eine lokale Active Directory-Domäne aufnimmt.&lt;/p&gt;</description>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;Anleitung: Neuen Windows-Rechner in Active Directory (AD) aufnehmen&#xA;    &lt;div id=&#34;anleitung-neuen-windows-rechner-in-active-directory-ad-aufnehmen&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#anleitung-neuen-windows-rechner-in-active-directory-ad-aufnehmen&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;Diese Anleitung beschreibt den Prozess, wie man einen fabrikneuen Windows-Rechner (im &amp;ldquo;Out-of-Box Experience&amp;rdquo;-Modus, OOBE) einrichtet, die erzwungene Anmeldung mit einem Microsoft-Konto umgeht und den Rechner anschließend in eine lokale Active Directory-Domäne aufnimmt.&lt;/p&gt;</description>
       
     </item>
     
@@ -819,19 +647,7 @@
       <pubDate>Tue, 01 Jul 2025 13:37:34 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/posts/homelab/login/</guid>
-      <description>&lt;p&gt;Alle Zugangsdaten sind entweder in der Persönlichen Keepass Datendank (für
-personalisierte Logindaten) oder in der IT Datenbank. Der Login auf die Server
-geschieht über SSH Schlüssel. Ein Login mit dem Passwort ist nicht vorgesehen.&lt;/p&gt;
-&lt;p&gt;Für den externen Zugriff ist der Login über &lt;a
-  href=&#34;https://vpn.zyria.de&#34;
-    target=&#34;_blank&#34;
-  &gt;VPN&lt;/a&gt; oder einem Bastion Host
-&lt;a
-  href=&#34;mailto:bastion@vpn.zyria.de&#34;&gt;bastion@vpn.zyria.de&lt;/a&gt;:3022 möglich. &lt;/p&gt;
-&lt;p&gt;Generell sollte jedoch ein Login auf die Server nur zum Suchen von Fehlern
-stattfinden. Die Verwaltung erfolgt ausschliesslich über Ansible. Jede händisch
-durchgeführte Änderung muss im Nachhinein in Ansible eingepflegt und getestet
-werden.&lt;/p&gt;</description>
+      <description>&lt;p&gt;Alle Zugangsdaten sind entweder in der Persönlichen Keepass Datendank (für&#xA;personalisierte Logindaten) oder in der IT Datenbank. Der Login auf die Server&#xA;geschieht über SSH Schlüssel. Ein Login mit dem Passwort ist nicht vorgesehen.&lt;/p&gt;&#xA;&lt;p&gt;Für den externen Zugriff ist der Login über &lt;a href=&#34;https://vpn.zyria.de&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;VPN&lt;/a&gt; oder einem Bastion Host&#xA;&lt;a href=&#34;mailto:bastion@vpn.zyria.de&#34; &gt;bastion@vpn.zyria.de&lt;/a&gt;:3022 möglich. &lt;/p&gt;&#xA;&lt;p&gt;Generell sollte jedoch ein Login auf die Server nur zum Suchen von Fehlern&#xA;stattfinden. Die Verwaltung erfolgt ausschliesslich über Ansible. Jede händisch&#xA;durchgeführte Änderung muss im Nachhinein in Ansible eingepflegt und getestet&#xA;werden.&lt;/p&gt;</description>
       
     </item>
     
@@ -871,28 +687,7 @@ werden.&lt;/p&gt;</description>
       <pubDate>Tue, 01 Jul 2025 13:37:34 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/posts/homelab/verwaltung/</guid>
-      <description>&lt;p&gt;Wir verwenden zur generellen Verwaltung von Servern Ansible. Für manche Dienste
-ist es jedoch notwendig oder praktikabler dies über vorhandene Portale zu
-realisieren.&lt;/p&gt;
-
-&lt;h2 class=&#34;relative group&#34;&gt;Core-Networks (DNS)
-    &lt;div id=&#34;core-networks-dns&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
-    
-    &lt;span
-        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;
-        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#core-networks-dns&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;
-    &lt;/span&gt;
-    
-&lt;/h2&gt;
-&lt;p&gt;Unsere DNS Server werden bei &lt;a
-  href=&#34;https://www.core-networks.de&#34;
-    target=&#34;_blank&#34;
-  &gt;Core-Networks&lt;/a&gt;
-gehostet. In deren &lt;a
-  href=&#34;https://iface.core-networks.de&#34;
-    target=&#34;_blank&#34;
-  &gt;Webinterface&lt;/a&gt; lassen sich
-alle relevanten Änderungen durchführen.&lt;/p&gt;</description>
+      <description>&lt;p&gt;Wir verwenden zur generellen Verwaltung von Servern Ansible. Für manche Dienste&#xA;ist es jedoch notwendig oder praktikabler dies über vorhandene Portale zu&#xA;realisieren.&lt;/p&gt;&#xA;&#xA;&lt;h2 class=&#34;relative group&#34;&gt;Core-Networks (DNS)&#xA;    &lt;div id=&#34;core-networks-dns&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#core-networks-dns&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;Unsere DNS Server werden bei &lt;a href=&#34;https://www.core-networks.de&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;Core-Networks&lt;/a&gt;&#xA;gehostet. In deren &lt;a href=&#34;https://iface.core-networks.de&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;Webinterface&lt;/a&gt; lassen sich&#xA;alle relevanten Änderungen durchführen.&lt;/p&gt;</description>
       
     </item>
     
@@ -902,30 +697,7 @@ alle relevanten Änderungen durchführen.&lt;/p&gt;</description>
       <pubDate>Tue, 01 Jul 2025 13:37:34 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/posts/homelab/setup_windows/</guid>
-      <description>&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;Windows Rechner mit Professional Version kaufen (Aufgeräumt wird über Ansible)&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Windows Rechner vollständig laden&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Beim ersten Anschalten lokalen Benutzer oder Domäne auswählen.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Lokaler Benutzer ist der Hauptnutzer des Gerätes.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Kennwort wird in der IT Datenbank gesichert&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Alle Datensammelei während des Setups verbieten&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Rechner in Domäne aufnehmen&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Ansible Setup Script starten (liegt im ansible-main Repo unter files)&lt;/p&gt;</description>
+      <description>&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Windows Rechner mit Professional Version kaufen (Aufgeräumt wird über Ansible)&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Windows Rechner vollständig laden&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Beim ersten Anschalten lokalen Benutzer oder Domäne auswählen.&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Lokaler Benutzer ist der Hauptnutzer des Gerätes.&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Kennwort wird in der IT Datenbank gesichert&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Alle Datensammelei während des Setups verbieten&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Rechner in Domäne aufnehmen&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Ansible Setup Script starten (liegt im ansible-main Repo unter files)&lt;/p&gt;</description>
       
     </item>
     
@@ -945,25 +717,7 @@ alle relevanten Änderungen durchführen.&lt;/p&gt;</description>
       <pubDate>Tue, 01 Jul 2025 13:37:34 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/posts/homelab/windows_autologon/</guid>
-      <description>&lt;h2 class=&#34;relative group&#34;&gt;AutoLogon
-    &lt;div id=&#34;autologon&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
-    
-    &lt;span
-        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;
-        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#autologon&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;
-    &lt;/span&gt;
-    
-&lt;/h2&gt;
-&lt;p&gt;Erstelle eine .reg Datei mit folgendem Inhalt und führe sie auf dem Zielrechner
-aus.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-registry&#34; data-lang=&#34;registry&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;Windows Registry Editor Version 5.00
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;HKEY_LOCAL_MACHINE&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon]&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;4&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;na&#34;&gt;&amp;#34;AutoAdminLogon&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;1&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;5&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;na&#34;&gt;&amp;#34;DefaultUserName&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;BENUTZERNAME&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;6&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;na&#34;&gt;&amp;#34;DefaultDomainName&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;DOMÄNE&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;7&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;na&#34;&gt;&amp;#34;DefaultPassword&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;*****&amp;#39;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;AutoLogon&#xA;    &lt;div id=&#34;autologon&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#autologon&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;Erstelle eine .reg Datei mit folgendem Inhalt und führe sie auf dem Zielrechner&#xA;aus.&lt;/p&gt;&#xA;&lt;div class=&#34;highlight-wrapper&#34;&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-registry&#34; data-lang=&#34;registry&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;Windows Registry Editor Version 5.00&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;HKEY_LOCAL_MACHINE&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon]&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;4&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;na&#34;&gt;&amp;#34;AutoAdminLogon&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;1&amp;#34;&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;5&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;na&#34;&gt;&amp;#34;DefaultUserName&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;BENUTZERNAME&amp;#34;&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;6&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;na&#34;&gt;&amp;#34;DefaultDomainName&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;DOMÄNE&amp;#34;&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;ln&#34;&gt;7&lt;/span&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;na&#34;&gt;&amp;#34;DefaultPassword&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#39;*****&amp;#39;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</description>
       
     </item>
     
@@ -983,29 +737,7 @@ aus.&lt;/p&gt;
       <pubDate>Tue, 01 Jul 2025 12:10:19 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/posts/homelab/vms/addc/</guid>
-      <description>&lt;h2 class=&#34;relative group&#34;&gt;Primärfunktion
-    &lt;div id=&#34;primärfunktion&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
-    
-    &lt;span
-        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;
-        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#prim%c3%a4rfunktion&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;
-    &lt;/span&gt;
-    
-&lt;/h2&gt;
-&lt;p&gt;Samba Active Directory Domain Controller und Fileserver&lt;/p&gt;
-
-&lt;h2 class=&#34;relative group&#34;&gt;Installierte Software
-    &lt;div id=&#34;installierte-software&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
-    
-    &lt;span
-        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;
-        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#installierte-software&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;
-    &lt;/span&gt;
-    
-&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Samba-AD-DC&lt;/li&gt;
-&lt;/ul&gt;</description>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;Primärfunktion&#xA;    &lt;div id=&#34;primärfunktion&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#prim%c3%a4rfunktion&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;Samba Active Directory Domain Controller und Fileserver&lt;/p&gt;&#xA;&#xA;&lt;h2 class=&#34;relative group&#34;&gt;Installierte Software&#xA;    &lt;div id=&#34;installierte-software&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#installierte-software&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Samba-AD-DC&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
       
     </item>
     
@@ -1015,31 +747,7 @@ aus.&lt;/p&gt;
       <pubDate>Tue, 01 Jul 2025 12:10:19 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/posts/homelab/vms/dev/</guid>
-      <description>&lt;h2 class=&#34;relative group&#34;&gt;Primärfunktion
-    &lt;div id=&#34;primärfunktion&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
-    
-    &lt;span
-        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;
-        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#prim%c3%a4rfunktion&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;
-    &lt;/span&gt;
-    
-&lt;/h2&gt;
-&lt;p&gt;Host für Podman Container.&lt;/p&gt;
-
-&lt;h2 class=&#34;relative group&#34;&gt;Installierte Software
-    &lt;div id=&#34;installierte-software&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
-    
-    &lt;span
-        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;
-        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#installierte-software&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;
-    &lt;/span&gt;
-    
-&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;cockpit&lt;/li&gt;
-&lt;li&gt;podman&lt;/li&gt;
-&lt;li&gt;k3s&lt;/li&gt;
-&lt;/ul&gt;</description>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;Primärfunktion&#xA;    &lt;div id=&#34;primärfunktion&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#prim%c3%a4rfunktion&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;Host für Podman Container.&lt;/p&gt;&#xA;&#xA;&lt;h2 class=&#34;relative group&#34;&gt;Installierte Software&#xA;    &lt;div id=&#34;installierte-software&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#installierte-software&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;cockpit&lt;/li&gt;&#xA;&lt;li&gt;podman&lt;/li&gt;&#xA;&lt;li&gt;k3s&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
       
     </item>
     
@@ -1049,65 +757,7 @@ aus.&lt;/p&gt;
       <pubDate>Thu, 19 Oct 2023 13:28:04 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/posts/homelab/erste_hilfe/</guid>
-      <description>&lt;h2 class=&#34;relative group&#34;&gt;Erster Schritt
-    &lt;div id=&#34;erster-schritt&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
-    
-    &lt;span
-        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;
-        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#erster-schritt&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;
-    &lt;/span&gt;
-    
-&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Läuft das Gerät?&lt;/li&gt;
-&lt;li&gt;Hast du das Gerät einmal neu gestartet? Abmelden und anmelden reicht nicht
-aus!&lt;/li&gt;
-&lt;li&gt;Sind alle Kabel angeschlossen und richtig eingesteckt?&lt;/li&gt;
-&lt;li&gt;Ist der Bildschirm angeschaltet?&lt;/li&gt;
-&lt;li&gt;Was hast du getan, bevor das Gerät nicht mehr ging?&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 class=&#34;relative group&#34;&gt;Zweiter Schritt
-    &lt;div id=&#34;zweiter-schritt&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
-    
-    &lt;span
-        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;
-        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#zweiter-schritt&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;
-    &lt;/span&gt;
-    
-&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a
-  href=&#34;https://status.zyria.com/status/index&#34;
-    target=&#34;_blank&#34;
-  &gt;Statusseite checken&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 class=&#34;relative group&#34;&gt;Dritter Schritt
-    &lt;div id=&#34;dritter-schritt&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
-    
-    &lt;span
-        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;
-        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#dritter-schritt&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;
-    &lt;/span&gt;
-    
-&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Neustart des Rechners == (nach jeder Änderung!) ==&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 class=&#34;relative group&#34;&gt;Vierter Schritt
-    &lt;div id=&#34;vierter-schritt&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
-    
-    &lt;span
-        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;
-        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#vierter-schritt&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;
-    &lt;/span&gt;
-    
-&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Evtl. ausstehende Updates ausführen&lt;/li&gt;
-&lt;/ul&gt;</description>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;Erster Schritt&#xA;    &lt;div id=&#34;erster-schritt&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#erster-schritt&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Läuft das Gerät?&lt;/li&gt;&#xA;&lt;li&gt;Hast du das Gerät einmal neu gestartet? Abmelden und anmelden reicht nicht&#xA;aus!&lt;/li&gt;&#xA;&lt;li&gt;Sind alle Kabel angeschlossen und richtig eingesteckt?&lt;/li&gt;&#xA;&lt;li&gt;Ist der Bildschirm angeschaltet?&lt;/li&gt;&#xA;&lt;li&gt;Was hast du getan, bevor das Gerät nicht mehr ging?&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&#xA;&lt;h2 class=&#34;relative group&#34;&gt;Zweiter Schritt&#xA;    &lt;div id=&#34;zweiter-schritt&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#zweiter-schritt&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://status.zyria.com/status/index&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;Statusseite checken&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&#xA;&lt;h2 class=&#34;relative group&#34;&gt;Dritter Schritt&#xA;    &lt;div id=&#34;dritter-schritt&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#dritter-schritt&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Neustart des Rechners == (nach jeder Änderung!) ==&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&#xA;&lt;h2 class=&#34;relative group&#34;&gt;Vierter Schritt&#xA;    &lt;div id=&#34;vierter-schritt&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#vierter-schritt&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Evtl. ausstehende Updates ausführen&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
       
     </item>
     
