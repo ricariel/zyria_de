@@ -9,7 +9,17 @@
     <managingEditor>fabrice@zyria.de (Fabrice Kirchner)</managingEditor>
     <webMaster>fabrice@zyria.de (Fabrice Kirchner)</webMaster>
     
-    <lastBuildDate>Fri, 30 Jan 2026 14:24:56 +0100</lastBuildDate><atom:link href="https://zyria.de/posts/homelab/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 18 Feb 2026 09:19:47 +0100</lastBuildDate><atom:link href="https://zyria.de/posts/homelab/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Unifi Snippets</title>
+      <link>https://zyria.de/posts/homelab/unifi-legacy/</link>
+      <pubDate>Wed, 18 Feb 2026 09:19:47 +0100</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://zyria.de/posts/homelab/unifi-legacy/</guid>
+      <description>All der Kram, der sonst nirgends hin gehört</description>
+      
+    </item>
     
     <item>
       <title>Windows Snippets</title>
