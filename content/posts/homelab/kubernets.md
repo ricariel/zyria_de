@@ -11,6 +11,10 @@ Hier Sammle ich Snippets, welche mir das Tippen ersparen sollen und für Kuberne
 
 <!--more-->
 
+## Kubernetes Nutzer hinzufügen
+
+[Quelle](https://aungzanbaw.medium.com/a-step-by-step-guide-to-creating-users-in-kubernetes-6a5a2cfd8c71)
+
 ## Lösche alte ReplicaSets
 
 ```bash
