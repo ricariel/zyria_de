@@ -9,7 +9,7 @@
     <managingEditor>fabrice@zyria.de (Fabrice Kirchner)</managingEditor>
     <webMaster>fabrice@zyria.de (Fabrice Kirchner)</webMaster>
     
-    <lastBuildDate>Wed, 18 Feb 2026 09:19:47 +0100</lastBuildDate><atom:link href="https://zyria.de/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 12 Mar 2026 09:24:17 +0100</lastBuildDate><atom:link href="https://zyria.de/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Über mich</title>
@@ -52,6 +52,26 @@
     </item>
     
     <item>
+      <title>Hetzner Server IP Adress tausch</title>
+      <link>https://zyria.de/posts/homelab/hetzner_ip_change/</link>
+      <pubDate>Thu, 12 Mar 2026 09:24:17 +0100</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://zyria.de/posts/homelab/hetzner_ip_change/</guid>
+      <description>Anbei ist der Ablauf beschrieben einen Hetzner Server nach Hardwqre Tausch mit einer neuen IP zu versorgen</description>
+      
+    </item>
+    
+    <item>
+      <title>Kubernetes Snippets</title>
+      <link>https://zyria.de/posts/homelab/kubernets/</link>
+      <pubDate>Thu, 12 Mar 2026 09:24:17 +0100</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://zyria.de/posts/homelab/kubernets/</guid>
+      <description>&lt;p&gt;Hier Sammle ich Snippets, welche mir das Tippen ersparen sollen und für Kubernetes öfter mal gebraucht werden.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
       <title>Unifi Snippets</title>
       <link>https://zyria.de/posts/homelab/unifi-legacy/</link>
       <pubDate>Wed, 18 Feb 2026 09:19:47 +0100</pubDate>
@@ -88,16 +108,6 @@
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/posts/homelab/k3s-prod/apps/unifi-controller/readme/</guid>
       <description>Dieses Dokument beschreibt die Bereitstellung der UniFi Netzwerk-Anwendung, einer Software-Defined Networking (SDN)-Plattform zur Verwaltung von UniFi-Geräten.</description>
-      
-    </item>
-    
-    <item>
-      <title>Kubernetes Snippets</title>
-      <link>https://zyria.de/posts/homelab/kubernets/</link>
-      <pubDate>Tue, 18 Nov 2025 14:19:10 +0100</pubDate>
-      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://zyria.de/posts/homelab/kubernets/</guid>
-      <description>&lt;p&gt;Hier Sammle ich Snippets, welche mir das Tippen ersparen sollen und für Kubernetes öfter mal gebraucht werden.&lt;/p&gt;</description>
       
     </item>
     
