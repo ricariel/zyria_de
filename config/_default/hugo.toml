@@ -7,11 +7,6 @@ baseURL = "https://zyria.de/"
 defaultContentLanguage = "de"
 cleanDestinationDir = true
 
-pygmentsUseClasses= true
-pygmentsCodeFences= true
-pygmentsUseClassic= false
-pygmentsStyle= "tango"
-
 # pluralizeListTitles = "true" # hugo function useful for non-english languages, find out more in  https://gohugo.io/getting-started/configuration/#pluralizelisttitles
 
 enableRobotsTXT = true
@@ -23,13 +18,13 @@ buildFuture = false
 enableEmoji = true
 enableGitInfo = true
 
-refLinksErrorLevel = 'warning'
+refLinksErrorLevel = 'ERROR'
 refLinksNotFoundURL = '/404'
 
 # googleAnalytics = "G-XXXXXXXXX"
 
 [pagination]
-  pagerSize = 100
+  pagerSize = 20
 
 [imaging]
   anchor = 'Center'
@@ -40,8 +35,9 @@ refLinksNotFoundURL = '/404'
   author = "authors"
   series = "series"
 
+# Hugo core sitemap settings. Blowfish adds sitemap.excludedKinds in params.toml.
 [sitemap]
-  changefreq = 'daily'
+  changefreq = 'weekly'
   filename = 'sitemap.xml'
   priority = 0.5
 
@@ -50,7 +46,7 @@ refLinksNotFoundURL = '/404'
   section = ["HTML", "RSS"]
 
 [related]
-  threshold = 0
+  threshold = 80
   toLower = false
 
     [[related.indices]]
