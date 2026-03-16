@@ -1,6 +1,6 @@
 [hugoVersion]
   extended = true
-  min = "0.87.0"
+  min = "0.122.0"
 
 [[mounts]]
   disableWatch = false

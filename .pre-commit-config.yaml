@@ -19,7 +19,7 @@ repos:
       - id: check-merge-conflict
       - id: check-shebang-scripts-are-executable
       - id: check-symlinks
-      # - id: check-yaml
+      - id: check-yaml
       - id: destroyed-symlinks
       - id: detect-private-key
       - id: double-quote-string-fixer
@@ -27,10 +27,6 @@ repos:
       - id: mixed-line-ending
       - id: requirements-txt-fixer
       - id: trailing-whitespace
-  - repo: https://github.com/psf/black
-    rev: 25.1.0
-    hooks:
-      - id: black
   - repo: https://github.com/gitleaks/gitleaks
     rev: v8.23.2
     hooks:
@@ -45,15 +41,6 @@ repos:
     rev: v0.44.0
     hooks:
       - id: markdownlint
-  - repo: https://github.com/pryorda/dockerfilelint-precommit-hooks
-    rev: v0.1.0
-    hooks:
-      - id: dockerfilelint
-        stages: [pre-commit]
-  - repo: https://github.com/IamTheFij/ansible-pre-commit.git
-    rev: v0.1.2
-    hooks:
-      - id: encryption-check
   - repo: https://github.com/Lucas-C/pre-commit-hooks
     rev: v1.5.5
     hooks:
@@ -65,15 +52,6 @@ repos:
       - id: chmod
         args: ['644']
         files: \.md$
-      - id: insert-license
-        files: \.groovy$
-        args:
-          - --license-filepath
-          - src/license_header.txt        # defaults to: LICENSE.txt
-          - --comment-style
-          - //                            # defaults to:  #
-          - --use-current-year
-          - --no-extra-eol                # see below
   - repo: https://github.com/jumanjihouse/pre-commit-hooks
     rev: 3.0.0  # or specific git tag
     hooks:
@@ -119,7 +97,7 @@ repos:
       - id: css-forbid-px
         name: In CSS files, use rem or % over px
         language: pygrep
-        entry: px
+        entry: '\d+px'
         files: \.css$
       - id: ot-sanitize-fonts
         name: Calling ot-sanitise on otf/ttf/woff/woff2 font files
@@ -130,20 +108,3 @@ repos:
           ot-sanitise "$font"; done
           || echo "WARNING Command ot-sanitise not found - skipping check"'
         files: \.(otf|ttf|woff|woff2)$
-  - repo: https://github.com/robertdebock/pre-commit
-    rev: v1.5.2
-    hooks:
-      - id: ansible_role_find_unused_variable
-      - id: ansible_role_find_empty_files
-      - id: ansible_role_find_empty_directories
-      - id: ansible_role_fix_readability
-      - id: ansible_role_find_undefined_handlers
-      - id: ansible_role_find_unquoted_values
-      - id: ansible_role_find_horizontal_when
-  - repo: https://github.com/ansible/ansible-lint
-    rev: v25.8.1 # put latest release tag from https://github.com/ansible/ansible-lint/releases/
-    hooks:
-      - id: ansible-lint
-        additional_dependencies:
-          - netaddr
-          - resolvelib==1.0.1
