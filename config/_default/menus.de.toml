@@ -12,23 +12,27 @@
 
 [[main]]
   name = "Beiträge"
+  identifier = "beitraege"
   pageRef = "posts"
   weight = 3
 
 [[main]]
   name = "Homelab"
+  parent = "beitraege"
   pageRef = "posts/homelab"
-  weight = 5
+  weight = 1
 
 [[main]]
   name = "Solar"
+  parent = "beitraege"
   pageRef = "posts/solar"
-  weight = 7
+  weight = 2
 
 [[main]]
   name = "Kubernetes"
+  parent = "beitraege"
   pageRef = "posts/homelab/k3s-prod"
-  weight = 10
+  weight = 3
 
 [[main]]
   name = "Statusseite"
