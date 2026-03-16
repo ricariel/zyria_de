@@ -16,6 +16,21 @@
   weight = 3
 
 [[main]]
+  name = "Homelab"
+  pageRef = "posts/homelab"
+  weight = 5
+
+[[main]]
+  name = "Solar"
+  pageRef = "posts/solar"
+  weight = 7
+
+[[main]]
+  name = "Kubernetes"
+  pageRef = "posts/homelab/k3s-prod"
+  weight = 10
+
+[[main]]
   name = "Statusseite"
   url = "https://status.zyria.de"
   weight = 30

@@ -1,7 +1,12 @@
 ---
 title: 'Windows Snippets'
-description: 'Sammlung von Codesnippets'
-summary: "All der Kram, der sonst nirgends hin gehört"
+description: 'Nützliche PowerShell- und CMD-Snippets für Windows-Administration: RDP, Chocolatey, Gruppenrichtlinien und mehr.'
+summary: "PowerShell- und CMD-Snippets für Windows-Administration."
+tags:
+  - windows
+  - powershell
+  - homelab
+  - snippets
 ---
 
 ## Snippets
