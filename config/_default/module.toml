@@ -44,7 +44,7 @@ path = "github.com/nunocoracao/blowfish/v2"
   [[imports.mounts]]
   source = 'static'
   target = 'static'
-  excludeFiles = '**'
+  files = '! **'
   [[imports.mounts]]
   disableWatch = false
   lang = ''
@@ -119,4 +119,4 @@ path = "git.zyria.de/pyrox/k3s-prod"
   [[imports.mounts]]
   source = "."
   target = "content/posts/homelab/k3s-prod/"
-  includeFiles = [ "apps/*/README.md",  "apps/*/*.sh", "ansible/*.md", "ansible/*.yaml" ]
+  files = [ "apps/*/README.md",  "apps/*/*.sh", "ansible/*.md", "ansible/*.yaml" ]
