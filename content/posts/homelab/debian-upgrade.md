@@ -1,6 +1,11 @@
 ---
 title: Debian Upgrade
-description: Debian Upgrade
+description: Schritt-für-Schritt Anleitung für ein zuverlässiges Debian-Versionsupgrade, inkl. Proxmox und Proxmox Backup Server.
+tags:
+  - debian
+  - linux
+  - upgrade
+  - homelab
 ---
 
 Wie man Debian zuverlässig auf den Stand bringt. Danke an [doku.lrz.de](https://doku.lrz.de/upgrade-auf-debian-13-trixie-1921298568.html) die dies bei jedem Release aufschreiben.

@@ -1,7 +1,12 @@
 ---
 title: 'Unifi Snippets'
-description: 'Sammlung von Codesnippets'
-summary: "All der Kram, der sonst nirgends hin gehört"
+description: 'Nützliche Snippets für Ubiquiti UniFi Kameras: Firmware-Updates, SSH-Zugriff und Konfiguration.'
+summary: "Firmware-URLs, SSH-Upgrade und Konfiguration für UniFi-Kameras."
+tags:
+  - unifi
+  - netzwerk
+  - homelab
+  - snippets
 ---
 
 ## Snippets

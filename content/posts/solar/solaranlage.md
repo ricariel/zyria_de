@@ -1,7 +1,15 @@
 ---
 title: "Solaranlage"
+description: "Aufbau und Betrieb unserer Balkon-Solaranlage mit Deye- und Hoymiles-Wechselrichter sowie Zendure Solarflow-Speicher."
+summary: "Komponenten, Kosten und Erfahrungen rund um unsere Balkon-Solaranlage."
 date: 2024-03-22T10:12:47+01:00
 draft: false
+tags:
+  - solar
+  - photovoltaik
+  - energie
+  - solarflow
+  - homelab
 ---
 
 ## Übersicht über unsere Solaranlage mit Komponenten
