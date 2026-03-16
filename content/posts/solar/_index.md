@@ -7,6 +7,3 @@ tags:
   - homelab
 ---
 
-Dokumentation unserer Balkon-Solaranlage mit Solarflow-Akku und Home-Assistant-Integration.
-
-{{< links file="solar" >}}

@@ -1,6 +1,6 @@
 ---
 title: Kleines Homelab
-description: "Dies ist eine kleine Übersicht über das von mir betriebene Homelab"
+description: "Dokumentation meines Homelabs: Server, Netzwerk, Virtualisierung, Kubernetes und Windows-Administration."
 cascade:
   tags:
     - homelab
