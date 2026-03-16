@@ -9,7 +9,7 @@
     <managingEditor>fabrice@zyria.de (Fabrice Kirchner)</managingEditor>
     <webMaster>fabrice@zyria.de (Fabrice Kirchner)</webMaster>
     
-    <lastBuildDate>Mon, 16 Mar 2026 09:04:53 +0100</lastBuildDate><atom:link href="https://zyria.de/tags/homelab/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 16 Mar 2026 09:33:43 +0100</lastBuildDate><atom:link href="https://zyria.de/tags/homelab/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Virtuelle Maschinen</title>
@@ -18,6 +18,26 @@
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/posts/homelab/vms/</guid>
       <description>&lt;table&gt;&#xA;  &lt;thead&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;th&gt;Servername&lt;/th&gt;&#xA;          &lt;th&gt;Hostname&lt;/th&gt;&#xA;          &lt;th&gt;Funktion&lt;/th&gt;&#xA;          &lt;th&gt;System&lt;/th&gt;&#xA;          &lt;th&gt;Notiz&lt;/th&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/thead&gt;&#xA;  &lt;tbody&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;&lt;a href=&#34;https://zyria.de/posts/homelab/vms/dev/&#34; &gt;dev&lt;/a&gt;&lt;/td&gt;&#xA;          &lt;td&gt;dev.zyria.de&lt;/td&gt;&#xA;          &lt;td&gt;Docker Host&lt;/td&gt;&#xA;          &lt;td&gt;Debian Stable&lt;/td&gt;&#xA;          &lt;td&gt;IT interne Dienste&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;&lt;a href=&#34;https://zyria.de/posts/homelab/vms/addc/&#34; &gt;addc&lt;/a&gt;&lt;/td&gt;&#xA;          &lt;td&gt;addc.zyria.de&lt;/td&gt;&#xA;          &lt;td&gt;Active Directory, Fileserver&lt;/td&gt;&#xA;          &lt;td&gt;Debian Stable&lt;/td&gt;&#xA;          &lt;td&gt;&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/tbody&gt;&#xA;&lt;/table&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Kleines Homelab</title>
+      <link>https://zyria.de/posts/homelab/</link>
+      <pubDate>Mon, 16 Mar 2026 09:33:43 +0100</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://zyria.de/posts/homelab/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Solar</title>
+      <link>https://zyria.de/posts/solar/</link>
+      <pubDate>Mon, 16 Mar 2026 09:33:43 +0100</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://zyria.de/posts/solar/</guid>
+      <description></description>
       
     </item>
     
@@ -98,16 +118,6 @@
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/posts/homelab/snippets/</guid>
       <description>All der Kram, der sonst nirgends hin gehört</description>
-      
-    </item>
-    
-    <item>
-      <title>Solar</title>
-      <link>https://zyria.de/posts/solar/</link>
-      <pubDate>Mon, 16 Mar 2026 09:04:53 +0100</pubDate>
-      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://zyria.de/posts/solar/</guid>
-      <description>&lt;p&gt;Dokumentation unserer Balkon-Solaranlage mit Solarflow-Akku und Home-Assistant-Integration.&lt;/p&gt;&#xA;&#xA;&#xA;&#xA;  &#xA;  &#xA;      &#xA;        &lt;h3 class=&#34;link-group-title&#34;&gt;Solarflow&lt;/h3&gt;&#xA;        &#xA;          &lt;p&gt;Sammlung von Links für den Aufbau und Betrieb meiner Solaranlage.&lt;/p&gt;&#xA;        &#xA;&#xA;        &lt;ul class=&#34;link-list&#34;&gt;&#xA;          &#xA;            &lt;li&gt;&#xA;              &lt;a href=&#34;https://ottelo.jimdofree.com/stromz%c3%a4hler-auslesen-tasmota/&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;&#xA;                &lt;strong&gt;Hichi IR und Home Assistant&lt;/strong&gt;&#xA;              &lt;/a&gt;&#xA;&#xA;              &#xA;                &lt;p&gt;Stromzähler mit einem ESP8266 / ESP32 mit Tasmota auslesen und darstellen&lt;/p&gt;&#xA;              &#xA;            &lt;/li&gt;&#xA;          &#xA;            &lt;li&gt;&#xA;              &lt;a href=&#34;https://github.com/z-master42/solarflow/tree/main&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;&#xA;                &lt;strong&gt;Solarflow Hoymiles Homeassistant&lt;/strong&gt;&#xA;              &lt;/a&gt;&#xA;&#xA;              &#xA;                &lt;p&gt;Git Repo mit nützlichen Infos&lt;/p&gt;&#xA;              &#xA;            &lt;/li&gt;&#xA;          &#xA;            &lt;li&gt;&#xA;              &lt;a href=&#34;https://github.com/reinhard-brandstaedter/solarflow-control&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;&#xA;                &lt;strong&gt;Steuerung des Solarflow mit Solarflow Control&lt;/strong&gt;&#xA;              &lt;/a&gt;&#xA;&#xA;              &#xA;            &lt;/li&gt;&#xA;          &#xA;            &lt;li&gt;&#xA;              &lt;a href=&#34;https://github.com/reinhard-brandstaedter/solarflow-bt-manager&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;&#xA;                &lt;strong&gt;Solarflow Bluetooth Manager&lt;/strong&gt;&#xA;              &lt;/a&gt;&#xA;&#xA;              &#xA;                &lt;p&gt;Von Cloud trennen und an den loaklen MQTT binden&lt;/p&gt;</description>
       
     </item>
     
@@ -778,16 +788,6 @@
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/posts/homelab/hardware/</guid>
       <description>&lt;p&gt;Hier findet man eine Übersicht über die im Homelab verwendete Hardware.&lt;/p&gt;</description>
-      
-    </item>
-    
-    <item>
-      <title>Kleines Homelab</title>
-      <link>https://zyria.de/posts/homelab/</link>
-      <pubDate>Tue, 01 Jul 2025 13:37:34 +0200</pubDate>
-      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://zyria.de/posts/homelab/</guid>
-      <description></description>
       
     </item>
     
