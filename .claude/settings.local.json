@@ -1,0 +1,29 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(grep -E \"\\\\.\\(json|yaml|yml|toml\\)$\")",
+      "Bash(for f:*)",
+      "Bash(do echo:*)",
+      "Read(//Users/fabrice/git/zyria/zyria_de/.claude/worktrees/gifted-dewdney/**)",
+      "Bash(done)",
+      "Bash(git mv:*)",
+      "Bash(rm /Users/fabrice/git/zyria/zyria_de/.git/worktrees/gifted-dewdney/index.lock)",
+      "Bash(git -C /Users/fabrice/git/zyria/zyria_de/.claude/worktrees/gifted-dewdney mv content/posts/homelab/wireguard_mit_systemd.md content/posts/homelab/networking/)",
+      "Bash(git -C /Users/fabrice/git/zyria/zyria_de/.claude/worktrees/gifted-dewdney mv content/posts/homelab/unifi-legacy.md content/posts/homelab/networking/)",
+      "Bash(git -C /Users/fabrice/git/zyria/zyria_de/.claude/worktrees/gifted-dewdney mv content/posts/homelab/hetzner_install.md content/posts/homelab/networking/)",
+      "Bash(git -C /Users/fabrice/git/zyria/zyria_de/.claude/worktrees/gifted-dewdney mv content/posts/homelab/hetzner_ip_change.md content/posts/homelab/networking/)",
+      "Bash(git -C /Users/fabrice/git/zyria/zyria_de/.claude/worktrees/gifted-dewdney mv content/posts/homelab/wireguard_mit_systemd.md content/posts/homelab/networking/wireguard_mit_systemd.md)",
+      "Bash(git -C /Users/fabrice/git/zyria/zyria_de/.claude/worktrees/gifted-dewdney mv content/posts/homelab/unifi-legacy.md content/posts/homelab/networking/unifi-legacy.md)",
+      "Bash(git -C /Users/fabrice/git/zyria/zyria_de/.claude/worktrees/gifted-dewdney mv content/posts/homelab/hetzner_install.md content/posts/homelab/networking/hetzner_install.md)",
+      "Bash(git -C /Users/fabrice/git/zyria/zyria_de/.claude/worktrees/gifted-dewdney mv content/posts/homelab/hetzner_ip_change.md content/posts/homelab/networking/hetzner_ip_change.md)",
+      "Bash(git -C /Users/fabrice/git/zyria/zyria_de/.claude/worktrees/gifted-dewdney add -A content/posts/homelab/)",
+      "Bash(git add:*)",
+      "Bash(git -C /Users/fabrice/git/zyria/zyria_de/.claude/worktrees/gifted-dewdney add content/posts/homelab/windows/ content/posts/homelab/networking/)",
+      "Bash(git -C /Users/fabrice/git/zyria/zyria_de/.claude/worktrees/gifted-dewdney status --short)",
+      "Bash(git -C /Users/fabrice/git/zyria/zyria_de/.claude/worktrees/gifted-dewdney add -u content/posts/homelab/)",
+      "Bash(git -C /Users/fabrice/git/zyria/zyria_de/.claude/worktrees/gifted-dewdney add -A)",
+      "Bash(git -C /Users/fabrice/git/zyria/zyria_de/.claude/worktrees/gifted-dewdney reset HEAD .claude/settings.local.json)",
+      "Bash(git -C:*)"
+    ]
+  }
+}
