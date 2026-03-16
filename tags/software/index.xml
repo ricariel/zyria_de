@@ -41,15 +41,5 @@
       
     </item>
     
-    <item>
-      <title>WireGuard mit systemd</title>
-      <link>https://zyria.de/posts/homelab/wireguard_mit_systemd/</link>
-      <pubDate>Tue, 01 Jul 2025 13:37:34 +0200</pubDate>
-      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://zyria.de/posts/homelab/wireguard_mit_systemd/</guid>
-      <description>&lt;p&gt;Für eine WireGuard-Verbindung mit systemd-networkd und systemd-resolved.&lt;/p&gt;</description>
-      
-    </item>
-    
   </channel>
 </rss>

@@ -9,25 +9,25 @@
     <managingEditor>fabrice@zyria.de (Fabrice Kirchner)</managingEditor>
     <webMaster>fabrice@zyria.de (Fabrice Kirchner)</webMaster>
     
-    <lastBuildDate>Thu, 12 Mar 2026 09:24:17 +0100</lastBuildDate><atom:link href="https://zyria.de/tags/extern/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 16 Mar 2026 09:04:53 +0100</lastBuildDate><atom:link href="https://zyria.de/tags/extern/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>Hetzner Server IP Adress tausch</title>
-      <link>https://zyria.de/posts/homelab/hetzner_ip_change/</link>
-      <pubDate>Thu, 12 Mar 2026 09:24:17 +0100</pubDate>
+      <title>Hetzner Server</title>
+      <link>https://zyria.de/posts/homelab/networking/hetzner_install/</link>
+      <pubDate>Mon, 16 Mar 2026 09:04:53 +0100</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://zyria.de/posts/homelab/hetzner_ip_change/</guid>
-      <description>Anbei ist der Ablauf beschrieben einen Hetzner Server nach Hardwqre Tausch mit einer neuen IP zu versorgen</description>
+      <guid>https://zyria.de/posts/homelab/networking/hetzner_install/</guid>
+      <description>Anbei ist der Ablauf beschrieben einen Hetzner Server in das System einzubinden.</description>
       
     </item>
     
     <item>
-      <title>Hetzner Server</title>
-      <link>https://zyria.de/posts/homelab/hetzner_install/</link>
-      <pubDate>Tue, 01 Jul 2025 13:37:34 +0200</pubDate>
+      <title>Hetzner Server IP Adress tausch</title>
+      <link>https://zyria.de/posts/homelab/networking/hetzner_ip_change/</link>
+      <pubDate>Mon, 16 Mar 2026 09:04:53 +0100</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://zyria.de/posts/homelab/hetzner_install/</guid>
-      <description>Anbei ist der Ablauf beschrieben einen Hetzner Server in das System einzubinden.</description>
+      <guid>https://zyria.de/posts/homelab/networking/hetzner_ip_change/</guid>
+      <description>Anbei ist der Ablauf beschrieben einen Hetzner Server nach Hardwqre Tausch mit einer neuen IP zu versorgen</description>
       
     </item>
     

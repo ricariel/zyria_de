@@ -9,14 +9,14 @@
     <managingEditor>fabrice@zyria.de (Fabrice Kirchner)</managingEditor>
     <webMaster>fabrice@zyria.de (Fabrice Kirchner)</webMaster>
     
-    <lastBuildDate>Tue, 01 Jul 2025 13:37:34 +0200</lastBuildDate><atom:link href="https://zyria.de/tags/vpn/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 16 Mar 2026 09:04:53 +0100</lastBuildDate><atom:link href="https://zyria.de/tags/vpn/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>WireGuard mit systemd</title>
-      <link>https://zyria.de/posts/homelab/wireguard_mit_systemd/</link>
-      <pubDate>Tue, 01 Jul 2025 13:37:34 +0200</pubDate>
+      <link>https://zyria.de/posts/homelab/networking/wireguard_mit_systemd/</link>
+      <pubDate>Mon, 16 Mar 2026 09:04:53 +0100</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://zyria.de/posts/homelab/wireguard_mit_systemd/</guid>
+      <guid>https://zyria.de/posts/homelab/networking/wireguard_mit_systemd/</guid>
       <description>&lt;p&gt;Für eine WireGuard-Verbindung mit systemd-networkd und systemd-resolved.&lt;/p&gt;</description>
       
     </item>

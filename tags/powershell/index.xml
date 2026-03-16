@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Powershell on Zyria</title>
+    <link>https://zyria.de/tags/powershell/</link>
+    <description>Recent content in Powershell on Zyria</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>de-de</language>
+    <managingEditor>fabrice@zyria.de (Fabrice Kirchner)</managingEditor>
+    <webMaster>fabrice@zyria.de (Fabrice Kirchner)</webMaster>
+    
+    <lastBuildDate>Mon, 16 Mar 2026 09:04:53 +0100</lastBuildDate><atom:link href="https://zyria.de/tags/powershell/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Windows Snippets</title>
+      <link>https://zyria.de/posts/homelab/windows/windows_snippets/</link>
+      <pubDate>Mon, 16 Mar 2026 09:04:53 +0100</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://zyria.de/posts/homelab/windows/windows_snippets/</guid>
+      <description>PowerShell- und CMD-Snippets für Windows-Administration.</description>
+      
+    </item>
+    
+  </channel>
+</rss>

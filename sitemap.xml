@@ -39,6 +39,96 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://zyria.de/posts/homelab/debian-upgrade/</loc>
+    <lastmod>2026-03-16T09:04:53+01:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://zyria.de/posts/homelab/networking/hetzner_install/</loc>
+    <lastmod>2026-03-16T09:04:53+01:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://zyria.de/posts/homelab/networking/hetzner_ip_change/</loc>
+    <lastmod>2026-03-16T09:04:53+01:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://zyria.de/posts/homelab/linux_storage/</loc>
+    <lastmod>2026-03-16T09:04:53+01:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://zyria.de/posts/homelab/networking/</loc>
+    <lastmod>2026-03-16T09:04:53+01:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://zyria.de/posts/homelab/podman/</loc>
+    <lastmod>2026-03-16T09:04:53+01:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://zyria.de/posts/homelab/windows/setup_windows/</loc>
+    <lastmod>2026-03-16T09:04:53+01:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://zyria.de/posts/homelab/snippets/</loc>
+    <lastmod>2026-03-16T09:04:53+01:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://zyria.de/posts/solar/</loc>
+    <lastmod>2026-03-16T09:04:53+01:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://zyria.de/posts/homelab/networking/unifi-legacy/</loc>
+    <lastmod>2026-03-16T09:04:53+01:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://zyria.de/posts/homelab/windows/</loc>
+    <lastmod>2026-03-16T09:04:53+01:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://zyria.de/posts/homelab/windows/windows_autologon/</loc>
+    <lastmod>2026-03-16T09:04:53+01:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://zyria.de/posts/homelab/windows/windows_install/</loc>
+    <lastmod>2026-03-16T09:04:53+01:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://zyria.de/posts/homelab/windows/windows_snippets/</loc>
+    <lastmod>2026-03-16T09:04:53+01:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://zyria.de/posts/homelab/networking/wireguard_mit_systemd/</loc>
+    <lastmod>2026-03-16T09:04:53+01:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://zyria.de/posts/homelab/k3s-prod/apps/ansible-semaphore/readme/</loc>
     <lastmod>2026-03-15T14:33:36+01:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -183,12 +273,6 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://zyria.de/posts/homelab/hetzner_ip_change/</loc>
-    <lastmod>2026-03-12T09:24:17+01:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
     <loc>https://zyria.de/posts/homelab/kubernets/</loc>
     <lastmod>2026-03-12T09:24:17+01:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -201,24 +285,6 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://zyria.de/posts/homelab/unifi-legacy/</loc>
-    <lastmod>2026-02-18T09:19:47+01:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://zyria.de/posts/homelab/windows_snippets/</loc>
-    <lastmod>2026-01-30T14:24:56+01:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://zyria.de/posts/homelab/debian-upgrade/</loc>
-    <lastmod>2026-01-27T14:06:57+01:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
     <loc>https://zyria.de/posts/homelab/k3s-prod/apps/unifi-controller/readme/</loc>
     <lastmod>2026-01-21T10:25:16+01:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -227,18 +293,6 @@
   <url>
     <loc>https://zyria.de/posts/homelab/k3s-prod/apps/nameserver/readme/</loc>
     <lastmod>2025-11-07T11:23:15+01:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://zyria.de/posts/homelab/windows_install/</loc>
-    <lastmod>2025-11-04T10:07:02+01:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://zyria.de/posts/homelab/snippets/</loc>
-    <lastmod>2025-09-19T10:14:10+02:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -459,12 +513,6 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://zyria.de/posts/homelab/hetzner_install/</loc>
-    <lastmod>2025-07-01T13:37:34+02:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
     <loc>https://zyria.de/posts/homelab/</loc>
     <lastmod>2025-07-01T13:37:34+02:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -501,25 +549,7 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://zyria.de/posts/homelab/setup_windows/</loc>
-    <lastmod>2025-07-01T13:37:34+02:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
     <loc>https://zyria.de/posts/homelab/software/</loc>
-    <lastmod>2025-07-01T13:37:34+02:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://zyria.de/posts/homelab/windows_autologon/</loc>
-    <lastmod>2025-07-01T13:37:34+02:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://zyria.de/posts/homelab/wireguard_mit_systemd/</loc>
     <lastmod>2025-07-01T13:37:34+02:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -537,8 +567,14 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://zyria.de/posts/solar/solarflow-home-assistant/</loc>
+    <lastmod>2026-03-16T09:04:53+01:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://zyria.de/posts/solar/solaranlage/</loc>
-    <lastmod>2025-07-30T12:53:51+02:00</lastmod>
+    <lastmod>2026-03-16T09:04:53+01:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>

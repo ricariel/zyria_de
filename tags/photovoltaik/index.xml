@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Photovoltaik on Zyria</title>
+    <link>https://zyria.de/tags/photovoltaik/</link>
+    <description>Recent content in Photovoltaik on Zyria</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>de-de</language>
+    <managingEditor>fabrice@zyria.de (Fabrice Kirchner)</managingEditor>
+    <webMaster>fabrice@zyria.de (Fabrice Kirchner)</webMaster>
+    
+    <lastBuildDate>Mon, 16 Mar 2026 09:04:53 +0100</lastBuildDate><atom:link href="https://zyria.de/tags/photovoltaik/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Solaranlage</title>
+      <link>https://zyria.de/posts/solar/solaranlage/</link>
+      <pubDate>Fri, 22 Mar 2024 10:12:47 +0100</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://zyria.de/posts/solar/solaranlage/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;Übersicht über unsere Solaranlage mit Komponenten&#xA;    &lt;div id=&#34;übersicht-über-unsere-solaranlage-mit-komponenten&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#%c3%bcbersicht-%c3%bcber-unsere-solaranlage-mit-komponenten&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;Als Netto mit einem Solarkraftwerk in Selbstmontage geworben hat und unser Stromanbieter schon wieder eine Preiserhöhung ins Haus flatter ließ, war es um mich passiert. Es musste etwas passieren.&lt;/p&gt;</description>
+      
+    </item>
+    
+  </channel>
+</rss>
