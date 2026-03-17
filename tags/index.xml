@@ -42,7 +42,7 @@
     </item>
     
     <item>
-      <title>Active Directory</title>
+      <title>Active-Directory</title>
       <link>https://zyria.de/tags/active-directory/</link>
       <pubDate>Mon, 16 Mar 2026 09:04:53 +0100</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
@@ -407,16 +407,6 @@
       <pubDate>Mon, 01 Apr 2024 00:00:00 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/tags/solarflow/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>Photovoltaik</title>
-      <link>https://zyria.de/tags/photovoltaik/</link>
-      <pubDate>Fri, 22 Mar 2024 10:12:47 +0100</pubDate>
-      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://zyria.de/tags/photovoltaik/</guid>
       <description></description>
       
     </item>
