@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Active Directory on Zyria</title>
+    <title>Active-Directory on Zyria</title>
     <link>https://zyria.de/tags/active-directory/</link>
-    <description>Recent content in Active Directory on Zyria</description>
+    <description>Recent content in Active-Directory on Zyria</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>de-de</language>
     <managingEditor>fabrice@zyria.de (Fabrice Kirchner)</managingEditor>
