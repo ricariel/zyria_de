@@ -39,6 +39,12 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://zyria.de/posts/homelab/kubernets/</loc>
+    <lastmod>2026-05-08T09:46:09+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://zyria.de/test/</loc>
     <lastmod>2026-03-17T08:51:08+01:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -281,12 +287,6 @@
   <url>
     <loc>https://zyria.de/posts/homelab/k3s-prod/apps/zabbix/readme/</loc>
     <lastmod>2026-03-15T14:14:26+01:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://zyria.de/posts/homelab/kubernets/</loc>
-    <lastmod>2026-03-12T09:24:17+01:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
