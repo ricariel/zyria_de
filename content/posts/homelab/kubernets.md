@@ -11,6 +11,23 @@ Hier Sammle ich Snippets, welche mir das Tippen ersparen sollen und für Kuberne
 
 <!--more-->
 
+## Lösche alle Longhorn Backups älter als 60 Tage
+
+```bash
+
+kubectl get backups.longhorn.io -n longhorn-system -o json | \
+jq -r '.items[] | select((.metadata.creationTimestamp | fromdateiso8601) < (now - 60*60*24*60)) | .metadata.name' | \
+xargs -I {} kubectl delete backups.longhorn.io/{} -n longhorn-system
+
+```
+## Lösche alle nicht Completed Longhorn Backups
+
+```bash
+
+kubectl get backups.longhorn.io -n longhorn-system | grep -v "Completed" | awk '{print $1}' | xargs -I {} kubectl delete backups.longhorn.io/{} -n longhorn-system
+
+```
+
 ## Kubernetes Nutzer hinzufügen
 
 [Quelle](https://aungzanbaw.medium.com/a-step-by-step-guide-to-creating-users-in-kubernetes-6a5a2cfd8c71)
