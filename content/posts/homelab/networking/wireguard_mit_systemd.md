@@ -38,7 +38,7 @@ FirewallMark=123
 PublicKey=<Public Key>
 PresharedKey=...
 AllowedIPs=0.0.0.0/0,::1
-Endpoint = vpn.casa-due-pur.de:51194
+Endpoint = vpn.example.com:51194
 PersistentKeepalive=16
 ```
 
@@ -57,7 +57,7 @@ Address=...
 Address=...
 
 # Nur Domains mit dieser Endung über diesen DNS auflösen:
-Domains=~casa-due-pur.de
+Domains=~example.com
 DNS=2a01:4f8:fff0:22:ca9:16ff:fe6e:cc14
 DNS=159.69.238.89
 DNSDefaultRoute=false

@@ -19,7 +19,7 @@ tags:
 
 ## Zweiter Schritt
 
-- [Statusseite checken](https://status.zyria.com/status/index)
+- [Statusseite checken](https://status.example.com/status/index)
 
 ## Dritter Schritt
 

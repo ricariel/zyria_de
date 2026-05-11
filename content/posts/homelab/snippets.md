@@ -56,7 +56,7 @@ git push -u origin pages
 
 ```bash
 tea login add
-for i in $(tea repos ls --fields ssh -o simple -l git.zyria.de -T source); do git clone $i; done
+for i in $(tea repos ls --fields ssh -o simple -l git.example.com -T source); do git clone $i; done
 ```
 
 ### Zone aus Samba extrahieren

@@ -29,9 +29,9 @@ podman manifest create keel:${IMAGE_VERSION}
 
 podman build --platform linux/amd64,linux/arm64 --manifest localhost/keel:${IMAGE_VERSION} -f Dockerfile
 
-podman manifest push localhost/keel:${IMAGE_VERSION} docker://git.zyria.de/pyrox/keel:${IMAGE_VERSION}
+podman manifest push localhost/keel:${IMAGE_VERSION} docker://git.example.com/username/keel:${IMAGE_VERSION}
 
-podman manifest push localhost/keel:${IMAGE_VERSION} docker://docker.io/ricariel/keel:${IMAGE_VERSION}
+podman manifest push localhost/keel:${IMAGE_VERSION} docker://docker.io/username/keel:${IMAGE_VERSION}
 ```
 
 [^1]: [https://blog.while-true-do.io/podman-multi-arch-images/](https://blog.while-true-do.io/podman-multi-arch-images/)

@@ -38,28 +38,28 @@ Anydesk [Verwaltung](https://my.anydesk.com/login)
 
 ## Proxmox (VM)
 
-Jeder Proxmox Host hat auch ein eigenes Webinterface, welches unter [https://example.com:8006/](https://example.com:8006/) erreichen lässt. Für einen angenehmeren Zugang steht der Zugang über den [Load Balancer](https://pve.zyria.de/) bereit.
+Jeder Proxmox Host hat auch ein eigenes Webinterface, welches unter [https://example.com:8006/](https://example.com:8006/) erreichen lässt. Für einen angenehmeren Zugang steht der Zugang über den [Load Balancer](https://pve.example.com/) bereit.
 
 ## VPN
 
-Wirguard läuft in einem Docker Container mit [Webinterface](https://vpn.zyria.de)
+Wirguard läuft in einem Docker Container mit [Webinterface](https://vpn.example.com)
 und wird komplett darüber konfiguriert.
 
 ## Konfiguration/Content (git)
 
 Alle Konfigurationsdateien und Teile von statischem Content liegen auf einer
-[Forgejo](https://git.zyria.de/) (ehemals Gitea) Instanz.
+[Forgejo](https://git.example.com/) (ehemals Gitea) Instanz.
 
 ## Netzwerk
 
 Wir setzen weitestgehend auf Zubehör von [Unifi](https://www.ui.com) um das
 Netzwerk und Kameraüberwachung zu realisieren. Der
-[Controller](unifi.zyria.de) läuft in einem Docker Container.
+[Controller](unifi.example.com) läuft in einem Docker Container.
 
 ## Statusseite/Monitoring
 
 Über [Uptime-Kuma](https://github.com/louislam/uptime-kuma) wurde ein
-rudimentäres [Monitoring](https://status.zyria.de/dashboard) eingrichet
+rudimentäres [Monitoring](https://status.example.com/dashboard) eingrichet
 und den Mitarbeitern bekannt gegeben. Dies sollte die Erste Anlaufstelle sein,
 wenn etwas nicht funktioniert.
 
@@ -69,8 +69,11 @@ Das Forgejo eigene CI/CD Werkzeug wird genutzt.
 
 ## Spamerkennung
 
-Zur Spamabwehr nutzen wir [Rspamd](https://rspamd.com). Das [Interface](https://rspamd.zyria.de/) ist lässt die Konfiguration relevanter Parameter zu und ermöglicht Debugging bei der Mailzustellung.
+Zur Spamabwehr nutzen wir [Rspamd](https://rspamd.com). Das [Interface](https://rspamd.example.com/) ist lässt die Konfiguration relevanter Parameter zu und ermöglicht Debugging bei der Mailzustellung.
 
 ## Werbeblocker/DNS
 
-[Pihole Webinterface](https://pihole.zyria.de/admin/)
+[Pihole Webinterface](https://pihole.example.com/admin/)
+
+## Backup
+Proxmox Backup Server [Interface](https://pbs-(location).example.com:8007) installiert.

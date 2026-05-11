@@ -1,6 +1,6 @@
 ---
 title: Addc
-description: "Beschreibung von addc.zyria.de"
+description: "Beschreibung von addc"
 ---
 
 ## Primärfunktion

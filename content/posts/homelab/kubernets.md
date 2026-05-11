@@ -44,8 +44,8 @@ kubectl get rs --all-namespaces -o wide | awk '$3==0 && $4==0 && $5==0 {print "-
 
 ```bash
 helm pull oci://codeberg.org/wrenix/helm-charts/forgejo-runner --version 0.6.6
-helm push *.tgz oci://git.zyria.de/pyrox
-helm cm-push *.tgz zyria
+helm push *.tgz oci://git.example.com/username
+helm cm-push *.tgz repo
 ```
 
 ## Finalizer löschen

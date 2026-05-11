@@ -35,7 +35,7 @@ Im [Robot](https://robot.hetzner.com/server) Reverse-DNS-Eintrag - Ipv4 und Ipv6
 ### Installation
 
 1. Git auf dem Server installieren
-1. [Repository](https://git.casa-due-pur.de/fabrice.kirchner/hetzner-install.git) holen
+1. [Repository](https://git.example.com/username/hetzner-install.git) holen
 1. Daten beschaffen:
 
   a. FQDN = überlege einen passenden Namen für die Maschine.
@@ -46,7 +46,7 @@ Im [Robot](https://robot.hetzner.com/server) Reverse-DNS-Eintrag - Ipv4 und Ipv6
 1. |
 
   ```bash
-  git clone https://git.zyria.de/pyrox/hetzner-install.git
+  git clone https://git.example.com/username/hetzner-install.git
   ./install.sh FQDN CRYPT_PASS IPV4
   systemctl reboot
   ```
