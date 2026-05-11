@@ -9,7 +9,7 @@
     <managingEditor>fabrice@zyria.de (Fabrice Kirchner)</managingEditor>
     <webMaster>fabrice@zyria.de (Fabrice Kirchner)</webMaster>
     
-    <lastBuildDate>Mon, 16 Mar 2026 09:04:53 +0100</lastBuildDate><atom:link href="https://zyria.de/posts/homelab/windows/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 11 May 2026 13:55:05 +0200</lastBuildDate><atom:link href="https://zyria.de/posts/homelab/windows/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Setup Windows Client</title>
@@ -48,6 +48,16 @@
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/posts/homelab/windows/windows_snippets/</guid>
       <description>PowerShell- und CMD-Snippets für Windows-Administration.</description>
+      
+    </item>
+    
+    <item>
+      <title>Ist ein Server erreichbar?</title>
+      <link>https://zyria.de/posts/homelab/windows/server_ping/</link>
+      <pubDate>Thu, 19 Oct 2023 13:28:04 +0200</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://zyria.de/posts/homelab/windows/server_ping/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;Wie teste ich, ob ein Server prinzipiell erreichbar ist?&#xA;    &lt;div id=&#34;wie-teste-ich-ob-ein-server-prinzipiell-erreichbar-ist&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#wie-teste-ich-ob-ein-server-prinzipiell-erreichbar-ist&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;Der Befehl ping ist auf allen Rechnern installert. Unter Windows muss dafür das&#xA;Programm cmd.exe gestartet werden. Dies findest du mit der Sucher oder unter&#xA;C:\Windows\System32\cmd.exe&lt;/p&gt;&#xA;&lt;p&gt;So sieht ein Ping via IPv6 aus:&lt;/p&gt;</description>
       
     </item>
     

@@ -34,13 +34,73 @@
   </url>
   <url>
     <loc>https://zyria.de/posts/homelab/vms/</loc>
-    <lastmod>2025-07-01T12:10:19+02:00</lastmod>
+    <lastmod>2026-05-11T13:55:05+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://zyria.de/posts/homelab/vms/addc/</loc>
+    <lastmod>2026-05-11T13:55:05+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://zyria.de/posts/homelab/vms/control/</loc>
+    <lastmod>2026-05-11T13:55:05+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://zyria.de/posts/homelab/vms/worker/</loc>
+    <lastmod>2026-05-11T13:55:05+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://zyria.de/posts/homelab/networking/hetzner_install/</loc>
+    <lastmod>2026-05-11T13:55:05+02:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://zyria.de/posts/homelab/kubernets/</loc>
-    <lastmod>2026-05-08T09:46:09+02:00</lastmod>
+    <lastmod>2026-05-11T13:55:05+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://zyria.de/posts/homelab/login/</loc>
+    <lastmod>2026-05-11T13:55:05+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://zyria.de/posts/homelab/podman/</loc>
+    <lastmod>2026-05-11T13:55:05+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://zyria.de/posts/homelab/verwaltung/</loc>
+    <lastmod>2026-05-11T13:55:05+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://zyria.de/posts/homelab/snippets/</loc>
+    <lastmod>2026-05-11T13:55:05+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://zyria.de/posts/homelab/benutzeruebergabe/</loc>
+    <lastmod>2026-05-11T13:55:05+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://zyria.de/posts/homelab/networking/wireguard_mit_systemd/</loc>
+    <lastmod>2026-05-11T13:55:05+02:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -69,12 +129,6 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://zyria.de/posts/homelab/networking/hetzner_install/</loc>
-    <lastmod>2026-03-16T09:04:53+01:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
     <loc>https://zyria.de/posts/homelab/networking/hetzner_ip_change/</loc>
     <lastmod>2026-03-16T09:04:53+01:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -93,19 +147,7 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://zyria.de/posts/homelab/podman/</loc>
-    <lastmod>2026-03-16T09:04:53+01:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
     <loc>https://zyria.de/posts/homelab/windows/setup_windows/</loc>
-    <lastmod>2026-03-16T09:04:53+01:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://zyria.de/posts/homelab/snippets/</loc>
     <lastmod>2026-03-16T09:04:53+01:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -136,12 +178,6 @@
   </url>
   <url>
     <loc>https://zyria.de/posts/homelab/windows/windows_snippets/</loc>
-    <lastmod>2026-03-16T09:04:53+01:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://zyria.de/posts/homelab/networking/wireguard_mit_systemd/</loc>
     <lastmod>2026-03-16T09:04:53+01:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -525,12 +561,6 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://zyria.de/posts/homelab/login/</loc>
-    <lastmod>2025-07-01T13:37:34+02:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
     <loc>https://zyria.de/posts/homelab/passworter/</loc>
     <lastmod>2025-07-01T13:37:34+02:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -549,26 +579,8 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://zyria.de/posts/homelab/verwaltung/</loc>
-    <lastmod>2025-07-01T13:37:34+02:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
     <loc>https://zyria.de/posts/homelab/software/</loc>
     <lastmod>2025-07-01T13:37:34+02:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://zyria.de/posts/homelab/vms/addc/</loc>
-    <lastmod>2025-07-01T12:10:19+02:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://zyria.de/posts/homelab/vms/dev/</loc>
-    <lastmod>2025-07-01T12:10:19+02:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -586,7 +598,13 @@
   </url>
   <url>
     <loc>https://zyria.de/posts/homelab/erste_hilfe/</loc>
-    <lastmod>2025-07-01T13:37:34+02:00</lastmod>
+    <lastmod>2026-05-11T13:55:05+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://zyria.de/posts/homelab/windows/server_ping/</loc>
+    <lastmod>2026-05-11T13:55:05+02:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>

@@ -9,7 +9,7 @@
     <managingEditor>fabrice@zyria.de (Fabrice Kirchner)</managingEditor>
     <webMaster>fabrice@zyria.de (Fabrice Kirchner)</webMaster>
     
-    <lastBuildDate>Fri, 08 May 2026 09:46:09 +0200</lastBuildDate><atom:link href="https://zyria.de/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 11 May 2026 13:55:05 +0200</lastBuildDate><atom:link href="https://zyria.de/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Über mich</title>
@@ -52,12 +52,112 @@
     </item>
     
     <item>
+      <title>Addc</title>
+      <link>https://zyria.de/posts/homelab/vms/addc/</link>
+      <pubDate>Mon, 11 May 2026 13:55:05 +0200</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://zyria.de/posts/homelab/vms/addc/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;Primärfunktion&#xA;    &lt;div id=&#34;primärfunktion&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#prim%c3%a4rfunktion&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;Samba Active Directory Domain Controller und Fileserver&lt;/p&gt;&#xA;&#xA;&lt;h2 class=&#34;relative group&#34;&gt;Installierte Software&#xA;    &lt;div id=&#34;installierte-software&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#installierte-software&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Samba-AD-DC&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Control{1,2,3}</title>
+      <link>https://zyria.de/posts/homelab/vms/control/</link>
+      <pubDate>Mon, 11 May 2026 13:55:05 +0200</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://zyria.de/posts/homelab/vms/control/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;Primärfunktion&#xA;    &lt;div id=&#34;primärfunktion&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#prim%c3%a4rfunktion&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;Controlnodes für Kubernetes.&lt;/p&gt;&#xA;&#xA;&lt;h2 class=&#34;relative group&#34;&gt;Installierte Software&#xA;    &lt;div id=&#34;installierte-software&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#installierte-software&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;k3s&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Control{1,2}</title>
+      <link>https://zyria.de/posts/homelab/vms/worker/</link>
+      <pubDate>Mon, 11 May 2026 13:55:05 +0200</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://zyria.de/posts/homelab/vms/worker/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;Primärfunktion&#xA;    &lt;div id=&#34;primärfunktion&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#prim%c3%a4rfunktion&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;Workernodes für Kubernetes.&lt;/p&gt;&#xA;&#xA;&lt;h2 class=&#34;relative group&#34;&gt;Installierte Software&#xA;    &lt;div id=&#34;installierte-software&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#installierte-software&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;k3s&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Hetzner Server</title>
+      <link>https://zyria.de/posts/homelab/networking/hetzner_install/</link>
+      <pubDate>Mon, 11 May 2026 13:55:05 +0200</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://zyria.de/posts/homelab/networking/hetzner_install/</guid>
+      <description>Anbei ist der Ablauf beschrieben einen Hetzner Server in das System einzubinden.</description>
+      
+    </item>
+    
+    <item>
       <title>Kubernetes Snippets</title>
       <link>https://zyria.de/posts/homelab/kubernets/</link>
-      <pubDate>Fri, 08 May 2026 09:46:09 +0200</pubDate>
+      <pubDate>Mon, 11 May 2026 13:55:05 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/posts/homelab/kubernets/</guid>
       <description>&lt;p&gt;Hier Sammle ich Snippets, welche mir das Tippen ersparen sollen und für Kubernetes öfter mal gebraucht werden.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Logins</title>
+      <link>https://zyria.de/posts/homelab/login/</link>
+      <pubDate>Mon, 11 May 2026 13:55:05 +0200</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://zyria.de/posts/homelab/login/</guid>
+      <description>&lt;p&gt;Alle Zugangsdaten sind entweder in der Persönlichen Keepass Datendank (für&#xA;personalisierte Logindaten) oder in der IT Datenbank. Der Login auf die Server&#xA;geschieht über SSH Schlüssel. Ein Login mit dem Passwort ist nicht vorgesehen.&lt;/p&gt;&#xA;&lt;p&gt;Für den externen Zugriff ist der Login über &lt;a href=&#34;https://vpn.example.com&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;VPN&lt;/a&gt; oder einem Bastion Host&#xA;&lt;a href=&#34;mailto:bastion@vpn.example.com&#34; &gt;bastion@vpn.example.com&lt;/a&gt;:3022 möglich. &lt;/p&gt;&#xA;&lt;p&gt;Generell sollte jedoch ein Login auf die Server nur zum Suchen von Fehlern&#xA;stattfinden. Die Verwaltung erfolgt ausschliesslich über Ansible. Jede händisch&#xA;durchgeführte Änderung muss im Nachhinein in Ansible eingepflegt und getestet&#xA;werden.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Podman Snippets</title>
+      <link>https://zyria.de/posts/homelab/podman/</link>
+      <pubDate>Mon, 11 May 2026 13:55:05 +0200</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://zyria.de/posts/homelab/podman/</guid>
+      <description>&lt;p&gt;Nützliche Podman-Befehle für den täglichen Betrieb.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Server-,Diensteverwaltung</title>
+      <link>https://zyria.de/posts/homelab/verwaltung/</link>
+      <pubDate>Mon, 11 May 2026 13:55:05 +0200</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://zyria.de/posts/homelab/verwaltung/</guid>
+      <description>&lt;p&gt;Wir verwenden zur generellen Verwaltung von Servern Ansible. Für manche Dienste&#xA;ist es jedoch notwendig oder praktikabler dies über vorhandene Portale zu&#xA;realisieren.&lt;/p&gt;&#xA;&#xA;&lt;h2 class=&#34;relative group&#34;&gt;Core-Networks (DNS)&#xA;    &lt;div id=&#34;core-networks-dns&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#core-networks-dns&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;Unsere DNS Server werden bei &lt;a href=&#34;https://www.core-networks.de&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;Core-Networks&lt;/a&gt;&#xA;gehostet. In deren &lt;a href=&#34;https://iface.core-networks.de&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;Webinterface&lt;/a&gt; lassen sich&#xA;alle relevanten Änderungen durchführen.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Snippets</title>
+      <link>https://zyria.de/posts/homelab/snippets/</link>
+      <pubDate>Mon, 11 May 2026 13:55:05 +0200</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://zyria.de/posts/homelab/snippets/</guid>
+      <description>All der Kram, der sonst nirgends hin gehört</description>
+      
+    </item>
+    
+    <item>
+      <title>Standardprozess: Benutzer-Onboarding und Übergabe</title>
+      <link>https://zyria.de/posts/homelab/benutzeruebergabe/</link>
+      <pubDate>Mon, 11 May 2026 13:55:05 +0200</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://zyria.de/posts/homelab/benutzeruebergabe/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;Prozess: Benutzer-Onboarding und Übergabe&#xA;    &lt;div id=&#34;prozess-benutzer-onboarding-und-übergabe&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#prozess-benutzer-onboarding-und-%c3%bcbergabe&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;Dieses Dokument definiert den standardisierten Ablauf zur Bereitstellung von Benutzerkonten. Die Einhaltung dieser Schritte gewährleistet Sicherheit, Nachvollziehbarkeit und einen reibungslosen Start für den Benutzer.&lt;/p&gt;&#xA;&#xA;&lt;h3 class=&#34;relative group&#34;&gt;1. Phase: Vorbereitung und Kontoerstellung&#xA;    &lt;div id=&#34;1-phase-vorbereitung-und-kontoerstellung&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#1-phase-vorbereitung-und-kontoerstellung&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h3&gt;&#xA;&lt;p&gt;Diese Schritte werden von der IT-Abteilung nach Eingang einer autorisierten Anforderung (z.B. durch die Personalabteilung oder eine Führungskraft) durchgeführt.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>WireGuard mit systemd</title>
+      <link>https://zyria.de/posts/homelab/networking/wireguard_mit_systemd/</link>
+      <pubDate>Mon, 11 May 2026 13:55:05 +0200</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://zyria.de/posts/homelab/networking/wireguard_mit_systemd/</guid>
+      <description>&lt;p&gt;Für eine WireGuard-Verbindung mit systemd-networkd und systemd-resolved.&lt;/p&gt;</description>
       
     </item>
     
@@ -82,16 +182,6 @@
     </item>
     
     <item>
-      <title>Hetzner Server</title>
-      <link>https://zyria.de/posts/homelab/networking/hetzner_install/</link>
-      <pubDate>Mon, 16 Mar 2026 09:04:53 +0100</pubDate>
-      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://zyria.de/posts/homelab/networking/hetzner_install/</guid>
-      <description>Anbei ist der Ablauf beschrieben einen Hetzner Server in das System einzubinden.</description>
-      
-    </item>
-    
-    <item>
       <title>Hetzner Server IP Adress tausch</title>
       <link>https://zyria.de/posts/homelab/networking/hetzner_ip_change/</link>
       <pubDate>Mon, 16 Mar 2026 09:04:53 +0100</pubDate>
@@ -112,32 +202,12 @@
     </item>
     
     <item>
-      <title>Podman Snippets</title>
-      <link>https://zyria.de/posts/homelab/podman/</link>
-      <pubDate>Mon, 16 Mar 2026 09:04:53 +0100</pubDate>
-      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://zyria.de/posts/homelab/podman/</guid>
-      <description>&lt;p&gt;Nützliche Podman-Befehle für den täglichen Betrieb.&lt;/p&gt;</description>
-      
-    </item>
-    
-    <item>
       <title>Setup Windows Client</title>
       <link>https://zyria.de/posts/homelab/windows/setup_windows/</link>
       <pubDate>Mon, 16 Mar 2026 09:04:53 +0100</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/posts/homelab/windows/setup_windows/</guid>
       <description>&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Windows Rechner mit Professional Version kaufen (Aufgeräumt wird über Ansible)&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Windows Rechner vollständig laden&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Beim ersten Anschalten lokalen Benutzer oder Domäne auswählen.&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Lokaler Benutzer ist der Hauptnutzer des Gerätes.&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Kennwort wird in der IT Datenbank gesichert&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Alle Datensammelei während des Setups verbieten&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Rechner in Domäne aufnehmen&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Ansible Setup Script starten (liegt im ansible-main Repo unter files)&lt;/p&gt;</description>
-      
-    </item>
-    
-    <item>
-      <title>Snippets</title>
-      <link>https://zyria.de/posts/homelab/snippets/</link>
-      <pubDate>Mon, 16 Mar 2026 09:04:53 +0100</pubDate>
-      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://zyria.de/posts/homelab/snippets/</guid>
-      <description>All der Kram, der sonst nirgends hin gehört</description>
       
     </item>
     
@@ -178,16 +248,6 @@
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/posts/homelab/windows/windows_snippets/</guid>
       <description>PowerShell- und CMD-Snippets für Windows-Administration.</description>
-      
-    </item>
-    
-    <item>
-      <title>WireGuard mit systemd</title>
-      <link>https://zyria.de/posts/homelab/networking/wireguard_mit_systemd/</link>
-      <pubDate>Mon, 16 Mar 2026 09:04:53 +0100</pubDate>
-      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://zyria.de/posts/homelab/networking/wireguard_mit_systemd/</guid>
-      <description>&lt;p&gt;Für eine WireGuard-Verbindung mit systemd-networkd und systemd-resolved.&lt;/p&gt;</description>
       
     </item>
     
@@ -802,16 +862,6 @@
     </item>
     
     <item>
-      <title>Logins</title>
-      <link>https://zyria.de/posts/homelab/login/</link>
-      <pubDate>Tue, 01 Jul 2025 13:37:34 +0200</pubDate>
-      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://zyria.de/posts/homelab/login/</guid>
-      <description>&lt;p&gt;Alle Zugangsdaten sind entweder in der Persönlichen Keepass Datendank (für&#xA;personalisierte Logindaten) oder in der IT Datenbank. Der Login auf die Server&#xA;geschieht über SSH Schlüssel. Ein Login mit dem Passwort ist nicht vorgesehen.&lt;/p&gt;&#xA;&lt;p&gt;Für den externen Zugriff ist der Login über &lt;a href=&#34;https://vpn.zyria.de&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;VPN&lt;/a&gt; oder einem Bastion Host&#xA;&lt;a href=&#34;mailto:bastion@vpn.zyria.de&#34; &gt;bastion@vpn.zyria.de&lt;/a&gt;:3022 möglich. &lt;/p&gt;&#xA;&lt;p&gt;Generell sollte jedoch ein Login auf die Server nur zum Suchen von Fehlern&#xA;stattfinden. Die Verwaltung erfolgt ausschliesslich über Ansible. Jede händisch&#xA;durchgeführte Änderung muss im Nachhinein in Ansible eingepflegt und getestet&#xA;werden.&lt;/p&gt;</description>
-      
-    </item>
-    
-    <item>
       <title>Passwörter</title>
       <link>https://zyria.de/posts/homelab/passworter/</link>
       <pubDate>Tue, 01 Jul 2025 13:37:34 +0200</pubDate>
@@ -842,42 +892,12 @@
     </item>
     
     <item>
-      <title>Server-,Diensteverwaltung</title>
-      <link>https://zyria.de/posts/homelab/verwaltung/</link>
-      <pubDate>Tue, 01 Jul 2025 13:37:34 +0200</pubDate>
-      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://zyria.de/posts/homelab/verwaltung/</guid>
-      <description>&lt;p&gt;Wir verwenden zur generellen Verwaltung von Servern Ansible. Für manche Dienste&#xA;ist es jedoch notwendig oder praktikabler dies über vorhandene Portale zu&#xA;realisieren.&lt;/p&gt;&#xA;&#xA;&lt;h2 class=&#34;relative group&#34;&gt;Core-Networks (DNS)&#xA;    &lt;div id=&#34;core-networks-dns&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#core-networks-dns&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;Unsere DNS Server werden bei &lt;a href=&#34;https://www.core-networks.de&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;Core-Networks&lt;/a&gt;&#xA;gehostet. In deren &lt;a href=&#34;https://iface.core-networks.de&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;Webinterface&lt;/a&gt; lassen sich&#xA;alle relevanten Änderungen durchführen.&lt;/p&gt;</description>
-      
-    </item>
-    
-    <item>
       <title>Software</title>
       <link>https://zyria.de/posts/homelab/software/</link>
       <pubDate>Tue, 01 Jul 2025 13:37:34 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/posts/homelab/software/</guid>
       <description>&lt;p&gt;Die eingesetzte Software partiell dokumentiert.&lt;/p&gt;</description>
-      
-    </item>
-    
-    <item>
-      <title>Addc</title>
-      <link>https://zyria.de/posts/homelab/vms/addc/</link>
-      <pubDate>Tue, 01 Jul 2025 12:10:19 +0200</pubDate>
-      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://zyria.de/posts/homelab/vms/addc/</guid>
-      <description>&lt;h2 class=&#34;relative group&#34;&gt;Primärfunktion&#xA;    &lt;div id=&#34;primärfunktion&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#prim%c3%a4rfunktion&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;Samba Active Directory Domain Controller und Fileserver&lt;/p&gt;&#xA;&#xA;&lt;h2 class=&#34;relative group&#34;&gt;Installierte Software&#xA;    &lt;div id=&#34;installierte-software&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#installierte-software&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Samba-AD-DC&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
-      
-    </item>
-    
-    <item>
-      <title>Dev</title>
-      <link>https://zyria.de/posts/homelab/vms/dev/</link>
-      <pubDate>Tue, 01 Jul 2025 12:10:19 +0200</pubDate>
-      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://zyria.de/posts/homelab/vms/dev/</guid>
-      <description>&lt;h2 class=&#34;relative group&#34;&gt;Primärfunktion&#xA;    &lt;div id=&#34;primärfunktion&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#prim%c3%a4rfunktion&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;Host für Podman Container.&lt;/p&gt;&#xA;&#xA;&lt;h2 class=&#34;relative group&#34;&gt;Installierte Software&#xA;    &lt;div id=&#34;installierte-software&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#installierte-software&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;cockpit&lt;/li&gt;&#xA;&lt;li&gt;podman&lt;/li&gt;&#xA;&lt;li&gt;k3s&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
       
     </item>
     
@@ -907,7 +927,17 @@
       <pubDate>Thu, 19 Oct 2023 13:28:04 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/posts/homelab/erste_hilfe/</guid>
-      <description>&lt;h2 class=&#34;relative group&#34;&gt;Erster Schritt&#xA;    &lt;div id=&#34;erster-schritt&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#erster-schritt&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Läuft das Gerät?&lt;/li&gt;&#xA;&lt;li&gt;Hast du das Gerät einmal neu gestartet? Abmelden und anmelden reicht nicht&#xA;aus!&lt;/li&gt;&#xA;&lt;li&gt;Sind alle Kabel angeschlossen und richtig eingesteckt?&lt;/li&gt;&#xA;&lt;li&gt;Ist der Bildschirm angeschaltet?&lt;/li&gt;&#xA;&lt;li&gt;Was hast du getan, bevor das Gerät nicht mehr ging?&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&#xA;&lt;h2 class=&#34;relative group&#34;&gt;Zweiter Schritt&#xA;    &lt;div id=&#34;zweiter-schritt&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#zweiter-schritt&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://status.zyria.com/status/index&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;Statusseite checken&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&#xA;&lt;h2 class=&#34;relative group&#34;&gt;Dritter Schritt&#xA;    &lt;div id=&#34;dritter-schritt&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#dritter-schritt&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Neustart des Rechners == (nach jeder Änderung!) ==&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&#xA;&lt;h2 class=&#34;relative group&#34;&gt;Vierter Schritt&#xA;    &lt;div id=&#34;vierter-schritt&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#vierter-schritt&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Evtl. ausstehende Updates ausführen&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;Erster Schritt&#xA;    &lt;div id=&#34;erster-schritt&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#erster-schritt&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Läuft das Gerät?&lt;/li&gt;&#xA;&lt;li&gt;Hast du das Gerät einmal neu gestartet? Abmelden und anmelden reicht nicht&#xA;aus!&lt;/li&gt;&#xA;&lt;li&gt;Sind alle Kabel angeschlossen und richtig eingesteckt?&lt;/li&gt;&#xA;&lt;li&gt;Ist der Bildschirm angeschaltet?&lt;/li&gt;&#xA;&lt;li&gt;Was hast du getan, bevor das Gerät nicht mehr ging?&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&#xA;&lt;h2 class=&#34;relative group&#34;&gt;Zweiter Schritt&#xA;    &lt;div id=&#34;zweiter-schritt&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#zweiter-schritt&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://status.example.com/status/index&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;Statusseite checken&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&#xA;&lt;h2 class=&#34;relative group&#34;&gt;Dritter Schritt&#xA;    &lt;div id=&#34;dritter-schritt&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#dritter-schritt&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Neustart des Rechners == (nach jeder Änderung!) ==&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&#xA;&lt;h2 class=&#34;relative group&#34;&gt;Vierter Schritt&#xA;    &lt;div id=&#34;vierter-schritt&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#vierter-schritt&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Evtl. ausstehende Updates ausführen&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Ist ein Server erreichbar?</title>
+      <link>https://zyria.de/posts/homelab/windows/server_ping/</link>
+      <pubDate>Thu, 19 Oct 2023 13:28:04 +0200</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://zyria.de/posts/homelab/windows/server_ping/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;Wie teste ich, ob ein Server prinzipiell erreichbar ist?&#xA;    &lt;div id=&#34;wie-teste-ich-ob-ein-server-prinzipiell-erreichbar-ist&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#wie-teste-ich-ob-ein-server-prinzipiell-erreichbar-ist&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;Der Befehl ping ist auf allen Rechnern installert. Unter Windows muss dafür das&#xA;Programm cmd.exe gestartet werden. Dies findest du mit der Sucher oder unter&#xA;C:\Windows\System32\cmd.exe&lt;/p&gt;&#xA;&lt;p&gt;So sieht ein Ping via IPv6 aus:&lt;/p&gt;</description>
       
     </item>
     
