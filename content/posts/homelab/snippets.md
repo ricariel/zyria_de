@@ -69,30 +69,6 @@ Dieses Script migriert alle Festplatten einer VM auf einen anderen Storage
 
 {{< readfile file="move_all_disks.sh" code="true" lang="bash" >}}
 
-### Windows – Schlüssel extrahieren
-
-{{< readfile file="getkey.vbs" code="true" lang="vbscript" >}}
-
-### Windows – Reset aller lokalen Sicherheitsrichtlinien
-
-```cmd
-secedit /configure /cfg %windir%\inf\defltbase.inf /db defltbase.sdb /verbose
-```
-
-### Windows – Einspielen neuer lokaler Sicherheitsrichtlinien
-
-```cmd
-secedit /configure /db %windir%\security\new.sdb /cfg C:\Temp\Unternehmenssicherheit_W11.inf /overwrite /log C:\Temp\security_log.txt
-```
-
-### Windows – Reset aller Policies
-
-{{< readfile file="resetPolicies.bat" code="true" lang="cmd" >}}
-
-### Windows – Reset der User Folder Redirection Policy
-
-{{< readfile file="userFolderRedirectionReset.reg" code="true" lang="registry" >}}
-
 ---
 
 Siehe auch:
