@@ -13,6 +13,20 @@ tags:
 
 {{< links file="it" >}}
 
+### Git: was wird beim push übertragen
+
+Welche Commits sind enthalten
+
+```bash
+git log @{u}..HEAD --oneline
+```
+
+Was ist der Inahl† aller Commits (diff)
+
+```bash
+git diff @{u}..HEAD
+```
+
 ### SSH nur mit Passwort
 
 ```bash
