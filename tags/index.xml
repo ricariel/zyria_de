@@ -9,12 +9,12 @@
     <managingEditor>fabrice@zyria.de (Fabrice Kirchner)</managingEditor>
     <webMaster>fabrice@zyria.de (Fabrice Kirchner)</webMaster>
     
-    <lastBuildDate>Tue, 12 May 2026 09:25:34 +0200</lastBuildDate><atom:link href="https://zyria.de/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 22 May 2026 20:24:05 +0200</lastBuildDate><atom:link href="https://zyria.de/tags/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Bash</title>
       <link>https://zyria.de/tags/bash/</link>
-      <pubDate>Tue, 12 May 2026 09:25:34 +0200</pubDate>
+      <pubDate>Fri, 22 May 2026 20:24:05 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/tags/bash/</guid>
       <description></description>
@@ -24,7 +24,7 @@
     <item>
       <title>Homelab</title>
       <link>https://zyria.de/tags/homelab/</link>
-      <pubDate>Tue, 12 May 2026 09:25:34 +0200</pubDate>
+      <pubDate>Fri, 22 May 2026 20:24:05 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/tags/homelab/</guid>
       <description></description>
@@ -34,9 +34,19 @@
     <item>
       <title>Linux</title>
       <link>https://zyria.de/tags/linux/</link>
-      <pubDate>Tue, 12 May 2026 09:25:34 +0200</pubDate>
+      <pubDate>Fri, 22 May 2026 20:24:05 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/tags/linux/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Snippets</title>
+      <link>https://zyria.de/tags/snippets/</link>
+      <pubDate>Fri, 22 May 2026 20:24:05 +0200</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://zyria.de/tags/snippets/</guid>
       <description></description>
       
     </item>
@@ -47,16 +57,6 @@
       <pubDate>Tue, 12 May 2026 09:25:34 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/tags/powershell/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>Snippets</title>
-      <link>https://zyria.de/tags/snippets/</link>
-      <pubDate>Tue, 12 May 2026 09:25:34 +0200</pubDate>
-      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://zyria.de/tags/snippets/</guid>
       <description></description>
       
     </item>
