@@ -5,7 +5,7 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "autoprefixer": "10.5.2"
+    "autoprefixer": "10.5.3"
   },
   "name": "zyria_de",
   "version": "0.1.0"
