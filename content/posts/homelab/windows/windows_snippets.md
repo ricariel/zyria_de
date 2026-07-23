@@ -52,5 +52,3 @@ secedit /configure /db %windir%\security\new.sdb /cfg C:\Temp\Unternehmenssicher
 ### Windows – Reset der User Folder Redirection Policy
 
 {{< readfile file="userFolderRedirectionReset.reg" code="true" lang="registry" >}}
-
-

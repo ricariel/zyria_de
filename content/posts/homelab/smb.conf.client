@@ -30,7 +30,7 @@ tls keyfile = /etc/letsencrypt/live/server.example.com/privkey.pem
 tls certfile =  /etc/letsencrypt/live/server.example.com/fullchain.pem
 tls cafile =  /etc/letsencrypt/live/server.example.com/chain.pem
 
-	netbios name = SERVER
+  netbios name = SERVER
 read raw = yes
 write raw = yes
 dead time = 15
@@ -40,15 +40,15 @@ getwd cache = yes
     winbind offline logon = yes
     winbind normalize names = Yes
 ## Browsing/Identification ###
-	winbind nss info = template
-	winbind use default domain = Yes
+  winbind nss info = template
+  winbind use default domain = Yes
   winbind enum users = yes
   winbind enum groups = yes
         template homedir = /home/%U
         template shell = /bin/bash
 # Change this to the workgroup/NT-domain name your Samba server will part of
-	workgroup = MR
-	realm = DOM.EXAMPLE.COM
+  workgroup = MR
+  realm = DOM.EXAMPLE.COM
   vfs objects = acl_xattr
        map acl inherit = yes
        store dos attributes = yes
@@ -82,7 +82,7 @@ getwd cache = yes
 # to anonymous connections
    map to guest = never
    restrict anonymous = 2
-	usershare path =
+  usershare path =
 
 ########## Domains ###########
 
@@ -139,5 +139,3 @@ getwd cache = yes
 #csc policy = disable
 #   store dos attributes = yes
    vfs objects = acl_xattr
-
-

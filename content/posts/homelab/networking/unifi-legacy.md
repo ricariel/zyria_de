@@ -43,7 +43,7 @@ Nutze Generic Camera
 | Feld | Wert / Tipp |
 |---|---|
 |Still Image URL | http://192.168.1.xx/snap.jpg |
-|Stream Source	| rtsp://192.168.1.xx:554/s0 |
-|RTSP Transport	| Wähle TCP (statt Auto oder UDP) |
-|Authentication	| Starte mit Basic |
-|Verify SSL	| Deaktivieren (da die Kamera meist ein selbstsigniertes Zertifikat hat) |
+|Stream Source  | rtsp://192.168.1.xx:554/s0 |
+|RTSP Transport | Wähle TCP (statt Auto oder UDP) |
+|Authentication | Starte mit Basic |
+|Verify SSL | Deaktivieren (da die Kamera meist ein selbstsigniertes Zertifikat hat) |

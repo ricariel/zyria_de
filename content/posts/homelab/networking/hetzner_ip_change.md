@@ -38,7 +38,7 @@ mount --bind /dev/pts /target/dev/pts
 
 Speziell folgende Dateien überprüfen und neue IP sowie neuen Interfacenamen überall setzen.
 
-etc/network/interfaces 
+etc/network/interfaces
 
 Nachfolgend auch zwingend statisch das Interface setzen:
 
@@ -50,7 +50,7 @@ Zur Sicherheit noch einmal schauen ob noch irgendwo die alte IP genutzt wird.
 egrep -ris '<alte ip>' /target/etc
 ```
 
-Bearbeite das clevis unlock Setup 
+Bearbeite das clevis unlock Setup
 
 ```bash
 clevis-luks-list

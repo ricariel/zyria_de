@@ -6,4 +6,3 @@ tags:
   - energie
   - homelab
 ---
-
