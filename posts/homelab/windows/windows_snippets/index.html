@@ -93,8 +93,8 @@
 	<meta property="og:locale" content="de_de">
 	<meta property="og:type" content="article">
 		<meta property="article:section" content="posts">
-		<meta property="article:published_time" content="2026-07-23T15:53:31+02:00">
-		<meta property="article:modified_time" content="2026-07-23T15:53:31+02:00">
+		<meta property="article:published_time" content="2026-07-28T13:53:46+02:00">
+		<meta property="article:modified_time" content="2026-07-28T13:53:46+02:00">
 		<meta property="article:tag" content="Windows">
 		<meta property="article:tag" content="Powershell">
 		<meta property="article:tag" content="Homelab">
@@ -288,10 +288,10 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
       "name": "Fabrice Kirchner"
     },
     "copyrightYear": "2026",
-    "dateCreated": "2026-07-23T15:53:31\u002b02:00",
-    "datePublished": "2026-07-23T15:53:31\u002b02:00",
+    "dateCreated": "2026-07-28T13:53:46\u002b02:00",
+    "datePublished": "2026-07-28T13:53:46\u002b02:00",
     
-    "dateModified": "2026-07-23T15:53:31\u002b02:00",
+    "dateModified": "2026-07-28T13:53:46\u002b02:00",
     
     "keywords": ["windows","powershell","homelab","snippets"],
     
@@ -934,7 +934,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2026-07-23T15:53:31&#43;02:00">23 Juli 2026</time><span class="px-2 text-primary-500">&middot;</span><span>436 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
+      <time datetime="2026-07-28T13:53:46&#43;02:00">28 Juli 2026</time><span class="px-2 text-primary-500">&middot;</span><span>436 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
 
 
   
@@ -1079,11 +1079,11 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
       <ul>
         <li><a href="#remotedesktop-aktivieren-und-in-der-firewall-freischalten">Remotedesktop aktivieren und in der Firewall freischalten</a></li>
         <li><a href="#chocolatey-vcredist-dependency-hell-lösen">Chocolatey vcredist dependency hell lösen</a></li>
-        <li><a href="#windows--schlüssel-extrahieren">Windows – Schlüssel extrahieren</a></li>
-        <li><a href="#windows--reset-aller-lokalen-sicherheitsrichtlinien">Windows – Reset aller lokalen Sicherheitsrichtlinien</a></li>
-        <li><a href="#windows--einspielen-neuer-lokaler-sicherheitsrichtlinien">Windows – Einspielen neuer lokaler Sicherheitsrichtlinien</a></li>
-        <li><a href="#windows--reset-aller-policies">Windows – Reset aller Policies</a></li>
-        <li><a href="#windows--reset-der-user-folder-redirection-policy">Windows – Reset der User Folder Redirection Policy</a></li>
+        <li><a href="#windows---schlüssel-extrahieren">Windows - Schlüssel extrahieren</a></li>
+        <li><a href="#windows---reset-aller-lokalen-sicherheitsrichtlinien">Windows - Reset aller lokalen Sicherheitsrichtlinien</a></li>
+        <li><a href="#windows---einspielen-neuer-lokaler-sicherheitsrichtlinien">Windows - Einspielen neuer lokaler Sicherheitsrichtlinien</a></li>
+        <li><a href="#windows---reset-aller-policies">Windows - Reset aller Policies</a></li>
+        <li><a href="#windows---reset-der-user-folder-redirection-policy">Windows - Reset der User Folder Redirection Policy</a></li>
       </ul>
     </li>
   </ul>
@@ -1103,11 +1103,11 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
       <ul>
         <li><a href="#remotedesktop-aktivieren-und-in-der-firewall-freischalten">Remotedesktop aktivieren und in der Firewall freischalten</a></li>
         <li><a href="#chocolatey-vcredist-dependency-hell-lösen">Chocolatey vcredist dependency hell lösen</a></li>
-        <li><a href="#windows--schlüssel-extrahieren">Windows – Schlüssel extrahieren</a></li>
-        <li><a href="#windows--reset-aller-lokalen-sicherheitsrichtlinien">Windows – Reset aller lokalen Sicherheitsrichtlinien</a></li>
-        <li><a href="#windows--einspielen-neuer-lokaler-sicherheitsrichtlinien">Windows – Einspielen neuer lokaler Sicherheitsrichtlinien</a></li>
-        <li><a href="#windows--reset-aller-policies">Windows – Reset aller Policies</a></li>
-        <li><a href="#windows--reset-der-user-folder-redirection-policy">Windows – Reset der User Folder Redirection Policy</a></li>
+        <li><a href="#windows---schlüssel-extrahieren">Windows - Schlüssel extrahieren</a></li>
+        <li><a href="#windows---reset-aller-lokalen-sicherheitsrichtlinien">Windows - Reset aller lokalen Sicherheitsrichtlinien</a></li>
+        <li><a href="#windows---einspielen-neuer-lokaler-sicherheitsrichtlinien">Windows - Einspielen neuer lokaler Sicherheitsrichtlinien</a></li>
+        <li><a href="#windows---reset-aller-policies">Windows - Reset aller Policies</a></li>
+        <li><a href="#windows---reset-der-user-folder-redirection-policy">Windows - Reset der User Folder Redirection Policy</a></li>
       </ul>
     </li>
   </ul>
@@ -1265,12 +1265,12 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
 </span></span><span class="line"><span class="ln">5</span><span class="cl">
 </span></span><span class="line"><span class="ln">6</span><span class="cl"><span class="n">choco</span> <span class="n">upgrade</span> <span class="n">all</span></span></span></code></pre></div></div>
 
-<h3 class="relative group">Windows – Schlüssel extrahieren
-    <div id="windows--schlüssel-extrahieren" class="anchor"></div>
+<h3 class="relative group">Windows - Schlüssel extrahieren
+    <div id="windows---schlüssel-extrahieren" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#windows--schl%c3%bcssel-extrahieren" aria-label="Anker">#</a>
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#windows---schl%c3%bcssel-extrahieren" aria-label="Anker">#</a>
     </span>
     
 </h3>
@@ -1327,34 +1327,34 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
 
 
 
-<h3 class="relative group">Windows – Reset aller lokalen Sicherheitsrichtlinien
-    <div id="windows--reset-aller-lokalen-sicherheitsrichtlinien" class="anchor"></div>
+<h3 class="relative group">Windows - Reset aller lokalen Sicherheitsrichtlinien
+    <div id="windows---reset-aller-lokalen-sicherheitsrichtlinien" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#windows--reset-aller-lokalen-sicherheitsrichtlinien" aria-label="Anker">#</a>
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#windows---reset-aller-lokalen-sicherheitsrichtlinien" aria-label="Anker">#</a>
     </span>
     
 </h3>
 <div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="ln">1</span><span class="cl">secedit /configure /cfg <span class="nv">%windir%</span>\inf\defltbase.inf /db defltbase.sdb /verbose</span></span></code></pre></div></div>
 
-<h3 class="relative group">Windows – Einspielen neuer lokaler Sicherheitsrichtlinien
-    <div id="windows--einspielen-neuer-lokaler-sicherheitsrichtlinien" class="anchor"></div>
+<h3 class="relative group">Windows - Einspielen neuer lokaler Sicherheitsrichtlinien
+    <div id="windows---einspielen-neuer-lokaler-sicherheitsrichtlinien" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#windows--einspielen-neuer-lokaler-sicherheitsrichtlinien" aria-label="Anker">#</a>
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#windows---einspielen-neuer-lokaler-sicherheitsrichtlinien" aria-label="Anker">#</a>
     </span>
     
 </h3>
 <div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cmd" data-lang="cmd"><span class="line"><span class="ln">1</span><span class="cl">secedit /configure /db <span class="nv">%windir%</span>\security\new.sdb /cfg C:\Temp\Unternehmenssicherheit_W11.inf /overwrite /log C:\Temp\security_log.txt</span></span></code></pre></div></div>
 
-<h3 class="relative group">Windows – Reset aller Policies
-    <div id="windows--reset-aller-policies" class="anchor"></div>
+<h3 class="relative group">Windows - Reset aller Policies
+    <div id="windows---reset-aller-policies" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#windows--reset-aller-policies" aria-label="Anker">#</a>
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#windows---reset-aller-policies" aria-label="Anker">#</a>
     </span>
     
 </h3>
@@ -1403,12 +1403,12 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
 
 
 
-<h3 class="relative group">Windows – Reset der User Folder Redirection Policy
-    <div id="windows--reset-der-user-folder-redirection-policy" class="anchor"></div>
+<h3 class="relative group">Windows - Reset der User Folder Redirection Policy
+    <div id="windows---reset-der-user-folder-redirection-policy" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#windows--reset-der-user-folder-redirection-policy" aria-label="Anker">#</a>
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#windows---reset-der-user-folder-redirection-policy" aria-label="Anker">#</a>
     </span>
     
 </h3>
@@ -1770,6 +1770,19 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
           
         </span>
         <span class="flex flex-col items-end">
+          
+            <a
+              class="flex text-right text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+              href="/posts/homelab/windows/windows_install/">
+              <span class="leading-6">
+                Windows Installation&ensp;<span class="inline-block rtl:rotate-180">&rarr;</span>
+              </span>
+            </a>
+            
+              <span class="me-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
+                <time datetime="2026-07-28T13:53:46&#43;02:00">28 Juli 2026</time>
+              </span>
+            
           
         </span>
       </div>

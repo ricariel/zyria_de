@@ -9,7 +9,7 @@
     <managingEditor>fabrice@zyria.de (Fabrice Kirchner)</managingEditor>
     <webMaster>fabrice@zyria.de (Fabrice Kirchner)</webMaster>
     
-    <lastBuildDate>Thu, 23 Jul 2026 15:53:31 +0200</lastBuildDate><atom:link href="https://zyria.de/tags/solar/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 28 Jul 2026 13:53:46 +0200</lastBuildDate><atom:link href="https://zyria.de/tags/solar/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Solar</title>
@@ -32,7 +32,7 @@
     </item>
     
     <item>
-      <title>Solarflow – Steckerbelegung und MQTT</title>
+      <title>Solarflow - Steckerbelegung und MQTT</title>
       <link>https://zyria.de/posts/solar/strom/</link>
       <pubDate>Fri, 08 Mar 2024 12:52:37 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
