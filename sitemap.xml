@@ -39,14 +39,32 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://zyria.de/posts/homelab/snippets/</loc>
-    <lastmod>2026-05-22T20:24:05+02:00</lastmod>
+    <loc>https://zyria.de/posts/homelab/networking/hetzner_ip_change/</loc>
+    <lastmod>2026-07-23T15:53:31+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://zyria.de/posts/solar/</loc>
+    <lastmod>2026-07-23T15:53:31+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://zyria.de/posts/homelab/networking/unifi-legacy/</loc>
+    <lastmod>2026-07-23T15:53:31+02:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://zyria.de/posts/homelab/windows/windows_snippets/</loc>
-    <lastmod>2026-05-12T09:25:34+02:00</lastmod>
+    <lastmod>2026-07-23T15:53:31+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://zyria.de/posts/homelab/snippets/</loc>
+    <lastmod>2026-05-22T20:24:05+02:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -117,19 +135,7 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://zyria.de/posts/solar/</loc>
-    <lastmod>2026-03-16T09:33:43+01:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
     <loc>https://zyria.de/posts/homelab/debian-upgrade/</loc>
-    <lastmod>2026-03-16T09:04:53+01:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://zyria.de/posts/homelab/networking/hetzner_ip_change/</loc>
     <lastmod>2026-03-16T09:04:53+01:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -148,12 +154,6 @@
   </url>
   <url>
     <loc>https://zyria.de/posts/homelab/windows/setup_windows/</loc>
-    <lastmod>2026-03-16T09:04:53+01:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://zyria.de/posts/homelab/networking/unifi-legacy/</loc>
     <lastmod>2026-03-16T09:04:53+01:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>

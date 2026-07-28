@@ -9,7 +9,7 @@
     <managingEditor>fabrice@zyria.de (Fabrice Kirchner)</managingEditor>
     <webMaster>fabrice@zyria.de (Fabrice Kirchner)</webMaster>
     
-    <lastBuildDate>Fri, 22 May 2026 20:24:05 +0200</lastBuildDate><atom:link href="https://zyria.de/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 23 Jul 2026 15:53:31 +0200</lastBuildDate><atom:link href="https://zyria.de/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Über mich</title>
@@ -52,22 +52,42 @@
     </item>
     
     <item>
-      <title>Snippets</title>
-      <link>https://zyria.de/posts/homelab/snippets/</link>
-      <pubDate>Fri, 22 May 2026 20:24:05 +0200</pubDate>
+      <title>Hetzner Server IP Adress tausch</title>
+      <link>https://zyria.de/posts/homelab/networking/hetzner_ip_change/</link>
+      <pubDate>Thu, 23 Jul 2026 15:53:31 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://zyria.de/posts/homelab/snippets/</guid>
-      <description>All der Kram, der sonst nirgends hin gehört</description>
+      <guid>https://zyria.de/posts/homelab/networking/hetzner_ip_change/</guid>
+      <description>Anbei ist der Ablauf beschrieben einen Hetzner Server nach Hardwqre Tausch mit einer neuen IP zu versorgen</description>
+      
+    </item>
+    
+    <item>
+      <title>Unifi Snippets</title>
+      <link>https://zyria.de/posts/homelab/networking/unifi-legacy/</link>
+      <pubDate>Thu, 23 Jul 2026 15:53:31 +0200</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://zyria.de/posts/homelab/networking/unifi-legacy/</guid>
+      <description>Firmware-URLs, SSH-Upgrade und Konfiguration für UniFi-Kameras.</description>
       
     </item>
     
     <item>
       <title>Windows Snippets</title>
       <link>https://zyria.de/posts/homelab/windows/windows_snippets/</link>
-      <pubDate>Tue, 12 May 2026 09:25:34 +0200</pubDate>
+      <pubDate>Thu, 23 Jul 2026 15:53:31 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/posts/homelab/windows/windows_snippets/</guid>
       <description>PowerShell- und CMD-Snippets für Windows-Administration.</description>
+      
+    </item>
+    
+    <item>
+      <title>Snippets</title>
+      <link>https://zyria.de/posts/homelab/snippets/</link>
+      <pubDate>Fri, 22 May 2026 20:24:05 +0200</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://zyria.de/posts/homelab/snippets/</guid>
+      <description>All der Kram, der sonst nirgends hin gehört</description>
       
     </item>
     
@@ -182,16 +202,6 @@
     </item>
     
     <item>
-      <title>Hetzner Server IP Adress tausch</title>
-      <link>https://zyria.de/posts/homelab/networking/hetzner_ip_change/</link>
-      <pubDate>Mon, 16 Mar 2026 09:04:53 +0100</pubDate>
-      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://zyria.de/posts/homelab/networking/hetzner_ip_change/</guid>
-      <description>Anbei ist der Ablauf beschrieben einen Hetzner Server nach Hardwqre Tausch mit einer neuen IP zu versorgen</description>
-      
-    </item>
-    
-    <item>
       <title>Linux Storage</title>
       <link>https://zyria.de/posts/homelab/linux_storage/</link>
       <pubDate>Mon, 16 Mar 2026 09:04:53 +0100</pubDate>
@@ -208,16 +218,6 @@
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/posts/homelab/windows/setup_windows/</guid>
       <description>&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Windows Rechner mit Professional Version kaufen (Aufgeräumt wird über Ansible)&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Windows Rechner vollständig laden&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Beim ersten Anschalten lokalen Benutzer oder Domäne auswählen.&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Lokaler Benutzer ist der Hauptnutzer des Gerätes.&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Kennwort wird in der IT Datenbank gesichert&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Alle Datensammelei während des Setups verbieten&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Rechner in Domäne aufnehmen&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Ansible Setup Script starten (liegt im ansible-main Repo unter files)&lt;/p&gt;</description>
-      
-    </item>
-    
-    <item>
-      <title>Unifi Snippets</title>
-      <link>https://zyria.de/posts/homelab/networking/unifi-legacy/</link>
-      <pubDate>Mon, 16 Mar 2026 09:04:53 +0100</pubDate>
-      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://zyria.de/posts/homelab/networking/unifi-legacy/</guid>
-      <description>Firmware-URLs, SSH-Upgrade und Konfiguration für UniFi-Kameras.</description>
       
     </item>
     
