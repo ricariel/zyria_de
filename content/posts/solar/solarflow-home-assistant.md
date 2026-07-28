@@ -49,7 +49,7 @@ MQTT_PORT=1883
 ## Home Assistant Integration
 
 Ist der MQTT-Broker eingerichtet, erscheinen die Solarflow-Entitäten automatisch in Home Assistant
-über MQTT Discovery – sofern die Discovery im MQTT-Broker und in Home Assistant aktiviert ist.
+über MQTT Discovery - sofern die Discovery im MQTT-Broker und in Home Assistant aktiviert ist.
 
 Alternativ steht das Git-Repo
 [z-master42/solarflow](https://github.com/z-master42/solarflow/tree/main)

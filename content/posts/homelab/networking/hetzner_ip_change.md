@@ -17,14 +17,13 @@ Wir starten mit der Bestätigungsmail von Hetzner in der die geänderte Hardware
 
 Auf einem beliebigen anderen Proxmox Node müssen wir die Adresse in Corosync für diesen Node ändern
 
-Dazu die Datei /etc/pve/corosync.conf öffnen und unter nodelist node ring0_addr ändern wo name = <node der modifiziert wurde>
+Dazu die Datei /etc/pve/corosync.conf öffnen und unter nodelist node ring0_addr ändern wo name = '''node der modifiziert wurde'''
 
 ## Auf dem Node selbst
 
 - Per SSH Einloggen
 - root Dateisystem entsperren (meist /dev/md1)
 - root,boot mounten (am besten unter /target)
-
 
 ```bash
 mount --bind /proc/ /target/proc/

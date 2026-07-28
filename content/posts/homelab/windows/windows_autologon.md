@@ -1,6 +1,6 @@
 ---
 title: 'Windows autologon'
-description: 'Windows AutoLogon per Registry-Datei einrichten – für Kiosk-Systeme oder automatische Anmeldung in der Domäne.'
+description: 'Windows AutoLogon per Registry-Datei einrichten - für Kiosk-Systeme oder automatische Anmeldung in der Domäne.'
 tags:
   - windows
   - active-directory

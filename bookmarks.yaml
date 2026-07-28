@@ -5,8 +5,6 @@
       url: https://www.jtl-software.de/hilfecenter/entwickler-dokumentation
     - title: Login | Lexware
       url: https://app.lexoffice.de/sign-in/authenticate?redirect=%2Ffis%2Folb4%2F%23%2Ftransactionswop%2Fcd67e3bd-5d49-46a3-a167-6cea4ecd6664%3Fassignments%3Dfalse
-    - title: 'Windows TCP/IP-Implementierung: Reset kann die Netzwerkleistung erhöhen – Borns IT- und Windows-Blog'
-      url: https://www.borncity.com/blog/2024/09/04/windows-tcp-ip-implementierung-reset-kann-die-netzwerkleistung-erhhen/
     - title: https://app.lexoffice.de/fis/olb4/#/transactionswop/c821386f-67ad-4890-a2b9-344995d02b31?assignments=false
       url: https://app.lexoffice.de/fis/olb4/#/transactionswop/c821386f-67ad-4890-a2b9-344995d02b31?assignments=false
     - title: https://app.lexoffice.de/fis/olb4/#/transactionswop/0a8fde7f-7b57-4a86-96c2-7cb3ddb69242?assignments=false
@@ -46,7 +44,7 @@
       url: https://github.com/epcim/awesome-sysadmin2/blob/master/README.md#distributed-filesystems
     - title: Barrierefreies Web
       url: http://barrierefrei.e-workers.de/
-    - title: Best Practices in der IT-Administration, Version 2019 :: Grazer Linuxtage 2019 :: pretalx
+    - title: "Best Practices in der IT-Administration, Version 2019 :: Grazer Linuxtage 2019 :: pretalx"
       url: https://pretalx.linuxtage.at/glt19/talk/YNSEM3/
     - title: browsershots.org
       url: http://browsershots.org/website/
@@ -60,12 +58,6 @@
       url: http://thinkpad-forum.de/threads/188506-c-t-Desinfect-2015-erstellt-USB-Stick-mit-Version-2014
     - title: Caching und Compressing Optimierung in der .htaccess | Webmaster, Security und Technik Blog
       url: http://www.sjmp.de/software/caching-und-compressing-optimierung-in-der-htaccess/?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+tobiaskoelligan%2FaPmA+%28Webmaster%2C+Security+und+Technik+Blog%29
-    - title: Case Study: Failover using VRRP — Keepalived 1.4.3 documentation
-      url: http://www.keepalived.org/doc/case_study_failover.html
-    - title: Ceph Cluster unter Debian Wheezy installieren - adminForge
-      url: http://adminforge.de/raid/ceph/ceph-cluster-unter-debian-wheezy-installieren/
-    - title: 'Ceph: mix SATA and SSD within the same box | Sébastien Han'
-      url: https://www.sebastien-han.fr/blog/2014/08/25/ceph-mix-sata-and-ssd-within-the-same-box/
     - title: Certificate Authority (CA) with OpenSSL
       url: https://www.debian-administration.org/article/618/Certificate_Authority_CA_with_OpenSSL
     - title: 'Chroot users with OpenSSH: An easier way to confine users to their home directories | Linux and Open Source | TechRepublic.com'
@@ -132,8 +124,6 @@
       url: https://gist.github.com/scyto/cfe4f1645cb2cd820134238bd3c2596a
     - title: 'debootstrap(8): Bootstrap basic Debian system - Linux man page'
       url: http://linux.die.net/man/8/debootstrap
-    - title: diafygi/gethttpsforfree: Source code for https://gethttpsforfree.com/
-      url: https://github.com/diafygi/gethttpsforfree
     - title: Dim (and brighten) lights via a remote - Home Assistant
       url: https://www.home-assistant.io/cookbook/dim_and_brighten_lights/
     - title: Disabling DHCP on a LibVirt setup | Everything is a Freaking DNS problem
@@ -154,8 +144,6 @@
       url: https://docs.docker.com/v17.09/engine/userguide/networking/#bridge-networks
     - title: Docker with Saltstack
       url: https://opsnotice.xyz/docker-with-saltstack/
-    - title: Dokumentation – heise „socialSharePrivacy“–Plug-In
-      url: http://www.heise.de/extras/socialshareprivacy/
     - title: dotfiles/setup.sh at master · tankywoo/dotfiles
       url: https://github.com/tankywoo/dotfiles/blob/master/setup.sh
     - title: Dovecot, Postfix - Mit LDAP zum Active Directory - debinux.de
@@ -166,8 +154,6 @@
       url: http://technology.blue-bag.com/drupal-blueprint-theme-playing-seo-nicely-other-modules
     - title: E-Mail Anbieter Vergleich (mit SSL/STARTTLS) · SSL-Tools
       url: https://de.ssl-tools.net/providers
-    - title: eferdman/dehydrated-hook-ddns-tsig: dnspython hook for dehydrated shell script
-      url: https://github.com/eferdman/dehydrated-hook-ddns-tsig
     - title: Einfaches Single-Sign-On Teil 1 - (Open)LDAP
       url: http://www.guido-flohr.net/einfaches-single-sign-on-teil-1-openldap/
     - title: Enable repository updating for supported Linux server distributions | Plex Support
@@ -202,8 +188,6 @@
       url: https://github.com/fmdlc/saltstack-cheatsheet
     - title: Font Squirrel | Create Your Own @font-face Kits
       url: http://www.fontsquirrel.com/fontface/generator
-    - title: FortiTo – Educational Technology
-      url: http://www.fortito.com/buzz/
     - title: 'forum.blocklist.de • Thema anzeigen - Listen von blocklist.de per DNS abfragen/einbinden'
       url: https://forum.blocklist.de/viewtopic.php?f=11&t=17
     - title: 'forum.blocklist.de • Thema anzeigen - scriptkiddies & reporting'
@@ -356,10 +340,6 @@
       url: https://www.howtoforge.com/tutorial/install-debian-9-stretch-via-pxe-network-boot-server/
     - title: Install Hetzner mit eigenem Image | florian @it
       url: http://blog.schaal-24.de/backup/install-hetzner-mit-eigenem-image/
-    - title: Installing macOS Catalina 10.15 on Proxmox 6.1 or 6.2 using OpenCore – Nicholas Sherlock
-      url: https://www.nicksherlock.com/2020/04/installing-macos-catalina-on-proxmox-with-opencore/
-    - title: intensivstation :: CSS Templates
-      url: http://www.intensivstation.ch/templates/
     - title: Interfaces, frontends, and tools - Git SCM Wiki
       url: https://git.wiki.kernel.org/index.php/InterfacesFrontendsAndTools#WebInterface
     - title: Intervallschachtelungen
@@ -396,9 +376,7 @@
       url: http://www.hostblogger.de/blog/archives/4180-Kompendium-zum-Internetrecht-aktualisiert.html
     - title: 'konstruktoid/hardening: Hardening Ubuntu. Systemd edition.'
       url: https://github.com/konstruktoid/hardening
-    - title: Kontakt – Augenblicke by Ewa
-      url: https://augenblicke-by-ewa.de/?page_id=72
-    - title: Kostenlose IT Bücher – Thomas-Krenn-Wiki
+    - title: Kostenlose IT Bücher Thomas-Krenn-Wiki
       url: https://www.thomas-krenn.com/de/wiki/Kostenlose_IT_B%C3%BCcher
     - title: Kostenlose Vorlage & Muster für Eigenbeleg & Ersatzbeleg
       url: https://www.lexoffice.de/service/vorlage-eigenbeleg-ersatzbeleg/
@@ -416,7 +394,7 @@
       url: http://www.linuxfocus.org/Deutsch/July2000/article159.shtml
     - title: 'Linux Hybrid Graphics: Using acpi_call module to switch on/off discrete graphics card in Linux'
       url: http://linux-hybrid-graphics.blogspot.com/2010/07/using-acpicall-module-to-switch-onoff.html
-    - title: 'Linux-Praxisbuch: Lightweight Directory Access Protocol – Wikibooks, Sammlung freier Lehr-, Sach- und Fachbücher'
+    - title: 'Linux-Praxisbuch: Lightweight Directory Access Protocol  Wikibooks, Sammlung freier Lehr-, Sach- und Fachbücher'
       url: https://de.wikibooks.org/wiki/Linux-Praxisbuch:_Lightweight_Directory_Access_Protocol
     - title: live cd - Unpack ISO image, edit some files, repack an ISO so that it still boots - Ask Ubuntu
       url: http://askubuntu.com/questions/572149/unpack-iso-image-edit-some-files-repack-an-iso-so-that-it-still-boots
@@ -428,7 +406,7 @@
       url: https://www.schlosshotel-friedrichsruhe.de/
     - title: Lynis - Security auditing tool for Linux, macOS, and Unix-based systems - CISOfy
       url: https://cisofy.com/lynis/
-    - title: Mac-OS-Kompendium – Wikibooks, Sammlung freier Lehr-, Sach- und Fachbücher
+    - title: Mac-OS-Kompendium  Wikibooks, Sammlung freier Lehr-, Sach- und Fachbücher
       url: http://de.wikibooks.org/wiki/Mac-OS-Kompendium
     - title: Mail4us.net - MyRoundcube Plugins Generic Installation Guide
       url: http://mail4us.net/myroundcube/
@@ -444,7 +422,7 @@
       url: http://tiberian.ch/hochzeit/
     - title: Matt rants
       url: http://www.over-yonder.net/~fullermd/rants/
-    - title: MBits – Michael Breker IT Services
+    - title: MBits  Michael Breker IT Services
       url: https://www.mbits.solutions/
     - title: meyerweb.com
       url: http://meyerweb.com/eric/thoughts/
@@ -456,7 +434,7 @@
       url: http://www.linux-magazin.de/Ausgaben/2002/04/Zentrale-Meldestelle
     - title: mitp-Verlag | Der Onlineshop für IT, Business und Fotografie
       url: https://www.mitp.de/index.php?&redirected=1
-    - title: Mozilla Observatory :: Scan Results for casa-due-pur.de
+    - title: "Mozilla Observatory :: Scan Results for casa-due-pur.de"
       url: https://observatory.mozilla.org/analyze/casa-due-pur.de#third-party
     - title: "Multiboot USB-Stick: Desinfec't 2014 einrichten - Good to Know Database"
       url: http://www.gtkdb.de/index_7_2587.html
@@ -476,8 +454,6 @@
       url: https://decatec.de/home-server/nextcloud-talk-mit-eigenem-turn-server-coturn/
     - title: NodeMCU ESP32
       url: http://anleitung.joy-it.net/?goods=nodemcu-esp32
-    - title: Observatory by Mozilla :: Scan Results for www.zyria.de
-      url: https://observatory.mozilla.org/analyze.html?host=www.zyria.de
     - title: 'OEM:SLP Keys'
       url: http://d-fault.nl/Keys.aspx
     - title: OpenVPN - adminstories
@@ -496,13 +472,13 @@
       url: http://www.postfix.org/VIRTUAL_README.html
     - title: Preseed / preseed-scripts · GitLab
       url: https://gitlab.com/preseed/preseed-scripts/-/tree/master
-    - title: Preseed Debian 9 – UEFI with Encrypted LVM [Chuck Nemeth]
+    - title: Preseed Debian 9  UEFI with Encrypted LVM [Chuck Nemeth]
       url: https://www.chucknemeth.com/linux/distribution/debian/debian-9-preseed-uefi-encrypted-lvm
     - title: Produkte kategorisieren - Google Merchant Center-Hilfe
       url: http://support.google.com/merchants/bin/answer.py?hl=de&answer=160081&topic=2473824&ctx=topic
     - title: Projekte und Themenkapitel [Linux - Wissensdatenbank]
       url: http://dokuwiki.nausch.org/doku.php/wiki:start
-    - title: Pros and cons of online assessment tools for web server security · InfoSec Handbook – information security blog
+    - title: Pros and cons of online assessment tools for web server security · InfoSec Handbook  information security blog
       url: https://infosec-handbook.eu/blog/online-assessment-tools/
     - title: Proxmox Cluster and Firewall Configuration | Proxmox Support Forum
       url: https://forum.proxmox.com/threads/proxmox-cluster-and-firewall-configuration.9232/
@@ -512,7 +488,7 @@
       url: https://icicimov.github.io/blog/virtualization/Proxmox-clustering-and-nested-virtualization/
     - title: pyrodex/hetzner · GitHub
       url: https://github.com/pyrodex/hetzner
-    - title: Python 3 – Das umfassende Handbuch von Ernesti und Kaiser | Rheinwerk
+    - title: Python 3  Das umfassende Handbuch von Ernesti und Kaiser | Rheinwerk
       url: https://www.rheinwerk-verlag.de/python-3_4467/
     - title: qcow2 Disk Image mounten
       url: http://www.netzkompetenz.ch/ubuntu/qcow2-disk-image-mounten/
@@ -588,8 +564,6 @@
       url: https://thomas-leister.de/internet/sieve-mailfilter-fuer-dovecot-installieren-und-konfigurieren/
     - title: Sign in to GitHub · GitHub
       url: https://github.com/login?return_to=https%3A%2F%2Fgithub.com%2Fsettings%2Frepositories
-    - title: Signing .mobileconfig Profiles With Keychain Certificates | OS X Dominion: Mastering OS X Management
-      url: https://osxdominion.wordpress.com/2015/04/21/signing-mobileconfig-profiles-with-keychain-certificates/
     - title: sips(1) OS X Manual Page
       url: https://developer.apple.com/library/mac/#documentation/Darwin/Reference/ManPages/man1/sips.1.html
     - title: Smarte Türklingel - Alte Sprechanlage smart machen - Panbachi
@@ -636,11 +610,11 @@
       url: https://github.com/tralios/Report_JUNK
     - title: trinler.net - the source of information
       url: http://www.trinler.net/
-    - title: Tür-Fenster-Kontakt-Sensor auf 433 MHz Basis | Robins Blog – Technik und Multimedia
+    - title: Tür-Fenster-Kontakt-Sensor auf 433 MHz Basis | Robins Blog  Technik und Multimedia
       url: https://blog.moneybag.de/tuer-fenster-kontakt-sensor-auf-433-mhz-basis/
     - title: umount/message_label · GitHub
       url: https://github.com/umount/message_label
-    - title: UniFi - How to further customize USG configuration with config.gateway.json – Ubiquiti Networks Support and Help Center
+    - title: UniFi - How to further customize USG configuration with config.gateway.json  Ubiquiti Networks Support and Help Center
       url: https://help.ubnt.com/hc/en-us/articles/215458888-UniFi-How-to-further-customize-USG-configuration-with-config-gateway-json
     - title: Unitopiawiki
       url: http://unitopia.intelligense.de/wiki/Hauptseite
@@ -678,7 +652,7 @@
       url: https://www.ssoeasy.com/partner-ready-network/samba-single-sign-on/
     - title: DebianInstaller/NetbootAssistant - Debian Wiki
       url: https://wiki.debian.org/DebianInstaller/NetbootAssistant
-    - title: HA Cluster erstellen – DebianforumWiki
+    - title: HA Cluster erstellen  DebianforumWiki
       url: https://wiki.debianforum.de/HA_Cluster_erstellen
     - title: BasicConfiguration - Dovecot Wiki
       url: https://wiki.dovecot.org/BasicConfiguration
@@ -702,7 +676,7 @@
       url: http://www.windowsnetworking.com/kbase/WindowsTips/WindowsNT/AdminTips/Logon/WindowsNTLoginScriptTricksandTips.html
     - title: ISPmail tutorial for Debian Lenny | literacy and subleties for open-source bigots and other weirdos
       url: http://workaround.org/ispmail/lenny
-    - title: Simple awk cheat sheet – Ascii for Breakfast
+    - title: Simple awk cheat sheet  Ascii for Breakfast
       url: http://www.xenuser.org/simple-awk-cheat-sheet/
     - title: Salt Formulas | yet.org
       url: http://www.yet.org/2016/09/salt-formulas/
@@ -712,8 +686,6 @@
       url: http://www.zagbot.com/openvpn_ipv6_tunnel.html
     - title: Reparatur Feuerzeuge - Official Zippo Shop
       url: https://www.zippo.de/de/content/75-reparatur-feuerzeuge
-    - title: ViMbAdmin :: Virtual Mailbox Administration
-      url: http://www.vimbadmin.net/
     - title: Visei Blog » Mac OS X Time Machine backup on a Debian server
       url: http://visei.com/2012/09/mac-os-x-time-machine-backup-on-a-debian-server/
     - title: Media Queries
@@ -732,10 +704,6 @@
       url: http://wiki.apache.org/httpd/ApacheVirtualHostMysql
     - title: Inhalt - Wiki.chrisge.org
       url: https://wiki.chrisge.org/
-  - CDP:
-    - title: '[Sammelthread] HP ProLiant ML10 v2 G3240/i3-4150/E3-1220v3/E3-1241v3'
-      url: http://www.hardwareluxx.de/community/f101/hp-proliant-ml10-v2-g3240-i3-4150-e3-1220v3-e3-1241v3-1084044.html
-  - Tools:
     - title: 2FA QR code generator
       url: https://stefansundin.github.io/2fa-qr/
     - title: Debian GNU/Linux Anwenderhandbuch
@@ -748,13 +716,12 @@
       url: https://bettercrypto.org/
     - title: Favicon Generator for perfect icons on all browsers
       url: https://realfavicongenerator.net/
-    - title: kpfleming.systemd_networkd.network role – Manages systemd-networkd networks. — Collections documentation
+    - title: kpfleming.systemd_networkd.network role  Manages systemd-networkd networks. — Collections documentation
       url: https://kpfleming.github.io/ansible-systemd-networkd/network_role.html#
     - title: ▷ Ferien & Feiertage Deutschland - Bester Urlaubsplaner!
       url: https://www.holidayomat.com/ferien-feiertage-deutschland/
     - title: Linksammlung rund um Strom · Zyria
       url: http://localhost:1313/posts/strom/
-  - Fail2ban:
     - title: 5nafu/fail2fan-blocklist-importer · GitHub
       url: https://github.com/5nafu/fail2fan-blocklist-importer
     - title: 'Fail2ban:Community Portal - Fail2ban'
@@ -773,7 +740,6 @@
       url: https://www.blocklist.de/de/api.html#dns
     - title: '#bbcan177_ms1 by BBcan177, malware IPs list, at FireHOL IP Lists'
       url: http://iplists.firehol.org/?ipset=bbcan177_ms1
-  - Exim:
     - title: Configure and Administer the Greylist Daemon (greylistd) for Exim
       url: http://greylistd.sourceforge.net/README.html
     - title: 'debian:exim4 [DBMail]'
@@ -868,7 +834,6 @@
       url: http://sanesecurity.com/usage/signatures/
     - title: abuse.ch - The Swiss Security Blog
       url: https://www.abuse.ch/
-  - Microsoft:
     - title: Azure subscription limits and quotas | Microsoft Docs
       url: https://docs.microsoft.com/en-us/azure/azure-subscription-service-limits
     - title: Bereitstellungsratgeber für Office 365-Dienste | Microsoft Docs

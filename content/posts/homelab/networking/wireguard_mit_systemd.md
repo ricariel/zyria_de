@@ -1,6 +1,6 @@
 ---
 title: 'WireGuard mit systemd'
-description: 'WireGuard VPN mit systemd-networkd und systemd-resolved konfigurieren – Interface, Netzwerk und DNS-Auflösung.'
+description: 'WireGuard VPN mit systemd-networkd und systemd-resolved konfigurieren - Interface, Netzwerk und DNS-Auflösung.'
 tags:
   - homelab
   - vpn

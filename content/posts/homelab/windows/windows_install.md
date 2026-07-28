@@ -1,6 +1,6 @@
 ---
 title: 'Windows Installation'
-description: 'Neuen Windows-Rechner ohne Microsoft-Konto einrichten und in Active Directory aufnehmen – inkl. BIOS-Prüfung und Domänen-Einbindung.'
+description: 'Neuen Windows-Rechner ohne Microsoft-Konto einrichten und in Active Directory aufnehmen - inkl. BIOS-Prüfung und Domänen-Einbindung.'
 tags:
   - windows
   - active-directory

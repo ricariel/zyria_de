@@ -1,6 +1,6 @@
 ---
 title: 'Snippets'
-description: 'Sammlung von Codesnippets für Linux, Git, Mastodon, Samba und Proxmox – alles was sonst nirgends hinpasst.'
+description: 'Sammlung von Codesnippets für Linux, Git, Mastodon, Samba und Proxmox - alles was sonst nirgends hinpasst.'
 summary: "All der Kram, der sonst nirgends hin gehört"
 tags:
   - homelab
@@ -66,7 +66,7 @@ git commit --allow-empty -m "Initial commit on orphan branch"
 git push -u origin pages
 ```
 
-### Git – Alle Repos clonen
+### Git - Alle Repos clonen
 
 ```bash
 tea login add
@@ -86,5 +86,6 @@ Dieses Script migriert alle Festplatten einer VM auf einen anderen Storage
 ---
 
 Siehe auch:
-- [Linux Storage]({{< ref "linux_storage.md" >}}) – RAID, LVM, Verschlüsselung, Partitionierung
-- [Podman]({{< ref "podman.md" >}}) – Container bauen und mit systemd starten
+
+- [Linux Storage]({{< ref "linux_storage.md" >}}) - RAID, LVM, Verschlüsselung, Partitionierung
+- [Podman]({{< ref "podman.md" >}}) - Container bauen und mit systemd starten

@@ -103,6 +103,7 @@ systemctl reboot
 systemctl -a --failed
 journalctl -b -p notice
 ```
+
 ### Übersprungene neue Konfigurationen prüfen
 
 ```bash

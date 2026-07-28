@@ -20,12 +20,11 @@ jq -r '.items[] | select((.metadata.creationTimestamp | fromdateiso8601) < (now 
 xargs -I {} kubectl delete backups.longhorn.io/{} -n longhorn-system
 
 ```
+
 ## Lösche alle nicht Completed Longhorn Backups
 
 ```bash
-
 kubectl get backups.longhorn.io -n longhorn-system | grep -v "Completed" | awk '{print $1}' | xargs -I {} kubectl delete backups.longhorn.io/{} -n longhorn-system
-
 ```
 
 ## Kubernetes Nutzer hinzufügen

@@ -1,5 +1,5 @@
 ---
-title: Solarflow – Steckerbelegung und MQTT
+title: Solarflow - Steckerbelegung und MQTT
 description: "Steckerpinout des Zendure Solarflow Hub sowie MQTT-Zugangsdaten und Linksammlung."
 date: 2024-03-08T12:52:37+02:00
 tags:
