@@ -9,4 +9,4 @@ jobs:
   call-reusable:
     runs-on: ubuntu-latest
     steps:
-      - uses: https://git.zyria.de/pyrox/actions/pre-commit@a38344044e10f21e926de8211be061f5e384db4d # v1
+      - uses: https://git.zyria.de/pyrox/actions/pre-commit@v1
