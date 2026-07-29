@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Mirror
-        uses: https://git.zyria.de/pyrox/actions/mirror@5f00b220bfac7c802703fea31da70df00b2b507e # v1
+        uses: https://git.zyria.de/pyrox/actions/mirror@a38344044e10f21e926de8211be061f5e384db4d # v1
         with:
           target_repo_url: git@github.com:ricariel/${{ github.event.repository.name }}.git
           ssh_private_key: ${{ secrets.ZYRIA_GITHUB_SSH }}
