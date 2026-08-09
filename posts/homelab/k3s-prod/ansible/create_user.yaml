@@ -1,0 +1,164 @@
+---
+- name: Idempotenter Kubernetes Nutzer-Setup
+  hosts: localhost
+  connection: local
+  vars_prompt:
+    - name: user_name
+      prompt: "Nutzername?"
+      private: false
+    - name: group_name
+      prompt: "Gruppe?"
+      private: false
+
+  vars:
+    output_dir: "./user_configs/{{ user_name }}"
+    kubeconfig_file: "{{ output_dir }}/config"
+
+  tasks:
+    - name: Cluster-Daten aus lokaler Config lesen
+      ansible.builtin.set_fact:
+        current_kubeconfig: "{{ lookup('env', 'KUBECONFIG') | default('~/.kube/config', true) }}"
+
+    - name: Kubeconfig parsen
+      ansible.builtin.set_fact:
+        kube_content: "{{ lookup('file', current_kubeconfig) | from_yaml }}"
+
+    - name: Kontext und Server bestimmen
+      ansible.builtin.set_fact:
+        active_context: "{{ kube_content['current-context'] }}"
+        active_cluster: "{{ (kube_content.contexts | selectattr('name', 'equalto', kube_content['current-context']) | first).context.cluster }}"
+
+    - name: Endpoint und CA extrahieren
+      ansible.builtin.set_fact:
+        k3s_endpoint: "{{ (kube_content.clusters | selectattr('name', 'equalto', active_cluster) | first).cluster.server }}"
+        ca_data_b64: "{{ (kube_content.clusters | selectattr('name', 'equalto', active_cluster) | first).cluster['certificate-authority-data'] }}"
+
+    - name: Verzeichnis erstellen
+      ansible.builtin.file:
+        path: "{{ output_dir }}"
+        state: directory
+        mode: '0700'
+
+    - name: CA-Zertifikat speichern
+      ansible.builtin.copy:
+        content: "{{ ca_data_b64 | b64decode }}"
+        dest: "{{ output_dir }}/server-ca.crt"
+        mode: '0600'
+
+    - name: Privaten Schlüssel generieren
+      community.crypto.openssl_privatekey:
+        path: "{{ output_dir }}/{{ user_name }}.key"
+        force: false
+
+    - name: CSR generieren
+      community.crypto.openssl_csr_pipe:
+        privatekey_path: "{{ output_dir }}/{{ user_name }}.key"
+        common_name: "{{ user_name }}"
+        organization_name: "{{ group_name }}"
+      register: user_csr
+
+    - name: CSR in Kubernetes sicherstellen
+      kubernetes.core.k8s:
+        state: present
+        definition:
+          apiVersion: certificates.k8s.io/v1
+          kind: CertificateSigningRequest
+          metadata:
+            name: "{{ user_name }}-csr"
+          spec:
+            request: "{{ user_csr.csr | b64encode }}"
+            signerName: kubernetes.io/kube-apiserver-client
+            usages: ["client auth"]
+
+    - name: Status des CSR prüfen
+      kubernetes.core.k8s_info:
+        kind: CertificateSigningRequest
+        name: "{{ user_name }}-csr"
+      register: csr_status
+
+    - name: CSR genehmigen (nur wenn noch nicht 'Approved')
+      ansible.builtin.command: "kubectl certificate approve {{ user_name }}-csr"
+      when: >
+        csr_status.resources[0].status.conditions is not defined or
+        (csr_status.resources[0].status.conditions | selectattr('type', 'equalto', 'Approved') | list | length == 0)
+      changed_when: true
+
+    - name: Warten, bis das Zertifikat signiert wurde
+      kubernetes.core.k8s_info:
+        kind: CertificateSigningRequest
+        name: "{{ user_name }}-csr"
+      register: csr_status_signed
+      until: csr_status_signed.resources[0].status.certificate is defined
+      retries: 10
+      delay: 2
+
+    - name: Signiertes Zertifikat lokal speichern
+      ansible.builtin.copy:
+        content: "{{ csr_status_signed.resources[0].status.certificate | b64decode }}"
+        dest: "{{ output_dir }}/{{ user_name }}.crt"
+        mode: '0600'
+
+    - name: RBAC Binding sicherstellen
+      kubernetes.core.k8s:
+        state: present
+        definition:
+          apiVersion: rbac.authorization.k8s.io/v1
+          kind: ClusterRoleBinding
+          metadata:
+            name: "group-{{ group_name }}-admin-binding"
+          subjects:
+            - kind: Group
+              name: "{{ group_name }}"
+              apiGroup: rbac.authorization.k8s.io
+          roleRef:
+            kind: ClusterRole
+            name: cluster-admin
+            apiGroup: rbac.authorization.k8s.io
+
+    - name: Zertifikatsinhalte für Einbettung einlesen
+      ansible.builtin.set_fact:
+        user_cert_b64: "{{ lookup('file', output_dir + '/' + user_name + '.crt') | b64encode }}"
+        user_key_b64: "{{ lookup('file', output_dir + '/' + user_name + '.key') | b64encode }}"
+
+    - name: Kubeconfig als YAML-Struktur definieren
+      ansible.builtin.set_fact:
+        new_kubeconfig:
+          apiVersion: v1
+          kind: Config
+          preferences: {}
+          current-context: default
+          clusters:
+            - name: "{{ active_cluster }}"
+              cluster:
+                server: "{{ k3s_endpoint }}"
+                certificate-authority-data: "{{ ca_data_b64 }}"
+          users:
+            - name: "{{ user_name }}"
+              user:
+                client-certificate-data: "{{ user_cert_b64 }}"
+                client-key-data: "{{ user_key_b64 }}"
+          contexts:
+            - name: default
+              context:
+                cluster: "{{ active_cluster }}"
+                user: "{{ user_name }}"
+
+    - name: Kubeconfig-Datei schreiben
+      ansible.builtin.copy:
+        content: "{{ new_kubeconfig | to_nice_yaml(indent=2) }}"
+        dest: "{{ kubeconfig_file }}"
+        mode: '0600'
+
+    - name: Neue Kubeconfig testen
+      ansible.builtin.command: "kubectl --kubeconfig {{ output_dir }}/config get nodes"
+      register: test_output
+      # Da dies nur eine Abfrage ist, markieren wir sie als 'nicht geändert' für die Idempotenz
+      changed_when: false
+      # Falls der Befehl fehlschlägt, gibt Ansible eine Fehlermeldung aus
+      failed_when: test_output.rc != 0
+
+    - name: Testergebnis anzeigen
+      ansible.builtin.debug:
+        msg:
+          - "Verbindung erfolgreich! Hier sind die Nodes des Clusters:"
+          - "{{ test_output.stdout_lines }}"

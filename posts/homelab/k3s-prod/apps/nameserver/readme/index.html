@@ -104,8 +104,8 @@
 	<meta property="og:locale" content="de_de">
 	<meta property="og:type" content="article">
 		<meta property="article:section" content="posts">
-		<meta property="article:published_time" content="2025-11-07T11:23:15+01:00">
-		<meta property="article:modified_time" content="2025-11-07T11:23:15+01:00">
+		<meta property="article:published_time" content="2026-08-08T22:29:11+02:00">
+		<meta property="article:modified_time" content="2026-08-08T22:29:11+02:00">
 		<meta property="article:tag" content="Kubernetes">
 		<meta property="article:tag" content="K3s">
 		<meta property="article:tag" content="Gitops">
@@ -307,16 +307,16 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
       "image": "https://zyria.de/images/chibi-head.jpg",
       "sameAs": ["https://git.casa-due-pur.de/fabrice.kirchner", "https://git.zyria.de/pyrox", "https://github.com/ricariel", "https://www.linkedin.com/in/fabrice-kirchner-bb5408163/", "https://www.xing.com/profile/Fabrice_Kirchner", "https://kirchner.social/@fabrice", "https://codeberg.org/ricariel"]
     },
-    "copyrightYear": "2025",
-    "dateCreated": "2025-11-07T11:23:15\u002b01:00",
-    "datePublished": "2025-11-07T11:23:15\u002b01:00",
+    "copyrightYear": "2026",
+    "dateCreated": "2026-08-08T22:29:11\u002b02:00",
+    "datePublished": "2026-08-08T22:29:11\u002b02:00",
     
-    "dateModified": "2025-11-07T11:23:15\u002b01:00",
+    "dateModified": "2026-08-08T22:29:11\u002b02:00",
     
     "keywords": ["kubernetes","k3s","gitops","argocd","helm","kustomize","homelab","produktion"],
     
     "mainEntityOfPage": "https://zyria.de/posts/homelab/k3s-prod/apps/nameserver/readme/",
-    "wordCount": "255"
+    "wordCount": "292"
   }]
   </script>
 
@@ -956,7 +956,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2025-11-07T11:23:15&#43;01:00">7 November 2025</time><span class="px-2 text-primary-500">&middot;</span><span>255 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
+      <time datetime="2026-08-08T22:29:11&#43;02:00">8 August 2026</time><span class="px-2 text-primary-500">&middot;</span><span>292 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
 
 
   
@@ -1483,6 +1483,7 @@ Das Helm-Chart stammt aus dem <a href="https://coredns.github.io/helm"  target="
 <li><code>prometheus</code>: Stellt Metriken für das Monitoring bereit.</li>
 </ul>
 </li>
+<li><strong>Standort-Zonen</strong>: Zonen von per VPN angebundenen Standorten sind hier bewusst <strong>nicht</strong> eingetragen. Die Weiterleitung läuft über <code>dns.nameservers.split</code> in <code>apps/headscale</code> und erreicht damit nur Tailnet-Clients — im LAN bleibt unsichtbar, dass die Zonen überhaupt existieren. Details in <code>apps/vpn-site-b</code>.</li>
 <li><strong>Scheduling</strong>: CoreDNS-Pods werden bevorzugt auf den Control-Plane-Nodes ausgeführt und sind über <code>topologySpreadConstraints</code> auf verschiedene Nodes und Zonen verteilt, um die Ausfallsicherheit zu erhöhen.</li>
 </ul>
 
@@ -1740,14 +1741,14 @@ Das Helm-Chart stammt aus dem <a href="https://coredns.github.io/helm"  target="
           
             <a
               class="flex text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
-              href="/posts/homelab/k3s-prod/apps/argocd/readme/">
+              href="/posts/homelab/k3s-prod/apps/vpn-site-b/readme/">
               <span class="leading-6">
-                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;ArgoCD
+                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;VPN Standort B - Tailscale Subnet Router
               </span>
             </a>
             
               <span class="ms-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
-                <time datetime="2025-09-16T14:38:48&#43;02:00">16 September 2025</time>
+                <time datetime="2026-08-08T22:29:11&#43;02:00">8 August 2026</time>
               </span>
             
           
@@ -1756,14 +1757,14 @@ Das Helm-Chart stammt aus dem <a href="https://coredns.github.io/helm"  target="
           
             <a
               class="flex text-right text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
-              href="/posts/homelab/k3s-prod/apps/unifi-controller/readme/">
+              href="/posts/homelab/k3s-prod/ansible/shutdown-startup/">
               <span class="leading-6">
-                UniFi Netzwerk-Anwendung&ensp;<span class="inline-block rtl:rotate-180">&rarr;</span>
+                Operational Lifecycle Management: Orchestrierter Shutdown für Kubernetes&ensp;<span class="inline-block rtl:rotate-180">&rarr;</span>
               </span>
             </a>
             
               <span class="me-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
-                <time datetime="2026-01-21T10:25:16&#43;01:00">21 Januar 2026</time>
+                <time datetime="2024-10-27T10:00:00&#43;01:00">27 Oktober 2024</time>
               </span>
             
           

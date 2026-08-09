@@ -104,8 +104,8 @@
 	<meta property="og:locale" content="de_de">
 	<meta property="og:type" content="article">
 		<meta property="article:section" content="posts">
-		<meta property="article:published_time" content="2025-08-26T01:05:41+02:00">
-		<meta property="article:modified_time" content="2025-08-26T01:05:41+02:00">
+		<meta property="article:published_time" content="2026-07-30T10:19:29+02:00">
+		<meta property="article:modified_time" content="2026-07-30T10:19:29+02:00">
 		<meta property="article:tag" content="Kubernetes">
 		<meta property="article:tag" content="K3s">
 		<meta property="article:tag" content="Gitops">
@@ -307,16 +307,16 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
       "image": "https://zyria.de/images/chibi-head.jpg",
       "sameAs": ["https://git.casa-due-pur.de/fabrice.kirchner", "https://git.zyria.de/pyrox", "https://github.com/ricariel", "https://www.linkedin.com/in/fabrice-kirchner-bb5408163/", "https://www.xing.com/profile/Fabrice_Kirchner", "https://kirchner.social/@fabrice", "https://codeberg.org/ricariel"]
     },
-    "copyrightYear": "2025",
-    "dateCreated": "2025-08-26T01:05:41\u002b02:00",
-    "datePublished": "2025-08-26T01:05:41\u002b02:00",
+    "copyrightYear": "2026",
+    "dateCreated": "2026-07-30T10:19:29\u002b02:00",
+    "datePublished": "2026-07-30T10:19:29\u002b02:00",
     
-    "dateModified": "2025-08-26T01:05:41\u002b02:00",
+    "dateModified": "2026-07-30T10:19:29\u002b02:00",
     
     "keywords": ["kubernetes","k3s","gitops","argocd","helm","kustomize","homelab","produktion"],
     
     "mainEntityOfPage": "https://zyria.de/posts/homelab/k3s-prod/apps/forgejo-runner/readme/",
-    "wordCount": "301"
+    "wordCount": "335"
   }]
   </script>
 
@@ -956,7 +956,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2025-08-26T01:05:41&#43;02:00">26 August 2025</time><span class="px-2 text-primary-500">&middot;</span><span>301 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
+      <time datetime="2026-07-30T10:19:29&#43;02:00">30 Juli 2026</time><span class="px-2 text-primary-500">&middot;</span><span>335 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
 
 
   
@@ -1489,8 +1489,9 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
 <li><code>forgejo-runner-codeberg</code>: Verbindet sich mit der öffentlichen Instanz <code>https://codeberg.org</code>.</li>
 </ol>
 </li>
-<li><strong>Replikas</strong>: Für die lokale Instanz werden 3 Runner-Replikate betrieben, um parallele Job-Ausführung zu ermöglichen.</li>
-<li><strong>Node Selector</strong>: Die Runner werden auf Nodes mit dem Label <code>performance: high</code> ausgeführt, um eine schnelle Job-Ausführung zu gewährleisten.</li>
+<li><strong>Replikas</strong>: Für die lokale Instanz werden 5 Runner-Replikate betrieben — je einer pro Hardware-Node, erzwungen über <code>podAntiAffinity</code> (<code>topologyKey: kubernetes.io/hostname</code>). Mit <code>capacity: 2</code> ergibt das 10 parallel ausführbare Jobs.</li>
+<li><strong>Ressourcen</strong>: Beide Container haben Requests/Limits. Das CPU-Limit liegt auf dem <code>dind</code>-Container (4 CPU), damit CI-Jobs die auf denselben Nodes laufenden Produktions-Workloads nicht verdrängen können.</li>
+<li><strong>Docker-Daemon</strong>: <code>daemon.json</code> (MTU 1400, IPv6) wird per ConfigMap <code>docker-config</code> in den <code>dind</code>-Container nach <code>/etc/docker/daemon.json</code> gemountet.</li>
 <li><strong>Labels</strong>: Die Runner sind mit einer Vielzahl von Labels konfiguriert, die auf verschiedene Docker-Images von <code>catthehacker/ubuntu</code> verweisen. Diese Images sind speziell für die Verwendung mit Gitea/Forgejo Actions vorbereitet.</li>
 <li><strong>Docker-in-Docker</strong>: Die Runner laufen im <code>privileged</code>-Modus und mit <code>host</code>-Netzwerk, um Docker-Befehle innerhalb der CI-Jobs ausführen zu können (Docker-in-Docker).</li>
 </ul>
@@ -1752,14 +1753,14 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
           
             <a
               class="flex text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
-              href="/posts/homelab/k3s-prod/apps/headscale/readme/">
+              href="/posts/homelab/k3s-prod/apps/forgejo/readme/">
               <span class="leading-6">
-                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;Headscale
+                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;Forgejo
               </span>
             </a>
             
               <span class="ms-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
-                <time datetime="2025-08-26T01:05:41&#43;02:00">26 August 2025</time>
+                <time datetime="2026-07-28T15:44:05&#43;02:00">28 Juli 2026</time>
               </span>
             
           
@@ -1768,14 +1769,14 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
           
             <a
               class="flex text-right text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
-              href="/posts/homelab/k3s-prod/apps/authentik/readme/">
+              href="/posts/homelab/k3s-prod/apps/mailstack/readme/">
               <span class="leading-6">
-                Authentik&ensp;<span class="inline-block rtl:rotate-180">&rarr;</span>
+                Mailstack&ensp;<span class="inline-block rtl:rotate-180">&rarr;</span>
               </span>
             </a>
             
               <span class="me-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
-                <time datetime="2025-08-26T01:05:41&#43;02:00">26 August 2025</time>
+                <time datetime="2026-08-04T22:12:11&#43;02:00">4 August 2026</time>
               </span>
             
           

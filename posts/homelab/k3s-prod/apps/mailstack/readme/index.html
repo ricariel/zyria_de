@@ -104,8 +104,8 @@
 	<meta property="og:locale" content="de_de">
 	<meta property="og:type" content="article">
 		<meta property="article:section" content="posts">
-		<meta property="article:published_time" content="2025-08-25T23:42:21+02:00">
-		<meta property="article:modified_time" content="2025-08-25T23:42:21+02:00">
+		<meta property="article:published_time" content="2026-08-04T22:12:11+02:00">
+		<meta property="article:modified_time" content="2026-08-04T22:12:11+02:00">
 		<meta property="article:tag" content="Kubernetes">
 		<meta property="article:tag" content="K3s">
 		<meta property="article:tag" content="Gitops">
@@ -307,16 +307,16 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
       "image": "https://zyria.de/images/chibi-head.jpg",
       "sameAs": ["https://git.casa-due-pur.de/fabrice.kirchner", "https://git.zyria.de/pyrox", "https://github.com/ricariel", "https://www.linkedin.com/in/fabrice-kirchner-bb5408163/", "https://www.xing.com/profile/Fabrice_Kirchner", "https://kirchner.social/@fabrice", "https://codeberg.org/ricariel"]
     },
-    "copyrightYear": "2025",
-    "dateCreated": "2025-08-25T23:42:21\u002b02:00",
-    "datePublished": "2025-08-25T23:42:21\u002b02:00",
+    "copyrightYear": "2026",
+    "dateCreated": "2026-08-04T22:12:11\u002b02:00",
+    "datePublished": "2026-08-04T22:12:11\u002b02:00",
     
-    "dateModified": "2025-08-25T23:42:21\u002b02:00",
+    "dateModified": "2026-08-04T22:12:11\u002b02:00",
     
     "keywords": ["kubernetes","k3s","gitops","argocd","helm","kustomize","homelab","produktion"],
     
     "mainEntityOfPage": "https://zyria.de/posts/homelab/k3s-prod/apps/mailstack/readme/",
-    "wordCount": "1797"
+    "wordCount": "2999"
   }]
   </script>
 
@@ -956,7 +956,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2025-08-25T23:42:21&#43;02:00">25 August 2025</time><span class="px-2 text-primary-500">&middot;</span><span>1797 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
+      <time datetime="2026-08-04T22:12:11&#43;02:00">4 August 2026</time><span class="px-2 text-primary-500">&middot;</span><span>2999 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
 
 
   
@@ -1274,6 +1274,23 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
         </li>
         <li><a href="#dienste-welche-mit-dem-mailstack-interagieren">Dienste welche mit dem Mailstack interagieren</a></li>
         <li><a href="#wer-hat-eigentlich-auf-welche-mailbox-zugriff">Wer hat eigentlich auf welche Mailbox Zugriff?</a></li>
+        <li><a href="#senden-im-namen-eines-anderen-postfachs-send-as">Senden im Namen eines anderen Postfachs (Send-As)</a>
+          <ul>
+            <li><a href="#wie-es-funktioniert">Wie es funktioniert</a></li>
+            <li><a href="#namenskonvention">Namenskonvention</a></li>
+            <li><a href="#berechtigung-einrichten">Berechtigung einrichten</a></li>
+            <li><a href="#fallstricke">Fallstricke</a></li>
+            <li><a href="#prüfen">Prüfen</a></li>
+          </ul>
+        </li>
+        <li><a href="#zugriff-auf-fremde-postfächer-per-ad-gruppe-acl-sync">Zugriff auf fremde Postfächer per AD-Gruppe (ACL-Sync)</a>
+          <ul>
+            <li><a href="#namenskonvention-1">Namenskonvention</a></li>
+            <li><a href="#ablauf">Ablauf</a></li>
+            <li><a href="#zu-beachten">Zu beachten</a></li>
+            <li><a href="#bestand-übernehmen-einmalig">Bestand übernehmen (einmalig)</a></li>
+          </ul>
+        </li>
         <li><a href="#betrieb-und-wartung">Betrieb und Wartung</a>
           <ul>
             <li><a href="#wichtige-komponenten-spamvirus-schutz">Wichtige Komponenten (Spam/Virus-Schutz)</a></li>
@@ -1355,6 +1372,23 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
         </li>
         <li><a href="#dienste-welche-mit-dem-mailstack-interagieren">Dienste welche mit dem Mailstack interagieren</a></li>
         <li><a href="#wer-hat-eigentlich-auf-welche-mailbox-zugriff">Wer hat eigentlich auf welche Mailbox Zugriff?</a></li>
+        <li><a href="#senden-im-namen-eines-anderen-postfachs-send-as">Senden im Namen eines anderen Postfachs (Send-As)</a>
+          <ul>
+            <li><a href="#wie-es-funktioniert">Wie es funktioniert</a></li>
+            <li><a href="#namenskonvention">Namenskonvention</a></li>
+            <li><a href="#berechtigung-einrichten">Berechtigung einrichten</a></li>
+            <li><a href="#fallstricke">Fallstricke</a></li>
+            <li><a href="#prüfen">Prüfen</a></li>
+          </ul>
+        </li>
+        <li><a href="#zugriff-auf-fremde-postfächer-per-ad-gruppe-acl-sync">Zugriff auf fremde Postfächer per AD-Gruppe (ACL-Sync)</a>
+          <ul>
+            <li><a href="#namenskonvention-1">Namenskonvention</a></li>
+            <li><a href="#ablauf">Ablauf</a></li>
+            <li><a href="#zu-beachten">Zu beachten</a></li>
+            <li><a href="#bestand-übernehmen-einmalig">Bestand übernehmen (einmalig)</a></li>
+          </ul>
+        </li>
         <li><a href="#betrieb-und-wartung">Betrieb und Wartung</a>
           <ul>
             <li><a href="#wichtige-komponenten-spamvirus-schutz">Wichtige Komponenten (Spam/Virus-Schutz)</a></li>
@@ -2031,35 +2065,276 @@ Policy bereitzustellen</li>
     </span>
     
 </h3>
-<p>Nutzer können Ihr Mailboxen beliebig mit anderen Nutzern teilen. Die IT hat
-einige Freigaben bereits eingerichtet. Mit folgendem Befehlen lassen sich diese
-setzen:</p>
+<p>Nutzer können ihre Mailboxen mit anderen Nutzern teilen. Die IT hat einige
+Freigaben eingerichtet; gepflegt werden sie über <strong>AD-Gruppen</strong> — siehe
+<a href="/posts/homelab/k3s-prod/apps/mailstack/readme/#zugriff-auf-fremde-postf%c3%a4cher-per-ad-gruppe-acl-sync" >Zugriff auf fremde Postfächer per AD-Gruppe</a>.
+Wer auf ein Postfach zugreifen darf, steht damit in der Gruppe
+<code>Mailbox-&lt;adresse&gt;-ADM|-RW|-RO</code> und nirgends sonst.</p>
+<p>Den aktuellen Stand eines Postfachs zeigt:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="ln">1</span><span class="cl">kubectl <span class="nb">exec</span> -n mailstack deploy/mailstack-main -c dovecot -- <span class="se">\
+</span></span></span><span class="line"><span class="ln">2</span><span class="cl">  doveadm acl get -u info@example.com INBOX</span></span></code></pre></div></div>
+<p>Einzelne Rechte lassen sich weiterhin von Hand setzen — für Postfächer <strong>ohne</strong>
+<code>Mailbox-*</code>-Gruppe, denn sonst überschreibt der ACL-Sync sie beim nächsten Lauf:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="ln">1</span><span class="cl">kubectl <span class="nb">exec</span> -n mailstack deploy/mailstack-main -c dovecot -- <span class="se">\
+</span></span></span><span class="line"><span class="ln">2</span><span class="cl">  doveadm acl <span class="nb">set</span> -u info@example.com INBOX <span class="nv">user</span><span class="o">=</span>henning@example.com <span class="se">\
+</span></span></span><span class="line"><span class="ln">3</span><span class="cl">  lookup <span class="nb">read</span> write write-seen write-deleted insert post expunge create delete</span></span></code></pre></div></div>
+<p>Früher lagen diese Befehle gesammelt in <code>sharedfolders.sh</code>. Die Datei ist
+entfallen — der Bestand steckt jetzt in den AD-Gruppen, die Übernahme beschreibt
+<a href="/posts/homelab/k3s-prod/apps/mailstack/readme/#bestand-%c3%bcbernehmen-einmalig" >Bestand übernehmen</a>.</p>
 
+<h3 class="relative group">Senden im Namen eines anderen Postfachs (Send-As)
+    <div id="senden-im-namen-eines-anderen-postfachs-send-as" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#senden-im-namen-eines-anderen-postfachs-send-as" aria-label="Anker">#</a>
+    </span>
+    
+</h3>
+<p>Für Funktionspostfächer (<code>info@</code>, <code>support@</code>, …) kann geregelt werden, wer im
+Namen dieser Adresse senden darf. Gesteuert wird das ausschließlich über eine
+<strong>AD-Gruppenmitgliedschaft</strong> — es ist kein Attribut am Benutzerkonto zu pflegen.</p>
 
-  
+<h4 class="relative group">Wie es funktioniert
+    <div id="wie-es-funktioniert" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#wie-es-funktioniert" aria-label="Anker">#</a>
+    </span>
+    
+</h4>
+<p>Postfix prüft beim Versand mit <code>reject_sender_login_mismatch</code>, ob der
+angemeldete SASL-Login (= die Mailadresse des Nutzers) zur Absenderadresse
+passt. Die Zuordnung liefert <code>smtpd_sender_login_maps</code> über
+<code>postfix/ldap/ldap_sender_login_match.cf</code>. Deren Query hat zwei Zweige:</p>
+<ol>
+<li>das Konto selbst (Treffer über <code>mail</code> / <code>otherMailbox</code>)</li>
+<li>die Gruppe <code>SendAs-&lt;volle Absenderadresse&gt;</code> — Postfix folgt deren
+<code>member</code>-Einträgen und lässt die Mailadressen der Mitglieder als Absender zu</li>
+</ol>
+<p>Beides muss in <strong>einem</strong> LDAP-Query stehen: <code>smtpd_sender_login_maps</code> durchsucht
+mehrere Tabellen nur bis zum ersten Treffer, eine separate Gruppen-Map würde nie
+erreicht.</p>
+<p>Die Berechtigung wirkt <strong>nur auf den Versand</strong>. Die Zustellmaps
+(<code>ldap_mailbox.cf</code>, <code>ldap_alias.cf</code>, <code>ldap_forward.cf</code>) lesen weder <code>cn</code> noch
+<code>member</code> — eingehende Mail landet weiterhin ausschließlich im Postfach des
+Funktionskontos.</p>
 
+<h4 class="relative group">Namenskonvention
+    <div id="namenskonvention" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#namenskonvention" aria-label="Anker">#</a>
+    </span>
+    
+</h4>
+<p>Der Gruppen-CN enthält die <strong>vollständige Adresse inklusive Domain</strong>, da mehrere
+Maildomains betrieben werden:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="ln">1</span><span class="cl">info@example.com    →  CN=SendAs-info@example.com
+</span></span><span class="line"><span class="ln">2</span><span class="cl">support@example.com →  CN=SendAs-support@example.com</span></span></code></pre></div></div>
+<p>Gematcht wird auf <code>cn</code>. <code>samba-tool</code> setzt <code>sAMAccountName</code> gleich dem
+Gruppennamen — das passt zur bestehenden Praxis (<code>catchall@zyria.de</code> ist genauso
+angelegt). Die 20-Zeichen-Grenze für den Pre-Windows-2000-Namen ist eine
+Konvention der Windows-Werkzeuge; das Schema erlaubt 256 Zeichen und Samba
+erzwingt die Grenze nicht. <code>@</code> ist im <code>sAMAccountName</code> zulässig, unzulässig sind
+nur <code>&quot; / \ [ ] : ; | = , + * ? &lt; &gt;</code>.</p>
 
+<h4 class="relative group">Berechtigung einrichten
+    <div id="berechtigung-einrichten" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#berechtigung-einrichten" aria-label="Anker">#</a>
+    </span>
+    
+</h4>
+<p>Auf dem Samba-DC als root:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="ln">1</span><span class="cl">samba-tool group add <span class="s2">&#34;SendAs-info@example.com&#34;</span> <span class="se">\
+</span></span></span><span class="line"><span class="ln">2</span><span class="cl">  --groupou<span class="o">=</span><span class="s2">&#34;OU=Gruppen&#34;</span> --group-scope<span class="o">=</span>Global --group-type<span class="o">=</span>Security <span class="se">\
+</span></span></span><span class="line"><span class="ln">3</span><span class="cl">  --description<span class="o">=</span><span class="s2">&#34;Darf im Namen von info@example.com senden&#34;</span>
+</span></span><span class="line"><span class="ln">4</span><span class="cl">
+</span></span><span class="line"><span class="ln">5</span><span class="cl">samba-tool group addmembers <span class="s2">&#34;SendAs-info@example.com&#34;</span> henning</span></span></code></pre></div></div>
+<p>Erteilen und Entziehen der Berechtigung ist danach reine
+Gruppenmitgliedschaft. Verschachtelte Gruppen werden mit aufgelöst — soll ein
+Delegierter auch unter einem Alias des Postfachs senden, genügt es, die
+bestehende Gruppe in die Gruppe des Alias aufzunehmen:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="ln">1</span><span class="cl">samba-tool group addmembers <span class="s2">&#34;SendAs-kontakt@example.com&#34;</span> <span class="s2">&#34;SendAs-info@example.com&#34;</span></span></span></code></pre></div></div>
+<p>Im Mailclient muss zusätzlich eine Identität mit der Funktionsadresse angelegt
+werden; Postfix prüft den Envelope-Sender, den der Client aus der gewählten
+Identität setzt.</p>
 
+<h4 class="relative group">Fallstricke
+    <div id="fallstricke" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#fallstricke" aria-label="Anker">#</a>
+    </span>
+    
+</h4>
+<ul>
+<li><strong>Den SendAs-Gruppen kein <code>mail</code>-Attribut geben.</strong> Sonst greift
+<code>ldap_group.cf</code> in <code>virtual_alias_maps</code> und die Gruppe wird als Verteiler
+behandelt — Mail an die Adresse ginge dann an alle Mitglieder.</li>
+<li>Die Auflösung über <code>member</code> filtert nicht: gesperrte Konten und Mitglieder der
+Gruppe <code>noOutgoingMail</code> werden nicht ausgeschlossen. Gesperrte Konten können
+sich zwar ohnehin nicht anmelden, <code>noOutgoingMail</code>-Nutzer gehören aber nicht in
+eine SendAs-Gruppe.</li>
+<li>Die Konvention hängt am CN — beim Umbenennen der Gruppe bricht die
+Berechtigung still.</li>
+<li>Das Secret <code>postfix-ldap</code> wird mit <code>disableNameSuffixHash: true</code> erzeugt: nach
+einer Änderung an den <code>.cf</code>-Dateien startet der Pod <strong>nicht</strong> automatisch neu.</li>
+</ul>
 
-  
+<h4 class="relative group">Prüfen
+    <div id="prüfen" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#pr%c3%bcfen" aria-label="Anker">#</a>
+    </span>
+    
+</h4>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="ln">1</span><span class="cl">kubectl <span class="nb">exec</span> -n mailstack deploy/mailstack-main -c postfix -- <span class="se">\
+</span></span></span><span class="line"><span class="ln">2</span><span class="cl">  postmap -q info@example.com ldap:/etc/postfix/ldap/ldap_sender_login_match.cf</span></span></code></pre></div></div>
+<p>Erwartete Ausgabe: die Adressen des Funktionskontos plus die Mailadressen aller
+Gruppenmitglieder.</p>
 
+<h3 class="relative group">Zugriff auf fremde Postfächer per AD-Gruppe (ACL-Sync)
+    <div id="zugriff-auf-fremde-postfächer-per-ad-gruppe-acl-sync" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#zugriff-auf-fremde-postf%c3%a4cher-per-ad-gruppe-acl-sync" aria-label="Anker">#</a>
+    </span>
+    
+</h3>
+<p>Ergänzend zu den manuell gesetzten Freigaben pflegt der CronJob <code>aclsync</code> die
+Dovecot-ACLs aus dem AD. Damit ist auch der Postfach-Zugriff reine
+Gruppenmitgliedschaft — analog zu Send-As, nur dass hier die Zustellseite
+betroffen ist.</p>
 
+<h4 class="relative group">Namenskonvention
+    <div id="namenskonvention-1" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#namenskonvention-1" aria-label="Anker">#</a>
+    </span>
+    
+</h4>
+<p>Wie bei Send-As trägt der Gruppen-CN die vollständige Adresse:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="ln">1</span><span class="cl">CN=Mailbox-info@example.com-ADM  →  Vollzugriff inkl. admin (darf ACLs per IMAP setzen)
+</span></span><span class="line"><span class="ln">2</span><span class="cl">CN=Mailbox-info@example.com-RW   →  Vollzugriff auf info@example.com
+</span></span><span class="line"><span class="ln">3</span><span class="cl">CN=Mailbox-info@example.com-RO   →  nur lesender Zugriff
+</span></span><span class="line"><span class="ln">4</span><span class="cl">CN=Mailbox-info@example.org-RW   →  anderes Postfach, andere Domain</span></span></code></pre></div></div>
+<p>Ist jemand in mehreren Gruppen desselben Postfachs, gewinnt die höchste Stufe
+(<code>ADM</code> &gt; <code>RW</code> &gt; <code>RO</code>). Verschachtelte Gruppen werden transitiv aufgelöst
+(<code>LDAP_MATCHING_RULE_IN_CHAIN</code>), gesperrte Konten werden übersprungen.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="ln">1</span><span class="cl">samba-tool group add <span class="s2">&#34;Mailbox-info@example.com-RW&#34;</span> <span class="se">\
+</span></span></span><span class="line"><span class="ln">2</span><span class="cl">  --groupou<span class="o">=</span><span class="s2">&#34;OU=Gruppen&#34;</span> --group-scope<span class="o">=</span>Global --group-type<span class="o">=</span>Security <span class="se">\
+</span></span></span><span class="line"><span class="ln">3</span><span class="cl">  --description<span class="o">=</span><span class="s2">&#34;Vollzugriff auf das Postfach info@example.com&#34;</span>
+</span></span><span class="line"><span class="ln">4</span><span class="cl">
+</span></span><span class="line"><span class="ln">5</span><span class="cl">samba-tool group addmembers <span class="s2">&#34;Mailbox-info@example.com-RW&#34;</span> henning</span></span></code></pre></div></div>
 
+<h4 class="relative group">Ablauf
+    <div id="ablauf" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#ablauf" aria-label="Anker">#</a>
+    </span>
+    
+</h4>
+<p><code>aclsync</code> läuft alle 15 Minuten und ruft per <code>kubectl exec</code>
+<a href="apps/mailstack/dovecot/acl-sync.sh" >acl-sync.sh</a> <strong>im Dovecot-Container</strong> auf.
+Der Umweg ist nötig, weil <code>doveadm</code> für die userdb-Auflösung den auth-Socket der
+laufenden Dovecot-Instanz braucht — ein eigener Pod mit gemountetem Mail-Volume
+könnte das nicht. Der CronJob-Pod hält deshalb weder Mail-Storage noch
+Konfiguration, nur ein <code>kubectl</code>-Binary.</p>
+<p>Das Skript</p>
+<ol>
+<li>liest die LDAP-Zugangsdaten aus <code>/etc/dovecot/dovecot-ldap.conf.ext</code> (keine
+zweite Kopie der Credentials im Repository),</li>
+<li>sucht alle Gruppen <code>Mailbox-*</code> und löst deren Mitglieder auf,</li>
+<li>gleicht je Postfach den Soll- gegen den Ist-Zustand aus <code>doveadm acl get</code> ab
+und setzt bzw. entfernt <code>user=</code>-Einträge auf der INBOX
+(<code>acl_defaults_from_inbox = yes</code> vererbt das an die Unterordner),</li>
+<li>abonniert den Delegierten den Ordner <code>shared/&lt;adresse&gt;/INBOX</code>, damit er im
+Client auftaucht (abschaltbar über <code>ACL_AUTOSUBSCRIBE=0</code>).</li>
+</ol>
 
+<h4 class="relative group">Zu beachten
+    <div id="zu-beachten" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#zu-beachten" aria-label="Anker">#</a>
+    </span>
+    
+</h4>
+<ul>
+<li><strong>Das AD ist die Quelle der Wahrheit.</strong> Auf einem Postfach, für das eine
+<code>Mailbox-*</code>-Gruppe existiert, verwaltet der Job <em>alle</em> <code>user=</code>-ACL-Einträge —
+von Hand gesetzte Rechte auf diesen Postfächern verschwinden beim nächsten
+Lauf. Postfächer ohne solche Gruppe fasst der Job nicht an.</li>
+<li><strong>Rechte entziehen: Gruppe leeren, nicht löschen.</strong> Eine gelöschte Gruppe
+sieht der Job nicht mehr, die ACLs blieben bestehen.</li>
+<li>Schlägt eine LDAP-Abfrage fehl, bricht der Lauf <strong>vor</strong> jeder Änderung ab —
+ein LDAP-Ausfall entzieht also keine Rechte.</li>
+<li><code>pods/exec</code> ist ein weitreichendes Recht (faktisch Vollzugriff auf alle
+Postfächer). Der Job hat deshalb einen eigenen ServiceAccount
+<code>mailstack-aclsync</code> und hängt nicht am <code>mailstack-main</code>-Account.</li>
+<li>Trockenlauf zum Prüfen, ohne etwas zu ändern:</li>
+</ul>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="ln">1</span><span class="cl">kubectl <span class="nb">exec</span> -n mailstack deploy/mailstack-main -c dovecot -- <span class="se">\
+</span></span></span><span class="line"><span class="ln">2</span><span class="cl">  env <span class="nv">ACL_DRY_RUN</span><span class="o">=</span><span class="m">1</span> /etc/dovecot/acl-sync.sh</span></span></code></pre></div></div>
+<ul>
+<li>Logs des letzten Laufs:</li>
+</ul>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="ln">1</span><span class="cl">kubectl logs -n mailstack -l app.kubernetes.io/controller<span class="o">=</span>aclsync --tail<span class="o">=</span><span class="m">100</span></span></span></code></pre></div></div>
 
-
-  
-  
-  
-
-
-
-
-
-
-  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"></code></pre></div>
-
-
+<h4 class="relative group">Bestand übernehmen (einmalig)
+    <div id="bestand-übernehmen-einmalig" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#bestand-%c3%bcbernehmen-einmalig" aria-label="Anker">#</a>
+    </span>
+    
+</h4>
+<p><a href="apps/mailstack/dovecot/acl-migrate.sh" >acl-migrate.sh</a> überführt die bereits
+von Hand gesetzten Freigaben in das Gruppenmodell. Das Skript ist rein lesend —
+es wertet die <code>dovecot-acl</code>-Dateien im Mail-Storage aus und erzeugt daraus ein
+Shell-Skript für den Samba-DC (stdout) sowie einen Bericht (stderr). Es muss
+nicht im Image liegen, sondern wird über stdin hineingereicht.</p>
+<p><strong>1. CronJob anhalten</strong>, damit kein Lauf Rechte abräumt, für die es noch keine
+Gruppe gibt:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="ln">1</span><span class="cl">kubectl patch cronjob mailstack-aclsync -n mailstack -p <span class="s1">&#39;{&#34;spec&#34;:{&#34;suspend&#34;:true}}&#39;</span></span></span></code></pre></div></div>
+<p><strong>2. Bestand auswerten:</strong></p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="ln">1</span><span class="cl">kubectl <span class="nb">exec</span> -i -n mailstack deploy/mailstack-main -c dovecot -- bash -s <span class="se">\
+</span></span></span><span class="line"><span class="ln">2</span><span class="cl">  &lt; apps/mailstack/dovecot/acl-migrate.sh &gt; mailbox-groups.sh</span></span></code></pre></div></div>
+<p>Der Bericht auf stderr listet, was übernommen wird, und was Handarbeit braucht:
+<code>group=</code>-, <code>anyone</code>- und <code>authenticated</code>-Einträge, relative Rechte (<code>+r</code>/<code>-w</code>)
+und ACLs auf Unterordnern — letztere, weil der Sync nur die INBOX verwaltet.
+Die Rechte werden in beiden Schreibweisen erkannt (ausgeschrieben wie
+<code>lookup read write …</code> und als Buchstaben wie <code>lrwstipekxa</code>): mit <code>admin</code> bzw.
+<code>a</code> wird daraus <code>-ADM</code>, alles andere mit Schreib-, Einfüge- oder Löschrecht
+<code>-RW</code>, reiner Lookup/Read-Zugriff <code>-RO</code>.</p>
+<p><strong>3. <code>mailbox-groups.sh</code> prüfen und auf dem Samba-DC als root ausführen.</strong> Das
+erzeugte Skript nutzt <code>samba-tool group add</code>/<code>addmembers</code> und löst die
+Mailadressen der Berechtigten über <code>ldbsearch</code> gegen
+<code>/var/lib/samba/private/sam.ldb</code> in <code>sAMAccountName</code> auf. Es ist wiederholbar:
+vorhandene Gruppen und Mitgliedschaften werden nicht doppelt angelegt, fehlende
+oder mehrfach vergebene Adressen werden gemeldet und übersprungen (Exit-Code 1).
+Die Ziel-OU steckt in <code>GROUP_OU</code> am Kopf des Skripts (Vorgabe <code>OU=Gruppen</code>,
+relativ zur Domain-DN — so erwartet es <code>samba-tool</code>).</p>
+<p><strong>4. Trockenlauf und CronJob wieder aktivieren:</strong></p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="ln">1</span><span class="cl">kubectl <span class="nb">exec</span> -n mailstack deploy/mailstack-main -c dovecot -- <span class="se">\
+</span></span></span><span class="line"><span class="ln">2</span><span class="cl">  env <span class="nv">ACL_DRY_RUN</span><span class="o">=</span><span class="m">1</span> /etc/dovecot/acl-sync.sh
+</span></span><span class="line"><span class="ln">3</span><span class="cl">kubectl patch cronjob mailstack-aclsync -n mailstack -p <span class="s1">&#39;{&#34;spec&#34;:{&#34;suspend&#34;:false}}&#39;</span></span></span></code></pre></div></div>
 
 <h3 class="relative group">Betrieb und Wartung
     <div id="betrieb-und-wartung" class="anchor"></div>
@@ -2594,19 +2869,32 @@ setzen:</p>
       <div class="flex justify-between pt-3">
         <span class="flex flex-col">
           
+            <a
+              class="flex text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+              href="/posts/homelab/k3s-prod/apps/forgejo-runner/readme/">
+              <span class="leading-6">
+                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;Forgejo Runner
+              </span>
+            </a>
+            
+              <span class="ms-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
+                <time datetime="2026-07-30T10:19:29&#43;02:00">30 Juli 2026</time>
+              </span>
+            
+          
         </span>
         <span class="flex flex-col items-end">
           
             <a
               class="flex text-right text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
-              href="/posts/homelab/k3s-prod/apps/descheduler/readme/">
+              href="/posts/homelab/k3s-prod/apps/mailstack-new/readme/">
               <span class="leading-6">
-                Kubernetes Descheduler&ensp;<span class="inline-block rtl:rotate-180">&rarr;</span>
+                Mailstack&ensp;<span class="inline-block rtl:rotate-180">&rarr;</span>
               </span>
             </a>
             
               <span class="me-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
-                <time datetime="2025-08-25T23:42:21&#43;02:00">25 August 2025</time>
+                <time datetime="2026-08-04T22:12:11&#43;02:00">4 August 2026</time>
               </span>
             
           

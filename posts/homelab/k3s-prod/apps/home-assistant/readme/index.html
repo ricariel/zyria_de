@@ -31,7 +31,7 @@
     
   
   
-    <meta name="description" content="Home Assistant ist das Gehirn des Smart Homes. Es ermöglicht die Steuerung und Automatisierung einer Vielzahl von Geräten und Diensten und stellt eine zentrale Benutzeroberfläche bereit.">
+    <meta name="description" content="Home Assistant ist das Gehirn des Smart Homes. Im selben Namespace laufen Mosquitto (MQTT-Broker), python-matter-server und ein OpenThread Border Router (OTBR) als eigenständige Deployments.">
   
   
     <meta name="keywords" content="kubernetes,k3s,gitops,argocd,helm,kustomize,homelab,produktion,">
@@ -100,12 +100,12 @@
   <meta property="og:url" content="https://zyria.de/posts/homelab/k3s-prod/apps/home-assistant/readme/">
 	<meta property="og:site_name" content="Zyria">
 	<meta property="og:title" content="Home Assistant">
-	<meta property="og:description" content="Eine Open-Source-Plattform für Heimautomatisierung.">
+	<meta property="og:description" content="Smart-Home-Zentrale mit MQTT-Broker, Matter-Server und OpenThread Border Router.">
 	<meta property="og:locale" content="de_de">
 	<meta property="og:type" content="article">
 		<meta property="article:section" content="posts">
-		<meta property="article:published_time" content="2026-03-15T14:33:36+01:00">
-		<meta property="article:modified_time" content="2026-03-15T14:33:36+01:00">
+		<meta property="article:published_time" content="2026-06-12T12:06:16+02:00">
+		<meta property="article:modified_time" content="2026-06-12T12:06:16+02:00">
 		<meta property="article:tag" content="Kubernetes">
 		<meta property="article:tag" content="K3s">
 		<meta property="article:tag" content="Gitops">
@@ -116,7 +116,7 @@
   
 	<meta name="twitter:card" content="summary">
 	<meta name="twitter:title" content="Home Assistant">
-	<meta name="twitter:description" content="Eine Open-Source-Plattform für Heimautomatisierung.">
+	<meta name="twitter:description" content="Smart-Home-Zentrale mit MQTT-Broker, Matter-Server und OpenThread Border Router.">
 
   
   
@@ -298,7 +298,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
     "articleSection": "Beiträge",
     "name": "Home Assistant",
     "headline": "Home Assistant",
-    "description": "Eine Open-Source-Plattform für Heimautomatisierung.",
+    "description": "Smart-Home-Zentrale mit MQTT-Broker, Matter-Server und OpenThread Border Router.",
     "inLanguage": "de-de",
     "url" : "https://zyria.de/posts/homelab/k3s-prod/apps/home-assistant/readme/",
     "author" : {
@@ -308,15 +308,15 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
       "sameAs": ["https://git.casa-due-pur.de/fabrice.kirchner", "https://git.zyria.de/pyrox", "https://github.com/ricariel", "https://www.linkedin.com/in/fabrice-kirchner-bb5408163/", "https://www.xing.com/profile/Fabrice_Kirchner", "https://kirchner.social/@fabrice", "https://codeberg.org/ricariel"]
     },
     "copyrightYear": "2026",
-    "dateCreated": "2026-03-15T14:33:36\u002b01:00",
-    "datePublished": "2026-03-15T14:33:36\u002b01:00",
+    "dateCreated": "2026-06-12T12:06:16\u002b02:00",
+    "datePublished": "2026-06-12T12:06:16\u002b02:00",
     
-    "dateModified": "2026-03-15T14:33:36\u002b01:00",
+    "dateModified": "2026-06-12T12:06:16\u002b02:00",
     
     "keywords": ["kubernetes","k3s","gitops","argocd","helm","kustomize","homelab","produktion"],
     
     "mainEntityOfPage": "https://zyria.de/posts/homelab/k3s-prod/apps/home-assistant/readme/",
-    "wordCount": "252"
+    "wordCount": "524"
   }]
   </script>
 
@@ -956,7 +956,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2026-03-15T14:33:36&#43;01:00">15 März 2026</time><span class="px-2 text-primary-500">&middot;</span><span>252 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
+      <time datetime="2026-06-12T12:06:16&#43;02:00">12 Juni 2026</time><span class="px-2 text-primary-500">&middot;</span><span>524 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
 
 
   
@@ -1228,19 +1228,27 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   <ul>
     <li><a href="#home-assistant">Home Assistant</a>
       <ul>
-        <li><a href="#deployment">Deployment</a></li>
         <li><a href="#quelle">Quelle</a></li>
         <li><a href="#dokumentation">Dokumentation</a></li>
         <li><a href="#funktion">Funktion</a></li>
-        <li><a href="#lokale-anpassungen">Lokale Anpassungen</a>
-          <ul>
-            <li><a href="#wichtige-einstellungen">Wichtige Einstellungen</a></li>
-          </ul>
-        </li>
-        <li><a href="#installation">Installation</a></li>
-        <li><a href="#abhängigkeiten">Abhängigkeiten</a></li>
+        <li><a href="#netzwerk">Netzwerk</a></li>
+        <li><a href="#services--ingress">Services &amp; Ingress</a></li>
+        <li><a href="#speicher">Speicher</a></li>
+        <li><a href="#kubernetes-integration">Kubernetes-Integration</a></li>
+        <li><a href="#auto-updates-keel">Auto-Updates (Keel)</a></li>
       </ul>
     </li>
+    <li><a href="#matter-server">Matter-Server</a></li>
+    <li><a href="#otbr-openthread-border-router">OTBR (OpenThread Border Router)</a></li>
+    <li><a href="#mosquitto-mqtt-broker">Mosquitto (MQTT-Broker)</a>
+      <ul>
+        <li><a href="#dokumentation-1">Dokumentation</a></li>
+        <li><a href="#funktion-1">Funktion</a></li>
+        <li><a href="#wichtige-einstellungen">Wichtige Einstellungen</a></li>
+      </ul>
+    </li>
+    <li><a href="#installation">Installation</a></li>
+    <li><a href="#abhängigkeiten">Abhängigkeiten</a></li>
   </ul>
 </nav>
   </div>
@@ -1256,19 +1264,27 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   <ul>
     <li><a href="#home-assistant">Home Assistant</a>
       <ul>
-        <li><a href="#deployment">Deployment</a></li>
         <li><a href="#quelle">Quelle</a></li>
         <li><a href="#dokumentation">Dokumentation</a></li>
         <li><a href="#funktion">Funktion</a></li>
-        <li><a href="#lokale-anpassungen">Lokale Anpassungen</a>
-          <ul>
-            <li><a href="#wichtige-einstellungen">Wichtige Einstellungen</a></li>
-          </ul>
-        </li>
-        <li><a href="#installation">Installation</a></li>
-        <li><a href="#abhängigkeiten">Abhängigkeiten</a></li>
+        <li><a href="#netzwerk">Netzwerk</a></li>
+        <li><a href="#services--ingress">Services &amp; Ingress</a></li>
+        <li><a href="#speicher">Speicher</a></li>
+        <li><a href="#kubernetes-integration">Kubernetes-Integration</a></li>
+        <li><a href="#auto-updates-keel">Auto-Updates (Keel)</a></li>
       </ul>
     </li>
+    <li><a href="#matter-server">Matter-Server</a></li>
+    <li><a href="#otbr-openthread-border-router">OTBR (OpenThread Border Router)</a></li>
+    <li><a href="#mosquitto-mqtt-broker">Mosquitto (MQTT-Broker)</a>
+      <ul>
+        <li><a href="#dokumentation-1">Dokumentation</a></li>
+        <li><a href="#funktion-1">Funktion</a></li>
+        <li><a href="#wichtige-einstellungen">Wichtige Einstellungen</a></li>
+      </ul>
+    </li>
+    <li><a href="#installation">Installation</a></li>
+    <li><a href="#abhängigkeiten">Abhängigkeiten</a></li>
   </ul>
 </nav>
   </div>
@@ -1396,25 +1412,6 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
     
 </h2>
 
-<h3 class="relative group">Deployment
-    <div id="deployment" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#deployment" aria-label="Anker">#</a>
-    </span>
-    
-</h3>
-<p><figure><img
-    class="my-0 rounded-md"
-    loading="lazy"
-    decoding="async"
-    fetchpriority="low"
-    alt="Argo Deployment"
-    src="https://argocd.zyria.de/api/badge?name=home-assistant&amp;revision=true&amp;showAppName=true&amp;width=150"
-    ></figure>
-</p>
-
 <h3 class="relative group">Quelle
     <div id="quelle" class="anchor"></div>
     
@@ -1424,7 +1421,25 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
     </span>
     
 </h3>
-<p>Die Anwendung wird als Helm-Chart aus einem privaten Repository auf <code>git.zyria.de</code> bezogen. Das verwendete Docker-Image ist die offizielle <code>home-assistant</code>-Version.</p>
+<p>Alle Controller werden über das <code>app-template</code> Helm-Chart von <a href="https://bjw-s-labs.github.io/helm-charts"  target="_blank" rel="noreferrer">BJW-S Labs</a> bereitgestellt. Die Konfiguration ist auf zwei Values-Dateien aufgeteilt:</p>
+<table>
+	<thead>
+			<tr>
+					<th>Datei</th>
+					<th>Inhalt</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><code>values.yaml</code></td>
+					<td>Home Assistant, Matter-Server, OTBR</td>
+			</tr>
+			<tr>
+					<td><code>values-mosquitto.yaml</code></td>
+					<td>Mosquitto MQTT-Broker</td>
+			</tr>
+	</tbody>
+</table>
 
 <h3 class="relative group">Dokumentation
     <div id="dokumentation" class="anchor"></div>
@@ -1446,20 +1461,241 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
     </span>
     
 </h3>
-<p>Home Assistant (HA) ist eine Steuerungszentrale für Smart-Home-Geräte. Es integriert eine breite Palette von Geräten und Protokollen (z.B. Zigbee, Matter) und ermöglicht es, Automatisierungen zu erstellen, den Zustand von Geräten zu überwachen und alles über eine einheitliche Weboberfläche zu steuern.</p>
+<p>Home Assistant (HA) ist eine Steuerungszentrale für Smart-Home-Geräte. Es integriert eine breite Palette von Geräten und Protokollen (Zigbee, Matter, Thread) und ermöglicht Automatisierungen, Geräteüberwachung und eine einheitliche Weboberfläche.</p>
 
-<h3 class="relative group">Lokale Anpassungen
-    <div id="lokale-anpassungen" class="anchor"></div>
+<h3 class="relative group">Netzwerk
+    <div id="netzwerk" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#lokale-anpassungen" aria-label="Anker">#</a>
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#netzwerk" aria-label="Anker">#</a>
     </span>
     
 </h3>
-<p>Die Konfiguration erfolgt über die <code>values.yaml</code>-Datei.</p>
+<p>Alle drei Controller (Home Assistant, Matter, OTBR) nutzen <strong>kein</strong> hostNetwork, sondern eine dedizierte Macvlan-Verbindung ins Heimnetz über Multus (<code>NetworkAttachmentDefinition: home-net</code>). Jedem Controller wird eine statische Dual-Stack-Adresse aus dem Heimnetz-Subnetz zugewiesen.</p>
+<p>Ein Init-Container (<code>busybox</code>) konfiguriert auf jedem Pod IPv6-Routing für das <code>net1</code>-Interface (RA + Route-Info).</p>
 
-<h4 class="relative group">Wichtige Einstellungen
+<h3 class="relative group">Services &amp; Ingress
+    <div id="services--ingress" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#services--ingress" aria-label="Anker">#</a>
+    </span>
+    
+</h3>
+<table>
+	<thead>
+			<tr>
+					<th>Service</th>
+					<th>Typ</th>
+					<th>Port</th>
+					<th>Protokoll</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><code>homeassistant</code></td>
+					<td>ClusterIP (Dual-Stack)</td>
+					<td>8123</td>
+					<td>HTTP</td>
+			</tr>
+			<tr>
+					<td><code>homeassistant-colot</code></td>
+					<td>LoadBalancer (Dual-Stack)</td>
+					<td>5683</td>
+					<td>UDP (CoAP)</td>
+			</tr>
+			<tr>
+					<td><code>matter</code></td>
+					<td>ClusterIP (Dual-Stack)</td>
+					<td>5580</td>
+					<td>TCP</td>
+			</tr>
+			<tr>
+					<td><code>otbr</code></td>
+					<td>ClusterIP (Dual-Stack)</td>
+					<td>8080 (Web), 8081 (REST)</td>
+					<td>HTTP</td>
+			</tr>
+			<tr>
+					<td><code>mosquitto</code></td>
+					<td>LoadBalancer (Dual-Stack)</td>
+					<td>1883, 8883</td>
+					<td>TCP</td>
+			</tr>
+	</tbody>
+</table>
+<p>Der Ingress wird über Traefik (<code>websecure</code>) mit TLS bereitgestellt. Die Middleware <code>kube-system-localnet@kubernetescrd</code> schränkt den Zugriff auf das lokale Netz ein. Das TLS-Zertifikat wird von cert-manager (<code>letsencrypt-production</code>) ausgestellt.</p>
+
+<h3 class="relative group">Speicher
+    <div id="speicher" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#speicher" aria-label="Anker">#</a>
+    </span>
+    
+</h3>
+<table>
+	<thead>
+			<tr>
+					<th>PVC</th>
+					<th>Größe</th>
+					<th>Einbindung</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><code>home-assistant-config</code></td>
+					<td>100 Gi</td>
+					<td>Home Assistant <code>/config</code></td>
+			</tr>
+			<tr>
+					<td><code>home-assistant-matter</code></td>
+					<td>1 Gi</td>
+					<td>Matter-Server <code>/data</code></td>
+			</tr>
+			<tr>
+					<td><code>home-assistant-otbr</code></td>
+					<td>1 Gi</td>
+					<td>OTBR <code>/data</code></td>
+			</tr>
+			<tr>
+					<td><code>mosquitto-data</code></td>
+					<td>100 Mi</td>
+					<td>Mosquitto <code>/mosquitto/data</code></td>
+			</tr>
+	</tbody>
+</table>
+<p>Zusätzlich werden folgende Host-Pfade eingebunden:</p>
+<table>
+	<thead>
+			<tr>
+					<th>hostPath</th>
+					<th>Typ</th>
+					<th>Container</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><code>/run/dbus</code></td>
+					<td>Directory (read-only)</td>
+					<td>Home Assistant, Matter-Server</td>
+			</tr>
+			<tr>
+					<td><code>/dev/net/tun</code></td>
+					<td>CharDevice</td>
+					<td>OTBR</td>
+			</tr>
+	</tbody>
+</table>
+
+<h3 class="relative group">Kubernetes-Integration
+    <div id="kubernetes-integration" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#kubernetes-integration" aria-label="Anker">#</a>
+    </span>
+    
+</h3>
+<p>Ein ServiceAccount <code>homeassistant-kubernetes-integration</code> ermöglicht der HA-Kubernetes-Integration Zugriff auf den Cluster:</p>
+<ul>
+<li><strong>ClusterRoleBinding</strong>: Lesezugriff auf Nodes, Namespaces und Metriken (<code>metrics.k8s.io</code>)</li>
+<li><strong>RoleBinding</strong> (Namespace <code>home-assistant</code>): Lese-, Watch- und eingeschränkter Schreibzugriff auf Pods, Events, Deployments, StatefulSets, DaemonSets, CronJobs</li>
+</ul>
+
+<h3 class="relative group">Auto-Updates (Keel)
+    <div id="auto-updates-keel" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#auto-updates-keel" aria-label="Anker">#</a>
+    </span>
+    
+</h3>
+<p>Home Assistant und Mosquitto sind mit Keel-Annotationen versehen:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="ln">1</span><span class="cl"><span class="nt">keel.sh/match-tag</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;true&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="ln">2</span><span class="cl"><span class="nt">keel.sh/trigger</span><span class="p">:</span><span class="w"> </span><span class="l">poll</span><span class="w">
+</span></span></span><span class="line"><span class="ln">3</span><span class="cl"><span class="nt">keel.sh/policy</span><span class="p">:</span><span class="w"> </span><span class="l">force</span></span></span></code></pre></div></div>
+<hr>
+
+<h2 class="relative group">Matter-Server
+    <div id="matter-server" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#matter-server" aria-label="Anker">#</a>
+    </span>
+    
+</h2>
+<p><code>python-matter-server</code> läuft als eigenständiges Deployment und stellt einen Matter-Controller bereit, über den Home Assistant Matter-Geräte steuern kann.</p>
+<ul>
+<li>Image: <code>ghcr.io/home-assistant-libs/python-matter-server:stable</code></li>
+<li>Netzwerk: Macvlan <code>home-net</code> (Interface <code>net1</code> als primäres Interface)</li>
+<li>Service: ClusterIP Port 5580</li>
+</ul>
+<hr>
+
+<h2 class="relative group">OTBR (OpenThread Border Router)
+    <div id="otbr-openthread-border-router" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#otbr-openthread-border-router" aria-label="Anker">#</a>
+    </span>
+    
+</h2>
+<p>Der OpenThread Border Router verbindet das Thread-Mesh-Netzwerk (Matter over Thread) mit dem IP-Heimnetz.</p>
+<ul>
+<li>Image: <code>openthread/otbr:latest</code></li>
+<li>Radio: TCP-Verbindung zu einem RCP (spinel+hdlc+tcp)</li>
+<li>Backbone-Interface: <code>net1</code> (Macvlan ins Heimnetz)</li>
+<li>mDNS: <code>mDNSResponder</code></li>
+<li>NAT64 und Firewall deaktiviert (<code>NAT64=0</code>, <code>FIREWALL=0</code>)</li>
+<li>Security: privilegiert, <code>NET_ADMIN</code> + <code>NET_RAW</code></li>
+<li>Services: ClusterIP Port 8080 (Web-UI), 8081 (REST-API)</li>
+</ul>
+<hr>
+
+<h2 class="relative group">Mosquitto (MQTT-Broker)
+    <div id="mosquitto-mqtt-broker" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#mosquitto-mqtt-broker" aria-label="Anker">#</a>
+    </span>
+    
+</h2>
+<p>Mosquitto läuft als eigenständiger Controller im Namespace <code>home-assistant</code>. Konfiguration in <code>values-mosquitto.yaml</code>.</p>
+
+<h3 class="relative group">Dokumentation
+    <div id="dokumentation-1" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#dokumentation-1" aria-label="Anker">#</a>
+    </span>
+    
+</h3>
+<p>Die offizielle Dokumentation ist unter <a href="https://mosquitto.org/documentation/"  target="_blank" rel="noreferrer">mosquitto.org/documentation/</a> zu finden.</p>
+
+<h3 class="relative group">Funktion
+    <div id="funktion-1" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#funktion-1" aria-label="Anker">#</a>
+    </span>
+    
+</h3>
+<p>MQTT-Broker als zentrale Vermittlungsstelle für IoT-Nachrichten. Clients publizieren oder abonnieren Topics.</p>
+<ul>
+<li>Image: <code>docker.io/library/eclipse-mosquitto:2.0</code></li>
+</ul>
+
+<h3 class="relative group">Wichtige Einstellungen
     <div id="wichtige-einstellungen" class="anchor"></div>
     
     <span
@@ -1467,21 +1703,22 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
         <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#wichtige-einstellungen" aria-label="Anker">#</a>
     </span>
     
-</h4>
+</h3>
 <ul>
-<li><strong>Host-Netzwerk</strong>: Home Assistant wird im <code>hostNetwork</code>-Modus betrieben, um die automatische Erkennung von Geräten im lokalen Netzwerk (z.B. über mDNS, UPnP) zu erleichtern.</li>
-<li><strong>Hardwareabhängigkeit</strong>: Der Pod muss auf dem Node ausgeführt werden, an dem die USB-Hardware angeschlossen ist. Dies sollte über einen <code>nodeSelector</code> oder <code>nodeName</code> in der Konfiguration sichergestellt werden.</li>
-<li><strong>Geräte-Passthrough</strong>: Mehrere Geräte werden vom Host-System in den Pod durchgereicht:
+<li><strong>LoadBalancer</strong>: Dual-Stack via MetalLB
 <ul>
-<li><code>/dev/ttyACM0</code>: Ein Z-Wave/Zigbee-USB-Stick.</li>
-<li><code>/dev/serial/by-id/...ConBee_II...</code>: Ein ConBee II Zigbee-Gateway.</li>
+<li>Port <code>1883</code>: MQTT</li>
+<li>Port <code>8883</code>: MQTT über WebSockets</li>
 </ul>
 </li>
-<li><strong>Matter-Server</strong>: Ein Matter-Server läuft als Sidecar-Container, um die Integration von Matter-Geräten zu ermöglichen.</li>
-<li><strong>Speicher</strong>: Konfiguration (<code>home-assistant-config</code>) und Matter-Server-Daten (<code>home-assistant-matter</code>) werden auf Longhorn-Volumes (PVC) gespeichert. Zusätzlich wird <code>/run/dbus</code> als <code>hostPath</code> für den D-Bus-Zugriff eingebunden.</li>
+<li><strong>Anonymer Zugriff</strong>: Erlaubt. Eine <code>password.txt</code> ist in der ConfigMap hinterlegt, aber in <code>mosquitto.conf</code> auskommentiert.</li>
+<li><strong>Zendure-Bridges</strong>: Vier aktive MQTT-Bridges zum Zendure Cloud-Dienst für SolarFlow-Geräte (SF1200, SF2000, SF2000-2, ACE).</li>
+<li><strong>Tibber-Bridge</strong>: Konfiguration für eine Bridge zum Tibber AWS-IoT-Endpunkt vorbereitet, aber <strong>auskommentiert</strong>. Die dafür benötigten TLS-Zertifikate werden als Secret <code>tibber-cert</code> unter <code>/certs</code> eingebunden.</li>
+<li><strong>Persistenz</strong>: Retained Messages auf Longhorn-PVC <code>mosquitto-data</code> (100 Mi).</li>
 </ul>
+<hr>
 
-<h3 class="relative group">Installation
+<h2 class="relative group">Installation
     <div id="installation" class="anchor"></div>
     
     <span
@@ -1489,11 +1726,10 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
         <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#installation" aria-label="Anker">#</a>
     </span>
     
-</h3>
-<p>Die Anwendung wird mittels Kustomize und Helm durch ArgoCD im Kubernetes-Cluster bereitgestellt. Die Konfiguration befindet sich im <code>apps/home-assistant</code>-Verzeichnis. Eine manuelle Installation kann mit folgendem Befehl durchgeführt werden:</p>
+</h2>
 <div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">kubectl kustomize --enable-helm apps/home-assistant <span class="p">|</span> kubectl apply -n home-assistant -f -</span></span></code></pre></div></div>
 
-<h3 class="relative group">Abhängigkeiten
+<h2 class="relative group">Abhängigkeiten
     <div id="abhängigkeiten" class="anchor"></div>
     
     <span
@@ -1501,10 +1737,13 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
         <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#abh%c3%a4ngigkeiten" aria-label="Anker">#</a>
     </span>
     
-</h3>
+</h2>
 <ul>
-<li><strong>Spezifische Hardware</strong>: Benötigt einen Kubernetes-Node mit angeschlossenen USB-Geräten (ConBee II Stick).</li>
-<li><strong>Longhorn</strong>: Als Storage-Provider für die PersistentVolumes.</li>
+<li><strong>Multus + Macvlan</strong>: Heimnetz-Anbindung aller Controller via dediziertem Uplink-Interface</li>
+<li><strong>Longhorn</strong>: Storage-Provider für alle PersistentVolumes</li>
+<li><strong>MetalLB</strong>: Externe Dual-Stack-IPs für Home Assistant (CoAP) und Mosquitto (MQTT)</li>
+<li><strong>cert-manager</strong>: TLS-Zertifikat via <code>letsencrypt-production</code></li>
+<li><strong>Traefik</strong>: Ingress mit <code>localnet</code>-Middleware</li>
 </ul>
 
           
@@ -1738,14 +1977,14 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
           
             <a
               class="flex text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
-              href="/posts/homelab/k3s-prod/apps/matrix/readme/">
+              href="/posts/homelab/k3s-prod/apps/matrix-new/readme/">
               <span class="leading-6">
-                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;Matrix
+                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;Matrix (neu)
               </span>
             </a>
             
               <span class="ms-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
-                <time datetime="2026-03-15T14:33:36&#43;01:00">15 März 2026</time>
+                <time datetime="2026-06-08T21:41:09&#43;02:00">8 Juni 2026</time>
               </span>
             
           
@@ -1754,14 +1993,14 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
           
             <a
               class="flex text-right text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
-              href="/posts/homelab/k3s-prod/apps/hedgedoc/readme/">
+              href="/posts/homelab/k3s-prod/apps/openobserve/readme/">
               <span class="leading-6">
-                HedgeDoc&ensp;<span class="inline-block rtl:rotate-180">&rarr;</span>
+                zyria.de Webseite&ensp;<span class="inline-block rtl:rotate-180">&rarr;</span>
               </span>
             </a>
             
               <span class="me-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
-                <time datetime="2026-03-15T14:33:36&#43;01:00">15 März 2026</time>
+                <time datetime="2026-06-17T20:33:06&#43;02:00">17 Juni 2026</time>
               </span>
             
           

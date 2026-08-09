@@ -15,8 +15,8 @@
 
   
   
-    <title>Mosquitto &middot; Zyria</title>
-    <meta name="title" content="Mosquitto &middot; Zyria">
+    <title>VPN Standort A - Tailscale Subnet Router &middot; Zyria</title>
+    <meta name="title" content="VPN Standort A - Tailscale Subnet Router &middot; Zyria">
   
 
   
@@ -31,14 +31,14 @@
     
   
   
-    <meta name="description" content="Mosquitto dient als zentraler Message Broker für das MQTT-Protokoll und ermöglicht die Kommunikation zwischen verschiedenen IoT-Geräten und -Diensten im Smart Home.">
+    <meta name="description" content="Ein Pod baut einen WireGuard-Tunnel zu einem entfernten Standort auf und annonciert die dahinterliegenden Netze via Headscale ins Tailnet.">
   
   
     <meta name="keywords" content="kubernetes,k3s,gitops,argocd,helm,kustomize,homelab,produktion,">
   
   
   
-  <link rel="canonical" href="https://zyria.de/posts/homelab/k3s-prod/apps/mosquitto/readme/">
+  <link rel="canonical" href="https://zyria.de/posts/homelab/k3s-prod/apps/vpn-site-a/readme/">
   
   
 
@@ -97,15 +97,15 @@
   
 
   
-  <meta property="og:url" content="https://zyria.de/posts/homelab/k3s-prod/apps/mosquitto/readme/">
+  <meta property="og:url" content="https://zyria.de/posts/homelab/k3s-prod/apps/vpn-site-a/readme/">
 	<meta property="og:site_name" content="Zyria">
-	<meta property="og:title" content="Mosquitto">
-	<meta property="og:description" content="Ein leichtgewichtiger Open-Source-MQTT-Broker.">
+	<meta property="og:title" content="VPN Standort A - Tailscale Subnet Router">
+	<meta property="og:description" content="WireGuard-Client zu einem entfernten Standort, per Tailscale/Headscale als Subnetz-Router ins Tailnet gebracht">
 	<meta property="og:locale" content="de_de">
 	<meta property="og:type" content="article">
 		<meta property="article:section" content="posts">
-		<meta property="article:published_time" content="2026-03-15T14:33:36+01:00">
-		<meta property="article:modified_time" content="2026-03-15T14:33:36+01:00">
+		<meta property="article:published_time" content="2026-08-08T20:06:06+02:00">
+		<meta property="article:modified_time" content="2026-08-08T20:06:06+02:00">
 		<meta property="article:tag" content="Kubernetes">
 		<meta property="article:tag" content="K3s">
 		<meta property="article:tag" content="Gitops">
@@ -115,8 +115,8 @@
 
   
 	<meta name="twitter:card" content="summary">
-	<meta name="twitter:title" content="Mosquitto">
-	<meta name="twitter:description" content="Ein leichtgewichtiger Open-Source-MQTT-Broker.">
+	<meta name="twitter:title" content="VPN Standort A - Tailscale Subnet Router">
+	<meta name="twitter:description" content="WireGuard-Client zu einem entfernten Standort, per Tailscale/Headscale als Subnetz-Router ins Tailnet gebracht">
 
   
   
@@ -296,11 +296,11 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
     "@context": "https://schema.org",
     "@type": "Article",
     "articleSection": "Beiträge",
-    "name": "Mosquitto",
-    "headline": "Mosquitto",
-    "description": "Ein leichtgewichtiger Open-Source-MQTT-Broker.",
+    "name": "VPN Standort A - Tailscale Subnet Router",
+    "headline": "VPN Standort A - Tailscale Subnet Router",
+    "description": "WireGuard-Client zu einem entfernten Standort, per Tailscale\/Headscale als Subnetz-Router ins Tailnet gebracht",
     "inLanguage": "de-de",
-    "url" : "https://zyria.de/posts/homelab/k3s-prod/apps/mosquitto/readme/",
+    "url" : "https://zyria.de/posts/homelab/k3s-prod/apps/vpn-site-a/readme/",
     "author" : {
       "@type": "Person",
       "name": "Fabrice Kirchner",
@@ -308,15 +308,15 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
       "sameAs": ["https://git.casa-due-pur.de/fabrice.kirchner", "https://git.zyria.de/pyrox", "https://github.com/ricariel", "https://www.linkedin.com/in/fabrice-kirchner-bb5408163/", "https://www.xing.com/profile/Fabrice_Kirchner", "https://kirchner.social/@fabrice", "https://codeberg.org/ricariel"]
     },
     "copyrightYear": "2026",
-    "dateCreated": "2026-03-15T14:33:36\u002b01:00",
-    "datePublished": "2026-03-15T14:33:36\u002b01:00",
+    "dateCreated": "2026-08-08T20:06:06\u002b02:00",
+    "datePublished": "2026-08-08T20:06:06\u002b02:00",
     
-    "dateModified": "2026-03-15T14:33:36\u002b01:00",
+    "dateModified": "2026-08-08T20:06:06\u002b02:00",
     
     "keywords": ["kubernetes","k3s","gitops","argocd","helm","kustomize","homelab","produktion"],
     
-    "mainEntityOfPage": "https://zyria.de/posts/homelab/k3s-prod/apps/mosquitto/readme/",
-    "wordCount": "228"
+    "mainEntityOfPage": "https://zyria.de/posts/homelab/k3s-prod/apps/vpn-site-a/readme/",
+    "wordCount": "1019"
   }]
   </script>
 
@@ -892,8 +892,8 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
 
   
   <li class="hidden">
-    <a class="hover:underline decoration-neutral-300 dark:underline-neutral-600" href="/posts/homelab/k3s-prod/apps/mosquitto/readme/"
-      >Mosquitto</a
+    <a class="hover:underline decoration-neutral-300 dark:underline-neutral-600" href="/posts/homelab/k3s-prod/apps/vpn-site-a/readme/"
+      >VPN Standort A - Tailscale Subnet Router</a
     ><span class="px-1 text-primary-500">/</span>
   </li>
 
@@ -902,7 +902,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
 
       
       <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
-        Mosquitto
+        VPN Standort A - Tailscale Subnet Router
       </h1>
       <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
         
@@ -956,7 +956,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2026-03-15T14:33:36&#43;01:00">15 März 2026</time><span class="px-2 text-primary-500">&middot;</span><span>228 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
+      <time datetime="2026-08-08T20:06:06&#43;02:00">8 August 2026</time><span class="px-2 text-primary-500">&middot;</span><span>1019 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
 
 
   
@@ -964,7 +964,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
 
 <span class="mb-[2px]">
   <a
-    href="https://git.zyria.de/pyrox/zyria_de/src/branch/main/content/posts/homelab/k3s-prod/apps/mosquitto/README.md"
+    href="https://git.zyria.de/pyrox/zyria_de/src/branch/main/content/posts/homelab/k3s-prod/apps/vpn-site-a/README.md"
     class="text-lg hover:text-primary-500"
     rel="noopener noreferrer"
     target="_blank"
@@ -1226,19 +1226,26 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
     class="min-w-[220px] py-2 border-dotted border-s-1 -ms-5 ps-5 dark:border-neutral-600">
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#mosquitto">Mosquitto</a>
+    <li><a href="#vpn-standort-a">VPN Standort A</a>
       <ul>
         <li><a href="#deployment">Deployment</a></li>
-        <li><a href="#quelle">Quelle</a></li>
-        <li><a href="#dokumentation">Dokumentation</a></li>
         <li><a href="#funktion">Funktion</a></li>
-        <li><a href="#lokale-anpassungen">Lokale Anpassungen</a>
+        <li><a href="#warum-ein-pod-mit-zwei-containern">Warum ein Pod mit zwei Containern</a></li>
+        <li><a href="#konfiguration">Konfiguration</a>
           <ul>
-            <li><a href="#wichtige-einstellungen">Wichtige Einstellungen</a></li>
+            <li><a href="#fallstricke">Fallstricke</a></li>
           </ul>
         </li>
+        <li><a href="#zugriffskontrolle">Zugriffskontrolle</a>
+          <ul>
+            <li><a href="#einschränkung-auf-einzelne-geräte">Einschränkung auf einzelne Geräte</a></li>
+          </ul>
+        </li>
+        <li><a href="#überlappende-adressbereiche">Überlappende Adressbereiche</a></li>
+        <li><a href="#betrieb">Betrieb</a></li>
         <li><a href="#installation">Installation</a></li>
         <li><a href="#abhängigkeiten">Abhängigkeiten</a></li>
+        <li><a href="#offene-punkte">Offene Punkte</a></li>
       </ul>
     </li>
   </ul>
@@ -1254,19 +1261,26 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
     class="py-2 border-dotted border-neutral-300 border-s-1 -ms-5 ps-5 dark:border-neutral-600">
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#mosquitto">Mosquitto</a>
+    <li><a href="#vpn-standort-a">VPN Standort A</a>
       <ul>
         <li><a href="#deployment">Deployment</a></li>
-        <li><a href="#quelle">Quelle</a></li>
-        <li><a href="#dokumentation">Dokumentation</a></li>
         <li><a href="#funktion">Funktion</a></li>
-        <li><a href="#lokale-anpassungen">Lokale Anpassungen</a>
+        <li><a href="#warum-ein-pod-mit-zwei-containern">Warum ein Pod mit zwei Containern</a></li>
+        <li><a href="#konfiguration">Konfiguration</a>
           <ul>
-            <li><a href="#wichtige-einstellungen">Wichtige Einstellungen</a></li>
+            <li><a href="#fallstricke">Fallstricke</a></li>
           </ul>
         </li>
+        <li><a href="#zugriffskontrolle">Zugriffskontrolle</a>
+          <ul>
+            <li><a href="#einschränkung-auf-einzelne-geräte">Einschränkung auf einzelne Geräte</a></li>
+          </ul>
+        </li>
+        <li><a href="#überlappende-adressbereiche">Überlappende Adressbereiche</a></li>
+        <li><a href="#betrieb">Betrieb</a></li>
         <li><a href="#installation">Installation</a></li>
         <li><a href="#abhängigkeiten">Abhängigkeiten</a></li>
+        <li><a href="#offene-punkte">Offene Punkte</a></li>
       </ul>
     </li>
   </ul>
@@ -1386,15 +1400,17 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
 
         <div class="article-content max-w-prose mb-20">
           
-<h2 class="relative group">Mosquitto
-    <div id="mosquitto" class="anchor"></div>
+<h2 class="relative group">VPN Standort A
+    <div id="vpn-standort-a" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#mosquitto" aria-label="Anker">#</a>
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#vpn-standort-a" aria-label="Anker">#</a>
     </span>
     
 </h2>
+<p>Verbindet den Cluster als WireGuard-<strong>Client</strong> mit einem entfernten Standort und macht die dort erreichbaren Netze über Headscale im gesamten Tailnet verfügbar.</p>
+<p>Nicht zu verwechseln mit <code>apps/wireguard</code>: dort läuft ein WireGuard-<strong>Server</strong> mit Web-Portal für Mitarbeiter-Zugänge. Hier geht es ausschließlich um eine Site-to-Site-Anbindung. Die Schwester-App <code>apps/vpn-site-b</code> setzt dasselbe Muster mit OpenVPN als Transport um.</p>
 
 <h3 class="relative group">Deployment
     <div id="deployment" class="anchor"></div>
@@ -1411,31 +1427,9 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
     decoding="async"
     fetchpriority="low"
     alt="Argo Deployment"
-    src="https://argocd.zyria.de/api/badge?name=mosquitto&amp;revision=true&amp;showAppName=true&amp;width=150"
+    src="https://argocd.zyria.de/api/badge?name=vpn-site-a&amp;revision=true&amp;showAppName=true&amp;width=150"
     ></figure>
 </p>
-
-<h3 class="relative group">Quelle
-    <div id="quelle" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#quelle" aria-label="Anker">#</a>
-    </span>
-    
-</h3>
-<p>Die Anwendung wird als generisches <code>app-template</code> Helm-Chart von <a href="https://bjw-s.github.io/helm-charts"  target="_blank" rel="noreferrer">BJW-S Labs</a> bereitgestellt. Das verwendete Docker-Image ist <code>eclipse-mosquitto</code>.</p>
-
-<h3 class="relative group">Dokumentation
-    <div id="dokumentation" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#dokumentation" aria-label="Anker">#</a>
-    </span>
-    
-</h3>
-<p>Die offizielle Dokumentation von Mosquitto ist unter <a href="https://mosquitto.org/documentation/"  target="_blank" rel="noreferrer">mosquitto.org/documentation/</a> zu finden.</p>
 
 <h3 class="relative group">Funktion
     <div id="funktion" class="anchor"></div>
@@ -1446,34 +1440,130 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
     </span>
     
 </h3>
-<p>Mosquitto ist ein MQTT-Broker, der als zentrale Vermittlungsstelle für Nachrichten zwischen Geräten fungiert. Geräte (Clients) können Nachrichten zu bestimmten Themen (Topics) veröffentlichen (Publish) oder Themen abonnieren (Subscribe), um Nachrichten zu empfangen. Dies entkoppelt die Geräte voneinander und ermöglicht eine flexible und skalierbare IoT-Architektur.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="ln">1</span><span class="cl">Tailnet-Client ──(WireGuard/DERP)──&gt; Headscale ──&gt; Pod vpn-site-a
+</span></span><span class="line"><span class="ln">2</span><span class="cl">                                                    ├── tailscale0  (Subnet Router)
+</span></span><span class="line"><span class="ln">3</span><span class="cl">                                                    └── wg0         (Tunnel zum Standort)
+</span></span><span class="line"><span class="ln">4</span><span class="cl">                                                                     └──&gt; Netze des Standorts</span></span></code></pre></div></div>
+<ul>
+<li><strong>wireguard</strong>: <code>linuxserver/wireguard</code> im Client-Modus. Sobald unter <code>/config/wg_confs</code> eine <code>*.conf</code> liegt, führt der Entrypoint lediglich <code>wg-quick up wg0</code> aus und startet keinen Server.</li>
+<li><strong>tailscale</strong>: meldet sich mit einem Pre-Auth-Key an Headscale an und annonciert die Netze des Standorts über <code>TS_ROUTES</code>.</li>
+</ul>
 
-<h3 class="relative group">Lokale Anpassungen
-    <div id="lokale-anpassungen" class="anchor"></div>
+<h3 class="relative group">Warum ein Pod mit zwei Containern
+    <div id="warum-ein-pod-mit-zwei-containern" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#lokale-anpassungen" aria-label="Anker">#</a>
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#warum-ein-pod-mit-zwei-containern" aria-label="Anker">#</a>
     </span>
     
 </h3>
-<p>Die Konfiguration erfolgt über die <code>values.yaml</code>-Datei, in der die <code>mosquitto.conf</code> direkt als ConfigMap definiert ist.</p>
+<p>Container eines Pods teilen sich den Netzwerk-Namespace. Dadurch sieht <code>tailscaled</code> das von <code>wg-quick</code> angelegte Interface <code>wg0</code> samt Routen und kann Traffic aus dem Tailnet direkt in den Tunnel weiterleiten. Mit zwei getrennten Deployments wäre das nicht möglich - der Tunnel läge in einem fremden Namespace.</p>
+<p><code>--snat-subnet-routes</code> sorgt dafür, dass Pakete aus dem Tailnet auf die Tunnel-IP dieses Peers ge-SNAT-tet werden. Die Gegenstelle braucht dadurch keine Rückroute in den Tailnet-Adressbereich.</p>
+<p>Ein Init-Container setzt <code>net.ipv4.ip_forward</code> und <code>net.ipv6.conf.all.forwarding</code>. Diese Sysctls sind netzwerk-namespaced und betreffen daher nur diesen Pod, nicht den Node.</p>
 
-<h4 class="relative group">Wichtige Einstellungen
-    <div id="wichtige-einstellungen" class="anchor"></div>
+<h3 class="relative group">Konfiguration
+    <div id="konfiguration" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#wichtige-einstellungen" aria-label="Anker">#</a>
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#konfiguration" aria-label="Anker">#</a>
+    </span>
+    
+</h3>
+<p>Vor dem ersten Deploy müssen drei Stellen gefüllt werden:</p>
+<ol>
+<li><strong><code>wg/wg0.conf</code></strong> - privater Schlüssel dieses Peers, Tunnel-Adresse, Endpoint und PublicKey der Gegenstelle sowie <code>AllowedIPs</code>.</li>
+<li><strong><code>TS_ROUTES</code> in <code>values.yaml</code></strong> - die ins Tailnet zu annoncierenden Netze.</li>
+<li><strong><code>TS_AUTHKEY</code> in <code>kustomization.yaml</code></strong> - Pre-Auth-Key aus Headscale, siehe unten.</li>
+</ol>
+<p>Der Key wird nur beim ersten Start verbraucht. Danach liegt der Node-State im Secret <code>vpn-site-a-tailscale-state</code>, das <code>tailscaled</code> selbst pflegt (siehe <code>rbac.yaml</code>).</p>
+
+<h4 class="relative group">Fallstricke
+    <div id="fallstricke" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#fallstricke" aria-label="Anker">#</a>
     </span>
     
 </h4>
 <ul>
-<li><strong>LoadBalancer</strong>: Der Broker ist über einen <code>LoadBalancer</code>-Service auf Port <code>1883</code> (MQTT) und <code>8883</code> (MQTT über WebSockets) im lokalen Netzwerk erreichbar.</li>
-<li><strong>Anonymer Zugriff</strong>: Der Broker ist so konfiguriert, dass er anonyme Verbindungen ohne Benutzername/Passwort erlaubt.</li>
-<li><strong>Bridges</strong>: MQTT-Bridge-Konfigurationen zum Cloud-Dienst von Zendure (<code>mqtteu.zen-iot.com</code>) für SolarFlow-Geräte sind in der <code>values.yaml</code> vorbereitet, aktuell aber <strong>auskommentiert</strong> und inaktiv.</li>
-<li><strong>Persistenz</strong>: Die Mosquitto-Datenbank, die z.B. &ldquo;retained messages&rdquo; speichert, wird auf einem Persistent Volume gespeichert.</li>
+<li><strong><code>AllowedIPs</code> niemals <code>0.0.0.0/0</code>.</strong> <code>wg-quick</code> baut dann Policy-Routing mit <code>fwmark</code> auf und kappt die Verbindung des Pods zum Cluster-Netz und zu Headscale. Nur die konkreten Netze der Gegenstelle eintragen.</li>
+<li><strong>Kein <code>DNS = ...</code> in <code>wg0.conf</code>.</strong> Das überschreibt <code>/etc/resolv.conf</code> im Pod und zerstört Cluster-DNS sowie die Namensauflösung des Headscale-Servers.</li>
+<li><strong><code>TS_ACCEPT_DNS</code> bleibt <code>false</code>.</strong> Headscale ist mit <code>override_local_dns</code> konfiguriert; ein Router-Pod, der die Tailnet-Nameserver übernimmt, kann seinen eigenen Control-Server nicht mehr auflösen.</li>
+<li><strong><code>TS_ROUTES</code> ohne Leerzeichen nach dem Komma.</strong> Tailscale splittet nur an <code>,</code> und übergibt das Ergebnis ungetrimmt an <code>netip.ParsePrefix</code>.</li>
+<li><strong>Routen müssen in Headscale freigegeben werden.</strong> Annoncierte Routen sind bis zur Freigabe inaktiv - entweder über <code>autoApprovers</code> in der Policy oder manuell:</li>
 </ul>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">kubectl -n headscale <span class="nb">exec</span> deploy/headscale -- headscale nodes list
+</span></span><span class="line"><span class="ln">2</span><span class="cl">kubectl -n headscale <span class="nb">exec</span> deploy/headscale -- headscale nodes approve-routes --identifier &lt;id&gt; --routes &lt;netze&gt;</span></span></code></pre></div></div>
+
+<h3 class="relative group">Zugriffskontrolle
+    <div id="zugriffskontrolle" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#zugriffskontrolle" aria-label="Anker">#</a>
+    </span>
+    
+</h3>
+<p>Der Node trägt <code>tag:site-a</code> als <strong>Forced Tag vom Pre-Auth-Key</strong>, nicht über <code>--advertise-tags</code>:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">kubectl -n headscale <span class="nb">exec</span> deploy/headscale -- <span class="se">\
+</span></span></span><span class="line"><span class="ln">2</span><span class="cl">  headscale preauthkeys create --user &lt;user&gt; --reusable --tags tag:site-a --expiration 8760h</span></span></code></pre></div></div>
+<p>Serverseitig gesetzt ist der Tag autoritativ und vom Client nicht überschreibbar. Schickt der Client zusätzlich <code>--advertise-tags=tag:site-a</code>, prüft Headscale diese Anforderung gegen <code>tagOwners</code> und lehnt die Registrierung mit <code>requested tags [...] are invalid or not permitted</code> ab, solange die Policy den Tag nicht kennt. Deshalb steht in <code>TS_EXTRA_ARGS</code> kein <code>--advertise-tags</code>.</p>
+<p>Freigegeben wird ausschließlich über eine explizite Regel für <code>group:site-a</code> in <code>apps/headscale/config-patch.yaml</code>:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="ln">1</span><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="ln">2</span><span class="cl">  <span class="nt">&#34;action&#34;</span><span class="p">:</span> <span class="s2">&#34;accept&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="ln">3</span><span class="cl">  <span class="nt">&#34;src&#34;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&#34;group:site-a&#34;</span><span class="p">],</span>
+</span></span><span class="line"><span class="ln">4</span><span class="cl">  <span class="nt">&#34;dst&#34;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&#34;&lt;netz-des-standorts&gt;:*&#34;</span><span class="p">]</span>
+</span></span><span class="line"><span class="ln">5</span><span class="cl"><span class="p">}</span></span></span></code></pre></div></div>
+<p><strong>Subnetz-Routen werden über die Ziel-CIDR gematcht, nicht über den Tag des Subnet Routers.</strong> Ein <code>&quot;dst&quot;: [&quot;tag:site-a:*&quot;]</code> würde nur den Router-Node selbst freigeben, nicht die Netze dahinter. Deshalb stehen die CIDRs direkt im <code>dst</code>.</p>
+<p>Da die Policy keine Catch-all-Regel hat, gilt Default-Deny: alle anderen Tailnet-Mitglieder sehen die Routen nicht - auch dann nicht, wenn sie sich per OIDC anmelden können. Zu beachten ist nur die bestehende Regel <code>group:user → tag:router:*</code>; dieser Node trägt deshalb bewusst <strong>nicht</strong> <code>tag:router</code>.</p>
+<p>Wegen <code>--snat-subnet-routes</code> sieht die Gegenstelle sämtlichen Traffic mit der Tunnel-IP dieses Peers als Quelle. Eine Filterung nach Benutzer ist dort also nicht mehr möglich - die Zugriffskontrolle muss vollständig in der Headscale-ACL stattfinden.</p>
+
+<h4 class="relative group">Einschränkung auf einzelne Geräte
+    <div id="einschränkung-auf-einzelne-geräte" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#einschr%c3%a4nkung-auf-einzelne-ger%c3%a4te" aria-label="Anker">#</a>
+    </span>
+    
+</h4>
+<p><code>group:site-a</code> erlaubt den Zugriff von <strong>allen</strong> Geräten der genannten Benutzer. Soll nur ein bestimmter Rechner zugreifen dürfen, muss dieses Gerät getaggt und der Tag als <code>src</code> verwendet werden:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="ln">1</span><span class="cl"><span class="s2">&#34;tagOwners&#34;</span><span class="err">:</span> <span class="p">{</span> <span class="nt">&#34;tag:site-a-client&#34;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&#34;group:admin&#34;</span><span class="p">]</span> <span class="p">}</span><span class="err">,</span>
+</span></span><span class="line"><span class="ln">2</span><span class="cl"><span class="s2">&#34;acls&#34;</span><span class="err">:</span> <span class="p">[</span>
+</span></span><span class="line"><span class="ln">3</span><span class="cl">  <span class="p">{</span> <span class="nt">&#34;action&#34;</span><span class="p">:</span> <span class="s2">&#34;accept&#34;</span><span class="p">,</span> <span class="nt">&#34;src&#34;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&#34;tag:site-a-client&#34;</span><span class="p">],</span> <span class="nt">&#34;dst&#34;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&#34;&lt;netz-des-standorts&gt;:*&#34;</span><span class="p">]</span> <span class="p">}</span>
+</span></span><span class="line"><span class="ln">4</span><span class="cl"><span class="p">]</span></span></span></code></pre></div></div>
+<p>Getaggte Geräte verlieren allerdings die Benutzerzuordnung und ihr Node-Key läuft nicht mehr ab.</p>
+
+<h3 class="relative group">Überlappende Adressbereiche
+    <div id="überlappende-adressbereiche" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%c3%bcberlappende-adressbereiche" aria-label="Anker">#</a>
+    </span>
+    
+</h3>
+<p>Mehrere Standorte nutzen typischerweise denselben RFC1918-Raum. Annoncieren zwei Subnet Router dieselbe Prefix, ist das Ziel im Tailnet mehrdeutig - welcher Router zum Zug kommt, ist nicht deterministisch.</p>
+<p>Als Zwischenlösung lässt sich die Überlappung über <strong>Longest-Prefix-Match</strong> auflösen: der Standort mit dem kleineren tatsächlichen Bedarf annonciert ein engeres Prefix, das gegen das weitere des anderen gewinnt. Wichtig dabei: eingegrenzt wird nur <code>TS_ROUTES</code>, nicht <code>AllowedIPs</code> - Letzteres steuert, was der Tunnel transportiert, nicht was ins Tailnet annonciert wird. Aus dem Pod heraus bleibt der volle Bereich erreichbar.</p>
+<p>Diese Lösung ist fragil: neue statische Adressen am eingegrenzten Standort müssen innerhalb des annoncierten Prefixes bleiben, sonst werden sie zum anderen Standort geroutet und sind nicht erreichbar. Ein solcher Fehler ist schwer zuzuordnen, wenn man die Aufteilung nicht kennt.</p>
+<p>Tragfähig ist stattdessen <strong>4via6</strong>: jeder Standort bekommt eine Site-ID, die Route wird als IPv6-<code>/96</code> unter <code>fd7a:115c:a1e0:b1a::/64</code> annonciert, das die IPv4-Adresse einbettet. Kollisionen sind konstruktionsbedingt ausgeschlossen. Spätestens ab dem dritten Standort führt kein Weg daran vorbei. Die Headscale-Unterstützung ist vorher zu verifizieren.</p>
+
+<h3 class="relative group">Betrieb
+    <div id="betrieb" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#betrieb" aria-label="Anker">#</a>
+    </span>
+    
+</h3>
+<p>Der Pod läuft mit <code>replicas: 1</code> und <code>strategy: Recreate</code>. Zwei gleichzeitig laufende Pods würden sich Tunnel-IP und Headscale-Node streitig machen.</p>
+<p>Die Readiness-Probe prüft, ob ein Handshake mit der Gegenstelle zustande gekommen ist - der Pod wird also erst <code>Ready</code>, wenn der Tunnel wirklich steht.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">kubectl -n vpn-site-a <span class="nb">exec</span> deploy/vpn-site-a -c wireguard -- wg show
+</span></span><span class="line"><span class="ln">2</span><span class="cl">kubectl -n vpn-site-a <span class="nb">exec</span> deploy/vpn-site-a -c tailscale -- tailscale status</span></span></code></pre></div></div>
 
 <h3 class="relative group">Installation
     <div id="installation" class="anchor"></div>
@@ -1484,8 +1574,8 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
     </span>
     
 </h3>
-<p>Die Anwendung wird mittels Kustomize und Helm durch ArgoCD im Kubernetes-Cluster bereitgestellt. Die Konfiguration befindet sich im <code>apps/mosquitto</code>-Verzeichnis. Eine manuelle Installation kann mit folgendem Befehl durchgeführt werden:</p>
-<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">kubectl kustomize --enable-helm apps/mosquitto <span class="p">|</span> kubectl apply -n mosquitto -f -</span></span></code></pre></div></div>
+<p>Die Anwendung wird mittels Kustomize und Helm durch ArgoCD bereitgestellt; der Eintrag steht in <code>manifests.yaml</code>.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">kubectl kustomize --enable-helm apps/vpn-site-a <span class="p">|</span> kubectl apply -f -</span></span></code></pre></div></div>
 
 <h3 class="relative group">Abhängigkeiten
     <div id="abhängigkeiten" class="anchor"></div>
@@ -1497,9 +1587,22 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
     
 </h3>
 <ul>
-<li><strong>Metallb</strong>: Wird benötigt, um dem MQTT-Service eine externe IP-Adresse zuzuweisen.</li>
-<li><strong>Longhorn/NFS</strong>: Ein Storage-Provider wird für das Persistent Volume benötigt.</li>
+<li>Laufender Headscale (<code>apps/headscale</code>).</li>
+<li>Node-Kernel mit WireGuard-Unterstützung; <code>/lib/modules</code> wird read-only eingehängt, damit das Modul bei Bedarf nachgeladen werden kann.</li>
+<li><code>/dev/net/tun</code> auf dem Node für den Kernel-Modus von <code>tailscaled</code> und <code>wg-quick</code>.</li>
+<li>Erreichbarer WireGuard-Endpoint der Gegenstelle (UDP ausgehend).</li>
 </ul>
+
+<h3 class="relative group">Offene Punkte
+    <div id="offene-punkte" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#offene-punkte" aria-label="Anker">#</a>
+    </span>
+    
+</h3>
+<p>Der private WireGuard-Schlüssel und der Headscale-Pre-Auth-Key liegen im Klartext im Repository - konsistent mit dem restlichen Repo, aber weiterhin die offene Security-Aufgabe (SOPS oder Sealed Secrets), die auch in <code>.pre-commit-config.yaml</code> vermerkt ist.</p>
 
           
           
@@ -1510,7 +1613,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
                 class="email-link m-1 rounded bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
                 href="#"
                 data-email="ZmFicmljZUB6eXJpYS5kZQ=="
-                data-subject="Antwort auf Mosquitto">
+                data-subject="Antwort auf VPN Standort A - Tailscale Subnet Router">
                 Per E-Mail antworten
               </a>
               <noscript>
@@ -1732,14 +1835,14 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
           
             <a
               class="flex text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
-              href="/posts/homelab/k3s-prod/apps/nextcloud/readme/">
+              href="/posts/homelab/k3s-prod/apps/nextcloud-new/readme/">
               <span class="leading-6">
-                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;Nextcloud
+                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;Nextcloud (neu)
               </span>
             </a>
             
               <span class="ms-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
-                <time datetime="2026-03-15T14:33:36&#43;01:00">15 März 2026</time>
+                <time datetime="2026-08-08T17:31:57&#43;02:00">8 August 2026</time>
               </span>
             
           
@@ -1748,14 +1851,14 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
           
             <a
               class="flex text-right text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
-              href="/posts/homelab/k3s-prod/apps/metallb/readme/">
+              href="/posts/homelab/k3s-prod/apps/vpn-site-b/readme/">
               <span class="leading-6">
-                MetalLB&ensp;<span class="inline-block rtl:rotate-180">&rarr;</span>
+                VPN Standort B - Tailscale Subnet Router&ensp;<span class="inline-block rtl:rotate-180">&rarr;</span>
               </span>
             </a>
             
               <span class="me-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
-                <time datetime="2026-03-15T14:33:36&#43;01:00">15 März 2026</time>
+                <time datetime="2026-08-08T22:29:11&#43;02:00">8 August 2026</time>
               </span>
             
           

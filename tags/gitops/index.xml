@@ -9,7 +9,147 @@
     <managingEditor>fabrice@zyria.de (Fabrice Kirchner)</managingEditor>
     <webMaster>fabrice@zyria.de (Fabrice Kirchner)</webMaster>
     
-    <lastBuildDate>Sun, 15 Mar 2026 14:33:36 +0100</lastBuildDate><atom:link href="https://zyria.de/tags/gitops/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 08 Aug 2026 22:29:11 +0200</lastBuildDate><atom:link href="https://zyria.de/tags/gitops/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>CoreDNS</title>
+      <link>https://zyria.de/posts/homelab/k3s-prod/apps/nameserver/readme/</link>
+      <pubDate>Sat, 08 Aug 2026 22:29:11 +0200</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/nameserver/readme/</guid>
+      <description>CoreDNS dient als primärer DNS-Server für die Service Discovery innerhalb des Kubernetes-Clusters und löst sowohl interne als auch externe DNS-Anfragen auf.</description>
+      
+    </item>
+    
+    <item>
+      <title>VPN Standort B - Tailscale Subnet Router</title>
+      <link>https://zyria.de/posts/homelab/k3s-prod/apps/vpn-site-b/readme/</link>
+      <pubDate>Sat, 08 Aug 2026 22:29:11 +0200</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/vpn-site-b/readme/</guid>
+      <description>Ein Pod baut einen OpenVPN-Tunnel zu einem entfernten Standort auf und annonciert die dahinterliegenden Netze via Headscale ins Tailnet.</description>
+      
+    </item>
+    
+    <item>
+      <title>VPN Standort A - Tailscale Subnet Router</title>
+      <link>https://zyria.de/posts/homelab/k3s-prod/apps/vpn-site-a/readme/</link>
+      <pubDate>Sat, 08 Aug 2026 20:06:06 +0200</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/vpn-site-a/readme/</guid>
+      <description>Ein Pod baut einen WireGuard-Tunnel zu einem entfernten Standort auf und annonciert die dahinterliegenden Netze via Headscale ins Tailnet.</description>
+      
+    </item>
+    
+    <item>
+      <title>Nextcloud (neu)</title>
+      <link>https://zyria.de/posts/homelab/k3s-prod/apps/nextcloud-new/readme/</link>
+      <pubDate>Sat, 08 Aug 2026 17:31:57 +0200</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/nextcloud-new/readme/</guid>
+      <description>In-Place-Ablösung von apps/nextcloud im bestehenden Namespace: Nextcloud, MariaDB, Redis, ClamAV, phpMyAdmin, SSH und icloudpd laufen als getrennte Deployments bzw. StatefulSets und kommunizieren über Services.</description>
+      
+    </item>
+    
+    <item>
+      <title>Mailstack</title>
+      <link>https://zyria.de/posts/homelab/k3s-prod/apps/mailstack-new/readme/</link>
+      <pubDate>Tue, 04 Aug 2026 22:12:11 +0200</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/mailstack-new/readme/</guid>
+      <description>Dieser Mailstack integriert mehrere Komponenten wie Postfix, Dovecot, Rspamd und ClamAV, um einen robusten und sicheren E-Mail-Dienst mit Spam- und Virenfilterung bereitzustellen.</description>
+      
+    </item>
+    
+    <item>
+      <title>Mailstack</title>
+      <link>https://zyria.de/posts/homelab/k3s-prod/apps/mailstack/readme/</link>
+      <pubDate>Tue, 04 Aug 2026 22:12:11 +0200</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/mailstack/readme/</guid>
+      <description>Dieser Mailstack integriert mehrere Komponenten wie Postfix, Dovecot, Rspamd und ClamAV, um einen robusten und sicheren E-Mail-Dienst mit Spam- und Virenfilterung bereitzustellen.</description>
+      
+    </item>
+    
+    <item>
+      <title>Forgejo Runner</title>
+      <link>https://zyria.de/posts/homelab/k3s-prod/apps/forgejo-runner/readme/</link>
+      <pubDate>Thu, 30 Jul 2026 10:19:29 +0200</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/forgejo-runner/readme/</guid>
+      <description>Dieses Dokument beschreibt die Bereitstellung von Forgejo Runner, einem Daemon zum Ausführen von CI/CD-Jobs für Forgejo-Instanzen.</description>
+      
+    </item>
+    
+    <item>
+      <title>Forgejo</title>
+      <link>https://zyria.de/posts/homelab/k3s-prod/apps/forgejo/readme/</link>
+      <pubDate>Tue, 28 Jul 2026 15:44:05 +0200</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/forgejo/readme/</guid>
+      <description>Dieses Dokument beschreibt die Bereitstellung von Forgejo, einer quelloffenen, selbst gehosteten Git-Plattform.</description>
+      
+    </item>
+    
+    <item>
+      <title>zyria.de Webseite</title>
+      <link>https://zyria.de/posts/homelab/k3s-prod/apps/openobserve/readme/</link>
+      <pubDate>Wed, 17 Jun 2026 20:33:06 +0200</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/openobserve/readme/</guid>
+      <description>Dieses Dokument beschreibt die Bereitstellung der statischen Webseite für zyria.de, deren Inhalt aus einem Git-Repository synchronisiert wird.</description>
+      
+    </item>
+    
+    <item>
+      <title>Home Assistant</title>
+      <link>https://zyria.de/posts/homelab/k3s-prod/apps/home-assistant/readme/</link>
+      <pubDate>Fri, 12 Jun 2026 12:06:16 +0200</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/home-assistant/readme/</guid>
+      <description>Home Assistant ist das Gehirn des Smart Homes. Im selben Namespace laufen Mosquitto (MQTT-Broker), python-matter-server und ein OpenThread Border Router (OTBR) als eigenständige Deployments.</description>
+      
+    </item>
+    
+    <item>
+      <title>Matrix (neu)</title>
+      <link>https://zyria.de/posts/homelab/k3s-prod/apps/matrix-new/readme/</link>
+      <pubDate>Mon, 08 Jun 2026 21:41:09 +0200</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/matrix-new/readme/</guid>
+      <description>Migration von apps/matrix auf das offizielle element-hq/ess-helm matrix-stack Chart mit Matrix Authentication Service (MAS), Element Web und Element Admin.</description>
+      
+    </item>
+    
+    <item>
+      <title>Music Assistant</title>
+      <link>https://zyria.de/posts/homelab/k3s-prod/apps/music-assistant/readme/</link>
+      <pubDate>Wed, 22 Apr 2026 15:08:28 +0200</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/music-assistant/readme/</guid>
+      <description>Music Assistant verbindet verschiedene Musikquellen und -player zu einer zentralen Steuerungsebene und ist über eine direkte Netzwerkschnittstelle ins Heimnetz eingebunden.</description>
+      
+    </item>
+    
+    <item>
+      <title>Zabbix</title>
+      <link>https://zyria.de/posts/homelab/k3s-prod/apps/zabbix/readme/</link>
+      <pubDate>Wed, 22 Apr 2026 15:08:28 +0200</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/zabbix/readme/</guid>
+      <description>Zabbix überwacht die gesamte Cluster- und Heimnetz-Infrastruktur, sammelt Metriken und löst bei Problemen Alarme aus.</description>
+      
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://zyria.de/posts/homelab/k3s-prod/apps/git-pages/readme/</link>
+      <pubDate>Mon, 16 Mar 2026 09:54:32 +0100</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/git-pages/readme/</guid>
+      <description>&lt;h1 class=&#34;relative group&#34;&gt;git-pages&#xA;    &lt;div id=&#34;git-pages&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#git-pages&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h1&gt;&#xA;&lt;p&gt;Statischer Seiten-Server für Forgejo-Repositories, analog zu GitHub Pages.&lt;/p&gt;&#xA;&lt;p&gt;Upstream: &lt;a href=&#34;https://codeberg.org/git-pages/git-pages&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;codeberg.org/git-pages/git-pages&lt;/a&gt;&lt;/p&gt;&#xA;&#xA;&lt;h2 class=&#34;relative group&#34;&gt;URLs&#xA;    &lt;div id=&#34;urls&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#urls&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;table&gt;&#xA;&#x9;&lt;thead&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;th&gt;URL&lt;/th&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;th&gt;Beschreibung&lt;/th&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&lt;/thead&gt;&#xA;&#x9;&lt;tbody&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;&lt;code&gt;pages.zyria.de&lt;/code&gt;&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;Hauptdomain&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;&lt;code&gt;&amp;lt;user&amp;gt;.pages.zyria.de&lt;/code&gt;&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;Benutzer-Seiten&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;&lt;code&gt;&amp;lt;user&amp;gt;.pages.zyria.de/&amp;lt;repo&amp;gt;&lt;/code&gt;&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;Repo-spezifische Seiten&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&lt;/tbody&gt;&#xA;&lt;/table&gt;&#xA;&#xA;&lt;h2 class=&#34;relative group&#34;&gt;Funktionsweise&#xA;    &lt;div id=&#34;funktionsweise&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#funktionsweise&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;git-pages zieht Inhalte aus Forgejo-Repositories und stellt sie als statische Webseiten bereit.&#xA;Seiten werden über Webhooks aus Forgejo aktualisiert.&lt;/p&gt;</description>
+      
+    </item>
     
     <item>
       <title>Ansible Semaphore</title>
@@ -42,32 +182,12 @@
     </item>
     
     <item>
-      <title>Forgejo</title>
-      <link>https://zyria.de/posts/homelab/k3s-prod/apps/forgejo/readme/</link>
-      <pubDate>Sun, 15 Mar 2026 14:33:36 +0100</pubDate>
-      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/forgejo/readme/</guid>
-      <description>Dieses Dokument beschreibt die Bereitstellung von Forgejo, einer quelloffenen, selbst gehosteten Git-Plattform.</description>
-      
-    </item>
-    
-    <item>
       <title>HedgeDoc</title>
       <link>https://zyria.de/posts/homelab/k3s-prod/apps/hedgedoc/readme/</link>
       <pubDate>Sun, 15 Mar 2026 14:33:36 +0100</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/posts/homelab/k3s-prod/apps/hedgedoc/readme/</guid>
       <description>Dieses Dokument beschreibt die Bereitstellung von HedgeDoc, einem kollaborativen Markdown-Editor.</description>
-      
-    </item>
-    
-    <item>
-      <title>Home Assistant</title>
-      <link>https://zyria.de/posts/homelab/k3s-prod/apps/home-assistant/readme/</link>
-      <pubDate>Sun, 15 Mar 2026 14:33:36 +0100</pubDate>
-      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/home-assistant/readme/</guid>
-      <description>Home Assistant ist das Gehirn des Smart Homes. Es ermöglicht die Steuerung und Automatisierung einer Vielzahl von Geräten und Diensten und stellt eine zentrale Benutzeroberfläche bereit.</description>
       
     </item>
     
@@ -98,16 +218,6 @@
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/posts/homelab/k3s-prod/apps/metallb/readme/</guid>
       <description>MetalLB ermöglicht die Verwendung von Kubernetes-Services vom Typ &lt;code&gt;LoadBalancer&lt;/code&gt; in Clustern, die nicht bei einem Cloud-Anbieter laufen, indem es IP-Adressen aus einem konfigurierten Pool zuweist.</description>
-      
-    </item>
-    
-    <item>
-      <title>Mosquitto</title>
-      <link>https://zyria.de/posts/homelab/k3s-prod/apps/mosquitto/readme/</link>
-      <pubDate>Sun, 15 Mar 2026 14:33:36 +0100</pubDate>
-      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/mosquitto/readme/</guid>
-      <description>Mosquitto dient als zentraler Message Broker für das MQTT-Protokoll und ermöglicht die Kommunikation zwischen verschiedenen IoT-Geräten und -Diensten im Smart Home.</description>
       
     </item>
     
@@ -222,16 +332,6 @@
     </item>
     
     <item>
-      <title>Music Assistant</title>
-      <link>https://zyria.de/posts/homelab/k3s-prod/apps/music-assistant/readme/</link>
-      <pubDate>Sun, 15 Mar 2026 14:14:26 +0100</pubDate>
-      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/music-assistant/readme/</guid>
-      <description>Music Assistant verbindet verschiedene Musikquellen und -player zu einer zentralen Steuerungsebene und ist über eine direkte Netzwerkschnittstelle ins Heimnetz eingebunden.</description>
-      
-    </item>
-    
-    <item>
       <title>Renovate</title>
       <link>https://zyria.de/posts/homelab/k3s-prod/apps/renovate/readme/</link>
       <pubDate>Sun, 15 Mar 2026 14:14:26 +0100</pubDate>
@@ -242,42 +342,12 @@
     </item>
     
     <item>
-      <title>Zabbix</title>
-      <link>https://zyria.de/posts/homelab/k3s-prod/apps/zabbix/readme/</link>
-      <pubDate>Sun, 15 Mar 2026 14:14:26 +0100</pubDate>
-      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/zabbix/readme/</guid>
-      <description>Zabbix überwacht die gesamte Cluster- und Heimnetz-Infrastruktur, sammelt Metriken und löst bei Problemen Alarme aus.</description>
-      
-    </item>
-    
-    <item>
-      <title>Matrix</title>
-      <link>https://zyria.de/posts/homelab/k3s-prod/apps/matrix-new/readme/</link>
-      <pubDate>Wed, 11 Mar 2026 23:45:20 +0100</pubDate>
-      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/matrix-new/readme/</guid>
-      <description>Diese Anwendung stellt einen Matrix-Homeserver (Synapse) und einen Web-Client (Element) bereit, um einen föderierten, Ende-zu-Ende-verschlüsselten Chat-Dienst zu betreiben.</description>
-      
-    </item>
-    
-    <item>
       <title>UniFi Netzwerk-Anwendung</title>
       <link>https://zyria.de/posts/homelab/k3s-prod/apps/unifi-controller/readme/</link>
       <pubDate>Wed, 21 Jan 2026 10:25:16 +0100</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/posts/homelab/k3s-prod/apps/unifi-controller/readme/</guid>
       <description>Dieses Dokument beschreibt die Bereitstellung der UniFi Netzwerk-Anwendung, einer Software-Defined Networking (SDN)-Plattform zur Verwaltung von UniFi-Geräten.</description>
-      
-    </item>
-    
-    <item>
-      <title>CoreDNS</title>
-      <link>https://zyria.de/posts/homelab/k3s-prod/apps/nameserver/readme/</link>
-      <pubDate>Fri, 07 Nov 2025 11:23:15 +0100</pubDate>
-      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/nameserver/readme/</guid>
-      <description>CoreDNS dient als primärer DNS-Server für die Service Discovery innerhalb des Kubernetes-Clusters und löst sowohl interne als auch externe DNS-Anfragen auf.</description>
       
     </item>
     
@@ -318,16 +388,6 @@
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/posts/homelab/k3s-prod/apps/authentik/readme/</guid>
       <description>Dieses Dokument beschreibt die Bereitstellung von Authentik, einem quelloffenen Identitätsanbieter (IdP).</description>
-      
-    </item>
-    
-    <item>
-      <title>Forgejo Runner</title>
-      <link>https://zyria.de/posts/homelab/k3s-prod/apps/forgejo-runner/readme/</link>
-      <pubDate>Tue, 26 Aug 2025 01:05:41 +0200</pubDate>
-      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/forgejo-runner/readme/</guid>
-      <description>Dieses Dokument beschreibt die Bereitstellung von Forgejo Runner, einem Daemon zum Ausführen von CI/CD-Jobs für Forgejo-Instanzen.</description>
       
     </item>
     
@@ -578,16 +638,6 @@
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/posts/homelab/k3s-prod/apps/descheduler/readme/</guid>
       <description>Dieses Dokument beschreibt die Bereitstellung des Kubernetes Deschedulers, eines Tools zur Optimierung der Pod-Platzierung in einem Cluster.</description>
-      
-    </item>
-    
-    <item>
-      <title>Mailstack</title>
-      <link>https://zyria.de/posts/homelab/k3s-prod/apps/mailstack/readme/</link>
-      <pubDate>Mon, 25 Aug 2025 23:42:21 +0200</pubDate>
-      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/mailstack/readme/</guid>
-      <description>Dieser Mailstack integriert mehrere Komponenten wie Postfix, Dovecot, Rspamd und ClamAV, um einen robusten und sicheren E-Mail-Dienst mit Spam- und Virenfilterung bereitzustellen.</description>
       
     </item>
     
