@@ -1,0 +1,52 @@
+---
+# Aktualisiert die Hugo-Module (`hugo mod get -u ./...` + `hugo mod tidy`) und
+# committet go.mod/go.sum zurück.
+#
+# Ergänzt Renovate, ersetzt es nicht: Renovate hebt die Versionen bereits
+# eingetragener Module, löst aber den Modulgraphen nicht neu auf. Neu
+# hinzugekommene transitive Module und das Entfernen verwaister Einträge
+# passieren nur hier.
+name: 'Reusable · Hugo-Module aktualisieren'
+
+# yamllint disable-line rule:truthy
+on:
+  push:
+    branches: [main, master]
+    # go.mod/go.sum ausgenommen: sonst löst der eigene Rück-Commit den Workflow
+    # erneut aus. Der zweite Lauf fände zwar nichts mehr zu tun, wäre aber ein
+    # vollständiger Leerlauf inklusive Hugo- und Go-Setup.
+    paths-ignore:
+      - 'go.mod'
+      - 'go.sum'
+  schedule:
+    - cron: '30 4 * * *'
+  workflow_dispatch:
+  workflow_call:
+    inputs:
+      branch:
+        description: 'Branch, auf den zurückgepusht wird'
+        type: string
+        required: false
+        default: 'main'
+      tidy:
+        description: "'false' überspringt `hugo mod tidy`"
+        type: string
+        required: false
+        default: 'true'
+      hugo-version:
+        description: 'Hugo-Version'
+        type: string
+        required: false
+        default: 'latest'
+
+jobs:
+  hugo-mod-update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Hugo-Module aktualisieren
+        uses: https://git.zyria.de/pyrox/actions/hugo-mod-update@v1
+        with:
+          token: ${{ secrets.ZYRIA_TOKEN }}
+          branch: ${{ inputs.branch }}
+          tidy: ${{ inputs.tidy }}
+          hugo-version: ${{ inputs.hugo-version }}
