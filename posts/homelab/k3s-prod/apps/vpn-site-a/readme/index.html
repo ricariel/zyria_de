@@ -104,8 +104,8 @@
 	<meta property="og:locale" content="de_de">
 	<meta property="og:type" content="article">
 		<meta property="article:section" content="posts">
-		<meta property="article:published_time" content="2026-08-08T20:06:06+02:00">
-		<meta property="article:modified_time" content="2026-08-08T20:06:06+02:00">
+		<meta property="article:published_time" content="2026-08-09T14:45:42+02:00">
+		<meta property="article:modified_time" content="2026-08-09T14:45:42+02:00">
 		<meta property="article:tag" content="Kubernetes">
 		<meta property="article:tag" content="K3s">
 		<meta property="article:tag" content="Gitops">
@@ -308,15 +308,15 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
       "sameAs": ["https://git.casa-due-pur.de/fabrice.kirchner", "https://git.zyria.de/pyrox", "https://github.com/ricariel", "https://www.linkedin.com/in/fabrice-kirchner-bb5408163/", "https://www.xing.com/profile/Fabrice_Kirchner", "https://kirchner.social/@fabrice", "https://codeberg.org/ricariel"]
     },
     "copyrightYear": "2026",
-    "dateCreated": "2026-08-08T20:06:06\u002b02:00",
-    "datePublished": "2026-08-08T20:06:06\u002b02:00",
+    "dateCreated": "2026-08-09T14:45:42\u002b02:00",
+    "datePublished": "2026-08-09T14:45:42\u002b02:00",
     
-    "dateModified": "2026-08-08T20:06:06\u002b02:00",
+    "dateModified": "2026-08-09T14:45:42\u002b02:00",
     
     "keywords": ["kubernetes","k3s","gitops","argocd","helm","kustomize","homelab","produktion"],
     
     "mainEntityOfPage": "https://zyria.de/posts/homelab/k3s-prod/apps/vpn-site-a/readme/",
-    "wordCount": "1019"
+    "wordCount": "1287"
   }]
   </script>
 
@@ -956,7 +956,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2026-08-08T20:06:06&#43;02:00">8 August 2026</time><span class="px-2 text-primary-500">&middot;</span><span>1019 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
+      <time datetime="2026-08-09T14:45:42&#43;02:00">9 August 2026</time><span class="px-2 text-primary-500">&middot;</span><span>1287 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
 
 
   
@@ -1242,6 +1242,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
           </ul>
         </li>
         <li><a href="#überlappende-adressbereiche">Überlappende Adressbereiche</a></li>
+        <li><a href="#endpoint-mit-dynamischer-ip">Endpoint mit dynamischer IP</a></li>
         <li><a href="#betrieb">Betrieb</a></li>
         <li><a href="#installation">Installation</a></li>
         <li><a href="#abhängigkeiten">Abhängigkeiten</a></li>
@@ -1277,6 +1278,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
           </ul>
         </li>
         <li><a href="#überlappende-adressbereiche">Überlappende Adressbereiche</a></li>
+        <li><a href="#endpoint-mit-dynamischer-ip">Endpoint mit dynamischer IP</a></li>
         <li><a href="#betrieb">Betrieb</a></li>
         <li><a href="#installation">Installation</a></li>
         <li><a href="#abhängigkeiten">Abhängigkeiten</a></li>
@@ -1551,6 +1553,24 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
 <p>Diese Lösung ist fragil: neue statische Adressen am eingegrenzten Standort müssen innerhalb des annoncierten Prefixes bleiben, sonst werden sie zum anderen Standort geroutet und sind nicht erreichbar. Ein solcher Fehler ist schwer zuzuordnen, wenn man die Aufteilung nicht kennt.</p>
 <p>Tragfähig ist stattdessen <strong>4via6</strong>: jeder Standort bekommt eine Site-ID, die Route wird als IPv6-<code>/96</code> unter <code>fd7a:115c:a1e0:b1a::/64</code> annonciert, das die IPv4-Adresse einbettet. Kollisionen sind konstruktionsbedingt ausgeschlossen. Spätestens ab dem dritten Standort führt kein Weg daran vorbei. Die Headscale-Unterstützung ist vorher zu verifizieren.</p>
 
+<h3 class="relative group">Endpoint mit dynamischer IP
+    <div id="endpoint-mit-dynamischer-ip" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#endpoint-mit-dynamischer-ip" aria-label="Anker">#</a>
+    </span>
+    
+</h3>
+<p>WireGuard löst den Endpoint-Hostnamen <strong>ausschließlich beim <code>wg-quick up</code></strong> auf und danach nie wieder. Sitzt die Gegenstelle an einem Anschluss mit wechselnder IP hinter DynDNS, sendet der Tunnel nach der Zwangstrennung dauerhaft an die alte Adresse. Der Tunnel wirkt dann bestehend, überträgt aber nichts, und nur ein Neustart des Pods hilft.</p>
+<p>Ein Sidecar-Container prüft deshalb alle 30 Sekunden das Alter des letzten Handshakes. Überschreitet es 180 Sekunden, löst er den Namen neu auf und setzt den Endpoint nach:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">wg <span class="nb">set</span> wg0 peer &lt;pubkey&gt; &lt;endpoint-name:port&gt;</span></span></code></pre></div></div>
+<p><code>wg set</code> resolvt den Namen dabei selbst — das ist der einzige Weg, eine geänderte Gegenstellen-IP zu übernehmen, ohne den Tunnel komplett neu aufzubauen. Der Sidecar nutzt dasselbe Image wie der Hauptcontainer, weil <code>wg</code> dort bereits enthalten ist, und läuft mit <code>readOnlyRootFilesystem</code> und nur <code>NET_ADMIN</code>.</p>
+<p>Im Log ist der Vorgang nachvollziehbar:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="ln">1</span><span class="cl">[STALE] Handshake 187s alt, Endpoint aktuell &lt;alte-adresse&gt;
+</span></span><span class="line"><span class="ln">2</span><span class="cl">[FIXED] Endpoint neu aufgeloest: &lt;alte-adresse&gt; -&gt; &lt;neue-adresse&gt;</span></span></code></pre></div></div>
+<p>Bleibt die Adresse gleich, meldet er das ebenfalls — dann ist die Gegenstelle schlicht offline und ein Neuauflösen hilft nicht.</p>
+
 <h3 class="relative group">Betrieb
     <div id="betrieb" class="anchor"></div>
     
@@ -1561,7 +1581,8 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
     
 </h3>
 <p>Der Pod läuft mit <code>replicas: 1</code> und <code>strategy: Recreate</code>. Zwei gleichzeitig laufende Pods würden sich Tunnel-IP und Headscale-Node streitig machen.</p>
-<p>Die Readiness-Probe prüft, ob ein Handshake mit der Gegenstelle zustande gekommen ist - der Pod wird also erst <code>Ready</code>, wenn der Tunnel wirklich steht.</p>
+<p>Die Readiness-Probe prüft das <strong>Alter</strong> des letzten Handshakes, nicht dessen bloße Existenz. Der Unterschied ist wesentlich: der Zeitstempel bleibt nach dem ersten Handshake für immer stehen, eine Prüfung auf „größer null&quot; würde einen toten Tunnel also nie bemerken. Mit <code>PersistentKeepalive 25</code> erneuert WireGuard den Handshake etwa alle zwei Minuten; die Schwelle liegt bei 150 Sekunden.</p>
+<p>Die Liveness-Probe prüft weiterhin nur, ob das Interface existiert. Sie bewusst <strong>nicht</strong> auf das Handshake-Alter umzustellen hat einen Grund: der Netzwerk-Namespace überlebt einen Container-Neustart, <code>wg0</code> existiert danach also noch. Ob <code>wg-quick up</code> das sauber übernimmt, hängt daran, dass beim <code>SIGTERM</code> das Herunterfahren des Interfaces durchläuft. Schlägt das fehl, entsteht statt einer Selbstheilung ein CrashLoop. Das Nachfassen übernimmt deshalb der Sidecar, der ohne Neustart auskommt.</p>
 <div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">kubectl -n vpn-site-a <span class="nb">exec</span> deploy/vpn-site-a -c wireguard -- wg show
 </span></span><span class="line"><span class="ln">2</span><span class="cl">kubectl -n vpn-site-a <span class="nb">exec</span> deploy/vpn-site-a -c tailscale -- tailscale status</span></span></code></pre></div></div>
 
@@ -1835,14 +1856,14 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
           
             <a
               class="flex text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
-              href="/posts/homelab/k3s-prod/apps/nextcloud-new/readme/">
+              href="/posts/homelab/k3s-prod/apps/nameserver/readme/">
               <span class="leading-6">
-                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;Nextcloud (neu)
+                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;CoreDNS
               </span>
             </a>
             
               <span class="ms-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
-                <time datetime="2026-08-08T17:31:57&#43;02:00">8 August 2026</time>
+                <time datetime="2026-08-08T22:29:11&#43;02:00">8 August 2026</time>
               </span>
             
           
@@ -1851,14 +1872,14 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
           
             <a
               class="flex text-right text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
-              href="/posts/homelab/k3s-prod/apps/vpn-site-b/readme/">
+              href="/posts/homelab/k3s-prod/ansible/shutdown-startup/">
               <span class="leading-6">
-                VPN Standort B - Tailscale Subnet Router&ensp;<span class="inline-block rtl:rotate-180">&rarr;</span>
+                Operational Lifecycle Management: Orchestrierter Shutdown für Kubernetes&ensp;<span class="inline-block rtl:rotate-180">&rarr;</span>
               </span>
             </a>
             
               <span class="me-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
-                <time datetime="2026-08-08T22:29:11&#43;02:00">8 August 2026</time>
+                <time datetime="2024-10-27T10:00:00&#43;01:00">27 Oktober 2024</time>
               </span>
             
           
