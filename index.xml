@@ -9,7 +9,7 @@
     <managingEditor>fabrice@zyria.de (Fabrice Kirchner)</managingEditor>
     <webMaster>fabrice@zyria.de (Fabrice Kirchner)</webMaster>
     
-    <lastBuildDate>Sun, 09 Aug 2026 14:45:42 +0200</lastBuildDate><atom:link href="https://zyria.de/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 12 Aug 2026 10:29:24 +0200</lastBuildDate><atom:link href="https://zyria.de/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Über mich</title>
@@ -48,6 +48,16 @@
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/posts/homelab/k3s-prod/ansible/shutdown-startup/</guid>
       <description>Ein technischer Leitfaden für das geordnete Herunterfahren und Wiederanfahren eines Kubernetes-Clusters (k3s/Longhorn/ArgoCD) zur Vermeidung von Datenkorruption.</description>
+      
+    </item>
+    
+    <item>
+      <title>Snippets</title>
+      <link>https://zyria.de/posts/homelab/snippets/</link>
+      <pubDate>Wed, 12 Aug 2026 10:29:24 +0200</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://zyria.de/posts/homelab/snippets/</guid>
+      <description>All der Kram, der sonst nirgends hin gehört</description>
       
     </item>
     
@@ -168,16 +178,6 @@
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/posts/homelab/verwaltung/</guid>
       <description>&lt;p&gt;Wir verwenden zur generellen Verwaltung von Servern Ansible. Für manche Dienste&#xA;ist es jedoch notwendig oder praktikabler dies über vorhandene Portale zu&#xA;realisieren.&lt;/p&gt;&#xA;&#xA;&lt;h2 class=&#34;relative group&#34;&gt;Core-Networks (DNS)&#xA;    &lt;div id=&#34;core-networks-dns&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#core-networks-dns&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;Unsere DNS Server werden bei &lt;a href=&#34;https://www.core-networks.de&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;Core-Networks&lt;/a&gt;&#xA;gehostet. In deren &lt;a href=&#34;https://iface.core-networks.de&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;Webinterface&lt;/a&gt; lassen sich&#xA;alle relevanten Änderungen durchführen.&lt;/p&gt;</description>
-      
-    </item>
-    
-    <item>
-      <title>Snippets</title>
-      <link>https://zyria.de/posts/homelab/snippets/</link>
-      <pubDate>Tue, 28 Jul 2026 13:53:46 +0200</pubDate>
-      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://zyria.de/posts/homelab/snippets/</guid>
-      <description>All der Kram, der sonst nirgends hin gehört</description>
       
     </item>
     
