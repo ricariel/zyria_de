@@ -85,6 +85,20 @@ Dieses Script migriert alle Festplatten einer VM auf einen anderen Storage
 
 ---
 
+## Proxmox: NoVNC Konsolen-Fehler zwischen Nodes
+Wenn sich die VNC-Konsole von VMs auf anderen Nodes im Cluster nicht öffnen lässt (Connection Timeout).
+
+* **Zertifikate & SSH-Keys im Cluster neu synchronisieren (Oft die Lösung):**
+  `pvecm updatecerts --force`
+* **SSH-Verbindung manuell testen (um Key zu akzeptieren):**
+  `ssh root@<andere-node-ip>`
+* **Veralteten/Falschen SSH-Key eines Nodes löschen:**
+  `ssh-keygen -f "/root/.ssh/known_hosts" -R "<andere-node-ip>"`
+* **Hosts-Datei auf Fehler prüfen:**
+  `cat /etc/hosts`
+
+---
+
 Siehe auch:
 
 - [Linux Storage]({{< ref "linux_storage.md" >}}) - RAID, LVM, Verschlüsselung, Partitionierung
