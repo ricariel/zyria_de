@@ -4,8 +4,8 @@ git.zyria.de/pyrox/hugo-legal v0.0.0-20260812082542-dc85df86d16f h1:LLc5o+IlgA7O
 git.zyria.de/pyrox/hugo-legal v0.0.0-20260812082542-dc85df86d16f/go.mod h1:1MFdE30Bzx583p3qHNQCQPOG2pMoDmms/4xqYiUtqOk=
 git.zyria.de/pyrox/hugo-shortcodes v0.0.0-20260812082603-4bf8a815e6ac h1:PpO1XQI4vFn0/DsTSL1DmtFuK6emGgtFP/6dXax/JsM=
 git.zyria.de/pyrox/hugo-shortcodes v0.0.0-20260812082603-4bf8a815e6ac/go.mod h1:V2R75xLAXqOdvHSkKtqc0AqaCUof6704G2ELS6Huis4=
-git.zyria.de/pyrox/k3s-prod v0.0.0-20260813134107-0f8efb753dd5 h1:sX6N2vFObDeVpROG0iE9Vc5pmXg9FzGfPu/C3+/YL/k=
-git.zyria.de/pyrox/k3s-prod v0.0.0-20260813134107-0f8efb753dd5/go.mod h1:lM6OkgyZUD2079ubnXJYR7VJUxPW3peobWUYXCHfIBE=
+git.zyria.de/pyrox/k3s-prod v0.0.0-20260814160803-43e9c84907b5 h1:G6IKDWtqlPnSISdbGMCY0povBJJeDLoRn4wQIwWEhRU=
+git.zyria.de/pyrox/k3s-prod v0.0.0-20260814160803-43e9c84907b5/go.mod h1:lM6OkgyZUD2079ubnXJYR7VJUxPW3peobWUYXCHfIBE=
 github.com/hugomods/shortcodes v0.25.1 h1:JQZ/Kw9aOlFVnDiDgXsSqiu8gLFXAM7tQn+TYr8q2bc=
 github.com/hugomods/shortcodes v0.25.1/go.mod h1:EnVopbZMNI/HeteM3Lp3phBTCRLvPSe7l142qhRFFPY=
 github.com/nunocoracao/blowfish/v2 v2.105.0 h1:NtO+cavHc/oa166OYnkxedIsE81yo4a38+SwmdnpGXc=
