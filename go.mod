@@ -5,7 +5,7 @@ go 1.24.4
 require (
 	git.zyria.de/pyrox/hugo-default-coder v0.0.0-20260812185933-66bc87e7ec1d // indirect
 	git.zyria.de/pyrox/hugo-legal v0.0.0-20260812082542-dc85df86d16f // indirect
-	git.zyria.de/pyrox/hugo-shortcodes v0.0.0-20260812082603-4bf8a815e6ac // indirect
+	git.zyria.de/pyrox/hugo-shortcodes v0.0.0-20260817060418-fc133437efa7 // indirect
 	git.zyria.de/pyrox/k3s-prod v0.0.0-20260816063830-2e603b7e6c40 // indirect
 	github.com/hugomods/shortcodes v0.25.1 // indirect
 	github.com/nunocoracao/blowfish/v2 v2.106.0 // indirect
