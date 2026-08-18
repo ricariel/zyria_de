@@ -1,0 +1,70 @@
+---
+# Reusable workflow: CalVer-Tag für den abgeschlossenen Zeitraum erzeugen
+#
+# Aufruf im Consumer-Repo (montags 04:00 UTC + manuell):
+#
+#   on:
+#     schedule:
+#       - cron: '0 4 * * 1'
+#   jobs:
+#     calver-tag:
+#       uses: https://git.zyria.de/pyrox/actions/.forgejo/workflows/calver-tag.yaml@v1
+#       secrets: inherit
+#
+# Erzeugt NUR den Tag (+ datierten Changelog-Abschnitt). Das eigentliche
+# Forgejo-Release entsteht daraus über den Workflow forgejo-release.yaml,
+# der auf den gepushten Tag reagiert.
+name: 'Reusable · CalVer-Tag'
+
+# yamllint disable-line rule:truthy
+on:
+  schedule:
+    - cron: '0 4 * * 1'
+  workflow_dispatch:
+  workflow_call:
+    inputs:
+      branch:
+        description: 'Branch, auf den der Changelog-Commit gepusht wird'
+        type: string
+        required: false
+        default: 'main'
+      tag-format:
+        description: 'date(1)-Format des Tags; Standard "%G.%V" = JAHR.KW'
+        type: string
+        required: false
+        default: '%G.%V'
+      date-offset:
+        description: 'date(1)-Offset zur Zeitraumbestimmung'
+        type: string
+        required: false
+        default: '-1 day'
+      update-changelog:
+        description: "'true' = datierten Changelog-Abschnitt mitschreiben"
+        type: string
+        required: false
+        default: 'true'
+      config:
+        description: 'Pfad zur git-cliff-Config (Fallback: Standard aus pyrox/actions)'
+        type: string
+        required: false
+        default: 'cliff.toml'
+      output:
+        description: 'Changelog-Datei'
+        type: string
+        required: false
+        default: 'CHANGELOG.md'
+
+jobs:
+  calver-tag:
+    runs-on: ubuntu-latest
+    steps:
+      - name: CalVer-Tag erzeugen
+        uses: https://git.zyria.de/pyrox/actions/calver-tag@v1
+        with:
+          token: ${{ secrets.token || secrets.GITHUB_TOKEN }}
+          branch: ${{ inputs.branch }}
+          tag-format: ${{ inputs.tag-format }}
+          date-offset: ${{ inputs.date-offset }}
+          update-changelog: ${{ inputs.update-changelog }}
+          config: ${{ inputs.config }}
+          output: ${{ inputs.output }}
