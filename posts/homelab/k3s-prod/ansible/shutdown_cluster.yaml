@@ -64,7 +64,7 @@
       when:
         - item.metadata.namespace not in ['kube-system', 'longhorn-system', 'argocd', 'monitoring']
         - item.spec.replicas > 0
-      ignore_errors: true
+      failed_when: false
       tags: [workloads]
 
     - name: Skaliere alle User-StatefulSets auf 0 herunter
@@ -113,7 +113,7 @@
         name: k3s-agent
         state: stopped
       when: "'k3s_agent' in group_names"
-      ignore_errors: true
+      failed_when: false
 
     - name: Stoppe k3s (Server/Master Nodes)
       ansible.builtin.systemd:
