@@ -4,3 +4,7 @@ MD013:
 # Tabellen-Pipes ausrichten. Neu in markdownlint 0.49, rein kosmetisch.
 # Wortgleich zu k3s-prod und k3s-thw.
 MD060: false
+# Hugo setzt den Titel aus dem Front Matter als H1; die Artikel beginnen
+# danach mit ### oder ####. Die Ebenen zu heben wuerde die Darstellung
+# veroeffentlichter Artikel aendern — das ist Gestaltung, nicht Lint.
+MD001: false
