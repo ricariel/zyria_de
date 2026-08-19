@@ -14,4 +14,9 @@ jobs:
     steps:
       - uses: https://git.zyria.de/pyrox/actions/hugo@v1
         with:
-          ZYRIA_TOKEN: ${{ secrets.ZYRIA_TOKEN }}
+          # Rueckfallkette, damit die Datei in beiden Instanzen byte-identisch
+          # bleibt: in zyria greift ZYRIA_TOKEN, auf CDP gibt es das Secret
+          # nicht und es faellt auf REGISTRY_TOKEN durch. Ohne die Kette
+          # scheiterte dort jeder Lauf, der tatsaechlich bauen sollte, mit
+          # "Input required and not supplied: token".
+          ZYRIA_TOKEN: ${{ secrets.ZYRIA_TOKEN || secrets.REGISTRY_TOKEN || secrets.CDP_TOKEN }}
