@@ -7,6 +7,10 @@ on:
     branches:
       - main
       - master
+  # Manuell ausloesbar, damit sich eine Seite auch ohne Inhaltsaenderung neu
+  # bauen laesst — die Lauf-Weiche ueberspringt sonst jeden Lauf, bei dem sich
+  # nur CI-Beiwerk geaendert hat.
+  workflow_dispatch:
 
 jobs:
   build:
