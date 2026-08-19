@@ -1,3 +1,6 @@
 ---
 MD013:
   line_length: 2000
+# Tabellen-Pipes ausrichten. Neu in markdownlint 0.49, rein kosmetisch.
+# Wortgleich zu k3s-prod und k3s-thw.
+MD060: false
