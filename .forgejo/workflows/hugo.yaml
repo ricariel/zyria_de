@@ -18,9 +18,13 @@ jobs:
     steps:
       - uses: https://git.zyria.de/pyrox/actions/hugo@v1
         with:
-          # Rueckfallkette, damit die Datei in beiden Instanzen byte-identisch
-          # bleibt: in zyria greift ZYRIA_TOKEN, auf CDP gibt es das Secret
-          # nicht und es faellt auf REGISTRY_TOKEN durch. Ohne die Kette
-          # scheiterte dort jeder Lauf, der tatsaechlich bauen sollte, mit
-          # "Input required and not supplied: token".
-          ZYRIA_TOKEN: ${{ secrets.ZYRIA_TOKEN || secrets.REGISTRY_TOKEN || secrets.CDP_TOKEN }}
+          # Zugriff auf dieses Repository: der eingebaute Token des Laufs.
+          # Er muss nirgends gepflegt werden und gilt genau fuer das Repo,
+          # in dem er laeuft — mehr braucht der Push in den pages-Branch nicht.
+          token: ${{ secrets.FORGEJO_TOKEN }}
+          # Nur fuer Hugo-Module aus PRIVATEN Repositories derselben Instanz
+          # (k3s-prod bei zyria_de und doc-site). Der eingebaute Token kommt
+          # dort nicht heran, weil er auf das laufende Repo beschraenkt ist.
+          # Wo keines dieser Secrets existiert, bleibt der Wert leer und es
+          # wird keine .netrc geschrieben — oeffentliche Module brauchen keine.
+          modules-token: ${{ secrets.REGISTRY_TOKEN }}

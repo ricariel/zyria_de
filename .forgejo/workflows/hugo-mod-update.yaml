@@ -46,7 +46,11 @@ jobs:
       - name: Hugo-Module aktualisieren
         uses: https://git.zyria.de/pyrox/actions/hugo-mod-update@v1
         with:
-          token: ${{ secrets.ZYRIA_TOKEN }}
+          # Nicht der eingebaute Token: die Action schreibt eine .netrc und setzt
+          # GOPRIVATE, um Hugo-Module zu holen. Liegt ein Modul in einem privaten
+          # Repository derselben Instanz (k3s-prod), reicht ein auf das laufende
+          # Repo beschraenkter Token nicht.
+          token: ${{ secrets.REGISTRY_TOKEN }}
           branch: ${{ inputs.branch }}
           tidy: ${{ inputs.tidy }}
           hugo-version: ${{ inputs.hugo-version }}
