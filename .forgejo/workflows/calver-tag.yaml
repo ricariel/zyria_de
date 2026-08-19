@@ -11,9 +11,11 @@
 #       uses: https://git.zyria.de/pyrox/actions/.forgejo/workflows/calver-tag.yaml@v1
 #       secrets: inherit
 #
-# Erzeugt NUR den Tag (+ datierten Changelog-Abschnitt). Das eigentliche
-# Forgejo-Release entsteht daraus über den Workflow forgejo-release.yaml,
-# der auf den gepushten Tag reagiert.
+# Erzeugt NUR den Tag (+ datierten Changelog-Abschnitt). Ein Forgejo-Release
+# entsteht daraus nur, wenn das Repo forgejo-release.yaml hat UND dessen
+# Ausloeser passt: der horcht auf 'v*' und trifft damit nie einen CalVer-Tag
+# wie 2026.33. Wer aus dem CalVer-Tag ein Release will, muss den Ausloeser
+# dort erweitern.
 name: 'Reusable · CalVer-Tag'
 
 # yamllint disable-line rule:truthy
