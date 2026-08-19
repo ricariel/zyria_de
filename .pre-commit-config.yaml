@@ -6,6 +6,14 @@
 default_language_version:
   python: python3
 
+# go.mod wird von Go geschrieben und verwendet dort Tabulatoren. forbid-tabs
+# und remove-tabs ersetzen sie und zerstoeren damit die Datei — nachgestellt
+# in allen fuenf Hugo-Sites.
+exclude: |
+  (?x)^(
+    go\.mod$
+  )
+
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v6.0.0
