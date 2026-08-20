@@ -9,7 +9,17 @@
     <managingEditor>fabrice@zyria.de (Fabrice Kirchner)</managingEditor>
     <webMaster>fabrice@zyria.de (Fabrice Kirchner)</webMaster>
     
-    <lastBuildDate>Sun, 09 Aug 2026 14:45:42 +0200</lastBuildDate><atom:link href="https://zyria.de/categories/k3s-prod/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 20 Aug 2026 00:09:46 +0200</lastBuildDate><atom:link href="https://zyria.de/categories/k3s-prod/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Forgejo</title>
+      <link>https://zyria.de/posts/homelab/k3s-prod/apps/forgejo/readme/</link>
+      <pubDate>Thu, 20 Aug 2026 00:09:46 +0200</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/forgejo/readme/</guid>
+      <description>Dieses Dokument beschreibt die Bereitstellung von Forgejo, einer quelloffenen, selbst gehosteten Git-Plattform.</description>
+      
+    </item>
     
     <item>
       <title>VPN Standort A - Tailscale Subnet Router</title>
@@ -78,16 +88,6 @@
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/posts/homelab/k3s-prod/apps/forgejo-runner/readme/</guid>
       <description>Dieses Dokument beschreibt die Bereitstellung von Forgejo Runner, einem Daemon zum Ausführen von CI/CD-Jobs für Forgejo-Instanzen.</description>
-      
-    </item>
-    
-    <item>
-      <title>Forgejo</title>
-      <link>https://zyria.de/posts/homelab/k3s-prod/apps/forgejo/readme/</link>
-      <pubDate>Tue, 28 Jul 2026 15:44:05 +0200</pubDate>
-      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/forgejo/readme/</guid>
-      <description>Dieses Dokument beschreibt die Bereitstellung von Forgejo, einer quelloffenen, selbst gehosteten Git-Plattform.</description>
       
     </item>
     

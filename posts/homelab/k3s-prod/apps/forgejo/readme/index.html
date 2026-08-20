@@ -104,8 +104,8 @@
 	<meta property="og:locale" content="de_de">
 	<meta property="og:type" content="article">
 		<meta property="article:section" content="posts">
-		<meta property="article:published_time" content="2026-07-28T15:44:05+02:00">
-		<meta property="article:modified_time" content="2026-07-28T15:44:05+02:00">
+		<meta property="article:published_time" content="2026-08-20T00:09:46+02:00">
+		<meta property="article:modified_time" content="2026-08-20T00:09:46+02:00">
 		<meta property="article:tag" content="Kubernetes">
 		<meta property="article:tag" content="K3s">
 		<meta property="article:tag" content="Gitops">
@@ -311,15 +311,15 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
       "sameAs": ["https://git.casa-due-pur.de/fabrice.kirchner", "https://git.zyria.de/pyrox", "https://github.com/ricariel", "https://www.linkedin.com/in/fabrice-kirchner-bb5408163/", "https://www.xing.com/profile/Fabrice_Kirchner", "https://kirchner.social/@fabrice", "https://codeberg.org/ricariel"]
     },
     "copyrightYear": "2026",
-    "dateCreated": "2026-07-28T15:44:05\u002b02:00",
-    "datePublished": "2026-07-28T15:44:05\u002b02:00",
+    "dateCreated": "2026-08-20T00:09:46\u002b02:00",
+    "datePublished": "2026-08-20T00:09:46\u002b02:00",
     
-    "dateModified": "2026-07-28T15:44:05\u002b02:00",
+    "dateModified": "2026-08-20T00:09:46\u002b02:00",
     
     "keywords": ["kubernetes","k3s","gitops","argocd","helm","kustomize","homelab","produktion"],
     
     "mainEntityOfPage": "https://zyria.de/posts/homelab/k3s-prod/apps/forgejo/readme/",
-    "wordCount": "355"
+    "wordCount": "500"
   }]
   </script>
 
@@ -964,7 +964,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2026-07-28T15:44:05&#43;02:00">28 Juli 2026</time><span class="px-2 text-primary-500">&middot;</span><span>355 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
+      <time datetime="2026-08-20T00:09:46&#43;02:00">20 August 2026</time><span class="px-2 text-primary-500">&middot;</span><span>500 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
 
 
   
@@ -1249,6 +1249,8 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
         </li>
         <li><a href="#installation">Installation</a></li>
         <li><a href="#abhängigkeiten">Abhängigkeiten</a></li>
+        <li><a href="#bewusst-nicht-aktivierte-funktionen">Bewusst nicht aktivierte Funktionen</a></li>
+        <li><a href="#hinweise-zum-betrieb">Hinweise zum Betrieb</a></li>
       </ul>
     </li>
   </ul>
@@ -1279,6 +1281,8 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
         </li>
         <li><a href="#installation">Installation</a></li>
         <li><a href="#abhängigkeiten">Abhängigkeiten</a></li>
+        <li><a href="#bewusst-nicht-aktivierte-funktionen">Bewusst nicht aktivierte Funktionen</a></li>
+        <li><a href="#hinweise-zum-betrieb">Hinweise zum Betrieb</a></li>
       </ul>
     </li>
   </ul>
@@ -1636,6 +1640,48 @@ sind Googlebot/Bingbot (halten sich an robots.txt) sowie generische Clients wie
 <li>Ein SMTP-Server für E-Mail-Benachrichtigungen.</li>
 </ul>
 
+<h3 class="relative group">Bewusst nicht aktivierte Funktionen
+    <div id="bewusst-nicht-aktivierte-funktionen" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#bewusst-nicht-aktivierte-funktionen" aria-label="Anker">#</a>
+    </span>
+    
+</h3>
+<p>Beide Funktionen stehen auf dem Forgejo-Standard (<code>false</code>) und werden bewusst
+nicht aktiviert:</p>
+<ul>
+<li><strong>Moderation</strong> (<code>[moderation] ENABLED</code>): Aktiviert Missbrauchsmeldungen, die
+Route <code>/report_abuse</code> und einen Moderationsbereich im Admin. Die Instanz hat
+drei Konten, <code>DISABLE_REGISTRATION = True</code> und <code>FORCE_PRIVATE = True</code> — es
+gäbe weder Meldende noch zu moderierende Inhalte.</li>
+<li><strong>Föderation</strong> (<code>[federation] ENABLED</code>): ActivityPub-Föderation, in Forgejo
+noch experimentell. Sie öffnet zusätzliche Endpunkte auf einer aus dem
+Internet erreichbaren Instanz, und <code>SHARE_USER_STATISTICS</code> würde Nutzerzahlen
+über NodeInfo veröffentlichen. Bei ausschließlich privaten Repositories gibt
+es nichts zu föderieren.</li>
+</ul>
+
+<h3 class="relative group">Hinweise zum Betrieb
+    <div id="hinweise-zum-betrieb" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#hinweise-zum-betrieb" aria-label="Anker">#</a>
+    </span>
+    
+</h3>
+<ul>
+<li>Die <code>app.ini</code> liegt auf dem Longhorn-Volume und wird beim Start mit den
+<code>FORGEJO__*</code>-Umgebungsvariablen <strong>zusammengeführt</strong>, nicht ersetzt. Werte, die
+keine Umgebungsvariable setzt, überleben aus der alten Datei. <code>values.yaml</code>
+ist damit nicht allein maßgeblich für die laufende Konfiguration.</li>
+<li><code>cron.delete_old_actions</code> räumt den <strong>Aktivitäts-Feed</strong> (Tabelle <code>action</code>)
+auf, nicht die Forgejo-Actions-Läufe. Für <code>action_run</code>/<code>action_task</code> gibt es
+in v16 keinen eingebauten Aufräum-Task.</li>
+</ul>
+
           
           
           
@@ -1867,14 +1913,14 @@ sind Googlebot/Bingbot (halten sich an robots.txt) sowie generische Clients wie
           
             <a
               class="flex text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
-              href="/posts/homelab/k3s-prod/apps/openobserve/readme/">
+              href="/posts/homelab/k3s-prod/apps/vpn-site-a/readme/">
               <span class="leading-6">
-                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;zyria.de Webseite
+                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;VPN Standort A - Tailscale Subnet Router
               </span>
             </a>
             
               <span class="ms-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
-                <time datetime="2026-06-17T20:33:06&#43;02:00">17 Juni 2026</time>
+                <time datetime="2026-08-09T14:45:42&#43;02:00">9 August 2026</time>
               </span>
             
           
@@ -1883,14 +1929,14 @@ sind Googlebot/Bingbot (halten sich an robots.txt) sowie generische Clients wie
           
             <a
               class="flex text-right text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
-              href="/posts/homelab/k3s-prod/apps/forgejo-runner/readme/">
+              href="/posts/homelab/k3s-prod/ansible/shutdown-startup/">
               <span class="leading-6">
-                Forgejo Runner&ensp;<span class="inline-block rtl:rotate-180">&rarr;</span>
+                Operational Lifecycle Management: Orchestrierter Shutdown für Kubernetes&ensp;<span class="inline-block rtl:rotate-180">&rarr;</span>
               </span>
             </a>
             
               <span class="me-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
-                <time datetime="2026-07-30T10:19:29&#43;02:00">30 Juli 2026</time>
+                <time datetime="2024-10-27T10:00:00&#43;01:00">27 Oktober 2024</time>
               </span>
             
           

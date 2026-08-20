@@ -9,14 +9,34 @@
     <managingEditor>fabrice@zyria.de (Fabrice Kirchner)</managingEditor>
     <webMaster>fabrice@zyria.de (Fabrice Kirchner)</webMaster>
     
-    <lastBuildDate>Wed, 19 Aug 2026 14:30:13 +0200</lastBuildDate><atom:link href="https://zyria.de/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 20 Aug 2026 00:09:46 +0200</lastBuildDate><atom:link href="https://zyria.de/tags/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>Bash</title>
-      <link>https://zyria.de/tags/bash/</link>
-      <pubDate>Wed, 19 Aug 2026 14:30:13 +0200</pubDate>
+      <title>Argocd</title>
+      <link>https://zyria.de/tags/argocd/</link>
+      <pubDate>Thu, 20 Aug 2026 00:09:46 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://zyria.de/tags/bash/</guid>
+      <guid>https://zyria.de/tags/argocd/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Gitops</title>
+      <link>https://zyria.de/tags/gitops/</link>
+      <pubDate>Thu, 20 Aug 2026 00:09:46 +0200</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://zyria.de/tags/gitops/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Helm</title>
+      <link>https://zyria.de/tags/helm/</link>
+      <pubDate>Thu, 20 Aug 2026 00:09:46 +0200</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://zyria.de/tags/helm/</guid>
       <description></description>
       
     </item>
@@ -24,9 +44,59 @@
     <item>
       <title>Homelab</title>
       <link>https://zyria.de/tags/homelab/</link>
-      <pubDate>Wed, 19 Aug 2026 14:30:13 +0200</pubDate>
+      <pubDate>Thu, 20 Aug 2026 00:09:46 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/tags/homelab/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>K3s</title>
+      <link>https://zyria.de/tags/k3s/</link>
+      <pubDate>Thu, 20 Aug 2026 00:09:46 +0200</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://zyria.de/tags/k3s/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Kubernetes</title>
+      <link>https://zyria.de/tags/kubernetes/</link>
+      <pubDate>Thu, 20 Aug 2026 00:09:46 +0200</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://zyria.de/tags/kubernetes/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Kustomize</title>
+      <link>https://zyria.de/tags/kustomize/</link>
+      <pubDate>Thu, 20 Aug 2026 00:09:46 +0200</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://zyria.de/tags/kustomize/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Produktion</title>
+      <link>https://zyria.de/tags/produktion/</link>
+      <pubDate>Thu, 20 Aug 2026 00:09:46 +0200</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://zyria.de/tags/produktion/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Bash</title>
+      <link>https://zyria.de/tags/bash/</link>
+      <pubDate>Wed, 19 Aug 2026 14:30:13 +0200</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://zyria.de/tags/bash/</guid>
       <description></description>
       
     </item>
@@ -52,77 +122,7 @@
     </item>
     
     <item>
-      <title>Argocd</title>
-      <link>https://zyria.de/tags/argocd/</link>
-      <pubDate>Sun, 09 Aug 2026 14:45:42 +0200</pubDate>
-      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://zyria.de/tags/argocd/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>Gitops</title>
-      <link>https://zyria.de/tags/gitops/</link>
-      <pubDate>Sun, 09 Aug 2026 14:45:42 +0200</pubDate>
-      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://zyria.de/tags/gitops/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>Helm</title>
-      <link>https://zyria.de/tags/helm/</link>
-      <pubDate>Sun, 09 Aug 2026 14:45:42 +0200</pubDate>
-      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://zyria.de/tags/helm/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>K3s</title>
-      <link>https://zyria.de/tags/k3s/</link>
-      <pubDate>Sun, 09 Aug 2026 14:45:42 +0200</pubDate>
-      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://zyria.de/tags/k3s/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>Kubernetes</title>
-      <link>https://zyria.de/tags/kubernetes/</link>
-      <pubDate>Sun, 09 Aug 2026 14:45:42 +0200</pubDate>
-      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://zyria.de/tags/kubernetes/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>Kustomize</title>
-      <link>https://zyria.de/tags/kustomize/</link>
-      <pubDate>Sun, 09 Aug 2026 14:45:42 +0200</pubDate>
-      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://zyria.de/tags/kustomize/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>Produktion</title>
-      <link>https://zyria.de/tags/produktion/</link>
-      <pubDate>Sun, 09 Aug 2026 14:45:42 +0200</pubDate>
-      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://zyria.de/tags/produktion/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>Active Directory</title>
+      <title>Active-Directory</title>
       <link>https://zyria.de/tags/active-directory/</link>
       <pubDate>Tue, 28 Jul 2026 13:53:46 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
