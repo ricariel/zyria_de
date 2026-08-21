@@ -104,8 +104,8 @@
 	<meta property="og:locale" content="de_de">
 	<meta property="og:type" content="article">
 		<meta property="article:section" content="posts">
-		<meta property="article:published_time" content="2026-03-15T14:33:36+01:00">
-		<meta property="article:modified_time" content="2026-03-15T14:33:36+01:00">
+		<meta property="article:published_time" content="2026-08-20T10:27:43+02:00">
+		<meta property="article:modified_time" content="2026-08-20T10:27:43+02:00">
 		<meta property="article:tag" content="Kubernetes">
 		<meta property="article:tag" content="K3s">
 		<meta property="article:tag" content="Gitops">
@@ -311,15 +311,15 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
       "sameAs": ["https://git.casa-due-pur.de/fabrice.kirchner", "https://git.zyria.de/pyrox", "https://github.com/ricariel", "https://www.linkedin.com/in/fabrice-kirchner-bb5408163/", "https://www.xing.com/profile/Fabrice_Kirchner", "https://kirchner.social/@fabrice", "https://codeberg.org/ricariel"]
     },
     "copyrightYear": "2026",
-    "dateCreated": "2026-03-15T14:33:36\u002b01:00",
-    "datePublished": "2026-03-15T14:33:36\u002b01:00",
+    "dateCreated": "2026-08-20T10:27:43\u002b02:00",
+    "datePublished": "2026-08-20T10:27:43\u002b02:00",
     
-    "dateModified": "2026-03-15T14:33:36\u002b01:00",
+    "dateModified": "2026-08-20T10:27:43\u002b02:00",
     
     "keywords": ["kubernetes","k3s","gitops","argocd","helm","kustomize","homelab","produktion"],
     
     "mainEntityOfPage": "https://zyria.de/posts/homelab/k3s-prod/apps/nextcloud/readme/",
-    "wordCount": "304"
+    "wordCount": "682"
   }]
   </script>
 
@@ -964,7 +964,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2026-03-15T14:33:36&#43;01:00">15 März 2026</time><span class="px-2 text-primary-500">&middot;</span><span>304 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
+      <time datetime="2026-08-20T10:27:43&#43;02:00">20 August 2026</time><span class="px-2 text-primary-500">&middot;</span><span>682 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
 
 
   
@@ -1236,8 +1236,6 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   <ul>
     <li><a href="#nextcloud">Nextcloud</a>
       <ul>
-        <li><a href="#status">Status</a></li>
-        <li><a href="#deployment">Deployment</a></li>
         <li><a href="#quelle">Quelle</a></li>
         <li><a href="#komponenten">Komponenten</a></li>
         <li><a href="#dokumentation">Dokumentation</a></li>
@@ -1245,6 +1243,8 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
         <li><a href="#lokale-anpassungen">Lokale Anpassungen</a>
           <ul>
             <li><a href="#wichtige-einstellungen">Wichtige Einstellungen</a></li>
+            <li><a href="#php-fpm-tuning">php-fpm-Tuning</a></li>
+            <li><a href="#caching-und-file-locking">Caching und File-Locking</a></li>
           </ul>
         </li>
         <li><a href="#installation">Installation</a></li>
@@ -1266,8 +1266,6 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   <ul>
     <li><a href="#nextcloud">Nextcloud</a>
       <ul>
-        <li><a href="#status">Status</a></li>
-        <li><a href="#deployment">Deployment</a></li>
         <li><a href="#quelle">Quelle</a></li>
         <li><a href="#komponenten">Komponenten</a></li>
         <li><a href="#dokumentation">Dokumentation</a></li>
@@ -1275,6 +1273,8 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
         <li><a href="#lokale-anpassungen">Lokale Anpassungen</a>
           <ul>
             <li><a href="#wichtige-einstellungen">Wichtige Einstellungen</a></li>
+            <li><a href="#php-fpm-tuning">php-fpm-Tuning</a></li>
+            <li><a href="#caching-und-file-locking">Caching und File-Locking</a></li>
           </ul>
         </li>
         <li><a href="#installation">Installation</a></li>
@@ -1407,90 +1407,9 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
     </span>
     
 </h2>
-
-<h3 class="relative group">Status
-    <div id="status" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#status" aria-label="Anker">#</a>
-    </span>
-    
-</h3>
-<p><figure><img
-    class="my-0 rounded-md"
-    loading="lazy"
-    decoding="async"
-    fetchpriority="low"
-    alt="Status"
-    src="https://status.zyria.de/api/badge/167/status"
-    ></figure>
-
-<figure><img
-    class="my-0 rounded-md"
-    loading="lazy"
-    decoding="async"
-    fetchpriority="low"
-    alt="Uptime"
-    src="https://status.zyria.de/api/badge/167/uptime"
-    ></figure>
-
-<figure><img
-    class="my-0 rounded-md"
-    loading="lazy"
-    decoding="async"
-    fetchpriority="low"
-    alt="Ping"
-    src="https://status.zyria.de/api/badge/167/ping"
-    ></figure>
-
-<figure><img
-    class="my-0 rounded-md"
-    loading="lazy"
-    decoding="async"
-    fetchpriority="low"
-    alt="Avg Response Time"
-    src="https://status.zyria.de/api/badge/167/avg-response"
-    ></figure>
-
-<figure><img
-    class="my-0 rounded-md"
-    loading="lazy"
-    decoding="async"
-    fetchpriority="low"
-    alt="Certificate Expiration"
-    src="https://status.zyria.de/api/badge/167/cert-exp"
-    ></figure>
-
-<figure><img
-    class="my-0 rounded-md"
-    loading="lazy"
-    decoding="async"
-    fetchpriority="low"
-    alt="Response Time"
-    src="https://status.zyria.de/api/badge/167/response"
-    ></figure>
-</p>
-
-<h3 class="relative group">Deployment
-    <div id="deployment" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#deployment" aria-label="Anker">#</a>
-    </span>
-    
-</h3>
-<p><figure><img
-    class="my-0 rounded-md"
-    loading="lazy"
-    decoding="async"
-    fetchpriority="low"
-    alt="Argo Deployment"
-    src="https://argocd.zyria.de/api/badge?name=nextcloud&amp;revision=true&amp;showAppName=true&amp;width=150"
-    ></figure>
-</p>
-
+<blockquote><p><strong>Uptime-Kuma-Monitor:</strong> <code>167</code> — unter dieser ID wird die
+Erreichbarkeit dieses Dienstes geprueft.</p>
+</blockquote>
 <h3 class="relative group">Quelle
     <div id="quelle" class="anchor"></div>
     
@@ -1500,7 +1419,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
     </span>
     
 </h3>
-<p>Die Anwendung wird als generisches <code>app-template</code> Helm-Chart von <a href="https://bjw-s.github.io/helm-charts"  target="_blank" rel="noreferrer">BJW-S Labs</a> bereitgestellt. Das verwendete Docker-Image ist <code>ghcr.io/linuxserver/nextcloud</code>.</p>
+<p>Die Anwendung wird als generisches <code>app-template</code> Helm-Chart von <a href="https://bjw-s-labs.github.io/helm-charts"  target="_blank" rel="noreferrer">BJW-S Labs</a> bereitgestellt. Das verwendete Docker-Image ist <code>ghcr.io/linuxserver/nextcloud</code>.</p>
 
 <h3 class="relative group">Komponenten
     <div id="komponenten" class="anchor"></div>
@@ -1577,9 +1496,96 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
 </h4>
 <ul>
 <li><strong>Ingress</strong>: Der Zugriff auf die Weboberfläche wird über einen Ingress mit einem Hostnamen ermöglicht.</li>
-<li><strong>Speicher</strong>: Alle persistenten Daten (Benutzerdateien, Konfiguration, Datenbank, Redis-DB, ClamAV-Signaturen) werden auf einem NFS-Share gespeichert.</li>
+<li><strong>Speicher</strong>: Alle persistenten Daten (Benutzerdateien, Konfiguration, Datenbank, Redis, ClamAV-Signaturen) liegen auf Longhorn-Volumes.</li>
 <li><strong>Virenscanner</strong>: Der integrierte ClamAV-Dienst ist so konfiguriert, dass er über einen Socket mit der Nextcloud-Anwendung kommuniziert.</li>
 </ul>
+
+<h4 class="relative group">php-fpm-Tuning
+    <div id="php-fpm-tuning" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#php-fpm-tuning" aria-label="Anker">#</a>
+    </span>
+    
+</h4>
+<p><code>php/www2.conf</code> wird als ConfigMap nach <code>/config/php/www2.conf</code> gemountet und
+überschreibt die Pool-Defaults des Images.</p>
+<p>Hintergrund: Das Image liefert <code>pm.max_children = 5</code> aus, und weder
+<code>request_terminate_timeout</code> noch <code>pm.max_requests</code> sind gesetzt. In dieser
+Kombination genügen fünf hängende Requests, um die Instanz bis zum manuellen
+Neustart lahmzulegen — jeder weitere Request läuft dann in den
+60-Sekunden-Timeout von nginx und wird als 504 beantwortet, auch das leere
+<code>/index.php/204</code>. Am 20.08.2026 ist genau das passiert: 5/5 Worker auf 100 %
+CPU, über 18 Minuten CPU-Zeit auf einem einzelnen Request.</p>
+<p>Zwei Dinge hängen zusammen und dürfen nicht getrennt geändert werden:</p>
+<ul>
+<li><code>pm.max_children = 24</code> ist nur vertretbar, <strong>weil</strong> der Nextcloud-Container
+ein CPU-Limit von 4 hat. Ohne das Limit könnten 24 Amok-Worker die 16 Kerne
+von <code>control2</code> samt Control Plane belegen.</li>
+<li><code>request_terminate_timeout = 300</code> räumt hängende Requests ab, während
+<code>request_slowlog_timeout = 10s</code> vorher schon einen vollständigen
+PHP-Backtrace nach <code>/config/log/php/www.slow.log</code> schreibt. Diagnose und
+Stabilität schließen sich hier also nicht aus.</li>
+</ul>
+<p>Beim Containerstart erscheint <code>**** Permissions could not be set ... ****</code>.
+Das ist erwartet: Der LSIO-Init ruft <code>lsiown -R abc:abc /config/php</code> und
+<code>lsiown -R abc:abc /config/www/nextcloud</code> auf und kann die read-only
+gemounteten Pfade nicht chownen. <code>lsiown</code> fängt den Fehler ab und liefert 0,
+der Init läuft normal weiter.</p>
+
+<h4 class="relative group">Caching und File-Locking
+    <div id="caching-und-file-locking" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#caching-und-file-locking" aria-label="Anker">#</a>
+    </span>
+    
+</h4>
+<p><code>config/zz-zyria.config.php</code> wird als ConfigMap nach
+<code>/config/www/nextcloud/config/zz-zyria.config.php</code> gemountet.</p>
+<table>
+	<thead>
+			<tr>
+					<th>Schlüssel</th>
+					<th>Wert</th>
+					<th>Warum</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><code>memcache.local</code></td>
+					<td>APCu</td>
+					<td>prozesslokaler Speicherzugriff statt Netzwerk-Roundtrip</td>
+			</tr>
+			<tr>
+					<td><code>memcache.locking</code></td>
+					<td>Redis</td>
+					<td>muss prozessübergreifend sichtbar sein</td>
+			</tr>
+			<tr>
+					<td><code>memcache.distributed</code></td>
+					<td>Redis</td>
+					<td>unverändert</td>
+			</tr>
+	</tbody>
+</table>
+<p><code>memcache.local</code> und <code>memcache.locking</code> standen vertauscht: APCu war das
+Locking-Backend. APCu ist prozesslokal — Worker 3 sah die Sperren von Worker 7
+nicht und der Cron-Prozess gar keine, Transactional File Locking war damit
+faktisch wirkungslos. Mit <code>pm.max_children = 24</code> statt 5 wächst die
+Kollisionsfläche, der Fix wurde durch das Pool-Tuning also dringender.</p>
+<p>Weil APCu jetzt den kompletten lokalen Cache hält statt nur ein paar
+Lock-Bytes, hebt <code>php/zz-zyria.ini</code> zusätzlich <code>apc.shm_size</code> von 32M auf
+128M. Die beiden Änderungen gehören zusammen.</p>
+<p><strong>Vorsicht bei späteren Änderungen:</strong> Nextcloud lädt <code>config.php</code> zuerst und
+danach alle <code>*.config.php</code> in alphabetischer Reihenfolge. Die gemountete
+Datei gewinnt also immer. Wer einen dieser drei Schlüssel über die
+Admin-Oberfläche oder <code>occ config:system:set</code> ändert, bekommt eine
+Erfolgsmeldung — der Wert landet in <code>config.php</code> und wird beim nächsten
+Request wieder überschrieben. Deshalb steht in der gemounteten Datei bewusst
+nur dieses Minimum; alles andere gehört weiterhin nach <code>config.php</code>.</p>
 
 <h3 class="relative group">Installation
     <div id="installation" class="anchor"></div>
@@ -1606,7 +1612,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
 <li>Ein laufender Kubernetes-Cluster.</li>
 <li>Ein konfigurierter Ingress-Controller (z.B. Traefik).</li>
 <li>Eine Zertifikatsmanagement-Lösung (z.B. cert-manager) zur Bereitstellung von TLS-Zertifikaten.</li>
-<li>Ein NFS-Server für persistente Speicherung.</li>
+<li><strong>Longhorn</strong> als Storage-Provider für die PersistentVolumes.</li>
 </ul>
 
           
@@ -1840,14 +1846,14 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
           
             <a
               class="flex text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
-              href="/posts/homelab/k3s-prod/apps/reloader/readme/">
+              href="/posts/homelab/k3s-prod/apps/vpn-site-a/readme/">
               <span class="leading-6">
-                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;Reloader
+                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;VPN Standort A - Tailscale Subnet Router
               </span>
             </a>
             
               <span class="ms-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
-                <time datetime="2026-03-15T14:33:36&#43;01:00">15 März 2026</time>
+                <time datetime="2026-08-09T14:45:42&#43;02:00">9 August 2026</time>
               </span>
             
           
@@ -1856,14 +1862,14 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
           
             <a
               class="flex text-right text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
-              href="/posts/homelab/k3s-prod/apps/metallb/readme/">
+              href="/posts/homelab/k3s-prod/apps/forgejo/readme/">
               <span class="leading-6">
-                MetalLB&ensp;<span class="inline-block rtl:rotate-180">&rarr;</span>
+                Forgejo&ensp;<span class="inline-block rtl:rotate-180">&rarr;</span>
               </span>
             </a>
             
               <span class="me-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
-                <time datetime="2026-03-15T14:33:36&#43;01:00">15 März 2026</time>
+                <time datetime="2026-08-20T14:43:45&#43;02:00">20 August 2026</time>
               </span>
             
           
