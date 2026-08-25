@@ -9,7 +9,7 @@
     <managingEditor>fabrice@zyria.de (Fabrice Kirchner)</managingEditor>
     <webMaster>fabrice@zyria.de (Fabrice Kirchner)</webMaster>
     
-    <lastBuildDate>Thu, 20 Aug 2026 14:43:45 +0200</lastBuildDate><atom:link href="https://zyria.de/tags/homelab/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 24 Aug 2026 23:38:11 +0200</lastBuildDate><atom:link href="https://zyria.de/tags/homelab/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Virtuelle Maschinen</title>
@@ -22,22 +22,22 @@
     </item>
     
     <item>
+      <title>Nextcloud</title>
+      <link>https://zyria.de/posts/homelab/k3s-prod/apps/nextcloud/readme/</link>
+      <pubDate>Mon, 24 Aug 2026 23:38:11 +0200</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/nextcloud/readme/</guid>
+      <description>Nextcloud ist eine selbst gehostete Produktivitätsplattform für das Speichern, Synchronisieren und Teilen von Dateien sowie die Zusammenarbeit über Kalender, Kontakte und weitere Apps.</description>
+      
+    </item>
+    
+    <item>
       <title>Forgejo</title>
       <link>https://zyria.de/posts/homelab/k3s-prod/apps/forgejo/readme/</link>
       <pubDate>Thu, 20 Aug 2026 14:43:45 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/posts/homelab/k3s-prod/apps/forgejo/readme/</guid>
       <description>Dieses Dokument beschreibt die Bereitstellung von Forgejo, einer quelloffenen, selbst gehosteten Git-Plattform.</description>
-      
-    </item>
-    
-    <item>
-      <title>Nextcloud</title>
-      <link>https://zyria.de/posts/homelab/k3s-prod/apps/nextcloud/readme/</link>
-      <pubDate>Thu, 20 Aug 2026 10:27:43 +0200</pubDate>
-      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/nextcloud/readme/</guid>
-      <description>Nextcloud ist eine selbst gehostete Produktivitätsplattform für das Speichern, Synchronisieren und Teilen von Dateien sowie die Zusammenarbeit über Kalender, Kontakte und weitere Apps.</description>
       
     </item>
     

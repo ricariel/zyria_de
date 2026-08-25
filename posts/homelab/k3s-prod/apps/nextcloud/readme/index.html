@@ -104,8 +104,8 @@
 	<meta property="og:locale" content="de_de">
 	<meta property="og:type" content="article">
 		<meta property="article:section" content="posts">
-		<meta property="article:published_time" content="2026-08-20T10:27:43+02:00">
-		<meta property="article:modified_time" content="2026-08-20T10:27:43+02:00">
+		<meta property="article:published_time" content="2026-08-24T23:38:11+02:00">
+		<meta property="article:modified_time" content="2026-08-24T23:38:11+02:00">
 		<meta property="article:tag" content="Kubernetes">
 		<meta property="article:tag" content="K3s">
 		<meta property="article:tag" content="Gitops">
@@ -311,15 +311,15 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
       "sameAs": ["https://git.casa-due-pur.de/fabrice.kirchner", "https://git.zyria.de/pyrox", "https://github.com/ricariel", "https://www.linkedin.com/in/fabrice-kirchner-bb5408163/", "https://www.xing.com/profile/Fabrice_Kirchner", "https://kirchner.social/@fabrice", "https://codeberg.org/ricariel"]
     },
     "copyrightYear": "2026",
-    "dateCreated": "2026-08-20T10:27:43\u002b02:00",
-    "datePublished": "2026-08-20T10:27:43\u002b02:00",
+    "dateCreated": "2026-08-24T23:38:11\u002b02:00",
+    "datePublished": "2026-08-24T23:38:11\u002b02:00",
     
-    "dateModified": "2026-08-20T10:27:43\u002b02:00",
+    "dateModified": "2026-08-24T23:38:11\u002b02:00",
     
     "keywords": ["kubernetes","k3s","gitops","argocd","helm","kustomize","homelab","produktion"],
     
     "mainEntityOfPage": "https://zyria.de/posts/homelab/k3s-prod/apps/nextcloud/readme/",
-    "wordCount": "682"
+    "wordCount": "1598"
   }]
   </script>
 
@@ -964,7 +964,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2026-08-20T10:27:43&#43;02:00">20 August 2026</time><span class="px-2 text-primary-500">&middot;</span><span>682 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
+      <time datetime="2026-08-24T23:38:11&#43;02:00">24 August 2026</time><span class="px-2 text-primary-500">&middot;</span><span>1598 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
 
 
   
@@ -1244,7 +1244,11 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
           <ul>
             <li><a href="#wichtige-einstellungen">Wichtige Einstellungen</a></li>
             <li><a href="#php-fpm-tuning">php-fpm-Tuning</a></li>
+            <li><a href="#nachtrag-24082026--cpu-limit-opcache-ptrace">Nachtrag 24.08.2026 — CPU-Limit, Opcache, ptrace</a></li>
+            <li><a href="#abgleich-mit-der-nextcloud-doku">Abgleich mit der Nextcloud-Doku</a></li>
+            <li><a href="#request-protokollierung">Request-Protokollierung</a></li>
             <li><a href="#caching-und-file-locking">Caching und File-Locking</a></li>
+            <li><a href="#trusted-proxies">Trusted Proxies</a></li>
           </ul>
         </li>
         <li><a href="#installation">Installation</a></li>
@@ -1274,7 +1278,11 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
           <ul>
             <li><a href="#wichtige-einstellungen">Wichtige Einstellungen</a></li>
             <li><a href="#php-fpm-tuning">php-fpm-Tuning</a></li>
+            <li><a href="#nachtrag-24082026--cpu-limit-opcache-ptrace">Nachtrag 24.08.2026 — CPU-Limit, Opcache, ptrace</a></li>
+            <li><a href="#abgleich-mit-der-nextcloud-doku">Abgleich mit der Nextcloud-Doku</a></li>
+            <li><a href="#request-protokollierung">Request-Protokollierung</a></li>
             <li><a href="#caching-und-file-locking">Caching und File-Locking</a></li>
+            <li><a href="#trusted-proxies">Trusted Proxies</a></li>
           </ul>
         </li>
         <li><a href="#installation">Installation</a></li>
@@ -1407,9 +1415,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
     </span>
     
 </h2>
-<blockquote><p><strong>Uptime-Kuma-Monitor:</strong> <code>167</code> — unter dieser ID wird die
-Erreichbarkeit dieses Dienstes geprueft.</p>
-</blockquote>
+
 <h3 class="relative group">Quelle
     <div id="quelle" class="anchor"></div>
     
@@ -1521,10 +1527,11 @@ CPU, über 18 Minuten CPU-Zeit auf einem einzelnen Request.</p>
 <p>Zwei Dinge hängen zusammen und dürfen nicht getrennt geändert werden:</p>
 <ul>
 <li><code>pm.max_children = 24</code> ist nur vertretbar, <strong>weil</strong> der Nextcloud-Container
-ein CPU-Limit von 4 hat. Ohne das Limit könnten 24 Amok-Worker die 16 Kerne
-von <code>control2</code> samt Control Plane belegen.</li>
+ein CPU-Limit hat. Ohne das Limit könnten 24 Amok-Worker sämtliche Kerne des
+Knotens samt Control Plane belegen. Wer den Wert anhebt, muss das CPU-Limit
+mit anheben — und der Knoten muss die Kerne haben.</li>
 <li><code>request_terminate_timeout = 300</code> räumt hängende Requests ab, während
-<code>request_slowlog_timeout = 10s</code> vorher schon einen vollständigen
+<code>request_slowlog_timeout = 5s</code> vorher schon einen vollständigen
 PHP-Backtrace nach <code>/config/log/php/www.slow.log</code> schreibt. Diagnose und
 Stabilität schließen sich hier also nicht aus.</li>
 </ul>
@@ -1533,6 +1540,166 @@ Das ist erwartet: Der LSIO-Init ruft <code>lsiown -R abc:abc /config/php</code> 
 <code>lsiown -R abc:abc /config/www/nextcloud</code> auf und kann die read-only
 gemounteten Pfade nicht chownen. <code>lsiown</code> fängt den Fehler ab und liefert 0,
 der Init läuft normal weiter.</p>
+
+<h4 class="relative group">Nachtrag 24.08.2026 — CPU-Limit, Opcache, ptrace
+    <div id="nachtrag-24082026--cpu-limit-opcache-ptrace" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#nachtrag-24082026--cpu-limit-opcache-ptrace" aria-label="Anker">#</a>
+    </span>
+    
+</h4>
+<p>Vier Tage später hing die Instanz erneut, diesmal in Schüben statt dauerhaft.
+Der Befund war ein anderer, und er hat drei Änderungen ausgelöst.</p>
+<p><strong>Das CPU-Limit von 4 war zu knapp.</strong> Gemessen an der cgroup:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="ln">1</span><span class="cl">nr_periods      4330
+</span></span><span class="line"><span class="ln">2</span><span class="cl">nr_throttled    2904        →  67 % aller Perioden hart gestoppt
+</span></span><span class="line"><span class="ln">3</span><span class="cl">throttled_usec  714124122   →  714 s Zwangspause</span></span></code></pre></div></div>
+<p>Das Limit hat aus „ein Prozess frisst zu viel&quot; ein „alle Requests dauern
+10 s&quot; gemacht; im Access-Log stand durchgehend HTTP 499, also Abbruch durch
+den Client. Es steht jetzt auf 8 — Schutz bleibt, Drosselung im
+Normalbetrieb entfällt.</p>
+<p><strong>Der Backtrace ließ sich nicht schreiben.</strong> php-fpm erkannte die langsamen
+Requests, scheiterte aber am Auslesen:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="ln">1</span><span class="cl">ERROR: failed to ptrace(ATTACH) child 423: Operation not permitted (1)
+</span></span><span class="line"><span class="ln">2</span><span class="cl">WARNING: child 423, script &#39;index.php&#39; executing too slow (12.196865 sec)</span></span></code></pre></div></div>
+<p>Dem Container fehlte <code>CAP_SYS_PTRACE</code>. Dabei fiel auf, dass die <code>drop</code>-Liste
+in <code>values.yaml</code> <strong>nie gewirkt hat</strong>: <code>CapBnd</code> war exakt der
+containerd-Standardsatz <code>00000000a80425fb</code>, MKNOD/NET_RAW/AUDIT_WRITE also
+noch gesetzt. Kubernetes erwartet die Namen <strong>ohne</strong> <code>CAP_</code>-Präfix. Beides
+ist korrigiert — die Drops greifen ab jetzt zum ersten Mal wirklich, was auch
+heißt: Wenn danach etwas fehlschlägt, das rohe Sockets oder <code>mknod</code> braucht,
+liegt es daran.</p>
+<p><strong>Der Opcache ist zu klein für den Bestand.</strong> 17059 PHP-Dateien (7529 Core,
+9530 Apps) gegen <code>max_accelerated_files = 10000</code>, das intern auf 16229 Slots
+aufgerundet wird. Passt der Working Set nicht hinein, wird bei jedem Request
+nachkompiliert — und das ist User-CPU, was zur Messung passt: <code>user_usec</code>
+1202 s gegen <code>system_usec</code> 14,8 s, bei nur 3 bis 40 Requests pro Minute. <code>php/zz-zyria.ini</code>
+hebt jetzt auf 24000 Dateien und 256 MB an.</p>
+<blockquote><p>Das ist ein begründeter Verdacht, <strong>kein Beweis</strong>. Der Laufzeit-Status des
+Opcache ließ sich nicht auslesen: Der nginx-Vhost leitet eigene
+PHP-Dateien nach <code>index.php</code> um, und Nextclouds eigene Opcache-Prüfung wird
+im CLI-Kontext übersprungen. Ausgeschlossen und getestet wurden dagegen
+DNS, Brute-Force-Drosselung, LDAP-Erreichbarkeit und die Datenbank.</p>
+</blockquote><p>Betroffen waren ausschließlich authentifizierte Endpunkte, dominiert von
+<code>PROPFIND</code> auf <code>/remote.php/dav/principals/users/…</code>. Unauthentifiziertes
+antwortete durchgehend in 10 bis 36 ms.</p>
+
+<h4 class="relative group">Abgleich mit der Nextcloud-Doku
+    <div id="abgleich-mit-der-nextcloud-doku" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#abgleich-mit-der-nextcloud-doku" aria-label="Anker">#</a>
+    </span>
+    
+</h4>
+<p>Gegen <a href="https://docs.nextcloud.com/server/latest/admin_manual/installation/php_configuration.html"  target="_blank" rel="noreferrer">PHP-Konfiguration</a>
+und <a href="https://docs.nextcloud.com/server/latest/admin_manual/installation/server_tuning.html"  target="_blank" rel="noreferrer">Server-Tuning</a>
+geprüft. Das LSIO-Image ist überwiegend bereits konform:</p>
+<table>
+	<thead>
+			<tr>
+					<th>Einstellung</th>
+					<th>Doku</th>
+					<th>Ist</th>
+					<th></th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><code>opcache.save_comments</code></td>
+					<td>1 (strikt gefordert)</td>
+					<td>1</td>
+					<td>Image</td>
+			</tr>
+			<tr>
+					<td><code>opcache.jit</code></td>
+					<td>1255</td>
+					<td>1255</td>
+					<td>Image</td>
+			</tr>
+			<tr>
+					<td><code>opcache.jit_buffer_size</code></td>
+					<td>8M</td>
+					<td>128M</td>
+					<td>Image, großzügiger</td>
+			</tr>
+			<tr>
+					<td><code>opcache.revalidate_freq</code></td>
+					<td>60</td>
+					<td>60</td>
+					<td><code>zz-zyria.ini</code></td>
+			</tr>
+			<tr>
+					<td><code>output_buffering</code></td>
+					<td>0</td>
+					<td>0</td>
+					<td>Image</td>
+			</tr>
+			<tr>
+					<td><code>apc.enable_cli</code></td>
+					<td>1</td>
+					<td>1</td>
+					<td>Image</td>
+			</tr>
+			<tr>
+					<td><code>opcache.enable_cli</code></td>
+					<td>1</td>
+					<td>0 → <strong>1</strong></td>
+					<td>ergänzt</td>
+			</tr>
+			<tr>
+					<td><code>memory_limit</code></td>
+					<td>min. 512M</td>
+					<td>-1 → <strong>1G</strong></td>
+					<td>korrigiert, siehe unten</td>
+			</tr>
+			<tr>
+					<td><code>request_slowlog_timeout</code></td>
+					<td>5s</td>
+					<td>10s → <strong>5s</strong></td>
+					<td>angeglichen</td>
+			</tr>
+			<tr>
+					<td><code>pm.max_children</code></td>
+					<td>30 (Beispiel)</td>
+					<td>24</td>
+					<td>bewusst abweichend</td>
+			</tr>
+	</tbody>
+</table>
+<p><code>pm.max_children</code> bleibt bei 24 statt der 30 aus dem Doku-Beispiel, weil der
+Wert hier an das CPU-Limit von 8 gekoppelt ist und nicht frei gewählt werden
+kann.</p>
+<p><strong>Zum <code>memory_limit</code>:</strong> In der <code>values.yaml</code> stand <code>PHP_MEMORY_LIMIT: &quot;1G&quot;</code>
+als Env-Variable — <strong>wirkungslos</strong>. Das LSIO-Image wertet sie nirgends aus
+(kein Treffer in <code>/etc/s6-overlay</code>) und setzt <code>memory_limit = -1</code>, also
+unbegrenzt, fest in <code>/etc/php84/conf.d/nextcloud.ini</code>. Unbegrenzt ist bei 24
+Workern riskant: Ein einzelner Ausreißer läuft bis ans Container-Limit von
+8Gi und löst den OOM-Killer aus, der dann den ganzen Pod trifft. Mit 1G
+bricht stattdessen nur der eine Request ab. Die Variable wurde entfernt, der
+Wert steht jetzt in <code>php/zz-zyria.ini</code>.</p>
+<p>Für <code>apps/nextcloud-new</code> gilt das <strong>nicht</strong> — das offizielle Image wertet
+<code>PHP_MEMORY_LIMIT</code> aus, dort ist die Env-Variable richtig.</p>
+
+<h4 class="relative group">Request-Protokollierung
+    <div id="request-protokollierung" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#request-protokollierung" aria-label="Anker">#</a>
+    </span>
+    
+</h4>
+<p><code>access.log</code> in <code>php/www2.conf</code> protokolliert <strong>jeden</strong> Request mit Dauer,
+CPU-Anteil und Peak-Memory nach <code>/config/log/php/www.access.log</code>.</p>
+<p>Bewusst php-fpm und nicht nginx: Der nginx-Vhost ist eine LSIO-verwaltete
+Datei im PVC und läuft bei Image-Updates auseinander, und php-fpm liefert
+mehr Felder. Der Slowlog zeigt außerdem nur, was über 10 s liegt — hier ist
+auch der Request bei 3 oder 8 Sekunden sichtbar. Logrotate deckt
+<code>/config/log/php/*.log</code> bereits ab (weekly, rotate 7).</p>
 
 <h4 class="relative group">Caching und File-Locking
     <div id="caching-und-file-locking" class="anchor"></div>
@@ -1587,6 +1754,80 @@ Erfolgsmeldung — der Wert landet in <code>config.php</code> und wird beim näc
 Request wieder überschrieben. Deshalb steht in der gemounteten Datei bewusst
 nur dieses Minimum; alles andere gehört weiterhin nach <code>config.php</code>.</p>
 
+<h4 class="relative group">Trusted Proxies
+    <div id="trusted-proxies" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#trusted-proxies" aria-label="Anker">#</a>
+    </span>
+    
+</h4>
+<p>Ebenfalls in <code>config/zz-zyria.config.php</code>. Nextcloud liest <code>X-Forwarded-For</code>
+nur, wenn die verbindende Adresse in dieser Liste steht. Sonst gilt die
+Proxy-Adresse selbst als Client, und Brute-Force-Schutz wie Rate-Limiting
+treffen den Ingress statt den Angreifer — ein einzelner auffälliger Client
+bremst dann alle anderen mit aus.</p>
+<table>
+	<thead>
+			<tr>
+					<th>Eintrag</th>
+					<th>Herkunft</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><code>10.0.0.0/8</code></td>
+					<td>Pod-Netz (IPv4). Breiter als nötig, siehe unten</td>
+			</tr>
+			<tr>
+					<td><code>fd21:da66:909b::/48</code></td>
+					<td>Pod-Netz (IPv6), <strong>neu ergänzt</strong></td>
+			</tr>
+			<tr>
+					<td><code>172.16.0.0/12</code></td>
+					<td>aus früheren Stack-Generationen, sieht nach Docker-Bridge aus</td>
+			</tr>
+			<tr>
+					<td><code>2a01:4f8:212:350c::/64</code></td>
+					<td>Hetzner, Zweck ungeklärt</td>
+			</tr>
+			<tr>
+					<td><code>2a01:4f8:10a:893::/64</code></td>
+					<td>Hetzner, Zweck ungeklärt</td>
+			</tr>
+	</tbody>
+</table>
+<p>Das v6-Präfix fehlte. Zum Zeitpunkt des Einbaus war der Service
+<code>nextcloud-main</code> noch <code>SingleStack</code>/IPv4, die Lücke also latent — im
+Nextcloud-Log standen aber 15 ältere Einträge mit <code>fd21:da66:909b:2::cbb1</code>
+als vermeintlicher Client-Adresse, es war also schon einmal anders.</p>
+<p>Der Service steht inzwischen auf <code>RequireDualStack</code> (siehe <code>values.yaml</code>),
+passend zu den übrigen Services im Cluster. Damit ist der Eintrag <strong>aktiv
+und notwendig</strong>: Ohne ihn würde jeder über IPv6 eingehende Request die
+Traefik-Pod-IP als Client protokollieren.</p>
+<p>Zwei offene Punkte, bewusst nicht auf Verdacht geändert:</p>
+<ul>
+<li><code>10.0.0.0/8</code> ist breiter als nötig (Pods liegen in <code>10.44.0.0/16</code>, Services
+in <code>10.45.0.0/16</code>). Eingrenzen, sobald geklärt ist, ob im 10er-Netz noch
+etwas anderes davorhängt.</li>
+<li>Ob die beiden Hetzner-Präfixe und <code>172.16.0.0/12</code> noch gebraucht werden,
+ist ungeklärt. Sie stammen aus der Zeit vor der Migration in den Cluster.</li>
+</ul>
+<p><strong>Arrays verhalten sich anders als Skalare.</strong> Bei einem Skalar gewinnt die
+gemountete Datei vollständig — bei <code>memcache.local</code> nachgewiesen. Bei einem
+Array werden die Werte dagegen <strong>pro Index vereinigt</strong>. Das ist beim
+Einbauen aufgefallen: <code>config.php</code> hatte die Indizes 0,1,2,4,5 und die
+gemountete Datei 0 bis 4, das Ergebnis waren sechs Einträge mit einer Dublette.</p>
+<p>Deshalb wurde <code>trusted_proxies</code> per <code>occ config:system:delete trusted_proxies</code> <strong>vollständig aus <code>config.php</code> entfernt</strong>. Die gemountete
+Datei ist damit die einzige Quelle. Wer einen Proxy hinzufügt, muss das hier
+tun; ein <code>occ config:system:set trusted_proxies …</code> würde einen zusätzlichen
+Index anlegen statt einen bestehenden zu ersetzen.</p>
+<blockquote><p>Nebenwirkung, die man kennen muss: Fällt der ConfigMap-Mount weg, ist
+<code>trusted_proxies</code> leer. Nextcloud vertraut dann keinem Proxy mehr und hält
+die Traefik-Adresse für den Client — Brute-Force-Schutz und Rate-Limiting
+träfen dann alle Nutzer gemeinsam.</p>
+</blockquote>
 <h3 class="relative group">Installation
     <div id="installation" class="anchor"></div>
     
@@ -1846,14 +2087,14 @@ nur dieses Minimum; alles andere gehört weiterhin nach <code>config.php</code>.
           
             <a
               class="flex text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
-              href="/posts/homelab/k3s-prod/apps/vpn-site-a/readme/">
+              href="/posts/homelab/k3s-prod/apps/forgejo/readme/">
               <span class="leading-6">
-                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;VPN Standort A - Tailscale Subnet Router
+                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;Forgejo
               </span>
             </a>
             
               <span class="ms-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
-                <time datetime="2026-08-09T14:45:42&#43;02:00">9 August 2026</time>
+                <time datetime="2026-08-20T14:43:45&#43;02:00">20 August 2026</time>
               </span>
             
           
@@ -1862,14 +2103,14 @@ nur dieses Minimum; alles andere gehört weiterhin nach <code>config.php</code>.
           
             <a
               class="flex text-right text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
-              href="/posts/homelab/k3s-prod/apps/forgejo/readme/">
+              href="/posts/homelab/k3s-prod/ansible/shutdown-startup/">
               <span class="leading-6">
-                Forgejo&ensp;<span class="inline-block rtl:rotate-180">&rarr;</span>
+                Operational Lifecycle Management: Orchestrierter Shutdown für Kubernetes&ensp;<span class="inline-block rtl:rotate-180">&rarr;</span>
               </span>
             </a>
             
               <span class="me-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
-                <time datetime="2026-08-20T14:43:45&#43;02:00">20 August 2026</time>
+                <time datetime="2024-10-27T10:00:00&#43;01:00">27 Oktober 2024</time>
               </span>
             
           
