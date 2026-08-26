@@ -104,8 +104,8 @@
 	<meta property="og:locale" content="de_de">
 	<meta property="og:type" content="article">
 		<meta property="article:section" content="posts">
-		<meta property="article:published_time" content="2026-04-22T15:08:28+02:00">
-		<meta property="article:modified_time" content="2026-04-22T15:08:28+02:00">
+		<meta property="article:published_time" content="2026-08-25T09:24:25+02:00">
+		<meta property="article:modified_time" content="2026-08-25T09:24:25+02:00">
 		<meta property="article:tag" content="Kubernetes">
 		<meta property="article:tag" content="K3s">
 		<meta property="article:tag" content="Gitops">
@@ -311,15 +311,15 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
       "sameAs": ["https://git.casa-due-pur.de/fabrice.kirchner", "https://git.zyria.de/pyrox", "https://github.com/ricariel", "https://www.linkedin.com/in/fabrice-kirchner-bb5408163/", "https://www.xing.com/profile/Fabrice_Kirchner", "https://kirchner.social/@fabrice", "https://codeberg.org/ricariel"]
     },
     "copyrightYear": "2026",
-    "dateCreated": "2026-04-22T15:08:28\u002b02:00",
-    "datePublished": "2026-04-22T15:08:28\u002b02:00",
+    "dateCreated": "2026-08-25T09:24:25\u002b02:00",
+    "datePublished": "2026-08-25T09:24:25\u002b02:00",
     
-    "dateModified": "2026-04-22T15:08:28\u002b02:00",
+    "dateModified": "2026-08-25T09:24:25\u002b02:00",
     
     "keywords": ["kubernetes","k3s","gitops","argocd","helm","kustomize","homelab","produktion"],
     
     "mainEntityOfPage": "https://zyria.de/posts/homelab/k3s-prod/apps/music-assistant/readme/",
-    "wordCount": "232"
+    "wordCount": "235"
   }]
   </script>
 
@@ -964,7 +964,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2026-04-22T15:08:28&#43;02:00">22 April 2026</time><span class="px-2 text-primary-500">&middot;</span><span>232 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
+      <time datetime="2026-08-25T09:24:25&#43;02:00">25 August 2026</time><span class="px-2 text-primary-500">&middot;</span><span>235 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
 
 
   
@@ -1236,7 +1236,6 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   <ul>
     <li><a href="#music-assistant">Music Assistant</a>
       <ul>
-        <li><a href="#deployment">Deployment</a></li>
         <li><a href="#quelle">Quelle</a></li>
         <li><a href="#dokumentation">Dokumentation</a></li>
         <li><a href="#funktion">Funktion</a></li>
@@ -1265,7 +1264,6 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   <ul>
     <li><a href="#music-assistant">Music Assistant</a>
       <ul>
-        <li><a href="#deployment">Deployment</a></li>
         <li><a href="#quelle">Quelle</a></li>
         <li><a href="#dokumentation">Dokumentation</a></li>
         <li><a href="#funktion">Funktion</a></li>
@@ -1407,25 +1405,6 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
 </h2>
 <p>Music Assistant ist ein selbst gehosteter Musik-Server, der verschiedene Musikquellen (z.B. lokale Bibliothek, Streaming-Dienste) und Wiedergabegeräte (z.B. Sonos, Chromecast, UPnP) zu einer einheitlichen Oberfläche zusammenführt. Die Integration mit Home Assistant ermöglicht die Steuerung über Automationen.</p>
 
-<h3 class="relative group">Deployment
-    <div id="deployment" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#deployment" aria-label="Anker">#</a>
-    </span>
-    
-</h3>
-<p><figure><img
-    class="my-0 rounded-md"
-    loading="lazy"
-    decoding="async"
-    fetchpriority="low"
-    alt="Argo Deployment"
-    src="https://argocd.zyria.de/api/badge?name=music-assistant&amp;revision=true&amp;showAppName=true&amp;width=150"
-    ></figure>
-</p>
-
 <h3 class="relative group">Quelle
     <div id="quelle" class="anchor"></div>
     
@@ -1493,7 +1472,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
     
 </h4>
 <ul>
-<li><strong>Ingress</strong>: Erreichbar unter <code>https://ma.zyria.de</code> über Traefik.</li>
+<li><strong>Ingress</strong>: Erreichbar über Traefik; der Hostname steht im Ingress in <code>values.yaml</code>.</li>
 <li><strong>TLS</strong>: Zertifikat via <code>cert-manager</code> mit <code>letsencrypt-production</code> ClusterIssuer.</li>
 <li><strong>Persistenz</strong>: Musikbibliothek und Konfiguration werden auf einem bestehenden PersistentVolumeClaim (<code>music-assistant</code>) gespeichert.</li>
 <li><strong>Automatische Updates</strong>: Keel überwacht das Image und aktualisiert bei neuen Tags automatisch.</li>
@@ -1758,14 +1737,14 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
           
             <a
               class="flex text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
-              href="/posts/homelab/k3s-prod/apps/zabbix/readme/">
+              href="/posts/homelab/k3s-prod/apps/nextcloud-new/readme/">
               <span class="leading-6">
-                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;Zabbix
+                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;Nextcloud (neu)
               </span>
             </a>
             
               <span class="ms-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
-                <time datetime="2026-04-22T15:08:28&#43;02:00">22 April 2026</time>
+                <time datetime="2026-08-25T09:24:25&#43;02:00">25 August 2026</time>
               </span>
             
           
@@ -1774,14 +1753,14 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
           
             <a
               class="flex text-right text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
-              href="/posts/homelab/k3s-prod/apps/matrix-new/readme/">
+              href="/posts/homelab/k3s-prod/apps/multus/readme/">
               <span class="leading-6">
-                Matrix (neu)&ensp;<span class="inline-block rtl:rotate-180">&rarr;</span>
+                Multus CNI&ensp;<span class="inline-block rtl:rotate-180">&rarr;</span>
               </span>
             </a>
             
               <span class="me-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
-                <time datetime="2026-06-08T21:41:09&#43;02:00">8 Juni 2026</time>
+                <time datetime="2026-08-25T09:24:25&#43;02:00">25 August 2026</time>
               </span>
             
           

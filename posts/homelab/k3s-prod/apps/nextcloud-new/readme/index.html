@@ -104,8 +104,8 @@
 	<meta property="og:locale" content="de_de">
 	<meta property="og:type" content="article">
 		<meta property="article:section" content="posts">
-		<meta property="article:published_time" content="2026-08-08T17:31:57+02:00">
-		<meta property="article:modified_time" content="2026-08-08T17:31:57+02:00">
+		<meta property="article:published_time" content="2026-08-25T09:24:25+02:00">
+		<meta property="article:modified_time" content="2026-08-25T09:24:25+02:00">
 		<meta property="article:tag" content="Kubernetes">
 		<meta property="article:tag" content="K3s">
 		<meta property="article:tag" content="Gitops">
@@ -311,15 +311,15 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
       "sameAs": ["https://git.casa-due-pur.de/fabrice.kirchner", "https://git.zyria.de/pyrox", "https://github.com/ricariel", "https://www.linkedin.com/in/fabrice-kirchner-bb5408163/", "https://www.xing.com/profile/Fabrice_Kirchner", "https://kirchner.social/@fabrice", "https://codeberg.org/ricariel"]
     },
     "copyrightYear": "2026",
-    "dateCreated": "2026-08-08T17:31:57\u002b02:00",
-    "datePublished": "2026-08-08T17:31:57\u002b02:00",
+    "dateCreated": "2026-08-25T09:24:25\u002b02:00",
+    "datePublished": "2026-08-25T09:24:25\u002b02:00",
     
-    "dateModified": "2026-08-08T17:31:57\u002b02:00",
+    "dateModified": "2026-08-25T09:24:25\u002b02:00",
     
     "keywords": ["kubernetes","k3s","gitops","argocd","helm","kustomize","homelab","produktion"],
     
     "mainEntityOfPage": "https://zyria.de/posts/homelab/k3s-prod/apps/nextcloud-new/readme/",
-    "wordCount": "2140"
+    "wordCount": "2589"
   }]
   </script>
 
@@ -964,7 +964,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2026-08-08T17:31:57&#43;02:00">8 August 2026</time><span class="px-2 text-primary-500">&middot;</span><span>2140 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
+      <time datetime="2026-08-25T09:24:25&#43;02:00">25 August 2026</time><span class="px-2 text-primary-500">&middot;</span><span>2589 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
 
 
   
@@ -1236,11 +1236,12 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   <ul>
     <li><a href="#nextcloud-nextcloud-new">Nextcloud (nextcloud-new)</a>
       <ul>
-        <li><a href="#deployment">Deployment</a></li>
         <li><a href="#unterschiede-zur-altinstallation">Unterschiede zur Altinstallation</a></li>
         <li><a href="#funktionsabgleich">Funktionsabgleich</a></li>
         <li><a href="#komponenten">Komponenten</a></li>
         <li><a href="#versionspinning">Versionspinning</a></li>
+        <li><a href="#php-fpm-tuning">php-fpm-Tuning</a></li>
+        <li><a href="#trusted-proxies">Trusted Proxies</a></li>
         <li><a href="#storage">Storage</a></li>
       </ul>
     </li>
@@ -1280,11 +1281,12 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   <ul>
     <li><a href="#nextcloud-nextcloud-new">Nextcloud (nextcloud-new)</a>
       <ul>
-        <li><a href="#deployment">Deployment</a></li>
         <li><a href="#unterschiede-zur-altinstallation">Unterschiede zur Altinstallation</a></li>
         <li><a href="#funktionsabgleich">Funktionsabgleich</a></li>
         <li><a href="#komponenten">Komponenten</a></li>
         <li><a href="#versionspinning">Versionspinning</a></li>
+        <li><a href="#php-fpm-tuning">php-fpm-Tuning</a></li>
+        <li><a href="#trusted-proxies">Trusted Proxies</a></li>
         <li><a href="#storage">Storage</a></li>
       </ul>
     </li>
@@ -1439,27 +1441,8 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
 Pods mit fünf Containern, die sich localhost und Volumes teilen, ist jede
 Komponente ein eigener Workload mit eigenem Lebenszyklus.</p>
 <p>Die Ablösung erfolgt <strong>in-place</strong>: gleicher Namespace <code>nextcloud</code>, gleicher
-Host <code>cloud.zyria.de</code>, gleiche Volumes. Es gibt keinen Parallelbetrieb —
+Gleicher Host, gleiche Volumes. Es gibt keinen Parallelbetrieb —
 der Cutover ist ein Wartungsfenster, kein sanfter Übergang.</p>
-
-<h3 class="relative group">Deployment
-    <div id="deployment" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#deployment" aria-label="Anker">#</a>
-    </span>
-    
-</h3>
-<p><figure><img
-    class="my-0 rounded-md"
-    loading="lazy"
-    decoding="async"
-    fetchpriority="low"
-    alt="Argo Deployment"
-    src="https://argocd.zyria.de/api/badge?name=nextcloud&amp;revision=true&amp;showAppName=true&amp;width=150"
-    ></figure>
-</p>
 
 <h3 class="relative group">Unterschiede zur Altinstallation
     <div id="unterschiede-zur-altinstallation" class="anchor"></div>
@@ -1511,12 +1494,12 @@ der Cutover ist ein Wartungsfenster, kein sanfter Übergang.</p>
 			</tr>
 			<tr>
 					<td>ClamAV</td>
-					<td>Unix-Socket über ein gemeinsames PVC</td>
+					<td>TCP 3310 auf Loopback, ein Pod</td>
 					<td>eigener Pod, TCP 3310 über Service</td>
 			</tr>
 			<tr>
 					<td>Konfiguration</td>
-					<td><code>config.php</code> im PVC, nicht in Git</td>
+					<td><code>config.php</code> im PVC, Caching-Keys als ConfigMap</td>
 					<td>Env + Chart-Werte in <code>values.yaml</code></td>
 			</tr>
 			<tr>
@@ -1531,8 +1514,13 @@ der Cutover ist ein Wartungsfenster, kein sanfter Übergang.</p>
 			</tr>
 			<tr>
 					<td>Ressourcen</td>
-					<td>keine Limits</td>
 					<td>Requests und Limits pro Container</td>
+					<td>Requests und Limits pro Container</td>
+			</tr>
+			<tr>
+					<td>php-fpm</td>
+					<td><code>www2.conf</code> als ConfigMap</td>
+					<td><code>nextcloud.phpConfigs</code></td>
 			</tr>
 			<tr>
 					<td>Startreihenfolge</td>
@@ -1602,17 +1590,17 @@ der Cutover ist ein Wartungsfenster, kein sanfter Übergang.</p>
 					<td>ersetzt</td>
 			</tr>
 			<tr>
-					<td>Service <code>nextcloud-ssh-service</code> LB <code>192.168.178.29:4022</code> (+IPv6)</td>
+					<td>Service <code>nextcloud-ssh-service</code>, LoadBalancer auf Port 4022 (IPv4 und IPv6)</td>
 					<td><strong>gleicher Name, gleiche IP, gleicher Port</strong></td>
 					<td>unverändert</td>
 			</tr>
 			<tr>
-					<td>Ingress <code>nextcloud</code> → <code>cloud.zyria.de</code></td>
+					<td>Ingress <code>nextcloud</code> → gleicher Host</td>
 					<td>gleicher Name, gleicher Host</td>
 					<td>unverändert</td>
 			</tr>
 			<tr>
-					<td>Certificate <code>cloud.zyria.de</code> → <code>nextcloud-server-tls</code></td>
+					<td>Certificate → <code>nextcloud-server-tls</code></td>
 					<td>unverändert</td>
 					<td>unverändert</td>
 			</tr>
@@ -1760,6 +1748,84 @@ wissen, bevor man sich über die Diskrepanz wundert.</p>
 <p>Nextcloud überspringt keine Major-Versionen. Der Upgrade-Pfad nach der
 Migration ist einzeln: 32 → 33 (Chart 9.1.4) → 34 (Chart 9.2.5).</p>
 
+<h3 class="relative group">php-fpm-Tuning
+    <div id="php-fpm-tuning" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#php-fpm-tuning" aria-label="Anker">#</a>
+    </span>
+    
+</h3>
+<p>Verifiziert in <code>docker.io/library/nextcloud:34.0.3-fpm-alpine</code>:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="ln">1</span><span class="cl">pm.max_children = 5          (www.conf, Zeile 127)
+</span></span><span class="line"><span class="ln">2</span><span class="cl">request_terminate_timeout    nicht gesetzt
+</span></span><span class="line"><span class="ln">3</span><span class="cl">slowlog                      nicht gesetzt
+</span></span><span class="line"><span class="ln">4</span><span class="cl">apc.shm_size = 32M</span></span></code></pre></div></div>
+<p>Das ist exakt die Konstellation, die am 20.08.2026 die Altinstallation
+lahmgelegt hat: fünf hängende Requests belegen alle Worker, und weil kein
+Terminate-Timeout greift, erholt sich die Instanz bis zum manuellen Neustart
+nicht mehr. Jeder weitere Request läuft in den nginx-Timeout. Ohne
+Gegenmaßnahme hätte der Cutover den Ausfall mitgenommen.</p>
+<p><code>nextcloud.phpConfigs</code> legt deshalb <code>zz-zyria.conf</code> nach
+<code>/usr/local/etc/php-fpm.d/</code>. Die Reihenfolge im Image ist <code>docker.conf</code>,
+<code>www.conf</code>, <code>zz-docker.conf</code> — unsere Datei kommt alphabetisch zuletzt und
+gewinnt.</p>
+<p>Drei Kopplungen, die man nicht einzeln anfassen darf:</p>
+<ul>
+<li><code>pm.max_children = 24</code> setzt das <strong>CPU-Limit von 4</strong> voraus. Ohne Limit
+können 24 Amok-Worker einen ganzen Node belegen.</li>
+<li>24 Worker brauchen etwa 3 GiB. Das <strong>Memory-Limit</strong> musste deshalb von 2Gi
+auf 8Gi, sonst greift der OOM-Killer, bevor PHP sein eigenes <code>memory_limit</code>
+zieht.</li>
+<li><code>request_terminate_timeout = 900</code> kappt effektiv den
+<code>fastcgi_read_timeout 3600s</code> des nginx-Sidecars. Das ist Absicht: ein
+Worker, der eine Stunde hängt, ist genau das Szenario, das vermieden werden
+soll. Wer sehr lange Einzelrequests braucht, muss beide Werte gemeinsam
+anheben.</li>
+</ul>
+<p><code>apc.shm_size</code> geht <strong>nicht</strong> über <code>phpConfigs</code>: das Chart mountet diese
+Dateien bei <code>nginx.enabled: true</code> nach <code>/usr/local/etc/php-fpm.d/</code>, wo nur
+Pool-Direktiven gelten. Auch <code>php_admin_value[]</code> hilft nicht, weil APCu sein
+Shared-Memory-Segment beim Modul-Init im Master anlegt. Deshalb der Umweg
+über die ConfigMap <code>nextcloud-php-ini</code> nach
+<code>/usr/local/etc/php/conf.d/zz-zyria.ini</code>.</p>
+<p>Der Slowlog liegt unter <code>/tmp</code> und ist damit beim Pod-Neustart weg. Im
+offiziellen Image gibt es kein persistentes Log-Verzeichnis, und der Webroot
+unter <code>/var/www/html</code> wird von der Integritätsprüfung erfasst. <strong>Beim Cutover
+prüfen,</strong> ob <code>slowlog = /proc/self/fd/2</code> funktioniert — dann landet er im
+Container-Log und damit in fluent-bit.</p>
+
+<h3 class="relative group">Trusted Proxies
+    <div id="trusted-proxies" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#trusted-proxies" aria-label="Anker">#</a>
+    </span>
+    
+</h3>
+<p><code>TRUSTED_PROXIES</code> stand auf <code>10.42.0.0/16</code>, dem k3s-Default. Weicht der
+Cluster davon ab oder laeuft er Dual-Stack, muss der Wert beide Familien
+abdecken. Die tatsaechlichen Bereiche liefert:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">kubectl get nodes -o custom-columns<span class="o">=</span>NAME:.metadata.name,CIDRS:.spec.podCIDRs
+</span></span><span class="line"><span class="ln">2</span><span class="cl">kubectl get pod -n kube-system -l app.kubernetes.io/name<span class="o">=</span>traefik <span class="se">\
+</span></span></span><span class="line"><span class="ln">3</span><span class="cl">  -o custom-columns<span class="o">=</span>NAME:.metadata.name,IPS:.status.podIPs</span></span></code></pre></div></div>
+<p>Fehlt das v6-Präfix, wird jeder über IPv6 eingehende Request nicht als
+Proxy-Request erkannt: Nextcloud protokolliert dann die Traefik-Pod-IP als
+<code>remoteAddr</code>, Brute-Force-Schutz und Rate-Limiting treffen den Ingress statt
+den Angreifer — und ein einzelner auffälliger v6-Client bremst alle anderen
+mit aus. Im Log der Altinstallation standen 15 solcher Einträge, in denen
+eine ULA-Adresse aus dem Pod-Netz als vermeintliche Client-Adresse auftauchte —
+das ist das Erkennungsmerkmal für einen fehlenden v6-Eintrag.</p>
+<p>Der Wert ist <strong>space-separiert</strong> (<code>reverse-proxy.config.php</code> im Image macht
+<code>explode(' ', …)</code>), nicht komma-separiert.</p>
+<blockquote><p>Vor dem Cutover prüfen: Die Altinstallation vertraut zusätzlich
+<code>172.16.0.0/12</code> sowie zwei öffentlichen v6-Präfixen des Hosters. Ob dort noch
+etwas davorhängt, das diese Adressen braucht, ist ungeklärt — falls ja,
+gehören sie in die Liste. Die konkreten Werte stehen in der <code>values.yaml</code> der
+Altinstallation.</p>
+</blockquote>
 <h3 class="relative group">Storage
     <div id="storage" class="anchor"></div>
     
@@ -1777,7 +1843,7 @@ Wechsel der ArgoCD-Application zu einem Sync-Fehler statt zu einer Übernahme.</
 	<thead>
 			<tr>
 					<th>PVC</th>
-					<th>Grösse</th>
+					<th>Größe</th>
 					<th>Inhalt</th>
 					<th>Herkunft</th>
 			</tr>
@@ -1897,9 +1963,9 @@ der Dateien beseitigt die Historie nicht.</p>
 </span></span><span class="line"><span class="ln">16</span><span class="cl">
 </span></span><span class="line"><span class="ln">17</span><span class="cl"><span class="c1"># Nur nötig, wenn icloudpd aktiviert wird.</span>
 </span></span><span class="line"><span class="ln">18</span><span class="cl">kubectl create secret generic nextcloud-icloudpd -n nextcloud <span class="se">\
-</span></span></span><span class="line"><span class="ln">19</span><span class="cl">  --from-literal<span class="o">=</span>apple-username<span class="o">=</span><span class="s1">&#39;fabrice@zyria.de&#39;</span> <span class="se">\
+</span></span></span><span class="line"><span class="ln">19</span><span class="cl">  --from-literal<span class="o">=</span>apple-username<span class="o">=</span><span class="s1">&#39;&lt;benutzer&gt;@&lt;domain&gt;&#39;</span> <span class="se">\
 </span></span></span><span class="line"><span class="ln">20</span><span class="cl">  --from-literal<span class="o">=</span>apple-password<span class="o">=</span><span class="s1">&#39;&lt;neues Apple-App-Passwort&gt;&#39;</span> <span class="se">\
-</span></span></span><span class="line"><span class="ln">21</span><span class="cl">  --from-literal<span class="o">=</span>smtp-username<span class="o">=</span><span class="s1">&#39;fabrice@zyria.de&#39;</span> <span class="se">\
+</span></span></span><span class="line"><span class="ln">21</span><span class="cl">  --from-literal<span class="o">=</span>smtp-username<span class="o">=</span><span class="s1">&#39;&lt;benutzer&gt;@&lt;domain&gt;&#39;</span> <span class="se">\
 </span></span></span><span class="line"><span class="ln">22</span><span class="cl">  --from-literal<span class="o">=</span>smtp-password<span class="o">=</span><span class="s1">&#39;&lt;neues SMTP-Passwort&gt;&#39;</span></span></span></code></pre></div></div>
 <p>Die erzeugten Passwörter danach auslesen und im Passwortmanager ablegen:</p>
 <div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">kubectl -n nextcloud get secret nextcloud-db -o <span class="nv">jsonpath</span><span class="o">=</span><span class="s1">&#39;{.data}&#39;</span> <span class="se">\
@@ -1918,7 +1984,7 @@ der Dateien beseitigt die Historie nicht.</p>
 </h2>
 <p>Ausgangslage: <code>apps/nextcloud</code> läuft. Ziel: dieselbe Instanz, dieselben Daten,
 neue Struktur. Die Schritte 1-4 laufen ohne Downtime, ab Schritt 5 ist
-<code>cloud.zyria.de</code> nicht erreichbar.</p>
+Die Nextcloud-Oberfläche ist nicht erreichbar.</p>
 
 <h3 class="relative group">Schritt 1 — Ist-Zustand gegen storage.yaml abgleichen
     <div id="schritt-1--ist-zustand-gegen-storageyaml-abgleichen" class="anchor"></div>
@@ -2091,7 +2157,7 @@ steht und das RWO-Volume damit frei ist:</p>
 </span></span><span class="line"><span class="ln">2</span><span class="cl">rm -rf /mnt/data             <span class="c1"># Reste der Erstinstallation aus Schritt 6</span>
 </span></span><span class="line"><span class="ln">3</span><span class="cl">mkdir -p /mnt/data
 </span></span><span class="line"><span class="ln">4</span><span class="cl">find /mnt -mindepth <span class="m">1</span> -maxdepth <span class="m">1</span> ! -name data -exec mv -t /mnt/data <span class="o">{}</span> +
-</span></span><span class="line"><span class="ln">5</span><span class="cl">ls /mnt/data                 <span class="c1"># erwartet: appdata_&lt;alte-id&gt;, fabrice@zyria.de, .ocdata</span>
+</span></span><span class="line"><span class="ln">5</span><span class="cl">ls /mnt/data                 <span class="c1"># erwartet: appdata_&lt;alte-id&gt;, &lt;benutzerverzeichnis&gt;, .ocdata</span>
 </span></span><span class="line"><span class="ln">6</span><span class="cl">chown -R 33:33 /mnt
 </span></span><span class="line"><span class="ln">7</span><span class="cl">exit</span></span></code></pre></div></div>
 <p><code>chown -R</code> über 350 Gi läuft je nach Dateizahl lange und darf nicht
@@ -2163,7 +2229,7 @@ Up- und Download, Freigabe-Link, CalDAV/CardDAV, <code>/php</code> hinter Authen
 ein Upload gegen den Virenscanner, und einen Cron-Lauf abwarten
 (<code>kubectl -n nextcloud get jobs</code>).</p>
 <p>SSH gegen den unveränderten Endpunkt:</p>
-<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">ssh -p <span class="m">4022</span> fabrice@192.168.178.29</span></span></code></pre></div></div>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">ssh -p <span class="m">4022</span> &lt;benutzer&gt;@&lt;loadbalancer-ip&gt;</span></span></code></pre></div></div>
 <p>Wenn alles steht, icloudpd aktivieren: in <code>values-services.yaml</code> bei beiden
 Controllern <code>replicas: 0</code> auf <code>1</code> setzen.</p>
 
@@ -2184,7 +2250,7 @@ Controllern <code>replicas: 0</code> auf <code>1</code> setzen.</p>
 Longhorn-Volumes bleiben also erhalten und müssen dort separat gelöscht
 werden.</li>
 <li><code>git rm -r apps/nextcloud</code> und <code>git mv apps/nextcloud-new apps/nextcloud</code>,
-dann den Pfad in <code>manifests.yaml</code> zurückstellen. Damit heisst das
+dann den Pfad in <code>manifests.yaml</code> zurückstellen. Damit heißt das
 Verzeichnis wieder wie der Namespace, wie es die Repo-Konvention vorsieht.</li>
 </ol>
 <hr>
@@ -2252,7 +2318,7 @@ nach dem Testen aufräumen.</p>
 <li>Traefik mit Entrypoint <code>websecure</code> und den Middlewares <code>localnet</code> und
 <code>authentik</code> im Namespace <code>kube-system</code></li>
 <li>cert-manager mit ClusterIssuer <code>letsencrypt-production</code></li>
-<li>MetalLB für den SSH-LoadBalancer (<code>192.168.178.29</code>, geteilte IP)</li>
+<li>MetalLB für den SSH-LoadBalancer (feste, mit anderen Diensten geteilte IP)</li>
 </ul>
 
 <h2 class="relative group">Dokumentation
@@ -2503,14 +2569,14 @@ nach dem Testen aufräumen.</p>
           
             <a
               class="flex text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
-              href="/posts/homelab/k3s-prod/apps/mailstack-new/readme/">
+              href="/posts/homelab/k3s-prod/apps/opendtu/readme/">
               <span class="leading-6">
-                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;Mailstack
+                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;OpenDTU
               </span>
             </a>
             
               <span class="ms-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
-                <time datetime="2026-08-04T22:12:11&#43;02:00">4 August 2026</time>
+                <time datetime="2026-08-25T09:24:25&#43;02:00">25 August 2026</time>
               </span>
             
           
@@ -2519,14 +2585,14 @@ nach dem Testen aufräumen.</p>
           
             <a
               class="flex text-right text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
-              href="/posts/homelab/k3s-prod/apps/vpn-site-b/readme/">
+              href="/posts/homelab/k3s-prod/apps/music-assistant/readme/">
               <span class="leading-6">
-                VPN Standort B - Tailscale Subnet Router&ensp;<span class="inline-block rtl:rotate-180">&rarr;</span>
+                Music Assistant&ensp;<span class="inline-block rtl:rotate-180">&rarr;</span>
               </span>
             </a>
             
               <span class="me-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
-                <time datetime="2026-08-08T22:29:11&#43;02:00">8 August 2026</time>
+                <time datetime="2026-08-25T09:24:25&#43;02:00">25 August 2026</time>
               </span>
             
           

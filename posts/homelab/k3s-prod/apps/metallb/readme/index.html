@@ -104,8 +104,8 @@
 	<meta property="og:locale" content="de_de">
 	<meta property="og:type" content="article">
 		<meta property="article:section" content="posts">
-		<meta property="article:published_time" content="2026-03-15T14:33:36+01:00">
-		<meta property="article:modified_time" content="2026-03-15T14:33:36+01:00">
+		<meta property="article:published_time" content="2026-08-25T09:24:25+02:00">
+		<meta property="article:modified_time" content="2026-08-25T09:24:25+02:00">
 		<meta property="article:tag" content="Kubernetes">
 		<meta property="article:tag" content="K3s">
 		<meta property="article:tag" content="Gitops">
@@ -311,15 +311,15 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
       "sameAs": ["https://git.casa-due-pur.de/fabrice.kirchner", "https://git.zyria.de/pyrox", "https://github.com/ricariel", "https://www.linkedin.com/in/fabrice-kirchner-bb5408163/", "https://www.xing.com/profile/Fabrice_Kirchner", "https://kirchner.social/@fabrice", "https://codeberg.org/ricariel"]
     },
     "copyrightYear": "2026",
-    "dateCreated": "2026-03-15T14:33:36\u002b01:00",
-    "datePublished": "2026-03-15T14:33:36\u002b01:00",
+    "dateCreated": "2026-08-25T09:24:25\u002b02:00",
+    "datePublished": "2026-08-25T09:24:25\u002b02:00",
     
-    "dateModified": "2026-03-15T14:33:36\u002b01:00",
+    "dateModified": "2026-08-25T09:24:25\u002b02:00",
     
     "keywords": ["kubernetes","k3s","gitops","argocd","helm","kustomize","homelab","produktion"],
     
     "mainEntityOfPage": "https://zyria.de/posts/homelab/k3s-prod/apps/metallb/readme/",
-    "wordCount": "239"
+    "wordCount": "253"
   }]
   </script>
 
@@ -964,7 +964,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2026-03-15T14:33:36&#43;01:00">15 März 2026</time><span class="px-2 text-primary-500">&middot;</span><span>239 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
+      <time datetime="2026-08-25T09:24:25&#43;02:00">25 August 2026</time><span class="px-2 text-primary-500">&middot;</span><span>253 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
 
 
   
@@ -1236,7 +1236,6 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   <ul>
     <li><a href="#metallb">MetalLB</a>
       <ul>
-        <li><a href="#deployment">Deployment</a></li>
         <li><a href="#quelle">Quelle</a></li>
         <li><a href="#dokumentation">Dokumentation</a></li>
         <li><a href="#funktion">Funktion</a></li>
@@ -1264,7 +1263,6 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   <ul>
     <li><a href="#metallb">MetalLB</a>
       <ul>
-        <li><a href="#deployment">Deployment</a></li>
         <li><a href="#quelle">Quelle</a></li>
         <li><a href="#dokumentation">Dokumentation</a></li>
         <li><a href="#funktion">Funktion</a></li>
@@ -1404,25 +1402,6 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
     
 </h2>
 
-<h3 class="relative group">Deployment
-    <div id="deployment" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#deployment" aria-label="Anker">#</a>
-    </span>
-    
-</h3>
-<p><figure><img
-    class="my-0 rounded-md"
-    loading="lazy"
-    decoding="async"
-    fetchpriority="low"
-    alt="Argo Deployment"
-    src="https://argocd.zyria.de/api/badge?name=metallb&amp;revision=true&amp;showAppName=true&amp;width=150"
-    ></figure>
-</p>
-
 <h3 class="relative group">Quelle
     <div id="quelle" class="anchor"></div>
     
@@ -1465,7 +1444,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
     </span>
     
 </h3>
-<p>Die Konfiguration der IP-Adresspools erfolgt nicht über dieses Helm-Chart, sondern vermutlich direkt über <code>IPAddressPool</code>- und <code>L2Advertisement</code>-Custom-Ressourcen, die separat im Cluster angewendet werden.</p>
+<p>Die IP-Adresspools kommen nicht aus dem Helm-Chart, sondern aus eigenen <code>IPAddressPool</code>- und <code>L2Advertisement</code>-Manifesten in diesem Verzeichnis.</p>
 
 <h4 class="relative group">Wichtige Einstellungen
     <div id="wichtige-einstellungen" class="anchor"></div>
@@ -1479,14 +1458,9 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
 <ul>
 <li><strong>Namespace:</strong> <code>metallb-system</code></li>
 <li><strong>Helm Chart:</strong> <code>metallb/metallb</code></li>
-<li><strong>IP Address Pool (<code>pool</code>):</strong>
-<ul>
-<li>Example IPv4 range: <code>192.168.10.0/24</code></li>
-<li>Example IPv6 range: <code>fc00:f853:ccd:e793::/64</code></li>
-</ul>
-</li>
-<li><strong>L2 Advertisement:</strong> All addresses from the <code>pool</code> are announced via L2.</li>
-<li><strong>Logging:</strong> The log level for the controller and speaker is set to <code>warn</code>.</li>
+<li><strong>IP Address Pool (<code>pool</code>):</strong> Je ein IPv4- und ein IPv6-Bereich aus dem lokalen Netz. Die tatsächlichen Bereiche stehen in den Manifesten dieses Verzeichnisses und dürfen sich nicht mit dem DHCP-Bereich des Routers überschneiden.</li>
+<li><strong>L2 Advertisement:</strong> Alle Adressen des Pools werden per ARP/NDP angekündigt, allerdings nur von den Control-Plane-Knoten (<code>nodeSelectors</code>).</li>
+<li><strong>Logging:</strong> Log-Level von Controller und Speaker steht auf <code>warn</code>.</li>
 <li><strong>FRR:</strong> Free Range Routing (FRR) ist deaktiviert (<code>frr.enabled: false</code>). Es wird der native MetalLB-Speaker verwendet.</li>
 </ul>
 
@@ -1744,14 +1718,14 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
           
             <a
               class="flex text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
-              href="/posts/homelab/k3s-prod/apps/reloader/readme/">
+              href="/posts/homelab/k3s-prod/apps/mta-sts/readme/">
               <span class="leading-6">
-                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;Reloader
+                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;MTA-STS Policy Server
               </span>
             </a>
             
               <span class="ms-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
-                <time datetime="2026-03-15T14:33:36&#43;01:00">15 März 2026</time>
+                <time datetime="2026-08-25T09:24:25&#43;02:00">25 August 2026</time>
               </span>
             
           
@@ -1767,7 +1741,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
             </a>
             
               <span class="me-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
-                <time datetime="2026-03-15T14:33:36&#43;01:00">15 März 2026</time>
+                <time datetime="2026-08-25T09:24:25&#43;02:00">25 August 2026</time>
               </span>
             
           

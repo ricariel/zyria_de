@@ -104,8 +104,8 @@
 	<meta property="og:locale" content="de_de">
 	<meta property="og:type" content="article">
 		<meta property="article:section" content="posts">
-		<meta property="article:published_time" content="2026-08-24T23:38:11+02:00">
-		<meta property="article:modified_time" content="2026-08-24T23:38:11+02:00">
+		<meta property="article:published_time" content="2026-08-25T08:12:04+02:00">
+		<meta property="article:modified_time" content="2026-08-25T08:12:04+02:00">
 		<meta property="article:tag" content="Kubernetes">
 		<meta property="article:tag" content="K3s">
 		<meta property="article:tag" content="Gitops">
@@ -311,15 +311,15 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
       "sameAs": ["https://git.casa-due-pur.de/fabrice.kirchner", "https://git.zyria.de/pyrox", "https://github.com/ricariel", "https://www.linkedin.com/in/fabrice-kirchner-bb5408163/", "https://www.xing.com/profile/Fabrice_Kirchner", "https://kirchner.social/@fabrice", "https://codeberg.org/ricariel"]
     },
     "copyrightYear": "2026",
-    "dateCreated": "2026-08-24T23:38:11\u002b02:00",
-    "datePublished": "2026-08-24T23:38:11\u002b02:00",
+    "dateCreated": "2026-08-25T08:12:04\u002b02:00",
+    "datePublished": "2026-08-25T08:12:04\u002b02:00",
     
-    "dateModified": "2026-08-24T23:38:11\u002b02:00",
+    "dateModified": "2026-08-25T08:12:04\u002b02:00",
     
     "keywords": ["kubernetes","k3s","gitops","argocd","helm","kustomize","homelab","produktion"],
     
     "mainEntityOfPage": "https://zyria.de/posts/homelab/k3s-prod/apps/nextcloud/readme/",
-    "wordCount": "1598"
+    "wordCount": "1868"
   }]
   </script>
 
@@ -964,7 +964,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2026-08-24T23:38:11&#43;02:00">24 August 2026</time><span class="px-2 text-primary-500">&middot;</span><span>1598 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
+      <time datetime="2026-08-25T08:12:04&#43;02:00">25 August 2026</time><span class="px-2 text-primary-500">&middot;</span><span>1868 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
 
 
   
@@ -1245,6 +1245,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
             <li><a href="#wichtige-einstellungen">Wichtige Einstellungen</a></li>
             <li><a href="#php-fpm-tuning">php-fpm-Tuning</a></li>
             <li><a href="#nachtrag-24082026--cpu-limit-opcache-ptrace">Nachtrag 24.08.2026 — CPU-Limit, Opcache, ptrace</a></li>
+            <li><a href="#aufloesung-25082026--es-war-dns">Aufloesung 25.08.2026 — es war DNS</a></li>
             <li><a href="#abgleich-mit-der-nextcloud-doku">Abgleich mit der Nextcloud-Doku</a></li>
             <li><a href="#request-protokollierung">Request-Protokollierung</a></li>
             <li><a href="#caching-und-file-locking">Caching und File-Locking</a></li>
@@ -1279,6 +1280,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
             <li><a href="#wichtige-einstellungen">Wichtige Einstellungen</a></li>
             <li><a href="#php-fpm-tuning">php-fpm-Tuning</a></li>
             <li><a href="#nachtrag-24082026--cpu-limit-opcache-ptrace">Nachtrag 24.08.2026 — CPU-Limit, Opcache, ptrace</a></li>
+            <li><a href="#aufloesung-25082026--es-war-dns">Aufloesung 25.08.2026 — es war DNS</a></li>
             <li><a href="#abgleich-mit-der-nextcloud-doku">Abgleich mit der Nextcloud-Doku</a></li>
             <li><a href="#request-protokollierung">Request-Protokollierung</a></li>
             <li><a href="#caching-und-file-locking">Caching und File-Locking</a></li>
@@ -1586,6 +1588,49 @@ DNS, Brute-Force-Drosselung, LDAP-Erreichbarkeit und die Datenbank.</p>
 <code>PROPFIND</code> auf <code>/remote.php/dav/principals/users/…</code>. Unauthentifiziertes
 antwortete durchgehend in 10 bis 36 ms.</p>
 
+<h4 class="relative group">Aufloesung 25.08.2026 — es war DNS
+    <div id="aufloesung-25082026--es-war-dns" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#aufloesung-25082026--es-war-dns" aria-label="Anker">#</a>
+    </span>
+    
+</h4>
+<p>Der php-fpm-Slowlog hat die Ursache der Schuebe festgenagelt:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="ln">1</span><span class="cl">script_filename = /app/www/public/remote.php
+</span></span><span class="line"><span class="ln">2</span><span class="cl">  ldap_start_tls()          user_ldap/lib/LDAP.php:304     &lt;- hier stand er
+</span></span><span class="line"><span class="ln">3</span><span class="cl">  startTls() -&gt; doConnect() -&gt; establishConnection()
+</span></span><span class="line"><span class="ln">4</span><span class="cl">  bind() -&gt; areCredentialsValid() -&gt; checkPassword()
+</span></span><span class="line"><span class="ln">5</span><span class="cl">  checkTokenCredentials()   lib/private/User/Session.php:732
+</span></span><span class="line"><span class="ln">6</span><span class="cl">  validateToken() -&gt; validateSession()</span></span></code></pre></div></div>
+<p>Nextcloud validiert Session-Tokens periodisch gegen LDAP nach. Dabei blieb
+<code>ldap_start_tls()</code> haengen, weil <code>addc.zyria.de</code> clusterweit auf die
+oeffentliche WAN-Adresse aufgeloest wurde, die per Hairpin-NAT nicht
+erreichbar ist. Jeder Verbindungsaufbau lief erst dort hinein und fiel dann
+auf IPv6 zurueck:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="ln">1</span><span class="cl">vorher:  17 ms / 16 ms / 3077 ms   (derselbe Aufruf, Deckel bei 15 s)
+</span></span><span class="line"><span class="ln">2</span><span class="cl">nachher: 8,5 bis 17,3 ms           (12 Messungen, Mittel 11,1 ms)</span></span></code></pre></div></div>
+<p>Das erklaert alle drei Auffaelligkeiten: nur authentifizierte Endpunkte
+(nur die fassen LDAP an), schubweises Auftreten (wenn mehrere Clients
+gleichzeitig synchronisieren und Tokens faellig werden) und Requests, die
+warten statt zu rechnen (<code>cpu=0,42 %</code> bei 7,1 s).</p>
+<p>Behoben ausserhalb dieser App, in <code>apps/nameserver</code> und <code>apps/coredns</code> —
+der DC-Hostname liegt in der oeffentlichen Zone <code>zyria.de</code> und war deshalb
+durch alle intern weitergeleiteten Zonen gefallen. Betraf ebenso mailstack,
+self-service-password und wireguard.</p>
+<p>Zusaetzlich als Sicherheitsnetz, per <code>occ</code> gesetzt (die LDAP-Konfiguration
+liegt in der Datenbank, nicht in <code>values.yaml</code>):</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">occ ldap:set-config s01 ldapConnectionTimeout <span class="m">3</span></span></span></code></pre></div></div>
+<p>Vorher 15. Sollte ein LDAP-Ziel je wieder unerreichbar werden, kostet das
+jetzt 3 statt 15 Sekunden pro Versuch. Fuer einen DC, der im LAN in 1 ms
+antwortet, sind 3 Sekunden reichlich Reserve.</p>
+<blockquote><p>Die Opcache-Vergroesserung weiter oben war <strong>nicht</strong> die Loesung. Sie
+beruhte auf der Fehldeutung einer Summenstatistik (<code>user_usec</code> gegen
+<code>system_usec</code>); die Werte pro Request zeigten das Gegenteil. Sie bleibt
+drin, weil sie an der Dateizahl gemessen sachlich richtig ist, erklaert
+die Haenger aber nicht.</p>
+</blockquote>
 <h4 class="relative group">Abgleich mit der Nextcloud-Doku
     <div id="abgleich-mit-der-nextcloud-doku" class="anchor"></div>
     
@@ -2103,14 +2148,14 @@ träfen dann alle Nutzer gemeinsam.</p>
           
             <a
               class="flex text-right text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
-              href="/posts/homelab/k3s-prod/ansible/shutdown-startup/">
+              href="/posts/homelab/k3s-prod/apps/zyria-de/readme/">
               <span class="leading-6">
-                Operational Lifecycle Management: Orchestrierter Shutdown für Kubernetes&ensp;<span class="inline-block rtl:rotate-180">&rarr;</span>
+                zyria.de Webseite&ensp;<span class="inline-block rtl:rotate-180">&rarr;</span>
               </span>
             </a>
             
               <span class="me-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
-                <time datetime="2024-10-27T10:00:00&#43;01:00">27 Oktober 2024</time>
+                <time datetime="2026-08-25T09:24:25&#43;02:00">25 August 2026</time>
               </span>
             
           

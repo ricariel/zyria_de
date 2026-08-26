@@ -104,8 +104,8 @@
 	<meta property="og:locale" content="de_de">
 	<meta property="og:type" content="article">
 		<meta property="article:section" content="posts">
-		<meta property="article:published_time" content="2025-08-26T01:05:41+02:00">
-		<meta property="article:modified_time" content="2025-08-26T01:05:41+02:00">
+		<meta property="article:published_time" content="2026-08-25T09:24:25+02:00">
+		<meta property="article:modified_time" content="2026-08-25T09:24:25+02:00">
 		<meta property="article:tag" content="Kubernetes">
 		<meta property="article:tag" content="K3s">
 		<meta property="article:tag" content="Gitops">
@@ -310,16 +310,16 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
       "image": "https://zyria.de/images/chibi-head.jpg",
       "sameAs": ["https://git.casa-due-pur.de/fabrice.kirchner", "https://git.zyria.de/pyrox", "https://github.com/ricariel", "https://www.linkedin.com/in/fabrice-kirchner-bb5408163/", "https://www.xing.com/profile/Fabrice_Kirchner", "https://kirchner.social/@fabrice", "https://codeberg.org/ricariel"]
     },
-    "copyrightYear": "2025",
-    "dateCreated": "2025-08-26T01:05:41\u002b02:00",
-    "datePublished": "2025-08-26T01:05:41\u002b02:00",
+    "copyrightYear": "2026",
+    "dateCreated": "2026-08-25T09:24:25\u002b02:00",
+    "datePublished": "2026-08-25T09:24:25\u002b02:00",
     
-    "dateModified": "2025-08-26T01:05:41\u002b02:00",
+    "dateModified": "2026-08-25T09:24:25\u002b02:00",
     
     "keywords": ["kubernetes","k3s","gitops","argocd","helm","kustomize","homelab","produktion"],
     
     "mainEntityOfPage": "https://zyria.de/posts/homelab/k3s-prod/apps/uptime-kuma/readme/",
-    "wordCount": "266"
+    "wordCount": "250"
   }]
   </script>
 
@@ -964,7 +964,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2025-08-26T01:05:41&#43;02:00">26 August 2025</time><span class="px-2 text-primary-500">&middot;</span><span>266 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
+      <time datetime="2026-08-25T09:24:25&#43;02:00">25 August 2026</time><span class="px-2 text-primary-500">&middot;</span><span>250 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
 
 
   
@@ -1236,7 +1236,6 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   <ul>
     <li><a href="#uptime-kuma">Uptime Kuma</a>
       <ul>
-        <li><a href="#deployment">Deployment</a></li>
         <li><a href="#quelle">Quelle</a></li>
         <li><a href="#dokumentation">Dokumentation</a></li>
         <li><a href="#funktion">Funktion</a></li>
@@ -1264,7 +1263,6 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   <ul>
     <li><a href="#uptime-kuma">Uptime Kuma</a>
       <ul>
-        <li><a href="#deployment">Deployment</a></li>
         <li><a href="#quelle">Quelle</a></li>
         <li><a href="#dokumentation">Dokumentation</a></li>
         <li><a href="#funktion">Funktion</a></li>
@@ -1405,25 +1403,6 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
 </h2>
 <p>Uptime Kuma is a self-hosted, open-source monitoring tool that allows you to track the uptime and performance of various services. It can monitor HTTP/HTTPS websites, TCP ports, Ping, DNS records, SSL certificates, databases, Docker containers, and more.</p>
 
-<h3 class="relative group">Deployment
-    <div id="deployment" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#deployment" aria-label="Anker">#</a>
-    </span>
-    
-</h3>
-<p><figure><img
-    class="my-0 rounded-md"
-    loading="lazy"
-    decoding="async"
-    fetchpriority="low"
-    alt="Argo Deployment"
-    src="https://argocd.zyria.de/api/badge?name=uptime-kuma&amp;revision=true&amp;showAppName=true&amp;width=150"
-    ></figure>
-</p>
-
 <h3 class="relative group">Quelle
     <div id="quelle" class="anchor"></div>
     
@@ -1459,7 +1438,7 @@ The Docker image used is <a href="https://hub.docker.com/r/louislam/uptime-kuma"
     </span>
     
 </h3>
-<p>Uptime Kuma wird verwendet, um die Erreichbarkeit der verschiedenen im Cluster und im Netzwerk betriebenen Dienste zu überwachen. Es prüft in regelmäßigen Abständen, ob die konfigurierten Endpunkte (z.B. Webseiten, APIs) erreichbar sind und korrekt antworten. Die Ergebnisse werden auf einer öffentlichen Statusseite unter <code>status.zyria.de</code> angezeigt. Diese Statusseite verwendet auch die Badges, die in den anderen <code>README.md</code>-Dateien dieses Projekts eingebunden sind. Bei Ausfällen kann Uptime Kuma Benachrichtigungen über verschiedene Kanäle (z.B. E-Mail, Matrix) versenden.</p>
+<p>Uptime Kuma wird verwendet, um die Erreichbarkeit der verschiedenen im Cluster und im Netzwerk betriebenen Dienste zu überwachen. Es prüft in regelmäßigen Abständen, ob die konfigurierten Endpunkte (z.B. Webseiten, APIs) erreichbar sind und korrekt antworten. Die Ergebnisse werden auf einer öffentlichen Statusseite angezeigt; deren Hostname steht im Ingress in <code>values.yaml</code>. Bei Ausfällen kann Uptime Kuma Benachrichtigungen über verschiedene Kanäle (z.B. E-Mail, Matrix) versenden.</p>
 
 <h3 class="relative group">Lokale Anpassungen
     <div id="lokale-anpassungen" class="anchor"></div>
@@ -1482,7 +1461,7 @@ The Docker image used is <a href="https://hub.docker.com/r/louislam/uptime-kuma"
     
 </h4>
 <ul>
-<li><strong>Ingress</strong>: Der Zugriff auf die Weboberfläche und die Statusseite wird über einen Ingress mit dem Hostnamen <code>status.zyria.de</code> ermöglicht.</li>
+<li><strong>Ingress</strong>: Weboberfläche und Statusseite hängen an demselben Ingress. Der Hostname steht in <code>values.yaml</code>.</li>
 <li><strong>Speicher</strong>: Die Konfiguration von Uptime Kuma (einschließlich aller Monitore und Benachrichtigungseinstellungen) wird auf einem bestehenden Persistent Volume Claim (<code>uptime-kuma-config</code>) gespeichert.</li>
 </ul>
 
@@ -1511,7 +1490,7 @@ The Docker image used is <a href="https://hub.docker.com/r/louislam/uptime-kuma"
 <li>A running Kubernetes cluster.</li>
 <li>A configured Ingress controller (e.g., Traefik).</li>
 <li>A certificate management solution (e.g., cert-manager) to provide TLS certificates, as configured in <code>certs.yaml</code>.</li>
-<li>Ein NFS-Server für persistenten Speicher.</li>
+<li><strong>Longhorn</strong> als Storage-Provider für die PersistentVolumes.</li>
 </ul>
 
           
@@ -1745,14 +1724,14 @@ The Docker image used is <a href="https://hub.docker.com/r/louislam/uptime-kuma"
           
             <a
               class="flex text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
-              href="/posts/homelab/k3s-prod/apps/wireguard/readme/">
+              href="/posts/homelab/k3s-prod/apps/vpn-site-a/readme/">
               <span class="leading-6">
-                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;WireGuard VPN Server
+                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;VPN Standort A - Tailscale Subnet Router
               </span>
             </a>
             
               <span class="ms-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
-                <time datetime="2025-08-26T01:05:41&#43;02:00">26 August 2025</time>
+                <time datetime="2026-08-25T09:24:25&#43;02:00">25 August 2026</time>
               </span>
             
           
@@ -1761,14 +1740,14 @@ The Docker image used is <a href="https://hub.docker.com/r/louislam/uptime-kuma"
           
             <a
               class="flex text-right text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
-              href="/posts/homelab/k3s-prod/apps/sf2000/readme/">
+              href="/posts/homelab/k3s-prod/apps/unifi-controller/readme/">
               <span class="leading-6">
-                SolarFlow Topic Mapper (SF2000)&ensp;<span class="inline-block rtl:rotate-180">&rarr;</span>
+                UniFi Netzwerk-Anwendung&ensp;<span class="inline-block rtl:rotate-180">&rarr;</span>
               </span>
             </a>
             
               <span class="me-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
-                <time datetime="2025-08-26T01:05:41&#43;02:00">26 August 2025</time>
+                <time datetime="2026-08-25T09:24:25&#43;02:00">25 August 2026</time>
               </span>
             
           

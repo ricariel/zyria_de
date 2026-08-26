@@ -75,11 +75,31 @@ k3s_cluster:
       write-kubeconfig-mode: 644
       flannel-ipv6-masq: true
       flannel-backend: wireguard-native
-      kubelet-arg: "node-ip=0.0.0.0"
+      kubelet-arg:
+        - "node-ip=0.0.0.0"
+        # Eigene Datei statt /etc/resolv.conf. kubelet baut daraus die
+        # resolv.conf jedes Pods mit hostNetwork bzw. dnsPolicy: Default und
+        # damit auch die Upstreams des kube-system-CoreDNS
+        # (forward . /etc/resolv.conf). Geschrieben wird sie von
+        # ansible-main/playbooks/setup_resolver.yml - das Playbook muss vor
+        # diesem Deploy gelaufen sein, sonst startet kubelet ohne Upstreams.
+        # Grund: kubelet schneidet nach drei Nameservern ab (MaxDNSNameservers)
+        # und protokollierte DNSConfigForming, solange die Node-Datei vier
+        # Eintraege hatte.
+        - "resolv-conf=/etc/kubernetes/resolv.conf"
       kube-proxy-arg:
         - ipvs-strict-arp=true
       embedded-registry: true
       node-name: "{{ inventory_hostname }}"
+    # Die Agents hatten bisher keine config.yaml. Sie bekommen jetzt eine -
+    # bewusst nur mit dem resolv-conf-Schalter, damit sich an ihrer uebrigen
+    # Konfiguration nichts aendert. Der Deploy schreibt die Datei und startet
+    # k3s-agent neu.
+    agent_config_yaml: |
+      # This is now an inner yaml file. Maintain the indentation.
+      # YAML here will be placed as the content of /etc/rancher/k3s/config.yaml
+      kubelet-arg:
+        - "resolv-conf=/etc/kubernetes/resolv.conf"
     registries_config_yaml: |
       mirrors:
         docker.io:

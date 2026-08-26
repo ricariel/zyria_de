@@ -104,8 +104,8 @@
 	<meta property="og:locale" content="de_de">
 	<meta property="og:type" content="article">
 		<meta property="article:section" content="posts">
-		<meta property="article:published_time" content="2026-03-15T14:33:36+01:00">
-		<meta property="article:modified_time" content="2026-03-15T14:33:36+01:00">
+		<meta property="article:published_time" content="2026-08-25T09:24:25+02:00">
+		<meta property="article:modified_time" content="2026-08-25T09:24:25+02:00">
 		<meta property="article:tag" content="Kubernetes">
 		<meta property="article:tag" content="K3s">
 		<meta property="article:tag" content="Gitops">
@@ -311,15 +311,15 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
       "sameAs": ["https://git.casa-due-pur.de/fabrice.kirchner", "https://git.zyria.de/pyrox", "https://github.com/ricariel", "https://www.linkedin.com/in/fabrice-kirchner-bb5408163/", "https://www.xing.com/profile/Fabrice_Kirchner", "https://kirchner.social/@fabrice", "https://codeberg.org/ricariel"]
     },
     "copyrightYear": "2026",
-    "dateCreated": "2026-03-15T14:33:36\u002b01:00",
-    "datePublished": "2026-03-15T14:33:36\u002b01:00",
+    "dateCreated": "2026-08-25T09:24:25\u002b02:00",
+    "datePublished": "2026-08-25T09:24:25\u002b02:00",
     
-    "dateModified": "2026-03-15T14:33:36\u002b01:00",
+    "dateModified": "2026-08-25T09:24:25\u002b02:00",
     
     "keywords": ["kubernetes","k3s","gitops","argocd","helm","kustomize","homelab","produktion"],
     
     "mainEntityOfPage": "https://zyria.de/posts/homelab/k3s-prod/apps/ansible-semaphore/readme/",
-    "wordCount": "256"
+    "wordCount": "232"
   }]
   </script>
 
@@ -964,7 +964,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2026-03-15T14:33:36&#43;01:00">15 März 2026</time><span class="px-2 text-primary-500">&middot;</span><span>256 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
+      <time datetime="2026-08-25T09:24:25&#43;02:00">25 August 2026</time><span class="px-2 text-primary-500">&middot;</span><span>232 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
 
 
   
@@ -1236,8 +1236,6 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   <ul>
     <li><a href="#ansible-semaphore">Ansible Semaphore</a>
       <ul>
-        <li><a href="#status">Status</a></li>
-        <li><a href="#deployment">Deployment</a></li>
         <li><a href="#quelle">Quelle</a></li>
         <li><a href="#dokumentation">Dokumentation</a></li>
         <li><a href="#funktion">Funktion</a></li>
@@ -1265,8 +1263,6 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   <ul>
     <li><a href="#ansible-semaphore">Ansible Semaphore</a>
       <ul>
-        <li><a href="#status">Status</a></li>
-        <li><a href="#deployment">Deployment</a></li>
         <li><a href="#quelle">Quelle</a></li>
         <li><a href="#dokumentation">Dokumentation</a></li>
         <li><a href="#funktion">Funktion</a></li>
@@ -1407,89 +1403,6 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
 </h2>
 <p>Ansible Semaphore ist eine quelloffene, webbasierte Benutzeroberfläche zur Verwaltung und Ausführung von Ansible Playbooks. Sie bietet eine zentralisierte Plattform für Teams zur Zusammenarbeit bei Automatisierungsaufgaben.</p>
 
-<h3 class="relative group">Status
-    <div id="status" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#status" aria-label="Anker">#</a>
-    </span>
-    
-</h3>
-<p><figure><img
-    class="my-0 rounded-md"
-    loading="lazy"
-    decoding="async"
-    fetchpriority="low"
-    alt="Status"
-    src="https://status.zyria.de/api/badge/125/status"
-    ></figure>
-
-<figure><img
-    class="my-0 rounded-md"
-    loading="lazy"
-    decoding="async"
-    fetchpriority="low"
-    alt="Uptime"
-    src="https://status.zyria.de/api/badge/125/uptime"
-    ></figure>
-
-<figure><img
-    class="my-0 rounded-md"
-    loading="lazy"
-    decoding="async"
-    fetchpriority="low"
-    alt="Ping"
-    src="https://status.zyria.de/api/badge/125/ping"
-    ></figure>
-
-<figure><img
-    class="my-0 rounded-md"
-    loading="lazy"
-    decoding="async"
-    fetchpriority="low"
-    alt="Avg Response Time"
-    src="https://status.zyria.de/api/badge/125/avg-response"
-    ></figure>
-
-<figure><img
-    class="my-0 rounded-md"
-    loading="lazy"
-    decoding="async"
-    fetchpriority="low"
-    alt="Certificate Expiration"
-    src="https://status.zyria.de/api/badge/125/cert-exp"
-    ></figure>
-
-<figure><img
-    class="my-0 rounded-md"
-    loading="lazy"
-    decoding="async"
-    fetchpriority="low"
-    alt="Response Time"
-    src="https://status.zyria.de/api/badge/125/response"
-    ></figure>
-</p>
-
-<h3 class="relative group">Deployment
-    <div id="deployment" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#deployment" aria-label="Anker">#</a>
-    </span>
-    
-</h3>
-<p><figure><img
-    class="my-0 rounded-md"
-    loading="lazy"
-    decoding="async"
-    fetchpriority="low"
-    alt="Argo Deployment"
-    src="https://argocd.zyria.de/api/badge?name=ansible-semaphore&amp;revision=true&amp;showAppName=true&amp;width=150"
-    ></figure>
-</p>
-
 <h3 class="relative group">Quelle
     <div id="quelle" class="anchor"></div>
     
@@ -1499,7 +1412,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
     </span>
     
 </h3>
-<p>Diese Anwendung wird unter Verwendung des <code>ansible-semaphore</code> Helm-Charts aus dem <a href="https://semaphoreui.github.io/charts"  target="_blank" rel="noreferrer">SemaphoreUI Repository</a> bereitgestellt.</p>
+<p>Helm-Chart <code>semaphore</code> aus dem <a href="https://semaphoreui.github.io/charts"  target="_blank" rel="noreferrer">SemaphoreUI-Repository</a>.</p>
 
 <h3 class="relative group">Dokumentation
     <div id="dokumentation" class="anchor"></div>
@@ -1510,8 +1423,10 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
     </span>
     
 </h3>
-<p>Die offizielle Dokumentation von Ansible Semaphore ist unter <a href="https://docs.ansible-semaphore.com/"  target="_blank" rel="noreferrer">docs.ansible-semaphore.com</a> zu finden.</p>
-<p><a href="https://github.com/ansible-semaphore/semaphore"  target="_blank" rel="noreferrer">Ansible Semaphore GitHub Repository</a></p>
+<ul>
+<li><a href="https://docs.semaphoreui.com/"  target="_blank" rel="noreferrer">Semaphore-Dokumentation</a></li>
+<li><a href="https://github.com/semaphoreui/semaphore"  target="_blank" rel="noreferrer">Semaphore auf GitHub</a></li>
+</ul>
 
 <h3 class="relative group">Funktion
     <div id="funktion" class="anchor"></div>
@@ -1579,9 +1494,9 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
 <li>Ein LDAP-Server für die Benutzerauthentifizierung (optional).</li>
 <li>Ein OIDC-Anbieter (z.B. Authentik) für die Authentifizierung (optional).</li>
 <li>Ein SMTP-Server für E-Mail-Benachrichtigungen (optional).</li>
-<li>Ein NFS-Server für persistente Speicherung.</li>
+<li><strong>Longhorn</strong> als Storage-Provider für die PersistentVolumes.</li>
 <li>cert-manager: Wird für die automatische Bereitstellung von TLS-Zertifikaten benötigt.</li>
-<li>Longhorn/NFS: Ein Storage-Provider wird für die PersistentVolumes benötigt.</li>
+<li><strong>Longhorn</strong> als Storage-Provider für die PersistentVolumes.</li>
 </ul>
 
           
@@ -1815,14 +1730,14 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
           
             <a
               class="flex text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
-              href="/posts/homelab/k3s-prod/apps/cert-manager/readme/">
+              href="/posts/homelab/k3s-prod/apps/argocd/readme/">
               <span class="leading-6">
-                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;Cert-Manager
+                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;ArgoCD
               </span>
             </a>
             
               <span class="ms-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
-                <time datetime="2026-03-15T14:33:36&#43;01:00">15 März 2026</time>
+                <time datetime="2026-08-25T09:24:25&#43;02:00">25 August 2026</time>
               </span>
             
           
@@ -1831,14 +1746,14 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
           
             <a
               class="flex text-right text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
-              href="/posts/homelab/k3s-prod/apps/git-pages/readme/">
+              href="/posts/homelab/k3s-prod/ansible/readme/">
               <span class="leading-6">
-                &ensp;<span class="inline-block rtl:rotate-180">&rarr;</span>
+                Ansible Konfiguration für k3s-prod&ensp;<span class="inline-block rtl:rotate-180">&rarr;</span>
               </span>
             </a>
             
               <span class="me-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
-                <time datetime="2026-03-16T09:54:32&#43;01:00">16 März 2026</time>
+                <time datetime="2026-08-25T09:24:25&#43;02:00">25 August 2026</time>
               </span>
             
           

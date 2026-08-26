@@ -31,7 +31,7 @@
     
   
   
-    <meta name="description" content="Automatisierung der k3s Cluster-Bereitstellung und -Verwaltung mit Ansible.">
+    <meta name="description" content="Ansible bringt den Cluster zum Laufen und wieder herunter; alles darueber laeuft ueber GitOps.">
   
   
     <meta name="keywords" content="kubernetes,k3s,gitops,argocd,helm,kustomize,homelab,produktion,">
@@ -100,12 +100,12 @@
   <meta property="og:url" content="https://zyria.de/posts/homelab/k3s-prod/ansible/readme/">
 	<meta property="og:site_name" content="Zyria">
 	<meta property="og:title" content="Ansible Konfiguration für k3s-prod">
-	<meta property="og:description" content="Dieses Verzeichnis enthält Ansible-Playbooks und Konfigurationen zur Automatisierung der Bereitstellung und Verwaltung des k3s Kubernetes Produktionsclusters.">
+	<meta property="og:description" content="Playbooks zum Aufsetzen, Herunterfahren und Wiederanfahren des k3s-Clusters">
 	<meta property="og:locale" content="de_de">
 	<meta property="og:type" content="article">
 		<meta property="article:section" content="posts">
-		<meta property="article:published_time" content="2025-08-26T01:05:41+02:00">
-		<meta property="article:modified_time" content="2025-08-26T01:05:41+02:00">
+		<meta property="article:published_time" content="2026-08-25T09:24:25+02:00">
+		<meta property="article:modified_time" content="2026-08-25T09:24:25+02:00">
 		<meta property="article:tag" content="Kubernetes">
 		<meta property="article:tag" content="K3s">
 		<meta property="article:tag" content="Gitops">
@@ -116,7 +116,7 @@
   
 	<meta name="twitter:card" content="summary">
 	<meta name="twitter:title" content="Ansible Konfiguration für k3s-prod">
-	<meta name="twitter:description" content="Dieses Verzeichnis enthält Ansible-Playbooks und Konfigurationen zur Automatisierung der Bereitstellung und Verwaltung des k3s Kubernetes Produktionsclusters.">
+	<meta name="twitter:description" content="Playbooks zum Aufsetzen, Herunterfahren und Wiederanfahren des k3s-Clusters">
 
   
   
@@ -301,7 +301,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
     "articleSection": "Beiträge",
     "name": "Ansible Konfiguration für k3s-prod",
     "headline": "Ansible Konfiguration für k3s-prod",
-    "description": "Dieses Verzeichnis enthält Ansible-Playbooks und Konfigurationen zur Automatisierung der Bereitstellung und Verwaltung des k3s Kubernetes Produktionsclusters.",
+    "description": "Playbooks zum Aufsetzen, Herunterfahren und Wiederanfahren des k3s-Clusters",
     "inLanguage": "de-de",
     "url" : "https://zyria.de/posts/homelab/k3s-prod/ansible/readme/",
     "author" : {
@@ -310,16 +310,16 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
       "image": "https://zyria.de/images/chibi-head.jpg",
       "sameAs": ["https://git.casa-due-pur.de/fabrice.kirchner", "https://git.zyria.de/pyrox", "https://github.com/ricariel", "https://www.linkedin.com/in/fabrice-kirchner-bb5408163/", "https://www.xing.com/profile/Fabrice_Kirchner", "https://kirchner.social/@fabrice", "https://codeberg.org/ricariel"]
     },
-    "copyrightYear": "2025",
-    "dateCreated": "2025-08-26T01:05:41\u002b02:00",
-    "datePublished": "2025-08-26T01:05:41\u002b02:00",
+    "copyrightYear": "2026",
+    "dateCreated": "2026-08-25T09:24:25\u002b02:00",
+    "datePublished": "2026-08-25T09:24:25\u002b02:00",
     
-    "dateModified": "2025-08-26T01:05:41\u002b02:00",
+    "dateModified": "2026-08-25T09:24:25\u002b02:00",
     
     "keywords": ["kubernetes","k3s","gitops","argocd","helm","kustomize","homelab","produktion"],
     
     "mainEntityOfPage": "https://zyria.de/posts/homelab/k3s-prod/ansible/readme/",
-    "wordCount": "272"
+    "wordCount": "384"
   }]
   </script>
 
@@ -964,7 +964,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2025-08-26T01:05:41&#43;02:00">26 August 2025</time><span class="px-2 text-primary-500">&middot;</span><span>272 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
+      <time datetime="2026-08-25T09:24:25&#43;02:00">25 August 2026</time><span class="px-2 text-primary-500">&middot;</span><span>384 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
 
 
   
@@ -1236,12 +1236,14 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   <ul>
     <li><a href="#ansible-konfiguration-für-k3s-prod">Ansible Konfiguration für k3s-prod</a>
       <ul>
-        <li><a href="#herkunft-und-anpassung">Herkunft und Anpassung</a></li>
         <li><a href="#aufgabe-und-rolle">Aufgabe und Rolle</a></li>
+        <li><a href="#herkunft-und-anpassung">Herkunft und Anpassung</a></li>
         <li><a href="#verzeichnisstruktur">Verzeichnisstruktur</a></li>
         <li><a href="#nutzung">Nutzung</a>
           <ul>
             <li><a href="#beispiel-cluster-initialisierenaktualisieren">Beispiel: Cluster initialisieren/aktualisieren</a></li>
+            <li><a href="#benutzer-anlegen">Benutzer anlegen</a></li>
+            <li><a href="#herunterfahren-und-wiederanfahren">Herunterfahren und Wiederanfahren</a></li>
           </ul>
         </li>
         <li><a href="#abhängigkeiten">Abhängigkeiten</a></li>
@@ -1263,12 +1265,14 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   <ul>
     <li><a href="#ansible-konfiguration-für-k3s-prod">Ansible Konfiguration für k3s-prod</a>
       <ul>
-        <li><a href="#herkunft-und-anpassung">Herkunft und Anpassung</a></li>
         <li><a href="#aufgabe-und-rolle">Aufgabe und Rolle</a></li>
+        <li><a href="#herkunft-und-anpassung">Herkunft und Anpassung</a></li>
         <li><a href="#verzeichnisstruktur">Verzeichnisstruktur</a></li>
         <li><a href="#nutzung">Nutzung</a>
           <ul>
             <li><a href="#beispiel-cluster-initialisierenaktualisieren">Beispiel: Cluster initialisieren/aktualisieren</a></li>
+            <li><a href="#benutzer-anlegen">Benutzer anlegen</a></li>
+            <li><a href="#herunterfahren-und-wiederanfahren">Herunterfahren und Wiederanfahren</a></li>
           </ul>
         </li>
         <li><a href="#abhängigkeiten">Abhängigkeiten</a></li>
@@ -1401,18 +1405,6 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
     </span>
     
 </h2>
-<p>Dieses Verzeichnis beherbergt alle notwendigen Ansible-Ressourcen, um den k3s Kubernetes Cluster zu initialisieren, zu konfigurieren und grundlegende Verwaltungsaufgaben durchzuführen.</p>
-
-<h3 class="relative group">Herkunft und Anpassung
-    <div id="herkunft-und-anpassung" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#herkunft-und-anpassung" aria-label="Anker">#</a>
-    </span>
-    
-</h3>
-<p>Die Basis dieser Ansible-Konfiguration stammt ursprünglich aus dem offiziellen <a href="https://github.com/k3s-io/k3s-ansible"  target="_blank" rel="noreferrer">k3s-io/k3s-ansible</a> Projekt. Sie wurde jedoch an die spezifischen Anforderungen und die Infrastruktur von <code>k3s-prod</code> angepasst und erweitert.</p>
 
 <h3 class="relative group">Aufgabe und Rolle
     <div id="aufgabe-und-rolle" class="anchor"></div>
@@ -1423,12 +1415,24 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
     </span>
     
 </h3>
-<p>Ansible spielt in diesem Setup eine entscheidende Rolle bei:</p>
-<ul>
-<li><strong>Initialer Cluster-Setup</strong>: Automatisierte Installation von k3s auf den vorgesehenen Nodes und deren Verbund zu einem funktionsfähigen Kubernetes-Cluster.</li>
-<li><strong>Node-Management</strong>: Vorbereitung der Nodes für die Kubernetes-Workloads (z.B. Installation von Abhängigkeiten, Konfiguration von Dateisystemen).</li>
-<li><strong>Konfigurationsmanagement</strong>: Anwendung von Host-spezifischen Konfigurationen, die für den Cluster-Betrieb notwendig sind.</li>
-</ul>
+<p>Ansible ist hier für die Ebene <strong>unterhalb</strong> von Kubernetes zuständig: k3s auf
+den Knoten installieren, die Basis-Manifeste anwenden, den Cluster geordnet
+herunter- und wieder hochfahren. Alles, was danach im Cluster läuft, kommt
+über ArgoCD aus dem Verzeichnis <code>apps/</code>.</p>
+
+<h3 class="relative group">Herkunft und Anpassung
+    <div id="herkunft-und-anpassung" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#herkunft-und-anpassung" aria-label="Anker">#</a>
+    </span>
+    
+</h3>
+<p>Die Grundlage ist die Collection
+<a href="https://github.com/k3s-io/k3s-ansible"  target="_blank" rel="noreferrer">k3s-io/k3s-ansible</a>, eingebunden über
+<code>requirements.yml</code> im Wurzelverzeichnis. Die Playbooks hier rufen deren
+<code>k3s.orchestration.site</code> auf und ergänzen, was darüber hinaus gebraucht wird.</p>
 
 <h3 class="relative group">Verzeichnisstruktur
     <div id="verzeichnisstruktur" class="anchor"></div>
@@ -1439,10 +1443,40 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
     </span>
     
 </h3>
-<ul>
-<li><code>k3s-prod-inv.yaml</code>: Das Haupt-Inventarfile für den <code>k3s-prod</code> Cluster. Hier sind die Hosts, deren Rollen (Master/Worker) und spezifische Variablen definiert.</li>
-<li><code>README.md</code>: Diese Datei, die eine Übersicht über die Ansible-Konfiguration bietet.</li>
-</ul>
+<table>
+	<thead>
+			<tr>
+					<th>Datei</th>
+					<th>Zweck</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><code>inventory.yaml</code></td>
+					<td>Knoten des Clusters, getrennt nach <code>server</code> und <code>agent</code>, samt k3s-Version und Cluster-Token</td>
+			</tr>
+			<tr>
+					<td><code>deploy.yaml</code></td>
+					<td>Installiert k3s und wendet anschließend <code>apps/k3s</code> per Kustomize an</td>
+			</tr>
+			<tr>
+					<td><code>create_user.yaml</code></td>
+					<td>Erzeugt einen Kubernetes-Benutzer samt eigener <code>kubeconfig</code></td>
+			</tr>
+			<tr>
+					<td><code>shutdown_cluster.yaml</code></td>
+					<td>Fährt den Cluster geordnet herunter</td>
+			</tr>
+			<tr>
+					<td><code>startup_cluster.yaml</code></td>
+					<td>Fährt ihn wieder an</td>
+			</tr>
+			<tr>
+					<td><code>shutdown-startup.md</code></td>
+					<td>Warum die Reihenfolge wichtig ist, ausführlich</td>
+			</tr>
+	</tbody>
+</table>
 
 <h3 class="relative group">Nutzung
     <div id="nutzung" class="anchor"></div>
@@ -1453,7 +1487,6 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
     </span>
     
 </h3>
-<p>Um die Ansible-Playbooks auszuführen, navigieren Sie in dieses Verzeichnis und verwenden Sie den <code>ansible-playbook</code>-Befehl.</p>
 
 <h4 class="relative group">Beispiel: Cluster initialisieren/aktualisieren
     <div id="beispiel-cluster-initialisierenaktualisieren" class="anchor"></div>
@@ -1464,9 +1497,49 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
     </span>
     
 </h4>
-<p>Um den k3s-Cluster basierend auf dem <code>k3s-prod-inv.yaml</code> Inventar zu installieren oder zu aktualisieren, verwenden Sie:</p>
-<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">ansible-playbook k3s.orchestration.site -i ansible/k3s-prod-inv.yaml -u root</span></span></code></pre></div></div>
-<p>Stellen Sie sicher, dass Sie die notwendigen SSH-Zugangsdaten für die Ziel-Nodes konfiguriert haben (z.B. über <code>ssh-agent</code>).</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">ansible-playbook -i ansible/inventory.yaml ansible/deploy.yaml</span></span></code></pre></div></div>
+<p><code>deploy.yaml</code> macht zwei Dinge nacheinander: Es importiert das Playbook der
+Collection, das k3s auf allen Knoten des Inventars installiert und verbindet,
+und wendet danach <code>apps/k3s</code> an — Local Path Provisioner und die virtuelle IP
+des API-Servers. Ohne diesen zweiten Schritt fehlt dem Cluster die
+Standard-StorageClass, und ArgoCD hätte nichts, worauf es aufsetzen kann.</p>
+<p>Das Cluster-Token in <code>inventory.yaml</code> ist mit Ansible Vault verschlüsselt. Ohne
+das Vault-Passwort läuft kein Playbook.</p>
+<p>Nur k3s installieren, ohne den anschließenden Kustomize-Schritt — dafür lässt
+sich das Playbook der Collection auch direkt aufrufen:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">ansible-playbook k3s.orchestration.site -i ansible/inventory.yaml -u root</span></span></code></pre></div></div>
+
+<h4 class="relative group">Benutzer anlegen
+    <div id="benutzer-anlegen" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#benutzer-anlegen" aria-label="Anker">#</a>
+    </span>
+    
+</h4>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">ansible-playbook ansible/create_user.yaml</span></span></code></pre></div></div>
+<p>Fragt Benutzer- und Gruppenname interaktiv ab und legt die fertige <code>kubeconfig</code>
+unter <code>user_configs/&lt;name&gt;/config</code> ab.</p>
+
+<h4 class="relative group">Herunterfahren und Wiederanfahren
+    <div id="herunterfahren-und-wiederanfahren" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#herunterfahren-und-wiederanfahren" aria-label="Anker">#</a>
+    </span>
+    
+</h4>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">ansible-playbook -i ansible/inventory.yaml ansible/shutdown_cluster.yaml
+</span></span><span class="line"><span class="ln">2</span><span class="cl">ansible-playbook -i ansible/inventory.yaml ansible/startup_cluster.yaml</span></span></code></pre></div></div>
+<p>Die Reihenfolge ist nicht beliebig. Longhorn repliziert Volumes synchron über
+mehrere Knoten; werden die Knoten einfach abgeschaltet, können Volumes
+inkonsistent zurückbleiben. Zugleich muss ArgoCD ausgesetzt werden, damit es
+während der Wartung nicht selbständig alles wieder hochzieht.</p>
+<p>Beides erledigen die Playbooks — die Begründung im Einzelnen steht in
+<a href="/posts/homelab/k3s-prod/ansible/shutdown-startup/" ><code>shutdown-startup.md</code></a>. Diesen Text vor dem ersten Einsatz
+lesen.</p>
 
 <h3 class="relative group">Abhängigkeiten
     <div id="abhängigkeiten" class="anchor"></div>
@@ -1477,11 +1550,14 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
     </span>
     
 </h3>
-<p>Um diese Ansible-Playbooks ausführen zu können, benötigen Sie:</p>
 <ul>
-<li><strong>Ansible</strong>: Eine installierte Ansible-Version (empfohlen wird die neueste stabile Version).</li>
-<li><strong>Python</strong>: Eine kompatible Python-Installation auf dem System, von dem aus Ansible ausgeführt wird.</li>
-<li><strong>Ansible Collections</strong>: Spezifische Ansible Collections, die in den Playbooks verwendet werden (diese werden in der Regel automatisch installiert oder können über <code>requirements.yml</code> verwaltet werden).</li>
+<li>Ansible in einer aktuellen stabilen Version, dazu ein passendes Python auf dem
+Controller</li>
+<li>Die Collections aus <code>requirements.yml</code> im Wurzelverzeichnis</li>
+<li>Root-Zugang per SSH auf alle Knoten des Inventars. Den Schlüssel sinnvoll
+über einen <code>ssh-agent</code> bereitstellen, statt ihn je Aufruf anzugeben</li>
+<li>Das Ansible-Vault-Passwort</li>
+<li><code>kubectl</code> und <code>helm</code> auf dem Controller, für den Kustomize-Schritt</li>
 </ul>
 
 <h3 class="relative group">Weiterführende Dokumentation
@@ -1493,7 +1569,8 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
     </span>
     
 </h3>
-<p>Für detaillierte Informationen zur k3s-Installation und den spezifischen Playbooks, konsultieren Sie bitte die offizielle <a href="https://github.com/k3s-io/k3s-ansible"  target="_blank" rel="noreferrer">k3s-ansible Dokumentation</a>.</p>
+<p>Einzelheiten zur k3s-Installation und zu den Playbooks der Collection stehen in
+der <a href="https://github.com/k3s-io/k3s-ansible"  target="_blank" rel="noreferrer">k3s-ansible-Dokumentation</a>.</p>
 
           
           
@@ -1726,14 +1803,14 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
           
             <a
               class="flex text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
-              href="/posts/homelab/k3s-prod/apps/authentik/readme/">
+              href="/posts/homelab/k3s-prod/apps/ansible-semaphore/readme/">
               <span class="leading-6">
-                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;Authentik
+                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;Ansible Semaphore
               </span>
             </a>
             
               <span class="ms-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
-                <time datetime="2025-08-26T01:05:41&#43;02:00">26 August 2025</time>
+                <time datetime="2026-08-25T09:24:25&#43;02:00">25 August 2026</time>
               </span>
             
           
@@ -1742,14 +1819,14 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
           
             <a
               class="flex text-right text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
-              href="/posts/homelab/k3s-prod/apps/ace1500/readme/">
+              href="/posts/homelab/k3s-prod/apps/git-pages/readme/">
               <span class="leading-6">
-                SolarFlow Topic Mapper (ACE1500)&ensp;<span class="inline-block rtl:rotate-180">&rarr;</span>
+                &ensp;<span class="inline-block rtl:rotate-180">&rarr;</span>
               </span>
             </a>
             
               <span class="me-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
-                <time datetime="2025-09-16T14:38:48&#43;02:00">16 September 2025</time>
+                <time datetime="2026-08-25T09:24:25&#43;02:00">25 August 2026</time>
               </span>
             
           

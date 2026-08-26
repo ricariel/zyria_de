@@ -104,8 +104,8 @@
 	<meta property="og:locale" content="de_de">
 	<meta property="og:type" content="article">
 		<meta property="article:section" content="posts">
-		<meta property="article:published_time" content="2025-08-26T01:05:41+02:00">
-		<meta property="article:modified_time" content="2025-08-26T01:05:41+02:00">
+		<meta property="article:published_time" content="2026-08-25T09:24:25+02:00">
+		<meta property="article:modified_time" content="2026-08-25T09:24:25+02:00">
 		<meta property="article:tag" content="Kubernetes">
 		<meta property="article:tag" content="K3s">
 		<meta property="article:tag" content="Gitops">
@@ -310,16 +310,16 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
       "image": "https://zyria.de/images/chibi-head.jpg",
       "sameAs": ["https://git.casa-due-pur.de/fabrice.kirchner", "https://git.zyria.de/pyrox", "https://github.com/ricariel", "https://www.linkedin.com/in/fabrice-kirchner-bb5408163/", "https://www.xing.com/profile/Fabrice_Kirchner", "https://kirchner.social/@fabrice", "https://codeberg.org/ricariel"]
     },
-    "copyrightYear": "2025",
-    "dateCreated": "2025-08-26T01:05:41\u002b02:00",
-    "datePublished": "2025-08-26T01:05:41\u002b02:00",
+    "copyrightYear": "2026",
+    "dateCreated": "2026-08-25T09:24:25\u002b02:00",
+    "datePublished": "2026-08-25T09:24:25\u002b02:00",
     
-    "dateModified": "2025-08-26T01:05:41\u002b02:00",
+    "dateModified": "2026-08-25T09:24:25\u002b02:00",
     
     "keywords": ["kubernetes","k3s","gitops","argocd","helm","kustomize","homelab","produktion"],
     
     "mainEntityOfPage": "https://zyria.de/posts/homelab/k3s-prod/apps/wireguard/readme/",
-    "wordCount": "469"
+    "wordCount": "477"
   }]
   </script>
 
@@ -964,7 +964,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2025-08-26T01:05:41&#43;02:00">26 August 2025</time><span class="px-2 text-primary-500">&middot;</span><span>469 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
+      <time datetime="2026-08-25T09:24:25&#43;02:00">25 August 2026</time><span class="px-2 text-primary-500">&middot;</span><span>477 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
 
 
   
@@ -1236,8 +1236,6 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   <ul>
     <li><a href="#wireguard-vpn-server">WireGuard VPN Server</a>
       <ul>
-        <li><a href="#status">Status</a></li>
-        <li><a href="#deployment">Deployment</a></li>
         <li><a href="#quelle">Quelle</a></li>
         <li><a href="#dokumentation">Dokumentation</a></li>
         <li><a href="#funktion">Funktion</a></li>
@@ -1266,8 +1264,6 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   <ul>
     <li><a href="#wireguard-vpn-server">WireGuard VPN Server</a>
       <ul>
-        <li><a href="#status">Status</a></li>
-        <li><a href="#deployment">Deployment</a></li>
         <li><a href="#quelle">Quelle</a></li>
         <li><a href="#dokumentation">Dokumentation</a></li>
         <li><a href="#funktion">Funktion</a></li>
@@ -1409,89 +1405,6 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
 </h2>
 <p>WireGuard is a streamlined VPN protocol designed for speed, security, and simplicity. This deployment provides a WireGuard VPN server, allowing secure and private network access.</p>
 
-<h3 class="relative group">Status
-    <div id="status" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#status" aria-label="Anker">#</a>
-    </span>
-    
-</h3>
-<p><figure><img
-    class="my-0 rounded-md"
-    loading="lazy"
-    decoding="async"
-    fetchpriority="low"
-    alt="Status"
-    src="https://status.zyria.de/api/badge/89/status"
-    ></figure>
-
-<figure><img
-    class="my-0 rounded-md"
-    loading="lazy"
-    decoding="async"
-    fetchpriority="low"
-    alt="Uptime"
-    src="https://status.zyria.de/api/badge/89/uptime"
-    ></figure>
-
-<figure><img
-    class="my-0 rounded-md"
-    loading="lazy"
-    decoding="async"
-    fetchpriority="low"
-    alt="Ping"
-    src="https://status.zyria.de/api/badge/89/ping"
-    ></figure>
-
-<figure><img
-    class="my-0 rounded-md"
-    loading="lazy"
-    decoding="async"
-    fetchpriority="low"
-    alt="Avg Response Time"
-    src="https://status.zyria.de/api/badge/89/avg-response"
-    ></figure>
-
-<figure><img
-    class="my-0 rounded-md"
-    loading="lazy"
-    decoding="async"
-    fetchpriority="low"
-    alt="Certificate Expiration"
-    src="https://status.zyria.de/api/badge/89/cert-exp"
-    ></figure>
-
-<figure><img
-    class="my-0 rounded-md"
-    loading="lazy"
-    decoding="async"
-    fetchpriority="low"
-    alt="Response Time"
-    src="https://status.zyria.de/api/badge/89/response"
-    ></figure>
-</p>
-
-<h3 class="relative group">Deployment
-    <div id="deployment" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#deployment" aria-label="Anker">#</a>
-    </span>
-    
-</h3>
-<p><figure><img
-    class="my-0 rounded-md"
-    loading="lazy"
-    decoding="async"
-    fetchpriority="low"
-    alt="Argo Deployment"
-    src="https://argocd.zyria.de/api/badge?name=wireguard&amp;revision=true&amp;showAppName=true&amp;width=150"
-    ></figure>
-</p>
-
 <h3 class="relative group">Quelle
     <div id="quelle" class="anchor"></div>
     
@@ -1501,7 +1414,35 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
     </span>
     
 </h3>
-<p>Die Anwendung wird als benutzerdefiniertes Helm-Chart aus einem privaten Repository auf <code>git.zyria.de</code> bezogen. Es basiert vermutlich auf dem <a href="https://github.com/wg-easy/wg-easy"  target="_blank" rel="noreferrer">wg-easy</a> Projekt, wurde aber stark erweitert.</p>
+<p>Kein eigenes Chart: Der Verbund wird über das generische <code>app-template</code> von
+<a href="https://bjw-s-labs.github.io/helm-charts"  target="_blank" rel="noreferrer">BJW-S Labs</a> zusammengesetzt. Die
+einzelnen Container stammen aus verschiedenen Quellen:</p>
+<table>
+	<thead>
+			<tr>
+					<th>Container</th>
+					<th>Image</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>WireGuard-Server</td>
+					<td><code>lscr.io/linuxserver/wireguard</code></td>
+			</tr>
+			<tr>
+					<td>Web-Portal</td>
+					<td><code>ghcr.io/h44z/wg-portal</code></td>
+			</tr>
+			<tr>
+					<td>SSH-Bastion</td>
+					<td>eigenes Image aus der Forgejo-Registry (<code>docker-ssh-bastion</code>)</td>
+			</tr>
+			<tr>
+					<td>Tailscale</td>
+					<td><code>tailscale/tailscale</code></td>
+			</tr>
+	</tbody>
+</table>
 
 <h3 class="relative group">Dokumentation
     <div id="dokumentation" class="anchor"></div>
@@ -1512,7 +1453,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
     </span>
     
 </h3>
-<p>Die Dokumentation für die verwendete Web-UI ist auf <a href="https://github.com/subspacecloud/wg-portal"  target="_blank" rel="noreferrer">GitHub</a> zu finden.</p>
+<p>Die Dokumentation der verwendeten Weboberfläche steht unter <a href="https://github.com/h44z/wg-portal"  target="_blank" rel="noreferrer">h44z/wg-portal</a>.</p>
 <ul>
 <li><a href="https://www.wireguard.com/quickstart/"  target="_blank" rel="noreferrer">WireGuard Documentation</a></li>
 </ul>
@@ -1529,7 +1470,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
 <p>Dieser Dienst bietet einen zentralen und einfach zu verwaltenden VPN-Zugang zum Netzwerk.</p>
 <ul>
 <li><strong>WireGuard-Server</strong>: Der Kern des Dienstes, der den verschlüsselten VPN-Tunnel bereitstellt.</li>
-<li><strong>Web-Portal</strong>: Eine Weboberfläche unter <code>vpn.zyria.de</code>, auf der sich Benutzer anmelden können.</li>
+<li><strong>Web-Portal</strong>: Eine Weboberfläche, auf der sich Benutzer anmelden können. Der Hostname steht im Ingress in <code>values.yaml</code>.</li>
 <li><strong>LDAP-Integration</strong>: Benutzer werden gegen ein Active Directory authentifiziert. Nur Mitglieder einer bestimmten Gruppe (<code>wireguardEnabled</code>) dürfen sich anmelden.</li>
 <li><strong>Self-Provisioning</strong>: Nach der Anmeldung können Benutzer ihre eigenen VPN-Clients (Peers) erstellen, QR-Codes zum einfachen Einrichten auf Mobilgeräten scannen und Konfigurationsdateien herunterladen.</li>
 <li><strong>Bastion Host</strong>: Ein integrierter SSH-Server, der als sicherer Sprung-Host ins Netzwerk dienen kann.</li>
@@ -1545,12 +1486,15 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
     
 </h3>
 <ul>
-<li>The deployment uses a custom Helm chart tailored for this specific WireGuard setup.</li>
-<li>It integrates with an LDAP directory for user authentication and dynamic peer configuration.</li>
-<li>It exposes a LoadBalancer service for the VPN tunnel (UDP) and SSH access (TCP).</li>
-<li>Persistent storage for WireGuard configuration and portal data is configured using <code>hostPath</code> volumes.</li>
-<li>SSH host keys are mounted from host paths.</li>
-<li>A custom <code>sshd-config</code> is applied for the SSH bastion.</li>
+<li>Die Benutzerverwaltung läuft gegen ein LDAP-Verzeichnis; Peers werden daraus
+abgeleitet.</li>
+<li>VPN-Tunnel (UDP) und SSH (TCP) hängen an einem gemeinsamen LoadBalancer-Service.</li>
+<li>Die SSH-Host-Schlüssel kommen aus einem Secret, das aus dem Verzeichnis <code>ssh/</code>
+erzeugt wird — sie bleiben damit über Neustarts hinweg stabil, und Clients
+bekommen keine Warnung über einen gewechselten Schlüssel.</li>
+<li>Für den Bastion gilt eine eigene <code>sshd</code>-Konfiguration, eingebunden als ConfigMap <code>sshd-config</code>.</li>
+<li><code>/lib/modules</code> wird vom Host als einziges <code>hostPath</code> durchgereicht — WireGuard
+braucht das Kernelmodul des Hosts.</li>
 <li>Der Bastion Container stellt einen SSH Jumphost bereit. Primär für die Nutzung von Ansible. Damit lassen sich alle Geräte hinter den NATs erreichen, welche im
 VPN sind.</li>
 <li>Wg-portal stellt eine leichte Möglichkeit bereit den Mitarbeitern vordefinierte Zugänge zum VPN bereitzustellen. Der Container nutzt das Netzwerk des wireguard Containers und muss deshalb mit ihm zusammen neu gestartet werden.</li>
@@ -1583,9 +1527,9 @@ VPN sind.</li>
     
 </h4>
 <ul>
-<li><strong>LoadBalancer</strong>: Der WireGuard-VPN-Port (<code>51194/UDP</code>) und der SSH-Port (<code>3022/TCP</code>) werden über einen <code>LoadBalancer</code>-Service mit einer dedizierten externen IP-Adresse bereitgestellt.</li>
+<li><strong>LoadBalancer</strong>: WireGuard (<code>51194/UDP</code>) und SSH (<code>3022/TCP</code>) hängen an einem <code>LoadBalancer</code>-Service mit fester Adresse aus dem MetalLB-Pool.</li>
 <li><strong>Ingress</strong>: Der Zugriff auf das Web-Portal wird über einen Ingress mit einem Hostnamen ermöglicht.</li>
-<li><strong>Speicher</strong>: Die WireGuard-Konfigurationen und die Daten des Web-Portals werden persistent auf einem NFS-Share gespeichert.</li>
+<li><strong>Speicher</strong>: WireGuard-Konfigurationen und Portal-Daten liegen auf Longhorn-Volumes; die PVCs stehen in <code>storage.yaml</code>.</li>
 </ul>
 
 <h3 class="relative group">Installation
@@ -1610,12 +1554,13 @@ VPN sind.</li>
     
 </h3>
 <ul>
-<li>A running Kubernetes cluster.</li>
-<li>A configured Ingress controller (e.g., Traefik).</li>
-<li>A certificate management solution (e.g., cert-manager) to provide TLS certificates.</li>
-<li>MetalLB for LoadBalancer IP allocation.</li>
-<li>An accessible LDAP directory for user authentication.</li>
-<li>Ein NFS-Server für persistenten Speicher.</li>
+<li>Ein laufender Kubernetes-Cluster</li>
+<li><strong>Traefik</strong> als Ingress-Controller</li>
+<li><strong>cert-manager</strong> für das TLS-Zertifikat</li>
+<li><strong>MetalLB</strong> für die LoadBalancer-Adresse</li>
+<li><strong>Longhorn</strong> als Storage-Provider</li>
+<li>Ein erreichbares LDAP-Verzeichnis für die Anmeldung</li>
+<li>Das WireGuard-Kernelmodul auf den Knoten, auf denen der Pod läuft</li>
 </ul>
 
           
@@ -1849,14 +1794,14 @@ VPN sind.</li>
           
             <a
               class="flex text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
-              href="/posts/homelab/k3s-prod/apps/zammad/readme/">
+              href="/posts/homelab/k3s-prod/apps/zabbix/readme/">
               <span class="leading-6">
-                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;Zammad Helpdesk
+                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;Zabbix
               </span>
             </a>
             
               <span class="ms-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
-                <time datetime="2025-08-26T01:05:41&#43;02:00">26 August 2025</time>
+                <time datetime="2026-08-25T09:24:25&#43;02:00">25 August 2026</time>
               </span>
             
           
@@ -1865,14 +1810,14 @@ VPN sind.</li>
           
             <a
               class="flex text-right text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
-              href="/posts/homelab/k3s-prod/apps/uptime-kuma/readme/">
+              href="/posts/homelab/k3s-prod/apps/whoami/readme/">
               <span class="leading-6">
-                Uptime Kuma&ensp;<span class="inline-block rtl:rotate-180">&rarr;</span>
+                whoami&ensp;<span class="inline-block rtl:rotate-180">&rarr;</span>
               </span>
             </a>
             
               <span class="me-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
-                <time datetime="2025-08-26T01:05:41&#43;02:00">26 August 2025</time>
+                <time datetime="2026-08-25T09:24:25&#43;02:00">25 August 2026</time>
               </span>
             
           

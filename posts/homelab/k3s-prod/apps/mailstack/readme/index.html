@@ -104,8 +104,8 @@
 	<meta property="og:locale" content="de_de">
 	<meta property="og:type" content="article">
 		<meta property="article:section" content="posts">
-		<meta property="article:published_time" content="2026-08-04T22:12:11+02:00">
-		<meta property="article:modified_time" content="2026-08-04T22:12:11+02:00">
+		<meta property="article:published_time" content="2026-08-25T09:24:25+02:00">
+		<meta property="article:modified_time" content="2026-08-25T09:24:25+02:00">
 		<meta property="article:tag" content="Kubernetes">
 		<meta property="article:tag" content="K3s">
 		<meta property="article:tag" content="Gitops">
@@ -311,15 +311,15 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
       "sameAs": ["https://git.casa-due-pur.de/fabrice.kirchner", "https://git.zyria.de/pyrox", "https://github.com/ricariel", "https://www.linkedin.com/in/fabrice-kirchner-bb5408163/", "https://www.xing.com/profile/Fabrice_Kirchner", "https://kirchner.social/@fabrice", "https://codeberg.org/ricariel"]
     },
     "copyrightYear": "2026",
-    "dateCreated": "2026-08-04T22:12:11\u002b02:00",
-    "datePublished": "2026-08-04T22:12:11\u002b02:00",
+    "dateCreated": "2026-08-25T09:24:25\u002b02:00",
+    "datePublished": "2026-08-25T09:24:25\u002b02:00",
     
-    "dateModified": "2026-08-04T22:12:11\u002b02:00",
+    "dateModified": "2026-08-25T09:24:25\u002b02:00",
     
     "keywords": ["kubernetes","k3s","gitops","argocd","helm","kustomize","homelab","produktion"],
     
     "mainEntityOfPage": "https://zyria.de/posts/homelab/k3s-prod/apps/mailstack/readme/",
-    "wordCount": "2999"
+    "wordCount": "3036"
   }]
   </script>
 
@@ -964,7 +964,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2026-08-04T22:12:11&#43;02:00">4 August 2026</time><span class="px-2 text-primary-500">&middot;</span><span>2999 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
+      <time datetime="2026-08-25T09:24:25&#43;02:00">25 August 2026</time><span class="px-2 text-primary-500">&middot;</span><span>3036 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
 
 
   
@@ -1236,7 +1236,6 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   <ul>
     <li><a href="#mailstack">Mailstack</a>
       <ul>
-        <li><a href="#deployment">Deployment</a></li>
         <li><a href="#quelle">Quelle</a></li>
         <li><a href="#dokumentation">Dokumentation</a></li>
         <li><a href="#funktion">Funktion</a></li>
@@ -1334,7 +1333,6 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   <ul>
     <li><a href="#mailstack">Mailstack</a>
       <ul>
-        <li><a href="#deployment">Deployment</a></li>
         <li><a href="#quelle">Quelle</a></li>
         <li><a href="#dokumentation">Dokumentation</a></li>
         <li><a href="#funktion">Funktion</a></li>
@@ -1544,25 +1542,6 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
     
 </h2>
 
-<h3 class="relative group">Deployment
-    <div id="deployment" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#deployment" aria-label="Anker">#</a>
-    </span>
-    
-</h3>
-<p><figure><img
-    class="my-0 rounded-md"
-    loading="lazy"
-    decoding="async"
-    fetchpriority="low"
-    alt="Argo Deployment"
-    src="https://argocd.zyria.de/api/badge?name=mailstack&amp;revision=true&amp;showAppName=true&amp;width=150"
-    ></figure>
-</p>
-
 <h3 class="relative group">Quelle
     <div id="quelle" class="anchor"></div>
     
@@ -1572,7 +1551,31 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
     </span>
     
 </h3>
-<p>Die Anwendung wird als benutzerdefiniertes Helm-Chart aus einem privaten Repository auf <code>git.zyria.de</code> bezogen. Es bündelt verschiedene Open-Source-Mail-Komponenten.</p>
+<p>Kein eigenes Chart, sondern ein Verbund aus zwei Quellen:</p>
+<table>
+	<thead>
+			<tr>
+					<th>Chart</th>
+					<th>Herkunft</th>
+					<th>Zweck</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><code>app-template</code></td>
+					<td><a href="https://bjw-s-labs.github.io/helm-charts"  target="_blank" rel="noreferrer">BJW-S Labs</a></td>
+					<td>Alle Mail-Komponenten als Container eines Verbunds</td>
+			</tr>
+			<tr>
+					<td><code>redis</code></td>
+					<td><code>oci://registry-1.docker.io/bitnamicharts</code></td>
+					<td>Ablage für Rspamd</td>
+			</tr>
+	</tbody>
+</table>
+<p>Die Container-Images stammen aus den eigenen Repositories (<code>postfix-docker</code>,
+<code>dovecot-docker</code>, <code>rspamd-docker</code>, <code>unbound-docker</code>) und werden über Docker Hub
+beziehungsweise die Registry der Forgejo-Instanz bezogen.</p>
 
 <h3 class="relative group">Dokumentation
     <div id="dokumentation" class="anchor"></div>
@@ -1628,7 +1631,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
 <li><strong>LoadBalancer</strong>: Die Mail-Ports (SMTP, IMAP) werden über einen <code>LoadBalancer</code>-Service mit einer dedizierten externen IP-Adresse bereitgestellt.</li>
 <li><strong>Ingress</strong>: Die Weboberflächen von Rspamd und dem Autodiscover-Dienst sind über Ingresses erreichbar. Der Zugriff auf Rspamd ist durch Authentik geschützt.</li>
 <li><strong>LDAP-Integration</strong>: Postfix und Dovecot sind mit einem LDAP-Server integriert, um Benutzer, Aliase und Weiterleitungen zu verwalten.</li>
-<li><strong>Speicher</strong>: Alle persistenten Daten (Mail-Speicher, Konfigurationen, Rspamd-Daten) werden auf einem NFS-Share unter <code>/srv/container_nfs/mailstack/</code> gespeichert.</li>
+<li><strong>Speicher</strong>: Alle persistenten Daten (Mail-Speicher, Konfigurationen, Rspamd-Daten) liegen auf Longhorn-Volumes. Die PVs tragen <code>persistentVolumeReclaimPolicy: Retain</code> — ein gelöschtes PVC nimmt den Mail-Speicher also nicht mit.</li>
 <li><strong>Sicherheit</strong>: Ausgehende E-Mails werden mit DKIM signiert und es wird MTA-STS für eine sichere E-Mail-Zustellung verwendet.</li>
 </ul>
 
@@ -1657,7 +1660,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
 <li><strong>LDAP-Server</strong>: Ein externer LDAP-Server wird für die Benutzerverwaltung benötigt.</li>
 <li><strong>Traefik</strong>: Wird als Ingress-Controller für den externen Zugriff auf die Web-UIs benötigt.</li>
 <li><strong>Metallb</strong>: Wird benötigt, um dem Mail-Service eine externe IP-Adresse zuzuweisen.</li>
-<li><strong>NFS</strong>: Ein NFS-Server wird für das persistente Speichern aller Daten benötigt.</li>
+<li><strong>Longhorn</strong>: Storage-Provider für alle persistenten Volumes.</li>
 <li><strong>Authentik</strong>: Wird zur Absicherung der Rspamd-Weboberfläche verwendet.</li>
 </ul>
 
@@ -1803,7 +1806,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
 <p><strong>Server für eintreffende E-Mails (IMAP):</strong></p>
 <ul>
 <li>
-<p><strong>Server:</strong> <code>mail.ihredomain.de</code> (Beispiel anpassen)</p>
+<p><strong>Server:</strong> <code>mail.example.com</code> (Beispiel anpassen)</p>
 </li>
 <li>
 <p><strong>Port:</strong> <code>993</code></p>
@@ -1818,7 +1821,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
 <p><strong>Server für ausgehende E-Mails (SMTP):</strong></p>
 <ul>
 <li>
-<p><strong>Server:</strong> <code>mail.ihredomain.de</code> (Beispiel anpassen)</p>
+<p><strong>Server:</strong> <code>mail.example.com</code> (Beispiel anpassen)</p>
 </li>
 <li>
 <p><strong>Port:</strong> <code>587</code></p>
@@ -2143,7 +2146,7 @@ Maildomains betrieben werden:</p>
 <div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="ln">1</span><span class="cl">info@example.com    →  CN=SendAs-info@example.com
 </span></span><span class="line"><span class="ln">2</span><span class="cl">support@example.com →  CN=SendAs-support@example.com</span></span></code></pre></div></div>
 <p>Gematcht wird auf <code>cn</code>. <code>samba-tool</code> setzt <code>sAMAccountName</code> gleich dem
-Gruppennamen — das passt zur bestehenden Praxis (<code>catchall@zyria.de</code> ist genauso
+Gruppennamen — das passt zur bestehenden Praxis (eine bestehende <code>catchall</code>-Adresse ist genauso
 angelegt). Die 20-Zeichen-Grenze für den Pre-Windows-2000-Namen ist eine
 Konvention der Windows-Werkzeuge; das Schema erlaubt 256 Zeichen und Samba
 erzwingt die Grenze nicht. <code>@</code> ist im <code>sAMAccountName</code> zulässig, unzulässig sind
@@ -2879,14 +2882,14 @@ relativ zur Domain-DN — so erwartet es <code>samba-tool</code>).</p>
           
             <a
               class="flex text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
-              href="/posts/homelab/k3s-prod/apps/forgejo-runner/readme/">
+              href="/posts/homelab/k3s-prod/apps/maintenance-page/readme/">
               <span class="leading-6">
-                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;Forgejo Runner
+                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;Maintenance Page
               </span>
             </a>
             
               <span class="ms-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
-                <time datetime="2026-07-30T10:19:29&#43;02:00">30 Juli 2026</time>
+                <time datetime="2026-08-25T09:24:25&#43;02:00">25 August 2026</time>
               </span>
             
           
@@ -2902,7 +2905,7 @@ relativ zur Domain-DN — so erwartet es <code>samba-tool</code>).</p>
             </a>
             
               <span class="me-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
-                <time datetime="2026-08-04T22:12:11&#43;02:00">4 August 2026</time>
+                <time datetime="2026-08-25T09:24:25&#43;02:00">25 August 2026</time>
               </span>
             
           

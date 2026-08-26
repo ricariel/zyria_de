@@ -104,8 +104,8 @@
 	<meta property="og:locale" content="de_de">
 	<meta property="og:type" content="article">
 		<meta property="article:section" content="posts">
-		<meta property="article:published_time" content="2026-07-30T10:19:29+02:00">
-		<meta property="article:modified_time" content="2026-07-30T10:19:29+02:00">
+		<meta property="article:published_time" content="2026-08-25T09:24:25+02:00">
+		<meta property="article:modified_time" content="2026-08-25T09:24:25+02:00">
 		<meta property="article:tag" content="Kubernetes">
 		<meta property="article:tag" content="K3s">
 		<meta property="article:tag" content="Gitops">
@@ -311,15 +311,15 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
       "sameAs": ["https://git.casa-due-pur.de/fabrice.kirchner", "https://git.zyria.de/pyrox", "https://github.com/ricariel", "https://www.linkedin.com/in/fabrice-kirchner-bb5408163/", "https://www.xing.com/profile/Fabrice_Kirchner", "https://kirchner.social/@fabrice", "https://codeberg.org/ricariel"]
     },
     "copyrightYear": "2026",
-    "dateCreated": "2026-07-30T10:19:29\u002b02:00",
-    "datePublished": "2026-07-30T10:19:29\u002b02:00",
+    "dateCreated": "2026-08-25T09:24:25\u002b02:00",
+    "datePublished": "2026-08-25T09:24:25\u002b02:00",
     
-    "dateModified": "2026-07-30T10:19:29\u002b02:00",
+    "dateModified": "2026-08-25T09:24:25\u002b02:00",
     
     "keywords": ["kubernetes","k3s","gitops","argocd","helm","kustomize","homelab","produktion"],
     
     "mainEntityOfPage": "https://zyria.de/posts/homelab/k3s-prod/apps/forgejo-runner/readme/",
-    "wordCount": "335"
+    "wordCount": "343"
   }]
   </script>
 
@@ -964,7 +964,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2026-07-30T10:19:29&#43;02:00">30 Juli 2026</time><span class="px-2 text-primary-500">&middot;</span><span>335 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
+      <time datetime="2026-08-25T09:24:25&#43;02:00">25 August 2026</time><span class="px-2 text-primary-500">&middot;</span><span>343 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
 
 
   
@@ -1236,7 +1236,6 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   <ul>
     <li><a href="#forgejo-runner">Forgejo Runner</a>
       <ul>
-        <li><a href="#deployment">Deployment</a></li>
         <li><a href="#quelle">Quelle</a></li>
         <li><a href="#dokumentation">Dokumentation</a></li>
         <li><a href="#funktion">Funktion</a></li>
@@ -1264,7 +1263,6 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   <ul>
     <li><a href="#forgejo-runner">Forgejo Runner</a>
       <ul>
-        <li><a href="#deployment">Deployment</a></li>
         <li><a href="#quelle">Quelle</a></li>
         <li><a href="#dokumentation">Dokumentation</a></li>
         <li><a href="#funktion">Funktion</a></li>
@@ -1405,34 +1403,6 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
 </h2>
 <p>Ein Forgejo Runner ist ein Daemon, der mit einer Forgejo-Instanz zusammenarbeitet, um CI/CD (Continuous Integration/Continuous Delivery)-Jobs auszuführen. Er ruft Workflows von der Forgejo-Instanz ab, führt sie in einer isolierten Umgebung aus und sendet dann Protokolle und den endgültigen Status zurück.</p>
 
-<h3 class="relative group">Deployment
-    <div id="deployment" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#deployment" aria-label="Anker">#</a>
-    </span>
-    
-</h3>
-<p><figure><img
-    class="my-0 rounded-md"
-    loading="lazy"
-    decoding="async"
-    fetchpriority="low"
-    alt="Argo Deployment"
-    src="https://argocd.zyria.de/api/badge?name=forgejo-runner&amp;revision=true&amp;showAppName=true&amp;width=150"
-    ></figure>
-
-<figure><img
-    class="my-0 rounded-md"
-    loading="lazy"
-    decoding="async"
-    fetchpriority="low"
-    alt="Argo Deployment"
-    src="https://argocd.zyria.de/api/badge?name=forgejo-runner-codeberg&amp;revision=true&amp;showAppName=true&amp;width=150"
-    ></figure>
-</p>
-
 <h3 class="relative group">Quelle
     <div id="quelle" class="anchor"></div>
     
@@ -1442,7 +1412,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
     </span>
     
 </h3>
-<p>Die Bereitstellung verwendet ein benutzerdefiniertes Helm-Chart aus einem privaten Repository.</p>
+<p>Helm-Chart <code>forgejo-runner</code> aus der OCI-Registry <a href="https://codeberg.org/wrenix/-/packages/container/helm-charts%2Fforgejo-runner"  target="_blank" rel="noreferrer">codeberg.org/wrenix/helm-charts</a>.</p>
 
 <h3 class="relative group">Dokumentation
     <div id="dokumentation" class="anchor"></div>
@@ -1513,7 +1483,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
     </span>
     
 </h3>
-<p>Der Dienst wird als Helm-Chart aus einem privaten Repository bereitgestellt. Die Bereitstellung wird durch die <code>kustomization.yaml</code>-Datei verwaltet.</p>
+<p>Das Chart wird zweimal aus derselben Quelle instanziiert — einmal je Zielinstanz. Die Bereitstellung wird durch die <code>kustomization.yaml</code>-Datei verwaltet.</p>
 <div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">kubectl kustomize --enable-helm apps/forgejo-runner <span class="p">|</span> kubectl apply -n forgejo-runner -f -</span></span></code></pre></div></div>
 
 <h3 class="relative group">Abhängigkeiten
@@ -1527,7 +1497,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
 </h3>
 <ul>
 <li><strong>Forgejo</strong>: Eine laufende Forgejo-Instanz, bei der sich die Runner registrieren können.</li>
-<li><strong>Docker</strong>: Auf den Kubernetes-Worker-Nodes, auf denen die Runner laufen, muss eine Docker-Engine verfügbar sein, damit die Runner Docker-Container für die Jobs starten können.</li>
+<li><strong>Keine Docker-Engine auf den Nodes nötig</strong>: Jeder Runner-Pod bringt seinen eigenen Docker-Daemon als <code>dind</code>-Sidecar mit. Dafür läuft der Pod privilegiert — er kann damit mehr als ein gewöhnlicher Workload, was der Preis für Docker-in-Docker ist.</li>
 </ul>
 
           
@@ -1761,14 +1731,14 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
           
             <a
               class="flex text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
-              href="/posts/homelab/k3s-prod/apps/openobserve/readme/">
+              href="/posts/homelab/k3s-prod/apps/headscale/readme/">
               <span class="leading-6">
-                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;zyria.de Webseite
+                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;Headscale
               </span>
             </a>
             
               <span class="ms-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
-                <time datetime="2026-06-17T20:33:06&#43;02:00">17 Juni 2026</time>
+                <time datetime="2026-08-25T09:24:25&#43;02:00">25 August 2026</time>
               </span>
             
           
@@ -1777,14 +1747,14 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
           
             <a
               class="flex text-right text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
-              href="/posts/homelab/k3s-prod/apps/mailstack/readme/">
+              href="/posts/homelab/k3s-prod/apps/fluent-bit/readme/">
               <span class="leading-6">
-                Mailstack&ensp;<span class="inline-block rtl:rotate-180">&rarr;</span>
+                Fluent Bit&ensp;<span class="inline-block rtl:rotate-180">&rarr;</span>
               </span>
             </a>
             
               <span class="me-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
-                <time datetime="2026-08-04T22:12:11&#43;02:00">4 August 2026</time>
+                <time datetime="2026-08-25T09:24:25&#43;02:00">25 August 2026</time>
               </span>
             
           
