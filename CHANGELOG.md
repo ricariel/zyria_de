@@ -3,6 +3,16 @@
 Alle nennenswerten Änderungen an diesem Repository.
 Automatisch aus [Conventional Commits](https://www.conventionalcommits.org) via [git-cliff](https://git-cliff.org).
 
+## [2026.35] - 2026-08-31 ([Vergleich zur Vorversion](https://git.zyria.de/pyrox/zyria_de/compare/2026.34...2026.35))
+
+### 🧹 Miscellaneous
+
+- **hugo**: Module aktualisieren
+- **hugo**: Module aktualisieren
+- **hugo**: Module aktualisieren
+- **hugo**: Module aktualisieren
+- **hugo**: Module aktualisieren
+
 ## [2026.34] - 2026-08-24
 
 ### ✨ Features
