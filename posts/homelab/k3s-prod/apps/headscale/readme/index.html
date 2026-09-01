@@ -104,8 +104,8 @@
 	<meta property="og:locale" content="de_de">
 	<meta property="og:type" content="article">
 		<meta property="article:section" content="posts">
-		<meta property="article:published_time" content="2026-08-25T09:24:25+02:00">
-		<meta property="article:modified_time" content="2026-08-25T09:24:25+02:00">
+		<meta property="article:published_time" content="2026-09-01T00:07:18+02:00">
+		<meta property="article:modified_time" content="2026-09-01T00:07:18+02:00">
 		<meta property="article:tag" content="Kubernetes">
 		<meta property="article:tag" content="K3s">
 		<meta property="article:tag" content="Gitops">
@@ -311,15 +311,15 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
       "sameAs": ["https://git.casa-due-pur.de/fabrice.kirchner", "https://git.zyria.de/pyrox", "https://github.com/ricariel", "https://www.linkedin.com/in/fabrice-kirchner-bb5408163/", "https://www.xing.com/profile/Fabrice_Kirchner", "https://kirchner.social/@fabrice", "https://codeberg.org/ricariel"]
     },
     "copyrightYear": "2026",
-    "dateCreated": "2026-08-25T09:24:25\u002b02:00",
-    "datePublished": "2026-08-25T09:24:25\u002b02:00",
+    "dateCreated": "2026-09-01T00:07:18\u002b02:00",
+    "datePublished": "2026-09-01T00:07:18\u002b02:00",
     
-    "dateModified": "2026-08-25T09:24:25\u002b02:00",
+    "dateModified": "2026-09-01T00:07:18\u002b02:00",
     
     "keywords": ["kubernetes","k3s","gitops","argocd","helm","kustomize","homelab","produktion"],
     
     "mainEntityOfPage": "https://zyria.de/posts/homelab/k3s-prod/apps/headscale/readme/",
-    "wordCount": "345"
+    "wordCount": "719"
   }]
   </script>
 
@@ -964,7 +964,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2026-08-25T09:24:25&#43;02:00">25 August 2026</time><span class="px-2 text-primary-500">&middot;</span><span>345 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
+      <time datetime="2026-09-01T00:07:18&#43;02:00">1 September 2026</time><span class="px-2 text-primary-500">&middot;</span><span>719 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
 
 
   
@@ -1244,6 +1244,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
             <li><a href="#wichtige-einstellungen">Wichtige Einstellungen</a></li>
           </ul>
         </li>
+        <li><a href="#acl-policy-setzen">ACL-Policy setzen</a></li>
         <li><a href="#installation">Installation</a></li>
         <li><a href="#abhängigkeiten">Abhängigkeiten</a></li>
       </ul>
@@ -1271,6 +1272,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
             <li><a href="#wichtige-einstellungen">Wichtige Einstellungen</a></li>
           </ul>
         </li>
+        <li><a href="#acl-policy-setzen">ACL-Policy setzen</a></li>
         <li><a href="#installation">Installation</a></li>
         <li><a href="#abhängigkeiten">Abhängigkeiten</a></li>
       </ul>
@@ -1471,9 +1473,39 @@ Das Helm-Chart stammt aus der OCI-Registry <a href="https://codeberg.org/wrenix"
 <li><strong>Datenbank</strong>: Headscale verwendet eine SQLite-Datenbank, die auf einem persistenten Volume gespeichert wird.</li>
 <li><strong>Zertifikate</strong>: TLS-Zertifikate für den Ingress werden automatisch von <code>cert-manager</code> ausgestellt.</li>
 <li><strong>DNS</strong>: Knoten im Tailnet erhalten Namen unterhalb der in <code>base_domain</code> gesetzten Domain. Sie darf sich nicht mit einer real aufgelösten Domain überschneiden.</li>
+<li><strong>Adress-Präfixe</strong>: <code>fd7a:115c:a1e0::/48</code> (v6) und <code>100.64.0.0/23</code> (v4) — <strong>nicht auf ein eigenes Präfix ändern</strong>. Headscale unterstützt nur Teilmengen der Standardbereiche (<code>100.64.0.0/10</code>, <code>fd7a:115c:a1e0::/48</code>) und warnt bei allem anderen beim Start mit <em>„This is NOT a supported configuration&quot;</em>. Der Grund ist praktisch: Seit Headscale 0.29.0 (<a href="https://github.com/juanfont/headscale/pull/3036"  target="_blank" rel="noreferrer">PR #3036</a>) expandiert <code>*</code> als <code>src</code>/<code>dst</code> in der ACL auf genau diese Standardbereiche statt auf <code>0.0.0.0/0</code>/<code>::/0</code>. Liegt das eigene v6-Präfix außerhalb, enthält der kompilierte Paketfilter keine passende v6-Quelle und jedes IPv6-Paket wird am Ingress des Subnet-Routers verworfen — bei v4 fällt es nicht auf, solange das Präfix eine Teilmenge von <code>100.64.0.0/10</code> ist. Hier doppelt abgesichert, da die ACL zusätzlich <code>group:</code>/<code>tag:</code> statt <code>*</code> verwendet. Im CDP-Cluster war mit <code>fd72:a312:5995::/48</code> und <code>&quot;src&quot;:[&quot;*&quot;]</code> genau dieser Ausfall eingetreten; dort wurde am 31.08.2026 auf <code>fd7a:115c:a1e0:2::/64</code> migriert. Getestet mit Headscale 0.29.3.</li>
+<li><strong>ACL-Policy</strong>: Liegt in der <strong>Datenbank</strong>, nicht in der Konfigurationsdatei (<code>policy.mode: database</code>). Änderungen an <code>config-patch.yaml</code> werden durch ArgoCD zwar ins Secret synchronisiert, aber <strong>nicht</strong> wirksam — dafür ist ein expliziter <code>headscale policy set</code> nötig. Siehe <a href="/posts/homelab/k3s-prod/apps/headscale/readme/#acl-policy-setzen" >ACL-Policy setzen</a>.</li>
 <li><strong>DERP</strong>: Es werden die öffentlichen DERP-Server von Tailscale verwendet. Ein eigener DERP-Service ist konfiguriert, aber nicht als Server aktiviert. Der STUN-Dienst läuft über einen LoadBalancer-Service.</li>
 <li><strong>Speicher</strong>: Konfiguration und SQLite-Datenbank liegen auf einem Longhorn-Volume. Diese Datenbank ist der gesamte Zustand des Tailnets — geht sie verloren, müssen sich alle Knoten neu anmelden.</li>
 </ul>
+
+<h3 class="relative group">ACL-Policy setzen
+    <div id="acl-policy-setzen" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#acl-policy-setzen" aria-label="Anker">#</a>
+    </span>
+    
+</h3>
+<p><code>policy.mode</code> steht auf <code>database</code>: <strong>Die wirksame Policy liegt in der Headscale-Datenbank, nicht in
+der Konfigurationsdatei.</strong> <code>config-patch.yaml</code> patcht das Secret <code>headscale</code>, das im Pod als
+<code>/etc/headscale/policy.json</code> gemountet wird — Headscale liest diese Datei aber weder beim Start noch
+bei einem Neustart ein.</p>
+<p><strong>Ein Commit an <code>config-patch.yaml</code> ändert am laufenden System also nichts.</strong> ArgoCD meldet <code>Synced</code>,
+das Secret ist aktuell, die Datei im Pod ist aktuell — und die Policy im Cluster ist trotzdem die
+alte. Das Repo ist für die ACL <strong>nicht</strong> die Wahrheit.</p>
+<p>Nach jeder Änderung an <code>config-patch.yaml</code> ist deshalb dieser Schritt nötig:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">kubectl <span class="nb">exec</span> -n headscale deploy/headscale -- headscale policy <span class="nb">set</span> -f /etc/headscale/policy.json</span></span></code></pre></div></div>
+<p>Vorher sicherstellen, dass ArgoCD das Secret bereits synchronisiert hat — sonst schreibt der Befehl
+den alten Stand erneut in die Datenbank. Der Pod muss dafür nicht neu gestartet werden.</p>
+<p>Wirksamen Stand ansehen:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">kubectl <span class="nb">exec</span> -n headscale deploy/headscale -- headscale policy get</span></span></code></pre></div></div>
+<p>Auf Drift prüfen — die Ausgabe von <code>policy get</code> gegen den <code>policy.json</code>-Block in <code>config-patch.yaml</code>
+halten. Weichen sie ab, wurde eine Änderung committet, aber nie gesetzt.</p>
+<p>Verifizieren, dass die Clients die neue Policy haben. Der kompilierte Paketfilter erscheint binnen
+Sekunden auf den Knoten; ein Subnet-Router eignet sich am besten dafür:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">kubectl <span class="nb">exec</span> -n wireguard deploy/wireguard-tailscale -c tailscale -- tailscale debug netmap <span class="p">|</span> jq <span class="s2">&#34;.PacketFilter[].Srcs&#34;</span></span></span></code></pre></div></div>
 
 <h3 class="relative group">Installation
     <div id="installation" class="anchor"></div>
@@ -1735,9 +1767,9 @@ Das Helm-Chart stammt aus der OCI-Registry <a href="https://codeberg.org/wrenix"
           
             <a
               class="flex text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
-              href="/posts/homelab/k3s-prod/apps/hedgedoc/readme/">
+              href="/posts/homelab/k3s-prod/apps/corenetworks-dns-operator/readme/">
               <span class="leading-6">
-                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;HedgeDoc
+                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;
               </span>
             </a>
             
@@ -1751,14 +1783,14 @@ Das Helm-Chart stammt aus der OCI-Registry <a href="https://codeberg.org/wrenix"
           
             <a
               class="flex text-right text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
-              href="/posts/homelab/k3s-prod/apps/forgejo-runner/readme/">
+              href="/posts/homelab/k3s-prod/ansible/shutdown-startup/">
               <span class="leading-6">
-                Forgejo Runner&ensp;<span class="inline-block rtl:rotate-180">&rarr;</span>
+                Operational Lifecycle Management: Orchestrierter Shutdown für Kubernetes&ensp;<span class="inline-block rtl:rotate-180">&rarr;</span>
               </span>
             </a>
             
               <span class="me-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
-                <time datetime="2026-08-25T09:24:25&#43;02:00">25 August 2026</time>
+                <time datetime="2024-10-27T10:00:00&#43;01:00">27 Oktober 2024</time>
               </span>
             
           

@@ -39,6 +39,12 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://zyria.de/posts/homelab/k3s-prod/apps/headscale/readme/</loc>
+    <lastmod>2026-09-01T00:07:18+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://zyria.de/posts/homelab/k3s-prod/apps/corenetworks-dns-operator/readme/</loc>
     <lastmod>2026-08-25T09:24:25+02:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -112,12 +118,6 @@
   </url>
   <url>
     <loc>https://zyria.de/posts/homelab/k3s-prod/apps/forgejo-runner/readme/</loc>
-    <lastmod>2026-08-25T09:24:25+02:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://zyria.de/posts/homelab/k3s-prod/apps/headscale/readme/</loc>
     <lastmod>2026-08-25T09:24:25+02:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
