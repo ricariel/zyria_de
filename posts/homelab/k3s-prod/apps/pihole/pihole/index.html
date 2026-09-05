@@ -104,8 +104,8 @@
 	<meta property="og:locale" content="de_de">
 	<meta property="og:type" content="article">
 		<meta property="article:section" content="posts">
-		<meta property="article:published_time" content="2026-08-25T09:24:25+02:00">
-		<meta property="article:modified_time" content="2026-08-25T09:24:25+02:00">
+		<meta property="article:published_time" content="2026-09-04T12:44:44+02:00">
+		<meta property="article:modified_time" content="2026-09-04T12:44:44+02:00">
 		<meta property="article:tag" content="Kubernetes">
 		<meta property="article:tag" content="K3s">
 		<meta property="article:tag" content="Gitops">
@@ -311,15 +311,15 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
       "sameAs": ["https://git.casa-due-pur.de/fabrice.kirchner", "https://git.zyria.de/pyrox", "https://github.com/ricariel", "https://www.linkedin.com/in/fabrice-kirchner-bb5408163/", "https://www.xing.com/profile/Fabrice_Kirchner", "https://kirchner.social/@fabrice", "https://codeberg.org/ricariel"]
     },
     "copyrightYear": "2026",
-    "dateCreated": "2026-08-25T09:24:25\u002b02:00",
-    "datePublished": "2026-08-25T09:24:25\u002b02:00",
+    "dateCreated": "2026-09-04T12:44:44\u002b02:00",
+    "datePublished": "2026-09-04T12:44:44\u002b02:00",
     
-    "dateModified": "2026-08-25T09:24:25\u002b02:00",
+    "dateModified": "2026-09-04T12:44:44\u002b02:00",
     
     "keywords": ["kubernetes","k3s","gitops","argocd","helm","kustomize","homelab","produktion"],
     
     "mainEntityOfPage": "https://zyria.de/posts/homelab/k3s-prod/apps/pihole/pihole/",
-    "wordCount": "348"
+    "wordCount": "394"
   }]
   </script>
 
@@ -964,7 +964,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2026-08-25T09:24:25&#43;02:00">25 August 2026</time><span class="px-2 text-primary-500">&middot;</span><span>348 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
+      <time datetime="2026-09-04T12:44:44&#43;02:00">4 September 2026</time><span class="px-2 text-primary-500">&middot;</span><span>394 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
 
 
   
@@ -1443,7 +1443,7 @@ This Pi-hole deployment includes:</p>
     </span>
     
 </h3>
-<p>Pi-hole fungiert als DNS-Server für das lokale Netzwerk. Wenn ein Gerät eine DNS-Anfrage stellt, um eine Domain aufzulösen, prüft Pi-hole, ob diese Domain auf einer der Blocklisten steht. Wenn ja, wird die Anfrage blockiert und das Gerät kann keine Verbindung herstellen. Anfragen an legitime Domains werden an einen konfigurierten Upstream-DNS-Server (hier Google DNS) weitergeleitet. Dies blockiert Werbung und Tracker auf allen Geräten im Netzwerk, ohne dass auf jedem Gerät eine separate Software installiert werden muss.</p>
+<p>Pi-hole fungiert als DNS-Server für das lokale Netzwerk. Wenn ein Gerät eine DNS-Anfrage stellt, um eine Domain aufzulösen, prüft Pi-hole, ob diese Domain auf einer der Blocklisten steht. Wenn ja, wird die Anfrage blockiert und das Gerät kann keine Verbindung herstellen. Anfragen an legitime Domains werden an den eigenen rekursiven Resolver (<a href="../unbound/" ><code>apps/unbound</code></a>) weitergeleitet — bewusst als einziger Upstream. Der Rückfall auf Google liegt eine Schicht höher in <a href="../nameserver/" ><code>apps/nameserver</code></a> und greift nur, wenn Pi-hole oder Unbound wirklich ausfallen; ein zweiter Upstream hier könnte bei einem Ausfall der autoritativen Nameserver mit einem schnellen SERVFAIL die noch gültige Antwort aus dem Unbound-Cache überholen. Dies blockiert Werbung und Tracker auf allen Geräten im Netzwerk, ohne dass auf jedem Gerät eine separate Software installiert werden muss.</p>
 
 <h3 class="relative group">Lokale Anpassungen
     <div id="lokale-anpassungen" class="anchor"></div>
@@ -1732,14 +1732,14 @@ This Pi-hole deployment includes:</p>
           
             <a
               class="flex text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
-              href="/posts/homelab/k3s-prod/apps/plex/readme/">
+              href="/posts/homelab/k3s-prod/apps/unbound/readme/">
               <span class="leading-6">
-                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;Plex Media Server
+                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;Unbound
               </span>
             </a>
             
               <span class="ms-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
-                <time datetime="2026-08-25T09:24:25&#43;02:00">25 August 2026</time>
+                <time datetime="2026-09-04T12:44:09&#43;02:00">4 September 2026</time>
               </span>
             
           
@@ -1748,14 +1748,14 @@ This Pi-hole deployment includes:</p>
           
             <a
               class="flex text-right text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
-              href="/posts/homelab/k3s-prod/apps/paperless/readme/">
+              href="/posts/homelab/k3s-prod/apps/nameserver/readme/">
               <span class="leading-6">
-                Paperless-ngx&ensp;<span class="inline-block rtl:rotate-180">&rarr;</span>
+                CoreDNS&ensp;<span class="inline-block rtl:rotate-180">&rarr;</span>
               </span>
             </a>
             
               <span class="me-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
-                <time datetime="2026-08-25T09:24:25&#43;02:00">25 August 2026</time>
+                <time datetime="2026-09-04T12:44:53&#43;02:00">4 September 2026</time>
               </span>
             
           

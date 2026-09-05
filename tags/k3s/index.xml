@@ -9,7 +9,7 @@
     <managingEditor>fabrice@zyria.de (Fabrice Kirchner)</managingEditor>
     <webMaster>fabrice@zyria.de (Fabrice Kirchner)</webMaster>
     
-    <lastBuildDate>Tue, 01 Sep 2026 00:07:18 +0200</lastBuildDate><atom:link href="https://zyria.de/tags/k3s/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 04 Sep 2026 12:44:53 +0200</lastBuildDate><atom:link href="https://zyria.de/tags/k3s/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Operational Lifecycle Management: Orchestrierter Shutdown für Kubernetes</title>
@@ -18,6 +18,36 @@
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/posts/homelab/k3s-prod/ansible/shutdown-startup/</guid>
       <description>Ein technischer Leitfaden für das geordnete Herunterfahren und Wiederanfahren eines Kubernetes-Clusters (k3s/Longhorn/ArgoCD) zur Vermeidung von Datenkorruption.</description>
+      
+    </item>
+    
+    <item>
+      <title>CoreDNS</title>
+      <link>https://zyria.de/posts/homelab/k3s-prod/apps/nameserver/readme/</link>
+      <pubDate>Fri, 04 Sep 2026 12:44:53 +0200</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/nameserver/readme/</guid>
+      <description>CoreDNS dient als primärer DNS-Server für die Service Discovery innerhalb des Kubernetes-Clusters und löst sowohl interne als auch externe DNS-Anfragen auf.</description>
+      
+    </item>
+    
+    <item>
+      <title>Pi-hole</title>
+      <link>https://zyria.de/posts/homelab/k3s-prod/apps/pihole/pihole/</link>
+      <pubDate>Fri, 04 Sep 2026 12:44:44 +0200</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/pihole/pihole/</guid>
+      <description>This document describes the Pi-hole deployment, a network-wide ad blocker and DNS sinkhole.</description>
+      
+    </item>
+    
+    <item>
+      <title>Unbound</title>
+      <link>https://zyria.de/posts/homelab/k3s-prod/apps/unbound/readme/</link>
+      <pubDate>Fri, 04 Sep 2026 12:44:09 +0200</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/unbound/readme/</guid>
+      <description>Unbound löst Namen selbst rekursiv auf und liefert bei einem Ausfall der autoritativen Nameserver weiterhin die zuletzt bekannten Antworten aus.</description>
       
     </item>
     
@@ -107,16 +137,6 @@
       <pubDate>Tue, 25 Aug 2026 09:24:25 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/posts/homelab/k3s-prod/apps/coredns/readme/</guid>
-      <description>CoreDNS dient als primärer DNS-Server für die Service Discovery innerhalb des Kubernetes-Clusters und löst sowohl interne als auch externe DNS-Anfragen auf.</description>
-      
-    </item>
-    
-    <item>
-      <title>CoreDNS</title>
-      <link>https://zyria.de/posts/homelab/k3s-prod/apps/nameserver/readme/</link>
-      <pubDate>Tue, 25 Aug 2026 09:24:25 +0200</pubDate>
-      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/nameserver/readme/</guid>
       <description>CoreDNS dient als primärer DNS-Server für die Service Discovery innerhalb des Kubernetes-Clusters und löst sowohl interne als auch externe DNS-Anfragen auf.</description>
       
     </item>
@@ -398,16 +418,6 @@
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/posts/homelab/k3s-prod/apps/paperless/readme/</guid>
       <description>This document describes the Paperless-ngx deployment, a document management system that transforms physical documents into searchable digital archives.</description>
-      
-    </item>
-    
-    <item>
-      <title>Pi-hole</title>
-      <link>https://zyria.de/posts/homelab/k3s-prod/apps/pihole/pihole/</link>
-      <pubDate>Tue, 25 Aug 2026 09:24:25 +0200</pubDate>
-      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/pihole/pihole/</guid>
-      <description>This document describes the Pi-hole deployment, a network-wide ad blocker and DNS sinkhole.</description>
       
     </item>
     
