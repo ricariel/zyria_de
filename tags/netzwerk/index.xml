@@ -9,7 +9,7 @@
     <managingEditor>fabrice@zyria.de (Fabrice Kirchner)</managingEditor>
     <webMaster>fabrice@zyria.de (Fabrice Kirchner)</webMaster>
     
-    <lastBuildDate>Tue, 28 Jul 2026 13:53:46 +0200</lastBuildDate><atom:link href="https://zyria.de/tags/netzwerk/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 07 Sep 2026 14:43:53 +0200</lastBuildDate><atom:link href="https://zyria.de/tags/netzwerk/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Unifi Snippets</title>
@@ -38,6 +38,16 @@
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/posts/homelab/networking/</guid>
       <description>&lt;p&gt;Netzwerk-Konfiguration, VPN-Setup und externe Server-Anbindung.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>UniFi Netzwerk-Anwendung</title>
+      <link>https://zyria.de/posts/homelab/k3s-prod/apps/unifi-controller/readme/</link>
+      <pubDate>Mon, 20 Oct 2025 13:46:48 +0200</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/unifi-controller/readme/</guid>
+      <description>Dieses Dokument beschreibt die Bereitstellung der UniFi Netzwerk-Anwendung, einer Software-Defined Networking (SDN)-Plattform zur Verwaltung von UniFi-Geräten.</description>
       
     </item>
     

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Dns on Zyria</title>
+    <link>https://zyria.de/tags/dns/</link>
+    <description>Recent content in Dns on Zyria</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>de-de</language>
+    <managingEditor>fabrice@zyria.de (Fabrice Kirchner)</managingEditor>
+    <webMaster>fabrice@zyria.de (Fabrice Kirchner)</webMaster>
+    
+    <lastBuildDate>Mon, 07 Sep 2026 14:43:53 +0200</lastBuildDate><atom:link href="https://zyria.de/tags/dns/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Pi-hole</title>
+      <link>https://zyria.de/posts/homelab/k3s-prod/apps/pihole/pihole/</link>
+      <pubDate>Sat, 18 Oct 2025 07:42:43 +0200</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/pihole/pihole/</guid>
+      <description>This document describes the Pi-hole deployment, a network-wide ad blocker and DNS sinkhole.</description>
+      
+    </item>
+    
+    <item>
+      <title>CoreDNS</title>
+      <link>https://zyria.de/posts/homelab/k3s-prod/apps/coredns/readme/</link>
+      <pubDate>Mon, 18 Aug 2025 14:52:07 +0200</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/coredns/readme/</guid>
+      <description>CoreDNS dient als primärer DNS-Server für die Service Discovery innerhalb des Kubernetes-Clusters und löst sowohl interne als auch externe DNS-Anfragen auf.</description>
+      
+    </item>
+    
+    <item>
+      <title>CoreDNS</title>
+      <link>https://zyria.de/posts/homelab/k3s-prod/apps/nameserver/readme/</link>
+      <pubDate>Mon, 18 Aug 2025 14:52:07 +0200</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/nameserver/readme/</guid>
+      <description>CoreDNS dient als primärer DNS-Server für die Service Discovery innerhalb des Kubernetes-Clusters und löst sowohl interne als auch externe DNS-Anfragen auf.</description>
+      
+    </item>
+    
+  </channel>
+</rss>

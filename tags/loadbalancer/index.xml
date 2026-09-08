@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Loadbalancer on Zyria</title>
+    <link>https://zyria.de/tags/loadbalancer/</link>
+    <description>Recent content in Loadbalancer on Zyria</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>de-de</language>
+    <managingEditor>fabrice@zyria.de (Fabrice Kirchner)</managingEditor>
+    <webMaster>fabrice@zyria.de (Fabrice Kirchner)</webMaster>
+    
+    <lastBuildDate>Mon, 07 Sep 2026 14:43:53 +0200</lastBuildDate><atom:link href="https://zyria.de/tags/loadbalancer/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>MetalLB</title>
+      <link>https://zyria.de/posts/homelab/k3s-prod/apps/metallb/readme/</link>
+      <pubDate>Sat, 04 Oct 2025 15:31:37 +0200</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/metallb/readme/</guid>
+      <description>MetalLB ermöglicht die Verwendung von Kubernetes-Services vom Typ &lt;code&gt;LoadBalancer&lt;/code&gt; in Clustern, die nicht bei einem Cloud-Anbieter laufen, indem es IP-Adressen aus einem konfigurierten Pool zuweist.</description>
+      
+    </item>
+    
+  </channel>
+</rss>

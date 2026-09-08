@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Monitoring on Zyria</title>
+    <link>https://zyria.de/tags/monitoring/</link>
+    <description>Recent content in Monitoring on Zyria</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>de-de</language>
+    <managingEditor>fabrice@zyria.de (Fabrice Kirchner)</managingEditor>
+    <webMaster>fabrice@zyria.de (Fabrice Kirchner)</webMaster>
+    
+    <lastBuildDate>Mon, 07 Sep 2026 14:43:53 +0200</lastBuildDate><atom:link href="https://zyria.de/tags/monitoring/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Prometheus</title>
+      <link>https://zyria.de/posts/homelab/k3s-prod/apps/prometheus/readme/</link>
+      <pubDate>Fri, 17 Oct 2025 13:23:29 +0200</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/prometheus/readme/</guid>
+      <description>This document describes the Prometheus deployment, an open-source monitoring and alerting toolkit.</description>
+      
+    </item>
+    
+    <item>
+      <title>Uptime Kuma</title>
+      <link>https://zyria.de/posts/homelab/k3s-prod/apps/uptime-kuma/readme/</link>
+      <pubDate>Fri, 17 Oct 2025 12:20:08 +0200</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/uptime-kuma/readme/</guid>
+      <description>This document describes the Uptime Kuma deployment, a self-hosted, open-source monitoring tool for tracking service uptime and performance.</description>
+      
+    </item>
+    
+  </channel>
+</rss>

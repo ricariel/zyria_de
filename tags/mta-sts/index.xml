@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Mta-Sts on Zyria</title>
+    <link>https://zyria.de/tags/mta-sts/</link>
+    <description>Recent content in Mta-Sts on Zyria</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>de-de</language>
+    <managingEditor>fabrice@zyria.de (Fabrice Kirchner)</managingEditor>
+    <webMaster>fabrice@zyria.de (Fabrice Kirchner)</webMaster>
+    
+    <lastBuildDate>Mon, 07 Sep 2026 14:43:53 +0200</lastBuildDate><atom:link href="https://zyria.de/tags/mta-sts/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>MTA-STS Policy Server</title>
+      <link>https://zyria.de/posts/homelab/k3s-prod/apps/mta-sts/readme/</link>
+      <pubDate>Fri, 17 Oct 2025 13:17:06 +0200</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/mta-sts/readme/</guid>
+      <description>Dieser Dienst verwendet einen Nginx-Server, um eine statische &lt;code&gt;mta-sts.txt&lt;/code&gt;-Datei unter dem &lt;code&gt;.well-known&lt;/code&gt;-Pfad für verschiedene Domains zu veröffentlichen und so die E-Mail-Sicherheit zu erhöhen.</description>
+      
+    </item>
+    
+  </channel>
+</rss>

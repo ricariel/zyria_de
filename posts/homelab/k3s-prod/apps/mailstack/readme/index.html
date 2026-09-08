@@ -34,7 +34,7 @@
     <meta name="description" content="Dieser Mailstack integriert mehrere Komponenten wie Postfix, Dovecot, Rspamd und ClamAV, um einen robusten und sicheren E-Mail-Dienst mit Spam- und Virenfilterung bereitzustellen.">
   
   
-    <meta name="keywords" content="kubernetes,k3s,gitops,argocd,helm,kustomize,homelab,produktion,">
+    <meta name="keywords" content="kubernetes,mail,postfix,dovecot,">
   
   
   
@@ -104,14 +104,12 @@
 	<meta property="og:locale" content="de_de">
 	<meta property="og:type" content="article">
 		<meta property="article:section" content="posts">
-		<meta property="article:published_time" content="2026-08-25T09:24:25+02:00">
-		<meta property="article:modified_time" content="2026-08-25T09:24:25+02:00">
+		<meta property="article:published_time" content="2025-10-18T07:10:10+02:00">
+		<meta property="article:modified_time" content="2026-09-07T14:43:53+02:00">
 		<meta property="article:tag" content="Kubernetes">
-		<meta property="article:tag" content="K3s">
-		<meta property="article:tag" content="Gitops">
-		<meta property="article:tag" content="Argocd">
-		<meta property="article:tag" content="Helm">
-		<meta property="article:tag" content="Kustomize">
+		<meta property="article:tag" content="Mail">
+		<meta property="article:tag" content="Postfix">
+		<meta property="article:tag" content="Dovecot">
 
   
 	<meta name="twitter:card" content="summary">
@@ -310,13 +308,13 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
       "image": "https://zyria.de/images/chibi-head.jpg",
       "sameAs": ["https://git.casa-due-pur.de/fabrice.kirchner", "https://git.zyria.de/pyrox", "https://github.com/ricariel", "https://www.linkedin.com/in/fabrice-kirchner-bb5408163/", "https://www.xing.com/profile/Fabrice_Kirchner", "https://kirchner.social/@fabrice", "https://codeberg.org/ricariel"]
     },
-    "copyrightYear": "2026",
-    "dateCreated": "2026-08-25T09:24:25\u002b02:00",
-    "datePublished": "2026-08-25T09:24:25\u002b02:00",
+    "copyrightYear": "2025",
+    "dateCreated": "2025-10-18T07:10:10\u002b02:00",
+    "datePublished": "2025-10-18T07:10:10\u002b02:00",
     
-    "dateModified": "2026-08-25T09:24:25\u002b02:00",
+    "dateModified": "2026-09-07T14:43:53\u002b02:00",
     
-    "keywords": ["kubernetes","k3s","gitops","argocd","helm","kustomize","homelab","produktion"],
+    "keywords": ["kubernetes","mail","postfix","dovecot"],
     
     "mainEntityOfPage": "https://zyria.de/posts/homelab/k3s-prod/apps/mailstack/readme/",
     "wordCount": "3036"
@@ -939,6 +937,8 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   
 
   
+    
+  
 
   
     
@@ -964,7 +964,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2026-08-25T09:24:25&#43;02:00">25 August 2026</time><span class="px-2 text-primary-500">&middot;</span><span>3036 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
+      <time datetime="2025-10-18T07:10:10&#43;02:00">18 Oktober 2025</time><span class="px-2 text-primary-500">&middot;</span><time datetime="2026-09-07T14:43:53&#43;02:00">Aktualisiert: 7 September 2026</time><span class="px-2 text-primary-500">&middot;</span><span>3036 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
 
 
   
@@ -1072,7 +1072,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
           
             
               
-                <a class="relative mt-[0.5rem] me-2" href="/tags/k3s/">
+                <a class="relative mt-[0.5rem] me-2" href="/tags/mail/">
                   <span class="flex cursor-pointer">
   
   
@@ -1081,7 +1081,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
     <span
       class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
   
-    K3s
+    Mail
   </span>
 </span>
 
@@ -1091,7 +1091,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
           
             
               
-                <a class="relative mt-[0.5rem] me-2" href="/tags/gitops/">
+                <a class="relative mt-[0.5rem] me-2" href="/tags/postfix/">
                   <span class="flex cursor-pointer">
   
   
@@ -1100,7 +1100,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
     <span
       class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
   
-    Gitops
+    Postfix
   </span>
 </span>
 
@@ -1110,7 +1110,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
           
             
               
-                <a class="relative mt-[0.5rem] me-2" href="/tags/argocd/">
+                <a class="relative mt-[0.5rem] me-2" href="/tags/dovecot/">
                   <span class="flex cursor-pointer">
   
   
@@ -1119,83 +1119,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
     <span
       class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
   
-    Argocd
-  </span>
-</span>
-
-                </a>
-              
-            
-          
-            
-              
-                <a class="relative mt-[0.5rem] me-2" href="/tags/helm/">
-                  <span class="flex cursor-pointer">
-  
-  
-  
-  
-    <span
-      class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-  
-    Helm
-  </span>
-</span>
-
-                </a>
-              
-            
-          
-            
-              
-                <a class="relative mt-[0.5rem] me-2" href="/tags/kustomize/">
-                  <span class="flex cursor-pointer">
-  
-  
-  
-  
-    <span
-      class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-  
-    Kustomize
-  </span>
-</span>
-
-                </a>
-              
-            
-          
-            
-              
-                <a class="relative mt-[0.5rem] me-2" href="/tags/homelab/">
-                  <span class="flex cursor-pointer">
-  
-  
-  
-  
-    <span
-      class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-  
-    Homelab
-  </span>
-</span>
-
-                </a>
-              
-            
-          
-            
-              
-                <a class="relative mt-[0.5rem] me-2" href="/tags/produktion/">
-                  <span class="flex cursor-pointer">
-  
-  
-  
-  
-    <span
-      class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-  
-    Produktion
+    Dovecot
   </span>
 </span>
 
@@ -2087,7 +2011,7 @@ Wer auf ein Postfach zugreifen darf, steht damit in der Gruppe
 <p>Einzelne Rechte lassen sich weiterhin von Hand setzen — für Postfächer <strong>ohne</strong>
 <code>Mailbox-*</code>-Gruppe, denn sonst überschreibt der ACL-Sync sie beim nächsten Lauf:</p>
 <div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="ln">1</span><span class="cl">kubectl <span class="nb">exec</span> -n mailstack deploy/mailstack-main -c dovecot -- <span class="se">\
-</span></span></span><span class="line"><span class="ln">2</span><span class="cl">  doveadm acl <span class="nb">set</span> -u info@example.com INBOX <span class="nv">user</span><span class="o">=</span>henning@example.com <span class="se">\
+</span></span></span><span class="line"><span class="ln">2</span><span class="cl">  doveadm acl <span class="nb">set</span> -u info@example.com INBOX <span class="nv">user</span><span class="o">=</span>m.mustermann@example.com <span class="se">\
 </span></span></span><span class="line"><span class="ln">3</span><span class="cl">  lookup <span class="nb">read</span> write write-seen write-deleted insert post expunge create delete</span></span></code></pre></div></div>
 <p>Früher lagen diese Befehle gesammelt in <code>sharedfolders.sh</code>. Die Datei ist
 entfallen — der Bestand steckt jetzt in den AD-Gruppen, die Übernahme beschreibt
@@ -2166,7 +2090,7 @@ nur <code>&quot; / \ [ ] : ; | = , + * ? &lt; &gt;</code>.</p>
 </span></span></span><span class="line"><span class="ln">2</span><span class="cl">  --groupou<span class="o">=</span><span class="s2">&#34;OU=Gruppen&#34;</span> --group-scope<span class="o">=</span>Global --group-type<span class="o">=</span>Security <span class="se">\
 </span></span></span><span class="line"><span class="ln">3</span><span class="cl">  --description<span class="o">=</span><span class="s2">&#34;Darf im Namen von info@example.com senden&#34;</span>
 </span></span><span class="line"><span class="ln">4</span><span class="cl">
-</span></span><span class="line"><span class="ln">5</span><span class="cl">samba-tool group addmembers <span class="s2">&#34;SendAs-info@example.com&#34;</span> henning</span></span></code></pre></div></div>
+</span></span><span class="line"><span class="ln">5</span><span class="cl">samba-tool group addmembers <span class="s2">&#34;SendAs-info@example.com&#34;</span> mmustermann</span></span></code></pre></div></div>
 <p>Erteilen und Entziehen der Berechtigung ist danach reine
 Gruppenmitgliedschaft. Verschachtelte Gruppen werden mit aufgelöst — soll ein
 Delegierter auch unter einem Alias des Postfachs senden, genügt es, die
@@ -2248,7 +2172,7 @@ betroffen ist.</p>
 </span></span></span><span class="line"><span class="ln">2</span><span class="cl">  --groupou<span class="o">=</span><span class="s2">&#34;OU=Gruppen&#34;</span> --group-scope<span class="o">=</span>Global --group-type<span class="o">=</span>Security <span class="se">\
 </span></span></span><span class="line"><span class="ln">3</span><span class="cl">  --description<span class="o">=</span><span class="s2">&#34;Vollzugriff auf das Postfach info@example.com&#34;</span>
 </span></span><span class="line"><span class="ln">4</span><span class="cl">
-</span></span><span class="line"><span class="ln">5</span><span class="cl">samba-tool group addmembers <span class="s2">&#34;Mailbox-info@example.com-RW&#34;</span> henning</span></span></code></pre></div></div>
+</span></span><span class="line"><span class="ln">5</span><span class="cl">samba-tool group addmembers <span class="s2">&#34;Mailbox-info@example.com-RW&#34;</span> mmustermann</span></span></code></pre></div></div>
 
 <h4 class="relative group">Ablauf
     <div id="ablauf" class="anchor"></div>
@@ -2882,14 +2806,14 @@ relativ zur Domain-DN — so erwartet es <code>samba-tool</code>).</p>
           
             <a
               class="flex text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
-              href="/posts/homelab/k3s-prod/apps/maintenance-page/readme/">
+              href="/posts/homelab/k3s-prod/apps/self-service-password/readme/">
               <span class="leading-6">
-                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;Maintenance Page
+                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;Self Service Password
               </span>
             </a>
             
               <span class="ms-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
-                <time datetime="2026-08-25T09:24:25&#43;02:00">25 August 2026</time>
+                <time datetime="2025-10-17T13:58:27&#43;02:00">17 Oktober 2025</time>
               </span>
             
           
@@ -2898,14 +2822,14 @@ relativ zur Domain-DN — so erwartet es <code>samba-tool</code>).</p>
           
             <a
               class="flex text-right text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
-              href="/posts/homelab/k3s-prod/apps/mailstack-new/readme/">
+              href="/posts/homelab/k3s-prod/apps/pihole/pihole/">
               <span class="leading-6">
-                Mailstack&ensp;<span class="inline-block rtl:rotate-180">&rarr;</span>
+                Pi-hole&ensp;<span class="inline-block rtl:rotate-180">&rarr;</span>
               </span>
             </a>
             
               <span class="me-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
-                <time datetime="2026-08-25T09:24:25&#43;02:00">25 August 2026</time>
+                <time datetime="2025-10-18T07:42:43&#43;02:00">18 Oktober 2025</time>
               </span>
             
           

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Configmap on Zyria</title>
+    <link>https://zyria.de/tags/configmap/</link>
+    <description>Recent content in Configmap on Zyria</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>de-de</language>
+    <managingEditor>fabrice@zyria.de (Fabrice Kirchner)</managingEditor>
+    <webMaster>fabrice@zyria.de (Fabrice Kirchner)</webMaster>
+    
+    <lastBuildDate>Mon, 07 Sep 2026 14:43:53 +0200</lastBuildDate><atom:link href="https://zyria.de/tags/configmap/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Reloader</title>
+      <link>https://zyria.de/posts/homelab/k3s-prod/apps/reloader/readme/</link>
+      <pubDate>Fri, 17 Oct 2025 13:26:18 +0200</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/reloader/readme/</guid>
+      <description>Dieses Dokument beschreibt die Bereitstellung des Reloader, eines Kubernetes-Controllers, der Pod-Neustarts bei ConfigMap- oder Secret-Updates automatisiert.</description>
+      
+    </item>
+    
+  </channel>
+</rss>

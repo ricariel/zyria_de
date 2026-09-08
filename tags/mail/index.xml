@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Mail on Zyria</title>
+    <link>https://zyria.de/tags/mail/</link>
+    <description>Recent content in Mail on Zyria</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>de-de</language>
+    <managingEditor>fabrice@zyria.de (Fabrice Kirchner)</managingEditor>
+    <webMaster>fabrice@zyria.de (Fabrice Kirchner)</webMaster>
+    
+    <lastBuildDate>Mon, 07 Sep 2026 14:43:53 +0200</lastBuildDate><atom:link href="https://zyria.de/tags/mail/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Mailstack</title>
+      <link>https://zyria.de/posts/homelab/k3s-prod/apps/mailstack/readme/</link>
+      <pubDate>Sat, 18 Oct 2025 07:10:10 +0200</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/mailstack/readme/</guid>
+      <description>Dieser Mailstack integriert mehrere Komponenten wie Postfix, Dovecot, Rspamd und ClamAV, um einen robusten und sicheren E-Mail-Dienst mit Spam- und Virenfilterung bereitzustellen.</description>
+      
+    </item>
+    
+    <item>
+      <title>MTA-STS Policy Server</title>
+      <link>https://zyria.de/posts/homelab/k3s-prod/apps/mta-sts/readme/</link>
+      <pubDate>Fri, 17 Oct 2025 13:17:06 +0200</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/mta-sts/readme/</guid>
+      <description>Dieser Dienst verwendet einen Nginx-Server, um eine statische &lt;code&gt;mta-sts.txt&lt;/code&gt;-Datei unter dem &lt;code&gt;.well-known&lt;/code&gt;-Pfad für verschiedene Domains zu veröffentlichen und so die E-Mail-Sicherheit zu erhöhen.</description>
+      
+    </item>
+    
+    <item>
+      <title>DMARC Report</title>
+      <link>https://zyria.de/posts/homelab/k3s-prod/apps/dmarc-report/readme/</link>
+      <pubDate>Fri, 17 Oct 2025 10:56:01 +0200</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/dmarc-report/readme/</guid>
+      <description>Dieses Dokument beschreibt die Bereitstellung des DMARC Report Tools, das DMARC-Berichte verarbeitet und visualisiert.</description>
+      
+    </item>
+    
+  </channel>
+</rss>
