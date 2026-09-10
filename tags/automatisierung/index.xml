@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Automatisierung on Zyria</title>
+    <link>https://zyria.de/tags/automatisierung/</link>
+    <description>Recent content in Automatisierung on Zyria</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>de-de</language>
+    <managingEditor>fabrice@zyria.de (Fabrice Kirchner)</managingEditor>
+    <webMaster>fabrice@zyria.de (Fabrice Kirchner)</webMaster>
+    
+    <lastBuildDate>Wed, 09 Sep 2026 12:27:43 +0200</lastBuildDate><atom:link href="https://zyria.de/tags/automatisierung/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Ansible Konfiguration für k3s-prod</title>
+      <link>https://zyria.de/posts/homelab/k3s-prod/ansible/readme/</link>
+      <pubDate>Wed, 13 Aug 2025 17:04:53 +0200</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://zyria.de/posts/homelab/k3s-prod/ansible/readme/</guid>
+      <description>Ansible bringt den Cluster zum Laufen und wieder herunter; alles darueber laeuft ueber GitOps.</description>
+      
+    </item>
+    
+  </channel>
+</rss>

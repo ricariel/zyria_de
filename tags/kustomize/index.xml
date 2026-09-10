@@ -9,12 +9,12 @@
     <managingEditor>fabrice@zyria.de (Fabrice Kirchner)</managingEditor>
     <webMaster>fabrice@zyria.de (Fabrice Kirchner)</webMaster>
     
-    <lastBuildDate>Fri, 04 Sep 2026 12:44:09 +0200</lastBuildDate><atom:link href="https://zyria.de/tags/kustomize/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 09 Sep 2026 12:56:04 +0200</lastBuildDate><atom:link href="https://zyria.de/tags/kustomize/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Unbound</title>
       <link>https://zyria.de/posts/homelab/k3s-prod/apps/unbound/readme/</link>
-      <pubDate>Fri, 04 Sep 2026 12:44:09 +0200</pubDate>
+      <pubDate>Wed, 09 Sep 2026 12:56:04 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/posts/homelab/k3s-prod/apps/unbound/readme/</guid>
       <description>Unbound löst Namen selbst rekursiv auf und liefert bei einem Ausfall der autoritativen Nameserver weiterhin die zuletzt bekannten Antworten aus.</description>
@@ -38,16 +38,6 @@
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/posts/homelab/k3s-prod/apps/git-pages/readme/</guid>
       <description>&lt;h1 class=&#34;relative group&#34;&gt;git-pages&#xA;    &lt;div id=&#34;git-pages&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#git-pages&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h1&gt;&#xA;&lt;p&gt;Statischer Seiten-Server für Forgejo-Repositories, analog zu GitHub Pages.&lt;/p&gt;&#xA;&lt;p&gt;Upstream: &lt;a href=&#34;https://codeberg.org/git-pages/git-pages&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;codeberg.org/git-pages/git-pages&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;Der konkrete Hostname steht im Ingress in &lt;code&gt;values.yaml&lt;/code&gt;; hier steht dafür&#xA;&lt;code&gt;&amp;lt;pages-domain&amp;gt;&lt;/code&gt;.&lt;/p&gt;&#xA;&#xA;&lt;h2 class=&#34;relative group&#34;&gt;URLs&#xA;    &lt;div id=&#34;urls&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#urls&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;table&gt;&#xA;&#x9;&lt;thead&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;th&gt;URL&lt;/th&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;th&gt;Beschreibung&lt;/th&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&lt;/thead&gt;&#xA;&#x9;&lt;tbody&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;&lt;code&gt;&amp;lt;pages-domain&amp;gt;&lt;/code&gt;&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;Hauptdomain&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;&lt;code&gt;&amp;lt;user&amp;gt;.&amp;lt;pages-domain&amp;gt;&lt;/code&gt;&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;Benutzer-Seiten&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;&lt;code&gt;&amp;lt;user&amp;gt;.&amp;lt;pages-domain&amp;gt;/&amp;lt;repo&amp;gt;&lt;/code&gt;&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;Repo-spezifische Seiten&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&lt;/tbody&gt;&#xA;&lt;/table&gt;&#xA;&#xA;&lt;h2 class=&#34;relative group&#34;&gt;Funktionsweise&#xA;    &lt;div id=&#34;funktionsweise&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#funktionsweise&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;git-pages zieht Inhalte aus Forgejo-Repositories und stellt sie als statische Webseiten bereit.&#xA;Seiten werden über Webhooks aus Forgejo aktualisiert.&lt;/p&gt;</description>
-      
-    </item>
-    
-    <item>
-      <title>Ansible Konfiguration für k3s-prod</title>
-      <link>https://zyria.de/posts/homelab/k3s-prod/ansible/readme/</link>
-      <pubDate>Tue, 25 Aug 2026 09:24:25 +0200</pubDate>
-      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://zyria.de/posts/homelab/k3s-prod/ansible/readme/</guid>
-      <description>Ansible bringt den Cluster zum Laufen und wieder herunter; alles darueber laeuft ueber GitOps.</description>
       
     </item>
     
