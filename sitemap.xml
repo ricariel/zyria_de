@@ -39,6 +39,12 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://zyria.de/posts/homelab/k3s-prod/apps/vpn-site-c/readme/</loc>
+    <lastmod>2026-09-14T10:50:08+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://zyria.de/posts/homelab/k3s-prod/apps/unbound/readme/</loc>
     <lastmod>2026-09-09T12:56:04+02:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -172,30 +178,6 @@
   </url>
   <url>
     <loc>https://zyria.de/posts/homelab/k3s-prod/apps/solarchart-de/readme/</loc>
-    <lastmod>2026-08-25T09:24:25+02:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://zyria.de/posts/homelab/k3s-prod/apps/ace1500/readme/</loc>
-    <lastmod>2026-08-25T09:24:25+02:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://zyria.de/posts/homelab/k3s-prod/apps/sf1200/readme/</loc>
-    <lastmod>2026-08-25T09:24:25+02:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://zyria.de/posts/homelab/k3s-prod/apps/sf2000-2/readme/</loc>
-    <lastmod>2026-08-25T09:24:25+02:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://zyria.de/posts/homelab/k3s-prod/apps/sf2000/readme/</loc>
     <lastmod>2026-08-25T09:24:25+02:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -556,7 +538,7 @@
   </url>
   <url>
     <loc>https://zyria.de/posts/homelab/k3s-prod/apps/headscale/readme/</loc>
-    <lastmod>2026-09-07T14:43:53+02:00</lastmod>
+    <lastmod>2026-09-14T10:50:08+02:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>

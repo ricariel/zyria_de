@@ -9,7 +9,7 @@
     <managingEditor>fabrice@zyria.de (Fabrice Kirchner)</managingEditor>
     <webMaster>fabrice@zyria.de (Fabrice Kirchner)</webMaster>
     
-    <lastBuildDate>Wed, 09 Sep 2026 12:56:04 +0200</lastBuildDate><atom:link href="https://zyria.de/tags/homelab/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 14 Sep 2026 10:50:08 +0200</lastBuildDate><atom:link href="https://zyria.de/tags/homelab/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Virtuelle Maschinen</title>
@@ -18,6 +18,16 @@
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/posts/homelab/vms/</guid>
       <description></description>
+      
+    </item>
+    
+    <item>
+      <title>VPN Standort C - Anbindung an das CDP-Tailnet</title>
+      <link>https://zyria.de/posts/homelab/k3s-prod/apps/vpn-site-c/readme/</link>
+      <pubDate>Mon, 14 Sep 2026 10:50:08 +0200</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/vpn-site-c/readme/</guid>
+      <description>Ein Pod baut einen WireGuard-Tunnel zum WireGuard-Server im CDP-Cluster auf und annonciert die Adressbereiche des CDP-Tailnets via Headscale ins eigene Tailnet.</description>
       
     </item>
     
@@ -248,46 +258,6 @@
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/posts/homelab/k3s-prod/apps/solarchart-de/readme/</guid>
       <description>Nginx liefert die Solarprognose-Seite aus, die beim Start des Containers aus einem Git-Repository geklont wird.</description>
-      
-    </item>
-    
-    <item>
-      <title>SolarFlow Topic Mapper (ACE1500)</title>
-      <link>https://zyria.de/posts/homelab/k3s-prod/apps/ace1500/readme/</link>
-      <pubDate>Tue, 25 Aug 2026 09:24:25 +0200</pubDate>
-      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/ace1500/readme/</guid>
-      <description>Dieses Dokument beschreibt die Bereitstellung einer benutzerdefinierten SolarFlow Topic Mapper-Anwendung für ein spezifisches SolarFlow-Gerät (ACE1500).</description>
-      
-    </item>
-    
-    <item>
-      <title>SolarFlow Topic Mapper (SF1200)</title>
-      <link>https://zyria.de/posts/homelab/k3s-prod/apps/sf1200/readme/</link>
-      <pubDate>Tue, 25 Aug 2026 09:24:25 +0200</pubDate>
-      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/sf1200/readme/</guid>
-      <description>Dieser Dienst verbindet sich mit dem lokalen MQTT-Broker und mappt die spezifischen, geräteabhängigen MQTT-Topics des Zendure SolarFlow Systems auf generische, leichter verständliche Topics um.</description>
-      
-    </item>
-    
-    <item>
-      <title>SolarFlow Topic Mapper (SF2000-2)</title>
-      <link>https://zyria.de/posts/homelab/k3s-prod/apps/sf2000-2/readme/</link>
-      <pubDate>Tue, 25 Aug 2026 09:24:25 +0200</pubDate>
-      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/sf2000-2/readme/</guid>
-      <description>Dieser Dienst verbindet sich mit dem lokalen MQTT-Broker und mappt die spezifischen, geräteabhängigen MQTT-Topics des Zendure SolarFlow Systems auf generische, leichter verständliche Topics um.</description>
-      
-    </item>
-    
-    <item>
-      <title>SolarFlow Topic Mapper (SF2000)</title>
-      <link>https://zyria.de/posts/homelab/k3s-prod/apps/sf2000/readme/</link>
-      <pubDate>Tue, 25 Aug 2026 09:24:25 +0200</pubDate>
-      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/sf2000/readme/</guid>
-      <description>Dieser Dienst verbindet sich mit dem lokalen MQTT-Broker und mappt die spezifischen, geräteabhängigen MQTT-Topics des Zendure SolarFlow Systems auf generische, leichter verständliche Topics um.</description>
       
     </item>
     

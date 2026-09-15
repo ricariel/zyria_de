@@ -15,8 +15,8 @@
 
   
   
-    <title>SolarFlow Topic Mapper (ACE1500) &middot; Zyria</title>
-    <meta name="title" content="SolarFlow Topic Mapper (ACE1500) &middot; Zyria">
+    <title>VPN Standort C - Anbindung an das CDP-Tailnet &middot; Zyria</title>
+    <meta name="title" content="VPN Standort C - Anbindung an das CDP-Tailnet &middot; Zyria">
   
 
   
@@ -31,14 +31,14 @@
     
   
   
-    <meta name="description" content="Dieses Dokument beschreibt die Bereitstellung einer benutzerdefinierten SolarFlow Topic Mapper-Anwendung für ein spezifisches SolarFlow-Gerät (ACE1500).">
+    <meta name="description" content="Ein Pod baut einen WireGuard-Tunnel zum WireGuard-Server im CDP-Cluster auf und annonciert die Adressbereiche des CDP-Tailnets via Headscale ins eigene Tailnet.">
   
   
     <meta name="keywords" content="kubernetes,k3s,gitops,argocd,helm,kustomize,homelab,produktion,">
   
   
   
-  <link rel="canonical" href="https://zyria.de/posts/homelab/k3s-prod/apps/ace1500/readme/">
+  <link rel="canonical" href="https://zyria.de/posts/homelab/k3s-prod/apps/vpn-site-c/readme/">
   
   
 
@@ -97,15 +97,15 @@
   
 
   
-  <meta property="og:url" content="https://zyria.de/posts/homelab/k3s-prod/apps/ace1500/readme/">
+  <meta property="og:url" content="https://zyria.de/posts/homelab/k3s-prod/apps/vpn-site-c/readme/">
 	<meta property="og:site_name" content="Zyria">
-	<meta property="og:title" content="SolarFlow Topic Mapper (ACE1500)">
-	<meta property="og:description" content="Dokumentation für die Bereitstellung des SolarFlow Topic Mappers (ACE1500)">
+	<meta property="og:title" content="VPN Standort C - Anbindung an das CDP-Tailnet">
+	<meta property="og:description" content="WireGuard-Client zum CDP-WireGuard-Server, per Tailscale/Headscale als Subnetz-Router ins eigene Tailnet gebracht">
 	<meta property="og:locale" content="de_de">
 	<meta property="og:type" content="article">
 		<meta property="article:section" content="posts">
-		<meta property="article:published_time" content="2026-08-25T09:24:25+02:00">
-		<meta property="article:modified_time" content="2026-08-25T09:24:25+02:00">
+		<meta property="article:published_time" content="2026-09-14T10:50:08+02:00">
+		<meta property="article:modified_time" content="2026-09-14T10:50:08+02:00">
 		<meta property="article:tag" content="Kubernetes">
 		<meta property="article:tag" content="K3s">
 		<meta property="article:tag" content="Gitops">
@@ -115,8 +115,8 @@
 
   
 	<meta name="twitter:card" content="summary">
-	<meta name="twitter:title" content="SolarFlow Topic Mapper (ACE1500)">
-	<meta name="twitter:description" content="Dokumentation für die Bereitstellung des SolarFlow Topic Mappers (ACE1500)">
+	<meta name="twitter:title" content="VPN Standort C - Anbindung an das CDP-Tailnet">
+	<meta name="twitter:description" content="WireGuard-Client zum CDP-WireGuard-Server, per Tailscale/Headscale als Subnetz-Router ins eigene Tailnet gebracht">
 
   
   
@@ -299,11 +299,11 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
     "@context": "https://schema.org",
     "@type": "Article",
     "articleSection": "Beiträge",
-    "name": "SolarFlow Topic Mapper (ACE1500)",
-    "headline": "SolarFlow Topic Mapper (ACE1500)",
-    "description": "Dokumentation für die Bereitstellung des SolarFlow Topic Mappers (ACE1500)",
+    "name": "VPN Standort C - Anbindung an das CDP-Tailnet",
+    "headline": "VPN Standort C - Anbindung an das CDP-Tailnet",
+    "description": "WireGuard-Client zum CDP-WireGuard-Server, per Tailscale\/Headscale als Subnetz-Router ins eigene Tailnet gebracht",
     "inLanguage": "de-de",
-    "url" : "https://zyria.de/posts/homelab/k3s-prod/apps/ace1500/readme/",
+    "url" : "https://zyria.de/posts/homelab/k3s-prod/apps/vpn-site-c/readme/",
     "author" : {
       "@type": "Person",
       "name": "Fabrice Kirchner",
@@ -311,15 +311,15 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
       "sameAs": ["https://git.casa-due-pur.de/fabrice.kirchner", "https://git.zyria.de/pyrox", "https://github.com/ricariel", "https://www.linkedin.com/in/fabrice-kirchner-bb5408163/", "https://www.xing.com/profile/Fabrice_Kirchner", "https://kirchner.social/@fabrice", "https://codeberg.org/ricariel"]
     },
     "copyrightYear": "2026",
-    "dateCreated": "2026-08-25T09:24:25\u002b02:00",
-    "datePublished": "2026-08-25T09:24:25\u002b02:00",
+    "dateCreated": "2026-09-14T10:50:08\u002b02:00",
+    "datePublished": "2026-09-14T10:50:08\u002b02:00",
     
-    "dateModified": "2026-08-25T09:24:25\u002b02:00",
+    "dateModified": "2026-09-14T10:50:08\u002b02:00",
     
     "keywords": ["kubernetes","k3s","gitops","argocd","helm","kustomize","homelab","produktion"],
     
-    "mainEntityOfPage": "https://zyria.de/posts/homelab/k3s-prod/apps/ace1500/readme/",
-    "wordCount": "191"
+    "mainEntityOfPage": "https://zyria.de/posts/homelab/k3s-prod/apps/vpn-site-c/readme/",
+    "wordCount": "1323"
   }]
   </script>
 
@@ -900,8 +900,8 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
 
   
   <li class="hidden">
-    <a class="hover:underline decoration-neutral-300 dark:underline-neutral-600" href="/posts/homelab/k3s-prod/apps/ace1500/readme/"
-      >SolarFlow Topic Mapper (ACE1500)</a
+    <a class="hover:underline decoration-neutral-300 dark:underline-neutral-600" href="/posts/homelab/k3s-prod/apps/vpn-site-c/readme/"
+      >VPN Standort C - Anbindung an das CDP-Tailnet</a
     ><span class="px-1 text-primary-500">/</span>
   </li>
 
@@ -910,7 +910,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
 
       
       <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
-        SolarFlow Topic Mapper (ACE1500)
+        VPN Standort C - Anbindung an das CDP-Tailnet
       </h1>
       <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
         
@@ -964,7 +964,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2026-08-25T09:24:25&#43;02:00">25 August 2026</time><span class="px-2 text-primary-500">&middot;</span><span>191 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
+      <time datetime="2026-09-14T10:50:08&#43;02:00">14 September 2026</time><span class="px-2 text-primary-500">&middot;</span><span>1323 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
 
 
   
@@ -972,7 +972,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
 
 <span class="mb-[2px]">
   <a
-    href="https://git.zyria.de/pyrox/zyria_de/src/branch/main/content/posts/homelab/k3s-prod/apps/ace1500/README.md"
+    href="https://git.zyria.de/pyrox/zyria_de/src/branch/main/content/posts/homelab/k3s-prod/apps/vpn-site-c/README.md"
     class="text-lg hover:text-primary-500"
     rel="noopener noreferrer"
     target="_blank"
@@ -1234,14 +1234,23 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
     class="min-w-[220px] py-2 border-dotted border-s-1 -ms-5 ps-5 dark:border-neutral-600">
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#solarflow-topic-mapper-ace1500">SolarFlow Topic Mapper (ACE1500)</a>
+    <li><a href="#vpn-standort-c">VPN Standort C</a>
       <ul>
-        <li><a href="#quelle">Quelle</a></li>
-        <li><a href="#dokumentation">Dokumentation</a></li>
         <li><a href="#funktion">Funktion</a></li>
-        <li><a href="#lokale-anpassungen">Lokale Anpassungen</a></li>
+        <li><a href="#warum-ein-pod-mit-zwei-containern">Warum ein Pod mit zwei Containern</a></li>
+        <li><a href="#besonderheiten-dieser-anbindung">Besonderheiten dieser Anbindung</a></li>
+        <li><a href="#konfiguration">Konfiguration</a>
+          <ul>
+            <li><a href="#fallstricke">Fallstricke</a></li>
+          </ul>
+        </li>
+        <li><a href="#zugriffskontrolle">Zugriffskontrolle</a></li>
+        <li><a href="#namensauflösung-für-das-cdp-tailnet">Namensauflösung für das CDP-Tailnet</a></li>
+        <li><a href="#endpoint-mit-dynamischer-ip">Endpoint mit dynamischer IP</a></li>
+        <li><a href="#betrieb">Betrieb</a></li>
         <li><a href="#installation">Installation</a></li>
         <li><a href="#abhängigkeiten">Abhängigkeiten</a></li>
+        <li><a href="#offene-punkte">Offene Punkte</a></li>
       </ul>
     </li>
   </ul>
@@ -1257,14 +1266,23 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
     class="py-2 border-dotted border-neutral-300 border-s-1 -ms-5 ps-5 dark:border-neutral-600">
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#solarflow-topic-mapper-ace1500">SolarFlow Topic Mapper (ACE1500)</a>
+    <li><a href="#vpn-standort-c">VPN Standort C</a>
       <ul>
-        <li><a href="#quelle">Quelle</a></li>
-        <li><a href="#dokumentation">Dokumentation</a></li>
         <li><a href="#funktion">Funktion</a></li>
-        <li><a href="#lokale-anpassungen">Lokale Anpassungen</a></li>
+        <li><a href="#warum-ein-pod-mit-zwei-containern">Warum ein Pod mit zwei Containern</a></li>
+        <li><a href="#besonderheiten-dieser-anbindung">Besonderheiten dieser Anbindung</a></li>
+        <li><a href="#konfiguration">Konfiguration</a>
+          <ul>
+            <li><a href="#fallstricke">Fallstricke</a></li>
+          </ul>
+        </li>
+        <li><a href="#zugriffskontrolle">Zugriffskontrolle</a></li>
+        <li><a href="#namensauflösung-für-das-cdp-tailnet">Namensauflösung für das CDP-Tailnet</a></li>
+        <li><a href="#endpoint-mit-dynamischer-ip">Endpoint mit dynamischer IP</a></li>
+        <li><a href="#betrieb">Betrieb</a></li>
         <li><a href="#installation">Installation</a></li>
         <li><a href="#abhängigkeiten">Abhängigkeiten</a></li>
+        <li><a href="#offene-punkte">Offene Punkte</a></li>
       </ul>
     </li>
   </ul>
@@ -1384,38 +1402,17 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
 
         <div class="article-content max-w-prose mb-20">
           
-<h2 class="relative group">SolarFlow Topic Mapper (ACE1500)
-    <div id="solarflow-topic-mapper-ace1500" class="anchor"></div>
+<h2 class="relative group">VPN Standort C
+    <div id="vpn-standort-c" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#solarflow-topic-mapper-ace1500" aria-label="Anker">#</a>
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#vpn-standort-c" aria-label="Anker">#</a>
     </span>
     
 </h2>
-<p>Diese Anwendung ist ein benutzerdefinierter <code>solarflow-topic-mapper</code>. Sie ist dafür verantwortlich, MQTT-Themen für ein spezifisches SolarFlow-Gerät (ACE1500) abzubilden.</p>
-
-<h3 class="relative group">Quelle
-    <div id="quelle" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#quelle" aria-label="Anker">#</a>
-    </span>
-    
-</h3>
-<p>Generisches <code>app-template</code>-Helm-Chart von <a href="https://bjw-s-labs.github.io/helm-charts"  target="_blank" rel="noreferrer">BJW-S Labs</a> mit dem eigenen Image <code>solarflow-topic-mapper</code> aus der Registry der Forgejo-Instanz. Der Quellcode liegt im Repository <code>pyrox/solarflow-bt-manager</code>.</p>
-
-<h3 class="relative group">Dokumentation
-    <div id="dokumentation" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#dokumentation" aria-label="Anker">#</a>
-    </span>
-    
-</h3>
-<p>Der Topic-Mapper stammt aus dem Repository <code>pyrox/solarflow-bt-manager</code>; dessen README beschreibt Aufbau und Umgebungsvariablen.</p>
+<p>Verbindet den Cluster als WireGuard-<strong>Client</strong> mit dem WireGuard-Server im CDP-Cluster (<code>vpn.casa-due-pur.de</code>). Die Adressen des dortigen Tailnets (<code>100.64.2.0/23</code>, <code>fd7a:115c:a1e0:2::/64</code>) werden über Headscale im eigenen Tailnet erreichbar.</p>
+<p>Nicht zu verwechseln mit <code>apps/wireguard</code>: dort läuft ein WireGuard-<strong>Server</strong> mit Web-Portal für Mitarbeiter-Zugänge. Die Schwester-Apps <code>apps/vpn-site-a</code> (WireGuard) und <code>apps/vpn-site-b</code> (OpenVPN) setzen dasselbe Muster für andere Standorte um.</p>
 
 <h3 class="relative group">Funktion
     <div id="funktion" class="anchor"></div>
@@ -1426,21 +1423,156 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
     </span>
     
 </h3>
-<p>Diese Anwendung verbindet sich mit einem SolarFlow-Gerät und bildet dessen Daten auf MQTT-Themen ab, was die Integration mit anderen Systemen ermöglicht, die MQTT-Nachrichten konsumieren.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="ln">1</span><span class="cl">zyria-Tailnet-Client
+</span></span><span class="line"><span class="ln">2</span><span class="cl">  └─&gt; Pod vpn-site-c                           (zyria-Cluster)
+</span></span><span class="line"><span class="ln">3</span><span class="cl">        ├── tailscale0  (Subnet Router, annonciert das CDP-Tailnet)
+</span></span><span class="line"><span class="ln">4</span><span class="cl">        └── wg0         (MASQUERADE auf 10.26.15.1)
+</span></span><span class="line"><span class="ln">5</span><span class="cl">              └─&gt; vpn.casa-due-pur.de:51194    (CDP-Cluster, apps/wireguard)
+</span></span><span class="line"><span class="ln">6</span><span class="cl">                    wg0 ──&gt; tailscale0         (Gateway-Container, MASQUERADE)
+</span></span><span class="line"><span class="ln">7</span><span class="cl">                              └─&gt; CDP-Tailnet-Node 100.64.2.x</span></span></code></pre></div></div>
+<ul>
+<li><strong>wireguard</strong>: <code>linuxserver/wireguard</code> im Client-Modus. Sobald unter <code>/config/wg_confs</code> eine <code>*.conf</code> liegt, führt der Entrypoint lediglich <code>wg-quick up wg0</code> aus und startet keinen Server.</li>
+<li><strong>tailscale</strong>: meldet sich mit einem Pre-Auth-Key am zyria-Headscale an und annonciert die CDP-Tailnet-Bereiche über <code>TS_ROUTES</code>.</li>
+<li><strong>coredns</strong>: beantwortet die Zone <code>hsn.casa-due-pur.de</code> für das eigene Tailnet und holt die Antworten durch den Tunnel beim CDP-Gateway, siehe <a href="/posts/homelab/k3s-prod/apps/vpn-site-c/readme/#namensaufl%c3%b6sung-f%c3%bcr-das-cdp-tailnet" >Namensauflösung</a>.</li>
+<li><strong>Gegenstelle</strong>: Auf der CDP-Seite reicht der Container <code>tailscale</code> im Controller <code>main</code> von <code>apps/wireguard</code> die Pakete ins CDP-Tailnet weiter. Ohne ihn endet der Verkehr am WireGuard-Server. Die Freigabe ist dort auf die Tunnel-IP dieses Peers beschränkt (<code>GW_PEERS_V4</code>/<code>GW_PEERS_V6</code>).</li>
+</ul>
 
-<h3 class="relative group">Lokale Anpassungen
-    <div id="lokale-anpassungen" class="anchor"></div>
+<h3 class="relative group">Warum ein Pod mit zwei Containern
+    <div id="warum-ein-pod-mit-zwei-containern" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#lokale-anpassungen" aria-label="Anker">#</a>
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#warum-ein-pod-mit-zwei-containern" aria-label="Anker">#</a>
     </span>
     
 </h3>
+<p>Container eines Pods teilen sich den Netzwerk-Namespace. Dadurch sieht <code>tailscaled</code> das von <code>wg-quick</code> angelegte Interface <code>wg0</code> samt Routen und kann Traffic aus dem Tailnet direkt in den Tunnel weiterleiten. Mit zwei getrennten Deployments wäre das nicht möglich, der Tunnel läge in einem fremden Namespace.</p>
+<p>Ein Init-Container setzt <code>net.ipv4.ip_forward</code> und <code>net.ipv6.conf.all.forwarding</code>. Diese Sysctls sind netzwerk-namespaced und betreffen daher nur diesen Pod, nicht den Node.</p>
+
+<h3 class="relative group">Besonderheiten dieser Anbindung
+    <div id="besonderheiten-dieser-anbindung" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#besonderheiten-dieser-anbindung" aria-label="Anker">#</a>
+    </span>
+    
+</h3>
+<p>Das Ziel ist hier ein anderes Tailnet und kein RFC1918-Netz. Daraus ergeben sich drei Abweichungen von <code>vpn-site-a</code>.</p>
+<p><strong><code>--netfilter-mode=off</code> statt <code>--snat-subnet-routes</code>.</strong> Im Standardmodus installiert <code>tailscaled</code> in <code>ts-forward</code> die Regel <code>-s 100.64.0.0/10 -o tailscale0 -j DROP</code>. Die Antworten aus dem CDP-Tailnet kommen über <code>wg0</code> mit einer Quelle aus <code>100.64.2.0/23</code> und würden genau dort verworfen: Der Hinweg funktioniert, jede Antwort verschwindet. Eine vorgeschaltete <code>ACCEPT</code>-Regel hält nicht, weil <code>tailscaled</code> seine Hooks bei jedem Neustart wieder an Position 1 setzt. Das Maskieren auf die Tunnel-IP übernimmt deshalb <code>PostUp</code> in <code>wg/wg0.conf</code>.</p>
+<p><strong>IPv6-Policy-Regel.</strong> <code>tailscaled</code> legt <code>fd7a:115c:a1e0::/48</code> in Routing-Tabelle 52 ab. Deren Regel (Priorität 5270) greift vor <code>main</code>. Das CDP-Netz <code>fd7a:115c:a1e0:2::/64</code> liegt in diesem Bereich und liefe ohne Gegenmaßnahme zurück in <code>tailscale0</code>. <code>PostUp</code> setzt deshalb <code>ip -6 rule add to fd7a:115c:a1e0:2::/64 lookup main priority 5200</code>. Für IPv4 ist das nicht nötig: Tabelle 52 enthält dort nur die <code>/32</code> der eigenen Nodes aus <code>100.64.0.0/23</code>.</p>
+<p><strong>Kein Adresskonflikt, aber enge Nachbarschaft.</strong> Das eigene Tailnet nutzt <code>100.64.0.0/23</code> und <code>fd7a:115c:a1e0::/48</code> mit sequentieller Vergabe aus <code>fd7a:115c:a1e0::/64</code>. Würde eines der beiden Headscale-Präfixe erweitert oder verschoben, kollidiert es mit dem CDP-Tailnet.</p>
+
+<h3 class="relative group">Konfiguration
+    <div id="konfiguration" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#konfiguration" aria-label="Anker">#</a>
+    </span>
+    
+</h3>
+<ol>
+<li><strong><code>wg/wg0.conf</code></strong>: Peer „Fabrice Zuhause“ aus wg-portal auf <code>vpn.casa-due-pur.de</code>, ergänzt um <code>PostUp</code>/<code>PostDown</code>. Die vom Portal generierte <code>DNS</code>-Zeile muss bei jedem Neu-Export wieder entfernt werden.</li>
+<li><strong><code>TS_ROUTES</code> in <code>values.yaml</code></strong>: identisch mit <code>AllowedIPs</code> in <code>wg0.conf</code>, bis auf <code>10.26.15.112/32</code>. Diese Adresse braucht nur der DNS-Forwarder, sie darf nicht ins Tailnet annonciert werden.</li>
+<li><strong><code>TS_AUTHKEY</code> in <code>kustomization.yaml</code></strong>: Pre-Auth-Key mit Forced Tag <code>tag:site-c</code>, siehe unten.</li>
+</ol>
+<p>Der Key wird nur beim ersten Start verbraucht. Danach liegt der Node-State im Secret <code>vpn-site-c-tailscale-state</code>, das <code>tailscaled</code> selbst pflegt (siehe <code>rbac.yaml</code>).</p>
+
+<h4 class="relative group">Fallstricke
+    <div id="fallstricke" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#fallstricke" aria-label="Anker">#</a>
+    </span>
+    
+</h4>
 <ul>
-<li>Die <code>values.yaml</code>-Datei enthält spezifische Umgebungsvariablen, die die Anwendung für die Verbindung mit einem bestimmten SolarFlow-Gerät und MQTT-Broker konfigurieren.</li>
-<li>Die Bereitstellung wird durch <strong>Keel</strong> automatisch auf das <code>latest</code>-Tag aktualisiert, wie durch die Annotationen in <code>values.yaml</code> definiert.</li>
+<li><strong><code>AllowedIPs</code> niemals <code>0.0.0.0/0</code>.</strong> <code>wg-quick</code> baut dann Policy-Routing mit <code>fwmark</code> auf und kappt die Verbindung des Pods zum Cluster-Netz und zu Headscale.</li>
+<li><strong>Kein <code>DNS = ...</code> in <code>wg0.conf</code>.</strong> <code>wg-quick</code> ruft damit <code>resolvconf</code> auf und überschreibt <code>/etc/resolv.conf</code> für alle Container des Pods. <code>tailscaled</code> kann danach <code>kubernetes.default.svc</code> nicht mehr auflösen und bricht beim Laden seines State-Secrets ab. Die geänderte Datei überlebt Container-Neustarts, erst ein neuer Pod behebt es.</li>
+<li><strong><code>PostUp</code>-Befehle idempotent halten.</strong> <code>wg-quick</code> führt Hooks mit <code>set -e</code> aus. Ein Befehl, der beim zweiten Start fehlschlägt, reißt den Tunnel ab.</li>
+<li><strong><code>TS_ACCEPT_ROUTES</code> bleibt <code>false</code>.</strong> Sonst übernimmt <code>tailscaled</code> die Subnet-Routen des eigenen Tailnets in Tabelle 52, darunter <code>159.69.238.80/28</code> vom Node <code>wireguard</code>. Tabelle 52 greift vor <code>main</code>, und der WireGuard-Endpoint <code>159.69.238.91</code> liegt in genau diesem Netz: Die Tunnelpakete liefen dann selbst durch das Tailnet und hingen an einem fremden Router. Dasselbe gilt für den Gateway-Container auf cdp-Seite.</li>
+<li><strong><code>TS_ACCEPT_DNS</code> bleibt <code>false</code>.</strong> Headscale ist mit <code>override_local_dns</code> konfiguriert; ein Router-Pod, der die Tailnet-Nameserver übernimmt, kann seinen eigenen Control-Server nicht mehr auflösen.</li>
+<li><strong><code>TS_ROUTES</code> ohne Leerzeichen nach dem Komma.</strong> Tailscale splittet nur an <code>,</code> und übergibt das Ergebnis ungetrimmt an <code>netip.ParsePrefix</code>.</li>
 </ul>
+
+<h3 class="relative group">Zugriffskontrolle
+    <div id="zugriffskontrolle" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#zugriffskontrolle" aria-label="Anker">#</a>
+    </span>
+    
+</h3>
+<p>Der Node trägt <code>tag:site-c</code> als <strong>Forced Tag vom Pre-Auth-Key</strong>, nicht über <code>--advertise-tags</code>:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">kubectl -n headscale <span class="nb">exec</span> deploy/headscale -- <span class="se">\
+</span></span></span><span class="line"><span class="ln">2</span><span class="cl">  headscale preauthkeys create --user &lt;user&gt; --reusable --tags tag:site-c --expiration 8760h</span></span></code></pre></div></div>
+<p>Serverseitig gesetzt ist der Tag autoritativ und vom Client nicht überschreibbar. Schickt der Client zusätzlich <code>--advertise-tags</code>, prüft Headscale das gegen <code>tagOwners</code> und lehnt die Registrierung ab, solange die Policy den Tag nicht kennt.</p>
+<p>In <code>apps/headscale/config-patch.yaml</code> stehen dafür:</p>
+<ul>
+<li><code>group:site-c</code> mit einer Regel auf <code>100.64.2.0/23:*</code> und <code>fd7a:115c:a1e0:2::/64:*</code>. Subnetz-Routen werden über die Ziel-CIDR gematcht, nicht über den Tag des Routers.</li>
+<li><code>tag:site-c</code> in <code>tagOwners</code>.</li>
+<li><code>autoApprovers</code> für beide Präfixe auf <code>tag:site-c</code>.</li>
+</ul>
+<p>Die Zugriffskontrolle ist zweistufig: Die zyria-ACL entscheidet, wer den Tunnel benutzen darf. Die CDP-ACL entscheidet, was der Gateway-Node dort erreicht. Wegen der doppelten Maskierung sieht die CDP-Seite jeden Zugriff als Verkehr des Gateway-Nodes. Eine Unterscheidung nach zyria-Benutzer ist dort nicht möglich.</p>
+
+<h3 class="relative group">Namensauflösung für das CDP-Tailnet
+    <div id="namensauflösung-für-das-cdp-tailnet" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#namensaufl%c3%b6sung-f%c3%bcr-das-cdp-tailnet" aria-label="Anker">#</a>
+    </span>
+    
+</h3>
+<p>Die MagicDNS-Namen des CDP-Tailnets (<code>*.hsn.casa-due-pur.de</code>) kennt nur dessen Headscale. Ein CoreDNS im Pod holt sie live durch den Tunnel:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="ln">1</span><span class="cl">zyria-Client ──&gt; 100.100.100.100 (Split-DNS hsn.casa-due-pur.de) ──&gt; 100.64.0.12:53
+</span></span><span class="line"><span class="ln">2</span><span class="cl">  └─&gt; coredns im Pod vpn-site-c
+</span></span><span class="line"><span class="ln">3</span><span class="cl">        └─&gt; wg0 ──&gt; 10.26.15.112:53            (wg0-Adresse des CDP-WireGuard-Servers)
+</span></span><span class="line"><span class="ln">4</span><span class="cl">              └─&gt; DNAT im Gateway-Container ──&gt; 100.100.100.100 (MagicDNS des CDP-Gateways)</span></span></code></pre></div></div>
+<ul>
+<li>Die Zone und die Zieladresse stehen in <code>dns.nameservers.split</code> von <code>apps/headscale/values.yaml</code>. Freigegeben ist der Zugriff auf <code>tag:site-c:53</code> nur für <code>group:site-c</code>.</li>
+<li><code>10.26.15.112/32</code> steht in <code>AllowedIPs</code>, damit CoreDNS den Server durch den Tunnel erreicht. In <code>TS_ROUTES</code> fehlt die Adresse bewusst.</li>
+<li>Auf CDP-Seite leitet der Gateway-Container von <code>apps/wireguard</code> Anfragen an <code>GW_DNS_V4:53</code> auf sein MagicDNS weiter. Die umgeleiteten Pakete durchlaufen dieselbe Sperre <code>wg-gateway</code>: Nur die freigeschalteten Peers bekommen Antworten.</li>
+<li>Neue oder umbenannte CDP-Nodes sind sofort auflösbar, höchstens verzögert um den Cache von 120 Sekunden. Es gibt nichts zu pflegen.</li>
+<li>Ohne Tunnel liefert die Zone <code>SERVFAIL</code>. Einen öffentlichen Fallback gibt es nicht, weil die Namen nur im CDP-Tailnet existieren.</li>
+<li>Kurznamen wie <code>winmgr</code> funktionieren nicht, nur vollständige Namen. Eine Suchdomain würde mit gleichnamigen Nodes im eigenen Tailnet kollidieren (<code>addc</code>, <code>wireguard</code>, <code>rustdesk</code>).</li>
+</ul>
+<p>Prüfen:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">kubectl -n vpn-site-c <span class="nb">exec</span> deploy/vpn-site-c -c wireguard -- nslookup winmgr.hsn.casa-due-pur.de 127.0.0.1</span></span></code></pre></div></div>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">dig +short winmgr.hsn.casa-due-pur.de @100.100.100.100</span></span></code></pre></div></div>
+
+<h3 class="relative group">Endpoint mit dynamischer IP
+    <div id="endpoint-mit-dynamischer-ip" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#endpoint-mit-dynamischer-ip" aria-label="Anker">#</a>
+    </span>
+    
+</h3>
+<p>WireGuard löst den Endpoint-Hostnamen <strong>ausschließlich beim <code>wg-quick up</code></strong> auf und danach nie wieder. Ändert sich die Adresse der Gegenstelle, sendet der Tunnel dauerhaft an die alte Adresse.</p>
+<p>Ein Sidecar-Container prüft deshalb alle 30 Sekunden das Alter des letzten Handshakes. Überschreitet es 180 Sekunden, löst er den Namen neu auf und setzt den Endpoint per <code>wg set wg0 peer &lt;pubkey&gt; endpoint &lt;name:port&gt;</code> nach. Der Sidecar nutzt dasselbe Image wie der Hauptcontainer und läuft mit <code>readOnlyRootFilesystem</code> und nur <code>NET_ADMIN</code>.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="ln">1</span><span class="cl">[STALE] Handshake 187s alt, Endpoint aktuell &lt;alte-adresse&gt;
+</span></span><span class="line"><span class="ln">2</span><span class="cl">[FIXED] Endpoint neu aufgeloest: &lt;alte-adresse&gt; -&gt; &lt;neue-adresse&gt;</span></span></code></pre></div></div>
+
+<h3 class="relative group">Betrieb
+    <div id="betrieb" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#betrieb" aria-label="Anker">#</a>
+    </span>
+    
+</h3>
+<p>Der Pod läuft mit <code>replicas: 1</code> und <code>strategy: Recreate</code>. Zwei gleichzeitig laufende Pods würden sich Tunnel-IP und Headscale-Node streitig machen.</p>
+<p>Die Readiness-Probe prüft das <strong>Alter</strong> des letzten Handshakes (Schwelle 150 Sekunden), nicht dessen bloße Existenz. Die Liveness-Probe prüft nur, ob <code>wg0</code> existiert. Das Nachfassen bei veraltetem Handshake übernimmt der Sidecar ohne Neustart.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">kubectl -n vpn-site-c <span class="nb">exec</span> deploy/vpn-site-c -c wireguard -- wg show
+</span></span><span class="line"><span class="ln">2</span><span class="cl">kubectl -n vpn-site-c <span class="nb">exec</span> deploy/vpn-site-c -c tailscale -- tailscale status
+</span></span><span class="line"><span class="ln">3</span><span class="cl">kubectl -n vpn-site-c <span class="nb">exec</span> deploy/vpn-site-c -c wireguard -- ip -6 rule
+</span></span><span class="line"><span class="ln">4</span><span class="cl">kubectl -n vpn-site-c <span class="nb">exec</span> deploy/vpn-site-c -c wireguard -- iptables -t nat -S POSTROUTING</span></span></code></pre></div></div>
 
 <h3 class="relative group">Installation
     <div id="installation" class="anchor"></div>
@@ -1451,9 +1583,8 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
     </span>
     
 </h3>
-<p>Der Dienst wird als Helm-Chart unter Verwendung des <code>app-template</code> aus dem <a href="https://bjw-s-labs.github.io/helm-charts/"  target="_blank" rel="noreferrer">bjw-s-labs Repository</a> bereitgestellt. Die Bereitstellung wird durch die <code>kustomization.yaml</code>-Datei verwaltet.</p>
-<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl"><span class="c1"># Beispielhafter Befehl zur Bereitstellung</span>
-</span></span><span class="line"><span class="ln">2</span><span class="cl">kubectl kustomize --enable-helm . <span class="p">|</span> kubectl apply -n ace1500 -f -</span></span></code></pre></div></div>
+<p>Die Anwendung wird mittels Kustomize und Helm bereitgestellt.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">kubectl kustomize --enable-helm apps/vpn-site-c <span class="p">|</span> kubectl apply -f -</span></span></code></pre></div></div>
 
 <h3 class="relative group">Abhängigkeiten
     <div id="abhängigkeiten" class="anchor"></div>
@@ -1465,10 +1596,23 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
     
 </h3>
 <ul>
-<li>Ein laufender Kubernetes-Cluster.</li>
-<li>Ein zugänglicher MQTT-Broker (z.B. Mosquitto), der über den internen DNS-Namen <code>mosquitto.mosquitto.svc.cluster.local</code> erreichbar ist.</li>
-<li>Ein SolarFlow-Gerät mit den in <code>values.yaml</code> angegebenen Produkt- und Geräte-IDs.</li>
+<li>Laufender Headscale (<code>apps/headscale</code>) mit den Policy-Einträgen für <code>tag:site-c</code>.</li>
+<li>Auf der CDP-Seite: <code>apps/wireguard</code> mit Gateway-Container und dieser Peer-IP in <code>GW_PEERS_V4</code>/<code>GW_PEERS_V6</code>.</li>
+<li>Node-Kernel mit WireGuard-Unterstützung; <code>/lib/modules</code> wird read-only eingehängt.</li>
+<li><code>/dev/net/tun</code> auf dem Node für den Kernel-Modus von <code>tailscaled</code> und <code>wg-quick</code>.</li>
+<li>Ausgehend UDP <code>51194</code> zu <code>vpn.casa-due-pur.de</code>.</li>
 </ul>
+
+<h3 class="relative group">Offene Punkte
+    <div id="offene-punkte" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#offene-punkte" aria-label="Anker">#</a>
+    </span>
+    
+</h3>
+<p>Der private WireGuard-Schlüssel und der Headscale-Pre-Auth-Key liegen im Klartext im Repository. Das ist konsistent mit dem restlichen Repo, bleibt aber die offene Security-Aufgabe (SOPS oder Sealed Secrets), die auch in <code>.pre-commit-config.yaml</code> vermerkt ist.</p>
 
           
           
@@ -1479,7 +1623,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
                 class="email-link m-1 rounded bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
                 href="#"
                 data-email="ZmFicmljZUB6eXJpYS5kZQ=="
-                data-subject="Antwort auf SolarFlow Topic Mapper (ACE1500)">
+                data-subject="Antwort auf VPN Standort C - Anbindung an das CDP-Tailnet">
                 Per E-Mail antworten
               </a>
               <noscript>
@@ -1701,14 +1845,14 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
           
             <a
               class="flex text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
-              href="/posts/homelab/k3s-prod/apps/sf1200/readme/">
+              href="/posts/homelab/k3s-prod/apps/unbound/readme/">
               <span class="leading-6">
-                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;SolarFlow Topic Mapper (SF1200)
+                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;Unbound
               </span>
             </a>
             
               <span class="ms-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
-                <time datetime="2026-08-25T09:24:25&#43;02:00">25 August 2026</time>
+                <time datetime="2026-09-09T12:56:04&#43;02:00">9 September 2026</time>
               </span>
             
           
@@ -1717,14 +1861,14 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
           
             <a
               class="flex text-right text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
-              href="/posts/homelab/k3s-prod/apps/solarchart-de/readme/">
+              href="/posts/homelab/k3s-prod/ansible/shutdown-startup/">
               <span class="leading-6">
-                solarchart.de&ensp;<span class="inline-block rtl:rotate-180">&rarr;</span>
+                Operational Lifecycle Management: Orchestrierter Shutdown für Kubernetes&ensp;<span class="inline-block rtl:rotate-180">&rarr;</span>
               </span>
             </a>
             
               <span class="me-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
-                <time datetime="2026-08-25T09:24:25&#43;02:00">25 August 2026</time>
+                <time datetime="2024-10-27T10:00:00&#43;01:00">27 Oktober 2024</time>
               </span>
             
           
