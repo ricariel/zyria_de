@@ -31,7 +31,7 @@
     
   
   
-    <meta name="description" content="Dieser Dienst stellt eine generische Wartungsseite bereit, die von Traefik als Fallback für nicht erreichbare Dienste oder bei Fehlern wie 404 (Not Found) angezeigt werden kann.">
+    <meta name="description" content="Dieser Dienst stellt eine Wartungsseite und eine Fehlerseite bereit, die Traefik anzeigt, wenn eine Anwendung nicht erreichbar ist, nicht rechtzeitig antwortet oder keine laufende Instanz hat.">
   
   
     <meta name="keywords" content="kubernetes,traefik,wartung,">
@@ -100,12 +100,12 @@
   <meta property="og:url" content="https://zyria.de/posts/homelab/k3s-prod/apps/maintenance-page/readme/">
 	<meta property="og:site_name" content="Zyria">
 	<meta property="og:title" content="Maintenance Page">
-	<meta property="og:description" content="Eine globale Wartungsseite für den Traefik Ingress Controller.">
+	<meta property="og:description" content="Eine globale Wartungs- und Fehlerseite für den Traefik Ingress Controller.">
 	<meta property="og:locale" content="de_de">
 	<meta property="og:type" content="article">
 		<meta property="article:section" content="posts">
 		<meta property="article:published_time" content="2025-10-17T11:09:29+02:00">
-		<meta property="article:modified_time" content="2026-09-07T14:43:53+02:00">
+		<meta property="article:modified_time" content="2026-09-15T14:14:34+02:00">
 		<meta property="article:tag" content="Kubernetes">
 		<meta property="article:tag" content="Traefik">
 		<meta property="article:tag" content="Wartung">
@@ -113,7 +113,7 @@
   
 	<meta name="twitter:card" content="summary">
 	<meta name="twitter:title" content="Maintenance Page">
-	<meta name="twitter:description" content="Eine globale Wartungsseite für den Traefik Ingress Controller.">
+	<meta name="twitter:description" content="Eine globale Wartungs- und Fehlerseite für den Traefik Ingress Controller.">
 
   
   
@@ -298,7 +298,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
     "articleSection": "Beiträge",
     "name": "Maintenance Page",
     "headline": "Maintenance Page",
-    "description": "Eine globale Wartungsseite für den Traefik Ingress Controller.",
+    "description": "Eine globale Wartungs- und Fehlerseite für den Traefik Ingress Controller.",
     "inLanguage": "de-de",
     "url" : "https://zyria.de/posts/homelab/k3s-prod/apps/maintenance-page/readme/",
     "author" : {
@@ -311,12 +311,12 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
     "dateCreated": "2025-10-17T11:09:29\u002b02:00",
     "datePublished": "2025-10-17T11:09:29\u002b02:00",
     
-    "dateModified": "2026-09-07T14:43:53\u002b02:00",
+    "dateModified": "2026-09-15T14:14:34\u002b02:00",
     
     "keywords": ["kubernetes","traefik","wartung"],
     
     "mainEntityOfPage": "https://zyria.de/posts/homelab/k3s-prod/apps/maintenance-page/readme/",
-    "wordCount": "250"
+    "wordCount": "802"
   }]
   </script>
 
@@ -963,7 +963,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2025-10-17T11:09:29&#43;02:00">17 Oktober 2025</time><span class="px-2 text-primary-500">&middot;</span><time datetime="2026-09-07T14:43:53&#43;02:00">Aktualisiert: 7 September 2026</time><span class="px-2 text-primary-500">&middot;</span><span>250 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
+      <time datetime="2025-10-17T11:09:29&#43;02:00">17 Oktober 2025</time><span class="px-2 text-primary-500">&middot;</span><time datetime="2026-09-15T14:14:34&#43;02:00">Aktualisiert: 15 September 2026</time><span class="px-2 text-primary-500">&middot;</span><span>802 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
 
 
   
@@ -1142,12 +1142,16 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
       <ul>
         <li><a href="#quelle">Quelle</a></li>
         <li><a href="#dokumentation">Dokumentation</a></li>
-        <li><a href="#funktion">Funktion</a></li>
-        <li><a href="#lokale-anpassungen">Lokale Anpassungen</a>
+        <li><a href="#funktion">Funktion</a>
           <ul>
-            <li><a href="#wichtige-einstellungen">Wichtige Einstellungen</a></li>
+            <li><a href="#fehlerseite">Fehlerseite</a></li>
+            <li><a href="#fehlersuche">Fehlersuche</a></li>
+            <li><a href="#wartungsseite">Wartungsseite</a></li>
+            <li><a href="#catch-all-route">Catch-all-Route</a></li>
+            <li><a href="#betrieb">Betrieb</a></li>
           </ul>
         </li>
+        <li><a href="#lokale-anpassungen">Lokale Anpassungen</a></li>
         <li><a href="#installation">Installation</a></li>
         <li><a href="#abhängigkeiten">Abhängigkeiten</a></li>
       </ul>
@@ -1169,12 +1173,16 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
       <ul>
         <li><a href="#quelle">Quelle</a></li>
         <li><a href="#dokumentation">Dokumentation</a></li>
-        <li><a href="#funktion">Funktion</a></li>
-        <li><a href="#lokale-anpassungen">Lokale Anpassungen</a>
+        <li><a href="#funktion">Funktion</a>
           <ul>
-            <li><a href="#wichtige-einstellungen">Wichtige Einstellungen</a></li>
+            <li><a href="#fehlerseite">Fehlerseite</a></li>
+            <li><a href="#fehlersuche">Fehlersuche</a></li>
+            <li><a href="#wartungsseite">Wartungsseite</a></li>
+            <li><a href="#catch-all-route">Catch-all-Route</a></li>
+            <li><a href="#betrieb">Betrieb</a></li>
           </ul>
         </li>
+        <li><a href="#lokale-anpassungen">Lokale Anpassungen</a></li>
         <li><a href="#installation">Installation</a></li>
         <li><a href="#abhängigkeiten">Abhängigkeiten</a></li>
       </ul>
@@ -1315,7 +1323,11 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
     </span>
     
 </h3>
-<p>Die Anwendung wird als generisches <code>app-template</code> Helm-Chart von <a href="https://bjw-s-labs.github.io/helm-charts"  target="_blank" rel="noreferrer">BJW-S Labs</a> bereitgestellt. Das verwendete Nginx-Image stammt aus dem Repository <code>nginx-docker</code> und klont den Inhalt der Wartungsseite beim Start aus einem Git-Repository.</p>
+<p>Generisches <code>app-template</code>-Helm-Chart von
+<a href="https://bjw-s-labs.github.io/helm-charts"  target="_blank" rel="noreferrer">BJW-S Labs</a> mit dem Upstream-Image
+<code>nginxinc/nginx-unprivileged</code> und <code>git-sync</code>. <code>nginx.conf</code> und die
+Sicherheits-Header kommen aus der Kustomize-Component <code>components/static-site</code>,
+Server-Block und Fehlerseite sind eigen.</p>
 
 <h3 class="relative group">Dokumentation
     <div id="dokumentation" class="anchor"></div>
@@ -1326,7 +1338,11 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
     </span>
     
 </h3>
-<p>Der Quellcode der Wartungsseite liegt im Repository <code>&lt;owner&gt;/maintenance-page</code> auf der Forgejo-Instanz.</p>
+<p>Der Inhalt der Wartungsseite liegt im Repository <code>pyrox/maintenance-page</code> auf
+der Forgejo-Instanz.</p>
+<ul>
+<li><a href="https://doc.traefik.io/traefik/reference/routing-configuration/http/middlewares/errorpages/"  target="_blank" rel="noreferrer">Traefik Errors-Middleware</a></li>
+</ul>
 
 <h3 class="relative group">Funktion
     <div id="funktion" class="anchor"></div>
@@ -1337,12 +1353,169 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
     </span>
     
 </h3>
-<p>Die Maintenance Page hat zwei Hauptfunktionen:</p>
-<ol>
-<li><strong>Catch-All-Route</strong>: Ein Traefik <code>IngressRoute</code> mit niedriger Priorität (<code>priority: 1</code>) fängt alle Anfragen ab, für die keine spezifischere Route existiert. Diese Anfragen werden an den Nginx-Server weitergeleitet.</li>
-<li><strong>Fehlerseite</strong>: Eine Traefik <code>Middleware</code> ist so konfiguriert, dass sie bei bestimmten HTTP-Fehlern (z.B. <code>404 Not Found</code>) den Benutzer auf diese Wartungsseite umleitet.</li>
-</ol>
-<p>Der Nginx-Server selbst ist so konfiguriert, dass er für jede Anfrage einen HTTP-Statuscode <code>503 Service Unavailable</code> zurückgibt und den Inhalt der <code>index.html</code> ausliefert.</p>
+
+<h4 class="relative group">Fehlerseite
+    <div id="fehlerseite" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#fehlerseite" aria-label="Anker">#</a>
+    </span>
+    
+</h4>
+<p>Die Middleware <code>maintenance-page-errors</code> fängt die Statuscodes 502, 503 und 504
+ab und holt dafür <code>/error/&lt;status&gt;</code> von diesem Dienst. Traefik schickt die
+Anfrage per GET mit dem Host der ursprünglichen Anfrage und liefert die Seite
+mit dem originalen Statuscode aus.</p>
+<table>
+	<thead>
+			<tr>
+					<th>Status</th>
+					<th>Typische Ursache</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>502</td>
+					<td>Anwendung lehnt die Verbindung ab oder beendet sie, meist beim Neustart</td>
+			</tr>
+			<tr>
+					<td>503</td>
+					<td>Keine laufende Instanz, etwa nach einem Absturz, oder die Anwendung meldet Wartung</td>
+			</tr>
+			<tr>
+					<td>504</td>
+					<td>Anwendung antwortet nicht rechtzeitig</td>
+			</tr>
+	</tbody>
+</table>
+<p>Die Seite nennt Statuscode, Ursache, den betroffenen Hostnamen und die Uhrzeit
+und lädt sich alle 30 Sekunden neu. Die Texte je Statuscode stehen in den
+<code>map</code>-Blöcken von <code>default.conf</code>.</p>
+<p>Als Vorlage dient zuerst <code>/_error/index.html</code> aus dem <code>pages</code>-Branch. Hugo baut
+sie im Repository <code>pyrox/maintenance-page</code> als zweite Fassung der Startseite:
+die komplette Wartungsseite mit Kontakt, Datenschutz und Impressum, ganz oben
+die Karte mit Statuscode und Ursache. nginx setzt die Werte per SSI ein. Fehlt
+die Vorlage, etwa weil Forgejo beim Start nicht erreichbar war, greift die
+schlichte <code>error.html</code> aus der ConfigMap. Der Pfad <code>/_error/</code> selbst antwortet
+mit 404.</p>
+<p>Die Fehlerseite erscheint unter dem Host der ausgefallenen Anwendung. Damit
+CSS, JavaScript, Schriften und Bilder trotzdem ankommen, baut Hugo mit
+<code>baseURL: /_maintenance/</code>, und die IngressRoute <code>maintenance-page-assets</code> leitet
+<code>/_maintenance/</code> auf allen Hosts mit hoher Priorität an diesen Dienst. So sind
+die Assets auf jedem Host same-origin, CORS ist nicht nötig. Der Pfad
+<code>/_maintenance/</code> ist damit auf allen Hosts des Clusters belegt.</p>
+<p>500 und 404 fängt die Middleware bewusst nicht ab. Fehlerseiten der Anwendungen
+enthalten oft nützliche Details, und APIs wie WebDAV, die Container-Registry
+oder Matrix brauchen ihre eigenen 404-Antworten.</p>
+<p>Wirksam wird die Middleware erst, wenn Traefik sie verwendet, entweder für den
+ganzen Entrypoint oder je Anwendung per Annotation:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="ln">1</span><span class="cl"><span class="nt">traefik.ingress.kubernetes.io/router.middlewares</span><span class="p">:</span><span class="w"> </span><span class="l">maintenance-page-maintenance-page-errors@kubernetescrd</span></span></span></code></pre></div></div>
+<p>Damit ein abgestürzter Pod überhaupt zu 503 führt statt zu 404, muss Traefik
+mit <code>allowEmptyServices: true</code> laufen. Sonst entfernt Traefik den Router, und
+keine Middleware greift.</p>
+
+<h4 class="relative group">Fehlersuche
+    <div id="fehlersuche" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#fehlersuche" aria-label="Anker">#</a>
+    </span>
+    
+</h4>
+<p>Jede Fehlerseite trägt eine Request-ID. Unter derselben ID schreibt nginx eine
+JSON-Zeile ins Log des Containers <code>main</code>:</p>
+<table>
+	<thead>
+			<tr>
+					<th>Feld</th>
+					<th>Inhalt</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><code>time</code>, <code>request_id</code>, <code>status</code></td>
+					<td>Zeitpunkt, ID, Statuscode</td>
+			</tr>
+			<tr>
+					<td><code>host</code>, <code>url</code></td>
+					<td>Host und ursprüngliche URL, <code>url</code> prozentkodiert von Traefik</td>
+			</tr>
+			<tr>
+					<td><code>client_ip</code>, <code>forwarded_for</code></td>
+					<td>IP des Nutzers aus <code>X-Real-Ip</code> und <code>X-Forwarded-For</code></td>
+			</tr>
+			<tr>
+					<td><code>user_agent</code>, <code>referer</code>, <code>accept</code></td>
+					<td>Browser, Herkunft, gewünschtes Format</td>
+			</tr>
+			<tr>
+					<td><code>traefik</code></td>
+					<td>Traefik-Pod, der die Anfrage bearbeitet hat</td>
+			</tr>
+			<tr>
+					<td><code>replica</code></td>
+					<td>maintenance-page-Pod, der die Fehlerseite ausgeliefert hat</td>
+			</tr>
+	</tbody>
+</table>
+<p>Cookies und <code>Authorization</code> werden nicht protokolliert. Suchen:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">kubectl -n maintenance-page logs -l app.kubernetes.io/name<span class="o">=</span>maintenance-page -c main --prefix --tail<span class="o">=</span>-1 <span class="p">|</span> grep &lt;request-id&gt;</span></span></code></pre></div></div>
+<p>Mit <code>-l</code> gibt <code>kubectl logs</code> ohne <code>--tail=-1</code> nur die letzten zehn Zeilen je Pod
+aus.</p>
+<p>Im Access-Log von Traefik steht bei abgefangenen Fehlern als Backend-URL die
+Adresse eines maintenance-page-Pods, weil die Middleware die Antwort ersetzt.
+Welche Anwendung betroffen war, zeigt dort der Router-Name.</p>
+<p>Auf der Seite selbst stehen Host, URL, Zeitpunkt und Request-ID. „Details
+kopieren“ legt diese Angaben samt Browser in die Zwischenablage, „Störung
+melden“ öffnet eine vorausgefüllte Mail. Beides braucht JavaScript, ohne bleiben
+Host, Zeitpunkt und Request-ID sichtbar.</p>
+<p>API-Clients, deren <code>Accept</code>-Header <code>application/json</code> und nicht <code>text/html</code>
+enthält, bekommen statt HTML ein JSON-Objekt mit <code>status</code>, <code>title</code>, <code>detail</code>,
+<code>host</code>, <code>time</code> und <code>request_id</code>.</p>
+
+<h4 class="relative group">Wartungsseite
+    <div id="wartungsseite" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#wartungsseite" aria-label="Anker">#</a>
+    </span>
+    
+</h4>
+<p>nginx beantwortet die Startseite mit <code>503 Service Unavailable</code> und dem Inhalt
+von <code>index.html</code>, samt <code>Retry-After: 120</code>. Jede andere Adresse ohne passende
+Datei wird auf die Startseite umgeleitet. Den Inhalt zieht git-sync alle 60
+Sekunden aus dem <code>pages</code>-Branch nach.</p>
+
+<h4 class="relative group">Catch-all-Route
+    <div id="catch-all-route" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#catch-all-route" aria-label="Anker">#</a>
+    </span>
+    
+</h4>
+<p>Eine <code>IngressRoute</code> mit <code>HostRegexp(</code>.+<code>)</code> und <code>priority: 1</code> nimmt alle
+Anfragen an, für die keine spezifischere Route existiert. Weil Traefik mit
+<code>sniStrict</code> läuft, erreichen Anfragen für Hosts ohne passendes Zertifikat diese
+Route nicht, der TLS-Handshake scheitert vorher.</p>
+
+<h4 class="relative group">Betrieb
+    <div id="betrieb" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#betrieb" aria-label="Anker">#</a>
+    </span>
+    
+</h4>
+<p>Zwei Replikas mit RollingUpdate, damit die Fehlerseite auch während eines
+eigenen Rollouts erreichbar bleibt. Die Readiness-Probe prüft <code>/healthz</code>, das
+nicht vom git-sync-Inhalt abhängt. Beide Container laufen ohne Root-Rechte und
+mit schreibgeschütztem Root-Dateisystem, nginx lauscht auf Port 8080.</p>
 
 <h3 class="relative group">Lokale Anpassungen
     <div id="lokale-anpassungen" class="anchor"></div>
@@ -1353,22 +1526,49 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
     </span>
     
 </h3>
-<p>Die Konfiguration erfolgt über die <code>values.yaml</code>-Datei.</p>
-
-<h4 class="relative group">Wichtige Einstellungen
-    <div id="wichtige-einstellungen" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#wichtige-einstellungen" aria-label="Anker">#</a>
-    </span>
-    
-</h4>
-<ul>
-<li><strong>Git-Repository</strong>: Der Inhalt der Seite wird aus dem <code>pages</code>-Branch des Repositories <code>&lt;owner&gt;/maintenance-page</code> geklont.</li>
-<li><strong>Nginx-Konfiguration</strong>: Eine benutzerdefinierte Nginx-Konfiguration wird per ConfigMap bereitgestellt, um das 503-Verhalten zu implementieren.</li>
-<li><strong>Traefik CRDs</strong>: Die <code>IngressRoute</code> und <code>Middleware</code> werden direkt als <code>rawResources</code> im Helm-Chart definiert, um die tiefe Integration mit Traefik zu ermöglichen.</li>
-</ul>
+<p>Die Konfiguration erfolgt über <code>values.yaml</code>.</p>
+<table>
+	<thead>
+			<tr>
+					<th>Einstellung</th>
+					<th>Ort</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>Abgefangene Statuscodes</td>
+					<td><code>rawResources.errors</code></td>
+			</tr>
+			<tr>
+					<td>Texte der Fehlerseite</td>
+					<td><code>map</code>-Blöcke in <code>configMaps.server</code> (<code>default.conf</code>)</td>
+			</tr>
+			<tr>
+					<td>Aussehen der Fehlerseite</td>
+					<td><code>layouts/partials/custom_body.html</code> und <code>custom_head.html</code> im Repository <code>pyrox/maintenance-page</code></td>
+			</tr>
+			<tr>
+					<td>Asset-Route für alle Hosts</td>
+					<td><code>rawResources.assets</code></td>
+			</tr>
+			<tr>
+					<td>Ersatzvorlage ohne git-sync-Inhalt</td>
+					<td><code>error.html</code> in <code>configMaps.server</code></td>
+			</tr>
+			<tr>
+					<td>503-Verhalten der Wartungsseite</td>
+					<td><code>default.conf</code> in <code>configMaps.server</code></td>
+			</tr>
+			<tr>
+					<td>Repository und Branch</td>
+					<td><code>GITSYNC_REPO</code>, <code>GITSYNC_REF</code> im Container <code>gitsync</code></td>
+			</tr>
+			<tr>
+					<td><code>nginx.conf</code>, Sicherheits-Header</td>
+					<td><code>components/static-site</code></td>
+			</tr>
+	</tbody>
+</table>
 
 <h3 class="relative group">Installation
     <div id="installation" class="anchor"></div>
@@ -1379,7 +1579,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
     </span>
     
 </h3>
-<p>Die Anwendung wird mittels Kustomize und Helm durch ArgoCD im Kubernetes-Cluster bereitgestellt. Die Konfiguration befindet sich im <code>apps/maintenance-page</code>-Verzeichnis. Eine manuelle Installation kann mit folgendem Befehl durchgeführt werden:</p>
+<p>Bereitgestellt über ArgoCD mit Kustomize und Helm. Von Hand:</p>
 <div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">kubectl kustomize --enable-helm apps/maintenance-page <span class="p">|</span> kubectl apply -n maintenance-page -f -</span></span></code></pre></div></div>
 
 <h3 class="relative group">Abhängigkeiten
@@ -1392,9 +1592,14 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
     
 </h3>
 <ul>
-<li><strong>Traefik</strong>: Zwingend erforderlich, da die Kernfunktionalität auf Traefik-CRDs (<code>IngressRoute</code>, <code>Middleware</code>) basiert.</li>
-<li><strong>Forgejo</strong>: Das Git-Repository mit dem Inhalt der Wartungsseite muss verfügbar sein.</li>
+<li>Traefik, da Route und Middlewares auf Traefik-CRDs beruhen</li>
+<li>reloader, damit Änderungen an der nginx-Konfiguration ankommen</li>
+<li>Forgejo-Instanz mit dem Repository, nur für die Wartungsseite</li>
 </ul>
+<p>Wird die Middleware für den ganzen Entrypoint eingetragen, hängt jede Route an
+diesem Middleware-Objekt. Fehlt es, etwa weil diese App gelöscht wurde,
+verweigert Traefik alle Routen des Entrypoints. Die App darf dann nicht entfernt
+werden, ohne vorher den Eintrag in <code>apps/traefik</code> zu löschen.</p>
 
           
           

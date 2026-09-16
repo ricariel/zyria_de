@@ -9,7 +9,7 @@
     <managingEditor>fabrice@zyria.de (Fabrice Kirchner)</managingEditor>
     <webMaster>fabrice@zyria.de (Fabrice Kirchner)</webMaster>
     
-    <lastBuildDate>Mon, 07 Sep 2026 14:43:53 +0200</lastBuildDate><atom:link href="https://zyria.de/tags/wartung/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 15 Sep 2026 14:14:34 +0200</lastBuildDate><atom:link href="https://zyria.de/tags/wartung/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Maintenance Page</title>
@@ -17,7 +17,7 @@
       <pubDate>Fri, 17 Oct 2025 11:09:29 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/posts/homelab/k3s-prod/apps/maintenance-page/readme/</guid>
-      <description>Dieser Dienst stellt eine generische Wartungsseite bereit, die von Traefik als Fallback für nicht erreichbare Dienste oder bei Fehlern wie 404 (Not Found) angezeigt werden kann.</description>
+      <description>Dieser Dienst stellt eine Wartungsseite und eine Fehlerseite bereit, die Traefik anzeigt, wenn eine Anwendung nicht erreichbar ist, nicht rechtzeitig antwortet oder keine laufende Instanz hat.</description>
       
     </item>
     

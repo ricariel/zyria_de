@@ -9,7 +9,57 @@
     <managingEditor>fabrice@zyria.de (Fabrice Kirchner)</managingEditor>
     <webMaster>fabrice@zyria.de (Fabrice Kirchner)</webMaster>
     
-    <lastBuildDate>Mon, 14 Sep 2026 10:50:08 +0200</lastBuildDate><atom:link href="https://zyria.de/tags/gitops/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 15 Sep 2026 12:10:58 +0200</lastBuildDate><atom:link href="https://zyria.de/tags/gitops/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>zyria.de Webseite</title>
+      <link>https://zyria.de/posts/homelab/k3s-prod/apps/zyria-de/readme/</link>
+      <pubDate>Tue, 15 Sep 2026 12:10:58 +0200</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/zyria-de/readme/</guid>
+      <description>Bereitstellung der statischen Webseite für zyria.de, deren Inhalt per git-sync aus einem Git-Repository nachgezogen wird.</description>
+      
+    </item>
+    
+    <item>
+      <title>solarchart.de</title>
+      <link>https://zyria.de/posts/homelab/k3s-prod/apps/solarchart-de/readme/</link>
+      <pubDate>Tue, 15 Sep 2026 12:08:48 +0200</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/solarchart-de/readme/</guid>
+      <description>Nginx liefert die Solarprognose-Seite aus, git-sync zieht den Inhalt laufend aus einem privaten Git-Repository nach.</description>
+      
+    </item>
+    
+    <item>
+      <title>quaecki.de</title>
+      <link>https://zyria.de/posts/homelab/k3s-prod/apps/quaecki-de/readme/</link>
+      <pubDate>Tue, 15 Sep 2026 12:07:24 +0200</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/quaecki-de/readme/</guid>
+      <description>Nginx liefert die statische Webseite quaecki.de aus, git-sync zieht den Inhalt laufend aus einem Git-Repository nach.</description>
+      
+    </item>
+    
+    <item>
+      <title>hx53.de</title>
+      <link>https://zyria.de/posts/homelab/k3s-prod/apps/hx53-de/readme/</link>
+      <pubDate>Tue, 15 Sep 2026 12:04:29 +0200</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/hx53-de/readme/</guid>
+      <description>Nginx liefert die statische Webseite hx53.de aus, git-sync zieht den Inhalt laufend aus einem Git-Repository nach.</description>
+      
+    </item>
+    
+    <item>
+      <title>k3s-prod: Kubernetes Cluster Konfiguration und Anwendungsbereitstellung</title>
+      <link>https://zyria.de/posts/homelab/k3s-prod/</link>
+      <pubDate>Tue, 15 Sep 2026 12:00:12 +0200</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://zyria.de/posts/homelab/k3s-prod/</guid>
+      <description>Zentrale Verwaltung eines k3s-Clusters und seiner Anwendungen mit ArgoCD, Helm und Kustomize.</description>
+      
+    </item>
     
     <item>
       <title>VPN Standort C - Anbindung an das CDP-Tailnet</title>
@@ -78,26 +128,6 @@
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/posts/homelab/k3s-prod/apps/home-assistant/readme/</guid>
       <description>Home Assistant ist das Gehirn des Smart Homes. Im selben Namespace laufen Mosquitto (MQTT-Broker), python-matter-server und ein OpenThread Border Router (OTBR) als eigenständige Deployments.</description>
-      
-    </item>
-    
-    <item>
-      <title>hx53.de</title>
-      <link>https://zyria.de/posts/homelab/k3s-prod/apps/hx53-de/readme/</link>
-      <pubDate>Tue, 25 Aug 2026 09:24:25 +0200</pubDate>
-      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/hx53-de/readme/</guid>
-      <description>Nginx liefert die Webseite hx53.de aus, deren Inhalt beim Start des Containers aus einem Git-Repository geklont wird.</description>
-      
-    </item>
-    
-    <item>
-      <title>k3s-prod: Kubernetes Cluster Konfiguration und Anwendungsbereitstellung</title>
-      <link>https://zyria.de/posts/homelab/k3s-prod/</link>
-      <pubDate>Tue, 25 Aug 2026 09:24:25 +0200</pubDate>
-      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://zyria.de/posts/homelab/k3s-prod/</guid>
-      <description>Zentrale Verwaltung eines k3s-Clusters und seiner Anwendungen mit ArgoCD, Helm und Kustomize.</description>
       
     </item>
     
@@ -222,32 +252,12 @@
     </item>
     
     <item>
-      <title>quaecki.de Webseite</title>
-      <link>https://zyria.de/posts/homelab/k3s-prod/apps/quaecki-de/readme/</link>
-      <pubDate>Tue, 25 Aug 2026 09:24:25 +0200</pubDate>
-      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/quaecki-de/readme/</guid>
-      <description>Nginx liefert die Webseite quaecki.de aus, deren Inhalt beim Start des Containers aus einem Git-Repository geklont wird.</description>
-      
-    </item>
-    
-    <item>
       <title>RustDesk-Server - Fernwartung im Tailnet</title>
       <link>https://zyria.de/posts/homelab/k3s-prod/apps/rustdesk/readme/</link>
       <pubDate>Tue, 25 Aug 2026 09:24:25 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/posts/homelab/k3s-prod/apps/rustdesk/readme/</guid>
       <description>ID-/Rendezvous-Server und Relay in einem Pod, per Tailscale-Sidecar am Headscale angemeldet; der Webclient kommt zusätzlich über Traefik herein.</description>
-      
-    </item>
-    
-    <item>
-      <title>solarchart.de</title>
-      <link>https://zyria.de/posts/homelab/k3s-prod/apps/solarchart-de/readme/</link>
-      <pubDate>Tue, 25 Aug 2026 09:24:25 +0200</pubDate>
-      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/solarchart-de/readme/</guid>
-      <description>Nginx liefert die Solarprognose-Seite aus, die beim Start des Containers aus einem Git-Repository geklont wird.</description>
       
     </item>
     
@@ -288,16 +298,6 @@
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/posts/homelab/k3s-prod/apps/zabbix/readme/</guid>
       <description>Zabbix überwacht die gesamte Cluster- und Heimnetz-Infrastruktur, sammelt Metriken und löst bei Problemen Alarme aus.</description>
-      
-    </item>
-    
-    <item>
-      <title>zyria.de Webseite</title>
-      <link>https://zyria.de/posts/homelab/k3s-prod/apps/zyria-de/readme/</link>
-      <pubDate>Tue, 25 Aug 2026 09:24:25 +0200</pubDate>
-      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/zyria-de/readme/</guid>
-      <description>Bereitstellung der statischen Webseite für zyria.de, deren Inhalt per git-sync aus einem Git-Repository nachgezogen wird.</description>
       
     </item>
     

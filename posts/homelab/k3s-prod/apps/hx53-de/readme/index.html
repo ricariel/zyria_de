@@ -31,7 +31,7 @@
     
   
   
-    <meta name="description" content="Nginx liefert die Webseite hx53.de aus, deren Inhalt beim Start des Containers aus einem Git-Repository geklont wird.">
+    <meta name="description" content="Nginx liefert die statische Webseite hx53.de aus, git-sync zieht den Inhalt laufend aus einem Git-Repository nach.">
   
   
     <meta name="keywords" content="kubernetes,k3s,gitops,argocd,helm,kustomize,homelab,produktion,">
@@ -104,8 +104,8 @@
 	<meta property="og:locale" content="de_de">
 	<meta property="og:type" content="article">
 		<meta property="article:section" content="posts">
-		<meta property="article:published_time" content="2026-08-25T09:24:25+02:00">
-		<meta property="article:modified_time" content="2026-08-25T09:24:25+02:00">
+		<meta property="article:published_time" content="2026-09-15T12:04:29+02:00">
+		<meta property="article:modified_time" content="2026-09-15T12:04:29+02:00">
 		<meta property="article:tag" content="Kubernetes">
 		<meta property="article:tag" content="K3s">
 		<meta property="article:tag" content="Gitops">
@@ -311,15 +311,15 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
       "sameAs": ["https://git.casa-due-pur.de/fabrice.kirchner", "https://git.zyria.de/pyrox", "https://github.com/ricariel", "https://www.linkedin.com/in/fabrice-kirchner-bb5408163/", "https://www.xing.com/profile/Fabrice_Kirchner", "https://kirchner.social/@fabrice", "https://codeberg.org/ricariel"]
     },
     "copyrightYear": "2026",
-    "dateCreated": "2026-08-25T09:24:25\u002b02:00",
-    "datePublished": "2026-08-25T09:24:25\u002b02:00",
+    "dateCreated": "2026-09-15T12:04:29\u002b02:00",
+    "datePublished": "2026-09-15T12:04:29\u002b02:00",
     
-    "dateModified": "2026-08-25T09:24:25\u002b02:00",
+    "dateModified": "2026-09-15T12:04:29\u002b02:00",
     
     "keywords": ["kubernetes","k3s","gitops","argocd","helm","kustomize","homelab","produktion"],
     
     "mainEntityOfPage": "https://zyria.de/posts/homelab/k3s-prod/apps/hx53-de/readme/",
-    "wordCount": "185"
+    "wordCount": "226"
   }]
   </script>
 
@@ -964,7 +964,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2026-08-25T09:24:25&#43;02:00">25 August 2026</time><span class="px-2 text-primary-500">&middot;</span><span>185 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
+      <time datetime="2026-09-15T12:04:29&#43;02:00">15 September 2026</time><span class="px-2 text-primary-500">&middot;</span><span>226 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
 
 
   
@@ -1241,7 +1241,6 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
         <li><a href="#funktion">Funktion</a></li>
         <li><a href="#lokale-anpassungen">Lokale Anpassungen</a>
           <ul>
-            <li><a href="#wichtige-umgebungsvariablen">Wichtige Umgebungsvariablen</a></li>
             <li><a href="#wichtige-einstellungen">Wichtige Einstellungen</a></li>
           </ul>
         </li>
@@ -1269,7 +1268,6 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
         <li><a href="#funktion">Funktion</a></li>
         <li><a href="#lokale-anpassungen">Lokale Anpassungen</a>
           <ul>
-            <li><a href="#wichtige-umgebungsvariablen">Wichtige Umgebungsvariablen</a></li>
             <li><a href="#wichtige-einstellungen">Wichtige Einstellungen</a></li>
           </ul>
         </li>
@@ -1403,8 +1401,8 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
     </span>
     
 </h2>
-<p>Stellt die statische Webseite für <code>hx53.de</code> bereit. Der Inhalt wird beim Start
-des Containers aus einem Git-Repository geklont.</p>
+<p>Stellt die statische Webseite für <code>hx53.de</code> bereit. Gebaut wird die Seite im
+Quell-Repository, hier wird nur ausgeliefert.</p>
 
 <h3 class="relative group">Quelle
     <div id="quelle" class="anchor"></div>
@@ -1416,8 +1414,10 @@ des Containers aus einem Git-Repository geklont.</p>
     
 </h3>
 <p>Generisches <code>app-template</code>-Helm-Chart von
-<a href="https://bjw-s-labs.github.io/helm-charts"  target="_blank" rel="noreferrer">BJW-S Labs</a>, bestückt mit dem eigenen
-Nginx-Image aus der Registry der Forgejo-Instanz.</p>
+<a href="https://bjw-s-labs.github.io/helm-charts"  target="_blank" rel="noreferrer">BJW-S Labs</a> mit dem Upstream-Image
+<code>nginxinc/nginx-unprivileged</code> und <code>git-sync</code>. Die nginx-Konfiguration kommt aus
+der Kustomize-Component <code>components/static-site</code> und ist für alle statischen
+Seiten im Cluster dieselbe.</p>
 
 <h3 class="relative group">Dokumentation
     <div id="dokumentation" class="anchor"></div>
@@ -1430,6 +1430,10 @@ Nginx-Image aus der Registry der Forgejo-Instanz.</p>
 </h3>
 <p>Der Quellcode der Webseite liegt im Repository <code>pyrox/hx53_de</code> auf der
 Forgejo-Instanz.</p>
+<ul>
+<li><a href="https://nginx.org/"  target="_blank" rel="noreferrer">nginx</a></li>
+<li><a href="https://github.com/kubernetes/git-sync"  target="_blank" rel="noreferrer">git-sync</a></li>
+</ul>
 
 <h3 class="relative group">Funktion
     <div id="funktion" class="anchor"></div>
@@ -1440,13 +1444,13 @@ Forgejo-Instanz.</p>
     </span>
     
 </h3>
-<p>Es gibt <strong>keinen</strong> Sidecar und keinen Init-Container. Das eigene Nginx-Image
-bringt ein Startskript mit, das den Inhalt selbst holt: Steht <code>SITE_REPO</code> in der
-Umgebung, klont der Container beim Start das angegebene Repository in das
-Dokumentwurzelverzeichnis, checkt <code>SITE_BRANCH</code> aus und entfernt danach das
-<code>.git</code>-Verzeichnis.</p>
-<p>Daraus folgt: <strong>ein neuer Seiteninhalt wird erst nach einem Neustart des Pods
-sichtbar.</strong></p>
+<p>git-sync klont alle 60 Sekunden den <code>pages</code>-Branch in ein gemeinsames
+<code>emptyDir</code>-Volume und hängt den Symlink <code>html</code> atomar auf den neuen Stand um.
+nginx liefert aus, was dahinter liegt. Ein neuer Seiteninhalt ist damit nach
+spätestens einer Minute live, ohne Neustart des Pods.</p>
+<p>Beide Container laufen ohne Root-Rechte und mit schreibgeschütztem
+Root-Dateisystem. nginx lauscht auf Port 8080, der Service bildet Port 80 darauf
+ab.</p>
 
 <h3 class="relative group">Lokale Anpassungen
     <div id="lokale-anpassungen" class="anchor"></div>
@@ -1459,34 +1463,6 @@ sichtbar.</strong></p>
 </h3>
 <p>Die Konfiguration erfolgt über <code>values.yaml</code>.</p>
 
-<h4 class="relative group">Wichtige Umgebungsvariablen
-    <div id="wichtige-umgebungsvariablen" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#wichtige-umgebungsvariablen" aria-label="Anker">#</a>
-    </span>
-    
-</h4>
-<table>
-	<thead>
-			<tr>
-					<th>Variable</th>
-					<th>Bedeutung</th>
-			</tr>
-	</thead>
-	<tbody>
-			<tr>
-					<td><code>SITE_REPO</code></td>
-					<td>Git-URL des Inhalts, inklusive Zugangsdaten</td>
-			</tr>
-			<tr>
-					<td><code>SITE_BRANCH</code></td>
-					<td>Auszucheckender Branch, hier <code>pages</code></td>
-			</tr>
-	</tbody>
-</table>
-
 <h4 class="relative group">Wichtige Einstellungen
     <div id="wichtige-einstellungen" class="anchor"></div>
     
@@ -1496,9 +1472,33 @@ sichtbar.</strong></p>
     </span>
     
 </h4>
-<ul>
-<li><strong>Ingress</strong>: Die Hostnamen <code>hx53.de</code> und <code>www.hx53.de</code>.</li>
-</ul>
+<table>
+	<thead>
+			<tr>
+					<th>Einstellung</th>
+					<th>Ort</th>
+					<th>Wert</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>Repository und Branch</td>
+					<td><code>GITSYNC_REPO</code>, <code>GITSYNC_REF</code> im Container <code>gitsync</code></td>
+					<td><code>pyrox/hx53_de</code>, <code>pages</code></td>
+			</tr>
+			<tr>
+					<td>Hostnamen</td>
+					<td>Ingress</td>
+					<td><code>hx53.de</code>, <code>www.hx53.de</code></td>
+			</tr>
+			<tr>
+					<td>nginx-Konfiguration</td>
+					<td><code>components/static-site</code></td>
+					<td>gemeinsam mit den anderen statischen Seiten</td>
+			</tr>
+	</tbody>
+</table>
+<p>Das Repository ist öffentlich, git-sync braucht keine Zugangsdaten.</p>
 
 <h3 class="relative group">Installation
     <div id="installation" class="anchor"></div>
@@ -1522,10 +1522,11 @@ sichtbar.</strong></p>
     
 </h3>
 <ul>
-<li><strong>Traefik</strong> als Ingress-Controller</li>
-<li><strong>cert-manager</strong> für das TLS-Zertifikat</li>
-<li><strong>Forgejo</strong>: Das Quell-Repository muss erreichbar sein — sonst startet der
-Container ohne Inhalt</li>
+<li>Ingress-Controller (Traefik)</li>
+<li>cert-manager für das TLS-Zertifikat</li>
+<li>reloader, damit Änderungen an der nginx-Konfiguration ankommen</li>
+<li>Forgejo-Instanz mit dem Quell-Repository. Fällt sie aus, liefert ein laufender
+Pod den zuletzt geholten Stand weiter aus.</li>
 </ul>
 
           
@@ -1759,14 +1760,14 @@ Container ohne Inhalt</li>
           
             <a
               class="flex text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
-              href="/posts/homelab/k3s-prod/apps/mailstack-new/readme/">
+              href="/posts/homelab/k3s-prod/apps/vpn-site-c/readme/">
               <span class="leading-6">
-                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;Mailstack
+                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;VPN Standort C - Anbindung an das CDP-Tailnet
               </span>
             </a>
             
               <span class="ms-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
-                <time datetime="2026-08-25T09:24:25&#43;02:00">25 August 2026</time>
+                <time datetime="2026-09-14T10:50:08&#43;02:00">14 September 2026</time>
               </span>
             
           
@@ -1775,14 +1776,14 @@ Container ohne Inhalt</li>
           
             <a
               class="flex text-right text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
-              href="/posts/homelab/k3s-prod/apps/home-assistant/readme/">
+              href="/posts/homelab/k3s-prod/apps/quaecki-de/readme/">
               <span class="leading-6">
-                Home Assistant&ensp;<span class="inline-block rtl:rotate-180">&rarr;</span>
+                quaecki.de&ensp;<span class="inline-block rtl:rotate-180">&rarr;</span>
               </span>
             </a>
             
               <span class="me-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
-                <time datetime="2026-08-25T09:24:25&#43;02:00">25 August 2026</time>
+                <time datetime="2026-09-15T12:07:24&#43;02:00">15 September 2026</time>
               </span>
             
           
