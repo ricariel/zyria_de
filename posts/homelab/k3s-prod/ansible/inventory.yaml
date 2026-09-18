@@ -68,6 +68,11 @@ k3s_cluster:
         - traefik
         - servicelb
         - coredns
+        # Stand im Konflikt mit apps/k3s/local-path.yaml (ArgoCD): jeder
+        # Server-Start schrieb eine andere Config und eine zweite
+        # Standard-StorageClass zurueck. Wird nicht genutzt, siehe
+        # apps/k3s/README.md. Beim Abschalten deinstalliert k3s das Addon.
+        - local-storage
       cluster-cidr: 10.44.0.0/16,fd21:da66:909b::/48
       service-cidr: 10.45.0.0/16,fd21:da66:64::/112
       tls-san:
@@ -94,6 +99,13 @@ k3s_cluster:
         # und protokollierte DNSConfigForming, solange die Node-Datei vier
         # Eintraege hatte.
         - "resolv-conf=/etc/kubernetes/resolv.conf"
+        # Gestaffelter Pod-Shutdown beim Herunterfahren der Node: erst
+        # Workloads, dann Longhorn, dann Systempods. Ohne ihn verloren am
+        # 17.09.2026 Datenbanken den Storage, als ein Proxmox-Host per
+        # unattended-upgrades neu startete. Geschrieben wird die Datei von
+        # ansible-main/playbooks/k3s.yml - das Playbook muss vor diesem Deploy
+        # gelaufen sein, sonst startet kubelet nicht.
+        - "config=/etc/kubernetes/kubelet-shutdown.yaml"
       kube-proxy-arg:
         - ipvs-strict-arp=true
       embedded-registry: true
@@ -107,6 +119,8 @@ k3s_cluster:
       # YAML here will be placed as the content of /etc/rancher/k3s/config.yaml
       kubelet-arg:
         - "resolv-conf=/etc/kubernetes/resolv.conf"
+        # Siehe server_config_yaml.
+        - "config=/etc/kubernetes/kubelet-shutdown.yaml"
     registries_config_yaml: |
       mirrors:
         docker.io:

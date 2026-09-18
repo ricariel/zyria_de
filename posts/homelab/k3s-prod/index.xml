@@ -9,7 +9,7 @@
     <managingEditor>fabrice@zyria.de (Fabrice Kirchner)</managingEditor>
     <webMaster>fabrice@zyria.de (Fabrice Kirchner)</webMaster>
     
-    <lastBuildDate>Tue, 15 Sep 2026 14:49:55 +0200</lastBuildDate><atom:link href="https://zyria.de/posts/homelab/k3s-prod/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 17 Sep 2026 15:23:13 +0200</lastBuildDate><atom:link href="https://zyria.de/posts/homelab/k3s-prod/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Operational Lifecycle Management: Orchestrierter Shutdown für Kubernetes</title>
@@ -547,7 +547,7 @@
       <pubDate>Sat, 04 Oct 2025 15:35:38 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/posts/homelab/k3s-prod/apps/k3s/readme/</guid>
-      <description>Dieser Ordner enthält grundlegende Konfigurationen für den k3s Kubernetes-Cluster, einschließlich des Local Path Provisioners und einer virtuellen IP für den Kubernetes API-Server.</description>
+      <description>Dieser Ordner enthält grundlegende Konfigurationen für den k3s Kubernetes-Cluster, derzeit eine virtuelle IP für den Kubernetes API-Server.</description>
       
     </item>
     
