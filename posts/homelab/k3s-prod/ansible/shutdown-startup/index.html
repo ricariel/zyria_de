@@ -105,7 +105,7 @@
 	<meta property="og:type" content="article">
 		<meta property="article:section" content="posts">
 		<meta property="article:published_time" content="2024-10-27T10:00:00+01:00">
-		<meta property="article:modified_time" content="2025-12-09T11:05:32+01:00">
+		<meta property="article:modified_time" content="2026-09-18T08:30:12+02:00">
 		<meta property="article:tag" content="K3s">
 		<meta property="article:tag" content="Longhorn">
 		<meta property="article:tag" content="Argocd">
@@ -313,12 +313,12 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
     "dateCreated": "2024-10-27T10:00:00\u002b01:00",
     "datePublished": "2024-10-27T10:00:00\u002b01:00",
     
-    "dateModified": "2025-12-09T11:05:32\u002b01:00",
+    "dateModified": "2026-09-18T08:30:12\u002b02:00",
     
     "keywords": ["k3s","longhorn","argocd","ansible","recovery"],
     
     "mainEntityOfPage": "https://zyria.de/posts/homelab/k3s-prod/ansible/shutdown-startup/",
-    "wordCount": "1818"
+    "wordCount": "2198"
   }]
   </script>
 
@@ -965,7 +965,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2024-10-27T10:00:00&#43;01:00">27 Oktober 2024</time><span class="px-2 text-primary-500">&middot;</span><time datetime="2025-12-09T11:05:32&#43;01:00">Aktualisiert: 9 Dezember 2025</time><span class="px-2 text-primary-500">&middot;</span><span>1818 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
+      <time datetime="2024-10-27T10:00:00&#43;01:00">27 Oktober 2024</time><span class="px-2 text-primary-500">&middot;</span><time datetime="2026-09-18T08:30:12&#43;02:00">Aktualisiert: 18 September 2026</time><span class="px-2 text-primary-500">&middot;</span><span>2198 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
 
 
   
@@ -1240,7 +1240,12 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
         <li><a href="#die"><strong>Die “ArgoCD Fighting Back” Race Condition</strong></a></li>
       </ul>
     </li>
-    <li><a href="#7-fazit"><strong>7. Fazit</strong></a></li>
+    <li><a href="#7-ungeplanter-shutdown-einzelner-nodes"><strong>7. Ungeplanter Shutdown einzelner Nodes</strong></a>
+      <ul>
+        <li><a href="#liegengebliebene-pods-nach-dem-neustart"><strong>Liegengebliebene Pods nach dem Neustart</strong></a></li>
+      </ul>
+    </li>
+    <li><a href="#8-fazit"><strong>8. Fazit</strong></a></li>
   </ul>
 </nav>
   </div>
@@ -1293,7 +1298,12 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
         <li><a href="#die"><strong>Die “ArgoCD Fighting Back” Race Condition</strong></a></li>
       </ul>
     </li>
-    <li><a href="#7-fazit"><strong>7. Fazit</strong></a></li>
+    <li><a href="#7-ungeplanter-shutdown-einzelner-nodes"><strong>7. Ungeplanter Shutdown einzelner Nodes</strong></a>
+      <ul>
+        <li><a href="#liegengebliebene-pods-nach-dem-neustart"><strong>Liegengebliebene Pods nach dem Neustart</strong></a></li>
+      </ul>
+    </li>
+    <li><a href="#8-fazit"><strong>8. Fazit</strong></a></li>
   </ul>
 </nav>
   </div>
@@ -1944,12 +1954,104 @@ wird ArgoCD sofort versuchen, die Workloads wieder zu starten. Dies erzeugt eine
 <li><strong>Resultat:</strong> Volume-Korruption.</li>
 </ol>
 
-<h2 class="relative group"><strong>7. Fazit</strong>
-    <div id="7-fazit" class="anchor"></div>
+<h2 class="relative group"><strong>7. Ungeplanter Shutdown einzelner Nodes</strong>
+    <div id="7-ungeplanter-shutdown-einzelner-nodes" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#7-fazit" aria-label="Anker">#</a>
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#7-ungeplanter-shutdown-einzelner-nodes" aria-label="Anker">#</a>
+    </span>
+    
+</h2>
+<p>Die Playbooks oben decken das geplante Herunterfahren des ganzen Clusters ab.
+Häufiger fährt eine einzelne Node von außen herunter, etwa wenn ein
+Proxmox-Host nach unattended-upgrades neu startet und dabei seine Gäste
+stoppt. Bis zum 17.09.2026 beendete k3s dabei die Pods nicht: Longhorn und die
+Workloads liefen weiter, bis systemd sie hart abschoss, und die
+eazybusiness-Datenbank verlor den Storage unter laufenden Schreibvorgängen.</p>
+<p>Seitdem übernimmt der kubelet den geordneten Shutdown selbst
+(Graceful Node Shutdown, gestaffelt nach Pod-Priorität):</p>
+<table>
+	<thead>
+			<tr>
+					<th>Stufe</th>
+					<th>Pods</th>
+					<th>Frist</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>1</td>
+					<td>Workloads (Priorität unter 1000000000)</td>
+					<td>240 s</td>
+			</tr>
+			<tr>
+					<td>2</td>
+					<td>Longhorn (<code>longhorn-critical</code>)</td>
+					<td>90 s</td>
+			</tr>
+			<tr>
+					<td>3</td>
+					<td>Systempods (ab 2000000000)</td>
+					<td>30 s</td>
+			</tr>
+	</tbody>
+</table>
+<p>Zu Beginn meldet sich die Node als <code>NotReady</code>. Workloads ohne Node-Bindung
+werden auf anderen Nodes neu angesetzt, Longhorn hängt ihre Volumes dorthin um.</p>
+<p>Damit das greift, müssen drei Zeitgrenzen zueinander passen:</p>
+<ul>
+<li><strong>kubelet:</strong> <code>/etc/kubernetes/kubelet-shutdown.yaml</code> aus
+<code>ansible-main/playbooks/k3s.yml</code>, eingebunden über
+<code>kubelet-arg: config=...</code> in <code>inventory.yaml</code>. Das Playbook muss vor dem
+Deploy gelaufen sein, sonst startet kubelet nicht.</li>
+<li><strong>logind:</strong> <code>InhibitDelayMaxSec=390</code> in
+<code>/etc/systemd/logind.conf.d/zz-kubelet-shutdown.conf</code>. Der Name muss hinter
+<code>unattended-upgrades-logind-maxdelay.conf</code> sortieren, das den Wert sonst auf
+30 Sekunden zurücksetzt.</li>
+<li><strong>Proxmox:</strong> <code>startup: down=600</code> an jeder VM
+(<code>proxmox_vm_default_startup</code> in der Rolle <code>proxmox</code>). Ohne diese Option
+beendet Proxmox den Gast nach 180 Sekunden hart.</li>
+</ul>
+<p>Prüfen auf einer Node:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">systemd-inhibit --list --no-pager <span class="p">|</span> grep kubelet
+</span></span><span class="line"><span class="ln">2</span><span class="cl">busctl get-property org.freedesktop.login1 /org/freedesktop/login1 <span class="se">\
+</span></span></span><span class="line"><span class="ln">3</span><span class="cl">  org.freedesktop.login1.Manager InhibitDelayMaxUSec
+</span></span><span class="line"><span class="ln">4</span><span class="cl">journalctl -u k3s -u k3s-agent -b <span class="p">|</span> grep <span class="s2">&#34;Creating node shutdown manager&#34;</span></span></span></code></pre></div></div>
+<p>Das Playbook <code>shutdown_cluster.yaml</code> stoppt k3s, bevor das Betriebssystem
+herunterfährt. Die Staffelung greift dort nicht, stört aber auch nicht, weil
+die Workloads zu diesem Zeitpunkt schon auf 0 skaliert sind.</p>
+
+<h3 class="relative group"><strong>Liegengebliebene Pods nach dem Neustart</strong>
+    <div id="liegengebliebene-pods-nach-dem-neustart" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#liegengebliebene-pods-nach-dem-neustart" aria-label="Anker">#</a>
+    </span>
+    
+</h3>
+<p>Pods, die während des Herunterfahrens noch auf der Node angelegt werden, lehnt
+der kubelet mit <code>NodeShutdown</code> ab. Sie bleiben als <code>Failed</code>, <code>Error</code> oder
+<code>ContainerStatusUnknown</code> stehen. Bei Deployments ist das nur Kosmetik, der
+Ersatz läuft längst. Bei DaemonSets fehlt dagegen auf der Node ein Pod: Der
+Controller ersetzt fehlgeschlagene Pods mit wachsender Wartezeit, und am
+17.09.2026 fehlten auf <code>worker1.zyria.de</code> nach mehr als zehn Minuten noch
+immer <code>multus</code>, <code>whereabouts</code> und <code>node-exporter</code>.</p>
+<p>Nach jedem Node-Neustart deshalb prüfen:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">kubectl get pods -A --field-selector spec.nodeName<span class="o">=</span>&lt;node&gt; --no-headers <span class="se">\
+</span></span></span><span class="line"><span class="ln">2</span><span class="cl">  <span class="p">|</span> grep -v -E <span class="s1">&#39;Running|Completed&#39;</span>
+</span></span><span class="line"><span class="ln">3</span><span class="cl">kubectl get ds -A    <span class="c1"># DESIRED und READY muessen gleich sein</span></span></span></code></pre></div></div>
+<p>Tote Pod-Objekte lassen sich gefahrlos löschen, der zuständige Controller legt
+sofort einen neuen Pod an:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">kubectl delete pod -n &lt;namespace&gt; &lt;pod&gt;</span></span></code></pre></div></div>
+
+<h2 class="relative group"><strong>8. Fazit</strong>
+    <div id="8-fazit" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#8-fazit" aria-label="Anker">#</a>
     </span>
     
 </h2>
