@@ -3,6 +3,22 @@
 Alle nennenswerten Änderungen an diesem Repository.
 Automatisch aus [Conventional Commits](https://www.conventionalcommits.org) via [git-cliff](https://git-cliff.org).
 
+## [2026.38] - 2026-09-21 ([Vergleich zur Vorversion](https://git.zyria.de/pyrox/zyria_de/compare/2026.37...2026.38))
+
+### ⬆️ Dependencies
+
+- **deps**: Update dependency autoprefixer ( 10.5.6 → 10.6.0 )
+- **deps**: Update dependency autoprefixer ( 10.5.5 → 10.5.6 )
+- **deps**: Lock file maintenance
+
+### 🧹 Miscellaneous
+
+- **hugo**: Module aktualisieren
+- **hugo**: Module aktualisieren
+- **hugo**: Module aktualisieren
+- **hugo**: Module aktualisieren
+- **hugo**: Module aktualisieren
+
 ## [2026.37] - 2026-09-14 ([Vergleich zur Vorversion](https://git.zyria.de/pyrox/zyria_de/compare/2026.36...2026.37))
 
 ### ⬆️ Dependencies
