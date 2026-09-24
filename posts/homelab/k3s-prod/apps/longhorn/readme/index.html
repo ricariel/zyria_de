@@ -105,7 +105,7 @@
 	<meta property="og:type" content="article">
 		<meta property="article:section" content="posts">
 		<meta property="article:published_time" content="2025-09-30T17:24:46+02:00">
-		<meta property="article:modified_time" content="2026-09-07T14:43:53+02:00">
+		<meta property="article:modified_time" content="2026-09-23T09:07:55+02:00">
 		<meta property="article:tag" content="Kubernetes">
 		<meta property="article:tag" content="Longhorn">
 		<meta property="article:tag" content="Storage">
@@ -311,12 +311,12 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
     "dateCreated": "2025-09-30T17:24:46\u002b02:00",
     "datePublished": "2025-09-30T17:24:46\u002b02:00",
     
-    "dateModified": "2026-09-07T14:43:53\u002b02:00",
+    "dateModified": "2026-09-23T09:07:55\u002b02:00",
     
     "keywords": ["kubernetes","longhorn","storage"],
     
     "mainEntityOfPage": "https://zyria.de/posts/homelab/k3s-prod/apps/longhorn/readme/",
-    "wordCount": "226"
+    "wordCount": "297"
   }]
   </script>
 
@@ -963,7 +963,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2025-09-30T17:24:46&#43;02:00">30 September 2025</time><span class="px-2 text-primary-500">&middot;</span><time datetime="2026-09-07T14:43:53&#43;02:00">Aktualisiert: 7 September 2026</time><span class="px-2 text-primary-500">&middot;</span><span>226 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
+      <time datetime="2025-09-30T17:24:46&#43;02:00">30 September 2025</time><span class="px-2 text-primary-500">&middot;</span><time datetime="2026-09-23T09:07:55&#43;02:00">Aktualisiert: 23 September 2026</time><span class="px-2 text-primary-500">&middot;</span><span>297 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
 
 
   
@@ -1362,6 +1362,9 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
 <ul>
 <li><strong>Netzwerk-Policies</strong>: Es werden automatisch Netzwerk-Policies für k3s erstellt, um den Traffic zwischen den Longhorn-Komponenten zu kontrollieren.</li>
 <li><strong>Ingress</strong>: Der Zugriff auf die Longhorn-Weboberfläche wird über einen Ingress mit einem Hostnamen ermöglicht. Der Zugriff ist durch eine Middleware auf Traefik-Ebene auf lokale Netzwerke beschränkt.</li>
+<li><strong>Longhorn-Settings</strong>: Alle vom Standard abweichenden Settings stehen unter <code>defaultSettings</code> in der <code>values.yaml</code>. Longhorn übernimmt sie aus der ConfigMap <code>longhorn-default-setting</code>. UI-Änderungen an diesen Settings werden beim nächsten Abgleich überschrieben. Änderungen daher nur hier vornehmen. Settings, die das Chart nicht anbietet, liegen als <code>Setting</code>-Ressourcen in <code>settings.yaml</code>.</li>
+<li><strong>Recurring Jobs</strong>: Snapshot-, Backup-, Trim- und Cleanup-Jobs sind in <code>recurringjobs.yaml</code> definiert. Volumes nehmen über die Gruppe <code>default</code> teil.</li>
+<li><strong>Backup-Target</strong>: Das Standard-Backup-Target steht unter <code>defaultBackupStore</code> in der <code>values.yaml</code>.</li>
 </ul>
 
 <h3 class="relative group">Installation
