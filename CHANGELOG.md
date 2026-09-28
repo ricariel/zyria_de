@@ -3,6 +3,24 @@
 Alle nennenswerten Änderungen an diesem Repository.
 Automatisch aus [Conventional Commits](https://www.conventionalcommits.org) via [git-cliff](https://git-cliff.org).
 
+## [2026.39] - 2026-09-28 ([Vergleich zur Vorversion](https://git.zyria.de/pyrox/zyria_de/compare/2026.38...2026.39))
+
+### ⬆️ Dependencies
+
+- **deps**: Update dependency autoprefixer ( 10.6.0 → 10.6.1 )
+
+### 🔧 CI/Build
+
+- **workflows**:
+Commitlint ergänzen ([0537fd3](https://git.zyria.de/pyrox/zyria_de/commit/0537fd353df28b8433592364610e1b0fd301288a))
+
+### 🧹 Miscellaneous
+
+- **hugo**: Module aktualisieren
+- **claude**: Remove local settings file from the repository
+- **hugo**: Module aktualisieren
+- **hugo**: Module aktualisieren
+
 ## [2026.38] - 2026-09-21 ([Vergleich zur Vorversion](https://git.zyria.de/pyrox/zyria_de/compare/2026.37...2026.38))
 
 ### ⬆️ Dependencies
