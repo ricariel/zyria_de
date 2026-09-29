@@ -105,7 +105,7 @@
 	<meta property="og:type" content="article">
 		<meta property="article:section" content="posts">
 		<meta property="article:published_time" content="2025-10-17T11:57:17+02:00">
-		<meta property="article:modified_time" content="2026-09-07T14:43:53+02:00">
+		<meta property="article:modified_time" content="2026-09-28T09:52:28+02:00">
 		<meta property="article:tag" content="Kubernetes">
 		<meta property="article:tag" content="Forgejo">
 		<meta property="article:tag" content="Git">
@@ -311,12 +311,12 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
     "dateCreated": "2025-10-17T11:57:17\u002b02:00",
     "datePublished": "2025-10-17T11:57:17\u002b02:00",
     
-    "dateModified": "2026-09-07T14:43:53\u002b02:00",
+    "dateModified": "2026-09-28T09:52:28\u002b02:00",
     
     "keywords": ["kubernetes","forgejo","git"],
     
     "mainEntityOfPage": "https://zyria.de/posts/homelab/k3s-prod/apps/forgejo/readme/",
-    "wordCount": "503"
+    "wordCount": "527"
   }]
   </script>
 
@@ -963,7 +963,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2025-10-17T11:57:17&#43;02:00">17 Oktober 2025</time><span class="px-2 text-primary-500">&middot;</span><time datetime="2026-09-07T14:43:53&#43;02:00">Aktualisiert: 7 September 2026</time><span class="px-2 text-primary-500">&middot;</span><span>503 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
+      <time datetime="2025-10-17T11:57:17&#43;02:00">17 Oktober 2025</time><span class="px-2 text-primary-500">&middot;</span><time datetime="2026-09-28T09:52:28&#43;02:00">Aktualisiert: 28 September 2026</time><span class="px-2 text-primary-500">&middot;</span><span>527 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
 
 
   
@@ -1496,7 +1496,10 @@ keine Umgebungsvariable setzt, überleben aus der alten Datei. <code>values.yaml
 ist damit nicht allein maßgeblich für die laufende Konfiguration.</li>
 <li><code>cron.delete_old_actions</code> räumt den <strong>Aktivitäts-Feed</strong> (Tabelle <code>action</code>)
 auf, nicht die Forgejo-Actions-Läufe. Für <code>action_run</code>/<code>action_task</code> gibt es
-in v16 keinen eingebauten Aufräum-Task.</li>
+in v16 keinen eingebauten Aufräum-Task.
+Aufbewahrt werden die Einträge 8784h (366 Tage), damit die Heatmap auf der
+Profilseite ein volles Jahr zeigt; mit kürzerer Frist bleibt sie teilweise
+leer.</li>
 </ul>
 
           
