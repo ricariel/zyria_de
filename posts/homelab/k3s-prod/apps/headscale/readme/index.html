@@ -105,7 +105,7 @@
 	<meta property="og:type" content="article">
 		<meta property="article:section" content="posts">
 		<meta property="article:published_time" content="2025-09-02T09:39:40+02:00">
-		<meta property="article:modified_time" content="2026-09-14T10:50:08+02:00">
+		<meta property="article:modified_time" content="2026-09-29T09:25:19+02:00">
 		<meta property="article:tag" content="Kubernetes">
 		<meta property="article:tag" content="Headscale">
 		<meta property="article:tag" content="Tailscale">
@@ -312,12 +312,12 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
     "dateCreated": "2025-09-02T09:39:40\u002b02:00",
     "datePublished": "2025-09-02T09:39:40\u002b02:00",
     
-    "dateModified": "2026-09-14T10:50:08\u002b02:00",
+    "dateModified": "2026-09-29T09:25:19\u002b02:00",
     
     "keywords": ["kubernetes","headscale","tailscale","vpn"],
     
     "mainEntityOfPage": "https://zyria.de/posts/homelab/k3s-prod/apps/headscale/readme/",
-    "wordCount": "719"
+    "wordCount": "729"
   }]
   </script>
 
@@ -964,7 +964,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2025-09-02T09:39:40&#43;02:00">2 September 2025</time><span class="px-2 text-primary-500">&middot;</span><time datetime="2026-09-14T10:50:08&#43;02:00">Aktualisiert: 14 September 2026</time><span class="px-2 text-primary-500">&middot;</span><span>719 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
+      <time datetime="2025-09-02T09:39:40&#43;02:00">2 September 2025</time><span class="px-2 text-primary-500">&middot;</span><time datetime="2026-09-29T09:25:19&#43;02:00">Aktualisiert: 29 September 2026</time><span class="px-2 text-primary-500">&middot;</span><span>729 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
 
 
   
@@ -1397,7 +1397,7 @@ Das Helm-Chart stammt aus der OCI-Registry <a href="https://codeberg.org/wrenix"
 <li><strong>Datenbank</strong>: Headscale verwendet eine SQLite-Datenbank, die auf einem persistenten Volume gespeichert wird.</li>
 <li><strong>Zertifikate</strong>: TLS-Zertifikate für den Ingress werden automatisch von <code>cert-manager</code> ausgestellt.</li>
 <li><strong>DNS</strong>: Knoten im Tailnet erhalten Namen unterhalb der in <code>base_domain</code> gesetzten Domain. Sie darf sich nicht mit einer real aufgelösten Domain überschneiden.</li>
-<li><strong>Adress-Präfixe</strong>: <code>fd7a:115c:a1e0::/48</code> (v6) und <code>100.64.0.0/23</code> (v4) — <strong>nicht auf ein eigenes Präfix ändern</strong>. Headscale unterstützt nur Teilmengen der Standardbereiche (<code>100.64.0.0/10</code>, <code>fd7a:115c:a1e0::/48</code>) und warnt bei allem anderen beim Start mit <em>„This is NOT a supported configuration&quot;</em>. Der Grund ist praktisch: Seit Headscale 0.29.0 (<a href="https://github.com/juanfont/headscale/pull/3036"  target="_blank" rel="noreferrer">PR #3036</a>) expandiert <code>*</code> als <code>src</code>/<code>dst</code> in der ACL auf genau diese Standardbereiche statt auf <code>0.0.0.0/0</code>/<code>::/0</code>. Liegt das eigene v6-Präfix außerhalb, enthält der kompilierte Paketfilter keine passende v6-Quelle und jedes IPv6-Paket wird am Ingress des Subnet-Routers verworfen — bei v4 fällt es nicht auf, solange das Präfix eine Teilmenge von <code>100.64.0.0/10</code> ist. Hier doppelt abgesichert, da die ACL zusätzlich <code>group:</code>/<code>tag:</code> statt <code>*</code> verwendet. Im CDP-Cluster war mit <code>fd72:a312:5995::/48</code> und <code>&quot;src&quot;:[&quot;*&quot;]</code> genau dieser Ausfall eingetreten; dort wurde am 31.08.2026 auf <code>fd7a:115c:a1e0:2::/64</code> migriert. Getestet mit Headscale 0.29.3.</li>
+<li><strong>Adress-Präfixe</strong>: <code>fd7a:115c:a1e0::/48</code> (v6) und <code>100.64.0.0/23</code> (v4) — <strong>nicht auf ein eigenes Präfix ändern</strong>. Headscale unterstützt nur Teilmengen der Standardbereiche (<code>100.64.0.0/10</code>, <code>fd7a:115c:a1e0::/48</code>) und warnt bei allem anderen beim Start mit <em>„This is NOT a supported configuration&quot;</em>. Der Grund ist praktisch: Seit Headscale 0.29.0 (<a href="https://github.com/juanfont/headscale/pull/3036"  target="_blank" rel="noreferrer">PR #3036</a>) expandiert <code>*</code> als <code>src</code>/<code>dst</code> in der ACL auf genau diese Standardbereiche statt auf <code>0.0.0.0/0</code>/<code>::/0</code>. Liegt das eigene v6-Präfix außerhalb, enthält der kompilierte Paketfilter keine passende v6-Quelle und jedes IPv6-Paket wird am Ingress des Subnet-Routers verworfen — bei v4 fällt es nicht auf, solange das Präfix eine Teilmenge von <code>100.64.0.0/10</code> ist. Hier doppelt abgesichert, da die ACL zusätzlich <code>group:</code>/<code>tag:</code> statt <code>*</code> verwendet. In einem anderen Cluster war mit einem eigenen Präfix außerhalb dieser Bereiche und <code>&quot;src&quot;:[&quot;*&quot;]</code> genau dieser Ausfall eingetreten; dort wurde anschließend auf ein Präfix innerhalb von <code>fd7a:115c:a1e0::/48</code> migriert. Getestet mit Headscale 0.29.3.</li>
 <li><strong>ACL-Policy</strong>: Liegt in der <strong>Datenbank</strong>, nicht in der Konfigurationsdatei (<code>policy.mode: database</code>). Änderungen an <code>config-patch.yaml</code> werden durch ArgoCD zwar ins Secret synchronisiert, aber <strong>nicht</strong> wirksam — dafür ist ein expliziter <code>headscale policy set</code> nötig. Siehe <a href="/posts/homelab/k3s-prod/apps/headscale/readme/#acl-policy-setzen" >ACL-Policy setzen</a>.</li>
 <li><strong>DERP</strong>: Es werden die öffentlichen DERP-Server von Tailscale verwendet. Ein eigener DERP-Service ist konfiguriert, aber nicht als Server aktiviert. Der STUN-Dienst läuft über einen LoadBalancer-Service.</li>
 <li><strong>Speicher</strong>: Konfiguration und SQLite-Datenbank liegen auf einem Longhorn-Volume. Diese Datenbank ist der gesamte Zustand des Tailnets — geht sie verloren, müssen sich alle Knoten neu anmelden.</li>

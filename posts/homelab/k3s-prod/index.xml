@@ -9,7 +9,7 @@
     <managingEditor>fabrice@zyria.de (Fabrice Kirchner)</managingEditor>
     <webMaster>fabrice@zyria.de (Fabrice Kirchner)</webMaster>
     
-    <lastBuildDate>Mon, 28 Sep 2026 09:52:28 +0200</lastBuildDate><atom:link href="https://zyria.de/posts/homelab/k3s-prod/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 29 Sep 2026 09:25:19 +0200</lastBuildDate><atom:link href="https://zyria.de/posts/homelab/k3s-prod/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Operational Lifecycle Management: Orchestrierter Shutdown für Kubernetes</title>
@@ -18,6 +18,36 @@
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/posts/homelab/k3s-prod/ansible/shutdown-startup/</guid>
       <description>Ein technischer Leitfaden für das geordnete Herunterfahren und Wiederanfahren eines Kubernetes-Clusters (k3s/Longhorn/ArgoCD) zur Vermeidung von Datenkorruption.</description>
+      
+    </item>
+    
+    <item>
+      <title>RustDesk-Server - Fernwartung im Tailnet</title>
+      <link>https://zyria.de/posts/homelab/k3s-prod/apps/rustdesk/readme/</link>
+      <pubDate>Tue, 29 Sep 2026 09:25:19 +0200</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/rustdesk/readme/</guid>
+      <description>ID-/Rendezvous-Server und Relay in einem Pod, per Tailscale-Sidecar am Headscale angemeldet; der Webclient kommt zusätzlich über Traefik herein.</description>
+      
+    </item>
+    
+    <item>
+      <title>Unbound</title>
+      <link>https://zyria.de/posts/homelab/k3s-prod/apps/unbound/readme/</link>
+      <pubDate>Tue, 29 Sep 2026 09:25:19 +0200</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/unbound/readme/</guid>
+      <description>Unbound löst Namen selbst rekursiv auf und liefert bei einem Ausfall der autoritativen Nameserver weiterhin die zuletzt bekannten Antworten aus.</description>
+      
+    </item>
+    
+    <item>
+      <title>VPN Standort C - Anbindung an das CDP-Tailnet</title>
+      <link>https://zyria.de/posts/homelab/k3s-prod/apps/vpn-site-c/readme/</link>
+      <pubDate>Tue, 29 Sep 2026 09:25:19 +0200</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/vpn-site-c/readme/</guid>
+      <description>Ein Pod baut einen WireGuard-Tunnel zum WireGuard-Server im CDP-Cluster auf und annonciert die Adressbereiche des CDP-Tailnets via Headscale ins eigene Tailnet.</description>
       
     </item>
     
@@ -58,26 +88,6 @@
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/posts/homelab/k3s-prod/apps/hx53-de/readme/</guid>
       <description>Nginx liefert die statische Webseite hx53.de aus, git-sync zieht den Inhalt laufend aus einem Git-Repository nach.</description>
-      
-    </item>
-    
-    <item>
-      <title>VPN Standort C - Anbindung an das CDP-Tailnet</title>
-      <link>https://zyria.de/posts/homelab/k3s-prod/apps/vpn-site-c/readme/</link>
-      <pubDate>Mon, 14 Sep 2026 10:50:08 +0200</pubDate>
-      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/vpn-site-c/readme/</guid>
-      <description>Ein Pod baut einen WireGuard-Tunnel zum WireGuard-Server im CDP-Cluster auf und annonciert die Adressbereiche des CDP-Tailnets via Headscale ins eigene Tailnet.</description>
-      
-    </item>
-    
-    <item>
-      <title>Unbound</title>
-      <link>https://zyria.de/posts/homelab/k3s-prod/apps/unbound/readme/</link>
-      <pubDate>Wed, 09 Sep 2026 12:56:04 +0200</pubDate>
-      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/unbound/readme/</guid>
-      <description>Unbound löst Namen selbst rekursiv auf und liefert bei einem Ausfall der autoritativen Nameserver weiterhin die zuletzt bekannten Antworten aus.</description>
       
     </item>
     
@@ -248,16 +258,6 @@
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/posts/homelab/k3s-prod/apps/plex/readme/</guid>
       <description>Dieses Dokument beschreibt die Bereitstellung des Plex Media Servers, einer beliebten Anwendung zum Organisieren und Streamen von Medien.</description>
-      
-    </item>
-    
-    <item>
-      <title>RustDesk-Server - Fernwartung im Tailnet</title>
-      <link>https://zyria.de/posts/homelab/k3s-prod/apps/rustdesk/readme/</link>
-      <pubDate>Tue, 25 Aug 2026 09:24:25 +0200</pubDate>
-      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/rustdesk/readme/</guid>
-      <description>ID-/Rendezvous-Server und Relay in einem Pod, per Tailscale-Sidecar am Headscale angemeldet; der Webclient kommt zusätzlich über Traefik herein.</description>
       
     </item>
     
