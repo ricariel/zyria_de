@@ -3,6 +3,16 @@
 Alle nennenswerten Änderungen an diesem Repository.
 Automatisch aus [Conventional Commits](https://www.conventionalcommits.org) via [git-cliff](https://git-cliff.org).
 
+## [2026.40] - 2026-10-05 ([Vergleich zur Vorversion](https://git.zyria.de/pyrox/zyria_de/compare/2026.39...2026.40))
+
+### 🧹 Miscellaneous
+
+- **hugo**: Module aktualisieren
+- **hugo**: Module aktualisieren
+- **hugo**: Module aktualisieren
+- **hugo**: Module aktualisieren
+- **pre-commit**: Enable no-infra-leaks and pin v1.1.3
+
 ## [2026.39] - 2026-09-28 ([Vergleich zur Vorversion](https://git.zyria.de/pyrox/zyria_de/compare/2026.38...2026.39))
 
 ### ⬆️ Dependencies
