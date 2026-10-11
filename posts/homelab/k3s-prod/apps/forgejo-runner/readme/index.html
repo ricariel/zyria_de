@@ -105,7 +105,7 @@
 	<meta property="og:type" content="article">
 		<meta property="article:section" content="posts">
 		<meta property="article:published_time" content="2025-10-05T03:18:51+02:00">
-		<meta property="article:modified_time" content="2026-09-07T14:43:53+02:00">
+		<meta property="article:modified_time" content="2026-10-10T21:56:30+02:00">
 		<meta property="article:tag" content="Kubernetes">
 		<meta property="article:tag" content="Forgejo">
 		<meta property="article:tag" content="Ci">
@@ -311,12 +311,12 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
     "dateCreated": "2025-10-05T03:18:51\u002b02:00",
     "datePublished": "2025-10-05T03:18:51\u002b02:00",
     
-    "dateModified": "2026-09-07T14:43:53\u002b02:00",
+    "dateModified": "2026-10-10T21:56:30\u002b02:00",
     
     "keywords": ["kubernetes","forgejo","ci"],
     
     "mainEntityOfPage": "https://zyria.de/posts/homelab/k3s-prod/apps/forgejo-runner/readme/",
-    "wordCount": "343"
+    "wordCount": "497"
   }]
   </script>
 
@@ -963,7 +963,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2025-10-05T03:18:51&#43;02:00">5 Oktober 2025</time><span class="px-2 text-primary-500">&middot;</span><time datetime="2026-09-07T14:43:53&#43;02:00">Aktualisiert: 7 September 2026</time><span class="px-2 text-primary-500">&middot;</span><span>343 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
+      <time datetime="2025-10-05T03:18:51&#43;02:00">5 Oktober 2025</time><span class="px-2 text-primary-500">&middot;</span><time datetime="2026-10-10T21:56:30&#43;02:00">Aktualisiert: 10 Oktober 2026</time><span class="px-2 text-primary-500">&middot;</span><span>497 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
 
 
   
@@ -1149,6 +1149,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
           </ul>
         </li>
         <li><a href="#installation">Installation</a></li>
+        <li><a href="#cache-geheimnis">Cache-Geheimnis</a></li>
         <li><a href="#abhängigkeiten">Abhängigkeiten</a></li>
       </ul>
     </li>
@@ -1176,6 +1177,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
           </ul>
         </li>
         <li><a href="#installation">Installation</a></li>
+        <li><a href="#cache-geheimnis">Cache-Geheimnis</a></li>
         <li><a href="#abhängigkeiten">Abhängigkeiten</a></li>
       </ul>
     </li>
@@ -1371,10 +1373,12 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
 <li><code>forgejo-runner-codeberg</code>: Verbindet sich mit der öffentlichen Instanz <code>https://codeberg.org</code>.</li>
 </ol>
 </li>
-<li><strong>Replikas</strong>: Für die lokale Instanz werden 5 Runner-Replikate betrieben — je einer pro Hardware-Node, erzwungen über <code>podAntiAffinity</code> (<code>topologyKey: kubernetes.io/hostname</code>). Mit <code>capacity: 2</code> ergibt das 10 parallel ausführbare Jobs.</li>
+<li><strong>Replikas</strong>: Für die lokale Instanz laufen so viele Runner-Replikate wie <code>replicaCount</code> in <code>values.yaml</code> vorgibt, höchstens einer pro Node, erzwungen über <code>podAntiAffinity</code> (<code>topologyKey: kubernetes.io/hostname</code>). Jeder Pod nimmt <code>capacity</code> Jobs parallel an.</li>
 <li><strong>Ressourcen</strong>: Beide Container haben Requests/Limits. Das CPU-Limit liegt auf dem <code>dind</code>-Container (4 CPU), damit CI-Jobs die auf denselben Nodes laufenden Produktions-Workloads nicht verdrängen können.</li>
 <li><strong>Docker-Daemon</strong>: <code>daemon.json</code> (MTU 1400, IPv6) wird per ConfigMap <code>docker-config</code> in den <code>dind</code>-Container nach <code>/etc/docker/daemon.json</code> gemountet.</li>
 <li><strong>Labels</strong>: Die Runner sind mit einer Vielzahl von Labels konfiguriert, die auf verschiedene Docker-Images von <code>catthehacker/ubuntu</code> verweisen. Diese Images sind speziell für die Verwendung mit Gitea/Forgejo Actions vorbereitet.</li>
+<li><strong>Cache</strong>: Die lokale Instanz nutzt einen gemeinsamen Cache-Server für <code>actions/cache</code> (<code>cache-server.yaml</code>, Deployment und Service <code>forgejo-cache</code> mit Longhorn-Volume). Ohne ihn startet jeder Runner-Pod einen eigenen Cache-Server, und ein Cache trifft nur, wenn der nächste Lauf zufällig auf demselben Pod landet. Die Runner reichen Anfragen über ihren Cache-Proxy an <code>cache.external_server</code> weiter. Die Codeberg-Instanz behält ihren eigenen Cache.</li>
+<li><strong>Images und Logs</strong>: <code>force_pull: false</code> verwendet vorhandene Images wieder, <code>act-latest</code> kann dadurch einige Tage hinter dem Upstream liegen. <code>report_retry</code> sendet Logs am Jobende bei kurzen Aussetzern der Forgejo-Instanz erneut.</li>
 <li><strong>Docker-in-Docker</strong>: Die Runner laufen im <code>privileged</code>-Modus und mit <code>host</code>-Netzwerk, um Docker-Befehle innerhalb der CI-Jobs ausführen zu können (Docker-in-Docker).</li>
 </ul>
 
@@ -1389,6 +1393,19 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
 </h3>
 <p>Das Chart wird zweimal aus derselben Quelle instanziiert — einmal je Zielinstanz. Die Bereitstellung wird durch die <code>kustomization.yaml</code>-Datei verwaltet.</p>
 <div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">kubectl kustomize --enable-helm apps/forgejo-runner <span class="p">|</span> kubectl apply -n forgejo-runner -f -</span></span></code></pre></div></div>
+
+<h3 class="relative group">Cache-Geheimnis
+    <div id="cache-geheimnis" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#cache-geheimnis" aria-label="Anker">#</a>
+    </span>
+    
+</h3>
+<p>Runner und Cache-Server authentifizieren sich mit einem gemeinsamen Geheimnis aus dem Secret <code>forgejo-cache</code> (Schlüssel <code>secret</code>). Es liegt nicht im Repository und wird einmalig im Cluster angelegt:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">kubectl -n forgejo-runner create secret generic forgejo-cache --from-literal<span class="o">=</span><span class="nv">secret</span><span class="o">=</span><span class="s2">&#34;</span><span class="k">$(</span>openssl rand -hex 32<span class="k">)</span><span class="s2">&#34;</span></span></span></code></pre></div></div>
+<p>Der runner-Container bekommt es über einen Patch in <code>kustomization.yaml</code>, weil das Chart <code>volumeMounts</code> nur in den <code>dind</code>-Container einhängt. Nach einem Wechsel des Geheimnisses müssen Cache-Server und Runner neu starten.</p>
 
 <h3 class="relative group">Abhängigkeiten
     <div id="abhängigkeiten" class="anchor"></div>
