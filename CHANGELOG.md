@@ -3,6 +3,20 @@
 Alle nennenswerten Änderungen an diesem Repository.
 Automatisch aus [Conventional Commits](https://www.conventionalcommits.org) via [git-cliff](https://git-cliff.org).
 
+## [2026.41] - 2026-10-12 ([Vergleich zur Vorversion](https://git.zyria.de/pyrox/zyria_de/compare/2026.40...2026.41))
+
+### 🔧 CI/Build
+
+- **renovate**:
+Pass heartbeat and coverage report inputs ([2bdc6f6](https://git.zyria.de/pyrox/zyria_de/commit/2bdc6f6654374c496072bd2c73f901af53ac1ca0))
+
+### 🧹 Miscellaneous
+
+- **hugo**: Module aktualisieren
+- **hugo**: Module aktualisieren
+- **hugo**: Module aktualisieren
+- **hugo**: Module aktualisieren
+
 ## [2026.40] - 2026-10-05 ([Vergleich zur Vorversion](https://git.zyria.de/pyrox/zyria_de/compare/2026.39...2026.40))
 
 ### 🧹 Miscellaneous
