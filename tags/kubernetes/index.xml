@@ -9,7 +9,17 @@
     <managingEditor>fabrice@zyria.de (Fabrice Kirchner)</managingEditor>
     <webMaster>fabrice@zyria.de (Fabrice Kirchner)</webMaster>
     
-    <lastBuildDate>Sat, 10 Oct 2026 21:59:07 +0200</lastBuildDate><atom:link href="https://zyria.de/tags/kubernetes/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 13 Oct 2026 01:08:34 +0200</lastBuildDate><atom:link href="https://zyria.de/tags/kubernetes/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Multus CNI</title>
+      <link>https://zyria.de/posts/homelab/k3s-prod/apps/multus/readme/</link>
+      <pubDate>Mon, 12 Oct 2026 11:11:43 +0200</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/multus/readme/</guid>
+      <description>Multus ermöglicht es, Pods mehrere Netzwerkschnittstellen zuzuweisen, und ist die Grundlage für direkte Layer-2-Netzwerkanbindungen im Cluster.</description>
+      
+    </item>
     
     <item>
       <title>Home Assistant</title>
@@ -218,16 +228,6 @@
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/posts/homelab/k3s-prod/apps/matrix-admin/readme/</guid>
       <description>Synapse Admin bietet eine einfache grafische Oberfläche, um Benutzer und Räume auf einem Synapse Homeserver zu verwalten, ohne die Admin-API direkt verwenden zu müssen.</description>
-      
-    </item>
-    
-    <item>
-      <title>Multus CNI</title>
-      <link>https://zyria.de/posts/homelab/k3s-prod/apps/multus/readme/</link>
-      <pubDate>Tue, 25 Aug 2026 09:24:25 +0200</pubDate>
-      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/multus/readme/</guid>
-      <description>Multus ermöglicht es, Pods mehrere Netzwerkschnittstellen zuzuweisen, und ist die Grundlage für direkte Layer-2-Netzwerkanbindungen im Cluster.</description>
       
     </item>
     
@@ -447,7 +447,7 @@
       <pubDate>Fri, 17 Oct 2025 13:23:29 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/posts/homelab/k3s-prod/apps/prometheus/readme/</guid>
-      <description>This document describes the Prometheus deployment, an open-source monitoring and alerting toolkit.</description>
+      <description>Prometheus sammelt Metriken des Clusters, Alertmanager alarmiert über Matrix und Mail, Grafana zeigt die Daten an.</description>
       
     </item>
     

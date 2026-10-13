@@ -105,7 +105,7 @@
 	<meta property="og:type" content="article">
 		<meta property="article:section" content="posts">
 		<meta property="article:published_time" content="2025-10-20T13:46:48+02:00">
-		<meta property="article:modified_time" content="2026-09-07T14:43:53+02:00">
+		<meta property="article:modified_time" content="2026-10-13T00:24:43+02:00">
 		<meta property="article:tag" content="Kubernetes">
 		<meta property="article:tag" content="Unifi">
 		<meta property="article:tag" content="Netzwerk">
@@ -311,12 +311,12 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
     "dateCreated": "2025-10-20T13:46:48\u002b02:00",
     "datePublished": "2025-10-20T13:46:48\u002b02:00",
     
-    "dateModified": "2026-09-07T14:43:53\u002b02:00",
+    "dateModified": "2026-10-13T00:24:43\u002b02:00",
     
     "keywords": ["kubernetes","unifi","netzwerk"],
     
     "mainEntityOfPage": "https://zyria.de/posts/homelab/k3s-prod/apps/unifi-controller/readme/",
-    "wordCount": "362"
+    "wordCount": "587"
   }]
   </script>
 
@@ -963,7 +963,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2025-10-20T13:46:48&#43;02:00">20 Oktober 2025</time><span class="px-2 text-primary-500">&middot;</span><time datetime="2026-09-07T14:43:53&#43;02:00">Aktualisiert: 7 September 2026</time><span class="px-2 text-primary-500">&middot;</span><span>362 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
+      <time datetime="2025-10-20T13:46:48&#43;02:00">20 Oktober 2025</time><span class="px-2 text-primary-500">&middot;</span><time datetime="2026-10-13T00:24:43&#43;02:00">Aktualisiert: 13 Oktober 2026</time><span class="px-2 text-primary-500">&middot;</span><span>587 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
 
 
   
@@ -1141,6 +1141,8 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
     <li><a href="#unifi-netzwerk-anwendung">UniFi Netzwerk-Anwendung</a>
       <ul>
         <li><a href="#upgrade-mongodb">Upgrade Mongodb</a></li>
+        <li><a href="#versionen">Versionen</a></li>
+        <li><a href="#rollen-des-datenbanknutzers">Rollen des Datenbanknutzers</a></li>
         <li><a href="#komponenten">Komponenten</a></li>
         <li><a href="#quelle">Quelle</a></li>
         <li><a href="#dokumentation">Dokumentation</a></li>
@@ -1170,6 +1172,8 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
     <li><a href="#unifi-netzwerk-anwendung">UniFi Netzwerk-Anwendung</a>
       <ul>
         <li><a href="#upgrade-mongodb">Upgrade Mongodb</a></li>
+        <li><a href="#versionen">Versionen</a></li>
+        <li><a href="#rollen-des-datenbanknutzers">Rollen des Datenbanknutzers</a></li>
         <li><a href="#komponenten">Komponenten</a></li>
         <li><a href="#quelle">Quelle</a></li>
         <li><a href="#dokumentation">Dokumentation</a></li>
@@ -1323,6 +1327,32 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
 <div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">mongosh --port <span class="m">27017</span> --authenticationDatabase admin -u root -p <span class="s2">&#34;PASSWORT&#34;</span>
 </span></span><span class="line"><span class="ln">2</span><span class="cl">...
 </span></span><span class="line"><span class="ln">3</span><span class="cl">db.adminCommand<span class="o">(</span> <span class="o">{</span> setFeatureCompatibilityVersion: <span class="s2">&#34;8.0&#34;</span>, confirm: <span class="nb">true</span> <span class="o">}</span> <span class="o">)</span></span></span></code></pre></div></div>
+
+<h3 class="relative group">Versionen
+    <div id="versionen" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#versionen" aria-label="Anker">#</a>
+    </span>
+    
+</h3>
+<p>10.6 ist die letzte Version der selbst gehosteten UniFi Network Application. Ab 11.0 speichert UniFi seine Daten in PostgreSQL statt in MongoDB und läuft nur noch unter UniFi OS Server. Ein Wechsel dorthin ist eine Migration auf eine andere Plattform und kein Image-Update. Renovate hält das Image deshalb auf 10.6.x (<code>renovate.json5</code>).</p>
+<p>Ubiquiti gibt die Network Application ab 9.0 für MongoDB bis 8.0 frei, eine Freigabe für MongoDB 9 wird es nicht mehr geben. Im Betrieb läuft der Rapid Release 8.3 mit Feature Compatibility Version 8.0. Renovate bleibt für dieses Image unter 9. Die Meldung <code>Could not determine Mongo journaling state</code> im <code>server.log</code> hängt nicht an der MongoDB-Version, sondern an der fehlenden Rolle <code>clusterMonitor</code> (siehe unten).</p>
+
+<h3 class="relative group">Rollen des Datenbanknutzers
+    <div id="rollen-des-datenbanknutzers" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#rollen-des-datenbanknutzers" aria-label="Anker">#</a>
+    </span>
+    
+</h3>
+<p>Die ConfigMap <code>mongoinit</code> legt den Nutzer <code>unifi</code> nur beim ersten Start mit leerem <code>/data/db</code> an. Die Rollen entsprechen der Vorlage von <a href="https://github.com/linuxserver/docker-unifi-network-application"  target="_blank" rel="noreferrer">linuxserver.io</a>: <code>clusterMonitor</code> sowie <code>dbOwner</code> auf <code>unifi</code>, <code>unifi_stat</code>, <code>unifi_audit</code> und <code>unifi_restore</code>. Fehlen Rollen, protokolliert MongoDB <code>Checking authorization failed</code>, etwa für <code>createIndexes</code> auf <code>unifi_audit</code> oder <code>serverStatus</code> auf <code>admin</code>.</p>
+<p>Eine Änderung am Skript wirkt nicht auf eine bestehende Datenbank. Dort werden die Rollen einmalig von Hand ergänzt:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">kubectl -n unifi-controller <span class="nb">exec</span> deploy/unifi-controller -c db -- sh -c <span class="s1">&#39;mongosh --quiet --authenticationDatabase admin -u &#34;$MONGO_INITDB_ROOT_USERNAME&#34; -p &#34;$MONGO_INITDB_ROOT_PASSWORD&#34; --eval &#34;db.getSiblingDB(\&#34;admin\&#34;).grantRolesToUser(\&#34;$MONGO_USER\&#34;, [\&#34;clusterMonitor\&#34;, {role: \&#34;dbOwner\&#34;, db: \&#34;${MONGO_DBNAME}_audit\&#34;}, {role: \&#34;dbOwner\&#34;, db: \&#34;${MONGO_DBNAME}_restore\&#34;}])&#34;&#39;</span></span></span></code></pre></div></div>
+<p>Prüfen lässt sich das Ergebnis mit <code>db.getSiblingDB(&quot;admin&quot;).getUser(&quot;unifi&quot;)</code> in derselben Sitzung.</p>
 
 <h3 class="relative group">Komponenten
     <div id="komponenten" class="anchor"></div>

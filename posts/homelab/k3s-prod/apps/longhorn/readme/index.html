@@ -105,7 +105,7 @@
 	<meta property="og:type" content="article">
 		<meta property="article:section" content="posts">
 		<meta property="article:published_time" content="2025-09-30T17:24:46+02:00">
-		<meta property="article:modified_time" content="2026-10-05T13:14:06+02:00">
+		<meta property="article:modified_time" content="2026-10-12T23:49:10+02:00">
 		<meta property="article:tag" content="Kubernetes">
 		<meta property="article:tag" content="Longhorn">
 		<meta property="article:tag" content="Storage">
@@ -311,12 +311,12 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
     "dateCreated": "2025-09-30T17:24:46\u002b02:00",
     "datePublished": "2025-09-30T17:24:46\u002b02:00",
     
-    "dateModified": "2026-10-05T13:14:06\u002b02:00",
+    "dateModified": "2026-10-12T23:49:10\u002b02:00",
     
     "keywords": ["kubernetes","longhorn","storage"],
     
     "mainEntityOfPage": "https://zyria.de/posts/homelab/k3s-prod/apps/longhorn/readme/",
-    "wordCount": "325"
+    "wordCount": "673"
   }]
   </script>
 
@@ -963,7 +963,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2025-09-30T17:24:46&#43;02:00">30 September 2025</time><span class="px-2 text-primary-500">&middot;</span><time datetime="2026-10-05T13:14:06&#43;02:00">Aktualisiert: 5 Oktober 2026</time><span class="px-2 text-primary-500">&middot;</span><span>325 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
+      <time datetime="2025-09-30T17:24:46&#43;02:00">30 September 2025</time><span class="px-2 text-primary-500">&middot;</span><time datetime="2026-10-12T23:49:10&#43;02:00">Aktualisiert: 12 Oktober 2026</time><span class="px-2 text-primary-500">&middot;</span><span>673 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
 
 
   
@@ -1148,6 +1148,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
             <li><a href="#wichtige-einstellungen">Wichtige Einstellungen</a></li>
           </ul>
         </li>
+        <li><a href="#upgrade">Upgrade</a></li>
         <li><a href="#installation">Installation</a></li>
         <li><a href="#abhängigkeiten">Abhängigkeiten</a></li>
       </ul>
@@ -1175,6 +1176,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
             <li><a href="#wichtige-einstellungen">Wichtige Einstellungen</a></li>
           </ul>
         </li>
+        <li><a href="#upgrade">Upgrade</a></li>
         <li><a href="#installation">Installation</a></li>
         <li><a href="#abhängigkeiten">Abhängigkeiten</a></li>
       </ul>
@@ -1361,11 +1363,29 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
 </h4>
 <ul>
 <li><strong>Netzwerk-Policies</strong>: Es werden automatisch Netzwerk-Policies für k3s erstellt, um den Traffic zwischen den Longhorn-Komponenten zu kontrollieren.</li>
+<li><strong>Metriken</strong>: <code>networkpolicy-prometheus.yaml</code> lässt zusätzlich den Prometheus-Server an Port 9500 der longhorn-manager. Den Scrape-Job dazu definiert <code>apps/prometheus/values.yaml</code>.</li>
 <li><strong>Ingress</strong>: Der Zugriff auf die Longhorn-Weboberfläche wird über einen Ingress mit einem Hostnamen ermöglicht. Der Zugriff ist durch eine Middleware auf Traefik-Ebene auf lokale Netzwerke beschränkt.</li>
 <li><strong>Longhorn-Settings</strong>: Alle vom Standard abweichenden Settings stehen unter <code>defaultSettings</code> in der <code>values.yaml</code>. Longhorn übernimmt sie aus der ConfigMap <code>longhorn-default-setting</code>. UI-Änderungen an diesen Settings werden beim nächsten Abgleich überschrieben. Änderungen daher nur hier vornehmen. Settings, die das Chart nicht anbietet, liegen als <code>Setting</code>-Ressourcen in <code>settings.yaml</code>.</li>
-<li><strong>Recurring Jobs</strong>: Snapshot-, Backup-, Trim- und Cleanup-Jobs sind in <code>recurringjobs.yaml</code> definiert. Volumes nehmen über die Gruppe <code>default</code> teil.</li>
+<li><strong>Recurring Jobs</strong>: Snapshot-, Backup-, Trim- und Cleanup-Jobs sind in <code>recurringjobs.yaml</code> definiert. Volumes nehmen über die Gruppe <code>default</code> teil; große Volumes über <code>large</code>, die Plex-Medien über <code>media</code>. Volumes ohne eigene Gruppe gehören zu <code>default</code>; <code>large</code> und <code>media</code> wählt das PVC über das Label <code>recurring-job-group.longhorn.io/&lt;gruppe&gt;: enabled</code> zusammen mit <code>recurring-job.longhorn.io/source: enabled</code>.</li>
 <li><strong>Backup-Target</strong>: Das Standard-Backup-Target steht unter <code>defaultBackupStore</code> in der <code>values.yaml</code>. Es zeigt auf einen NFS-Export auf SSD; der Backupstore besteht aus sehr vielen kleinen Dateien und ist auf langsamen Festplatten, besonders SMR, zu träge für Löschungen und Abgleich.</li>
+<li><strong>Storage-Netz</strong>: Replikat- und Engine-Verkehr läuft über ein eigenes Netz (<code>storageNetwork</code> in der <code>values.yaml</code>). Die <code>NetworkAttachmentDefinition</code> <code>longhorn-storage-net</code> hängt jedem Instance-Manager per Multus eine MacVLAN-Schnittstelle <code>lhnet1</code> an, die Adressen vergibt Whereabouts. Ohne Multus (<code>apps/multus</code>) startet Longhorn zwar, die Instance-Manager bekommen dann aber keine Storage-Adresse.</li>
 </ul>
+
+<h3 class="relative group">Upgrade
+    <div id="upgrade" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#upgrade" aria-label="Anker">#</a>
+    </span>
+    
+</h3>
+<p>Renovate stellt für Longhorn und Multus je eine eigene PR ohne Automerge. Beide nicht zusammen ausrollen: Ein Longhorn-Upgrade legt auf jedem Node einen neuen Instance-Manager an. Startet Multus in diesem Moment neu, fehlt dem neuen Pod <code>lhnet1</code>, ohne dass Longhorn das meldet. Das Volume bleibt gesund, weil Replikate in diesem Pod über das Pod-Netz laufen. Backups und Snapshot-Abfragen, die Longhorn über diesen Instance-Manager leitet, erreichen die Replikate im Storage-Netz desselben Nodes aber nicht: Ein MacVLAN-Parent erreicht seine eigenen Kinder nicht. Das Backup endet mit <code>no route to host</code>, der Recurring-Job-Pod scheitert und der CronJob endet mit <code>BackoffLimitExceeded</code>.</p>
+<p>Nach jedem Longhorn- oder Multus-Update prüfen, ob alle Instance-Manager <code>lhnet1</code> haben. Die Ausgabe muss leer sein:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">kubectl -n longhorn-system get pods -l longhorn.io/component<span class="o">=</span>instance-manager -o json <span class="se">\
+</span></span></span><span class="line"><span class="ln">2</span><span class="cl">  <span class="p">|</span> jq -r <span class="s1">&#39;.items[] | select((.metadata.annotations[&#34;k8s.v1.cni.cncf.io/network-status&#34;] // &#34;&#34;) | contains(&#34;lhnet1&#34;) | not) | .metadata.name + &#34; &#34; + .spec.nodeName&#39;</span></span></span></code></pre></div></div>
+<p>Steht dort ein Pod, muss er neu angelegt werden, solange Multus läuft. Die Replikate in diesem Pod fallen dabei weg und werden neu gebaut. Am schonendsten geschieht das mit einem Neustart des betroffenen Nodes mit Drain (<code>rolling_restart.yml</code> aus <code>ansible-main</code>). Den longhorn-manager dafür nicht neu starten; Longhorn wertet das als Node-Ausfall.</p>
+<p>Nach einem Upgrade hebt Longhorn die Engines aller Volumes selbst auf das neue Image (<code>concurrentAutomaticEngineUpgradePerNodeLimit: 1</code>, also ein Volume je Node gleichzeitig). Angehängte Volumes werden dabei live umgestellt, I/O stockt pro Volume kurz. Bis alle Volumes umgestellt sind, laufen Engines und Replikate teils noch in den alten Instance-Managern; diese verschwinden erst danach. Den Fortschritt zeigt <code>kubectl -n longhorn-system get engineimages.longhorn.io</code> über <code>REFCOUNT</code> des alten Images.</p>
 
 <h3 class="relative group">Installation
     <div id="installation" class="anchor"></div>

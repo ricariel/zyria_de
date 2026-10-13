@@ -31,10 +31,10 @@
     
   
   
-    <meta name="description" content="This document describes the Prometheus deployment, an open-source monitoring and alerting toolkit.">
+    <meta name="description" content="Prometheus sammelt Metriken des Clusters, Alertmanager alarmiert über Matrix und Mail, Grafana zeigt die Daten an.">
   
   
-    <meta name="keywords" content="kubernetes,prometheus,monitoring,">
+    <meta name="keywords" content="kubernetes,prometheus,monitoring,alertmanager,grafana,">
   
   
   
@@ -100,20 +100,22 @@
   <meta property="og:url" content="https://zyria.de/posts/homelab/k3s-prod/apps/prometheus/readme/">
 	<meta property="og:site_name" content="Zyria">
 	<meta property="og:title" content="Prometheus">
-	<meta property="og:description" content="Documentation for the Prometheus monitoring system deployment">
+	<meta property="og:description" content="Monitoring mit kube-prometheus-stack: Prometheus, Alertmanager und Grafana">
 	<meta property="og:locale" content="de_de">
 	<meta property="og:type" content="article">
 		<meta property="article:section" content="posts">
 		<meta property="article:published_time" content="2025-10-17T13:23:29+02:00">
-		<meta property="article:modified_time" content="2026-09-07T14:43:53+02:00">
+		<meta property="article:modified_time" content="2026-10-13T00:44:56+02:00">
 		<meta property="article:tag" content="Kubernetes">
 		<meta property="article:tag" content="Prometheus">
 		<meta property="article:tag" content="Monitoring">
+		<meta property="article:tag" content="Alertmanager">
+		<meta property="article:tag" content="Grafana">
 
   
 	<meta name="twitter:card" content="summary">
 	<meta name="twitter:title" content="Prometheus">
-	<meta name="twitter:description" content="Documentation for the Prometheus monitoring system deployment">
+	<meta name="twitter:description" content="Monitoring mit kube-prometheus-stack: Prometheus, Alertmanager und Grafana">
 
   
   
@@ -298,7 +300,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
     "articleSection": "Beiträge",
     "name": "Prometheus",
     "headline": "Prometheus",
-    "description": "Documentation for the Prometheus monitoring system deployment",
+    "description": "Monitoring mit kube-prometheus-stack: Prometheus, Alertmanager und Grafana",
     "inLanguage": "de-de",
     "url" : "https://zyria.de/posts/homelab/k3s-prod/apps/prometheus/readme/",
     "author" : {
@@ -311,12 +313,12 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
     "dateCreated": "2025-10-17T13:23:29\u002b02:00",
     "datePublished": "2025-10-17T13:23:29\u002b02:00",
     
-    "dateModified": "2026-09-07T14:43:53\u002b02:00",
+    "dateModified": "2026-10-13T00:44:56\u002b02:00",
     
-    "keywords": ["kubernetes","prometheus","monitoring"],
+    "keywords": ["kubernetes","prometheus","monitoring","alertmanager","grafana"],
     
     "mainEntityOfPage": "https://zyria.de/posts/homelab/k3s-prod/apps/prometheus/readme/",
-    "wordCount": "338"
+    "wordCount": "1076"
   }]
   </script>
 
@@ -963,7 +965,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2025-10-17T13:23:29&#43;02:00">17 Oktober 2025</time><span class="px-2 text-primary-500">&middot;</span><time datetime="2026-09-07T14:43:53&#43;02:00">Aktualisiert: 7 September 2026</time><span class="px-2 text-primary-500">&middot;</span><span>338 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
+      <time datetime="2025-10-17T13:23:29&#43;02:00">17 Oktober 2025</time><span class="px-2 text-primary-500">&middot;</span><time datetime="2026-10-13T00:44:56&#43;02:00">Aktualisiert: 13 Oktober 2026</time><span class="px-2 text-primary-500">&middot;</span><span>1076 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
 
 
   
@@ -1107,6 +1109,44 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
               
             
           
+            
+              
+                <a class="relative mt-[0.5rem] me-2" href="/tags/alertmanager/">
+                  <span class="flex cursor-pointer">
+  
+  
+  
+  
+    <span
+      class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+  
+    Alertmanager
+  </span>
+</span>
+
+                </a>
+              
+            
+          
+            
+              
+                <a class="relative mt-[0.5rem] me-2" href="/tags/grafana/">
+                  <span class="flex cursor-pointer">
+  
+  
+  
+  
+    <span
+      class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+  
+    Grafana
+  </span>
+</span>
+
+                </a>
+              
+            
+          
         
       
     </div>
@@ -1140,15 +1180,19 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   <ul>
     <li><a href="#prometheus">Prometheus</a>
       <ul>
-        <li><a href="#components">Components</a></li>
         <li><a href="#quelle">Quelle</a></li>
-        <li><a href="#dokumentation">Dokumentation</a></li>
-        <li><a href="#funktion">Funktion</a></li>
-        <li><a href="#lokale-anpassungen">Lokale Anpassungen</a>
+        <li><a href="#komponenten">Komponenten</a></li>
+        <li><a href="#wie-ziele-gefunden-werden">Wie Ziele gefunden werden</a></li>
+        <li><a href="#anpassungen-an-k3s">Anpassungen an k3s</a></li>
+        <li><a href="#speicher-und-aufbewahrung">Speicher und Aufbewahrung</a></li>
+        <li><a href="#alarmierung">Alarmierung</a>
           <ul>
-            <li><a href="#wichtige-einstellungen">Wichtige Einstellungen</a></li>
+            <li><a href="#eigene-regeln">Eigene Regeln</a></li>
           </ul>
         </li>
+        <li><a href="#grafana">Grafana</a></li>
+        <li><a href="#secrets">Secrets</a></li>
+        <li><a href="#kompatibilität">Kompatibilität</a></li>
         <li><a href="#installation">Installation</a></li>
         <li><a href="#abhängigkeiten">Abhängigkeiten</a></li>
       </ul>
@@ -1168,15 +1212,19 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   <ul>
     <li><a href="#prometheus">Prometheus</a>
       <ul>
-        <li><a href="#components">Components</a></li>
         <li><a href="#quelle">Quelle</a></li>
-        <li><a href="#dokumentation">Dokumentation</a></li>
-        <li><a href="#funktion">Funktion</a></li>
-        <li><a href="#lokale-anpassungen">Lokale Anpassungen</a>
+        <li><a href="#komponenten">Komponenten</a></li>
+        <li><a href="#wie-ziele-gefunden-werden">Wie Ziele gefunden werden</a></li>
+        <li><a href="#anpassungen-an-k3s">Anpassungen an k3s</a></li>
+        <li><a href="#speicher-und-aufbewahrung">Speicher und Aufbewahrung</a></li>
+        <li><a href="#alarmierung">Alarmierung</a>
           <ul>
-            <li><a href="#wichtige-einstellungen">Wichtige Einstellungen</a></li>
+            <li><a href="#eigene-regeln">Eigene Regeln</a></li>
           </ul>
         </li>
+        <li><a href="#grafana">Grafana</a></li>
+        <li><a href="#secrets">Secrets</a></li>
+        <li><a href="#kompatibilität">Kompatibilität</a></li>
         <li><a href="#installation">Installation</a></li>
         <li><a href="#abhängigkeiten">Abhängigkeiten</a></li>
       </ul>
@@ -1307,24 +1355,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
     </span>
     
 </h2>
-<p>Prometheus is an open-source monitoring and alerting toolkit designed for reliability and efficiency, particularly in cloud-native environments. It collects and stores metrics as time series data.</p>
-
-<h3 class="relative group">Components
-    <div id="components" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#components" aria-label="Anker">#</a>
-    </span>
-    
-</h3>
-<p>This Prometheus deployment includes:</p>
-<ul>
-<li><strong>Prometheus Server:</strong> The core component for scraping, storing, and querying metrics.</li>
-<li><strong>Prometheus Node Exporter:</strong> Collects host-level metrics (CPU, memory, disk I/O, network statistics) from Kubernetes nodes.</li>
-<li><strong>Kube-State-Metrics:</strong> Exposes metrics about the state of Kubernetes objects (e.g., deployments, pods, nodes).</li>
-<li><strong>Prometheus Pushgateway:</strong> Ermöglicht kurzlebigen und Batch-Jobs, ihre Metriken Prometheus zur Verfügung zu stellen.</li>
-</ul>
+<p>Die App installiert das Helm-Chart <code>kube-prometheus-stack</code>. Es bringt den Prometheus Operator mit, der Prometheus und Alertmanager aus Custom Resources betreibt, dazu Grafana, kube-state-metrics und den node-exporter. Mitgeliefert werden außerdem Alarmregeln und Dashboards für Kubernetes und die Nodes.</p>
 
 <h3 class="relative group">Quelle
     <div id="quelle" class="anchor"></div>
@@ -1336,64 +1367,262 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
     
 </h3>
 <ul>
-<li><strong>Prometheus:</strong> <a href="https://prometheus.io/"  target="_blank" rel="noreferrer">Prometheus Official Website</a></li>
-<li><strong>Prometheus Community Helm Charts:</strong> <a href="https://github.com/prometheus-community/helm-charts"  target="_blank" rel="noreferrer">GitHub Repository</a></li>
+<li>Chart: <a href="https://github.com/prometheus-community/helm-charts/tree/main/charts/kube-prometheus-stack"  target="_blank" rel="noreferrer">kube-prometheus-stack</a></li>
+<li>Dokumentation: <a href="https://prometheus.io/docs/"  target="_blank" rel="noreferrer">prometheus.io/docs</a>, <a href="https://prometheus-operator.dev/"  target="_blank" rel="noreferrer">Prometheus Operator</a></li>
+<li>Matrix-Weiterleitung: <a href="https://github.com/metio/matrix-alertmanager-receiver"  target="_blank" rel="noreferrer">matrix-alertmanager-receiver</a></li>
 </ul>
 
-<h3 class="relative group">Dokumentation
-    <div id="dokumentation" class="anchor"></div>
+<h3 class="relative group">Komponenten
+    <div id="komponenten" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#dokumentation" aria-label="Anker">#</a>
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#komponenten" aria-label="Anker">#</a>
     </span>
     
 </h3>
-<p>Die offizielle Dokumentation von Prometheus ist unter <a href="https://prometheus.io/docs/"  target="_blank" rel="noreferrer">prometheus.io/docs</a> zu finden.</p>
+<table>
+	<thead>
+			<tr>
+					<th>Komponente</th>
+					<th>Aufgabe</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>Prometheus Operator</td>
+					<td>erzeugt Prometheus und Alertmanager als StatefulSets und setzt <code>ServiceMonitor</code>, <code>PodMonitor</code>, <code>PrometheusRule</code> und <code>ScrapeConfig</code> in Konfiguration um</td>
+			</tr>
+			<tr>
+					<td>Prometheus</td>
+					<td>sammelt und speichert die Metriken</td>
+			</tr>
+			<tr>
+					<td>Alertmanager</td>
+					<td>gruppiert Alarme und verschickt sie</td>
+			</tr>
+			<tr>
+					<td>matrix-alertmanager-receiver</td>
+					<td>nimmt Webhooks von Alertmanager an und postet in einen Matrix-Raum (<code>matrix-alertmanager-receiver.yaml</code>)</td>
+			</tr>
+			<tr>
+					<td>Grafana</td>
+					<td>Dashboards, Anmeldung über Authentik</td>
+			</tr>
+			<tr>
+					<td>kube-state-metrics</td>
+					<td>Zustand der Kubernetes-Objekte</td>
+			</tr>
+			<tr>
+					<td>node-exporter</td>
+					<td>Metriken der Nodes, als DaemonSet</td>
+			</tr>
+	</tbody>
+</table>
 
-<h3 class="relative group">Funktion
-    <div id="funktion" class="anchor"></div>
+<h3 class="relative group">Wie Ziele gefunden werden
+    <div id="wie-ziele-gefunden-werden" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#funktion" aria-label="Anker">#</a>
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#wie-ziele-gefunden-werden" aria-label="Anker">#</a>
     </span>
     
 </h3>
-<p>Prometheus ist ein Pull-basiertes Monitoring-System. Es fragt in regelmäßigen Abständen Metrik-Endpunkte von verschiedenen Zielen (<code>targets</code>) ab, speichert die Ergebnisse und stellt eine leistungsstarke Abfragesprache (PromQL) zur Analyse dieser Daten bereit. In diesem Cluster wird es verwendet, um Metriken von:</p>
+<p>Prometheus wertet <code>ServiceMonitor</code>, <code>PodMonitor</code>, <code>PrometheusRule</code> und <code>ScrapeConfig</code> aus allen Namespaces aus (<code>*SelectorNilUsesHelmValues: false</code>). Eine App, deren Chart einen Schalter wie <code>metrics.serviceMonitor.enabled</code> hat, schaltet ihn in ihrer eigenen <code>values.yaml</code> ein. Eigene Alarmregeln liegen als <code>PrometheusRule</code> im Verzeichnis der App.</p>
+<p>Die Annotationen <code>prometheus.io/scrape</code>, <code>prometheus.io/port</code> und <code>prometheus.io/path</code> funktionieren weiterhin. Die vier Annotations-Jobs des früheren Charts (<code>kubernetes-pods</code>, <code>kubernetes-service-endpoints</code> und die beiden <code>-slow</code>-Varianten) stehen unter <code>prometheus.prometheusSpec.additionalScrapeConfigs</code>.</p>
+<p>Dort stehen auch zwei Sonderfälle:</p>
 <ul>
-<li><strong>Kubernetes-Komponenten</strong>: API-Server, kubelet, etc.</li>
-<li><strong>Node Exporter</strong>: Stellt Hardware- und Betriebssystem-Metriken der einzelnen Nodes bereit.</li>
-<li><strong>Anwendungen</strong>: Viele der im Cluster laufenden Anwendungen (z.B. ArgoCD, cert-manager) stellen eigene Prometheus-kompatible Metrik-Endpunkte bereit, die automatisch über <code>ServiceMonitor</code>-Ressourcen erkannt werden.</li>
+<li><strong>Longhorn</strong>: Jeder longhorn-manager liefert nur die Metriken seines Nodes, deshalb fragt der Job <code>longhorn</code> jeden Endpunkt einzeln ab. Damit stehen unter anderem <code>longhorn_volume_robustness</code>, <code>longhorn_backup_state</code> und <code>longhorn_node_storage_*</code> zur Verfügung. Die NetworkPolicy dafür liegt in <code>apps/longhorn</code> und lässt Pods mit den Labels <code>app.kubernetes.io/name: prometheus</code> und <code>app.kubernetes.io/component: server</code> zu. Das zweite Label setzt <code>prometheusSpec.podMetadata</code>.</li>
+<li><strong>rspamd</strong>: Der Job <code>rspamd</code> fragt den rspamd-Controller im Mailstack ab und schickt das Lese-Passwort im Header <code>Password</code>. Das Secret <code>rspamd-read-pass</code> wird über <code>prometheusSpec.secrets</code> unter <code>/etc/prometheus/secrets/rspamd-read-pass/</code> eingehängt. Anlegen des Secrets siehe <code>apps/mailstack/README.md</code>.</li>
 </ul>
-<p>Der Alertmanager ist in diesem Setup deaktiviert.</p>
 
-<h3 class="relative group">Lokale Anpassungen
-    <div id="lokale-anpassungen" class="anchor"></div>
+<h3 class="relative group">Anpassungen an k3s
+    <div id="anpassungen-an-k3s" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#lokale-anpassungen" aria-label="Anker">#</a>
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#anpassungen-an-k3s" aria-label="Anker">#</a>
     </span>
     
 </h3>
-<p>Die Konfiguration erfolgt über die <code>values.yaml</code>-Datei.</p>
+<p>k3s betreibt Controller-Manager, Scheduler, kube-proxy und etcd im k3s-Prozess und gibt deren Metrik-Ports standardmäßig nicht frei. Die zugehörigen ServiceMonitors und Regeln sind deshalb abgeschaltet (<code>kubeControllerManager</code>, <code>kubeScheduler</code>, <code>kubeProxy</code>, <code>kubeEtcd</code> und die passenden <code>defaultRules</code>). Ohne diese Schalter meldet der Stack sofort <code>KubeSchedulerDown</code> und ähnliche Alarme.</p>
 
-<h4 class="relative group">Wichtige Einstellungen
-    <div id="wichtige-einstellungen" class="anchor"></div>
+<h3 class="relative group">Speicher und Aufbewahrung
+    <div id="speicher-und-aufbewahrung" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#wichtige-einstellungen" aria-label="Anker">#</a>
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#speicher-und-aufbewahrung" aria-label="Anker">#</a>
+    </span>
+    
+</h3>
+<ul>
+<li>Prometheus hält 30 Tage vor (<code>retention</code>). <code>retentionSize</code> liegt unter der Volume-Größe und greift als Notbremse, bevor das Volume voll läuft.</li>
+<li>Vom API-Server werden Histogramme verworfen, die keine Regel und kein Dashboard des Stacks liest (<code>kubeApiServer.serviceMonitor.metricRelabelings</code>). Vor der Umstellung machten sie etwa 40 Prozent aller Serien aus. <code>apiserver_request_sli_duration_seconds_bucket</code> bleibt, die SLO-Regeln für den API-Server brauchen es.</li>
+<li>k3s registriert alle eingebetteten Komponenten in einem Prozess. <code>/metrics</code> des Kubelets auf einem Server-Node wiederholt deshalb die Metriken von API-Server, etcd, Scheduler und kube-proxy. Der Kubelet-Job verwirft sie (<code>kubelet.serviceMonitor.metricRelabelings</code>), der Job <code>apiserver</code> liefert sie bereits.</li>
+<li>Prometheus, Alertmanager und Grafana liegen auf Longhorn-Volumes. Die Volumes von Prometheus und Alertmanager entstehen aus <code>volumeClaimTemplate</code>. Eine spätere Vergrößerung ändert der Operator nicht am bestehenden PVC; das PVC muss dann zusätzlich selbst angepasst werden.</li>
+</ul>
+
+<h3 class="relative group">Alarmierung
+    <div id="alarmierung" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#alarmierung" aria-label="Anker">#</a>
+    </span>
+    
+</h3>
+<table>
+	<thead>
+			<tr>
+					<th>Schweregrad</th>
+					<th>Ziel</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><code>critical</code></td>
+					<td>Matrix und Mail</td>
+			</tr>
+			<tr>
+					<td><code>warning</code>, <code>info</code></td>
+					<td>Matrix</td>
+			</tr>
+			<tr>
+					<td><code>Watchdog</code>, <code>InfoInhibitor</code></td>
+					<td>nirgends (Empfänger <code>null</code>)</td>
+			</tr>
+	</tbody>
+</table>
+<p>Prometheus setzt das externe Label <code>cluster</code> (<code>prometheusSpec.externalLabels</code>). Matrix-Nachricht und Mail nennen es vorne, weil mehrere Cluster in denselben Matrix-Raum melden.</p>
+<p><code>Watchdog</code> feuert absichtlich immer und eignet sich als Totmannschalter für eine externe Prüfung. Mail geht über den Mailstack des Clusters, damit kritische Alarme auch ankommen, wenn Matrix selbst gestört ist. Empfänger, Absender und Smarthost stehen unter <code>alertmanager.config</code>. Alertmanager meldet sich mit einem eigenen AD-Konto an, das nur zum Senden dient. Absender und Anmeldename sind gleich, weil Postfix einen abweichenden Absender ablehnt. Das Kennwort liegt im Secret <code>alertmanager-smtp</code>.</p>
+<p>Alertmanager und Prometheus haben keinen Ingress. Die Mails nutzen deshalb eine eigene Vorlage (<code>alertmanager.templateFiles</code>, <code>mail.tmpl</code>). Ihre Links führen zu Grafana, wo die Datenquelle <code>alertmanager</code> die Alarme anzeigt und stummschalten kann. Die Standardlinks der Mailvorlage auf die clusterinternen Adressen von Alertmanager und Prometheus entfallen damit. Zeiten stehen in UTC.</p>
+
+<h4 class="relative group">Eigene Regeln
+    <div id="eigene-regeln" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#eigene-regeln" aria-label="Anker">#</a>
     </span>
     
 </h4>
-<ul>
-<li><strong>Speicher</strong>: Die Zeitreihendatenbank liegt auf einem Longhorn-Volume. <code>retentionSize</code> steht auf 5 GB — Prometheus verwirft ältere Blöcke selbst, sobald diese Größe erreicht ist, das Volume läuft also nicht voll.</li>
-<li><strong>Ingress</strong>: Der direkte Zugriff auf die Prometheus-Weboberfläche über einen Ingress ist derzeit deaktiviert. Die Daten werden typischerweise über ein Dashboard-Tool wie Grafana visualisiert.</li>
-<li><strong>Komponenten</strong>: Neben dem Prometheus-Server installiert das Chart den <code>prometheus-node-exporter</code> als DaemonSet und <code>kube-state-metrics</code>.</li>
-<li><strong>Alertmanager</strong>: Abgeschaltet (<code>alertmanager.enabled: false</code>). Prometheus sammelt hier nur; alarmiert wird über Uptime Kuma.</li>
-</ul>
+<p><code>rules.yaml</code> ergänzt die Standardregeln von kube-prometheus-stack um Zustände, die diese nicht abdecken. Die Prometheus-Ressource wählt Regeln aus allen Namespaces ohne Label-Filter aus.</p>
+<table>
+	<thead>
+			<tr>
+					<th>PrometheusRule</th>
+					<th>Inhalt</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><code>zyria-certificates</code></td>
+					<td>cert-manager-Zertifikate unter 14 Tagen oder nicht bereit, von Traefik ausgelieferte Zertifikate unter 7 Tagen</td>
+			</tr>
+			<tr>
+					<td><code>zyria-workloads</code></td>
+					<td>überfällige Longhorn-Backup-Jobs, CronJobs ohne Erfolg seit acht Tagen, OOMKilled, PVC in Pending, schreibgeschützte Dateisysteme, 5xx-Anteil je Traefik-Dienst</td>
+			</tr>
+			<tr>
+					<td><code>zyria-longhorn</code></td>
+					<td>Volumes degraded oder faulted, Backups älter als acht Tage, Backupziel nicht erreichbar, Plattenbelegung über 80 %</td>
+			</tr>
+			<tr>
+					<td><code>zyria-argocd</code></td>
+					<td>Apps nicht synchron oder nicht gesund, fehlgeschlagene Syncs</td>
+			</tr>
+			<tr>
+					<td><code>zyria-mail</code></td>
+					<td>rspamd nicht erreichbar, keine Mails gescannt, hoher Reject-Anteil, Bayes lernt nicht, Postfix-Queue nicht lesbar, zu voll oder mit alten zurückgestellten Mails</td>
+			</tr>
+	</tbody>
+</table>
+<p>Kritisch, also zusätzlich per Mail, sind nur <code>NodeFilesystemReadOnly</code>, <code>LonghornVolumeFaulted</code>, <code>RspamdDown</code> und <code>RspamdNoMailScanned</code>. Abfragen über lange Zeiträume enthalten einen <code>offset</code>-Teil, der sie stumm hält, bis genug Verlauf vorliegt. Vor einer Änderung lassen sich die Regeln mit <code>promtool check rules</code> prüfen, nachdem die <code>groups</code> aus den PrometheusRule-Objekten in eine eigene Datei übernommen wurden.</p>
+
+<h3 class="relative group">Grafana
+    <div id="grafana" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#grafana" aria-label="Anker">#</a>
+    </span>
+    
+</h3>
+<p>Grafana ist über einen Ingress mit Zertifikat aus <code>certs.yaml</code> erreichbar, die DNS-Einträge legt der corenetworks-dns-operator aus <code>dns-records.yaml</code> an. Angemeldet wird über Authentik (OAuth2/OIDC) an. Mitglieder der Gruppe <code>authentik Admins</code> werden Admin, alle anderen Viewer. Der lokale Admin aus dem Secret <code>grafana-admin</code> bleibt als Zugang, falls Authentik ausfällt. Ohne Authentik ist er über <code>/login?disableAutoLogin=true</code> erreichbar.</p>
+<p>In Authentik wird dafür ein OAuth2/OpenID-Provider mit Application-Slug <code>grafana</code> angelegt. Redirect-URI ist <code>https://&lt;grafana-host&gt;/login/generic_oauth</code>. Der Provider muss den Claim <code>groups</code> liefern.</p>
+<p>Fällt die Zustellung nach Matrix aus, meldet der Receiver Alertmanager trotzdem Erfolg; <code>alertmanager_notifications_failed_total</code> zeigt das nicht. Die Regel <code>MatrixZustellungGescheitert</code> in <code>matrix-receiver-rules.yaml</code> wertet deshalb die Zähler des Receivers aus (gescheiterter Raumbeitritt, Senden oder Vorlage, oder Alarme empfangen ohne erfolgreiche Nachricht) und meldet mit Schweregrad <code>critical</code>.</p>
+
+<h3 class="relative group">Secrets
+    <div id="secrets" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#secrets" aria-label="Anker">#</a>
+    </span>
+    
+</h3>
+<p>Diese Secrets stehen nicht im Repository und werden von Hand im Namespace <code>prometheus</code> angelegt:</p>
+<table>
+	<thead>
+			<tr>
+					<th>Secret</th>
+					<th>Schlüssel</th>
+					<th>Zweck</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><code>grafana-admin</code></td>
+					<td><code>admin-user</code>, <code>admin-password</code></td>
+					<td>lokaler Grafana-Admin</td>
+			</tr>
+			<tr>
+					<td><code>grafana-oauth</code></td>
+					<td><code>GF_AUTH_GENERIC_OAUTH_CLIENT_ID</code>, <code>GF_AUTH_GENERIC_OAUTH_CLIENT_SECRET</code></td>
+					<td>Client aus dem Authentik-Provider</td>
+			</tr>
+			<tr>
+					<td><code>matrix-alertmanager-receiver</code></td>
+					<td><code>MATRIX_ACCESS_TOKEN</code>, <code>MATRIX_ROOM_ID</code></td>
+					<td>Access-Token des Bot-Kontos und Raum-ID (<code>!...:&lt;server&gt;</code>)</td>
+			</tr>
+			<tr>
+					<td><code>alertmanager-smtp</code></td>
+					<td><code>password</code></td>
+					<td>Kennwort des Sendekontos für Alertmanager</td>
+			</tr>
+			<tr>
+					<td><code>rspamd-read-pass</code></td>
+					<td><code>password</code></td>
+					<td>siehe <code>apps/mailstack/README.md</code></td>
+			</tr>
+	</tbody>
+</table>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln"> 1</span><span class="cl">kubectl -n prometheus create secret generic grafana-admin <span class="se">\
+</span></span></span><span class="line"><span class="ln"> 2</span><span class="cl">  --from-literal<span class="o">=</span>admin-user<span class="o">=</span>admin <span class="se">\
+</span></span></span><span class="line"><span class="ln"> 3</span><span class="cl">  --from-literal<span class="o">=</span>admin-password<span class="o">=</span><span class="s2">&#34;</span><span class="k">$(</span>openssl rand -hex 24<span class="k">)</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="ln"> 4</span><span class="cl">
+</span></span><span class="line"><span class="ln"> 5</span><span class="cl">kubectl -n prometheus create secret generic grafana-oauth <span class="se">\
+</span></span></span><span class="line"><span class="ln"> 6</span><span class="cl">  --from-literal<span class="o">=</span><span class="nv">GF_AUTH_GENERIC_OAUTH_CLIENT_ID</span><span class="o">=</span><span class="s1">&#39;&lt;client-id&gt;&#39;</span> <span class="se">\
+</span></span></span><span class="line"><span class="ln"> 7</span><span class="cl">  --from-literal<span class="o">=</span><span class="nv">GF_AUTH_GENERIC_OAUTH_CLIENT_SECRET</span><span class="o">=</span><span class="s1">&#39;&lt;client-secret&gt;&#39;</span>
+</span></span><span class="line"><span class="ln"> 8</span><span class="cl">
+</span></span><span class="line"><span class="ln"> 9</span><span class="cl">kubectl -n prometheus create secret generic matrix-alertmanager-receiver <span class="se">\
+</span></span></span><span class="line"><span class="ln">10</span><span class="cl">  --from-literal<span class="o">=</span><span class="nv">MATRIX_ACCESS_TOKEN</span><span class="o">=</span><span class="s1">&#39;&lt;access-token&gt;&#39;</span> <span class="se">\
+</span></span></span><span class="line"><span class="ln">11</span><span class="cl">  --from-literal<span class="o">=</span><span class="nv">MATRIX_ROOM_ID</span><span class="o">=</span><span class="s1">&#39;&lt;room-id&gt;&#39;</span></span></span></code></pre></div></div>
+<p>Das Bot-Konto muss dem Raum beigetreten sein, bevor es dort posten kann.</p>
+
+<h3 class="relative group">Kompatibilität
+    <div id="kompatibilität" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#kompatibilit%c3%a4t" aria-label="Anker">#</a>
+    </span>
+    
+</h3>
+<p>Das frühere Chart stellte die API als Service <code>prometheus-server</code> auf Port 80 bereit. PromQL-Monitore in Uptime Kuma nutzen diesen Namen weiter; <code>service-compat.yaml</code> leitet ihn auf den vom Operator betriebenen Prometheus um.</p>
 
 <h3 class="relative group">Installation
     <div id="installation" class="anchor"></div>
@@ -1404,8 +1633,8 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
     </span>
     
 </h3>
-<p>Die Anwendung wird mittels Kustomize und Helm durch ArgoCD im Kubernetes-Cluster bereitgestellt. Die Konfiguration befindet sich im <code>apps/prometheus</code>-Verzeichnis. Eine manuelle Installation kann mit folgendem Befehl durchgeführt werden:</p>
-<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">kubectl kustomize --enable-helm apps/prometheus <span class="p">|</span> kubectl apply -n prometheus -f -</span></span></code></pre></div></div>
+<p>Bereitgestellt über Argo CD mit Kustomize und Helm. Die CRDs des Operators kommen über <code>includeCRDs: true</code> mit und sind zu groß für clientseitiges Apply. Das ApplicationSet in <code>init.yaml</code> setzt dafür <code>ServerSideApply=true</code>.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">kubectl kustomize --enable-helm apps/prometheus <span class="p">|</span> kubectl apply --server-side -f -</span></span></code></pre></div></div>
 
 <h3 class="relative group">Abhängigkeiten
     <div id="abhängigkeiten" class="anchor"></div>
@@ -1417,8 +1646,11 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
     
 </h3>
 <ul>
-<li>Ein laufender Kubernetes-Cluster.</li>
-<li>Eine konfigurierte StorageClass (<code>nfs-client</code> in diesem Fall) für persistenten Speicher.</li>
+<li>StorageClass <code>longhorn</code></li>
+<li>cert-manager mit ClusterIssuer <code>letsencrypt-production</code></li>
+<li>Traefik mit Entrypoint <code>websecure</code></li>
+<li>Authentik für die Grafana-Anmeldung</li>
+<li>Mailstack als Smarthost und ein Matrix-Homeserver für die Alarmierung</li>
 </ul>
 
           
