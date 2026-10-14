@@ -9,12 +9,12 @@
     <managingEditor>fabrice@zyria.de (Fabrice Kirchner)</managingEditor>
     <webMaster>fabrice@zyria.de (Fabrice Kirchner)</webMaster>
     
-    <lastBuildDate>Tue, 01 Jul 2025 13:37:34 +0200</lastBuildDate><atom:link href="https://zyria.de/tags/hardware/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 14 Oct 2026 14:11:08 +0200</lastBuildDate><atom:link href="https://zyria.de/tags/hardware/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Hardware im Homelab</title>
       <link>https://zyria.de/posts/homelab/hardware/</link>
-      <pubDate>Tue, 01 Jul 2025 13:37:34 +0200</pubDate>
+      <pubDate>Wed, 14 Oct 2026 14:11:08 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/posts/homelab/hardware/</guid>
       <description>&lt;p&gt;Hier findet man eine Übersicht über die im Homelab verwendete Hardware.&lt;/p&gt;</description>
@@ -24,10 +24,10 @@
     <item>
       <title>Server</title>
       <link>https://zyria.de/posts/homelab/server/</link>
-      <pubDate>Tue, 01 Jul 2025 13:37:34 +0200</pubDate>
+      <pubDate>Wed, 14 Oct 2026 14:11:08 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/posts/homelab/server/</guid>
-      <description>&lt;p&gt;Alle Maschinen dienen der Virtualisierung von diversen Systemen. Wir brauche die Flexibilität Systeme schnell skalieren zu können und auch durch neue zu ersetzen.&lt;/p&gt;</description>
+      <description>&lt;p&gt;Alle Maschinen dienen der Virtualisierung von diversen Systemen. Wir brauchen die Flexibilität, Systeme schnell skalieren zu können und auch durch neue zu ersetzen.&lt;/p&gt;</description>
       
     </item>
     
