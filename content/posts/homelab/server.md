@@ -7,7 +7,7 @@ tags:
   - maschinen
 ---
 
-Alle Maschinen dienen der Virtualisierung von diversen Systemen. Wir brauche die Flexibilität Systeme schnell skalieren zu können und auch durch neue zu ersetzen.
+Alle Maschinen dienen der Virtualisierung von diversen Systemen. Wir brauchen die Flexibilität, Systeme schnell skalieren zu können und auch durch neue zu ersetzen.
 
 <!--more-->
 
@@ -24,6 +24,6 @@ in die Cloud werden virtuelle Maschinen anhand der Matrix bei
 [Hetzner](https://www.hetzner.com/de/cloud) dimensioniert.
 
 Auf den virtuellen Maschinen wird primär Docker eingesetzt. In Ausnahmefällen
-nutzen wir auch dedizierte virtuelle Maschinen für einzelne Dienste(Active
-Directory,Windows). So kein Docker eingesetzt wird, sollte darauf geachtet
+nutzen wir auch dedizierte virtuelle Maschinen für einzelne Dienste (Active
+Directory, Windows). So kein Docker eingesetzt wird, sollte darauf geachtet
 werden, dass pro Dienst eine Maschine bereitgestellt wird.

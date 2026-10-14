@@ -29,7 +29,7 @@ Welche Commits sind enthalten
 git log @{u}..HEAD --oneline
 ```
 
-Was ist der Inahl† aller Commits (diff)
+Was ist der Inhalt aller Commits (diff)
 
 ```bash
 git diff @{u}..HEAD

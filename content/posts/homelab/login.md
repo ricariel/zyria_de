@@ -6,14 +6,14 @@ tags:
   - service
 ---
 
-Alle Zugangsdaten sind entweder in der Persönlichen Keepass Datendank (für
+Alle Zugangsdaten sind entweder in der persönlichen Keepass Datenbank (für
 personalisierte Logindaten) oder in der IT Datenbank. Der Login auf die Server
 geschieht über SSH Schlüssel. Ein Login mit dem Passwort ist nicht vorgesehen.
 
-Für den externen Zugriff ist der Login über [VPN](https://vpn.example.com) oder einem Bastion Host
+Für den externen Zugriff ist der Login über [VPN](https://vpn.example.com) oder einen Bastion Host
 bastion@vpn.example.com:3022 möglich. {{< mdl-disable "<!-- markdownlint-disable MD034 -->" >}}
 
 Generell sollte jedoch ein Login auf die Server nur zum Suchen von Fehlern
-stattfinden. Die Verwaltung erfolgt ausschliesslich über Ansible. Jede händisch
+stattfinden. Die Verwaltung erfolgt ausschließlich über Ansible. Jede händisch
 durchgeführte Änderung muss im Nachhinein in Ansible eingepflegt und getestet
 werden.

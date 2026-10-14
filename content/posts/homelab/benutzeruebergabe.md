@@ -24,7 +24,7 @@ Diese Schritte werden von der IT-Abteilung nach Eingang einer autorisierten Anfo
 3. Initialpasswort setzen: Ein sicheres, zufällig generiertes und langes temporäres Passwort vergeben. Dieses Passwort wird nur für die Ersteinrichtung verwendet.
 4. E-Mail-Adresse zuweisen: Die E-Mail-Adresse gemäß der oben genannten Namenskonvention im Benutzerkonto eintragen.
 5. Postfach initialisieren: Eine Willkommens-E-Mail an die neue Adresse senden. Dies stößt die Erstellung des Postfachs auf dem Mail-Server (z.B. Microsoft Exchange) an.
-6. Konto-Status:** Falls das Konto nicht sofort benötigt wird, sollte es aus Sicherheitsgründen initial **deaktiviert** werden.
+6. Konto-Status: Falls das Konto nicht sofort benötigt wird, sollte es aus Sicherheitsgründen initial **deaktiviert** werden.
 
 #### 1.3. Kommunikation
 

@@ -1,7 +1,7 @@
 ---
-title: "Hetzner Server IP Adress tausch"
+title: "Hetzner Server IP-Adresstausch"
 description: "Wie wir bei einem Hetzner Server die IP tauschen"
-summary: "Anbei ist der Ablauf beschrieben einen Hetzner Server nach Hardwqre Tausch mit einer neuen IP zu versorgen"
+summary: "Anbei ist der Ablauf beschrieben einen Hetzner Server nach Hardwaretausch mit einer neuen IP zu versorgen"
 tags:
   - homelab
   - extern
@@ -9,9 +9,9 @@ tags:
 
 ## Server bei Hetzner
 
-Unsere Server haben einen 10G Uplink erhalten. Wir müssen also ein paar Modifikationen durchführen damit sie wieder Einsatzbereit sind.
+Unsere Server haben einen 10G Uplink erhalten. Wir müssen also ein paar Modifikationen durchführen damit sie wieder einsatzbereit sind.
 
-Wir starten mit der Bestätigungsmail von Hetzner in der die geänderte Hardware, die neue Netzwerkkonfiguration sowie ein einmaligen root Kennwort hinterlegt sind.
+Wir starten mit der Bestätigungsmail von Hetzner in der die geänderte Hardware, die neue Netzwerkkonfiguration sowie ein einmaliges root-Kennwort hinterlegt sind.
 
 ## Ändern der IP in Corosync
 
@@ -21,7 +21,7 @@ Dazu die Datei /etc/pve/corosync.conf öffnen und unter nodelist node ring0_addr
 
 ## Auf dem Node selbst
 
-- Per SSH Einloggen
+- Per SSH einloggen
 - root Dateisystem entsperren (meist /dev/md1)
 - root,boot mounten (am besten unter /target)
 
@@ -64,7 +64,7 @@ update-initramfs -k all -u
 
 ## Proxmox Firewall anpassen
 
-Die Proxmox Firewall muss so umgestellt werden, dass die alte IP durch die neue ersetzt wird (meist nur das Alias für die Hauptip des Nodes ändern.
+Die Proxmox Firewall muss so umgestellt werden, dass die alte IP durch die neue ersetzt wird (meist nur den Alias für die Haupt-IP des Nodes ändern).
 
 ## Nach den Arbeiten
 

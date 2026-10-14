@@ -23,7 +23,7 @@ Diese Anleitung beschreibt den Prozess, wie man einen fabrikneuen Windows-Rechne
 
 * Prüfe alle Bioseinstellungen
 * Gehe alle Einstellungen durch und passe so notwendig an.
-* Dokumentiere іm Inventar alle Änderungen.
+* Dokumentiere im Inventar alle Änderungen.
 
 ---
 

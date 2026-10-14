@@ -1,5 +1,5 @@
 ---
-title: Server-,Diensteverwaltung
+title: Server- und Diensteverwaltung
 description: "Möglichkeiten die Server und Dienste zu verwalten"
 tags:
   - extern
@@ -29,7 +29,7 @@ Cloudserver werden über ein eigenes
 
 ## Externes Monitoring
 
-Monitoring für einzenle Dienste und alle Server und IP's über
+Monitoring für einzelne Dienste und alle Server und IPs über
 [Hetrixtools](https://hetrixtools.com)
 
 ## Anydesk
@@ -38,11 +38,11 @@ Anydesk [Verwaltung](https://my.anydesk.com/login)
 
 ## Proxmox (VM)
 
-Jeder Proxmox Host hat auch ein eigenes Webinterface, welches unter [https://example.com:8006/](https://example.com:8006/) erreichen lässt. Für einen angenehmeren Zugang steht der Zugang über den [Load Balancer](https://pve.example.com/) bereit.
+Jeder Proxmox Host hat auch ein eigenes Webinterface, welches sich unter [https://example.com:8006/](https://example.com:8006/) erreichen lässt. Für einen angenehmeren Zugang steht der Zugang über den [Load Balancer](https://pve.example.com/) bereit.
 
 ## VPN
 
-Wirguard läuft in einem Docker Container mit [Webinterface](https://vpn.example.com)
+Wireguard läuft in einem Docker Container mit [Webinterface](https://vpn.example.com)
 und wird komplett darüber konfiguriert.
 
 ## Konfiguration/Content (git)
@@ -59,8 +59,8 @@ Netzwerk und Kameraüberwachung zu realisieren. Der
 ## Statusseite/Monitoring
 
 Über [Uptime-Kuma](https://github.com/louislam/uptime-kuma) wurde ein
-rudimentäres [Monitoring](https://status.example.com/dashboard) eingrichet
-und den Mitarbeitern bekannt gegeben. Dies sollte die Erste Anlaufstelle sein,
+rudimentäres [Monitoring](https://status.example.com/dashboard) eingerichtet
+und den Mitarbeitern bekannt gegeben. Dies sollte die erste Anlaufstelle sein,
 wenn etwas nicht funktioniert.
 
 ## CI/CD
@@ -69,7 +69,7 @@ Das Forgejo eigene CI/CD Werkzeug wird genutzt.
 
 ## Spamerkennung
 
-Zur Spamabwehr nutzen wir [Rspamd](https://rspamd.com). Das [Interface](https://rspamd.example.com/) ist lässt die Konfiguration relevanter Parameter zu und ermöglicht Debugging bei der Mailzustellung.
+Zur Spamabwehr nutzen wir [Rspamd](https://rspamd.com). Das [Interface](https://rspamd.example.com/) lässt die Konfiguration relevanter Parameter zu und ermöglicht Debugging bei der Mailzustellung.
 
 ## Werbeblocker/DNS
 
