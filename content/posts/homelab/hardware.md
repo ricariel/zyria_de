@@ -25,7 +25,7 @@ Hier findet man eine Übersicht über die im Homelab verwendete Hardware.
 
 ## Compute-Ressourcen (Server)
 
-Aktuell nutze ich Mini-PC's als Server, da Sie relativ günstig und stromsparend sind.
+Aktuell nutze ich Mini-PCs als Server, da sie relativ günstig und stromsparend sind.
 
 {{% include ansible.md %}}
 

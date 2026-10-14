@@ -77,13 +77,13 @@ InvertRule=true
 Family=both
 ```
 
-`Adress`en (ipv4 und ipv6) eintragen. Der Tunnel kann mit `networkctl up wg0` bzw `networkctl down wg0` nach Bedarf verbunden und getrennt werden.
+`Adress`en (ipv4 und ipv6) eintragen. Der Tunnel kann mit `networkctl up wg0` bzw. `networkctl down wg0` nach Bedarf verbunden und getrennt werden.
 
 Sobald der Tunnel verbunden ist, lässt sich die Routing-Tabelle mit `ip route show table 123` anzeigen. Die RoutingPolicy sollte in `ip rule` auftauchen.
 
 ## DNS
 
-Wir haben jetzt zwei DNS-Server im System. Falls bei beiden `Domains=` gesetzt ist, muss der vorhandene Server explizite als default markiert werden (z.B. in `eth0.network`):
+Wir haben jetzt zwei DNS-Server im System. Falls bei beiden `Domains=` gesetzt ist, muss der vorhandene Server explizit als Default markiert werden (z.B. in `eth0.network`):
 
 ```systemd
 [Network]
@@ -97,8 +97,8 @@ Es wird kein Routing konfiguriert, daher sind normalerweise keine Änderungen an
 Am Beispiel einer Firewall mit striktem whitelisting sind mindestens folgende Verbindungen zu erlauben:
 
 * WireGuard-Traffic zum Endpoint `iptables -A OUTPUT -m owner ! --uid-owner 0-99999 -p udp -d 159.69.238.84 --dport 51194 -j ACCEPT` (Wireguard-Pakete kommen aus dem Kernel und sind keinem Benutzer zugeordnet)
-* Ausgehender traffic auf wg0: `iptables -A OUTPUT -o wg0 -j ACCEPT`, ggf. mit `-m owner --uid-owner ...` auf einen Nutzer beschränkt.
-* DNS-Traffic über den Tunnel: `iptables -A OUTPUT -m owner --uid-owner systemd-resolve -d 159.69.238.89 -o wg0 j ACCEPT`
+* Ausgehender Traffic auf wg0: `iptables -A OUTPUT -o wg0 -j ACCEPT`, ggf. mit `-m owner --uid-owner ...` auf einen Nutzer beschränkt.
+* DNS-Traffic über den Tunnel: `iptables -A OUTPUT -m owner --uid-owner systemd-resolve -d 159.69.238.89 -o wg0 -j ACCEPT`
 * Eingehende pings und andere ICMP-Pakete auf wg0: `iptables -A INPUT -i wg0 -p icmp -j ACCEPT`
 * Optional anderer eingehender Traffic auf wg0, z.B. ssh: `iptables -A INPUT -i wg0 -p tcp --dport 22 -j ACCEPT` (kann nicht nach Nutzer gefiltert werden)
 

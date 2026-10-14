@@ -1,6 +1,6 @@
 ---
 title: "Hetzner Server"
-description: "Wir wir eine Maschine bei Hetzner zu einem Proxmox Server machen."
+description: "Wie wir eine Maschine bei Hetzner zu einem Proxmox Server machen."
 summary: "Anbei ist der Ablauf beschrieben einen Hetzner Server in das System einzubinden."
 tags:
   - homelab
@@ -12,11 +12,11 @@ tags:
 ### Hardware
 
 Aktuell sind alle Server bei Hetzner [AX101](https://www.hetzner.com/de/dedicated-rootserver/ax101) Server.
-Die Server sind Ipv6 only bestellt und beziehen eine IPv4 aus einem [Hetzner vSwitch](https://docs.hetzner.com/de/robot/dedicated-server/network/vswitch/).
+Die Server sind IPv6-only bestellt und beziehen eine IPv4 aus einem [Hetzner vSwitch](https://docs.hetzner.com/de/robot/dedicated-server/network/vswitch/).
 
 ### Hetzner Config
 
-Im [Robot](https://robot.hetzner.com/server) Reverse-DNS-Eintrag - Ipv4 und Ipv6 - setzen. Auch an den [vswitch](https://robot.hetzner.com/vswitch/index) denken.
+Im [Robot](https://robot.hetzner.com/server) Reverse-DNS-Eintrag - IPv4 und IPv6 - setzen. Auch an den [vswitch](https://robot.hetzner.com/vswitch/index) denken.
 
 ### [Bestellung](https://robot.hetzner.com/order) von Servern
 
@@ -27,8 +27,8 @@ Im [Robot](https://robot.hetzner.com/server) Reverse-DNS-Eintrag - Ipv4 und Ipv6
 
 ### Nach der Bestellung
 
-1. Alle notwendigen Informationen werden uns Email zugesandt.
-1. Prüfe den Fingerprint des Public Keys in der Email. Sollte der Key nicht stimmen, starte den Server erneut und mit korrekten Schlüssel in das [Rescue System](https://robot.hetzner.com/server).
+1. Alle notwendigen Informationen werden uns per Email zugesandt.
+1. Prüfe den Fingerprint des Public Keys in der Email. Sollte der Key nicht stimmen, starte den Server erneut und mit korrektem Schlüssel in das [Rescue System](https://robot.hetzner.com/server).
 1. Prüfe beim Einloggen den Host-Key Fingerprint. Sollte dieser nicht korrekt sein, wende dich an den Hetzner Support
 1. Hetzner überprüft seine Hardware vor der Auslieferung. Sollte etwas auffällig sein, Server reklamieren. So der Server bereits eine längere Laufzeit hinter sich hat, die Lebensdauer der SSD überprüfen und gegebenenfalls tauschen lassen.
 
@@ -55,7 +55,7 @@ Im [Robot](https://robot.hetzner.com/server) Reverse-DNS-Eintrag - Ipv4 und Ipv6
 
 1. TODO: STORAGE beschreiben
 1. Remote unlock einrichten.
-    Per SSH funktioniert das entsperren der Luks Partitionen bereits. Damit dies automatisch funktioniert, müssen noch alle Tang Server hinzugefügt werden, welche die Partitionen entsperren dürfen. Dazu als erstes die neue IP in der Firewall freischalten und dann folgende Kommandos auf der Kommandozeile eingeben
+    Per SSH funktioniert das Entsperren der LUKS-Partitionen bereits. Damit dies automatisch funktioniert, müssen noch alle Tang Server hinzugefügt werden, welche die Partitionen entsperren dürfen. Dazu als Erstes die neue IP in der Firewall freischalten und dann folgende Kommandos auf der Kommandozeile eingeben
 
 Sollte die Installation über das Hetzner Script fehlschlagen, folgende Anleitung nutzen:
 [Proxmox Install on Top of Debian](https://pve.proxmox.com/wiki/Install_Proxmox_VE_on_Debian_11_Bullseye)

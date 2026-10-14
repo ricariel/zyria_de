@@ -8,11 +8,11 @@ tags:
   - homelab
 ---
 
-Wie man Debian zuverlässig auf den Stand bringt. Danke an [doku.lrz.de](https://doku.lrz.de/upgrade-auf-debian-13-trixie-1921298568.html) die dies bei jedem Release aufschreiben.
+Wie man Debian zuverlässig auf den Stand bringt. Danke an [doku.lrz.de](https://doku.lrz.de/upgrade-auf-debian-13-trixie-1921298568.html), die dies bei jedem Release aufschreiben.
 
 Debian stellt auch eine [Anleitung](https://www.debian.org/releases/stable/release-notes/upgrading.de.html) zur Verfügung.
 
-Proxmox hat für jedes Release einen [Wiki](https://pve.proxmox.com/wiki/Category:Upgrade) Artikel. Auf für den [Proxmox Backup Server](https://pbs.proxmox.com/wiki/Category:Upgrade).
+Proxmox hat für jedes Release einen [Wiki](https://pve.proxmox.com/wiki/Category:Upgrade) Artikel. Auch für den [Proxmox Backup Server](https://pbs.proxmox.com/wiki/Category:Upgrade).
 
 ## Vorbereitungen
 

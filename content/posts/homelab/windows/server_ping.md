@@ -6,8 +6,8 @@ date: 2023-10-19T13:28:04+02:00
 
 ## Wie teste ich, ob ein Server prinzipiell erreichbar ist?
 
-Der Befehl ping ist auf allen Rechnern installert. Unter Windows muss dafür das
-Programm cmd.exe gestartet werden. Dies findest du mit der Sucher oder unter
+Der Befehl ping ist auf allen Rechnern installiert. Unter Windows muss dafür das
+Programm cmd.exe gestartet werden. Dies findest du mit der Suche oder unter
 C:\Windows\System32\cmd.exe
 
 So sieht ein Ping via IPv6 aus:

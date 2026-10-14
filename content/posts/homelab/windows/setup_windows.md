@@ -16,7 +16,7 @@ tags:
 - Ansible Setup Script starten (liegt im ansible-main Repo unter files)
 - Ansible Variablen setzen für den Host (VPN)
 - Ansible laufen lassen (Neustarts notwendig und werden nicht durch Ansible
-  ausgeführt. Einfach solang bis es durchläuft)
+  ausgeführt. Einfach solange, bis es durchläuft)
 
 - Wawi testen
 - Rechner ausliefern und mit dem Endnutzer einrichten (Wawi, Mail, Browser)

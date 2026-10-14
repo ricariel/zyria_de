@@ -1,5 +1,5 @@
 ---
-title: Control{1,2}
+title: Worker{1,2}
 description: "Beschreibung der Workernodes"
 ---
 
