@@ -13,6 +13,14 @@ tags:
 
 {{< links file="it" >}}
 
+### Gitleaks
+
+Alle Geheimnisse in einem git Repo finden
+
+```bash
+gitleaks detect --source . --log-opts="--all" --verbose
+```
+
 ### Git: was wird beim push übertragen
 
 Welche Commits sind enthalten

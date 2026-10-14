@@ -13,7 +13,7 @@ tags:
 
 Willkommen auf meiner persönlichen Seite!
 
-Ich bin Fabrice, ein Berliner, der nach einiger Zeit in Bayern nun in Hessen zu Hause ist. Meine Leidenschaft? **Technologie, unermüdliche Neugier und das ständige Streben nach neuem Wissen.** Ob ich mich in Fachbüchern vertiefe, das Internet nach innovativen Lösungen durchforste oder in Handbüchern versinke - ich bin immer bereit, etwas Neues zu lernen und mein Wissen zu erweitern.
+Ich bin Fabrice, ein Berliner, der nach einiger Zeit in Bayern nun in Hessen zu Hause ist. Meine Leidenschaft? **Technologie, unermüdliche Neugier und das ständige Streben nach neuem Wissen.** Ob ich mich in Fachbüchern vertiefe, das Internet nach innovativen Lösungen durchforste oder in Handbüchern versinke, ich bin immer bereit, etwas Neues zu lernen und mein Wissen zu erweitern.
 
 Diese Seite dient mir hauptsächlich als Spielwiese, um Erfahrungen mit **Hugo** zu sammeln und berufliche Konzepte auszuprobieren.
 
@@ -43,19 +43,23 @@ Auch wenn meine Leidenschaft der Technik gehört, sind meine größte Inspiratio
 
 #### Technisches Hilfswerk (THW)
 
-Mit Stolz engagiere ich mich ehrenamtlich im **[Technischen Hilfswerk (THW)](https://www.thw.de)**, der Zivil- und Katastrophenschutzorganisation Deutschlands. Meine ehrenamtliche Heimat ist der **[Ortsverband Marburg](https://ov-marburg.thw.de)**. Dort gehöre ich dem **[Zugtrupp](https://thwiki.org/t=Zugtrupp)** an, der Führungseinheit des Technischen Zuges, und unterstütze den Zugführer bei der Koordination und Leitung von Einsätzen. So helfen wir Menschen in Notlagen schnell und effektiv.
+Mit Stolz engagiere ich mich ehrenamtlich im **[Technischen Hilfswerk (THW)](https://www.thw.de)**, der Zivil- und Katastrophenschutzorganisation Deutschlands. Meine ehrenamtliche Heimat ist der **[Ortsverband Marburg](https://ov-marburg.thw.de)**. Dort führe ich als **Gruppenführer** die **[Fachgruppe Ortung](https://thwiki.org/t=Fachgruppe_Ortung)** (Typ C), die ich auch laufend ausbilde. Außerdem bin ich im **[Zugtrupp](https://thwiki.org/t=Zugtrupp)** unterwegs, der Führungseinheit des Technischen Zuges, und unterstütze den Zugführer bei der Koordination und Leitung von Einsätzen. So helfen wir Menschen in Notlagen schnell und effektiv.
 
 Durch mein Engagement möchte ich einen aktiven Beitrag für die Sicherheit und den Zusammenhalt in unserer Gesellschaft leisten.
 
 {{< alert icon="bell" >}}
 **Interesse geweckt?**
 
-Du bist herzlich eingeladen, uns und unsere Arbeit kennenzulernen. Unser Dienst findet - außerhalb der hessischen Schulferien - **jeden Donnerstag ab 19:30 Uhr** in unserem Ortsverband in der **Molkereistraße 7, 35039 Marburg** statt.
+Du bist herzlich eingeladen, uns und unsere Arbeit kennenzulernen. Unser Dienst findet außerhalb der hessischen Schulferien **jeden Donnerstag ab 19:30 Uhr** in unserem Ortsverband in der **Molkereistraße 7, 35039 Marburg** statt.
 
 Eine Anmeldung ist nicht erforderlich, erleichtert uns aber die Planung. Gib uns einfach kurz per E-Mail Bescheid: [mail@thw-marburg.de](mailto:mail@thw-marburg.de)
 {{< /alert >}}
 
 Einen umfassenden Einblick in die bundesweite Arbeit des THW findest du auf der offiziellen Webseite: [https://www.thw.de/](https://www.thw.de/)
+
+#### Wahlhelfer
+
+Seit 2016 helfe ich bei öffentlichen Wahlen als Wahlhelfer mit.
 
 ---
 
@@ -66,18 +70,21 @@ Aktuell leite ich die **IT-Abteilung** in einem mittelständischen Unternehmen. 
 #### Meine Spezialgebiete & Kernkompetenzen
 
 * **Projektmanagement:** Als Fachexperte (Subject Matter Expert) steuere ich IT-Projekte von der Konzeption bis zur erfolgreichen Umsetzung.
+* **Führung:** Führung von Mitarbeitern und externen Kräften.
 * **Software & Tools:** Entwicklung und Pflege prozessunterstützender Anwendungen.
 * **Datenmanagement:** Effiziente Verwaltung und Pflege komplexer Datenbestände.
 * **Prozessoptimierung:** Definition, Dokumentation, Einführung und Automatisierung von Abläufen, inklusive Qualitätskontrolle und Datenbankauswertung.
+* **Infrastructure as Code:** Linux- und Windows-Server, Netz und Dienste vollständig mit Ansible beschrieben; Änderungen laufen über Git, Reviews und CI.
+* **Plattformbetrieb:** Kubernetes (K3s) mit GitOps über Argo CD, verteiltem Speicher mit Longhorn und Virtualisierung mit Proxmox VE und ZFS.
+* **Verzeichnisdienste:** Samba als Active-Directory-Domänencontroller für Windows-Clients, Kerberos und LDAP.
 * **Systemarchitektur:** Planung und Implementierung hochverfügbarer Systeme mit automatischem Rollout und Skalierung.
 * **IT-Sicherheit & Datenschutz:** Entwicklung robuster Konzepte für IT-Security und Datensicherheit, Netzwerkarchitektur sowie TÜV-zertifizierter Datenschutz.
+* **Lizenzmanagement:** Lizenzmodelle von Microsoft, Red Hat, Citrix und SUSE, einschließlich Academic Volume Licensing für Bildungseinrichtungen.
 * **Troubleshooting:** Systematische Fehleranalyse und -behebung für komplexe IT-Herausforderungen.
 
-#### Meine berufliche Entwicklung
+#### Open Source
 
-Seit 2019 bin ich bei **Casa Due pur GmbH** tätig. Zuvor war ich von 2001 bis 2019 für die Beratung, Planung und Umsetzung von IT-Projekten sowie die Installation und Wartung von IT-Anlagen verantwortlich. Darüber hinaus sammelte ich praktische Erfahrungen im **Business Development** sowie in der Lizenzberatung und -beschaffung in einem auf Softwarelizenzen spezialisierten Unternehmen.
-
-Meine akademische Ausbildung umfasst Informatik und Geschichte an der Philipps-Universität Marburg sowie Angewandte Informatik an der Fachhochschule Hof.
+Einen großen Teil meiner Arbeit veröffentliche ich: Ansible-Collections für die Grundkonfiguration von Linux-Hosts, Container-Images für Mail, DNS und Webserver sowie gemeinsame CI-Vorlagen für rund dreißig Repositories. Entwickelt wird auf meiner eigenen Forgejo-Instanz, gespiegelt auf [Codeberg](https://codeberg.org/ricariel).
 
 #### Ausgewählte Projekterfahrungen
 
@@ -110,12 +117,12 @@ Als **Projektleiter** und **Experte** habe ich eine Vielzahl von Projekten in un
 
 ##### Tools & Technologien
 
-* **Virtualisierung:** VMware, KVM, Proxmox, Xen
+* **Virtualisierung:** VMware, KVM, Proxmox, Xen, ZFS, Ceph, Citrix Virtual Apps
 * **Datenbanken:** MySQL, MariaDB, MS-SQL, Postgresql, Sqlite
-* **Server & Dienste:** Microsoft AD, Openldap, Apache2, Postfix, Exim, Bind9, PowerDNS
-* **Automatisierung & Cloud:** Kubernetes, Podman, Docker, Saltstack, Chef, Ansible, Cloud Setups (Google Cloud, Azure, Hetzner)
-* **Sicherheit & Netzwerk:** Genua Firewall, IPFire, Opensense, PFSense, VPN (Strongswan, Openvpn)
-* **Sonstiges:** Git, Subversion, Microsoft Office Suite, JTL-Shop, Magento, Dokuwiki, Mediawiki
+* **Server & Dienste:** Microsoft AD, Samba AD DC, Openldap, Kerberos, Apache2, Postfix, Dovecot, Rspamd, Exim, Bind9, PowerDNS, Unbound
+* **Automatisierung & Cloud:** Kubernetes (K3s, Helm, Argo CD, Longhorn, Traefik, MetalLB), Podman, Docker, Saltstack, Chef, Ansible (Rollen, Collections, Semaphore), Renovate, pre-commit, Cloud Setups (Google Cloud, Azure, Hetzner)
+* **Sicherheit & Netzwerk:** Genua Firewall, IPFire, Opensense, PFSense, nftables, IPv6, VPN (Strongswan, Openvpn, WireGuard)
+* **Sonstiges:** Git, Forgejo, GitLab CI, Subversion, Hugo, Microsoft Office Suite, JTL-Shop, Magento, Dokuwiki, Mediawiki
 
 #### Branchen- & Themenfokus
 
@@ -125,5 +132,5 @@ Meine **thematischen Schwerpunkte** liegen in der Serveradministration, IT-Secur
 
 #### Sprachen
 
-* Deutsch
-* Englisch
+* Deutsch (Muttersprache)
+* Englisch (gute Kenntnisse)
