@@ -105,7 +105,7 @@
 	<meta property="og:type" content="article">
 		<meta property="article:section" content="posts">
 		<meta property="article:published_time" content="2025-10-18T07:10:10+02:00">
-		<meta property="article:modified_time" content="2026-10-13T01:08:34+02:00">
+		<meta property="article:modified_time" content="2026-10-13T08:05:17+02:00">
 		<meta property="article:tag" content="Kubernetes">
 		<meta property="article:tag" content="Mail">
 		<meta property="article:tag" content="Postfix">
@@ -312,12 +312,12 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
     "dateCreated": "2025-10-18T07:10:10\u002b02:00",
     "datePublished": "2025-10-18T07:10:10\u002b02:00",
     
-    "dateModified": "2026-10-13T01:08:34\u002b02:00",
+    "dateModified": "2026-10-13T08:05:17\u002b02:00",
     
     "keywords": ["kubernetes","mail","postfix","dovecot"],
     
     "mainEntityOfPage": "https://zyria.de/posts/homelab/k3s-prod/apps/mailstack/readme/",
-    "wordCount": "3740"
+    "wordCount": "4119"
   }]
   </script>
 
@@ -964,7 +964,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2025-10-18T07:10:10&#43;02:00">18 Oktober 2025</time><span class="px-2 text-primary-500">&middot;</span><time datetime="2026-10-13T01:08:34&#43;02:00">Aktualisiert: 13 Oktober 2026</time><span class="px-2 text-primary-500">&middot;</span><span>3740 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
+      <time datetime="2025-10-18T07:10:10&#43;02:00">18 Oktober 2025</time><span class="px-2 text-primary-500">&middot;</span><time datetime="2026-10-13T08:05:17&#43;02:00">Aktualisiert: 13 Oktober 2026</time><span class="px-2 text-primary-500">&middot;</span><span>4119 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
 
 
   
@@ -1234,12 +1234,6 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
             <li><a href="#mail-warteschlange-queue-prüfen">Mail-Warteschlange (Queue) prüfen</a></li>
           </ul>
         </li>
-        <li><a href="#troubleshooting-1">Troubleshooting</a>
-          <ul>
-            <li><a href="#logs-prüfen-1">Logs prüfen</a></li>
-            <li><a href="#mail-warteschlange-queue-prüfen-1">Mail-Warteschlange (Queue) prüfen</a></li>
-          </ul>
-        </li>
       </ul>
     </li>
   </ul>
@@ -1329,12 +1323,6 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
           <ul>
             <li><a href="#logs-prüfen">Logs prüfen</a></li>
             <li><a href="#mail-warteschlange-queue-prüfen">Mail-Warteschlange (Queue) prüfen</a></li>
-          </ul>
-        </li>
-        <li><a href="#troubleshooting-1">Troubleshooting</a>
-          <ul>
-            <li><a href="#logs-prüfen-1">Logs prüfen</a></li>
-            <li><a href="#mail-warteschlange-queue-prüfen-1">Mail-Warteschlange (Queue) prüfen</a></li>
           </ul>
         </li>
       </ul>
@@ -2359,7 +2347,7 @@ relativ zur Domain-DN — so erwartet es <code>samba-tool</code>).</p>
 </h6>
 <p>Spam/Malware Filter</p>
 <p>rspamd prüft eingehende Mails und signiert ausgehende per DKIM (<code>rspamd/local.d/dkim_signing.conf</code>). Postfix spricht es als Milter auf Port 11332 an. Nach einem Neustart braucht rspamd etwa 30 Sekunden, bis Controller (11334) und Proxy (11332) Verbindungen annehmen. Startup-, Readiness- und Liveness-Probe fragen dafür <code>/ping</code> auf Port 11334 ab, das kein Passwort braucht; erst danach gilt der Pod als bereit.</p>
-<p>Postfix steht auf <code>milter_default_action = tempfail</code>: Ist rspamd nicht erreichbar, antwortet Postfix mit einem temporären Fehler (4xx). Mailserver stellen später erneut zu, Mail-Clients melden beim Senden einen Fehler und versuchen es erneut. So geht keine Mail ungeprüft oder ohne DKIM-Signatur durch. Die Kehrseite: Fällt rspamd länger aus, stockt der gesamte Mailverkehr, bis rspamd wieder läuft.</p>
+<p>Ist rspamd nicht erreichbar, lässt Postfix keine Mail ungeprüft oder ohne DKIM-Signatur durch. Eingehende Mails auf Port 25 lehnt es vorübergehend ab, Mails über Submission hält es zurück und gibt sie frei, sobald rspamd wieder antwortet. Die Einzelheiten stehen unter <a href="/posts/homelab/k3s-prod/apps/mailstack/readme/#verhalten-bei-einem-rspamd-ausfall" >Verhalten bei einem rspamd-Ausfall</a>.</p>
 
 <h5 class="relative group">MDA, IMAP, Sieve Dovecot
     <div id="mda-imap-sieve-dovecot" class="anchor"></div>
@@ -2482,6 +2470,96 @@ relativ zur Domain-DN — so erwartet es <code>samba-tool</code>).</p>
 </h6>
 <p>Postfix ist der Mail Transfer Agent (MTA). Er nimmt E-Mails von externen Servern entgegen, leitet sie zur Prüfung an Rspamd weiter und übergibt sie anschließend zur lokalen Zustellung an Dovecot. Er ist ebenfalls für den Versand ausgehender E-Mails zuständig.</p>
 
+<h6 class="relative group">Verhalten bei einem rspamd-Ausfall
+    <div id="verhalten-bei-einem-rspamd-ausfall" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#verhalten-bei-einem-rspamd-ausfall" aria-label="Anker">#</a>
+    </span>
+    
+</h6>
+<p>rspamd prüft jede Mail und signiert ausgehende per DKIM. Nach einem Neustart, etwa durch Reloader, Keel oder Renovate, ist es rund 30 Sekunden nicht erreichbar, bei einer Störung auch länger. Postfix behandelt Mails in dieser Zeit je nach Eingang unterschiedlich:</p>
+<table>
+	<thead>
+			<tr>
+					<th>Eingang</th>
+					<th>Wer liefert ein</th>
+					<th>Verhalten ohne rspamd</th>
+					<th>Einstellung</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>Port 25 (<code>smtp</code>)</td>
+					<td>fremde Mailserver</td>
+					<td>vorübergehende Ablehnung <code>451 4.7.1</code>, der Absender stellt später erneut zu</td>
+					<td><code>POSTFIX_milter_default_action: &quot;tempfail&quot;</code> in der ConfigMap</td>
+			</tr>
+			<tr>
+					<td>Port 587 (<code>submission</code>) und 465 (<code>submissions</code>)</td>
+					<td>angemeldete Nutzer und Anwendungen (Mail-Clients, Webanwendungen, Monitoring)</td>
+					<td>Annahme mit <code>250</code>, die Mail wird in der Hold-Queue festgehalten</td>
+					<td><code>POSTFIXMASTER__submission__inet__milter_default_action</code> und <code>POSTFIXMASTER__submissions__inet__milter_default_action</code> am Postfix-Container</td>
+			</tr>
+			<tr>
+					<td>lokal per <code>sendmail</code></td>
+					<td>Freigabe aus der Hold-Queue</td>
+					<td>die Kopie bleibt in der Maildrop-Queue, <code>pickup</code> versucht es erneut</td>
+					<td>wie Port 25</td>
+			</tr>
+	</tbody>
+</table>
+<p>Auf Port 25 genügt die vorübergehende Ablehnung, weil Mailserver ohnehin erneut zustellen. Anwendungen verwerfen eine Mail nach einem 4xx dagegen oft; deshalb nimmt Submission an und hält fest.</p>
+<p>Die Freigabe übernimmt <code>hold-release</code> aus dem Postfix-Image (Abschnitt „Milter outages“ in der README von <a href="https://git.zyria.de/pyrox/postfix-docker"  target="_blank" rel="noreferrer">postfix-docker</a>):</p>
+<ol>
+<li>Alle <code>HOLD_RELEASE_INTERVAL</code> Sekunden (hier 30) prüft es die Hold-Queue.</li>
+<li>Liegt dort etwas und antwortet <code>HOLD_RELEASE_CHECK_URL</code> (<code>/ping</code> des rspamd-Controllers), liefert es jede Mail mit ursprünglichem Absender und Empfängern per <code>sendmail</code> neu ein und löscht sie aus der Hold-Queue.</li>
+<li>Die neue Kopie läuft durch rspamd. rspamd sieht sie als lokale Einlieferung von <code>127.0.0.1</code>, prüft sie und signiert sie (<code>sign_local</code>).</li>
+</ol>
+<p>Für Absender heißt das: Eine Mail, die in einen Ausfall fällt, geht wenige Sekunden nach dem Start von rspamd hinaus. Lehnt rspamd sie dann ab, etwa Spam aus einem übernommenen Konto, wird sie nicht zugestellt; der Absender erhält stattdessen eine Unzustellbarkeitsnachricht mit dem Grund von rspamd, wo er bei direkter Einlieferung sofort einen <code>5xx</code> gesehen hätte.</p>
+<p>Logmeldungen im Postfix-Container:</p>
+<table>
+	<thead>
+			<tr>
+					<th>Meldung</th>
+					<th>Bedeutung</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><code>milter-hold: … default_action</code></td>
+					<td>rspamd war nicht erreichbar, die Mail liegt in der Hold-Queue</td>
+			</tr>
+			<tr>
+					<td><code>hold-release: &lt;n&gt; message(s) on hold, … not ready</code></td>
+					<td>rspamd antwortet noch nicht, die Mails bleiben liegen</td>
+			</tr>
+			<tr>
+					<td><code>hold-release: &lt;Queue-ID&gt;: released to &lt;n&gt; recipient(s)</code></td>
+					<td>die Mail ist neu eingeliefert</td>
+			</tr>
+			<tr>
+					<td><code>milter-reject: … from localhost[127.0.0.1]</code> nach einer Freigabe</td>
+					<td>rspamd hat die freigegebene Mail abgelehnt, es folgt ein Bounce an den Absender</td>
+			</tr>
+	</tbody>
+</table>
+<p>Festgehaltene Mails zeigt <code>mailq</code> mit einem <code>!</code> hinter der Queue-ID. Von Hand gilt:</p>
+<ul>
+<li>Nicht mit <code>postsuper -H</code> freigeben: Die Mail ginge dann ungeprüft und unsigniert hinaus.</li>
+<li>Nicht mit <code>postsuper -r</code> freigeben: Dabei geht die SASL-Anmeldung verloren, und rspamd signiert Mails von Clients außerhalb des Clusters nicht.</li>
+<li>Läuft rspamd wieder, genügt Warten; <code>hold-release</code> gibt spätestens nach 30 Sekunden frei.</li>
+<li>Eine einzelne Mail verwerfen: <code>postsuper -d &lt;Queue-ID&gt; hold</code>.</li>
+</ul>
+<p>Grenzen:</p>
+<ul>
+<li>Die Hold-Queue ist für diesen Zweck reserviert. <code>hold-release</code> gibt jede Mail darin frei; HOLD-Aktionen in <code>header_checks</code>, Access-Maps oder Milter-Quarantäne dürfen hier nicht genutzt werden.</li>
+<li>Festgehaltene Mails liegen in <code>/var/spool/postfix</code> auf dem Volume <code>postfix-spool</code> und überstehen einen Neustart des Pods.</li>
+<li>Freigegebene Mails lernt rspamd nicht automatisch: Autolearn überspringt lokale und angemeldete Mails, ebenso wie bei normaler Einlieferung über Submission.</li>
+<li>Bei einem längeren Ausfall von rspamd wächst die Hold-Queue. Mails von außen stauen sich dann bei den fremden Mailservern, nicht hier.</li>
+</ul>
+
 <h4 class="relative group">Backup &amp; Wiederherstellung
     <div id="backup--wiederherstellung" class="anchor"></div>
     
@@ -2590,52 +2668,7 @@ relativ zur Domain-DN — so erwartet es <code>samba-tool</code>).</p>
 </span></span><span class="line"><span class="ln">6</span><span class="cl">
 </span></span><span class="line"><span class="ln">7</span><span class="cl"><span class="c1"># Eine bestimmte Nachricht in der Queue genauer ansehen</span>
 </span></span><span class="line"><span class="ln">8</span><span class="cl">postcat -q &lt;QUEUE_ID&gt;</span></span></code></pre></div></div>
-
-<h3 class="relative group">Troubleshooting
-    <div id="troubleshooting-1" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#troubleshooting-1" aria-label="Anker">#</a>
-    </span>
-    
-</h3>
-<p>Dieser Abschnitt beschreibt die ersten Schritte zur Analyse von häufigen Problemen.</p>
-
-<h4 class="relative group">Logs prüfen
-    <div id="logs-prüfen-1" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#logs-pr%c3%bcfen-1" aria-label="Anker">#</a>
-    </span>
-    
-</h4>
-<p>Der erste Schritt bei Problemen ist immer die Analyse der Log-Dateien der jeweiligen Container. Annahme ist, dass die Pods im Namespace <code>mailstack</code> laufen.</p>
-<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="ln">1</span><span class="cl"><span class="c1"># Logs von Postfix/Dovecot live verfolgen</span>
-</span></span><span class="line"><span class="ln">2</span><span class="cl">kubectl logs -f -n mailstack &lt;postfix-dovecot-pod-name&gt;
-</span></span><span class="line"><span class="ln">3</span><span class="cl">
-</span></span><span class="line"><span class="ln">4</span><span class="cl"><span class="c1"># Logs von Rspamd prüfen</span>
-</span></span><span class="line"><span class="ln">5</span><span class="cl">kubectl logs -f -n mailstack &lt;rspamd-pod-name&gt;</span></span></code></pre></div></div>
-
-<h4 class="relative group">Mail-Warteschlange (Queue) prüfen
-    <div id="mail-warteschlange-queue-prüfen-1" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#mail-warteschlange-queue-pr%c3%bcfen-1" aria-label="Anker">#</a>
-    </span>
-    
-</h4>
-<p>Wenn E-Mails nicht versendet werden oder sich verzögern, gibt die Postfix-Warteschlange Aufschluss über die Ursache.</p>
-<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="ln">1</span><span class="cl"><span class="c1"># In den Postfix-Container wechseln</span>
-</span></span><span class="line"><span class="ln">2</span><span class="cl">kubectl <span class="nb">exec</span> -it -n mailstack &lt;postfix-pod-name&gt; -- /bin/bash
-</span></span><span class="line"><span class="ln">3</span><span class="cl">
-</span></span><span class="line"><span class="ln">4</span><span class="cl"><span class="c1"># Warteschlange anzeigen (entspricht `postqueue -p`)</span>
-</span></span><span class="line"><span class="ln">5</span><span class="cl">mailq
-</span></span><span class="line"><span class="ln">6</span><span class="cl">
-</span></span><span class="line"><span class="ln">7</span><span class="cl"><span class="c1"># Eine bestimmte Nachricht in der Queue genauer ansehen</span>
-</span></span><span class="line"><span class="ln">8</span><span class="cl">postcat -q &lt;QUEUE_ID&gt;</span></span></code></pre></div></div>
+<p>Ein <code>!</code> hinter der Queue-ID steht für eine festgehaltene Mail in der Hold-Queue, siehe <a href="/posts/homelab/k3s-prod/apps/mailstack/readme/#verhalten-bei-einem-rspamd-ausfall" >Verhalten bei einem rspamd-Ausfall</a>.</p>
 
           
           

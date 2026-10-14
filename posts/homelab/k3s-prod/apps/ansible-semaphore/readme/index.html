@@ -104,8 +104,8 @@
 	<meta property="og:locale" content="de_de">
 	<meta property="og:type" content="article">
 		<meta property="article:section" content="posts">
-		<meta property="article:published_time" content="2026-08-25T09:24:25+02:00">
-		<meta property="article:modified_time" content="2026-08-25T09:24:25+02:00">
+		<meta property="article:published_time" content="2026-10-13T15:54:06+02:00">
+		<meta property="article:modified_time" content="2026-10-13T15:54:06+02:00">
 		<meta property="article:tag" content="Kubernetes">
 		<meta property="article:tag" content="K3s">
 		<meta property="article:tag" content="Gitops">
@@ -311,15 +311,15 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
       "sameAs": ["https://git.casa-due-pur.de/fabrice.kirchner", "https://git.zyria.de/pyrox", "https://github.com/ricariel", "https://www.linkedin.com/in/fabrice-kirchner-bb5408163/", "https://www.xing.com/profile/Fabrice_Kirchner", "https://kirchner.social/@fabrice", "https://codeberg.org/ricariel"]
     },
     "copyrightYear": "2026",
-    "dateCreated": "2026-08-25T09:24:25\u002b02:00",
-    "datePublished": "2026-08-25T09:24:25\u002b02:00",
+    "dateCreated": "2026-10-13T15:54:06\u002b02:00",
+    "datePublished": "2026-10-13T15:54:06\u002b02:00",
     
-    "dateModified": "2026-08-25T09:24:25\u002b02:00",
+    "dateModified": "2026-10-13T15:54:06\u002b02:00",
     
     "keywords": ["kubernetes","k3s","gitops","argocd","helm","kustomize","homelab","produktion"],
     
     "mainEntityOfPage": "https://zyria.de/posts/homelab/k3s-prod/apps/ansible-semaphore/readme/",
-    "wordCount": "232"
+    "wordCount": "1657"
   }]
   </script>
 
@@ -964,7 +964,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2026-08-25T09:24:25&#43;02:00">25 August 2026</time><span class="px-2 text-primary-500">&middot;</span><span>232 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
+      <time datetime="2026-10-13T15:54:06&#43;02:00">13 Oktober 2026</time><span class="px-2 text-primary-500">&middot;</span><span>1657 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
 
 
   
@@ -1244,6 +1244,23 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
             <li><a href="#wichtige-einstellungen">Wichtige Einstellungen</a></li>
           </ul>
         </li>
+        <li><a href="#datenbank">Datenbank</a></li>
+        <li><a href="#datenbanksicherung">Datenbanksicherung</a>
+          <ul>
+            <li><a href="#auslösen">Auslösen</a></li>
+            <li><a href="#wiederherstellen">Wiederherstellen</a></li>
+          </ul>
+        </li>
+        <li><a href="#datenbankmigration-weg-von-bitnami">Datenbankmigration weg von Bitnami</a>
+          <ul>
+            <li><a href="#fremdschlüsselnamen-müssen-umbenannt-werden">Fremdschlüsselnamen müssen umbenannt werden</a></li>
+            <li><a href="#schritt-1-neue-instanz-parallel-hochfahren">Schritt 1: neue Instanz parallel hochfahren</a></li>
+            <li><a href="#schritt-2-probelauf-ohne-downtime">Schritt 2: Probelauf ohne Downtime</a></li>
+            <li><a href="#schritt-3-wartungsfenster-finaler-dump">Schritt 3: Wartungsfenster, finaler Dump</a></li>
+            <li><a href="#schritt-4-umschalten">Schritt 4: umschalten</a></li>
+            <li><a href="#schritt-5-rückbau">Schritt 5: Rückbau</a></li>
+          </ul>
+        </li>
         <li><a href="#installation">Installation</a></li>
         <li><a href="#abhängigkeiten">Abhängigkeiten</a></li>
       </ul>
@@ -1269,6 +1286,23 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
         <li><a href="#lokale-anpassungen">Lokale Anpassungen</a>
           <ul>
             <li><a href="#wichtige-einstellungen">Wichtige Einstellungen</a></li>
+          </ul>
+        </li>
+        <li><a href="#datenbank">Datenbank</a></li>
+        <li><a href="#datenbanksicherung">Datenbanksicherung</a>
+          <ul>
+            <li><a href="#auslösen">Auslösen</a></li>
+            <li><a href="#wiederherstellen">Wiederherstellen</a></li>
+          </ul>
+        </li>
+        <li><a href="#datenbankmigration-weg-von-bitnami">Datenbankmigration weg von Bitnami</a>
+          <ul>
+            <li><a href="#fremdschlüsselnamen-müssen-umbenannt-werden">Fremdschlüsselnamen müssen umbenannt werden</a></li>
+            <li><a href="#schritt-1-neue-instanz-parallel-hochfahren">Schritt 1: neue Instanz parallel hochfahren</a></li>
+            <li><a href="#schritt-2-probelauf-ohne-downtime">Schritt 2: Probelauf ohne Downtime</a></li>
+            <li><a href="#schritt-3-wartungsfenster-finaler-dump">Schritt 3: Wartungsfenster, finaler Dump</a></li>
+            <li><a href="#schritt-4-umschalten">Schritt 4: umschalten</a></li>
+            <li><a href="#schritt-5-rückbau">Schritt 5: Rückbau</a></li>
           </ul>
         </li>
         <li><a href="#installation">Installation</a></li>
@@ -1460,11 +1494,277 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
     
 </h4>
 <ul>
-<li><strong>Datenbank</strong>: Es wird eine externe <code>MariaDB</code>-Datenbank verwendet.</li>
+<li><strong>Datenbank</strong>: <code>MariaDB</code> im selben Namespace, siehe Abschnitt <a href="/posts/homelab/k3s-prod/apps/ansible-semaphore/readme/#datenbank" >Datenbank</a>.</li>
 <li><strong>Ingress</strong>: Der Zugriff auf die Weboberfläche wird über einen Ingress mit einem Hostnamen ermöglicht und durch Traefik verwaltet. Das TLS-Zertifikat wird über <code>cert-manager</code> bereitgestellt.</li>
 <li><strong>Speicher</strong>: Ein PersistentVolume wird für die Speicherung der Konfiguration und der Playbooks verwendet.</li>
 <li><strong>Authentifizierung</strong>: Die Benutzerauthentifizierung erfolgt über LDAP und OIDC.</li>
 </ul>
+
+<h3 class="relative group">Datenbank
+    <div id="datenbank" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#datenbank" aria-label="Anker">#</a>
+    </span>
+    
+</h3>
+<p>Die Datenbank liegt im selben Namespace und wird vom Chart <code>mariadb</code> der
+<a href="https://github.com/CloudPirates-io/helm-charts"  target="_blank" rel="noreferrer">CloudPirates-Charts</a> bereitgestellt, konfiguriert über
+<code>values-database.yaml</code>. Sie läuft als eigener <code>helmCharts</code>-Eintrag neben dem Semaphore-Chart, weil dieses als
+mitgelieferte Datenbank nur Bitnami-Subcharts kennt.</p>
+<table>
+	<thead>
+			<tr>
+					<th>Instanz</th>
+					<th>Chart</th>
+					<th>Image</th>
+					<th>Volume</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><code>ansible-semaphore-mariadb</code></td>
+					<td>CloudPirates <code>mariadb</code></td>
+					<td><code>mariadb:11.8.9</code> (LTS)</td>
+					<td><code>semaphoreui-db-v2</code></td>
+			</tr>
+	</tbody>
+</table>
+<p>Angesprochen wird sie über den <code>ExternalName</code>-Service <code>db</code> aus <code>service.yaml</code>, von Semaphore
+(<code>database.host</code>) und vom Dump-CronJob. Der Umweg kostet nichts und hält einen künftigen Wechsel der
+Zielinstanz auf einer Zeile.</p>
+<p>Das mitgelieferte MariaDB-Subchart des Semaphore-Charts ist abgeschaltet, siehe Abschnitt
+<a href="/posts/homelab/k3s-prod/apps/ansible-semaphore/readme/#datenbankmigration-weg-von-bitnami" >Datenbankmigration weg von Bitnami</a>.</p>
+
+<h3 class="relative group">Datenbanksicherung
+    <div id="datenbanksicherung" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#datenbanksicherung" aria-label="Anker">#</a>
+    </span>
+    
+</h3>
+<p>Das Datenvolume liegt in der Longhorn-Gruppe <code>default</code> und wird täglich um 01:10 auf das NFS-Ziel gesichert.
+Das ist ein Blockabbild der laufenden Datenbank: beim Zurückholen macht InnoDB Crash Recovery, und die ganze
+Datenbank kommt auf einen Stand zurück. Eine einzelne Tabelle, ein einzelner Datensatz oder ein Blick in die
+Daten ohne Volume-Klon geht damit nicht.</p>
+<p>Dafür gibt es zusätzlich einen logischen Dump. Der CronJob <code>ansible-semaphore-dbdump</code> läuft täglich um 00:40,
+schreibt <code>ansible-semaphore-&lt;Zeitstempel&gt;.sql.gz</code> in das Volume <code>ansible-semaphore-db-backup</code> (1Gi) und hält
+sieben Generationen vor. Das Backup-Volume ist dynamisch angelegt und liegt damit ebenfalls in der Gruppe
+<code>default</code>; die Uhrzeit ist so gewählt, dass die Sicherung um 01:10 den Dump derselben Nacht noch mitnimmt.</p>
+<p>Der Dump läuft mit <code>--single-transaction</code>, Semaphore bleibt also währenddessen online, auch wenn gerade ein
+Ansible-Lauf in die Task-Logs schreibt. Als Ziel dient der <code>ExternalName</code>-Service <code>db</code>, nicht der Service der
+Datenbank selbst: wird <code>db</code> auf eine andere Instanz umgebogen, folgt der Dump automatisch mit.</p>
+
+<h4 class="relative group">Auslösen
+    <div id="auslösen" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#ausl%c3%b6sen" aria-label="Anker">#</a>
+    </span>
+    
+</h4>
+<p>Der CronJob läuft selbständig. Von Hand auslösen:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">kubectl -n ansible-semaphore create job dbdump-manuell <span class="se">\
+</span></span></span><span class="line"><span class="ln">2</span><span class="cl">  --from<span class="o">=</span>cronjob/ansible-semaphore-dbdump
+</span></span><span class="line"><span class="ln">3</span><span class="cl">kubectl -n ansible-semaphore logs -f job/dbdump-manuell</span></span></code></pre></div></div>
+
+<h4 class="relative group">Wiederherstellen
+    <div id="wiederherstellen" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#wiederherstellen" aria-label="Anker">#</a>
+    </span>
+    
+</h4>
+<p>Der Dump liegt im Backup-Volume, das im Normalbetrieb von keinem Pod eingebunden ist. Ein Wegwerf-Pod mit
+demselben Image bindet es ein:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">kubectl -n ansible-semaphore run dbrestore --rm -it --restart<span class="o">=</span>Never <span class="se">\
+</span></span></span><span class="line"><span class="ln">2</span><span class="cl">  --image<span class="o">=</span>docker.io/library/mariadb:11.8 <span class="se">\
+</span></span></span><span class="line"><span class="ln">3</span><span class="cl">  --overrides<span class="o">=</span><span class="s1">&#39;{&#34;spec&#34;:{&#34;securityContext&#34;:{&#34;fsGroup&#34;:999},&#34;containers&#34;:[{&#34;name&#34;:&#34;dbrestore&#34;,&#34;image&#34;:&#34;docker.io/library/mariadb:11.8&#34;,&#34;stdin&#34;:true,&#34;tty&#34;:true,&#34;command&#34;:[&#34;bash&#34;],&#34;volumeMounts&#34;:[{&#34;name&#34;:&#34;backup&#34;,&#34;mountPath&#34;:&#34;/backup&#34;}]}],&#34;volumes&#34;:[{&#34;name&#34;:&#34;backup&#34;,&#34;persistentVolumeClaim&#34;:{&#34;claimName&#34;:&#34;ansible-semaphore-db-backup&#34;}}]}}&#39;</span> <span class="se">\
+</span></span></span><span class="line"><span class="ln">4</span><span class="cl">  -- bash</span></span></code></pre></div></div>
+<p>Im Pod, Passwort aus dem Secret <code>ansible-semaphore-mariadb</code>, Schlüssel <code>mariadb-root-password</code>:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">ls -lh /backup
+</span></span><span class="line"><span class="ln">2</span><span class="cl">gunzip -c /backup/ansible-semaphore-&lt;Zeitstempel&gt;.sql.gz <span class="p">|</span> mariadb -h db -u root -p</span></span></code></pre></div></div>
+<p>Die Dumps enthalten <code>CREATE DATABASE</code>, die Zieldatenbank muss also nicht vorher angelegt werden. Ein
+Einspielen überschreibt sie vollständig; vorher Semaphore herunterfahren:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">kubectl -n ansible-semaphore scale deploy/ansible-semaphore --replicas<span class="o">=</span><span class="m">0</span></span></span></code></pre></div></div>
+
+<h3 class="relative group">Datenbankmigration weg von Bitnami
+    <div id="datenbankmigration-weg-von-bitnami" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#datenbankmigration-weg-von-bitnami" aria-label="Anker">#</a>
+    </span>
+    
+</h3>
+<blockquote><p>Abgeschlossen am 13.10.2026, einschließlich Cutover und Rückbau. Semaphore läuft seit 15:00 auf der
+CloudPirates-Instanz, der erste Playbook-Lauf danach (Task 5429, 15:09 bis 15:13) war erfolgreich. Von der
+Bitnami-Instanz ist nichts übrig, auch ihr Longhorn-Volume ist gelöscht.</p>
+<p>Die Schritte unten sind das Protokoll des Vorgangs, nicht mehr eine offene Anleitung. Sie bleiben hier,
+weil die Begründungen auch für die anderen MariaDB-Apps dieses Clusters gelten.</p>
+</blockquote><p>Ziel war <code>mariadb:11.8.9</code> aus dem offiziellen Image, dieselbe LTS-Linie wie bei den übrigen MariaDB-Apps dieses
+Clusters. Der Server läuft als 12.3.2, das Datenverzeichnis hat 13.1.1 schon gesehen. Der Weg zurück auf
+11.8.9 ist damit in jedem Fall ein Rückschritt über mindestens eine Hauptversion, und ein Volume-Wechsel
+genügt nicht: es braucht einen logischen Dump. Die Datenbank ist mit 46 Tabellen und rund 20 MB klein, der
+Dump läuft in Sekunden.</p>
+<p>Der Probelauf in Schritt 2 ist am 13.10.2026 durchgelaufen: 46 Tabellen, 546 Tasks, 100 Fremdschlüssel,
+<code>mariadb-check</code> für alle Tabellen <code>OK</code>, Zugriff als Anwendungsbenutzer möglich. Nötig war dafür ein Eingriff
+am Dump, siehe unten.</p>
+
+<h4 class="relative group">Fremdschlüsselnamen müssen umbenannt werden
+    <div id="fremdschlüsselnamen-müssen-umbenannt-werden" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#fremdschl%c3%bcsselnamen-m%c3%bcssen-umbenannt-werden" aria-label="Anker">#</a>
+    </span>
+    
+</h4>
+<p>MariaDB 12 hat die Eindeutigkeit von Fremdschlüsselnamen von datenbankweit auf tabellenweit gelockert und
+generiert sie seitdem als <code>1</code>, <code>2</code>, <code>3</code>. In dieser Datenbank tragen deshalb 14 Fremdschlüssel den Namen <code>1</code>,
+jeweils in einer anderen Tabelle; die älteren Tabellen tragen noch Namen der Form <code>&lt;tabelle&gt;_ibfk_N</code>.</p>
+<p>11.8.9 verlangt die alte, strengere Eindeutigkeit. Ein unveränderter Dump bricht deshalb bei der zweiten
+Tabelle ab:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="ln">1</span><span class="cl">ERROR 1005 (HY000) at line 2367: Can&#39;t create table `semaphore`.`project__secret_sync`
+</span></span><span class="line"><span class="ln">2</span><span class="cl">(errno: 121 &#34;Duplicate key on write or update&#34;)</span></span></code></pre></div></div>
+<p>Nachgemessen mit zwei Testtabellen in derselben Datenbank: 12.3.2 nimmt den doppelten Namen an, 11.8.9
+lehnt ihn ab. Die Namen sind funktional bedeutungslos, sie dienen nur dem Referenzieren beim Löschen. Die
+<code>awk</code>-Stufe in den Dump-Befehlen unten numeriert sie fortlaufend durch und macht sie damit eindeutig. Nach
+der Migration generiert 11.8.9 seine Namen selbst, der Eingriff ist also einmalig.</p>
+<p>Die Dump-Befehle laufen bewusst ohne <code>--routines</code> und <code>--events</code>. Der Bitnami-Container meldet bei jedem
+Start „already upgraded&quot;, <code>mysql.proc</code> trägt aber weiter das Spaltenformat von MariaDB 11.4.3, während der
+Server als 12.3.2 läuft. Die Systemtabellen sind also seit 11.4.3 nie mitgezogen worden, unabhängig davon,
+welche Version gerade läuft. Das Auslesen von Routinen scheitert deshalb mit Fehler 1558 und <code>mariadb-dump</code>
+endet mit Status 2. Verloren geht dabei nichts: <code>mysql.proc</code> enthält für diese Datenbank keine Routine und
+<code>mysql.event</code> kein Ereignis, nur die 53 mitgelieferten sys-Routinen. Nach dem Cutover sind die Flags wieder
+unbedenklich.</p>
+
+<h4 class="relative group">Schritt 1: neue Instanz parallel hochfahren
+    <div id="schritt-1-neue-instanz-parallel-hochfahren" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#schritt-1-neue-instanz-parallel-hochfahren" aria-label="Anker">#</a>
+    </span>
+    
+</h4>
+<p>Nach dem Merge dieses Stands läuft <code>ansible-semaphore-mariadb</code> leer mit. Semaphore benutzt weiter die
+Bitnami-Instanz.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">kubectl -n ansible-semaphore get sts
+</span></span><span class="line"><span class="ln">2</span><span class="cl">kubectl -n ansible-semaphore logs sts/ansible-semaphore-mariadb --tail<span class="o">=</span><span class="m">20</span></span></span></code></pre></div></div>
+
+<h4 class="relative group">Schritt 2: Probelauf ohne Downtime
+    <div id="schritt-2-probelauf-ohne-downtime" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#schritt-2-probelauf-ohne-downtime" aria-label="Anker">#</a>
+    </span>
+    
+</h4>
+<p>Der Dump läuft mit <code>--single-transaction</code>, Semaphore bleibt währenddessen online. Die Zieldatenbank
+<code>semaphore</code> legt der Chart beim ersten Start an.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln"> 1</span><span class="cl">kubectl -n ansible-semaphore <span class="nb">exec</span> mariadb-0 -c mariadb -- <span class="se">\
+</span></span></span><span class="line"><span class="ln"> 2</span><span class="cl">  sh -c <span class="s1">&#39;mariadb-dump --single-transaction --triggers \
+</span></span></span><span class="line"><span class="ln"> 3</span><span class="cl"><span class="s1">    --default-character-set=utf8mb4 \
+</span></span></span><span class="line"><span class="ln"> 4</span><span class="cl"><span class="s1">    -u root -p&#34;$(cat &#34;$MARIADB_ROOT_PASSWORD_FILE&#34;)&#34; semaphore&#39;</span> <span class="se">\
+</span></span></span><span class="line"><span class="ln"> 5</span><span class="cl">  <span class="p">|</span> awk <span class="s1">&#39;{ if (match($0, /CONSTRAINT `[0-9]+` FOREIGN KEY/)) { n++;
+</span></span></span><span class="line"><span class="ln"> 6</span><span class="cl"><span class="s1">      sub(/CONSTRAINT `[0-9]+`/, &#34;CONSTRAINT `fk_&#34; n &#34;`&#34;) } print }&#39;</span> <span class="se">\
+</span></span></span><span class="line"><span class="ln"> 7</span><span class="cl">  &gt; semaphore-probe.sql
+</span></span><span class="line"><span class="ln"> 8</span><span class="cl">
+</span></span><span class="line"><span class="ln"> 9</span><span class="cl">kubectl -n ansible-semaphore <span class="nb">exec</span> -i ansible-semaphore-mariadb-0 -- <span class="se">\
+</span></span></span><span class="line"><span class="ln">10</span><span class="cl">  sh -c <span class="s1">&#39;mariadb -u root -p&#34;$MARIADB_ROOT_PASSWORD&#34; semaphore&#39;</span> &lt; semaphore-probe.sql</span></span></code></pre></div></div>
+<p>Läuft der Restore ohne Fehler durch und stimmt die Tabellenzahl, ist der Weg frei:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">kubectl -n ansible-semaphore <span class="nb">exec</span> ansible-semaphore-mariadb-0 -- <span class="se">\
+</span></span></span><span class="line"><span class="ln">2</span><span class="cl">  sh -c <span class="s1">&#39;mariadb -u root -p&#34;$MARIADB_ROOT_PASSWORD&#34; -N -B semaphore \
+</span></span></span><span class="line"><span class="ln">3</span><span class="cl"><span class="s1">    -e &#34;SELECT COUNT(*) FROM information_schema.tables WHERE table_schema = DATABASE()&#34;&#39;</span></span></span></code></pre></div></div>
+<p>Am 13.10.2026 lieferte der Probelauf dieselben Werte wie die Quelle: 46 Tabellen, 546 Tasks, 5
+Zugangsschlüssel, 2 Benutzer, 97 Migrationen, 100 Fremdschlüssel. Sollte ein künftiger Lauf trotzdem
+abbrechen, bliebe als Ausweichziel <code>13.0.2</code> aus dem Chart-Standard; dann wäre der Rückschritt kleiner, der
+Supportzeitraum aber kurz.</p>
+
+<h4 class="relative group">Schritt 3: Wartungsfenster, finaler Dump
+    <div id="schritt-3-wartungsfenster-finaler-dump" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#schritt-3-wartungsfenster-finaler-dump" aria-label="Anker">#</a>
+    </span>
+    
+</h4>
+<p>Semaphore anhalten, damit kein Lauf mehr schreibt. Laufende Ansible-Jobs vorher abwarten.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">kubectl -n ansible-semaphore scale deploy/ansible-semaphore --replicas<span class="o">=</span><span class="m">0</span></span></span></code></pre></div></div>
+<p>Die Probedaten verwerfen und neu einspielen:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln"> 1</span><span class="cl">kubectl -n ansible-semaphore <span class="nb">exec</span> ansible-semaphore-mariadb-0 -- <span class="se">\
+</span></span></span><span class="line"><span class="ln"> 2</span><span class="cl">  sh -c <span class="s1">&#39;mariadb -u root -p&#34;$MARIADB_ROOT_PASSWORD&#34; \
+</span></span></span><span class="line"><span class="ln"> 3</span><span class="cl"><span class="s1">    -e &#34;DROP DATABASE semaphore;
+</span></span></span><span class="line"><span class="ln"> 4</span><span class="cl"><span class="s1">        CREATE DATABASE semaphore CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci&#34;&#39;</span>
+</span></span><span class="line"><span class="ln"> 5</span><span class="cl">
+</span></span><span class="line"><span class="ln"> 6</span><span class="cl">kubectl -n ansible-semaphore <span class="nb">exec</span> mariadb-0 -c mariadb -- <span class="se">\
+</span></span></span><span class="line"><span class="ln"> 7</span><span class="cl">  sh -c <span class="s1">&#39;mariadb-dump --single-transaction --triggers \
+</span></span></span><span class="line"><span class="ln"> 8</span><span class="cl"><span class="s1">    --default-character-set=utf8mb4 \
+</span></span></span><span class="line"><span class="ln"> 9</span><span class="cl"><span class="s1">    -u root -p&#34;$(cat &#34;$MARIADB_ROOT_PASSWORD_FILE&#34;)&#34; semaphore&#39;</span> <span class="se">\
+</span></span></span><span class="line"><span class="ln">10</span><span class="cl">  <span class="p">|</span> awk <span class="s1">&#39;{ if (match($0, /CONSTRAINT `[0-9]+` FOREIGN KEY/)) { n++;
+</span></span></span><span class="line"><span class="ln">11</span><span class="cl"><span class="s1">      sub(/CONSTRAINT `[0-9]+`/, &#34;CONSTRAINT `fk_&#34; n &#34;`&#34;) } print }&#39;</span> <span class="se">\
+</span></span></span><span class="line"><span class="ln">12</span><span class="cl">  &gt; semaphore-final.sql
+</span></span><span class="line"><span class="ln">13</span><span class="cl">
+</span></span><span class="line"><span class="ln">14</span><span class="cl">kubectl -n ansible-semaphore <span class="nb">exec</span> -i ansible-semaphore-mariadb-0 -- <span class="se">\
+</span></span></span><span class="line"><span class="ln">15</span><span class="cl">  sh -c <span class="s1">&#39;mariadb -u root -p&#34;$MARIADB_ROOT_PASSWORD&#34; semaphore&#39;</span> &lt; semaphore-final.sql</span></span></code></pre></div></div>
+<p>Benutzer und Rechte stehen nicht im Dump. Der Chart legt <code>semaphore</code> mit den Werten aus
+<code>values-database.yaml</code> an, die mit dem <code>database</code>-Block in <code>values.yaml</code> übereinstimmen müssen. <code>DROP DATABASE</code> entfernt die Rechte auf die Datenbank nicht, geprüft wird es trotzdem: der folgende Zugriff läuft
+als Anwendungsbenutzer und deckt Passwort, Rechte und Datenbestand in einem ab.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">kubectl -n ansible-semaphore <span class="nb">exec</span> ansible-semaphore-mariadb-0 -- <span class="se">\
+</span></span></span><span class="line"><span class="ln">2</span><span class="cl">  sh -c <span class="s1">&#39;mariadb -u semaphore -p&#34;$MARIADB_PASSWORD&#34; -N -B semaphore \
+</span></span></span><span class="line"><span class="ln">3</span><span class="cl"><span class="s1">    -e &#34;SELECT COUNT(*) FROM project&#34;&#39;</span></span></span></code></pre></div></div>
+
+<h4 class="relative group">Schritt 4: umschalten
+    <div id="schritt-4-umschalten" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#schritt-4-umschalten" aria-label="Anker">#</a>
+    </span>
+    
+</h4>
+<p>Am 13.10.2026 um 14:58 erfolgt: der <code>externalName</code> des Service <code>db</code> zeigt seitdem auf
+<code>ansible-semaphore-mariadb.ansible-semaphore.svc.cluster.local</code>. Der Dump-CronJob ist mitgefolgt, ohne
+eigene Änderung.</p>
+<p>Ein Wechsel des <code>externalName</code> lenkt eine bestehende Verbindung nicht um, der Semaphore-Pod musste also neu
+starten. Gelöscht statt <code>rollout restart</code>, damit keine Annotation ins Pod-Template wandert, die Argo CD als
+Drift zurückdreht.</p>
+<p>Statt Semaphore anzuhalten lief die alte Datenbank für die Dauer des Umzugs auf <code>read_only</code>. Grund war
+<code>selfHeal: true</code> in der Sync-Policy: ein <code>kubectl scale --replicas=0</code> hätte Argo CD zurückgedreht, ein
+Stopp über Git hätte zwei zusätzliche Merges gebraucht. Der Schreibschutz schließt dasselbe Fenster, ohne
+die Anwendung auszuschalten, und ist danach zurückgenommen.</p>
+<p>Geprüft: die Verbindung des Semaphore-Pods lag anschließend auf der neuen Instanz und auf der alten keine
+mehr, <code>/api/ping</code>, <code>/api/auth/login</code> und <code>/</code> antworteten mit 200, der Dump-CronJob schrieb von Hand
+ausgelöst 1.092.344 Bytes. Der erste Playbook-Lauf danach lief erfolgreich durch.</p>
+
+<h4 class="relative group">Schritt 5: Rückbau
+    <div id="schritt-5-rückbau" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#schritt-5-r%c3%bcckbau" aria-label="Anker">#</a>
+    </span>
+    
+</h4>
+<p>Am 13.10.2026 erledigt, nachdem die neue Instanz nachweislich beschrieben wurde: der <code>mariadb</code>-Block ist aus
+<code>values.yaml</code> entfernt, <code>PersistentVolume</code> und <code>PersistentVolumeClaim</code> <code>semaphoreui-db</code> sind aus
+<code>storage.yaml</code> verschwunden. Argo CD hat StatefulSet, Services, Secret und ConfigMap der Bitnami-Instanz
+damit geprunt.</p>
+<p>Das Longhorn-Volume <code>semaphoreui-db</code> blieb wegen <code>persistentVolumeReclaimPolicy: Retain</code> zunächst als
+losgelöstes Volume bestehen und ist am selben Tag von Hand gelöscht worden, nachdem der erste Playbook-Lauf
+auf der neuen Instanz erfolgreich war.</p>
+<p>Damit ist der Datenbestand nur noch über die Sicherungen wiederherstellbar: den stündlichen Longhorn-
+Snapshot, das nächtliche Backup auf dem NFS-Ziel und die sieben Dump-Generationen im Volume
+<code>ansible-semaphore-db-backup</code>. Ein Zurückschalten über den <code>ExternalName</code> gibt es nicht mehr.</p>
 
 <h3 class="relative group">Installation
     <div id="installation" class="anchor"></div>
@@ -1494,7 +1794,6 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
 <li>Ein LDAP-Server für die Benutzerauthentifizierung (optional).</li>
 <li>Ein OIDC-Anbieter (z.B. Authentik) für die Authentifizierung (optional).</li>
 <li>Ein SMTP-Server für E-Mail-Benachrichtigungen (optional).</li>
-<li><strong>Longhorn</strong> als Storage-Provider für die PersistentVolumes.</li>
 <li>cert-manager: Wird für die automatische Bereitstellung von TLS-Zertifikaten benötigt.</li>
 <li><strong>Longhorn</strong> als Storage-Provider für die PersistentVolumes.</li>
 </ul>
@@ -1730,14 +2029,14 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
           
             <a
               class="flex text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
-              href="/posts/homelab/k3s-prod/apps/mailstack-new/readme/">
+              href="/posts/homelab/k3s-prod/apps/multus/readme/">
               <span class="leading-6">
-                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;Mailstack
+                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;Multus CNI
               </span>
             </a>
             
               <span class="ms-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
-                <time datetime="2026-08-25T09:24:25&#43;02:00">25 August 2026</time>
+                <time datetime="2026-10-12T11:11:43&#43;02:00">12 Oktober 2026</time>
               </span>
             
           
@@ -1746,14 +2045,14 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
           
             <a
               class="flex text-right text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
-              href="/posts/homelab/k3s-prod/apps/git-pages/readme/">
+              href="/posts/homelab/k3s-prod/ansible/shutdown-startup/">
               <span class="leading-6">
-                &ensp;<span class="inline-block rtl:rotate-180">&rarr;</span>
+                Operational Lifecycle Management: Orchestrierter Shutdown für Kubernetes&ensp;<span class="inline-block rtl:rotate-180">&rarr;</span>
               </span>
             </a>
             
               <span class="me-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
-                <time datetime="2026-08-25T09:24:25&#43;02:00">25 August 2026</time>
+                <time datetime="2024-10-27T10:00:00&#43;01:00">27 Oktober 2024</time>
               </span>
             
           
