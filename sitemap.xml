@@ -45,6 +45,12 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://zyria.de/posts/homelab/k3s-prod/apps/ansible-semaphore/readme/</loc>
+    <lastmod>2026-10-14T15:58:41+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://zyria.de/posts/homelab/debian-upgrade/</loc>
     <lastmod>2026-10-14T14:11:08+02:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -131,12 +137,6 @@
   <url>
     <loc>https://zyria.de/posts/homelab/vms/worker/</loc>
     <lastmod>2026-10-14T14:11:08+02:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://zyria.de/posts/homelab/k3s-prod/apps/ansible-semaphore/readme/</loc>
-    <lastmod>2026-10-13T15:54:06+02:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -520,7 +520,7 @@
   </url>
   <url>
     <loc>https://zyria.de/posts/homelab/k3s-prod/apps/forgejo-runner/readme/</loc>
-    <lastmod>2026-10-10T21:56:30+02:00</lastmod>
+    <lastmod>2026-10-15T02:33:46+02:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -592,7 +592,7 @@
   </url>
   <url>
     <loc>https://zyria.de/posts/homelab/k3s-prod/ansible/readme/</loc>
-    <lastmod>2026-10-12T20:48:57+02:00</lastmod>
+    <lastmod>2026-10-14T15:58:41+02:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>

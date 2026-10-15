@@ -9,7 +9,7 @@
     <managingEditor>fabrice@zyria.de (Fabrice Kirchner)</managingEditor>
     <webMaster>fabrice@zyria.de (Fabrice Kirchner)</webMaster>
     
-    <lastBuildDate>Mon, 12 Oct 2026 20:48:57 +0200</lastBuildDate><atom:link href="https://zyria.de/tags/ansible/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 14 Oct 2026 15:58:41 +0200</lastBuildDate><atom:link href="https://zyria.de/tags/ansible/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Operational Lifecycle Management: Orchestrierter Shutdown für Kubernetes</title>

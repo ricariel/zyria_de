@@ -105,7 +105,7 @@
 	<meta property="og:type" content="article">
 		<meta property="article:section" content="posts">
 		<meta property="article:published_time" content="2025-08-13T17:04:53+02:00">
-		<meta property="article:modified_time" content="2026-10-12T20:48:57+02:00">
+		<meta property="article:modified_time" content="2026-10-14T15:58:41+02:00">
 		<meta property="article:tag" content="Kubernetes">
 		<meta property="article:tag" content="Ansible">
 		<meta property="article:tag" content="Automatisierung">
@@ -311,12 +311,12 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
     "dateCreated": "2025-08-13T17:04:53\u002b02:00",
     "datePublished": "2025-08-13T17:04:53\u002b02:00",
     
-    "dateModified": "2026-10-12T20:48:57\u002b02:00",
+    "dateModified": "2026-10-14T15:58:41\u002b02:00",
     
     "keywords": ["kubernetes","ansible","automatisierung"],
     
     "mainEntityOfPage": "https://zyria.de/posts/homelab/k3s-prod/ansible/readme/",
-    "wordCount": "490"
+    "wordCount": "522"
   }]
   </script>
 
@@ -963,7 +963,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2025-08-13T17:04:53&#43;02:00">13 August 2025</time><span class="px-2 text-primary-500">&middot;</span><time datetime="2026-10-12T20:48:57&#43;02:00">Aktualisiert: 12 Oktober 2026</time><span class="px-2 text-primary-500">&middot;</span><span>490 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
+      <time datetime="2025-08-13T17:04:53&#43;02:00">13 August 2025</time><span class="px-2 text-primary-500">&middot;</span><time datetime="2026-10-14T15:58:41&#43;02:00">Aktualisiert: 14 Oktober 2026</time><span class="px-2 text-primary-500">&middot;</span><span>522 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
 
 
   
@@ -1383,6 +1383,10 @@ herunter- und wieder hochfahren. Alles, was danach im Cluster läuft, kommt
 			</tr>
 	</tbody>
 </table>
+<p><code>k3s_version</code> in <code>inventory.yaml</code> hebt Renovate auf die aktuelle Version im
+k3s-Kanal <code>stable</code> (eigene Datenquelle in <code>renovate.json5</code>). Das ändert nur
+das Inventar; der laufende Cluster bekommt die Version erst, wenn
+<code>deploy.yaml</code> wieder läuft.</p>
 
 <h3 class="relative group">Nutzung
     <div id="nutzung" class="anchor"></div>
