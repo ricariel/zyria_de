@@ -105,7 +105,7 @@
 	<meta property="og:type" content="article">
 		<meta property="article:section" content="posts">
 		<meta property="article:published_time" content="2025-10-18T07:57:54+02:00">
-		<meta property="article:modified_time" content="2026-09-07T14:43:53+02:00">
+		<meta property="article:modified_time" content="2026-10-15T16:36:35+02:00">
 		<meta property="article:tag" content="Kubernetes">
 		<meta property="article:tag" content="Wireguard">
 		<meta property="article:tag" content="Vpn">
@@ -311,12 +311,12 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
     "dateCreated": "2025-10-18T07:57:54\u002b02:00",
     "datePublished": "2025-10-18T07:57:54\u002b02:00",
     
-    "dateModified": "2026-09-07T14:43:53\u002b02:00",
+    "dateModified": "2026-10-15T16:36:35\u002b02:00",
     
     "keywords": ["kubernetes","wireguard","vpn"],
     
     "mainEntityOfPage": "https://zyria.de/posts/homelab/k3s-prod/apps/wireguard/readme/",
-    "wordCount": "477"
+    "wordCount": "885"
   }]
   </script>
 
@@ -963,7 +963,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2025-10-18T07:57:54&#43;02:00">18 Oktober 2025</time><span class="px-2 text-primary-500">&middot;</span><time datetime="2026-09-07T14:43:53&#43;02:00">Aktualisiert: 7 September 2026</time><span class="px-2 text-primary-500">&middot;</span><span>477 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
+      <time datetime="2025-10-18T07:57:54&#43;02:00">18 Oktober 2025</time><span class="px-2 text-primary-500">&middot;</span><time datetime="2026-10-15T16:36:35&#43;02:00">Aktualisiert: 15 Oktober 2026</time><span class="px-2 text-primary-500">&middot;</span><span>885 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
 
 
   
@@ -1145,7 +1145,8 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
         <li><a href="#funktion">Funktion</a></li>
         <li><a href="#lokale-anpassungen">Lokale Anpassungen</a>
           <ul>
-            <li><a href="#wichtige-umgebungsvariablen">Wichtige Umgebungsvariablen</a></li>
+            <li><a href="#konfiguration-von-wg-portal">Konfiguration von wg-portal</a></li>
+            <li><a href="#umstieg-von-v1-auf-v2">Umstieg von v1 auf v2</a></li>
             <li><a href="#wichtige-einstellungen">Wichtige Einstellungen</a></li>
           </ul>
         </li>
@@ -1173,7 +1174,8 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
         <li><a href="#funktion">Funktion</a></li>
         <li><a href="#lokale-anpassungen">Lokale Anpassungen</a>
           <ul>
-            <li><a href="#wichtige-umgebungsvariablen">Wichtige Umgebungsvariablen</a></li>
+            <li><a href="#konfiguration-von-wg-portal">Konfiguration von wg-portal</a></li>
+            <li><a href="#umstieg-von-v1-auf-v2">Umstieg von v1 auf v2</a></li>
             <li><a href="#wichtige-einstellungen">Wichtige Einstellungen</a></li>
           </ul>
         </li>
@@ -1403,23 +1405,59 @@ braucht das Kernelmodul des Hosts.</li>
 VPN sind.</li>
 <li>Wg-portal stellt eine leichte Möglichkeit bereit den Mitarbeitern vordefinierte Zugänge zum VPN bereitzustellen. Der Container nutzt das Netzwerk des wireguard Containers und muss deshalb mit ihm zusammen neu gestartet werden.</li>
 </ul>
-<p>Die Konfiguration erfolgt über Umgebungsvariablen in der <code>values.yaml</code>-Datei.</p>
+<p>wg-portal (v2) wird über die Datei <code>config.yaml</code> konfiguriert, siehe <a href="/posts/homelab/k3s-prod/apps/wireguard/readme/#konfiguration-von-wg-portal" >Konfiguration von wg-portal</a>.</p>
 
-<h4 class="relative group">Wichtige Umgebungsvariablen
-    <div id="wichtige-umgebungsvariablen" class="anchor"></div>
+<h4 class="relative group">Konfiguration von wg-portal
+    <div id="konfiguration-von-wg-portal" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#wichtige-umgebungsvariablen" aria-label="Anker">#</a>
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#konfiguration-von-wg-portal" aria-label="Anker">#</a>
     </span>
     
 </h4>
+<p>wg-portal läuft in Version 2 und liest <code>/app/config/config.yaml</code> aus der ConfigMap <code>wireguard-wg-portal-config</code> (Eintrag <code>wg-portal-config</code> unter <code>configMaps</code> in <code>values.yaml</code>). Umgebungsvariablen der Form <code>LDAP_*</code> oder <code>EMAIL_*</code> aus v1 wertet v2 nicht mehr aus. Platzhalter wie <code>${WG_PORTAL_LDAP_BIND_PASS}</code> ersetzt wg-portal beim Start aus der Umgebung; die Werte kommen aus dem Secret <code>wg-portal-secrets</code> (<code>secretGenerator</code> in <code>kustomization.yaml</code>).</p>
 <ul>
-<li><code>LDAP_URL</code>, <code>LDAP_BASEDN</code>, <code>LDAP_USER</code>, <code>LDAP_PASSWORD</code>: Konfigurieren die Verbindung zum Active Directory.</li>
-<li><code>LDAP_SYNC_FILTER</code>: Definiert, welche Benutzer Zugriff auf den VPN-Dienst haben.</li>
-<li><code>SELF_PROVISIONING</code>: Ist auf <code>true</code> gesetzt, um Benutzern die eigenständige Verwaltung ihrer Geräte zu ermöglichen.</li>
-<li><code>MAIL_FROM</code>, <code>EMAIL_HOST</code>: Konfigurieren den E-Mail-Versand für Benachrichtigungen.</li>
+<li><code>{{login_identifier}}</code> im <code>login_filter</code> steht in <code>values.yaml</code> maskiert, weil app-template ConfigMap-Daten durch <code>tpl</code> schickt. Prüfen mit <code>kubectl kustomize --enable-helm apps/wireguard</code>.</li>
+<li><code>user_identifier: mail</code> ist Pflicht: Die aus v1 übernommenen Nutzer haben die Mail-Adresse als Kennung.</li>
+<li><code>login_filter</code> und <code>sync_filter</code> verlangen beide die Gruppe <code>wireguardEnabled</code>. <code>registration_enabled: true</code> ist nötig, damit die Anmeldung auch per <code>sAMAccountName</code> oder <code>otherMailbox</code> klappt.</li>
+<li>Admin wird, wer Mitglied von <code>Domain Admins</code> ist (<code>admin_group</code>); der lokale Admin ist abgeschaltet.</li>
+<li>Der Sync sperrt Nutzer, die aus dem <code>sync_filter</code> fallen (<code>disable_missing</code>), und gibt sie bei Rückkehr wieder frei (<code>auto_re_enable</code>).</li>
+<li><code>import_existing: false</code> und <code>restore_state: false</code>: <code>wg0</code> legt weiterhin <code>wg-quick</code> im Container <code>wireguard</code> an. wg-portal verwaltet nur die Peers und schreibt <code>wg0.conf</code> nach <code>/etc/wireguard/wg_confs</code> (<code>config_storage_path</code>).</li>
+<li>Am Interface <code>wg0</code> muss im Portal die Routing-Tabelle auf <code>off</code> stehen. Sonst legt v2 bei jeder Peer-Änderung eine eigene fwmark, Policy-Routing-Regeln und Routen auf <code>wg0</code> an und entfernt die Kernel-Route des wg0-Netzes aus <code>main</code>.</li>
+<li>Jede Änderung an <code>wg-portal-config</code> oder <code>wg-portal-secrets</code> startet über Reloader den ganzen Pod <code>wireguard-main</code> neu, also auch WireGuard-Server und Bastion.</li>
 </ul>
+
+<h4 class="relative group">Umstieg von v1 auf v2
+    <div id="umstieg-von-v1-auf-v2" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#umstieg-von-v1-auf-v2" aria-label="Anker">#</a>
+    </span>
+    
+</h4>
+<p>Die v1-Datenbank <code>wg_portal.db</code> wird nicht weiterverwendet. Vor dem ersten Start von v2 wird sie einmalig in die neue <code>sqlite.db</code> auf demselben PVC übernommen, bei herunterskaliertem <code>wireguard-main</code> in einem Hilfs-Pod mit dem v2-Image (ConfigMap und Secret braucht die Migration nicht):</p>
+<ol>
+<li>
+<p>Autosync der Application <code>wireguard</code> anhalten und <code>wireguard-main</code> auf 0 skalieren.</p>
+</li>
+<li>
+<p>Sicherungen von <code>wg_portal.db</code> und <code>wg_confs/wg0.conf</code> anlegen.</p>
+</li>
+<li>
+<p><code>/app/wg-portal -migrateFrom=/app/data/wg_portal.db</code> mit Arbeitsverzeichnis <code>/app</code> ausführen. Die Migration verlangt eine Ziel-DB ohne Nutzer, Interfaces und Peers und lässt <code>wg_portal.db</code> unverändert. Nicht als Container-Argument im Deployment eintragen: Das Programm beendet sich danach, und ein zweiter Lauf scheitert.</p>
+</li>
+<li>
+<p>Die Migration übernimmt die Nutzer mit leerem <code>provider_name</code> und das Interface ohne Routing-Tabelle. Beides danach korrigieren, im Hilfs-Pod mit <code>sqlite3</code>:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl"><span class="nb">printf</span> <span class="s1">&#39;%s\n&#39;</span> <span class="s2">&#34;UPDATE user_authentications SET provider_name = &#39;addc&#39; WHERE source = &#39;ldap&#39; AND provider_name = &#39;&#39;;&#34;</span> <span class="s2">&#34;UPDATE interfaces SET routing_table = &#39;off&#39;, save_config = 0 WHERE identifier = &#39;wg0&#39;;&#34;</span> <span class="p">|</span> kubectl -n wireguard <span class="nb">exec</span> -i &lt;hilfs-pod&gt; -- sqlite3 /data/sqlite.db</span></span></code></pre></div></div>
+</li>
+<li>
+<p>Hilfs-Pod löschen und Autosync wieder einschalten. Argo rollt v2 aus. Danach <code>ip rule</code>, Anmeldung am Portal und Sync-Log prüfen.</p>
+</li>
+</ol>
+<p>Als gelöscht markierte v1-Nutzer übernimmt die Migration nicht; sind sie noch in <code>wireguardEnabled</code>, legt der erste Sync sie neu an.</p>
+<p>Rollback: die Änderung an <code>values.yaml</code> und <code>kustomization.yaml</code> zurücknehmen. v1 startet mit der unveränderten <code>wg_portal.db</code> und schreibt <code>wg0.conf</code> neu. Änderungen, die in v2 vorgenommen wurden, gehen dabei verloren. Für einen zweiten Versuch <code>sqlite.db</code> vorher löschen.</p>
 
 <h4 class="relative group">Wichtige Einstellungen
     <div id="wichtige-einstellungen" class="anchor"></div>

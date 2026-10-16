@@ -34,7 +34,7 @@ k3s_cluster:
   vars:
     ansible_port: 22
     ansible_user: root
-    k3s_version: v1.36.4+k3s1
+    k3s_version: v1.36.5+k3s1
     token: !vault |
           $ANSIBLE_VAULT;1.1;AES256
           37303231303839393633303836613065333935663261333739616666393064336563323731363766
