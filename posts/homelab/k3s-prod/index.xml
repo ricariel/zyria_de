@@ -9,7 +9,7 @@
     <managingEditor>fabrice@zyria.de (Fabrice Kirchner)</managingEditor>
     <webMaster>fabrice@zyria.de (Fabrice Kirchner)</webMaster>
     
-    <lastBuildDate>Thu, 15 Oct 2026 16:36:35 +0200</lastBuildDate><atom:link href="https://zyria.de/posts/homelab/k3s-prod/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 17 Oct 2026 01:22:30 +0200</lastBuildDate><atom:link href="https://zyria.de/posts/homelab/k3s-prod/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Operational Lifecycle Management: Orchestrierter Shutdown für Kubernetes</title>
@@ -18,6 +18,46 @@
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/posts/homelab/k3s-prod/ansible/shutdown-startup/</guid>
       <description>Ein technischer Leitfaden für das geordnete Herunterfahren und Wiederanfahren eines Kubernetes-Clusters (k3s/Longhorn/ArgoCD) zur Vermeidung von Datenkorruption.</description>
+      
+    </item>
+    
+    <item>
+      <title>Scrypted</title>
+      <link>https://zyria.de/posts/homelab/k3s-prod/apps/scrypted/readme/</link>
+      <pubDate>Sat, 17 Oct 2026 01:22:30 +0200</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/scrypted/readme/</guid>
+      <description>Scrypted übernimmt Kamerastreams per RTSP und stellt sie als HomeKit-Kameras mit Aufnahme bereit. Es hängt wie Home Assistant per Multus direkt im Heimnetz.</description>
+      
+    </item>
+    
+    <item>
+      <title>Home Assistant</title>
+      <link>https://zyria.de/posts/homelab/k3s-prod/apps/home-assistant/readme/</link>
+      <pubDate>Sat, 17 Oct 2026 00:48:46 +0200</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/home-assistant/readme/</guid>
+      <description>Home Assistant ist das Gehirn des Smart Homes. Im selben Namespace laufen Mosquitto (MQTT-Broker), python-matter-server und ein OpenThread Border Router (OTBR) als eigenständige Deployments.</description>
+      
+    </item>
+    
+    <item>
+      <title>Localkit</title>
+      <link>https://zyria.de/posts/homelab/k3s-prod/apps/localkit/readme/</link>
+      <pubDate>Fri, 16 Oct 2026 23:32:30 +0200</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/localkit/readme/</guid>
+      <description>Localkit ersetzt die Petkit-Cloud-API und den Aliyun-MQTT-Broker im Heimnetz. Die Geraete vertrauen einer eigenen CA aus cert-manager, die in ihr Steuerprogramm gepatcht wird.</description>
+      
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://zyria.de/posts/homelab/k3s-prod/apps/corenetworks-dns-operator/readme/</link>
+      <pubDate>Fri, 16 Oct 2026 22:29:48 +0200</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/corenetworks-dns-operator/readme/</guid>
+      <description>&lt;h1 class=&#34;relative group&#34;&gt;corenetworks-dns-operator&#xA;    &lt;div id=&#34;corenetworks-dns-operator&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#corenetworks-dns-operator&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h1&gt;&#xA;&lt;p&gt;Manages DNS records at &lt;a href=&#34;https://www.core-networks.de/&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;Core Networks&lt;/a&gt; from&#xA;&lt;code&gt;DNSRecord&lt;/code&gt; objects in this cluster.&lt;/p&gt;&#xA;&lt;p&gt;Chart and source: &lt;a href=&#34;https://git.zyria.de/pyrox/corenetworks-dns-operator&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;pyrox/corenetworks-dns-operator&lt;/a&gt;&lt;/p&gt;&#xA;&#xA;&lt;h2 class=&#34;relative group&#34;&gt;Contents&#xA;    &lt;div id=&#34;contents&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#contents&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;table&gt;&#xA;&#x9;&lt;thead&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;th&gt;File&lt;/th&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;th&gt;What it holds&lt;/th&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&lt;/thead&gt;&#xA;&#x9;&lt;tbody&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;&lt;code&gt;kustomization.yaml&lt;/code&gt;&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;The chart reference and its pinned version&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;&lt;code&gt;values.yaml&lt;/code&gt;&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;Everything specific to this cluster&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;&lt;code&gt;namespace.yaml&lt;/code&gt;&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;The namespace&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&lt;/tbody&gt;&#xA;&lt;/table&gt;&#xA;&lt;p&gt;No rendered manifests here. The CRDs, RBAC and Deployment come from the chart,&#xA;which generates the CRD schema from the operator&amp;rsquo;s Go types — so this cluster&#xA;cannot end up with a schema that does not match the controller it runs.&lt;/p&gt;</description>
       
     </item>
     
@@ -38,16 +78,6 @@
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/posts/homelab/k3s-prod/apps/multus/readme/</guid>
       <description>Multus ermöglicht es, Pods mehrere Netzwerkschnittstellen zuzuweisen, und ist die Grundlage für direkte Layer-2-Netzwerkanbindungen im Cluster.</description>
-      
-    </item>
-    
-    <item>
-      <title>Home Assistant</title>
-      <link>https://zyria.de/posts/homelab/k3s-prod/apps/home-assistant/readme/</link>
-      <pubDate>Sat, 10 Oct 2026 21:59:07 +0200</pubDate>
-      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/home-assistant/readme/</guid>
-      <description>Home Assistant ist das Gehirn des Smart Homes. Im selben Namespace laufen Mosquitto (MQTT-Broker), python-matter-server und ein OpenThread Border Router (OTBR) als eigenständige Deployments.</description>
       
     </item>
     
@@ -168,16 +198,6 @@
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/posts/homelab/k3s-prod/apps/hx53-de/readme/</guid>
       <description>Nginx liefert die statische Webseite hx53.de aus, git-sync zieht den Inhalt laufend aus einem Git-Repository nach.</description>
-      
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://zyria.de/posts/homelab/k3s-prod/apps/corenetworks-dns-operator/readme/</link>
-      <pubDate>Tue, 25 Aug 2026 09:24:25 +0200</pubDate>
-      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/corenetworks-dns-operator/readme/</guid>
-      <description>&lt;h1 class=&#34;relative group&#34;&gt;corenetworks-dns-operator&#xA;    &lt;div id=&#34;corenetworks-dns-operator&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#corenetworks-dns-operator&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h1&gt;&#xA;&lt;p&gt;Manages DNS records at &lt;a href=&#34;https://www.core-networks.de/&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;Core Networks&lt;/a&gt; from&#xA;&lt;code&gt;DNSRecord&lt;/code&gt; objects in this cluster.&lt;/p&gt;&#xA;&lt;p&gt;Chart and source: &lt;a href=&#34;https://git.zyria.de/pyrox/corenetworks-dns-operator&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;pyrox/corenetworks-dns-operator&lt;/a&gt;&lt;/p&gt;&#xA;&#xA;&lt;h2 class=&#34;relative group&#34;&gt;Contents&#xA;    &lt;div id=&#34;contents&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#contents&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;table&gt;&#xA;&#x9;&lt;thead&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;th&gt;File&lt;/th&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;th&gt;What it holds&lt;/th&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&lt;/thead&gt;&#xA;&#x9;&lt;tbody&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;&lt;code&gt;kustomization.yaml&lt;/code&gt;&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;The chart reference and its pinned version&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;&lt;code&gt;values.yaml&lt;/code&gt;&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;Everything specific to this cluster&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;&lt;code&gt;namespace.yaml&lt;/code&gt;&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;The namespace&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&lt;/tbody&gt;&#xA;&lt;/table&gt;&#xA;&lt;p&gt;No rendered manifests here. The CRDs, RBAC and Deployment come from the chart,&#xA;which generates the CRD schema from the operator&amp;rsquo;s Go types — so this cluster&#xA;cannot end up with a schema that does not match the controller it runs.&lt;/p&gt;</description>
       
     </item>
     

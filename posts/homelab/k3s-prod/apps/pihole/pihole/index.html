@@ -105,7 +105,7 @@
 	<meta property="og:type" content="article">
 		<meta property="article:section" content="posts">
 		<meta property="article:published_time" content="2025-10-18T07:42:43+02:00">
-		<meta property="article:modified_time" content="2026-09-09T12:27:43+02:00">
+		<meta property="article:modified_time" content="2026-10-16T18:11:03+02:00">
 		<meta property="article:tag" content="Kubernetes">
 		<meta property="article:tag" content="Pihole">
 		<meta property="article:tag" content="Dns">
@@ -311,12 +311,12 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
     "dateCreated": "2025-10-18T07:42:43\u002b02:00",
     "datePublished": "2025-10-18T07:42:43\u002b02:00",
     
-    "dateModified": "2026-09-09T12:27:43\u002b02:00",
+    "dateModified": "2026-10-16T18:11:03\u002b02:00",
     
     "keywords": ["kubernetes","pihole","dns"],
     
     "mainEntityOfPage": "https://zyria.de/posts/homelab/k3s-prod/apps/pihole/pihole/",
-    "wordCount": "387"
+    "wordCount": "731"
   }]
   </script>
 
@@ -963,7 +963,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2025-10-18T07:42:43&#43;02:00">18 Oktober 2025</time><span class="px-2 text-primary-500">&middot;</span><time datetime="2026-09-09T12:27:43&#43;02:00">Aktualisiert: 9 September 2026</time><span class="px-2 text-primary-500">&middot;</span><span>387 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
+      <time datetime="2025-10-18T07:42:43&#43;02:00">18 Oktober 2025</time><span class="px-2 text-primary-500">&middot;</span><time datetime="2026-10-16T18:11:03&#43;02:00">Aktualisiert: 16 Oktober 2026</time><span class="px-2 text-primary-500">&middot;</span><span>731 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
 
 
   
@@ -1146,6 +1146,8 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
         <li><a href="#lokale-anpassungen">Lokale Anpassungen</a>
           <ul>
             <li><a href="#wichtige-einstellungen">Wichtige Einstellungen</a></li>
+            <li><a href="#blocklisten">Blocklisten</a></li>
+            <li><a href="#domainlisten">Domainlisten</a></li>
           </ul>
         </li>
         <li><a href="#installation">Installation</a></li>
@@ -1173,6 +1175,8 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
         <li><a href="#lokale-anpassungen">Lokale Anpassungen</a>
           <ul>
             <li><a href="#wichtige-einstellungen">Wichtige Einstellungen</a></li>
+            <li><a href="#blocklisten">Blocklisten</a></li>
+            <li><a href="#domainlisten">Domainlisten</a></li>
           </ul>
         </li>
         <li><a href="#installation">Installation</a></li>
@@ -1375,6 +1379,72 @@ This Pi-hole deployment includes:</p>
 <li>Persistent storage uses Longhorn-backed PVCs.</li>
 <li>Patches are applied to the Pi-hole service and deployment for dual-stack support and web server port configuration.</li>
 </ul>
+
+<h4 class="relative group">Blocklisten
+    <div id="blocklisten" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#blocklisten" aria-label="Anker">#</a>
+    </span>
+    
+</h4>
+<p>Die Blocklisten stehen unter <code>adlists</code> in <a href="values.yaml" ><code>values.yaml</code></a>, nicht in der Weboberfläche. Pi-hole übernimmt die vom Chart erzeugte <code>adlists.list</code> nur, wenn <code>gravity.db</code> neu angelegt wird. Damit die Liste auch auf dem bestehenden Volume gilt, gleicht der Init-Container <code>adlist-sync</code> bei jedem Pod-Start die Tabelle <code>adlist</code> damit ab: fehlende Listen anlegen, abgeschaltete einschalten, nicht aufgeführte löschen. Allowlists (Abonnements vom Typ allow) bleiben unberührt, die Domainlisten regelt der nächste Abschnitt.</p>
+<p>Eine in der Weboberfläche hinzugefügte Blockliste verschwindet deshalb beim nächsten Pod-Start wieder. Gestrichene Listen wirken nach dem Neustart sofort, neu eingetragene erst nach dem nächsten Gravity-Lauf am Sonntag oder nach:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">kubectl -n pihole <span class="nb">exec</span> deploy/pihole -c pihole -- pihole -g</span></span></code></pre></div></div>
+<p>Die Begründung der Auswahl steht als Kommentar über der Liste.</p>
+
+<h4 class="relative group">Domainlisten
+    <div id="domainlisten" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#domainlisten" aria-label="Anker">#</a>
+    </span>
+    
+</h4>
+<p>Einzelne Ausnahmen und Sperren (Tabelle <code>domainlist</code> in <code>gravity.db</code>) stehen in <a href="domainlist/" ><code>domainlist/</code></a>, je Pi-hole-Typ eine Datei:</p>
+<table>
+	<thead>
+			<tr>
+					<th>Datei</th>
+					<th>Pi-hole-Typ</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><code>allow.list</code></td>
+					<td>exact allow (0)</td>
+			</tr>
+			<tr>
+					<td><code>deny.list</code></td>
+					<td>exact deny (1)</td>
+			</tr>
+			<tr>
+					<td><code>allow-regex.list</code></td>
+					<td>regex allow (2)</td>
+			</tr>
+			<tr>
+					<td><code>deny-regex.list</code></td>
+					<td>regex deny (3)</td>
+			</tr>
+			<tr>
+					<td><code>remove.list</code></td>
+					<td>Einträge, die gelöscht werden, Format <code>&lt;datei&gt; &lt;eintrag&gt;</code>, etwa <code>allow example.org</code></td>
+			</tr>
+	</tbody>
+</table>
+<p>Eine Zeile je Eintrag, Text hinter <code>#</code> landet als Kommentar in der Weboberfläche. <code>configMapGenerator</code> in <a href="kustomization.yaml" ><code>kustomization.yaml</code></a> macht daraus die ConfigMap <code>pihole-domainlist</code>; der Hash im Namen startet den Pod bei jeder Änderung neu. Der Init-Container <code>domainlist-sync</code> gleicht dann ergänzend ab:</p>
+<ul>
+<li>Einträge aus dem Repo bekommen den Kommentar <code>k3s-prod</code> (oder <code>k3s-prod: &lt;kommentar&gt;</code>), werden angelegt oder eingeschaltet und der Gruppe Default zugeordnet.</li>
+<li>Ein Eintrag mit dieser Markierung, der aus dem Repo verschwindet, wird gelöscht.</li>
+<li>Einträge aus der Weboberfläche tragen keine Markierung und bleiben stehen. Was dauerhaft gelten soll, gehört ins Repo; was weg soll, in <code>remove.list</code>.</li>
+<li>Ungültige Zeilen überspringt der Init-Container mit einer Warnung im Log, statt zu scheitern: ein fehlschlagender Init-Container legt DNS lahm, weil der alte Pod wegen des RWO-Volumes nicht weiterläuft.</li>
+</ul>
+<p>Die Wirkung zeigt das Log nach dem Neustart:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">kubectl -n pihole logs deploy/pihole -c domainlist-sync</span></span></code></pre></div></div>
+<p>Wird <code>gravity.db</code> neu angelegt, läuft der Abgleich erst beim nächsten Pod-Start.</p>
+<p>Änderungen am SQL vor dem Commit gegen eine Kopie von <code>gravity.db</code> testen, und zwar mit <code>pihole-FTL sqlite3</code> aus dem Pi-hole-Image oder mit <code>sqlite3 -cmd &quot;PRAGMA foreign_keys=ON&quot;</code>. <code>pihole-FTL</code> erzwingt Fremdschlüssel, ein normales <code>sqlite3</code> nicht.</p>
 
 <h3 class="relative group">Installation
     <div id="installation" class="anchor"></div>
