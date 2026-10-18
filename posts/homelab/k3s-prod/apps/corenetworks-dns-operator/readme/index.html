@@ -106,8 +106,8 @@ Contents # File What it holds kustomization.yaml The chart reference and its pin
 	<meta property="og:locale" content="de_de">
 	<meta property="og:type" content="article">
 		<meta property="article:section" content="posts">
-		<meta property="article:published_time" content="2026-10-16T22:29:48+02:00">
-		<meta property="article:modified_time" content="2026-10-16T22:29:48+02:00">
+		<meta property="article:published_time" content="2026-10-17T12:15:30+02:00">
+		<meta property="article:modified_time" content="2026-10-17T12:15:30+02:00">
 		<meta property="article:tag" content="Kubernetes">
 		<meta property="article:tag" content="K3s">
 		<meta property="article:tag" content="Gitops">
@@ -315,15 +315,15 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
       "sameAs": ["https://git.casa-due-pur.de/fabrice.kirchner", "https://git.zyria.de/pyrox", "https://github.com/ricariel", "https://www.linkedin.com/in/fabrice-kirchner-bb5408163/", "https://www.xing.com/profile/Fabrice_Kirchner", "https://kirchner.social/@fabrice", "https://codeberg.org/ricariel"]
     },
     "copyrightYear": "2026",
-    "dateCreated": "2026-10-16T22:29:48\u002b02:00",
-    "datePublished": "2026-10-16T22:29:48\u002b02:00",
+    "dateCreated": "2026-10-17T12:15:30\u002b02:00",
+    "datePublished": "2026-10-17T12:15:30\u002b02:00",
     
-    "dateModified": "2026-10-16T22:29:48\u002b02:00",
+    "dateModified": "2026-10-17T12:15:30\u002b02:00",
     
     "keywords": ["kubernetes","k3s","gitops","argocd","helm","kustomize","homelab","produktion"],
     
     "mainEntityOfPage": "https://zyria.de/posts/homelab/k3s-prod/apps/corenetworks-dns-operator/readme/",
-    "wordCount": "364"
+    "wordCount": "519"
   }]
   </script>
 
@@ -968,7 +968,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2026-10-16T22:29:48&#43;02:00">16 Oktober 2026</time><span class="px-2 text-primary-500">&middot;</span><span>364 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
+      <time datetime="2026-10-17T12:15:30&#43;02:00">17 Oktober 2026</time><span class="px-2 text-primary-500">&middot;</span><span>519 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
 
 
   
@@ -1242,6 +1242,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
     <li><a href="#a-second-cluster">A second cluster</a></li>
     <li><a href="#credentials">Credentials</a></li>
     <li><a href="#adding-a-record">Adding a record</a></li>
+    <li><a href="#acme-webhook">ACME webhook</a></li>
     <li><a href="#watch-out">Watch out</a></li>
   </ul>
 </nav>
@@ -1260,6 +1261,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
     <li><a href="#a-second-cluster">A second cluster</a></li>
     <li><a href="#credentials">Credentials</a></li>
     <li><a href="#adding-a-record">Adding a record</a></li>
+    <li><a href="#acme-webhook">ACME webhook</a></li>
     <li><a href="#watch-out">Watch out</a></li>
   </ul>
 </nav>
@@ -1479,6 +1481,32 @@ Moving the credentials elsewhere means adding that namespace here too.</p>
 <p><code>kubectl get dnsrecords -A</code> shows two columns worth reading: <code>READY</code> means the
 provider database matches the object, <code>PUBLISHED</code> means the zone has been
 committed so the nameservers actually answer with it.</p>
+
+<h2 class="relative group">ACME webhook
+    <div id="acme-webhook" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#acme-webhook" aria-label="Anker">#</a>
+    </span>
+    
+</h2>
+<p><code>webhook.enabled</code> deploys the chart&rsquo;s cert-manager DNS-01 solver next to the
+operator. A ClusterIssuer refers to it with <code>groupName: acme.dns.zyria.de</code> and
+<code>solverName: corenetworks</code>; for each challenge the webhook creates a TXT
+<code>DNSRecord</code> in this namespace and the operator publishes it. The webhook holds
+no Core Networks credentials.</p>
+<p>A <code>ValidatingAdmissionPolicy</code> holds every <code>DNSRecord</code> created or changed in
+this namespace to TXT under <code>_acme-challenge</code> with <code>exclusive: false</code>. Records
+for workloads belong in their own namespaces anyway; here they would be
+refused.</p>
+<p>The webhook runs behind an <code>APIService</code>. If no replica is ready, API discovery
+reports errors for every client and namespace deletion can hang; check
+<code>kubectl get apiservice v1alpha1.acme.dns.zyria.de</code> first when that happens.</p>
+<p>The ClusterIssuer <code>corenetworks</code> in <code>apps/cert-manager</code> uses it. Passed a
+staging test with an apex and a wildcard name on 2026-10-17: both challenges
+were solved one after the other within about three minutes, and the TXT values
+were gone from the provider afterwards.</p>
 
 <h2 class="relative group">Watch out
     <div id="watch-out" class="anchor"></div>
@@ -1732,14 +1760,14 @@ in the process, and a second replica would publish the same zone twice.</li>
           
             <a
               class="flex text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
-              href="/posts/homelab/k3s-prod/apps/ansible-semaphore/readme/">
+              href="/posts/homelab/k3s-prod/apps/scrypted/readme/">
               <span class="leading-6">
-                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;Ansible Semaphore
+                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;Scrypted
               </span>
             </a>
             
               <span class="ms-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
-                <time datetime="2026-10-14T15:58:41&#43;02:00">14 Oktober 2026</time>
+                <time datetime="2026-10-17T01:22:30&#43;02:00">17 Oktober 2026</time>
               </span>
             
           
@@ -1755,7 +1783,7 @@ in the process, and a second replica would publish the same zone twice.</li>
             </a>
             
               <span class="me-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
-                <time datetime="2026-10-16T23:32:30&#43;02:00">16 Oktober 2026</time>
+                <time datetime="2026-10-17T12:25:32&#43;02:00">17 Oktober 2026</time>
               </span>
             
           
