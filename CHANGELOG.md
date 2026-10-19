@@ -3,12 +3,36 @@
 Alle nennenswerten Änderungen an diesem Repository.
 Automatisch aus [Conventional Commits](https://www.conventionalcommits.org) via [git-cliff](https://git-cliff.org).
 
+## [2026.42] - 2026-10-19 ([Vergleich zur Vorversion](https://git.zyria.de/pyrox/zyria_de/compare/2026.41...2026.42))
+
+### ✨ Features
+
+- **about**: Update professional focus and skills ([bd532a1](https://git.zyria.de/pyrox/zyria_de/commit/bd532a1d5bc9cf5976546494f16de8fe41fa35de))
+
+### 🐛 Bug Fixes
+
+- **homelab**: Correct weight key in first aid post ([8c02a8e](https://git.zyria.de/pyrox/zyria_de/commit/8c02a8e328c228392ee131935a082716b90a30b6))
+- **homelab**: Correct typos in homelab posts ([b8271d1](https://git.zyria.de/pyrox/zyria_de/commit/b8271d1827c4158f401765cace646b7d05f76861))
+- **about**: Restore original wording and extend skill lists ([1fc06fd](https://git.zyria.de/pyrox/zyria_de/commit/1fc06fd1123ebcf93c05e6b5de166199b358a55a))
+
+### 📝 Documentation
+
+- **homelab**: Add ZFS space reservation guide and gitleaks snippet ([af3b43b](https://git.zyria.de/pyrox/zyria_de/commit/af3b43bd45db586f0fbc9d250bb53b34f59ba93b))
+
+### 🧹 Miscellaneous
+
+- **hugo**: Module aktualisieren
+- **hugo**: Module aktualisieren
+- **hugo**: Module aktualisieren
+- **hugo**: Module aktualisieren
+- **hugo**: Module aktualisieren
+- **hugo**: Module aktualisieren
+
 ## [2026.41] - 2026-10-12 ([Vergleich zur Vorversion](https://git.zyria.de/pyrox/zyria_de/compare/2026.40...2026.41))
 
 ### 🔧 CI/Build
 
-- **renovate**:
-Pass heartbeat and coverage report inputs ([2bdc6f6](https://git.zyria.de/pyrox/zyria_de/commit/2bdc6f6654374c496072bd2c73f901af53ac1ca0))
+- **renovate**: Pass heartbeat and coverage report inputs ([2bdc6f6](https://git.zyria.de/pyrox/zyria_de/commit/2bdc6f6654374c496072bd2c73f901af53ac1ca0))
 
 ### 🧹 Miscellaneous
 
@@ -35,8 +59,7 @@ Pass heartbeat and coverage report inputs ([2bdc6f6](https://git.zyria.de/pyrox/
 
 ### 🔧 CI/Build
 
-- **workflows**:
-Commitlint ergänzen ([0537fd3](https://git.zyria.de/pyrox/zyria_de/commit/0537fd353df28b8433592364610e1b0fd301288a))
+- **workflows**: Commitlint ergänzen ([0537fd3](https://git.zyria.de/pyrox/zyria_de/commit/0537fd353df28b8433592364610e1b0fd301288a))
 
 ### 🧹 Miscellaneous
 
@@ -99,52 +122,32 @@ Commitlint ergänzen ([0537fd3](https://git.zyria.de/pyrox/zyria_de/commit/0537f
 
 ### ✨ Features
 
-- **hugo**:
-Manuellen Aufruf ermoeglichen ([b013597](https://git.zyria.de/pyrox/zyria_de/commit/b013597d46eaa5e5b06e6a04a2fa0fb80cc5a25d))
-- **hugo**:
-Update module github.com/nunocoracao/blowfish/v2 ( v2.100.0 → v2.105.0 ) ([a51b6eb](https://git.zyria.de/pyrox/zyria_de/commit/a51b6ebdfec96946872716406f29998f0e3bce8d))
-- **ci**:
-Remove local renovate config. ([aba0161](https://git.zyria.de/pyrox/zyria_de/commit/aba01616797d2e3e7bcaf915d0840da9070b790a))
--
-Move Homelab, Solar, Kubernetes into Beiträge sub-menu ([f30001d](https://git.zyria.de/pyrox/zyria_de/commit/f30001db7a092183534ff87af8c1e3764b5a33d7))
--
-Improve content structure, tags, descriptions and navigation ([e8ed6f9](https://git.zyria.de/pyrox/zyria_de/commit/e8ed6f9e8fec2f2649192a491cbc0e93e24bdd2f))
+- **hugo**: Manuellen Aufruf ermoeglichen ([b013597](https://git.zyria.de/pyrox/zyria_de/commit/b013597d46eaa5e5b06e6a04a2fa0fb80cc5a25d))
+- **hugo**: Update module github.com/nunocoracao/blowfish/v2 ( v2.100.0 → v2.105.0 ) ([a51b6eb](https://git.zyria.de/pyrox/zyria_de/commit/a51b6ebdfec96946872716406f29998f0e3bce8d))
+- **ci**: Remove local renovate config. ([aba0161](https://git.zyria.de/pyrox/zyria_de/commit/aba01616797d2e3e7bcaf915d0840da9070b790a))
+- Move Homelab, Solar, Kubernetes into Beiträge sub-menu ([f30001d](https://git.zyria.de/pyrox/zyria_de/commit/f30001db7a092183534ff87af8c1e3764b5a33d7))
+- Improve content structure, tags, descriptions and navigation ([e8ed6f9](https://git.zyria.de/pyrox/zyria_de/commit/e8ed6f9e8fec2f2649192a491cbc0e93e24bdd2f))
 
 ### 🐛 Bug Fixes
 
-- **workflows**:
-ZYRIA_TOKEN durch den passenden Token ersetzen ([84351fa](https://git.zyria.de/pyrox/zyria_de/commit/84351fa2a6f0d078565de35526a99b2b2b18c2ca))
-- **hugo**:
-Token ueber eine Rueckfallkette beziehen ([5daecce](https://git.zyria.de/pyrox/zyria_de/commit/5daeccede0c4764d91145ed1145bfc02ab007031))
-- **lint**:
-Go.mod von den Tabulator-Hooks ausnehmen ([fac0ae0](https://git.zyria.de/pyrox/zyria_de/commit/fac0ae0779597ee6a99ebd1a091f0c0c86784841))
-- **lint**:
-Unicode-Hooks nur noch auf Textdateien anwenden ([32ea36f](https://git.zyria.de/pyrox/zyria_de/commit/32ea36f2fd445e068b03c9684aa6d161f64a4391))
-- **pre-commit**:
-Python-Interpreter nicht mehr auf python3.13 festnageln ([f43f1ba](https://git.zyria.de/pyrox/zyria_de/commit/f43f1ba8670561aeb19d93af58d9bcb7785a6466))
-- **actions**:
-Sync with default action ([6b3e70f](https://git.zyria.de/pyrox/zyria_de/commit/6b3e70f0ff57d00c1f3bcacd3092f462b7e8d889))
-- **actions**:
-Sync with default action ([3ec4979](https://git.zyria.de/pyrox/zyria_de/commit/3ec49797fb8c6e0a9feef5a938968e1a1e4660a2))
-- **actions**:
-Sync with default action ([70fd254](https://git.zyria.de/pyrox/zyria_de/commit/70fd25443e2c13c1c736da3b516d8b9fc468f7cf))
--
-Clean up /posts/ page structure ([1184737](https://git.zyria.de/pyrox/zyria_de/commit/11847373caf6f766b360c44eb0f8dfd18cee6825))
--
-Repair code copy button on macOS ([a17697c](https://git.zyria.de/pyrox/zyria_de/commit/a17697c441c58275b7d84688f6a308a7d1192b84))
+- **workflows**: ZYRIA_TOKEN durch den passenden Token ersetzen ([84351fa](https://git.zyria.de/pyrox/zyria_de/commit/84351fa2a6f0d078565de35526a99b2b2b18c2ca))
+- **hugo**: Token ueber eine Rueckfallkette beziehen ([5daecce](https://git.zyria.de/pyrox/zyria_de/commit/5daeccede0c4764d91145ed1145bfc02ab007031))
+- **lint**: Go.mod von den Tabulator-Hooks ausnehmen ([fac0ae0](https://git.zyria.de/pyrox/zyria_de/commit/fac0ae0779597ee6a99ebd1a091f0c0c86784841))
+- **lint**: Unicode-Hooks nur noch auf Textdateien anwenden ([32ea36f](https://git.zyria.de/pyrox/zyria_de/commit/32ea36f2fd445e068b03c9684aa6d161f64a4391))
+- **pre-commit**: Python-Interpreter nicht mehr auf python3.13 festnageln ([f43f1ba](https://git.zyria.de/pyrox/zyria_de/commit/f43f1ba8670561aeb19d93af58d9bcb7785a6466))
+- **actions**: Sync with default action ([6b3e70f](https://git.zyria.de/pyrox/zyria_de/commit/6b3e70f0ff57d00c1f3bcacd3092f462b7e8d889))
+- **actions**: Sync with default action ([3ec4979](https://git.zyria.de/pyrox/zyria_de/commit/3ec49797fb8c6e0a9feef5a938968e1a1e4660a2))
+- **actions**: Sync with default action ([70fd254](https://git.zyria.de/pyrox/zyria_de/commit/70fd25443e2c13c1c736da3b516d8b9fc468f7cf))
+- Clean up /posts/ page structure ([1184737](https://git.zyria.de/pyrox/zyria_de/commit/11847373caf6f766b360c44eb0f8dfd18cee6825))
+- Repair code copy button on macOS ([a17697c](https://git.zyria.de/pyrox/zyria_de/commit/a17697c441c58275b7d84688f6a308a7d1192b84))
 
 ### 📝 Documentation
 
-- **workflows**:
-Calver-tag.yaml an die Vorlage angleichen ([2d857bd](https://git.zyria.de/pyrox/zyria_de/commit/2d857bd37301e30ebec2e39100efc9f986fbdee4))
--
-Gliederung der Markdown-Dateien richtigstellen ([60c4a0f](https://git.zyria.de/pyrox/zyria_de/commit/60c4a0feb3d4d00d2e32e51680046c3a606edc15))
-- **homelab**:
-Add Proxmox NoVNC-Fehler-Snippet ([a2819e6](https://git.zyria.de/pyrox/zyria_de/commit/a2819e6fbdb9115d6ad769b5b2ddbf67899d11a9))
--
-Aktualisiere Homelab- und Solar-Notizen, bereinige Bookmarks ([64874fb](https://git.zyria.de/pyrox/zyria_de/commit/64874fb15a3ab8babd70327329a3143be0208123))
-- **homelab**:
-Samba-AD-Integration, VM-Struktur und Benutzer-Onboarding ([2075572](https://git.zyria.de/pyrox/zyria_de/commit/207557261c34243e29cae9d38539348dc7836e93))
+- **workflows**: Calver-tag.yaml an die Vorlage angleichen ([2d857bd](https://git.zyria.de/pyrox/zyria_de/commit/2d857bd37301e30ebec2e39100efc9f986fbdee4))
+- Gliederung der Markdown-Dateien richtigstellen ([60c4a0f](https://git.zyria.de/pyrox/zyria_de/commit/60c4a0feb3d4d00d2e32e51680046c3a606edc15))
+- **homelab**: Add Proxmox NoVNC-Fehler-Snippet ([a2819e6](https://git.zyria.de/pyrox/zyria_de/commit/a2819e6fbdb9115d6ad769b5b2ddbf67899d11a9))
+- Aktualisiere Homelab- und Solar-Notizen, bereinige Bookmarks ([64874fb](https://git.zyria.de/pyrox/zyria_de/commit/64874fb15a3ab8babd70327329a3143be0208123))
+- **homelab**: Samba-AD-Integration, VM-Struktur und Benutzer-Onboarding ([2075572](https://git.zyria.de/pyrox/zyria_de/commit/207557261c34243e29cae9d38539348dc7836e93))
 
 ### ⬆️ Dependencies
 
@@ -262,20 +265,13 @@ Samba-AD-Integration, VM-Struktur und Benutzer-Onboarding ([2075572](https://git
 
 ### 🔧 CI/Build
 
-- **pre-commit**:
-Von Hand ausloesbar machen ([e788854](https://git.zyria.de/pyrox/zyria_de/commit/e7888544b41f418fb73c89e83761178af862a8bb))
-- **workflows**:
-Vorlagen aus pyrox/actions angleichen ([5b723ad](https://git.zyria.de/pyrox/zyria_de/commit/5b723ada677fe5ff3d0c9490aada724eec4bbafe))
-- **calver-tag**:
-Woechentlichen CalVer-Tag aktivieren ([a03bff3](https://git.zyria.de/pyrox/zyria_de/commit/a03bff3642951ef18cad4e7e822f275f8936fd50))
--
-Hugo-Module automatisch aktualisieren ([6833f73](https://git.zyria.de/pyrox/zyria_de/commit/6833f73c789580357dd8476e7a43656ff25b44e5))
--
-Eigene Actions auf den beweglichen Tag @v1 umstellen ([eed9816](https://git.zyria.de/pyrox/zyria_de/commit/eed98164f3fee709cf5aff48e8f44f5c43191bc5))
--
-Secret-Scanning auf gitleaks konsolidieren ([e0c80ad](https://git.zyria.de/pyrox/zyria_de/commit/e0c80addd4b1ccd6cd118c37a20d8f400a0bd5db))
--
-Zentrale pyrox/actions @v1 nutzen ([731dc00](https://git.zyria.de/pyrox/zyria_de/commit/731dc00cdd898257c5816ae428b46a9568f4c8b5))
+- **pre-commit**: Von Hand ausloesbar machen ([e788854](https://git.zyria.de/pyrox/zyria_de/commit/e7888544b41f418fb73c89e83761178af862a8bb))
+- **workflows**: Vorlagen aus pyrox/actions angleichen ([5b723ad](https://git.zyria.de/pyrox/zyria_de/commit/5b723ada677fe5ff3d0c9490aada724eec4bbafe))
+- **calver-tag**: Woechentlichen CalVer-Tag aktivieren ([a03bff3](https://git.zyria.de/pyrox/zyria_de/commit/a03bff3642951ef18cad4e7e822f275f8936fd50))
+- Hugo-Module automatisch aktualisieren ([6833f73](https://git.zyria.de/pyrox/zyria_de/commit/6833f73c789580357dd8476e7a43656ff25b44e5))
+- Eigene Actions auf den beweglichen Tag @v1 umstellen ([eed9816](https://git.zyria.de/pyrox/zyria_de/commit/eed98164f3fee709cf5aff48e8f44f5c43191bc5))
+- Secret-Scanning auf gitleaks konsolidieren ([e0c80ad](https://git.zyria.de/pyrox/zyria_de/commit/e0c80addd4b1ccd6cd118c37a20d8f400a0bd5db))
+- Zentrale pyrox/actions @v1 nutzen ([731dc00](https://git.zyria.de/pyrox/zyria_de/commit/731dc00cdd898257c5816ae428b46a9568f4c8b5))
 
 ### 🧹 Miscellaneous
 
