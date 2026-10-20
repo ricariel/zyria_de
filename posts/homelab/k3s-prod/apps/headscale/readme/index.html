@@ -105,7 +105,7 @@
 	<meta property="og:type" content="article">
 		<meta property="article:section" content="posts">
 		<meta property="article:published_time" content="2025-09-02T09:39:40+02:00">
-		<meta property="article:modified_time" content="2026-09-29T09:25:19+02:00">
+		<meta property="article:modified_time" content="2026-10-19T10:33:11+02:00">
 		<meta property="article:tag" content="Kubernetes">
 		<meta property="article:tag" content="Headscale">
 		<meta property="article:tag" content="Tailscale">
@@ -312,12 +312,12 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
     "dateCreated": "2025-09-02T09:39:40\u002b02:00",
     "datePublished": "2025-09-02T09:39:40\u002b02:00",
     
-    "dateModified": "2026-09-29T09:25:19\u002b02:00",
+    "dateModified": "2026-10-19T10:33:11\u002b02:00",
     
     "keywords": ["kubernetes","headscale","tailscale","vpn"],
     
     "mainEntityOfPage": "https://zyria.de/posts/homelab/k3s-prod/apps/headscale/readme/",
-    "wordCount": "729"
+    "wordCount": "964"
   }]
   </script>
 
@@ -964,7 +964,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2025-09-02T09:39:40&#43;02:00">2 September 2025</time><span class="px-2 text-primary-500">&middot;</span><time datetime="2026-09-29T09:25:19&#43;02:00">Aktualisiert: 29 September 2026</time><span class="px-2 text-primary-500">&middot;</span><span>729 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
+      <time datetime="2025-09-02T09:39:40&#43;02:00">2 September 2025</time><span class="px-2 text-primary-500">&middot;</span><time datetime="2026-10-19T10:33:11&#43;02:00">Aktualisiert: 19 Oktober 2026</time><span class="px-2 text-primary-500">&middot;</span><span>964 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
 
 
   
@@ -1381,6 +1381,7 @@ Das Helm-Chart stammt aus der OCI-Registry <a href="https://codeberg.org/wrenix"
 <li>Es sind Patches für den DERP-Dienst enthalten, um Dual-Stack (IPv4/IPv6)-Unterstützung zu ermöglichen.</li>
 <li>TLS-Zertifikate werden über Cert-Manager verwaltet.</li>
 <li>Private Schlüssel für WireGuard, Noise und DERP werden als Secrets generiert.</li>
+<li>Das Chart markiert das Secret <code>headscale</code> als Helm-Hook. Ein Patch in <code>kustomization.yaml</code> entfernt die Annotation, damit Argo CD das Secret normal abgleicht (siehe <a href="/posts/homelab/k3s-prod/apps/headscale/readme/#acl-policy-setzen" >ACL-Policy setzen</a>).</li>
 </ul>
 
 <h4 class="relative group">Wichtige Einstellungen
@@ -1396,9 +1397,9 @@ Das Helm-Chart stammt aus der OCI-Registry <a href="https://codeberg.org/wrenix"
 <li><strong>Server URL</strong>: Die öffentliche URL des Headscale-Servers steht als <code>server_url</code> in <code>values.yaml</code>. Sie muss exakt der Adresse entsprechen, unter der die Knoten den Server erreichen — ein späterer Wechsel zwingt jeden Knoten zur Neuanmeldung.</li>
 <li><strong>Datenbank</strong>: Headscale verwendet eine SQLite-Datenbank, die auf einem persistenten Volume gespeichert wird.</li>
 <li><strong>Zertifikate</strong>: TLS-Zertifikate für den Ingress werden automatisch von <code>cert-manager</code> ausgestellt.</li>
-<li><strong>DNS</strong>: Knoten im Tailnet erhalten Namen unterhalb der in <code>base_domain</code> gesetzten Domain. Sie darf sich nicht mit einer real aufgelösten Domain überschneiden.</li>
+<li><strong>DNS</strong>: Knoten im Tailnet erhalten Namen unterhalb der in <code>base_domain</code> gesetzten Domain. Sie darf sich nicht mit einer real aufgelösten Domain überschneiden. Wegen <code>override_local_dns: true</code> fragen die Clients ausschließlich die globalen Nameserver aus <code>values.yaml</code>. Liegen diese hinter einer Subnetz-Route, braucht jede Gruppe in der ACL eine eigene Freigabe auf Port 53 der Nameserver-Adressen, sonst verwirft der Subnet Router ihre Anfragen und das Gerät wirkt mit aktivem Tailscale offline. Ändern sich die Nameserver, muss die ACL-Regel mitgezogen werden.</li>
 <li><strong>Adress-Präfixe</strong>: <code>fd7a:115c:a1e0::/48</code> (v6) und <code>100.64.0.0/23</code> (v4) — <strong>nicht auf ein eigenes Präfix ändern</strong>. Headscale unterstützt nur Teilmengen der Standardbereiche (<code>100.64.0.0/10</code>, <code>fd7a:115c:a1e0::/48</code>) und warnt bei allem anderen beim Start mit <em>„This is NOT a supported configuration&quot;</em>. Der Grund ist praktisch: Seit Headscale 0.29.0 (<a href="https://github.com/juanfont/headscale/pull/3036"  target="_blank" rel="noreferrer">PR #3036</a>) expandiert <code>*</code> als <code>src</code>/<code>dst</code> in der ACL auf genau diese Standardbereiche statt auf <code>0.0.0.0/0</code>/<code>::/0</code>. Liegt das eigene v6-Präfix außerhalb, enthält der kompilierte Paketfilter keine passende v6-Quelle und jedes IPv6-Paket wird am Ingress des Subnet-Routers verworfen — bei v4 fällt es nicht auf, solange das Präfix eine Teilmenge von <code>100.64.0.0/10</code> ist. Hier doppelt abgesichert, da die ACL zusätzlich <code>group:</code>/<code>tag:</code> statt <code>*</code> verwendet. In einem anderen Cluster war mit einem eigenen Präfix außerhalb dieser Bereiche und <code>&quot;src&quot;:[&quot;*&quot;]</code> genau dieser Ausfall eingetreten; dort wurde anschließend auf ein Präfix innerhalb von <code>fd7a:115c:a1e0::/48</code> migriert. Getestet mit Headscale 0.29.3.</li>
-<li><strong>ACL-Policy</strong>: Liegt in der <strong>Datenbank</strong>, nicht in der Konfigurationsdatei (<code>policy.mode: database</code>). Änderungen an <code>config-patch.yaml</code> werden durch ArgoCD zwar ins Secret synchronisiert, aber <strong>nicht</strong> wirksam — dafür ist ein expliziter <code>headscale policy set</code> nötig. Siehe <a href="/posts/homelab/k3s-prod/apps/headscale/readme/#acl-policy-setzen" >ACL-Policy setzen</a>.</li>
+<li><strong>ACL-Policy</strong>: Liegt in der <strong>Datenbank</strong>, nicht in der Konfigurationsdatei (<code>policy.mode: database</code>). Änderungen an <code>config-patch.yaml</code> landen im Secret <code>headscale</code>, werden aber erst mit einem ausdrücklichen <code>headscale policy set</code> wirksam. Siehe <a href="/posts/homelab/k3s-prod/apps/headscale/readme/#acl-policy-setzen" >ACL-Policy setzen</a>.</li>
 <li><strong>DERP</strong>: Es werden die öffentlichen DERP-Server von Tailscale verwendet. Ein eigener DERP-Service ist konfiguriert, aber nicht als Server aktiviert. Der STUN-Dienst läuft über einen LoadBalancer-Service.</li>
 <li><strong>Speicher</strong>: Konfiguration und SQLite-Datenbank liegen auf einem Longhorn-Volume. Diese Datenbank ist der gesamte Zustand des Tailnets — geht sie verloren, müssen sich alle Knoten neu anmelden.</li>
 </ul>
@@ -1412,21 +1413,37 @@ Das Helm-Chart stammt aus der OCI-Registry <a href="https://codeberg.org/wrenix"
     </span>
     
 </h3>
-<p><code>policy.mode</code> steht auf <code>database</code>: <strong>Die wirksame Policy liegt in der Headscale-Datenbank, nicht in
-der Konfigurationsdatei.</strong> <code>config-patch.yaml</code> patcht das Secret <code>headscale</code>, das im Pod als
-<code>/etc/headscale/policy.json</code> gemountet wird — Headscale liest diese Datei aber weder beim Start noch
-bei einem Neustart ein.</p>
-<p><strong>Ein Commit an <code>config-patch.yaml</code> ändert am laufenden System also nichts.</strong> ArgoCD meldet <code>Synced</code>,
-das Secret ist aktuell, die Datei im Pod ist aktuell — und die Policy im Cluster ist trotzdem die
-alte. Das Repo ist für die ACL <strong>nicht</strong> die Wahrheit.</p>
-<p>Nach jeder Änderung an <code>config-patch.yaml</code> ist deshalb dieser Schritt nötig:</p>
-<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">kubectl <span class="nb">exec</span> -n headscale deploy/headscale -- headscale policy <span class="nb">set</span> -f /etc/headscale/policy.json</span></span></code></pre></div></div>
-<p>Vorher sicherstellen, dass ArgoCD das Secret bereits synchronisiert hat — sonst schreibt der Befehl
-den alten Stand erneut in die Datenbank. Der Pod muss dafür nicht neu gestartet werden.</p>
+<p><code>policy.mode</code> steht auf <code>database</code>: Die wirksame Policy liegt in der Headscale-Datenbank, nicht in
+der Konfigurationsdatei. <code>config-patch.yaml</code> patcht das Secret <code>headscale</code>, das im Pod als
+<code>/etc/headscale/policy.json</code> gemountet wird. Headscale liest diese Datei aber weder beim Start
+noch bei einem Neustart ein.</p>
+<p>Ein Commit an <code>config-patch.yaml</code> ändert am laufenden System deshalb nichts. Nach dem Merge auf
+<code>main</code> muss die Policy ausdrücklich gesetzt werden. Quelle ist der Stand in Git, nicht die Datei
+im Pod:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">git fetch origin
+</span></span><span class="line"><span class="ln">2</span><span class="cl">git show origin/main:apps/headscale/config-patch.yaml <span class="se">\
+</span></span></span><span class="line"><span class="ln">3</span><span class="cl">  <span class="p">|</span> yq <span class="s1">&#39;.stringData.&#34;policy.json&#34;&#39;</span> <span class="se">\
+</span></span></span><span class="line"><span class="ln">4</span><span class="cl">  <span class="p">|</span> kubectl <span class="nb">exec</span> -i -n headscale deploy/headscale -- headscale policy <span class="nb">set</span> -f /dev/stdin</span></span></code></pre></div></div>
+<p>Der Befehl läuft im Wurzelverzeichnis des Repositories und braucht <code>yq</code> (mikefarah) lokal. Das
+Image ist distroless, im Pod gibt es keine Shell, nur das <code>headscale</code>-Binary. Der Pod muss nicht
+neu gestartet werden.</p>
+<p>Warum nicht <code>headscale policy set -f /etc/headscale/policy.json</code>: Das Chart (wrenix/headscale
+1.0.20) markiert das Secret <code>headscale</code> mit <code>helm.sh/hook: pre-install,pre-upgrade</code>. Argo CD
+behandelt es dadurch als PreSync-Hook, nimmt es aus dem Diff heraus und erneuert es nur während
+einer Sync-Operation. Mit <code>ApplyOutOfSyncOnly</code> und Auto-Sync startet keine, wenn sich sonst nichts
+geändert hat, und die Application meldet trotzdem <code>Synced</code>. So blieb nach dem Merge von #856 am
+19.10.2026 das alte Secret stehen, und der Befehl hätte den alten Stand erneut in die Datenbank
+geschrieben. <code>kustomization.yaml</code> entfernt die Hook-Annotation deshalb per Patch, seitdem
+gleicht Argo CD das Secret wie jede andere Ressource ab. Der Weg über stdin bleibt trotzdem der
+sichere: Er hängt weder vom Sync noch von der Verzögerung ab, mit der das Kubelet ein geändertes
+Secret in den Pod spiegelt (bis etwa eine Minute).</p>
 <p>Wirksamen Stand ansehen:</p>
 <div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">kubectl <span class="nb">exec</span> -n headscale deploy/headscale -- headscale policy get</span></span></code></pre></div></div>
-<p>Auf Drift prüfen — die Ausgabe von <code>policy get</code> gegen den <code>policy.json</code>-Block in <code>config-patch.yaml</code>
-halten. Weichen sie ab, wurde eine Änderung committet, aber nie gesetzt.</p>
+<p>Auf Drift prüfen, also ob eine committete Änderung nie gesetzt wurde:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">diff &lt;<span class="o">(</span>git show origin/main:apps/headscale/config-patch.yaml <span class="p">|</span> yq <span class="s1">&#39;.stringData.&#34;policy.json&#34;&#39;</span><span class="o">)</span> <span class="se">\
+</span></span></span><span class="line"><span class="ln">2</span><span class="cl">     &lt;<span class="o">(</span>kubectl <span class="nb">exec</span> -n headscale deploy/headscale -- headscale policy get<span class="o">)</span></span></span></code></pre></div></div>
+<p>Eine einzelne Leerzeile am Ende ist kein Unterschied in der Sache. Den Stand des Secrets zeigt
+<code>kubectl get secret -n headscale headscale -o jsonpath='{.data.policy\.json}' | base64 -d</code>.</p>
 <p>Verifizieren, dass die Clients die neue Policy haben. Der kompilierte Paketfilter erscheint binnen
 Sekunden auf den Knoten; ein Subnet-Router eignet sich am besten dafür:</p>
 <div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">kubectl <span class="nb">exec</span> -n wireguard deploy/wireguard-tailscale -c tailscale -- tailscale debug netmap <span class="p">|</span> jq <span class="s2">&#34;.PacketFilter[].Srcs&#34;</span></span></span></code></pre></div></div>

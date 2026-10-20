@@ -105,7 +105,7 @@
 	<meta property="og:type" content="article">
 		<meta property="article:section" content="posts">
 		<meta property="article:published_time" content="2025-10-18T07:57:54+02:00">
-		<meta property="article:modified_time" content="2026-10-16T08:44:11+02:00">
+		<meta property="article:modified_time" content="2026-10-19T11:47:35+02:00">
 		<meta property="article:tag" content="Kubernetes">
 		<meta property="article:tag" content="Wireguard">
 		<meta property="article:tag" content="Vpn">
@@ -311,12 +311,12 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
     "dateCreated": "2025-10-18T07:57:54\u002b02:00",
     "datePublished": "2025-10-18T07:57:54\u002b02:00",
     
-    "dateModified": "2026-10-16T08:44:11\u002b02:00",
+    "dateModified": "2026-10-19T11:47:35\u002b02:00",
     
     "keywords": ["kubernetes","wireguard","vpn"],
     
     "mainEntityOfPage": "https://zyria.de/posts/homelab/k3s-prod/apps/wireguard/readme/",
-    "wordCount": "885"
+    "wordCount": "1016"
   }]
   </script>
 
@@ -963,7 +963,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2025-10-18T07:57:54&#43;02:00">18 Oktober 2025</time><span class="px-2 text-primary-500">&middot;</span><time datetime="2026-10-16T08:44:11&#43;02:00">Aktualisiert: 16 Oktober 2026</time><span class="px-2 text-primary-500">&middot;</span><span>885 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
+      <time datetime="2025-10-18T07:57:54&#43;02:00">18 Oktober 2025</time><span class="px-2 text-primary-500">&middot;</span><time datetime="2026-10-19T11:47:35&#43;02:00">Aktualisiert: 19 Oktober 2026</time><span class="px-2 text-primary-500">&middot;</span><span>1016 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
 
 
   
@@ -1404,6 +1404,17 @@ braucht das Kernelmodul des Hosts.</li>
 <li>Der Bastion Container stellt einen SSH Jumphost bereit. Primär für die Nutzung von Ansible. Damit lassen sich alle Geräte hinter den NATs erreichen, welche im
 VPN sind.</li>
 <li>Wg-portal stellt eine leichte Möglichkeit bereit den Mitarbeitern vordefinierte Zugänge zum VPN bereitzustellen. Der Container nutzt das Netzwerk des wireguard Containers und muss deshalb mit ihm zusammen neu gestartet werden.</li>
+<li>Der Controller <code>tailscale</code> ist Subnet Router im Tailnet. Er kündigt die
+Netze aus <code>TS_ROUTES</code> an, als zweiter Router neben dem Heim-Gateway, das
+dieselben Netze ankündigt. Headscale wählt dabei keinen festen Hauptweg: Wer
+Primary ist, bleibt es, solange er gesund ist; fällt er weg, übernimmt der
+andere. Die Liste in <code>TS_ROUTES</code> muss deshalb mit den Routen des Gateways
+übereinstimmen, sonst fehlen Netze, sobald dieser Pod übernimmt. Neue Netze
+brauchen zusätzlich einen Eintrag unter <code>autoApprovers</code> in
+<code>apps/headscale/config-patch.yaml</code> für <code>tag:server</code>, den Tag dieses Knotens.</li>
+<li>Für Ziele mit eigenem IPv6-Netz pro Server gehört jedes dieser Netze in
+<code>TS_ROUTES</code>, nicht nur ein gemeinsames Netz. Die AAAA-Einträge zeigen auf die
+Hauptadressen, und ohne Route läuft IPv6 am Tailnet vorbei.</li>
 </ul>
 <p>wg-portal (v2) wird über die Datei <code>config.yaml</code> konfiguriert, siehe <a href="/posts/homelab/k3s-prod/apps/wireguard/readme/#konfiguration-von-wg-portal" >Konfiguration von wg-portal</a>.</p>
 
@@ -1472,6 +1483,7 @@ VPN sind.</li>
 <li><strong>LoadBalancer</strong>: WireGuard (<code>51194/UDP</code>) und SSH (<code>3022/TCP</code>) hängen an einem <code>LoadBalancer</code>-Service mit fester Adresse aus dem MetalLB-Pool.</li>
 <li><strong>Ingress</strong>: Der Zugriff auf das Web-Portal wird über einen Ingress mit einem Hostnamen ermöglicht.</li>
 <li><strong>Speicher</strong>: WireGuard-Konfigurationen und Portal-Daten liegen auf Longhorn-Volumes; die PVCs stehen in <code>storage.yaml</code>.</li>
+<li><strong>Tailscale-Logs</strong>: <code>TS_NO_LOGS_NO_SUPPORT=true</code> im Container <code>tailscale</code> verhindert, dass <code>tailscaled</code> Diagnose-Logs (logtail) bei Tailscale Inc. hochlädt; Headscale unterbindet das nicht.</li>
 </ul>
 
 <h3 class="relative group">Installation

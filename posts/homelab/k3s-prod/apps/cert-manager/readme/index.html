@@ -105,7 +105,7 @@
 	<meta property="og:type" content="article">
 		<meta property="article:section" content="posts">
 		<meta property="article:published_time" content="2025-09-30T17:49:43+02:00">
-		<meta property="article:modified_time" content="2026-10-17T12:15:30+02:00">
+		<meta property="article:modified_time" content="2026-10-18T10:17:56+02:00">
 		<meta property="article:tag" content="Kubernetes">
 		<meta property="article:tag" content="Cert-Manager">
 		<meta property="article:tag" content="Tls">
@@ -311,12 +311,12 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
     "dateCreated": "2025-09-30T17:49:43\u002b02:00",
     "datePublished": "2025-09-30T17:49:43\u002b02:00",
     
-    "dateModified": "2026-10-17T12:15:30\u002b02:00",
+    "dateModified": "2026-10-18T10:17:56\u002b02:00",
     
     "keywords": ["kubernetes","cert-manager","tls"],
     
     "mainEntityOfPage": "https://zyria.de/posts/homelab/k3s-prod/apps/cert-manager/readme/",
-    "wordCount": "346"
+    "wordCount": "368"
   }]
   </script>
 
@@ -963,7 +963,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2025-09-30T17:49:43&#43;02:00">30 September 2025</time><span class="px-2 text-primary-500">&middot;</span><time datetime="2026-10-17T12:15:30&#43;02:00">Aktualisiert: 17 Oktober 2026</time><span class="px-2 text-primary-500">&middot;</span><span>346 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
+      <time datetime="2025-09-30T17:49:43&#43;02:00">30 September 2025</time><span class="px-2 text-primary-500">&middot;</span><time datetime="2026-10-18T10:17:56&#43;02:00">Aktualisiert: 18 Oktober 2026</time><span class="px-2 text-primary-500">&middot;</span><span>368 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
 
 
   
@@ -1359,7 +1359,7 @@ Das Helm-Chart stammt aus dem <a href="https://charts.jetstack.io"  target="_bla
 <li><code>clusterissuer.yaml</code> definiert die ClusterIssuer <code>letsencrypt-production</code> und <code>letsencrypt-staging</code> (HTTP-01) sowie <code>acmedns</code> (DNS-01 über acme-dns.io) und <code>corenetworks</code> (DNS-01 über den ACME-Webhook aus <code>apps/corenetworks-dns-operator</code>, ohne CNAME pro Name).</li>
 <li><code>clusterissuer.yaml</code> enthält außerdem das Secret <code>core-networks-api</code>. Es gehört zu <code>apps/corenetworks-dns-operator</code>; kein Issuer nutzt es.</li>
 <li>Zertifikate für spezifische Dienste werden über <code>certs.yaml</code> definiert.</li>
-<li>Ein Secret wird aus <code>acmedns.json</code> generiert, das für DNS01-Challenges verwendet wird.</li>
+<li>Ein Secret wird aus <code>acmedns.json</code> generiert, das der Rückfall-Issuer <code>acmedns</code> braucht.</li>
 </ul>
 
 <h4 class="relative group">Wichtige Einstellungen
@@ -1373,7 +1373,7 @@ Das Helm-Chart stammt aus dem <a href="https://charts.jetstack.io"  target="_bla
 </h4>
 <ul>
 <li><strong>ClusterIssuer</strong>: Es ist ein <code>ClusterIssuer</code> namens <code>letsencrypt-production</code> konfiguriert, der für die Ausstellung von Zertifikaten für den gesamten Cluster zuständig ist.</li>
-<li><strong>DNS01-Challenge</strong>: Zur Validierung der Domain-Inhaberschaft bei Let&rsquo;s Encrypt wird die DNS01-Challenge-Methode verwendet. Dies geschieht über den öffentlichen Dienst <a href="https://github.com/joohoi/acme-dns"  target="_blank" rel="noreferrer">acme-dns.io</a> (<code>auth.acme-dns.io</code>); die Zugangsdaten je Domain stehen in <code>acmedns.json</code> und landen im Secret <code>acme-dns</code>. Beim DNS-Anbieter steht für jede Domain ein CNAME <code>_acme-challenge.&lt;domain&gt;</code> auf die Subdomain bei acme-dns.io. Nach außen gehen dabei nur die Challenge-Token. Dies ermöglicht die Ausstellung von Wildcard-Zertifikaten und erfordert keine öffentlichen Ingress-Endpunkte während des Validierungsprozesses.</li>
+<li><strong>DNS01-Challenge</strong>: Zur Validierung der Domain-Inhaberschaft bei Let&rsquo;s Encrypt wird die DNS01-Challenge-Methode verwendet. Dies geschieht über den ClusterIssuer <code>corenetworks</code>: Der ACME-Webhook aus <code>apps/corenetworks-dns-operator</code> legt den TXT-Eintrag als <code>DNSRecord</code> an, der Operator schreibt ihn über die API des DNS-Anbieters und entfernt ihn danach wieder. Der frühere Weg über den öffentlichen Dienst <a href="https://github.com/joohoi/acme-dns"  target="_blank" rel="noreferrer">acme-dns.io</a> bleibt als Issuer <code>acmedns</code> stehen, wird aber von keinem Zertifikat mehr genutzt; dafür bräuchte jede Domain wieder einen CNAME <code>_acme-challenge.&lt;domain&gt;</code> auf ihre Subdomain bei acme-dns.io. Dies ermöglicht die Ausstellung von Wildcard-Zertifikaten und erfordert keine öffentlichen Ingress-Endpunkte während des Validierungsprozesses.</li>
 <li><strong>Ingress Shim</strong>: Das <code>ingress-shim</code> ist so konfiguriert, dass es automatisch Zertifikate für Ingress-Ressourcen anfordert, die entsprechend annotiert sind.</li>
 <li><strong>Prometheus</strong>: Metriken von cert-manager werden für das Monitoring via Prometheus exportiert.</li>
 </ul>

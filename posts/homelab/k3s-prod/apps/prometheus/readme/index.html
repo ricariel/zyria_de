@@ -105,7 +105,7 @@
 	<meta property="og:type" content="article">
 		<meta property="article:section" content="posts">
 		<meta property="article:published_time" content="2025-10-17T13:23:29+02:00">
-		<meta property="article:modified_time" content="2026-10-16T17:30:24+02:00">
+		<meta property="article:modified_time" content="2026-10-18T15:05:27+02:00">
 		<meta property="article:tag" content="Kubernetes">
 		<meta property="article:tag" content="Prometheus">
 		<meta property="article:tag" content="Monitoring">
@@ -313,12 +313,12 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
     "dateCreated": "2025-10-17T13:23:29\u002b02:00",
     "datePublished": "2025-10-17T13:23:29\u002b02:00",
     
-    "dateModified": "2026-10-16T17:30:24\u002b02:00",
+    "dateModified": "2026-10-18T15:05:27\u002b02:00",
     
     "keywords": ["kubernetes","prometheus","monitoring","alertmanager","grafana"],
     
     "mainEntityOfPage": "https://zyria.de/posts/homelab/k3s-prod/apps/prometheus/readme/",
-    "wordCount": "1679"
+    "wordCount": "1812"
   }]
   </script>
 
@@ -965,7 +965,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2025-10-17T13:23:29&#43;02:00">17 Oktober 2025</time><span class="px-2 text-primary-500">&middot;</span><time datetime="2026-10-16T17:30:24&#43;02:00">Aktualisiert: 16 Oktober 2026</time><span class="px-2 text-primary-500">&middot;</span><span>1679 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
+      <time datetime="2025-10-17T13:23:29&#43;02:00">17 Oktober 2025</time><span class="px-2 text-primary-500">&middot;</span><time datetime="2026-10-18T15:05:27&#43;02:00">Aktualisiert: 18 Oktober 2026</time><span class="px-2 text-primary-500">&middot;</span><span>1812 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
 
 
   
@@ -1444,7 +1444,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
 <li><strong>Longhorn</strong>: Jeder longhorn-manager liefert nur die Metriken seines Nodes, deshalb fragt der Job <code>longhorn</code> jeden Endpunkt einzeln ab. Damit stehen unter anderem <code>longhorn_volume_robustness</code>, <code>longhorn_backup_state</code> und <code>longhorn_node_storage_*</code> zur Verfügung. Die NetworkPolicy dafür liegt in <code>apps/longhorn</code> und lässt Pods mit den Labels <code>app.kubernetes.io/name: prometheus</code> und <code>app.kubernetes.io/component: server</code> zu. Das zweite Label setzt <code>prometheusSpec.podMetadata</code>.</li>
 <li><strong>rspamd</strong>: Der Job <code>rspamd</code> fragt den rspamd-Controller im Mailstack ab und schickt das Lese-Passwort im Header <code>Password</code>. Das Secret <code>rspamd-read-pass</code> wird über <code>prometheusSpec.secrets</code> unter <code>/etc/prometheus/secrets/rspamd-read-pass/</code> eingehängt. Anlegen des Secrets siehe <code>apps/mailstack/README.md</code>.</li>
 </ul>
-<p>Die Proxmox-Hosts liegen außerhalb des Clusters. <code>scrape-proxmox.yaml</code> listet sie als <code>ScrapeConfig</code> mit dem Job <code>proxmox</code> und fragt ihren node-exporter auf Port 9100 ab. Installiert wird er von der Rolle <code>node_exporter</code> aus <code>ansible-main</code>. Die Ziele stehen mit ihrer lokalen IPv4-Adresse drin, weil die öffentlichen Namen für IPv4 auf den Router zeigen. Das Label <code>instance</code> trägt den Hostnamen. Der Job heißt bewusst nicht <code>node-exporter</code>: die Standardregeln und Dashboards für Nodes bleiben so auf die k3s-Nodes beschränkt.</p>
+<p>Die Proxmox-Hosts liegen außerhalb des Clusters. <code>proxmox-scrape.yaml</code> listet sie als <code>ScrapeConfig</code> mit dem Job <code>proxmox</code> und fragt ihren node-exporter auf Port 9100 ab. Installiert wird er von der Rolle <code>node_exporter</code> aus <code>ansible-main</code>. Die Ziele stehen mit ihrer lokalen IPv4-Adresse drin, weil die öffentlichen Namen für IPv4 auf den Router zeigen. Das Label <code>instance</code> trägt den Hostnamen. Der Job heißt bewusst nicht <code>node-exporter</code>: die Standardregeln und Dashboards für Nodes bleiben so auf die k3s-Nodes beschränkt.</p>
 
 <h3 class="relative group">Anpassungen an k3s
     <div id="anpassungen-an-k3s" class="anchor"></div>
@@ -1517,7 +1517,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
     </span>
     
 </h4>
-<p><code>rules.yaml</code> ergänzt die Standardregeln von kube-prometheus-stack um Zustände, die diese nicht abdecken. Die Prometheus-Ressource wählt Regeln aus allen Namespaces ohne Label-Filter aus.</p>
+<p><code>cluster-rules.yaml</code> ergänzt die Standardregeln von kube-prometheus-stack um Zustände, die diese nicht abdecken. Die Regeln für die Proxmox-Hosts stehen getrennt in <code>proxmox-rules.yaml</code>. Die Prometheus-Ressource wählt Regeln aus allen Namespaces ohne Label-Filter aus.</p>
 <table>
 	<thead>
 			<tr>
@@ -1527,27 +1527,27 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
 	</thead>
 	<tbody>
 			<tr>
-					<td><code>zyria-certificates</code></td>
+					<td><code>cluster-certificates</code></td>
 					<td>cert-manager-Zertifikate unter 14 Tagen oder nicht bereit, von Traefik ausgelieferte Zertifikate unter 7 Tagen</td>
 			</tr>
 			<tr>
-					<td><code>zyria-workloads</code></td>
+					<td><code>cluster-workloads</code></td>
 					<td>überfällige Longhorn-Backup-Jobs, CronJobs ohne Erfolg seit acht Tagen, OOMKilled, PVC in Pending, schreibgeschützte Dateisysteme, 5xx-Anteil je Traefik-Dienst, ohne die Wartungsseite, die absichtlich 503 liefert</td>
 			</tr>
 			<tr>
-					<td><code>zyria-longhorn</code></td>
-					<td>Volumes degraded oder faulted, Backups älter als acht Tage, Backupziel nicht erreichbar, Plattenbelegung über 80 %</td>
+					<td><code>cluster-longhorn</code></td>
+					<td>Volumes degraded oder faulted, Backups älter als acht Tage, Backupziel nicht erreichbar, Plattenbelegung über 85 %</td>
 			</tr>
 			<tr>
-					<td><code>zyria-argocd</code></td>
+					<td><code>cluster-argocd</code></td>
 					<td>Apps nicht synchron oder nicht gesund, fehlgeschlagene Syncs</td>
 			</tr>
 			<tr>
-					<td><code>zyria-mail</code></td>
+					<td><code>cluster-mail</code></td>
 					<td>rspamd nicht erreichbar, keine Mails gescannt, hoher Reject-Anteil, Bayes lernt nicht, Postfix-Queue nicht lesbar, zu voll, mit alten zurückgestellten Mails oder mit Mails, die länger als 5 Minuten in der Hold-Queue liegen</td>
 			</tr>
 			<tr>
-					<td><code>zyria-proxmox</code></td>
+					<td><code>proxmox</code></td>
 					<td>Neustart eines Proxmox-Hosts steht seit mehr als drei Tagen aus (ab 14 Tagen kritisch), Neustart-Metrik fehlt oder ist veraltet, Quelle der nft-Blockliste nicht geladen, Blockliste älter als 26 Stunden oder von nft abgelehnt</td>
 			</tr>
 	</tbody>
@@ -1578,7 +1578,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
     
 </h4>
 <p><code>dashboards/cluster-status.json</code> ist die Startseite von Grafana (<code>grafana.ini</code>, <code>dashboards.default_home_dashboard_path</code>). <code>kustomization.yaml</code> erzeugt daraus die ConfigMap <code>grafana-dashboard-cluster-status</code> mit dem Label <code>grafana_dashboard: &quot;1&quot;</code>, die der Sidecar von Grafana nach <code>/tmp/dashboards/</code> schreibt. Der Name hat keinen Hash-Suffix, damit der Pfad gleich bleibt.</p>
-<p>Das Dashboard wertet nur die Alarme aus (<code>ALERTS</code>, <code>ALERTS_FOR_STATE</code>). Grün heißt also, dass keine Regel feuert; eigene Schwellwerte hat das Dashboard nicht.</p>
+<p>Das Dashboard wertet die Alarme aus (<code>ALERTS</code>, <code>ALERTS_FOR_STATE</code>) und dazu den Status der Monitore von Uptime Kuma (<code>monitor_status</code>, siehe <code>apps/uptime-kuma/README.md</code>). Grün heißt also, dass keine Regel feuert und Kuma alle Monitore erreicht; eigene Schwellwerte hat das Dashboard nicht. Für Kuma gibt es bewusst keine Alarmregel, weil Kuma selbst benachrichtigt.</p>
 <table>
 	<thead>
 			<tr>
@@ -1589,15 +1589,19 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
 	<tbody>
 			<tr>
 					<td>obere Zeile</td>
-					<td>Gesamtstatus, Anzahl kritischer Alarme und Warnungen, Regeln im Zustand <code>pending</code>, stummgeschaltete oder unterdrückte Alarme, Zustand von Prometheus, Alertmanager und Matrix-Zustellung</td>
+					<td>Gesamtstatus, Anzahl kritischer Alarme und Warnungen, Regeln im Zustand <code>pending</code>, stummgeschaltete oder unterdrückte Alarme, Zustand von Prometheus, Alertmanager und Matrix-Zustellung, Anzahl nicht erreichbarer Kuma-Monitore</td>
 			</tr>
 			<tr>
 					<td>zweite Zeile</td>
-					<td>Ampel je Bereich: Nodes und Cluster, Workloads, Speicher und Backup, Argo CD, Zertifikate, Mail, Windows und SQL Server, Sonstige</td>
+					<td>Ampel je Bereich: Hosts und Cluster, Workloads, Speicher und Backup, Argo CD, Zertifikate, Mail, Windows und SQL Server, Sonstige</td>
 			</tr>
 			<tr>
 					<td>Offene Punkte</td>
 					<td>jeder feuernde Alarm mit Schwere, Bereich, Namespace und betroffenem Objekt</td>
+			</tr>
+			<tr>
+					<td>Nicht erreichbar</td>
+					<td>Kuma-Monitore mit Status DOWN, mit Link zum Monitor in Kuma</td>
 			</tr>
 			<tr>
 					<td>Verlauf</td>
@@ -1609,11 +1613,49 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
 			</tr>
 	</tbody>
 </table>
-<p>Eine Kachel ist grün (OK), orange (Warnung) oder rot (Kritisch). Rot ist auch „Keine Daten“, etwa wenn Prometheus nicht antwortet. Die Kachel „Monitoring &amp; Alarmweg“ wird zusätzlich rot, wenn der Alarm <code>Watchdog</code> fehlt; dann wertet Prometheus keine Regeln mehr aus. Die Bereiche sind über Muster auf den Alarmnamen definiert. Ein Alarm, den kein Muster trifft, landet unter „Sonstige“, damit nichts verloren geht. Wer eine neue Regel anlegt, deren Name keinem Muster entspricht, ergänzt das Muster in der Kachel, in der Tabellenabfrage (<code>label_replace</code> für <code>area</code>) und in der Abfrage von „Sonstige“.</p>
+<p>Eine Kachel ist grün (OK), orange (Warnung) oder rot (Kritisch). Rot ist auch „Keine Daten“, etwa wenn Prometheus nicht antwortet. Die Kachel „Monitoring &amp; Alarmweg“ wird zusätzlich rot, wenn der Alarm <code>Watchdog</code> fehlt; dann wertet Prometheus keine Regeln mehr aus. Den Bereich bestimmt das Label <code>area</code> der Regel:</p>
+<table>
+	<thead>
+			<tr>
+					<th><code>area</code></th>
+					<th>Kachel</th>
+					<th>gesetzt in</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><code>monitoring</code></td>
+					<td>Monitoring &amp; Alarmweg</td>
+					<td><code>defaultRules.additionalRuleGroupLabels</code> (Alertmanager, Prometheus, Operator, kube-state-metrics, Config-Reloader, <code>TargetDown</code>), <code>matrix-receiver-rules.yaml</code></td>
+			</tr>
+			<tr>
+					<td><code>cluster</code></td>
+					<td>Hosts &amp; Cluster</td>
+					<td><code>defaultRules.additionalRuleGroupLabels</code> (Nodes, Kubelet, API-Server, Ressourcen), eigene Regeln zu Nodes und Proxmox</td>
+			</tr>
+			<tr>
+					<td><code>workloads</code></td>
+					<td>Workloads</td>
+					<td><code>defaultRules.additionalRuleGroupLabels</code> (<code>kubernetesApps</code>), eigene Regeln zu CronJobs, OOM und Traefik</td>
+			</tr>
+			<tr>
+					<td><code>storage</code></td>
+					<td>Speicher &amp; Backup</td>
+					<td><code>defaultRules.additionalRuleGroupLabels</code> (<code>kubernetesStorage</code>), eigene Regeln zu Longhorn, Backups und PVCs</td>
+			</tr>
+			<tr>
+					<td><code>argocd</code>, <code>certificates</code>, <code>mail</code>, <code>windows</code></td>
+					<td>gleichnamige Kachel</td>
+					<td>eigene Regeln in <code>cluster-rules.yaml</code></td>
+			</tr>
+	</tbody>
+</table>
+<p>Der Chart setzt Labels nur je Regelgruppe. <code>CPUThrottlingHigh</code> steht deshalb mit den Overcommit-Regeln unter <code>cluster</code>. Ein Alarm ohne <code>area</code> landet unter „Sonstige“, damit nichts verloren geht. Neue eigene Regeln bekommen <code>area</code> neben <code>severity</code>; eine neue Regelgruppe des Charts bekommt einen Eintrag unter <code>defaultRules.additionalRuleGroupLabels</code>.</p>
 <p>Wege zum Problem:</p>
 <ul>
 <li>Klick auf eine Kachel öffnet die Alarmansicht von Grafana, gefiltert auf den Bereich. Dort stehen Beschreibung, Runbook-Link und die Schaltfläche zum Stummschalten.</li>
 <li>In der Tabelle führt der Alarmname zu derselben Ansicht, zur Regel oder direkt zum Stummschalten. Der Namespace führt zur gleichnamigen Argo-CD-App und zum Ressourcen-Dashboard des Namespace, das Objekt zum Ressourcen-Dashboard des Pods.</li>
+<li>Die Kachel „Nicht erreichbar“ und die Monitornamen in der Tabelle darunter führen zu Uptime Kuma.</li>
 <li>Die Links oben verweisen auf Argo CD, Longhorn, die Statusseite von Uptime Kuma und das gleiche Dashboard im anderen Cluster.</li>
 </ul>
 <p>Stummgeschaltete Alarme bleiben in der Tabelle und im Gesamtstatus, weil <code>ALERTS</code> von Stummschaltungen nichts weiß. Die Kachel „Stumm oder unterdrückt“ zeigt, wie viele es sind. „Bedingung seit“ ist der Zeitpunkt, ab dem die Bedingung erfüllt war, die Wartezeit <code>for</code> der Regel eingeschlossen.</p>

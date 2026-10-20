@@ -104,8 +104,8 @@
 	<meta property="og:locale" content="de_de">
 	<meta property="og:type" content="article">
 		<meta property="article:section" content="posts">
-		<meta property="article:published_time" content="2026-10-17T00:48:46+02:00">
-		<meta property="article:modified_time" content="2026-10-17T00:48:46+02:00">
+		<meta property="article:published_time" content="2026-10-18T08:36:53+02:00">
+		<meta property="article:modified_time" content="2026-10-18T08:36:53+02:00">
 		<meta property="article:tag" content="Kubernetes">
 		<meta property="article:tag" content="K3s">
 		<meta property="article:tag" content="Gitops">
@@ -311,15 +311,15 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
       "sameAs": ["https://git.casa-due-pur.de/fabrice.kirchner", "https://git.zyria.de/pyrox", "https://github.com/ricariel", "https://www.linkedin.com/in/fabrice-kirchner-bb5408163/", "https://www.xing.com/profile/Fabrice_Kirchner", "https://kirchner.social/@fabrice", "https://codeberg.org/ricariel"]
     },
     "copyrightYear": "2026",
-    "dateCreated": "2026-10-17T00:48:46\u002b02:00",
-    "datePublished": "2026-10-17T00:48:46\u002b02:00",
+    "dateCreated": "2026-10-18T08:36:53\u002b02:00",
+    "datePublished": "2026-10-18T08:36:53\u002b02:00",
     
-    "dateModified": "2026-10-17T00:48:46\u002b02:00",
+    "dateModified": "2026-10-18T08:36:53\u002b02:00",
     
     "keywords": ["kubernetes","k3s","gitops","argocd","helm","kustomize","homelab","produktion"],
     
     "mainEntityOfPage": "https://zyria.de/posts/homelab/k3s-prod/apps/home-assistant/readme/",
-    "wordCount": "623"
+    "wordCount": "660"
   }]
   </script>
 
@@ -964,7 +964,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2026-10-17T00:48:46&#43;02:00">17 Oktober 2026</time><span class="px-2 text-primary-500">&middot;</span><span>623 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
+      <time datetime="2026-10-18T08:36:53&#43;02:00">18 Oktober 2026</time><span class="px-2 text-primary-500">&middot;</span><span>660 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
 
 
   
@@ -1243,7 +1243,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
         <li><a href="#services--ingress">Services &amp; Ingress</a></li>
         <li><a href="#speicher">Speicher</a></li>
         <li><a href="#kubernetes-integration">Kubernetes-Integration</a></li>
-        <li><a href="#auto-updates-keel">Auto-Updates (Keel)</a></li>
+        <li><a href="#updates">Updates</a></li>
       </ul>
     </li>
     <li><a href="#matter-server">Matter-Server</a></li>
@@ -1279,7 +1279,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
         <li><a href="#services--ingress">Services &amp; Ingress</a></li>
         <li><a href="#speicher">Speicher</a></li>
         <li><a href="#kubernetes-integration">Kubernetes-Integration</a></li>
-        <li><a href="#auto-updates-keel">Auto-Updates (Keel)</a></li>
+        <li><a href="#updates">Updates</a></li>
       </ul>
     </li>
     <li><a href="#matter-server">Matter-Server</a></li>
@@ -1616,19 +1616,20 @@ Im Home-Assistant-Pod legt er zusätzlich Multicast (<code>224.0.0.0/4</code>) a
 </ul>
 <p>Die Integration fragt nur die Namespaces aus ihrer Konfiguration ab (derzeit <code>home-assistant</code>); für andere Namespaces fehlen die Rechte bewusst. Verlangt eine neue Version der Integration weitere Ressourcen, scheitert der gesamte Abgleich mit 403, bis die Rolle in <code>clusterrole.yaml</code> ergänzt ist.</p>
 
-<h3 class="relative group">Auto-Updates (Keel)
-    <div id="auto-updates-keel" class="anchor"></div>
+<h3 class="relative group">Updates
+    <div id="updates" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#auto-updates-keel" aria-label="Anker">#</a>
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#updates" aria-label="Anker">#</a>
     </span>
     
 </h3>
-<p>Home Assistant und Mosquitto sind mit Keel-Annotationen versehen:</p>
-<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="ln">1</span><span class="cl"><span class="nt">keel.sh/match-tag</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;true&#34;</span><span class="w">
-</span></span></span><span class="line"><span class="ln">2</span><span class="cl"><span class="nt">keel.sh/trigger</span><span class="p">:</span><span class="w"> </span><span class="l">poll</span><span class="w">
-</span></span></span><span class="line"><span class="ln">3</span><span class="cl"><span class="nt">keel.sh/policy</span><span class="p">:</span><span class="w"> </span><span class="l">force</span></span></span></code></pre></div></div>
+<p>Alle Images werden von Renovate gepflegt, Keel ist hier nicht im Einsatz.
+Home Assistant und Mosquitto haben feste Versionstags. Matter-Server und
+OTBR gibt es nur als bewegliche Tags (<code>stable</code>, <code>latest</code>); sie sind per
+Digest gepinnt, damit ein neuer Build erst nach Prüfung des Renovate-PRs
+ausgerollt wird.</p>
 <hr>
 
 <h2 class="relative group">Matter-Server
@@ -1642,7 +1643,7 @@ Im Home-Assistant-Pod legt er zusätzlich Multicast (<code>224.0.0.0/4</code>) a
 </h2>
 <p><code>python-matter-server</code> läuft als eigenständiges Deployment und stellt einen Matter-Controller bereit, über den Home Assistant Matter-Geräte steuern kann.</p>
 <ul>
-<li>Image: <code>ghcr.io/home-assistant-libs/python-matter-server:stable</code></li>
+<li>Image: <code>ghcr.io/home-assistant-libs/python-matter-server:stable</code>, per Digest gepinnt</li>
 <li>Netzwerk: Macvlan <code>home-net</code> (Interface <code>net1</code> als primäres Interface)</li>
 <li>Service: ClusterIP Port 5580</li>
 </ul>
@@ -1659,7 +1660,7 @@ Im Home-Assistant-Pod legt er zusätzlich Multicast (<code>224.0.0.0/4</code>) a
 </h2>
 <p>Der OpenThread Border Router verbindet das Thread-Mesh-Netzwerk (Matter over Thread) mit dem IP-Heimnetz.</p>
 <ul>
-<li>Image: <code>openthread/otbr:latest</code></li>
+<li>Image: <code>openthread/otbr:latest</code>, per Digest gepinnt</li>
 <li>Radio: TCP-Verbindung zu einem RCP (spinel+hdlc+tcp)</li>
 <li>Backbone-Interface: <code>net1</code> (Macvlan ins Heimnetz)</li>
 <li>mDNS: <code>mDNSResponder</code></li>
@@ -1987,14 +1988,14 @@ Im Home-Assistant-Pod legt er zusätzlich Multicast (<code>224.0.0.0/4</code>) a
           
             <a
               class="flex text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
-              href="/posts/homelab/k3s-prod/apps/ansible-semaphore/readme/">
+              href="/posts/homelab/k3s-prod/apps/localkit/readme/">
               <span class="leading-6">
-                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;Ansible Semaphore
+                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;Localkit
               </span>
             </a>
             
               <span class="ms-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
-                <time datetime="2026-10-14T15:58:41&#43;02:00">14 Oktober 2026</time>
+                <time datetime="2026-10-17T12:25:32&#43;02:00">17 Oktober 2026</time>
               </span>
             
           
@@ -2003,14 +2004,14 @@ Im Home-Assistant-Pod legt er zusätzlich Multicast (<code>224.0.0.0/4</code>) a
           
             <a
               class="flex text-right text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
-              href="/posts/homelab/k3s-prod/apps/scrypted/readme/">
+              href="/posts/homelab/k3s-prod/apps/git-pages/readme/">
               <span class="leading-6">
-                Scrypted&ensp;<span class="inline-block rtl:rotate-180">&rarr;</span>
+                &ensp;<span class="inline-block rtl:rotate-180">&rarr;</span>
               </span>
             </a>
             
               <span class="me-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
-                <time datetime="2026-10-17T01:22:30&#43;02:00">17 Oktober 2026</time>
+                <time datetime="2026-10-18T10:17:56&#43;02:00">18 Oktober 2026</time>
               </span>
             
           

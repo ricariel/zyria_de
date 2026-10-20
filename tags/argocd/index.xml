@@ -9,7 +9,7 @@
     <managingEditor>fabrice@zyria.de (Fabrice Kirchner)</managingEditor>
     <webMaster>fabrice@zyria.de (Fabrice Kirchner)</webMaster>
     
-    <lastBuildDate>Sat, 17 Oct 2026 12:25:32 +0200</lastBuildDate><atom:link href="https://zyria.de/tags/argocd/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 19 Oct 2026 10:48:45 +0200</lastBuildDate><atom:link href="https://zyria.de/tags/argocd/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Operational Lifecycle Management: Orchestrierter Shutdown für Kubernetes</title>
@@ -18,6 +18,76 @@
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/posts/homelab/k3s-prod/ansible/shutdown-startup/</guid>
       <description>Ein technischer Leitfaden für das geordnete Herunterfahren und Wiederanfahren eines Kubernetes-Clusters (k3s/Longhorn/ArgoCD) zur Vermeidung von Datenkorruption.</description>
+      
+    </item>
+    
+    <item>
+      <title>VPN Standort A - Tailscale Subnet Router</title>
+      <link>https://zyria.de/posts/homelab/k3s-prod/apps/vpn-site-a/readme/</link>
+      <pubDate>Mon, 19 Oct 2026 10:48:45 +0200</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/vpn-site-a/readme/</guid>
+      <description>Ein Pod baut einen WireGuard-Tunnel zu einem entfernten Standort auf und annonciert die dahinterliegenden Netze via Headscale ins Tailnet.</description>
+      
+    </item>
+    
+    <item>
+      <title>VPN Standort B - Tailscale Subnet Router</title>
+      <link>https://zyria.de/posts/homelab/k3s-prod/apps/vpn-site-b/readme/</link>
+      <pubDate>Mon, 19 Oct 2026 10:48:45 +0200</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/vpn-site-b/readme/</guid>
+      <description>Ein Pod baut einen OpenVPN-Tunnel zu einem entfernten Standort auf und annonciert die dahinterliegenden Netze via Headscale ins Tailnet.</description>
+      
+    </item>
+    
+    <item>
+      <title>VPN Standort C - Anbindung an das CDP-Tailnet</title>
+      <link>https://zyria.de/posts/homelab/k3s-prod/apps/vpn-site-c/readme/</link>
+      <pubDate>Mon, 19 Oct 2026 10:48:45 +0200</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/vpn-site-c/readme/</guid>
+      <description>Ein Pod baut einen WireGuard-Tunnel zum WireGuard-Server im CDP-Cluster auf und annonciert die Adressbereiche des CDP-Tailnets via Headscale ins eigene Tailnet.</description>
+      
+    </item>
+    
+    <item>
+      <title>Matrix (neu)</title>
+      <link>https://zyria.de/posts/homelab/k3s-prod/apps/matrix-new/readme/</link>
+      <pubDate>Mon, 19 Oct 2026 08:55:26 +0200</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/matrix-new/readme/</guid>
+      <description>Migration von apps/matrix auf das offizielle element-hq/ess-helm matrix-stack Chart mit Matrix Authentication Service (MAS), Element Web und Element Admin.</description>
+      
+    </item>
+    
+    <item>
+      <title>Unbound</title>
+      <link>https://zyria.de/posts/homelab/k3s-prod/apps/unbound/readme/</link>
+      <pubDate>Sun, 18 Oct 2026 15:35:30 +0200</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/unbound/readme/</guid>
+      <description>Unbound löst Namen selbst rekursiv auf und liefert bei einem Ausfall der autoritativen Nameserver weiterhin die zuletzt bekannten Antworten aus.</description>
+      
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://zyria.de/posts/homelab/k3s-prod/apps/git-pages/readme/</link>
+      <pubDate>Sun, 18 Oct 2026 10:17:56 +0200</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/git-pages/readme/</guid>
+      <description>&lt;h1 class=&#34;relative group&#34;&gt;git-pages&#xA;    &lt;div id=&#34;git-pages&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#git-pages&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h1&gt;&#xA;&lt;p&gt;Statischer Seiten-Server für Forgejo-Repositories, analog zu GitHub Pages.&lt;/p&gt;&#xA;&lt;p&gt;Upstream: &lt;a href=&#34;https://codeberg.org/git-pages/git-pages&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;codeberg.org/git-pages/git-pages&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;Der konkrete Hostname steht im Ingress in &lt;code&gt;values.yaml&lt;/code&gt;; hier steht dafür&#xA;&lt;code&gt;&amp;lt;pages-domain&amp;gt;&lt;/code&gt;.&lt;/p&gt;&#xA;&#xA;&lt;h2 class=&#34;relative group&#34;&gt;URLs&#xA;    &lt;div id=&#34;urls&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#urls&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;table&gt;&#xA;&#x9;&lt;thead&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;th&gt;URL&lt;/th&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;th&gt;Beschreibung&lt;/th&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&lt;/thead&gt;&#xA;&#x9;&lt;tbody&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;&lt;code&gt;&amp;lt;pages-domain&amp;gt;&lt;/code&gt;&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;Hauptdomain&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;&lt;code&gt;&amp;lt;user&amp;gt;.&amp;lt;pages-domain&amp;gt;&lt;/code&gt;&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;Benutzer-Seiten&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;&lt;code&gt;&amp;lt;user&amp;gt;.&amp;lt;pages-domain&amp;gt;/&amp;lt;repo&amp;gt;&lt;/code&gt;&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;Repo-spezifische Seiten&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&lt;/tbody&gt;&#xA;&lt;/table&gt;&#xA;&#xA;&lt;h2 class=&#34;relative group&#34;&gt;Funktionsweise&#xA;    &lt;div id=&#34;funktionsweise&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#funktionsweise&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;git-pages zieht Inhalte aus Forgejo-Repositories und stellt sie als statische Webseiten bereit.&#xA;Seiten werden über Webhooks aus Forgejo aktualisiert.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Home Assistant</title>
+      <link>https://zyria.de/posts/homelab/k3s-prod/apps/home-assistant/readme/</link>
+      <pubDate>Sun, 18 Oct 2026 08:36:53 +0200</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/home-assistant/readme/</guid>
+      <description>Home Assistant ist das Gehirn des Smart Homes. Im selben Namespace laufen Mosquitto (MQTT-Broker), python-matter-server und ein OpenThread Border Router (OTBR) als eigenständige Deployments.</description>
       
     </item>
     
@@ -48,16 +118,6 @@
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/posts/homelab/k3s-prod/apps/scrypted/readme/</guid>
       <description>Scrypted übernimmt Kamerastreams per RTSP und stellt sie als HomeKit-Kameras mit Aufnahme bereit. Es hängt wie Home Assistant per Multus direkt im Heimnetz.</description>
-      
-    </item>
-    
-    <item>
-      <title>Home Assistant</title>
-      <link>https://zyria.de/posts/homelab/k3s-prod/apps/home-assistant/readme/</link>
-      <pubDate>Sat, 17 Oct 2026 00:48:46 +0200</pubDate>
-      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/home-assistant/readme/</guid>
-      <description>Home Assistant ist das Gehirn des Smart Homes. Im selben Namespace laufen Mosquitto (MQTT-Broker), python-matter-server und ein OpenThread Border Router (OTBR) als eigenständige Deployments.</description>
       
     </item>
     
@@ -152,26 +212,6 @@
     </item>
     
     <item>
-      <title>Unbound</title>
-      <link>https://zyria.de/posts/homelab/k3s-prod/apps/unbound/readme/</link>
-      <pubDate>Tue, 29 Sep 2026 09:25:19 +0200</pubDate>
-      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/unbound/readme/</guid>
-      <description>Unbound löst Namen selbst rekursiv auf und liefert bei einem Ausfall der autoritativen Nameserver weiterhin die zuletzt bekannten Antworten aus.</description>
-      
-    </item>
-    
-    <item>
-      <title>VPN Standort C - Anbindung an das CDP-Tailnet</title>
-      <link>https://zyria.de/posts/homelab/k3s-prod/apps/vpn-site-c/readme/</link>
-      <pubDate>Tue, 29 Sep 2026 09:25:19 +0200</pubDate>
-      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/vpn-site-c/readme/</guid>
-      <description>Ein Pod baut einen WireGuard-Tunnel zum WireGuard-Server im CDP-Cluster auf und annonciert die Adressbereiche des CDP-Tailnets via Headscale ins eigene Tailnet.</description>
-      
-    </item>
-    
-    <item>
       <title>zyria.de Webseite</title>
       <link>https://zyria.de/posts/homelab/k3s-prod/apps/zyria-de/readme/</link>
       <pubDate>Tue, 15 Sep 2026 12:10:58 +0200</pubDate>
@@ -212,16 +252,6 @@
     </item>
     
     <item>
-      <title></title>
-      <link>https://zyria.de/posts/homelab/k3s-prod/apps/git-pages/readme/</link>
-      <pubDate>Tue, 25 Aug 2026 09:24:25 +0200</pubDate>
-      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/git-pages/readme/</guid>
-      <description>&lt;h1 class=&#34;relative group&#34;&gt;git-pages&#xA;    &lt;div id=&#34;git-pages&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#git-pages&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h1&gt;&#xA;&lt;p&gt;Statischer Seiten-Server für Forgejo-Repositories, analog zu GitHub Pages.&lt;/p&gt;&#xA;&lt;p&gt;Upstream: &lt;a href=&#34;https://codeberg.org/git-pages/git-pages&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;codeberg.org/git-pages/git-pages&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;Der konkrete Hostname steht im Ingress in &lt;code&gt;values.yaml&lt;/code&gt;; hier steht dafür&#xA;&lt;code&gt;&amp;lt;pages-domain&amp;gt;&lt;/code&gt;.&lt;/p&gt;&#xA;&#xA;&lt;h2 class=&#34;relative group&#34;&gt;URLs&#xA;    &lt;div id=&#34;urls&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#urls&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;table&gt;&#xA;&#x9;&lt;thead&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;th&gt;URL&lt;/th&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;th&gt;Beschreibung&lt;/th&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&lt;/thead&gt;&#xA;&#x9;&lt;tbody&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;&lt;code&gt;&amp;lt;pages-domain&amp;gt;&lt;/code&gt;&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;Hauptdomain&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;&lt;code&gt;&amp;lt;user&amp;gt;.&amp;lt;pages-domain&amp;gt;&lt;/code&gt;&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;Benutzer-Seiten&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;&lt;code&gt;&amp;lt;user&amp;gt;.&amp;lt;pages-domain&amp;gt;/&amp;lt;repo&amp;gt;&lt;/code&gt;&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;Repo-spezifische Seiten&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&lt;/tbody&gt;&#xA;&lt;/table&gt;&#xA;&#xA;&lt;h2 class=&#34;relative group&#34;&gt;Funktionsweise&#xA;    &lt;div id=&#34;funktionsweise&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#funktionsweise&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;git-pages zieht Inhalte aus Forgejo-Repositories und stellt sie als statische Webseiten bereit.&#xA;Seiten werden über Webhooks aus Forgejo aktualisiert.&lt;/p&gt;</description>
-      
-    </item>
-    
-    <item>
       <title>Mailstack</title>
       <link>https://zyria.de/posts/homelab/k3s-prod/apps/mailstack-new/readme/</link>
       <pubDate>Tue, 25 Aug 2026 09:24:25 +0200</pubDate>
@@ -238,16 +268,6 @@
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/posts/homelab/k3s-prod/apps/matrix/readme/</guid>
       <description>Diese Anwendung stellt einen Matrix-Homeserver (Synapse) und einen Web-Client (Element) bereit, um einen föderierten, Ende-zu-Ende-verschlüsselten Chat-Dienst zu betreiben.</description>
-      
-    </item>
-    
-    <item>
-      <title>Matrix (neu)</title>
-      <link>https://zyria.de/posts/homelab/k3s-prod/apps/matrix-new/readme/</link>
-      <pubDate>Tue, 25 Aug 2026 09:24:25 +0200</pubDate>
-      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/matrix-new/readme/</guid>
-      <description>Migration von apps/matrix auf das offizielle element-hq/ess-helm matrix-stack Chart mit Matrix Authentication Service (MAS), Element Web und Element Admin.</description>
       
     </item>
     
@@ -298,26 +318,6 @@
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/posts/homelab/k3s-prod/apps/trivy/readme/</guid>
       <description>Dieses Dokument beschreibt die Bereitstellung des Trivy Operators, eines Kubernetes-nativen Sicherheitstools, das Ihren Cluster kontinuierlich auf Sicherheitsprobleme scannt.</description>
-      
-    </item>
-    
-    <item>
-      <title>VPN Standort A - Tailscale Subnet Router</title>
-      <link>https://zyria.de/posts/homelab/k3s-prod/apps/vpn-site-a/readme/</link>
-      <pubDate>Tue, 25 Aug 2026 09:24:25 +0200</pubDate>
-      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/vpn-site-a/readme/</guid>
-      <description>Ein Pod baut einen WireGuard-Tunnel zu einem entfernten Standort auf und annonciert die dahinterliegenden Netze via Headscale ins Tailnet.</description>
-      
-    </item>
-    
-    <item>
-      <title>VPN Standort B - Tailscale Subnet Router</title>
-      <link>https://zyria.de/posts/homelab/k3s-prod/apps/vpn-site-b/readme/</link>
-      <pubDate>Tue, 25 Aug 2026 09:24:25 +0200</pubDate>
-      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/vpn-site-b/readme/</guid>
-      <description>Ein Pod baut einen OpenVPN-Tunnel zu einem entfernten Standort auf und annonciert die dahinterliegenden Netze via Headscale ins Tailnet.</description>
       
     </item>
     

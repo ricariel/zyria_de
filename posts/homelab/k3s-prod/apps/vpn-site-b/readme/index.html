@@ -104,8 +104,8 @@
 	<meta property="og:locale" content="de_de">
 	<meta property="og:type" content="article">
 		<meta property="article:section" content="posts">
-		<meta property="article:published_time" content="2026-08-25T09:24:25+02:00">
-		<meta property="article:modified_time" content="2026-08-25T09:24:25+02:00">
+		<meta property="article:published_time" content="2026-10-19T10:48:45+02:00">
+		<meta property="article:modified_time" content="2026-10-19T10:48:45+02:00">
 		<meta property="article:tag" content="Kubernetes">
 		<meta property="article:tag" content="K3s">
 		<meta property="article:tag" content="Gitops">
@@ -311,15 +311,15 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
       "sameAs": ["https://git.casa-due-pur.de/fabrice.kirchner", "https://git.zyria.de/pyrox", "https://github.com/ricariel", "https://www.linkedin.com/in/fabrice-kirchner-bb5408163/", "https://www.xing.com/profile/Fabrice_Kirchner", "https://kirchner.social/@fabrice", "https://codeberg.org/ricariel"]
     },
     "copyrightYear": "2026",
-    "dateCreated": "2026-08-25T09:24:25\u002b02:00",
-    "datePublished": "2026-08-25T09:24:25\u002b02:00",
+    "dateCreated": "2026-10-19T10:48:45\u002b02:00",
+    "datePublished": "2026-10-19T10:48:45\u002b02:00",
     
-    "dateModified": "2026-08-25T09:24:25\u002b02:00",
+    "dateModified": "2026-10-19T10:48:45\u002b02:00",
     
     "keywords": ["kubernetes","k3s","gitops","argocd","helm","kustomize","homelab","produktion"],
     
     "mainEntityOfPage": "https://zyria.de/posts/homelab/k3s-prod/apps/vpn-site-b/readme/",
-    "wordCount": "1574"
+    "wordCount": "1591"
   }]
   </script>
 
@@ -964,7 +964,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2026-08-25T09:24:25&#43;02:00">25 August 2026</time><span class="px-2 text-primary-500">&middot;</span><span>1574 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
+      <time datetime="2026-10-19T10:48:45&#43;02:00">19 Oktober 2026</time><span class="px-2 text-primary-500">&middot;</span><span>1591 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
 
 
   
@@ -1600,6 +1600,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
     
 </h3>
 <p>Der Pod läuft mit <code>replicas: 1</code> und <code>strategy: Recreate</code>.</p>
+<p><code>TS_NO_LOGS_NO_SUPPORT=true</code> im Container <code>tailscale</code> verhindert, dass <code>tailscaled</code> Diagnose-Logs (logtail) bei Tailscale Inc. hochlädt; Headscale unterbindet das nicht.</p>
 <div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">kubectl -n vpn-site-b logs deploy/vpn-site-b -c openvpn
 </span></span><span class="line"><span class="ln">2</span><span class="cl">kubectl -n vpn-site-b <span class="nb">exec</span> deploy/vpn-site-b -c tailscale -- tailscale status</span></span></code></pre></div></div>
 <p>Die Readiness-Probe prüft, ob über <code>tun0</code> Routen stehen. Das ist schwächer als der Handshake-Check bei WireGuard, weil <code>persist-tun</code> das Interface über Verbindungsabbrüche hinweg bestehen lässt. Sobald die Zielnetze feststehen, ist ein Ping auf einen Host der Gegenstelle die bessere Probe.</p>
@@ -1876,14 +1877,14 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
           
             <a
               class="flex text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
-              href="/posts/homelab/k3s-prod/apps/zabbix/readme/">
+              href="/posts/homelab/k3s-prod/apps/vpn-site-c/readme/">
               <span class="leading-6">
-                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;Zabbix
+                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;VPN Standort C - Anbindung an das CDP-Tailnet
               </span>
             </a>
             
               <span class="ms-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
-                <time datetime="2026-08-25T09:24:25&#43;02:00">25 August 2026</time>
+                <time datetime="2026-10-19T10:48:45&#43;02:00">19 Oktober 2026</time>
               </span>
             
           
@@ -1899,7 +1900,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
             </a>
             
               <span class="me-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
-                <time datetime="2026-08-25T09:24:25&#43;02:00">25 August 2026</time>
+                <time datetime="2026-10-19T10:48:45&#43;02:00">19 Oktober 2026</time>
               </span>
             
           
