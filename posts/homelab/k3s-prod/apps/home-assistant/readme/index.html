@@ -104,8 +104,8 @@
 	<meta property="og:locale" content="de_de">
 	<meta property="og:type" content="article">
 		<meta property="article:section" content="posts">
-		<meta property="article:published_time" content="2026-10-18T08:36:53+02:00">
-		<meta property="article:modified_time" content="2026-10-18T08:36:53+02:00">
+		<meta property="article:published_time" content="2026-10-20T11:35:19+02:00">
+		<meta property="article:modified_time" content="2026-10-20T11:35:19+02:00">
 		<meta property="article:tag" content="Kubernetes">
 		<meta property="article:tag" content="K3s">
 		<meta property="article:tag" content="Gitops">
@@ -311,15 +311,15 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
       "sameAs": ["https://git.casa-due-pur.de/fabrice.kirchner", "https://git.zyria.de/pyrox", "https://github.com/ricariel", "https://www.linkedin.com/in/fabrice-kirchner-bb5408163/", "https://www.xing.com/profile/Fabrice_Kirchner", "https://kirchner.social/@fabrice", "https://codeberg.org/ricariel"]
     },
     "copyrightYear": "2026",
-    "dateCreated": "2026-10-18T08:36:53\u002b02:00",
-    "datePublished": "2026-10-18T08:36:53\u002b02:00",
+    "dateCreated": "2026-10-20T11:35:19\u002b02:00",
+    "datePublished": "2026-10-20T11:35:19\u002b02:00",
     
-    "dateModified": "2026-10-18T08:36:53\u002b02:00",
+    "dateModified": "2026-10-20T11:35:19\u002b02:00",
     
     "keywords": ["kubernetes","k3s","gitops","argocd","helm","kustomize","homelab","produktion"],
     
     "mainEntityOfPage": "https://zyria.de/posts/homelab/k3s-prod/apps/home-assistant/readme/",
-    "wordCount": "660"
+    "wordCount": "867"
   }]
   </script>
 
@@ -964,7 +964,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2026-10-18T08:36:53&#43;02:00">18 Oktober 2026</time><span class="px-2 text-primary-500">&middot;</span><span>660 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
+      <time datetime="2026-10-20T11:35:19&#43;02:00">20 Oktober 2026</time><span class="px-2 text-primary-500">&middot;</span><span>867 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
 
 
   
@@ -1243,6 +1243,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
         <li><a href="#services--ingress">Services &amp; Ingress</a></li>
         <li><a href="#speicher">Speicher</a></li>
         <li><a href="#kubernetes-integration">Kubernetes-Integration</a></li>
+        <li><a href="#sicherung-der-konfiguration">Sicherung der Konfiguration</a></li>
         <li><a href="#updates">Updates</a></li>
       </ul>
     </li>
@@ -1279,6 +1280,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
         <li><a href="#services--ingress">Services &amp; Ingress</a></li>
         <li><a href="#speicher">Speicher</a></li>
         <li><a href="#kubernetes-integration">Kubernetes-Integration</a></li>
+        <li><a href="#sicherung-der-konfiguration">Sicherung der Konfiguration</a></li>
         <li><a href="#updates">Updates</a></li>
       </ul>
     </li>
@@ -1615,6 +1617,38 @@ Im Home-Assistant-Pod legt er zusätzlich Multicast (<code>224.0.0.0/4</code>) a
 <li><strong>RoleBinding</strong> (Namespace <code>home-assistant</code>): Lese-, Watch- und eingeschränkter Schreibzugriff auf Pods, Events, Deployments, StatefulSets, DaemonSets, CronJobs; Lesezugriff auf Services und Ingresses</li>
 </ul>
 <p>Die Integration fragt nur die Namespaces aus ihrer Konfiguration ab (derzeit <code>home-assistant</code>); für andere Namespaces fehlen die Rechte bewusst. Verlangt eine neue Version der Integration weitere Ressourcen, scheitert der gesamte Abgleich mit 403, bis die Rolle in <code>clusterrole.yaml</code> ergänzt ist.</p>
+
+<h3 class="relative group">Sicherung der Konfiguration
+    <div id="sicherung-der-konfiguration" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#sicherung-der-konfiguration" aria-label="Anker">#</a>
+    </span>
+    
+</h3>
+<p>Ein zweiter Container <code>config-backup</code> im Home-Assistant-Pod committet <code>/config</code>
+stündlich in das Git-Repository aus <code>BACKUP_REMOTE</code> und pusht nach <code>main</code>,
+wenn sich etwas geändert hat. Das Skript <code>config-backup.sh</code> kommt als ConfigMap
+<code>config-backup</code>, zusammen mit dem SSH-Host-Schlüssel der Forge (<code>config-backup-known-hosts</code>). Es
+nutzt das Home-Assistant-Image, weil darin <code>git</code> und <code>ssh</code> enthalten sind; der
+Tag muss mit dem des <code>homeassistant</code>-Containers übereinstimmen.</p>
+<p>Die laufende Instanz gilt: Jeder Lauf setzt den Arbeitsstand ohne Merge auf
+<code>origin/main</code>, nimmt Dateien, die <code>.gitignore</code> inzwischen ausschließt, aus dem
+Index und committet den Rest. Änderungen, die direkt im Repository an Dateien
+aus <code>/config</code> gemacht werden, überschreibt der nächste Lauf. Dateien, die nur im
+Repository liegen sollen (README, CI), müssen deshalb auch in <code>/config</code> liegen.</p>
+<p>Zum Pushen dient ein Deploy-Key mit Schreibrecht auf dieses Repository. Der
+private Schlüssel liegt im Secret <code>home-assistant-config-backup</code> (Schlüssel
+<code>ssh-privatekey</code>). Es steht bewusst nicht im Repository und wird von Hand
+angelegt, auch nach einem Neuaufbau des Clusters; ohne das Secret startet der Pod
+nicht:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">ssh-keygen -t ed25519 -N <span class="s2">&#34;&#34;</span> -C home-assistant-config-backup -f ./ha-config-backup
+</span></span><span class="line"><span class="ln">2</span><span class="cl">kubectl -n home-assistant create secret generic home-assistant-config-backup --from-file<span class="o">=</span>ssh-privatekey<span class="o">=</span>./ha-config-backup</span></span></code></pre></div></div>
+<p>Den öffentlichen Teil (<code>ha-config-backup.pub</code>) in der Forge als Deploy-Schlüssel
+mit Schreibzugriff eintragen, danach beide Dateien lokal löschen.</p>
+<p>Ob die Sicherung läuft, zeigt das Log:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">kubectl -n home-assistant logs deploy/home-assistant-main -c config-backup</span></span></code></pre></div></div>
 
 <h3 class="relative group">Updates
     <div id="updates" class="anchor"></div>
@@ -1988,14 +2022,14 @@ ausgerollt wird.</p>
           
             <a
               class="flex text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
-              href="/posts/homelab/k3s-prod/apps/localkit/readme/">
+              href="/posts/homelab/k3s-prod/apps/plex/readme/">
               <span class="leading-6">
-                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;Localkit
+                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;Plex Media Server
               </span>
             </a>
             
               <span class="ms-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
-                <time datetime="2026-10-17T12:25:32&#43;02:00">17 Oktober 2026</time>
+                <time datetime="2026-10-20T11:35:07&#43;02:00">20 Oktober 2026</time>
               </span>
             
           
@@ -2004,14 +2038,14 @@ ausgerollt wird.</p>
           
             <a
               class="flex text-right text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
-              href="/posts/homelab/k3s-prod/apps/git-pages/readme/">
+              href="/posts/homelab/k3s-prod/apps/mastodon/readme/">
               <span class="leading-6">
-                &ensp;<span class="inline-block rtl:rotate-180">&rarr;</span>
+                Mastodon&ensp;<span class="inline-block rtl:rotate-180">&rarr;</span>
               </span>
             </a>
             
               <span class="me-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
-                <time datetime="2026-10-18T10:17:56&#43;02:00">18 Oktober 2026</time>
+                <time datetime="2026-10-20T11:51:55&#43;02:00">20 Oktober 2026</time>
               </span>
             
           

@@ -105,7 +105,7 @@
 	<meta property="og:type" content="article">
 		<meta property="article:section" content="posts">
 		<meta property="article:published_time" content="2025-09-30T17:24:46+02:00">
-		<meta property="article:modified_time" content="2026-10-12T23:49:10+02:00">
+		<meta property="article:modified_time" content="2026-10-20T10:54:29+02:00">
 		<meta property="article:tag" content="Kubernetes">
 		<meta property="article:tag" content="Longhorn">
 		<meta property="article:tag" content="Storage">
@@ -311,12 +311,12 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
     "dateCreated": "2025-09-30T17:24:46\u002b02:00",
     "datePublished": "2025-09-30T17:24:46\u002b02:00",
     
-    "dateModified": "2026-10-12T23:49:10\u002b02:00",
+    "dateModified": "2026-10-20T10:54:29\u002b02:00",
     
     "keywords": ["kubernetes","longhorn","storage"],
     
     "mainEntityOfPage": "https://zyria.de/posts/homelab/k3s-prod/apps/longhorn/readme/",
-    "wordCount": "673"
+    "wordCount": "1013"
   }]
   </script>
 
@@ -963,7 +963,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2025-09-30T17:24:46&#43;02:00">30 September 2025</time><span class="px-2 text-primary-500">&middot;</span><time datetime="2026-10-12T23:49:10&#43;02:00">Aktualisiert: 12 Oktober 2026</time><span class="px-2 text-primary-500">&middot;</span><span>673 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
+      <time datetime="2025-09-30T17:24:46&#43;02:00">30 September 2025</time><span class="px-2 text-primary-500">&middot;</span><time datetime="2026-10-20T10:54:29&#43;02:00">Aktualisiert: 20 Oktober 2026</time><span class="px-2 text-primary-500">&middot;</span><span>1013 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
 
 
   
@@ -1149,6 +1149,11 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
           </ul>
         </li>
         <li><a href="#upgrade">Upgrade</a></li>
+        <li><a href="#störungen">Störungen</a>
+          <ul>
+            <li><a href="#alle-replikate-in-err-engine-läuft-weiter">Alle Replikate in ERR, Engine läuft weiter</a></li>
+          </ul>
+        </li>
         <li><a href="#installation">Installation</a></li>
         <li><a href="#abhängigkeiten">Abhängigkeiten</a></li>
       </ul>
@@ -1177,6 +1182,11 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
           </ul>
         </li>
         <li><a href="#upgrade">Upgrade</a></li>
+        <li><a href="#störungen">Störungen</a>
+          <ul>
+            <li><a href="#alle-replikate-in-err-engine-läuft-weiter">Alle Replikate in ERR, Engine läuft weiter</a></li>
+          </ul>
+        </li>
         <li><a href="#installation">Installation</a></li>
         <li><a href="#abhängigkeiten">Abhängigkeiten</a></li>
       </ul>
@@ -1386,6 +1396,62 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
 </span></span></span><span class="line"><span class="ln">2</span><span class="cl">  <span class="p">|</span> jq -r <span class="s1">&#39;.items[] | select((.metadata.annotations[&#34;k8s.v1.cni.cncf.io/network-status&#34;] // &#34;&#34;) | contains(&#34;lhnet1&#34;) | not) | .metadata.name + &#34; &#34; + .spec.nodeName&#39;</span></span></span></code></pre></div></div>
 <p>Steht dort ein Pod, muss er neu angelegt werden, solange Multus läuft. Die Replikate in diesem Pod fallen dabei weg und werden neu gebaut. Am schonendsten geschieht das mit einem Neustart des betroffenen Nodes mit Drain (<code>rolling_restart.yml</code> aus <code>ansible-main</code>). Den longhorn-manager dafür nicht neu starten; Longhorn wertet das als Node-Ausfall.</p>
 <p>Nach einem Upgrade hebt Longhorn die Engines aller Volumes selbst auf das neue Image (<code>concurrentAutomaticEngineUpgradePerNodeLimit: 1</code>, also ein Volume je Node gleichzeitig). Angehängte Volumes werden dabei live umgestellt, I/O stockt pro Volume kurz. Bis alle Volumes umgestellt sind, laufen Engines und Replikate teils noch in den alten Instance-Managern; diese verschwinden erst danach. Den Fortschritt zeigt <code>kubectl -n longhorn-system get engineimages.longhorn.io</code> über <code>REFCOUNT</code> des alten Images.</p>
+
+<h3 class="relative group">Störungen
+    <div id="störungen" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#st%c3%b6rungen" aria-label="Anker">#</a>
+    </span>
+    
+</h3>
+
+<h4 class="relative group">Alle Replikate in ERR, Engine läuft weiter
+    <div id="alle-replikate-in-err-engine-läuft-weiter" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#alle-replikate-in-err-engine-l%c3%a4uft-weiter" aria-label="Anker">#</a>
+    </span>
+    
+</h4>
+<p>Nach einer kurzen Netztrennung zwischen den Nodes kann ein Volume so stehen bleiben, dass Longhorn es nicht mehr selbst repariert. Erprobt am 20.10.2026 in einem gleich aufgebauten Cluster an einem 1-GiB-RWO-Volume eines Deployments mit einem Replikat und Strategie <code>Recreate</code>.</p>
+<p>Erkennungsmerkmale:</p>
+<ul>
+<li>Der Pod hängt in <code>ContainerCreating</code>, die Events zeigen <code>FailedAttachVolume</code> mit <code>DeadlineExceeded</code>.</li>
+<li>Das Volume steht auf <code>detached</code>, Robustness <code>unknown</code>.</li>
+<li>Alle Replikate sind <code>stopped</code>, in <code>.status.replicaModeMap</code> der Engine steht für jedes <code>ERR</code>, die Engine selbst ist aber <code>running</code>.</li>
+<li>longhorn-manager meldet in einer Schleife <code>All replicas are failed, auto-salvaging volume</code> und <code>Bringing up 3 replicas for auto-salvage</code>, ohne dass sich etwas ändert.</li>
+</ul>
+<p>Der Longhorn-Name des Volumes steht im PVC unter <code>.spec.volumeName</code>. Zustand prüfen:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">kubectl -n longhorn-system get volumes.longhorn.io &lt;volume&gt; -o <span class="nv">jsonpath</span><span class="o">=</span><span class="s1">&#39;{.status.state} {.status.robustness}{&#34;\n&#34;}&#39;</span>
+</span></span><span class="line"><span class="ln">2</span><span class="cl">kubectl -n longhorn-system get replicas.longhorn.io -l <span class="nv">longhornvolume</span><span class="o">=</span>&lt;volume&gt;
+</span></span><span class="line"><span class="ln">3</span><span class="cl">kubectl -n longhorn-system get engines.longhorn.io -l <span class="nv">longhornvolume</span><span class="o">=</span>&lt;volume&gt; -o <span class="nv">jsonpath</span><span class="o">=</span><span class="s1">&#39;{range .items[*]}{.metadata.name} {.status.currentState} {.status.replicaModeMap}{&#34;\n&#34;}{end}&#39;</span></span></span></code></pre></div></div>
+<p>Wirkungslos ist es, das unerfüllte Attach-Ticket aus <code>volumeattachments.longhorn.io</code> zu entfernen. Der CSI-Attacher legt es sofort neu an, <code>spec.nodeID</code> des Volumes bleibt gesetzt. Der Salvage kommt erst durch, wenn kein Workload mehr anhängen will und die Engine gestoppt ist:</p>
+<ol>
+<li>
+<p>Autosync der Argo-CD-Application abschalten, sonst skaliert Argo den Workload sofort zurück. Der Eingriff bleibt bestehen, weil das ApplicationSet in <code>init.yaml</code> <code>/spec/syncPolicy</code> unter <code>ignoreApplicationDifferences</code> führt:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">kubectl -n argocd patch applications.argoproj.io &lt;app&gt; --type json -p <span class="s1">&#39;[{&#34;op&#34;:&#34;remove&#34;,&#34;path&#34;:&#34;/spec/syncPolicy/automated&#34;}]&#39;</span></span></span></code></pre></div></div>
+</li>
+<li>
+<p>Workload auf 0 skalieren. Danach ist das Attach-Ticket weg und <code>spec.nodeID</code> des Volumes leer, die Engine läuft aber weiter:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">kubectl -n &lt;namespace&gt; scale deploy/&lt;workload&gt; --replicas<span class="o">=</span><span class="m">0</span></span></span></code></pre></div></div>
+</li>
+<li>
+<p>Engine stoppen. Den Namen liefert die Abfrage oben, meist <code>&lt;volume&gt;-e-0</code>:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">kubectl -n longhorn-system patch engines.longhorn.io &lt;engine&gt; --type merge -p <span class="s1">&#39;{&#34;spec&#34;:{&#34;desireState&#34;:&#34;stopped&#34;}}&#39;</span></span></span></code></pre></div></div>
+<p>Innerhalb weniger Sekunden ist die Engine gestoppt und der Salvage läuft durch. Erfolgreich ist er, wenn <code>.spec.failedAt</code> aller Replikate leer ist.</p>
+</li>
+<li>
+<p>Workload wieder auf 1 skalieren. Im erprobten Fall war der Pod nach rund 15 Sekunden bereit.</p>
+</li>
+<li>
+<p>Autosync wieder einschalten:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">kubectl -n argocd patch applications.argoproj.io &lt;app&gt; --type merge -p <span class="s1">&#39;{&#34;spec&#34;:{&#34;syncPolicy&#34;:{&#34;automated&#34;:{&#34;enabled&#34;:true,&#34;prune&#34;:true,&#34;selfHeal&#34;:true}}}}&#39;</span></span></span></code></pre></div></div>
+</li>
+</ol>
+<p>Beim Salvage übernimmt Longhorn das Replikat mit dem neuesten Stand. Schreibvorgänge kurz vor dem Ausfall können fehlen; bei Datenbank-Volumes danach die Konsistenz der Datenbank prüfen.</p>
 
 <h3 class="relative group">Installation
     <div id="installation" class="anchor"></div>
