@@ -105,7 +105,7 @@
 	<meta property="og:type" content="article">
 		<meta property="article:section" content="posts">
 		<meta property="article:published_time" content="2025-08-18T14:52:07+02:00">
-		<meta property="article:modified_time" content="2026-09-07T14:43:53+02:00">
+		<meta property="article:modified_time" content="2026-10-21T21:32:06+02:00">
 		<meta property="article:tag" content="Kubernetes">
 		<meta property="article:tag" content="Coredns">
 		<meta property="article:tag" content="Dns">
@@ -311,12 +311,12 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
     "dateCreated": "2025-08-18T14:52:07\u002b02:00",
     "datePublished": "2025-08-18T14:52:07\u002b02:00",
     
-    "dateModified": "2026-09-07T14:43:53\u002b02:00",
+    "dateModified": "2026-10-21T21:32:06\u002b02:00",
     
     "keywords": ["kubernetes","coredns","dns"],
     
     "mainEntityOfPage": "https://zyria.de/posts/homelab/k3s-prod/apps/nameserver/readme/",
-    "wordCount": "461"
+    "wordCount": "543"
   }]
   </script>
 
@@ -963,7 +963,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2025-08-18T14:52:07&#43;02:00">18 August 2025</time><span class="px-2 text-primary-500">&middot;</span><time datetime="2026-09-07T14:43:53&#43;02:00">Aktualisiert: 7 September 2026</time><span class="px-2 text-primary-500">&middot;</span><span>461 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
+      <time datetime="2025-08-18T14:52:07&#43;02:00">18 August 2025</time><span class="px-2 text-primary-500">&middot;</span><time datetime="2026-10-21T21:32:06&#43;02:00">Aktualisiert: 21 Oktober 2026</time><span class="px-2 text-primary-500">&middot;</span><span>543 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
 
 
   
@@ -1378,7 +1378,8 @@ Zusätzlich <code>serve_stale</code> und <code>servfail 0</code> — siehe unten
 </ul>
 </li>
 <li><strong>Standort-Zonen</strong>: Zonen von per VPN angebundenen Standorten sind hier bewusst <strong>nicht</strong> eingetragen. Die Weiterleitung läuft über <code>dns.nameservers.split</code> in <code>apps/headscale</code> und erreicht damit nur Tailnet-Clients — im LAN bleibt unsichtbar, dass die Zonen überhaupt existieren. Details in <code>apps/vpn-site-b</code>.</li>
-<li><strong>Scheduling</strong>: CoreDNS-Pods werden bevorzugt auf den Control-Plane-Nodes ausgeführt und sind über <code>topologySpreadConstraints</code> auf verschiedene Nodes und Zonen verteilt, um die Ausfallsicherheit zu erhöhen.</li>
+<li><strong>Scheduling</strong>: CoreDNS-Pods tolerieren die Taints der Control-Plane-Nodes, sind aber nicht auf sie festgelegt. <code>topologySpreadConstraints</code> verteilt sie auf verschiedene Nodes und Zonen, um die Ausfallsicherheit zu erhöhen.</li>
+<li><strong>LoadBalancer und Control-Plane</strong>: Der Service läuft mit <code>externalTrafficPolicy: Local</code>, und MetalLB kündigt Adressen nur von Control-Plane-Nodes an. Erreichbar ist die LoadBalancer-Adresse deshalb nur, solange mindestens eine Replica auf einer Control-Plane-Node läuft. Das erzwingt die harte Spread-Regel pro Node (<code>maxSkew: 1</code>, <code>DoNotSchedule</code>): Drei Replicas landen auf drei verschiedenen Nodes, und bei höchstens zwei Workern ist mindestens eine davon eine Control-Plane-Node. Kommt ein dritter Worker hinzu oder sinkt <code>replicaCount</code>, gilt das nicht mehr; dann gehört ein <code>nodeSelector</code> auf <code>node-role.kubernetes.io/control-plane</code> in <code>values.yaml</code>.</li>
 </ul>
 
 <h3 class="relative group">Ausfallsicherheit bei toten autoritativen Nameservern

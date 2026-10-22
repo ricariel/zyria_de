@@ -105,7 +105,7 @@
 	<meta property="og:type" content="article">
 		<meta property="article:section" content="posts">
 		<meta property="article:published_time" content="2025-10-17T11:09:29+02:00">
-		<meta property="article:modified_time" content="2026-09-15T14:14:34+02:00">
+		<meta property="article:modified_time" content="2026-10-21T15:05:10+02:00">
 		<meta property="article:tag" content="Kubernetes">
 		<meta property="article:tag" content="Traefik">
 		<meta property="article:tag" content="Wartung">
@@ -311,12 +311,12 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
     "dateCreated": "2025-10-17T11:09:29\u002b02:00",
     "datePublished": "2025-10-17T11:09:29\u002b02:00",
     
-    "dateModified": "2026-09-15T14:14:34\u002b02:00",
+    "dateModified": "2026-10-21T15:05:10\u002b02:00",
     
     "keywords": ["kubernetes","traefik","wartung"],
     
     "mainEntityOfPage": "https://zyria.de/posts/homelab/k3s-prod/apps/maintenance-page/readme/",
-    "wordCount": "802"
+    "wordCount": "1317"
   }]
   </script>
 
@@ -963,7 +963,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2025-10-17T11:09:29&#43;02:00">17 Oktober 2025</time><span class="px-2 text-primary-500">&middot;</span><time datetime="2026-09-15T14:14:34&#43;02:00">Aktualisiert: 15 September 2026</time><span class="px-2 text-primary-500">&middot;</span><span>802 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
+      <time datetime="2025-10-17T11:09:29&#43;02:00">17 Oktober 2025</time><span class="px-2 text-primary-500">&middot;</span><time datetime="2026-10-21T15:05:10&#43;02:00">Aktualisiert: 21 Oktober 2026</time><span class="px-2 text-primary-500">&middot;</span><span>1317 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
 
 
   
@@ -1145,6 +1145,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
         <li><a href="#funktion">Funktion</a>
           <ul>
             <li><a href="#fehlerseite">Fehlerseite</a></li>
+            <li><a href="#hinweisseiten-und-sperren">Hinweisseiten und Sperren</a></li>
             <li><a href="#fehlersuche">Fehlersuche</a></li>
             <li><a href="#wartungsseite">Wartungsseite</a></li>
             <li><a href="#catch-all-route">Catch-all-Route</a></li>
@@ -1176,6 +1177,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
         <li><a href="#funktion">Funktion</a>
           <ul>
             <li><a href="#fehlerseite">Fehlerseite</a></li>
+            <li><a href="#hinweisseiten-und-sperren">Hinweisseiten und Sperren</a></li>
             <li><a href="#fehlersuche">Fehlersuche</a></li>
             <li><a href="#wartungsseite">Wartungsseite</a></li>
             <li><a href="#catch-all-route">Catch-all-Route</a></li>
@@ -1389,7 +1391,8 @@ mit dem originalen Statuscode aus.</p>
 			</tr>
 	</tbody>
 </table>
-<p>Die Seite nennt Statuscode, Ursache, den betroffenen Hostnamen und die Uhrzeit
+<p>Liegt für den Host eine Hinweisseite vor, ersetzt sie die Fehlerseite, siehe
+unten. Sonst nennt die Seite Statuscode, Ursache, den betroffenen Hostnamen und die Uhrzeit
 und lädt sich alle 30 Sekunden neu. Die Texte je Statuscode stehen in den
 <code>map</code>-Blöcken von <code>default.conf</code>.</p>
 <p>Als Vorlage dient zuerst <code>/_error/index.html</code> aus dem <code>pages</code>-Branch. Hugo baut
@@ -1414,6 +1417,75 @@ ganzen Entrypoint oder je Anwendung per Annotation:</p>
 <p>Damit ein abgestürzter Pod überhaupt zu 503 führt statt zu 404, muss Traefik
 mit <code>allowEmptyServices: true</code> laufen. Sonst entfernt Traefik den Router, und
 keine Middleware greift.</p>
+
+<h4 class="relative group">Hinweisseiten und Sperren
+    <div id="hinweisseiten-und-sperren" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#hinweisseiten-und-sperren" aria-label="Anker">#</a>
+    </span>
+    
+</h4>
+<p>Hinweisseiten erklären, warum eine Anwendung gerade nicht erreichbar ist:
+Sicherheitslücke, geplante Wartung, Vorfall. Sie stehen als Markdown im
+Repository <code>pyrox/maintenance-page</code> unter <code>content/notices/</code>, wie man
+sie schreibt, beschreibt die README dort. Hugo legt je betroffenem Host eine
+Kopie nach <code>_notices/hosts/&lt;host&gt;/</code>. Fängt Traefik einen Fehler ab, sucht nginx
+unter <code>/error/&lt;status&gt;</code> zuerst nach einer Meldung für Host und erstes
+Pfadsegment der ursprünglichen URL, dann für den Host allein, und liefert sie
+mit dem abgefangenen Statuscode aus. Erst ohne Meldung kommt die Fehlerseite.
+Das gilt für jeden abgefangenen Status, eine Meldung erscheint also auch, wenn
+die Anwendung für eine Wartung heruntergefahren ist und Traefik 503 meldet.
+API-Clients bekommen die JSON-Fassung der Meldung.</p>
+<p>Für eine Sperre von außen setzt die Route vor ihre IP-Sperre wie <code>localnet</code> die
+Middleware <code>maintenance-page-lockdown</code>. Sie fängt das 403 der IP-Sperre ab und
+macht daraus per <code>statusRewrites</code> ein 503. Das fängt die globale Middleware
+<code>maintenance-page-errors</code> noch einmal ab und holt <code>/error/503</code> mit dem Host der
+ursprünglichen Anfrage, nginx findet dort die Meldung für den Host. Besucher
+bekommen 503 mit <code>Retry-After: 120</code>. Suchmaschinen lassen die Seiten damit im
+Index, ein 403 würden sie bei längerer Sperre entfernen. Liegt keine Meldung
+vor oder fehlt der git-sync-Stand, erscheint die Fehlerkarte zu 503.</p>
+<p>Weil die globale Middleware die Antwort der Routen-Middleware verwirft, kann
+nginx die Meldung nur über den Host finden, nicht über einen Namen in der
+Middleware.</p>
+<p>Ingress:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="ln">1</span><span class="cl"><span class="nt">traefik.ingress.kubernetes.io/router.middlewares</span><span class="p">:</span><span class="w"> </span><span class="l">maintenance-page-maintenance-page-lockdown@kubernetescrd,kube-system-localnet@kubernetescrd</span></span></span></code></pre></div></div>
+<p>IngressRoute:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="ln">1</span><span class="cl"><span class="nt">middlewares</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="ln">2</span><span class="cl"><span class="w">  </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">maintenance-page-lockdown</span><span class="w">
+</span></span></span><span class="line"><span class="ln">3</span><span class="cl"><span class="w">    </span><span class="nt">namespace</span><span class="p">:</span><span class="w"> </span><span class="l">maintenance-page</span><span class="w">
+</span></span></span><span class="line"><span class="ln">4</span><span class="cl"><span class="w">  </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">localnet</span><span class="w">
+</span></span></span><span class="line"><span class="ln">5</span><span class="cl"><span class="w">    </span><span class="nt">namespace</span><span class="p">:</span><span class="w"> </span><span class="l">kube-system</span></span></span></code></pre></div></div>
+<p>Ablauf einer Sperre:</p>
+<ol>
+<li>Meldung im Repository <code>pyrox/maintenance-page</code> anlegen und
+mergen. Nach dem Build holt git-sync sie innerhalb einer Minute, prüfen mit
+<code>kubectl -n maintenance-page exec deploy/maintenance-page -c main -- ls /usr/share/nginx/html/_notices/hosts/</code>.</li>
+<li>In <code>k3s-prod</code> die beiden Middlewares an die Routen der Anwendung hängen.</li>
+<li>Von außen prüfen, etwa per Mobilfunk: <code>curl -sI https://&lt;host&gt;/</code>.</li>
+</ol>
+<p>Zum Aufheben zuerst die Middlewares aus den Routen entfernen, danach die
+Meldung löschen. Umgekehrt sähen Gesperrte in der Zwischenzeit nur die
+allgemeine Karte. Für eine Wartung ohne Sperre genügt die Meldung, die Routen
+bleiben unverändert.</p>
+<p>Die Middleware <code>maintenance-page-lockdown</code> bleibt dauerhaft bestehen, auch ohne
+Sperre. Neue Meldungen brauchen kein neues Middleware-Objekt, damit entfällt
+die Reihenfolge „erst Objekt ausrollen, dann darauf verweisen“. Argo CD
+synchronisiert die Apps einzeln, und Traefik schaltet eine Route ab, deren
+Middleware fehlt.</p>
+<p>Die Middleware ersetzt auch 403-Antworten der Anwendung selbst, etwa bei
+fehlenden Rechten in WebDAV, auch für interne Nutzer. Sie bekommen dann 503
+mit der Meldung, WebDAV-Clients versuchen es daraufhin meist erneut, statt
+einen Rechtefehler zu melden. Sie gehört deshalb nur an
+Routen, die vorübergehend gesperrt sind. Eine Meldung, die nach dem Ende einer
+Sperre stehen bleibt, ersetzt bei jedem späteren Ausfall des Hosts die
+Fehlerseite.</p>
+<p>Belegt eine Anwendung nur einen Pfad eines fremden Hosts, wie roundcube unter
+<code>www.zyria.de/mail</code>, nennt die Meldung Host und erstes Pfadsegment. nginx
+liest das Segment aus dem Parameter <code>url</code>, den Traefik prozentkodiert anhängt.</p>
+<p>Anlass war die Sperre der PHP-Anwendungen wegen PHP2Shell (CVE-2026-109618 und
+CVE-2026-109619) im Oktober 2026.</p>
 
 <h4 class="relative group">Fehlersuche
     <div id="fehlersuche" class="anchor"></div>
@@ -1554,6 +1626,14 @@ mit schreibgeschütztem Root-Dateisystem, nginx lauscht auf Port 8080.</p>
 			<tr>
 					<td>Ersatzvorlage ohne git-sync-Inhalt</td>
 					<td><code>error.html</code> in <code>configMaps.server</code></td>
+			</tr>
+			<tr>
+					<td>Suche nach Hinweisseiten</td>
+					<td><code>try_files</code> und die <code>map</code>-Blöcke <code>$notice_file</code>, <code>$notice_segment</code> in <code>default.conf</code></td>
+			</tr>
+			<tr>
+					<td>Texte der Hinweisseiten</td>
+					<td><code>content/notices/</code> im Repository <code>pyrox/maintenance-page</code></td>
 			</tr>
 			<tr>
 					<td>503-Verhalten der Wartungsseite</td>
@@ -1832,14 +1912,14 @@ werden, ohne vorher den Eintrag in <code>apps/traefik</code> zu löschen.</p>
           
             <a
               class="flex text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
-              href="/posts/homelab/k3s-prod/apps/dmarc-report/readme/">
+              href="/posts/homelab/k3s-prod/apps/descheduler/readme/">
               <span class="leading-6">
-                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;DMARC Report
+                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;Kubernetes Descheduler
               </span>
             </a>
             
               <span class="ms-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
-                <time datetime="2025-10-17T10:56:01&#43;02:00">17 Oktober 2025</time>
+                <time datetime="2025-10-05T04:07:09&#43;02:00">5 Oktober 2025</time>
               </span>
             
           

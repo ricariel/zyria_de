@@ -105,7 +105,7 @@
 	<meta property="og:type" content="article">
 		<meta property="article:section" content="posts">
 		<meta property="article:published_time" content="2025-09-30T17:24:46+02:00">
-		<meta property="article:modified_time" content="2026-10-20T10:54:29+02:00">
+		<meta property="article:modified_time" content="2026-10-21T09:52:22+02:00">
 		<meta property="article:tag" content="Kubernetes">
 		<meta property="article:tag" content="Longhorn">
 		<meta property="article:tag" content="Storage">
@@ -311,12 +311,12 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
     "dateCreated": "2025-09-30T17:24:46\u002b02:00",
     "datePublished": "2025-09-30T17:24:46\u002b02:00",
     
-    "dateModified": "2026-10-20T10:54:29\u002b02:00",
+    "dateModified": "2026-10-21T09:52:22\u002b02:00",
     
     "keywords": ["kubernetes","longhorn","storage"],
     
     "mainEntityOfPage": "https://zyria.de/posts/homelab/k3s-prod/apps/longhorn/readme/",
-    "wordCount": "1013"
+    "wordCount": "1279"
   }]
   </script>
 
@@ -963,7 +963,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2025-09-30T17:24:46&#43;02:00">30 September 2025</time><span class="px-2 text-primary-500">&middot;</span><time datetime="2026-10-20T10:54:29&#43;02:00">Aktualisiert: 20 Oktober 2026</time><span class="px-2 text-primary-500">&middot;</span><span>1013 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
+      <time datetime="2025-09-30T17:24:46&#43;02:00">30 September 2025</time><span class="px-2 text-primary-500">&middot;</span><time datetime="2026-10-21T09:52:22&#43;02:00">Aktualisiert: 21 Oktober 2026</time><span class="px-2 text-primary-500">&middot;</span><span>1279 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
 
 
   
@@ -1152,6 +1152,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
         <li><a href="#störungen">Störungen</a>
           <ul>
             <li><a href="#alle-replikate-in-err-engine-läuft-weiter">Alle Replikate in ERR, Engine läuft weiter</a></li>
+            <li><a href="#snapshot-tickets-halten-das-volume-angehängt">Snapshot-Tickets halten das Volume angehängt</a></li>
           </ul>
         </li>
         <li><a href="#installation">Installation</a></li>
@@ -1185,6 +1186,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
         <li><a href="#störungen">Störungen</a>
           <ul>
             <li><a href="#alle-replikate-in-err-engine-läuft-weiter">Alle Replikate in ERR, Engine läuft weiter</a></li>
+            <li><a href="#snapshot-tickets-halten-das-volume-angehängt">Snapshot-Tickets halten das Volume angehängt</a></li>
           </ul>
         </li>
         <li><a href="#installation">Installation</a></li>
@@ -1442,6 +1444,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
 <p>Engine stoppen. Den Namen liefert die Abfrage oben, meist <code>&lt;volume&gt;-e-0</code>:</p>
 <div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">kubectl -n longhorn-system patch engines.longhorn.io &lt;engine&gt; --type merge -p <span class="s1">&#39;{&#34;spec&#34;:{&#34;desireState&#34;:&#34;stopped&#34;}}&#39;</span></span></span></code></pre></div></div>
 <p>Innerhalb weniger Sekunden ist die Engine gestoppt und der Salvage läuft durch. Erfolgreich ist er, wenn <code>.spec.failedAt</code> aller Replikate leer ist.</p>
+<p>Setzt Longhorn <code>desireState</code> sofort wieder auf <code>running</code> und bleibt das Volume <code>attached</code>, halten Snapshot-Tickets es fest. Dann zuerst den Abschnitt &ldquo;Snapshot-Tickets halten das Volume angehängt&rdquo; weiter unten abarbeiten.</p>
 </li>
 <li>
 <p>Workload wieder auf 1 skalieren. Im erprobten Fall war der Pod nach rund 15 Sekunden bereit.</p>
@@ -1452,6 +1455,28 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
 </li>
 </ol>
 <p>Beim Salvage übernimmt Longhorn das Replikat mit dem neuesten Stand. Schreibvorgänge kurz vor dem Ausfall können fehlen; bei Datenbank-Volumes danach die Konsistenz der Datenbank prüfen.</p>
+
+<h4 class="relative group">Snapshot-Tickets halten das Volume angehängt
+    <div id="snapshot-tickets-halten-das-volume-angehängt" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#snapshot-tickets-halten-das-volume-angeh%c3%a4ngt" aria-label="Anker">#</a>
+    </span>
+    
+</h4>
+<p>Hängt ein Rebuild, können auch Snapshots des Volumes hängen bleiben, einer in der Anlage, andere in der Löschung. Ihre Tickets vom Typ <code>snapshot-controller</code> in <code>volumeattachments.longhorn.io</code> sind erfüllt und zeigen auf den richtigen Node, halten das Volume aber angehängt, nachdem der Workload auf 0 steht. Longhorn setzt dann jedes <code>desireState: stopped</code> der Engine sofort auf <code>running</code> zurück. Erlebt am 21.10.2026 an zwei kleinen Volumes eines Deployments, nachdem Keel den Workload mehrmals neu gestartet hatte.</p>
+<p>Erkennungsmerkmale:</p>
+<ul>
+<li>Engine steht abwechselnd auf <code>unknown</code> und <code>running</code>, longhorn-manager meldet <code>Failed to proceed to rebuild since engine is state unknown</code> und <code>failed to start rebuild ... context deadline exceeded</code>.</li>
+<li>Das Volume hat ein Replikat mehr als <code>numberOfReplicas</code>, das neue wird nie <code>healthy</code>.</li>
+<li>Snapshot-Jobs scheitern, <code>RecurringJob</code>-Events zeigen <code>FailedDeleting</code> mit Status 500.</li>
+<li>Nach dem Herunterskalieren bleibt das Volume <code>attached</code>, in <code>.spec.attachmentTickets</code> stehen nur noch Tickets vom Typ <code>snapshot-controller</code>.</li>
+</ul>
+<p>Tickets prüfen und nach Schritt 2 oben entfernen:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">kubectl -n longhorn-system get volumeattachments.longhorn.io &lt;volume&gt; -o json <span class="p">|</span> jq -c <span class="s1">&#39;[.spec.attachmentTickets[] | {id, type, nodeID}]&#39;</span>
+</span></span><span class="line"><span class="ln">2</span><span class="cl">kubectl -n longhorn-system patch volumeattachments.longhorn.io &lt;volume&gt; --type json -p <span class="s2">&#34;</span><span class="k">$(</span>kubectl -n longhorn-system get volumeattachments.longhorn.io &lt;volume&gt; -o json <span class="p">|</span> jq -c <span class="s1">&#39;[.spec.attachmentTickets | to_entries[] | select(.value.type==&#34;snapshot-controller&#34;) | {op:&#34;remove&#34;, path:(&#34;/spec/attachmentTickets/&#34;+.key)}]&#39;</span><span class="k">)</span><span class="s2">&#34;</span></span></span></code></pre></div></div>
+<p>Innerhalb einer Minute löst sich das Volume ab und die Engine stoppt von selbst. Longhorn räumt dabei das hängende Zusatzreplikat und die hängenden Snapshots ab. Danach mit Schritt 4 oben weitermachen. Andere Volumes sind davon nicht betroffen, der Instance-Manager bleibt unberührt.</p>
 
 <h3 class="relative group">Installation
     <div id="installation" class="anchor"></div>

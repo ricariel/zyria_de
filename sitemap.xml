@@ -45,6 +45,36 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://zyria.de/posts/homelab/k3s-prod/apps/localkit/readme/</loc>
+    <lastmod>2026-10-21T21:55:14+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://zyria.de/posts/homelab/k3s-prod/</loc>
+    <lastmod>2026-10-21T19:50:04+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://zyria.de/posts/homelab/k3s-prod/apps/mailstack-new/readme/</loc>
+    <lastmod>2026-10-21T19:50:04+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://zyria.de/posts/homelab/k3s-prod/apps/parsedmarc/readme/</loc>
+    <lastmod>2026-10-21T19:50:04+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://zyria.de/posts/homelab/k3s-prod/apps/paperless/readme/</loc>
+    <lastmod>2026-10-21T09:31:13+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://zyria.de/posts/homelab/k3s-prod/apps/mastodon/readme/</loc>
     <lastmod>2026-10-20T11:51:55+02:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -95,12 +125,6 @@
   <url>
     <loc>https://zyria.de/posts/homelab/k3s-prod/apps/git-pages/readme/</loc>
     <lastmod>2026-10-18T10:17:56+02:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://zyria.de/posts/homelab/k3s-prod/apps/localkit/readme/</loc>
-    <lastmod>2026-10-17T12:25:32+02:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -219,19 +243,7 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://zyria.de/posts/homelab/k3s-prod/apps/paperless/readme/</loc>
-    <lastmod>2026-10-10T21:49:17+02:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
     <loc>https://zyria.de/posts/homelab/k3s-prod/apps/fluent-bit/readme/</loc>
-    <lastmod>2026-10-10T16:11:30+02:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://zyria.de/posts/homelab/k3s-prod/</loc>
     <lastmod>2026-10-10T16:11:30+02:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -281,12 +293,6 @@
   <url>
     <loc>https://zyria.de/posts/homelab/k3s-prod/apps/hx53-de/readme/</loc>
     <lastmod>2026-09-15T12:04:29+02:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://zyria.de/posts/homelab/k3s-prod/apps/mailstack-new/readme/</loc>
-    <lastmod>2026-08-25T09:24:25+02:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -424,7 +430,7 @@
   </url>
   <url>
     <loc>https://zyria.de/posts/homelab/k3s-prod/apps/wireguard/readme/</loc>
-    <lastmod>2026-10-19T11:47:35+02:00</lastmod>
+    <lastmod>2026-10-21T21:32:06+02:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -436,7 +442,7 @@
   </url>
   <url>
     <loc>https://zyria.de/posts/homelab/k3s-prod/apps/mailstack/readme/</loc>
-    <lastmod>2026-10-20T11:54:02+02:00</lastmod>
+    <lastmod>2026-10-21T19:50:04+02:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -514,13 +520,7 @@
   </url>
   <url>
     <loc>https://zyria.de/posts/homelab/k3s-prod/apps/maintenance-page/readme/</loc>
-    <lastmod>2026-09-15T14:14:34+02:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://zyria.de/posts/homelab/k3s-prod/apps/dmarc-report/readme/</loc>
-    <lastmod>2026-10-13T15:54:29+02:00</lastmod>
+    <lastmod>2026-10-21T15:05:10+02:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -574,7 +574,7 @@
   </url>
   <url>
     <loc>https://zyria.de/posts/homelab/k3s-prod/apps/longhorn/readme/</loc>
-    <lastmod>2026-10-20T10:54:29+02:00</lastmod>
+    <lastmod>2026-10-21T09:52:22+02:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -592,7 +592,7 @@
   </url>
   <url>
     <loc>https://zyria.de/posts/homelab/k3s-prod/apps/nameserver/readme/</loc>
-    <lastmod>2026-09-07T14:43:53+02:00</lastmod>
+    <lastmod>2026-10-21T21:32:06+02:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>

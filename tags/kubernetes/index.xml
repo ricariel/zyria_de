@@ -9,7 +9,57 @@
     <managingEditor>fabrice@zyria.de (Fabrice Kirchner)</managingEditor>
     <webMaster>fabrice@zyria.de (Fabrice Kirchner)</webMaster>
     
-    <lastBuildDate>Tue, 20 Oct 2026 11:54:02 +0200</lastBuildDate><atom:link href="https://zyria.de/tags/kubernetes/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 21 Oct 2026 21:55:14 +0200</lastBuildDate><atom:link href="https://zyria.de/tags/kubernetes/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Localkit</title>
+      <link>https://zyria.de/posts/homelab/k3s-prod/apps/localkit/readme/</link>
+      <pubDate>Wed, 21 Oct 2026 21:55:14 +0200</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/localkit/readme/</guid>
+      <description>Localkit ersetzt die Petkit-Cloud-API und den Aliyun-MQTT-Broker im Heimnetz. Die Geraete vertrauen einer eigenen CA aus cert-manager, die in ihr Steuerprogramm gepatcht wird.</description>
+      
+    </item>
+    
+    <item>
+      <title>k3s-prod: Kubernetes Cluster Konfiguration und Anwendungsbereitstellung</title>
+      <link>https://zyria.de/posts/homelab/k3s-prod/</link>
+      <pubDate>Wed, 21 Oct 2026 19:50:04 +0200</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://zyria.de/posts/homelab/k3s-prod/</guid>
+      <description>Zentrale Verwaltung eines k3s-Clusters und seiner Anwendungen mit ArgoCD, Helm und Kustomize.</description>
+      
+    </item>
+    
+    <item>
+      <title>Mailstack</title>
+      <link>https://zyria.de/posts/homelab/k3s-prod/apps/mailstack-new/readme/</link>
+      <pubDate>Wed, 21 Oct 2026 19:50:04 +0200</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/mailstack-new/readme/</guid>
+      <description>Dieser Mailstack integriert mehrere Komponenten wie Postfix, Dovecot, Rspamd und ClamAV, um einen robusten und sicheren E-Mail-Dienst mit Spam- und Virenfilterung bereitzustellen.</description>
+      
+    </item>
+    
+    <item>
+      <title>parsedmarc</title>
+      <link>https://zyria.de/posts/homelab/k3s-prod/apps/parsedmarc/readme/</link>
+      <pubDate>Wed, 21 Oct 2026 17:00:00 +0200</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/parsedmarc/readme/</guid>
+      <description>parsedmarc liest die Berichte per IMAP, schreibt sie in eine eigene PostgreSQL-Datenbank, Grafana zeigt sie im Dashboard DMARC Reports.</description>
+      
+    </item>
+    
+    <item>
+      <title>Paperless-ngx</title>
+      <link>https://zyria.de/posts/homelab/k3s-prod/apps/paperless/readme/</link>
+      <pubDate>Wed, 21 Oct 2026 09:31:13 +0200</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/paperless/readme/</guid>
+      <description>This document describes the Paperless-ngx deployment, a document management system that transforms physical documents into searchable digital archives.</description>
+      
+    </item>
     
     <item>
       <title>Mastodon</title>
@@ -102,16 +152,6 @@
     </item>
     
     <item>
-      <title>Localkit</title>
-      <link>https://zyria.de/posts/homelab/k3s-prod/apps/localkit/readme/</link>
-      <pubDate>Sat, 17 Oct 2026 12:25:32 +0200</pubDate>
-      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/localkit/readme/</guid>
-      <description>Localkit ersetzt die Petkit-Cloud-API und den Aliyun-MQTT-Broker im Heimnetz. Die Geraete vertrauen einer eigenen CA aus cert-manager, die in ihr Steuerprogramm gepatcht wird.</description>
-      
-    </item>
-    
-    <item>
       <title></title>
       <link>https://zyria.de/posts/homelab/k3s-prod/apps/corenetworks-dns-operator/readme/</link>
       <pubDate>Sat, 17 Oct 2026 12:15:30 +0200</pubDate>
@@ -162,32 +202,12 @@
     </item>
     
     <item>
-      <title>Paperless-ngx</title>
-      <link>https://zyria.de/posts/homelab/k3s-prod/apps/paperless/readme/</link>
-      <pubDate>Sat, 10 Oct 2026 21:49:17 +0200</pubDate>
-      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/paperless/readme/</guid>
-      <description>This document describes the Paperless-ngx deployment, a document management system that transforms physical documents into searchable digital archives.</description>
-      
-    </item>
-    
-    <item>
       <title>Fluent Bit</title>
       <link>https://zyria.de/posts/homelab/k3s-prod/apps/fluent-bit/readme/</link>
       <pubDate>Sat, 10 Oct 2026 16:11:30 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/posts/homelab/k3s-prod/apps/fluent-bit/readme/</guid>
       <description>Fluent Bit laeuft als DaemonSet auf jedem Knoten, liest Container-Logs, Kubernetes-Ereignisse und das Journal des Hosts und schickt sie an OpenObserve.</description>
-      
-    </item>
-    
-    <item>
-      <title>k3s-prod: Kubernetes Cluster Konfiguration und Anwendungsbereitstellung</title>
-      <link>https://zyria.de/posts/homelab/k3s-prod/</link>
-      <pubDate>Sat, 10 Oct 2026 16:11:30 +0200</pubDate>
-      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://zyria.de/posts/homelab/k3s-prod/</guid>
-      <description>Zentrale Verwaltung eines k3s-Clusters und seiner Anwendungen mit ArgoCD, Helm und Kustomize.</description>
       
     </item>
     
@@ -258,16 +278,6 @@
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/posts/homelab/k3s-prod/apps/hx53-de/readme/</guid>
       <description>Nginx liefert die statische Webseite hx53.de aus, git-sync zieht den Inhalt laufend aus einem Git-Repository nach.</description>
-      
-    </item>
-    
-    <item>
-      <title>Mailstack</title>
-      <link>https://zyria.de/posts/homelab/k3s-prod/apps/mailstack-new/readme/</link>
-      <pubDate>Tue, 25 Aug 2026 09:24:25 +0200</pubDate>
-      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/mailstack-new/readme/</guid>
-      <description>Dieser Mailstack integriert mehrere Komponenten wie Postfix, Dovecot, Rspamd und ClamAV, um einen robusten und sicheren E-Mail-Dienst mit Spam- und Virenfilterung bereitzustellen.</description>
       
     </item>
     
@@ -548,16 +558,6 @@
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/posts/homelab/k3s-prod/apps/maintenance-page/readme/</guid>
       <description>Dieser Dienst stellt eine Wartungsseite und eine Fehlerseite bereit, die Traefik anzeigt, wenn eine Anwendung nicht erreichbar ist, nicht rechtzeitig antwortet oder keine laufende Instanz hat.</description>
-      
-    </item>
-    
-    <item>
-      <title>DMARC Report</title>
-      <link>https://zyria.de/posts/homelab/k3s-prod/apps/dmarc-report/readme/</link>
-      <pubDate>Fri, 17 Oct 2025 10:56:01 +0200</pubDate>
-      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/dmarc-report/readme/</guid>
-      <description>Dieses Dokument beschreibt die Bereitstellung des DMARC Report Tools, das DMARC-Berichte verarbeitet und visualisiert.</description>
       
     </item>
     

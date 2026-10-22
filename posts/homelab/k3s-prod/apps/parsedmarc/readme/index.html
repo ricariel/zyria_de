@@ -15,8 +15,8 @@
 
   
   
-    <title>DMARC Report &middot; Zyria</title>
-    <meta name="title" content="DMARC Report &middot; Zyria">
+    <title>parsedmarc &middot; Zyria</title>
+    <meta name="title" content="parsedmarc &middot; Zyria">
   
 
   
@@ -31,14 +31,14 @@
     
   
   
-    <meta name="description" content="Dieses Dokument beschreibt die Bereitstellung des DMARC Report Tools, das DMARC-Berichte verarbeitet und visualisiert.">
+    <meta name="description" content="parsedmarc liest die Berichte per IMAP, schreibt sie in eine eigene PostgreSQL-Datenbank, Grafana zeigt sie im Dashboard DMARC Reports.">
   
   
-    <meta name="keywords" content="kubernetes,dmarc,mail,">
+    <meta name="keywords" content="kubernetes,dmarc,mail,grafana,postgresql,">
   
   
   
-  <link rel="canonical" href="https://zyria.de/posts/homelab/k3s-prod/apps/dmarc-report/readme/">
+  <link rel="canonical" href="https://zyria.de/posts/homelab/k3s-prod/apps/parsedmarc/readme/">
   
   
 
@@ -97,23 +97,25 @@
   
 
   
-  <meta property="og:url" content="https://zyria.de/posts/homelab/k3s-prod/apps/dmarc-report/readme/">
+  <meta property="og:url" content="https://zyria.de/posts/homelab/k3s-prod/apps/parsedmarc/readme/">
 	<meta property="og:site_name" content="Zyria">
-	<meta property="og:title" content="DMARC Report">
-	<meta property="og:description" content="Dokumentation für die Bereitstellung des DMARC Report Tools">
+	<meta property="og:title" content="parsedmarc">
+	<meta property="og:description" content="Wertet DMARC- und SMTP-TLS-Berichte aus dem DMARC-Postfach aus und zeigt sie in Grafana">
 	<meta property="og:locale" content="de_de">
 	<meta property="og:type" content="article">
 		<meta property="article:section" content="posts">
-		<meta property="article:published_time" content="2025-10-17T10:56:01+02:00">
-		<meta property="article:modified_time" content="2026-10-13T15:54:29+02:00">
+		<meta property="article:published_time" content="2026-10-21T17:00:00+02:00">
+		<meta property="article:modified_time" content="2026-10-21T19:50:04+02:00">
 		<meta property="article:tag" content="Kubernetes">
 		<meta property="article:tag" content="Dmarc">
 		<meta property="article:tag" content="Mail">
+		<meta property="article:tag" content="Grafana">
+		<meta property="article:tag" content="Postgresql">
 
   
 	<meta name="twitter:card" content="summary">
-	<meta name="twitter:title" content="DMARC Report">
-	<meta name="twitter:description" content="Dokumentation für die Bereitstellung des DMARC Report Tools">
+	<meta name="twitter:title" content="parsedmarc">
+	<meta name="twitter:description" content="Wertet DMARC- und SMTP-TLS-Berichte aus dem DMARC-Postfach aus und zeigt sie in Grafana">
 
   
   
@@ -296,27 +298,27 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
     "@context": "https://schema.org",
     "@type": "Article",
     "articleSection": "Beiträge",
-    "name": "DMARC Report",
-    "headline": "DMARC Report",
-    "description": "Dokumentation für die Bereitstellung des DMARC Report Tools",
+    "name": "parsedmarc",
+    "headline": "parsedmarc",
+    "description": "Wertet DMARC- und SMTP-TLS-Berichte aus dem DMARC-Postfach aus und zeigt sie in Grafana",
     "inLanguage": "de-de",
-    "url" : "https://zyria.de/posts/homelab/k3s-prod/apps/dmarc-report/readme/",
+    "url" : "https://zyria.de/posts/homelab/k3s-prod/apps/parsedmarc/readme/",
     "author" : {
       "@type": "Person",
       "name": "Fabrice Kirchner",
       "image": "https://zyria.de/images/chibi-head.jpg",
       "sameAs": ["https://git.casa-due-pur.de/fabrice.kirchner", "https://git.zyria.de/pyrox", "https://github.com/ricariel", "https://www.linkedin.com/in/fabrice-kirchner-bb5408163/", "https://www.xing.com/profile/Fabrice_Kirchner", "https://kirchner.social/@fabrice", "https://codeberg.org/ricariel"]
     },
-    "copyrightYear": "2025",
-    "dateCreated": "2025-10-17T10:56:01\u002b02:00",
-    "datePublished": "2025-10-17T10:56:01\u002b02:00",
+    "copyrightYear": "2026",
+    "dateCreated": "2026-10-21T17:00:00\u002b02:00",
+    "datePublished": "2026-10-21T17:00:00\u002b02:00",
     
-    "dateModified": "2026-10-13T15:54:29\u002b02:00",
+    "dateModified": "2026-10-21T19:50:04\u002b02:00",
     
-    "keywords": ["kubernetes","dmarc","mail"],
+    "keywords": ["kubernetes","dmarc","mail","grafana","postgresql"],
     
-    "mainEntityOfPage": "https://zyria.de/posts/homelab/k3s-prod/apps/dmarc-report/readme/",
-    "wordCount": "451"
+    "mainEntityOfPage": "https://zyria.de/posts/homelab/k3s-prod/apps/parsedmarc/readme/",
+    "wordCount": "1395"
   }]
   </script>
 
@@ -897,8 +899,8 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
 
   
   <li class="hidden">
-    <a class="hover:underline decoration-neutral-300 dark:underline-neutral-600" href="/posts/homelab/k3s-prod/apps/dmarc-report/readme/"
-      >DMARC Report</a
+    <a class="hover:underline decoration-neutral-300 dark:underline-neutral-600" href="/posts/homelab/k3s-prod/apps/parsedmarc/readme/"
+      >parsedmarc</a
     ><span class="px-1 text-primary-500">/</span>
   </li>
 
@@ -907,7 +909,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
 
       
       <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
-        DMARC Report
+        parsedmarc
       </h1>
       <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
         
@@ -936,8 +938,6 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   
 
   
-    
-  
 
   
     
@@ -963,7 +963,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2025-10-17T10:56:01&#43;02:00">17 Oktober 2025</time><span class="px-2 text-primary-500">&middot;</span><time datetime="2026-10-13T15:54:29&#43;02:00">Aktualisiert: 13 Oktober 2026</time><span class="px-2 text-primary-500">&middot;</span><span>451 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
+      <time datetime="2026-10-21T17:00:00&#43;02:00">21 Oktober 2026</time><span class="px-2 text-primary-500">&middot;</span><span>1395 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
 
 
   
@@ -971,7 +971,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
 
 <span class="mb-[2px]">
   <a
-    href="https://git.zyria.de/pyrox/zyria_de/src/branch/main/content/posts/homelab/k3s-prod/apps/dmarc-report/README.md"
+    href="https://git.zyria.de/pyrox/zyria_de/src/branch/main/content/posts/homelab/k3s-prod/apps/parsedmarc/README.md"
     class="text-lg hover:text-primary-500"
     rel="noopener noreferrer"
     target="_blank"
@@ -1107,6 +1107,44 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
               
             
           
+            
+              
+                <a class="relative mt-[0.5rem] me-2" href="/tags/grafana/">
+                  <span class="flex cursor-pointer">
+  
+  
+  
+  
+    <span
+      class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+  
+    Grafana
+  </span>
+</span>
+
+                </a>
+              
+            
+          
+            
+              
+                <a class="relative mt-[0.5rem] me-2" href="/tags/postgresql/">
+                  <span class="flex cursor-pointer">
+  
+  
+  
+  
+    <span
+      class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+  
+    Postgresql
+  </span>
+</span>
+
+                </a>
+              
+            
+          
         
       
     </div>
@@ -1138,20 +1176,17 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
     class="min-w-[220px] py-2 border-dotted border-s-1 -ms-5 ps-5 dark:border-neutral-600">
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#dmarc-report">DMARC Report</a>
+    <li><a href="#parsedmarc">parsedmarc</a>
       <ul>
-        <li><a href="#komponenten">Komponenten</a></li>
         <li><a href="#quelle">Quelle</a></li>
-        <li><a href="#dokumentation">Dokumentation</a></li>
-        <li><a href="#funktion">Funktion</a></li>
-        <li><a href="#lokale-anpassungen">Lokale Anpassungen</a>
-          <ul>
-            <li><a href="#wichtige-einstellungen">Wichtige Einstellungen</a></li>
-          </ul>
-        </li>
-        <li><a href="#datenbank">Datenbank</a></li>
+        <li><a href="#komponenten">Komponenten</a></li>
+        <li><a href="#warum-postgresql-und-nicht-opensearch-oder-elasticsearch">Warum PostgreSQL und nicht OpenSearch oder Elasticsearch</a></li>
+        <li><a href="#konfiguration">Konfiguration</a></li>
+        <li><a href="#secrets">Secrets</a></li>
+        <li><a href="#grafana">Grafana</a></li>
+        <li><a href="#altdaten">Altdaten</a></li>
+        <li><a href="#betrieb">Betrieb</a></li>
         <li><a href="#installation">Installation</a></li>
-        <li><a href="#abhängigkeiten">Abhängigkeiten</a></li>
       </ul>
     </li>
   </ul>
@@ -1167,20 +1202,17 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
     class="py-2 border-dotted border-neutral-300 border-s-1 -ms-5 ps-5 dark:border-neutral-600">
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#dmarc-report">DMARC Report</a>
+    <li><a href="#parsedmarc">parsedmarc</a>
       <ul>
-        <li><a href="#komponenten">Komponenten</a></li>
         <li><a href="#quelle">Quelle</a></li>
-        <li><a href="#dokumentation">Dokumentation</a></li>
-        <li><a href="#funktion">Funktion</a></li>
-        <li><a href="#lokale-anpassungen">Lokale Anpassungen</a>
-          <ul>
-            <li><a href="#wichtige-einstellungen">Wichtige Einstellungen</a></li>
-          </ul>
-        </li>
-        <li><a href="#datenbank">Datenbank</a></li>
+        <li><a href="#komponenten">Komponenten</a></li>
+        <li><a href="#warum-postgresql-und-nicht-opensearch-oder-elasticsearch">Warum PostgreSQL und nicht OpenSearch oder Elasticsearch</a></li>
+        <li><a href="#konfiguration">Konfiguration</a></li>
+        <li><a href="#secrets">Secrets</a></li>
+        <li><a href="#grafana">Grafana</a></li>
+        <li><a href="#altdaten">Altdaten</a></li>
+        <li><a href="#betrieb">Betrieb</a></li>
         <li><a href="#installation">Installation</a></li>
-        <li><a href="#abhängigkeiten">Abhängigkeiten</a></li>
       </ul>
     </li>
   </ul>
@@ -1300,31 +1332,23 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
 
         <div class="article-content max-w-prose mb-20">
           
-<h2 class="relative group">DMARC Report
-    <div id="dmarc-report" class="anchor"></div>
+<h2 class="relative group">parsedmarc
+    <div id="parsedmarc" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#dmarc-report" aria-label="Anker">#</a>
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#parsedmarc" aria-label="Anker">#</a>
     </span>
     
 </h2>
-<p>Das DMARC Report Tool ist eine Anwendung zur Verarbeitung und Visualisierung von DMARC-Berichten. Es hilft Ihnen, die E-Mail-Authentifizierung und -Zustellbarkeit Ihrer Domains zu überwachen und zu verbessern.</p>
-
-<h3 class="relative group">Komponenten
-    <div id="komponenten" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#komponenten" aria-label="Anker">#</a>
-    </span>
-    
-</h3>
-<p>Diese DMARC Report-Bereitstellung umfasst:</p>
-<ul>
-<li><strong>DMARC Report Anwendung:</strong> Die Kernanwendung zur Verarbeitung und Anzeige von DMARC-Berichten, als <code>Deployment</code>.</li>
-<li><strong>MariaDB:</strong> Die relationale Datenbank, als eigenes <code>StatefulSet</code> neben der Anwendung.</li>
-</ul>
+<p><a href="https://github.com/domainaware/parsedmarc"  target="_blank" rel="noreferrer">parsedmarc</a> liest die
+DMARC-Aggregat- und Fehlerberichte sowie die SMTP-TLS-Berichte (RFC 8460)
+aus dem DMARC-Postfach (Server und Benutzer in <code>values.yaml</code>), reichert sie um Land, Reverse-DNS und
+Absendername der Quell-IP an und schreibt sie in PostgreSQL. Angezeigt
+werden sie in Grafana aus <code>apps/prometheus</code>, Dashboard &ldquo;DMARC Reports&rdquo;.</p>
+<p>Die App ersetzt <code>dmarc-report</code>, die am 21.10.2026 abgeschaltet und danach entfernt wurde:
+deren Image läuft auf PHP 8.1, für das es gegen PHP2Shell keinen Fix gibt,
+und Image, Viewer und Parser werden seit 2023 nicht mehr gepflegt.</p>
 
 <h3 class="relative group">Quelle
     <div id="quelle" class="anchor"></div>
@@ -1335,100 +1359,335 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
     </span>
     
 </h3>
-<p>Die Anwendung basiert auf dem Docker-Image <a href="https://hub.docker.com/r/gutmensch/dmarc-report"  target="_blank" rel="noreferrer">docker.io/gutmensch/dmarc-report</a>.
-MariaDB: <a href="https://hub.docker.com/_/mariadb"  target="_blank" rel="noreferrer">Offizielles Docker Image</a>, bereitgestellt über das Chart <code>mariadb</code>
-der <a href="https://github.com/CloudPirates-io/helm-charts"  target="_blank" rel="noreferrer">CloudPirates-Charts</a>.</p>
-
-<h3 class="relative group">Dokumentation
-    <div id="dokumentation" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#dokumentation" aria-label="Anker">#</a>
-    </span>
-    
-</h3>
-<p>Die Dokumentation für das <code>dmarc-report</code>-Image ist auf <a href="https://github.com/gutmensch/dmarc-report"  target="_blank" rel="noreferrer">GitHub</a> verfügbar.</p>
-
-<h3 class="relative group">Funktion
-    <div id="funktion" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#funktion" aria-label="Anker">#</a>
-    </span>
-    
-</h3>
-<p>Dieser Dienst ruft DMARC-Berichte von einem IMAP-Postfach ab, parst sie und speichert die Daten in einer MariaDB-Datenbank. Die Berichte können dann über eine Weboberfläche visualisiert werden, um Einblicke in die E-Mail-Authentifizierung und potenzielle Missbrauchsfälle zu erhalten.</p>
-
-<h3 class="relative group">Lokale Anpassungen
-    <div id="lokale-anpassungen" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#lokale-anpassungen" aria-label="Anker">#</a>
-    </span>
-    
-</h3>
-<p>Die Konfiguration erfolgt über die <code>values.yaml</code>-Datei.</p>
-
-<h4 class="relative group">Wichtige Einstellungen
-    <div id="wichtige-einstellungen" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#wichtige-einstellungen" aria-label="Anker">#</a>
-    </span>
-    
-</h4>
 <ul>
-<li><strong>Ingress</strong>: Der Zugriff auf die Weboberfläche wird über einen Ingress mit einem Hostnamen ermöglicht. Der Zugriff ist durch Authentik geschützt.</li>
-<li><strong>Datenbank</strong>: MariaDB als eigener Workload, siehe Abschnitt <a href="/posts/homelab/k3s-prod/apps/dmarc-report/readme/#datenbank" >Datenbank</a>.</li>
-<li><strong>Speicher</strong>: Die Datenbankdateien werden persistent auf Longhorn-Volumes (PVC) gespeichert.</li>
+<li>Image: <code>ghcr.io/domainaware/parsedmarc</code>, das offizielle Image des
+Projekts, mit allen Ausgaben einschließlich PostgreSQL. Tag und Digest in
+<code>values.yaml</code>, Renovate hebt beide.</li>
+<li>Datenbank: Chart <code>postgres</code> der
+<a href="https://github.com/CloudPirates-io/helm-charts"  target="_blank" rel="noreferrer">CloudPirates-Charts</a> mit
+dem offiziellen Image <code>postgres</code>, Werte in <code>values-database.yaml</code>.</li>
+<li>Dashboard: <code>Grafana-DMARC_Reports-PostgreSQL.json</code> aus dem
+parsedmarc-Repository, angepasst durch <code>dashboards/build.sh</code>.</li>
+<li>Dokumentation: <a href="https://domainaware.github.io/parsedmarc/"  target="_blank" rel="noreferrer">domainaware.github.io/parsedmarc</a></li>
 </ul>
 
-<h3 class="relative group">Datenbank
-    <div id="datenbank" class="anchor"></div>
+<h3 class="relative group">Komponenten
+    <div id="komponenten" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#datenbank" aria-label="Anker">#</a>
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#komponenten" aria-label="Anker">#</a>
     </span>
     
 </h3>
-<p>Die Datenbank ist ein eigener <code>helmCharts</code>-Eintrag mit dem Chart <code>mariadb</code> der CloudPirates-Charts,
-konfiguriert über <code>values-database.yaml</code>. Die Anwendung erreicht sie über den Service
-<code>dmarc-report-mariadb</code>.</p>
 <table>
 	<thead>
 			<tr>
-					<th>Instanz</th>
-					<th>Image</th>
-					<th>Volume</th>
+					<th>Komponente</th>
+					<th>Art</th>
+					<th>Aufgabe</th>
 			</tr>
 	</thead>
 	<tbody>
 			<tr>
-					<td><code>dmarc-report-mariadb</code></td>
-					<td><code>mariadb:11.8.9</code> (LTS), auf Digest festgelegt</td>
-					<td><code>dmarc-report-db</code></td>
+					<td><code>parsedmarc</code></td>
+					<td>Deployment, <code>Recreate</code></td>
+					<td>wartet per IMAP IDLE auf neue Berichte, verarbeitet sie und verschiebt sie danach; je Aufwachen ein Stapel von 10 Mails, alle 30 Sekunden</td>
+			</tr>
+			<tr>
+					<td><code>parsedmarc-postgres</code></td>
+					<td>StatefulSet</td>
+					<td>PostgreSQL 18, Datenbank <code>parsedmarc</code>, Volume <code>parsedmarc-db</code> (Longhorn)</td>
+			</tr>
+			<tr>
+					<td><code>parsedmarc-import</code></td>
+					<td>Job, abgeschaltet</td>
+					<td>einmaliges Einlesen der Altberichte, siehe <a href="/posts/homelab/k3s-prod/apps/parsedmarc/readme/#altdaten" >Altdaten</a></td>
+			</tr>
+			<tr>
+					<td><code>grafana-dashboard-parsedmarc</code></td>
+					<td>ConfigMap</td>
+					<td>Dashboard, vom Grafana-Sidecar über das Label <code>grafana_dashboard</code> gefunden</td>
+			</tr>
+			<tr>
+					<td><code>grafana-datasource-parsedmarc</code></td>
+					<td>Secret im Namespace <code>prometheus</code></td>
+					<td>Datenquelle <code>parsedmarc</code> für Grafana</td>
+			</tr>
+			<tr>
+					<td><code>parsedmarc-postgres</code></td>
+					<td>NetworkPolicy</td>
+					<td>nur parsedmarc und Grafana erreichen die Datenbank</td>
 			</tr>
 	</tbody>
 </table>
-<p>Vorher lief MariaDB als Container <code>db</code> im Pod der Anwendung. Zwei Dinge haben das abgelöst:</p>
-<p>Jeder Rollout der Anwendung startete die Datenbank mit neu, und Renovate rollt die Anwendung regelmäßig
-aus. Zusammen mit <code>imagePullPolicy: IfNotPresent</code> auf dem Alias-Tag <code>lts</code> entschied damit der Image-Cache
-der Node, welche MariaDB-Version startet. Der Tag zeigt inzwischen auf 12.3.3, im Cluster lief noch 11.8.6;
-beim nächsten Pull wäre die Datenbank unbemerkt eine Hauptversion weitergesprungen. Die Version ist jetzt
-auf einen Digest festgelegt und wird von Renovate gepflegt, die <code>keel.sh</code>-Annotationen gelten nur noch für
-die Anwendung.</p>
-<p>Dazu kommt, dass Probes, SecurityContext, Service und Secret nun aus dem Chart kommen statt aus den
-Werten dieses Repositories.</p>
-<p>Das Datenvolume ist unverändert übernommen worden. Container und Chart mounten beide nach
-<code>/var/lib/mysql</code>, ein logischer Dump war deshalb nicht nötig; es hat nur gewechselt, welcher Workload das
-PVC <code>dmarc-report-db</code> einbindet. Weil es <code>ReadWriteOnce</code> ist, muss der alte Pod verschwunden sein, bevor
-das <code>StatefulSet</code> startet. Das Deployment steht auf <code>Recreate</code>, der Wechsel läuft deshalb mit einer kurzen
-Unterbrechung, aber ohne Verklemmung.</p>
+<p>Eine eigene Weboberfläche gibt es nicht, deshalb auch keinen Ingress.</p>
+
+<h3 class="relative group">Warum PostgreSQL und nicht OpenSearch oder Elasticsearch
+    <div id="warum-postgresql-und-nicht-opensearch-oder-elasticsearch" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#warum-postgresql-und-nicht-opensearch-oder-elasticsearch" aria-label="Anker">#</a>
+    </span>
+    
+</h3>
+<p>parsedmarc kann nach Elasticsearch, OpenSearch, PostgreSQL und weitere Ziele
+schreiben. Die fertigen Dashboards des Projekts zielen vor allem auf Kibana
+und OpenSearch Dashboards, für Grafana gibt es je eines für Elasticsearch und
+für PostgreSQL. Den Ausschlag gaben Betrieb und Datenmenge:</p>
+<ul>
+<li>Die Berichte sind wenige: in cdp rund 27.000 Mails seit 2017, in zyria
+rund 1.000. Eine PostgreSQL-Instanz kommt dafür mit wenigen hundert MB
+Speicher aus. OpenSearch oder Elasticsearch brauchen eine JVM mit mindestens
+1 bis 2 GB Heap und Pflege von Indizes und Mappings.</li>
+<li>Grafana läuft in beiden Clustern schon. Mit PostgreSQL entfällt Kibana
+oder OpenSearch Dashboards als zusätzliche Oberfläche mit eigener
+Anmeldung.</li>
+<li>Die CloudPirates-Charts sind das gesetzte Muster für Datenbanken in diesen
+Repositories, ein Such-Cluster wäre ein neuer Baustein.</li>
+<li>parsedmarc erkennt bereits gespeicherte Berichte in PostgreSQL und
+überspringt sie (<code>ON CONFLICT</code>). Erneutes Einlesen ist dadurch gefahrlos.</li>
+</ul>
+<p>Nachteil: Die Kibana-Dashboards mit Karten und Volltextsuche entfallen, und
+das PostgreSQL-Backend ist in parsedmarc jünger als das für Elasticsearch.</p>
+
+<h3 class="relative group">Konfiguration
+    <div id="konfiguration" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#konfiguration" aria-label="Anker">#</a>
+    </span>
+    
+</h3>
+<p>parsedmarc läuft ohne INI-Datei, nur mit Umgebungsvariablen der Form
+<code>PARSEDMARC_&lt;ABSCHNITT&gt;_&lt;SCHLÜSSEL&gt;</code> in <code>values.yaml</code>. Die Bedeutung jedes
+Schlüssels steht in der
+<a href="https://domainaware.github.io/parsedmarc/usage.html"  target="_blank" rel="noreferrer">Dokumentation</a>.</p>
+<table>
+	<thead>
+			<tr>
+					<th>Einstellung</th>
+					<th>Wert</th>
+					<th>Grund</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>Postfach</td>
+					<td><code>PARSEDMARC_IMAP_*</code>, IMAPS auf Port 993</td>
+					<td>dasselbe Postfach wie bisher bei <code>dmarc-report</code></td>
+			</tr>
+			<tr>
+					<td>Eingang</td>
+					<td><code>INBOX</code></td>
+					<td></td>
+			</tr>
+			<tr>
+					<td>Archiv</td>
+					<td><code>Archive</code>, darunter <code>Aggregate</code>, <code>Failure</code>, <code>SMTP-TLS</code>, <code>Invalid</code></td>
+					<td>Mails bleiben erhalten, die Datenbank lässt sich aus ihnen neu aufbauen</td>
+			</tr>
+			<tr>
+					<td><code>ALWAYS_USE_LOCAL_FILES</code></td>
+					<td><code>true</code></td>
+					<td>IP-Datenbank, Reverse-DNS-Zuordnung und PSL-Ausnahmen kommen aus dem Image statt beim Start von GitHub und IPinfo</td>
+			</tr>
+			<tr>
+					<td><code>NAMESERVERS</code></td>
+					<td>ClusterIP des Service <code>kube-dns</code></td>
+					<td>ohne die Angabe fragt parsedmarc die öffentlichen Resolver von Cloudflare</td>
+			</tr>
+	</tbody>
+</table>
+<p>SMTP-TLS-Berichte kommen nur an, wenn der TLSRPT-Eintrag <code>_smtp._tls</code> der
+Domains (<code>rua=mailto:...</code>) auf dasselbe Postfach zeigt wie der
+DMARC-Eintrag. Die Einträge stehen in <code>apps/mailstack/dns-records.yaml</code>.</p>
+<p>Datenabfluss: Außer IMAP und DNS baut parsedmarc keine Verbindungen nach
+außen auf. Die Rückwärtsauflösung der Quell-IPs läuft über die
+Cluster-Resolver.</p>
+<p>Das Deployment hat keine Probes. parsedmarc bietet keinen HTTP-Endpunkt und
+keinen Befehl, der den Zustand der IMAP-Verbindung meldet. Bricht die
+Verbindung dauerhaft ab, beendet sich der Prozess, und Kubernetes startet
+den Container neu.</p>
+
+<h3 class="relative group">Secrets
+    <div id="secrets" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#secrets" aria-label="Anker">#</a>
+    </span>
+    
+</h3>
+<p>Alle Zugangsdaten stehen im <code>secretGenerator</code> von <code>kustomization.yaml</code>:</p>
+<table>
+	<thead>
+			<tr>
+					<th>Secret</th>
+					<th>Namespace</th>
+					<th>Schlüssel</th>
+					<th>Zweck</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><code>parsedmarc</code></td>
+					<td><code>parsedmarc</code></td>
+					<td><code>postgres-password</code></td>
+					<td>Superuser <code>postgres</code></td>
+			</tr>
+			<tr>
+					<td></td>
+					<td></td>
+					<td><code>CUSTOM_USER</code>, <code>CUSTOM_DB</code>, <code>CUSTOM_PASSWORD</code></td>
+					<td>Rolle und Datenbank <code>parsedmarc</code>, Eigentümer der Tabellen</td>
+			</tr>
+			<tr>
+					<td></td>
+					<td></td>
+					<td><code>GRAFANA_PASSWORD</code></td>
+					<td>Rolle <code>grafana</code>, nur <code>SELECT</code></td>
+			</tr>
+			<tr>
+					<td></td>
+					<td></td>
+					<td><code>IMAP_PASSWORD</code></td>
+					<td>DMARC-Postfach</td>
+			</tr>
+			<tr>
+					<td><code>grafana-datasource-parsedmarc</code></td>
+					<td><code>prometheus</code></td>
+					<td><code>parsedmarc.yaml</code></td>
+					<td>Datenquelle mit dem Passwort der Rolle <code>grafana</code>, als JSON in einer Zeile</td>
+			</tr>
+	</tbody>
+</table>
+<p>PostgreSQL wertet die Passwörter nur beim Anlegen des leeren
+Datenverzeichnisses aus. Danach ändert man sie mit <code>ALTER ROLE</code> in der
+Datenbank und im Secret.</p>
+<p>Angelegt wurden sie mit diesem Befehl, der die Werte erzeugt, ohne sie
+auszugeben. Das IMAP-Passwort übernimmt er aus dem vorhandenen Eintrag; beim
+ersten Anlegen kam es aus der inzwischen entfernten App <code>dmarc-report</code>.
+Er setzt <code>.secretGenerator</code> neu und überschreibt einen vorhandenen Eintrag,
+für ein neu aufgesetztes Volume also nur zusammen mit einem leeren
+Datenverzeichnis verwenden:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln"> 1</span><span class="cl"><span class="nb">cd</span> <span class="s2">&#34;</span><span class="k">$(</span>git rev-parse --show-toplevel<span class="k">)</span><span class="s2">/apps/parsedmarc&#34;</span> <span class="se">\
+</span></span></span><span class="line"><span class="ln"> 2</span><span class="cl">  <span class="o">&amp;&amp;</span> <span class="nb">export</span> <span class="nv">IMAP_PW</span><span class="o">=</span><span class="s2">&#34;</span><span class="k">$(</span>yq <span class="s1">&#39;.secretGenerator[] | select(.name == &#34;parsedmarc&#34;) | .literals[] | select(test(&#34;^IMAP_PASSWORD=&#34;)) | sub(&#34;^IMAP_PASSWORD=&#34;; &#34;&#34;)&#39;</span> kustomization.yaml<span class="k">)</span><span class="s2">&#34;</span> <span class="se">\
+</span></span></span><span class="line"><span class="ln"> 3</span><span class="cl">  <span class="o">&amp;&amp;</span> <span class="nb">export</span> <span class="nv">ADMIN_PW</span><span class="o">=</span><span class="s2">&#34;</span><span class="k">$(</span>openssl rand -hex 24<span class="k">)</span><span class="s2">&#34;</span> <span class="nv">OWNER_PW</span><span class="o">=</span><span class="s2">&#34;</span><span class="k">$(</span>openssl rand -hex 24<span class="k">)</span><span class="s2">&#34;</span> <span class="nv">GRAFANA_PW</span><span class="o">=</span><span class="s2">&#34;</span><span class="k">$(</span>openssl rand -hex 24<span class="k">)</span><span class="s2">&#34;</span> <span class="se">\
+</span></span></span><span class="line"><span class="ln"> 4</span><span class="cl">  <span class="o">&amp;&amp;</span> <span class="nb">export</span> <span class="nv">DS</span><span class="o">=</span><span class="s2">&#34;</span><span class="k">$(</span>jq -cn --arg pw <span class="s2">&#34;</span><span class="si">${</span><span class="nv">GRAFANA_PW</span><span class="si">}</span><span class="s2">&#34;</span> <span class="s1">&#39;{apiVersion: 1, datasources: [{name: &#34;parsedmarc&#34;, uid: &#34;parsedmarc&#34;, type: &#34;grafana-postgresql-datasource&#34;, access: &#34;proxy&#34;, url: &#34;parsedmarc-postgres.parsedmarc.svc:5432&#34;, user: &#34;grafana&#34;, editable: false, jsonData: {database: &#34;parsedmarc&#34;, sslmode: &#34;disable&#34;, postgresVersion: 1800}, secureJsonData: {password: $pw}}]}&#39;</span><span class="k">)</span><span class="s2">&#34;</span> <span class="se">\
+</span></span></span><span class="line"><span class="ln"> 5</span><span class="cl">  <span class="o">&amp;&amp;</span> <span class="nb">test</span> -n <span class="s2">&#34;</span><span class="si">${</span><span class="nv">IMAP_PW</span><span class="si">}</span><span class="s2">&#34;</span> <span class="se">\
+</span></span></span><span class="line"><span class="ln"> 6</span><span class="cl">  <span class="o">&amp;&amp;</span> yq -i <span class="s1">&#39;.secretGenerator = [
+</span></span></span><span class="line"><span class="ln"> 7</span><span class="cl"><span class="s1">       {&#34;name&#34;: &#34;parsedmarc&#34;, &#34;namespace&#34;: &#34;parsedmarc&#34;, &#34;literals&#34;: [
+</span></span></span><span class="line"><span class="ln"> 8</span><span class="cl"><span class="s1">         &#34;postgres-password=&#34; + strenv(ADMIN_PW),
+</span></span></span><span class="line"><span class="ln"> 9</span><span class="cl"><span class="s1">         &#34;CUSTOM_USER=parsedmarc&#34;,
+</span></span></span><span class="line"><span class="ln">10</span><span class="cl"><span class="s1">         &#34;CUSTOM_DB=parsedmarc&#34;,
+</span></span></span><span class="line"><span class="ln">11</span><span class="cl"><span class="s1">         &#34;CUSTOM_PASSWORD=&#34; + strenv(OWNER_PW),
+</span></span></span><span class="line"><span class="ln">12</span><span class="cl"><span class="s1">         &#34;GRAFANA_PASSWORD=&#34; + strenv(GRAFANA_PW),
+</span></span></span><span class="line"><span class="ln">13</span><span class="cl"><span class="s1">         &#34;IMAP_PASSWORD=&#34; + strenv(IMAP_PW)]},
+</span></span></span><span class="line"><span class="ln">14</span><span class="cl"><span class="s1">       {&#34;name&#34;: &#34;grafana-datasource-parsedmarc&#34;, &#34;namespace&#34;: &#34;prometheus&#34;,
+</span></span></span><span class="line"><span class="ln">15</span><span class="cl"><span class="s1">        &#34;options&#34;: {&#34;labels&#34;: {&#34;grafana_datasource&#34;: &#34;1&#34;}},
+</span></span></span><span class="line"><span class="ln">16</span><span class="cl"><span class="s1">        &#34;literals&#34;: [&#34;parsedmarc.yaml=&#34; + strenv(DS)]}]
+</span></span></span><span class="line"><span class="ln">17</span><span class="cl"><span class="s1">     | (.secretGenerator[].literals[] | select(test(&#34;PASSWORD=|password=|parsedmarc.yaml=&#34;))) line_comment = &#34;gitleaks:allow&#34;&#39;</span> kustomization.yaml <span class="se">\
+</span></span></span><span class="line"><span class="ln">18</span><span class="cl">  <span class="o">&amp;&amp;</span> <span class="nb">unset</span> IMAP_PW ADMIN_PW OWNER_PW GRAFANA_PW DS <span class="se">\
+</span></span></span><span class="line"><span class="ln">19</span><span class="cl">  <span class="o">&amp;&amp;</span> git diff --stat kustomization.yaml</span></span></code></pre></div></div>
+
+<h3 class="relative group">Grafana
+    <div id="grafana" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#grafana" aria-label="Anker">#</a>
+    </span>
+    
+</h3>
+<p>Das Dashboard liegt als ConfigMap im Namespace <code>parsedmarc</code>. Der Sidecar von
+Grafana sucht in allen Namespaces nach dem Label <code>grafana_dashboard</code>, der für
+Datenquellen nur im Namespace <code>prometheus</code>. Deshalb legt diese App das
+Secret der Datenquelle dort an.</p>
+<p>Die Datenquelle meldet sich als Rolle <code>grafana</code> an, die nur lesen darf. Das
+Init-Skript in <code>values-database.yaml</code> legt sie beim ersten Start an und gibt
+ihr per <code>ALTER DEFAULT PRIVILEGES</code> Leserechte auch auf die Tabellen, die
+parsedmarc erst später anlegt.</p>
+<p>Das Dashboard enthält je Absenderdomain (Variable <code>fromdomain</code>):</p>
+<ul>
+<li>Zusammenfassung: Volumen, SPF-, DKIM- und DMARC-Ergebnis, Disposition,
+jeweils auch im Zeitverlauf</li>
+<li>Quellen nach IP, Reverse-DNS, Absender, Land und meldender Organisation</li>
+<li>&ldquo;Failing Sources&rdquo;: Quellen, deren Mails DMARC nicht bestanden haben, mit
+SPF- und DKIM-Ergebnis (in diesem Repository ergänzt)</li>
+<li>veröffentlichte Richtlinien, SPF- und DKIM-Details, Fehlerberichte</li>
+<li>SMTP-TLS-Berichte: Sitzungen, Erfolg und Fehler, Richtlinien, Fehlerdetails</li>
+</ul>
+<p><code>dashboards/parsedmarc.json</code> wird nicht von Hand bearbeitet, sondern von
+<code>dashboards/build.sh</code> erzeugt. Das Skript lädt das Upstream-Dashboard in der
+Version des Image-Tags aus <code>values.yaml</code>, bindet alle Panels an die
+Datenquelle <code>parsedmarc</code> und fügt das Panel aus
+<code>dashboards/failing-sources.sql</code> ein. Nach jedem Update des Images:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">apps/parsedmarc/dashboards/build.sh</span></span></code></pre></div></div>
+<p>Das Skript braucht <code>curl</code>, <code>jq</code> und <code>yq</code>. Ändert sich die JSON-Datei, gehört
+sie in dieselbe PR wie das Image-Update, damit Dashboard und Schema
+zusammenpassen.</p>
+
+<h3 class="relative group">Altdaten
+    <div id="altdaten" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#altdaten" aria-label="Anker">#</a>
+    </span>
+    
+</h3>
+<p>Die alte App hat verarbeitete Mails nicht gelöscht, sondern in die Ordner
+<code>processed</code> und <code>error</code> verschoben. Stand 21.10.2026 liegen dort 985 und
+18 Mails vom 29.09.2017 bis 18.10.2026. Neue Berichte, die seit dem
+Abschalten eingegangen sind, liegen in <code>INBOX</code> und werden beim ersten Start
+verarbeitet.</p>
+<p>Die Altberichte liest der Job <code>parsedmarc-import</code> ein. Er ist in
+<code>values.yaml</code> unter <code>controllers.import</code> mit <code>enabled: false</code> vorbereitet.
+Ein Einmallauf von parsedmarc verarbeitet nur einen Stapel, deshalb ruft
+das Skript des Jobs parsedmarc für <code>processed</code> und danach für <code>error</code> so
+lange auf, bis der Ordner leer ist, je 100 Mails pro Lauf. Die Mails
+wandern dabei wie neue Berichte nach <code>Archive/...</code>, nicht lesbare nach
+<code>Archive/Invalid</code>. Ein Stapel, der sich nicht speichern lässt, geht sofort
+nach <code>Archive/Unsaved</code> (<code>MAX_UNSAVED_RETRIES</code> 0), damit jeder Lauf
+vorankommt; macht ein Lauf keinen Fortschritt, bricht der Job ab. Bereits
+gespeicherte Berichte überspringt das PostgreSQL-Backend, ein zweiter Lauf
+schadet nicht.</p>
+<ol>
+<li><code>controllers.import.enabled</code> auf <code>true</code>, Merge, Argo CD startet den Job.</li>
+<li>Fortschritt mit <code>kubectl logs -n parsedmarc job/parsedmarc-import -f</code>,
+die Zeilen <code>import:</code> nennen den Rest je Ordner.</li>
+<li>Nach dem Ende <code>enabled</code> wieder auf <code>false</code>. Argo CD entfernt den Job.</li>
+</ol>
+<p>Danach sind <code>processed</code> und <code>error</code> leer und können gelöscht werden; alle
+Mails liegen unter <code>Archive</code>.</p>
+<p>Die Daten in der MariaDB von <code>dmarc-report</code> werden nicht übernommen. Sie
+stammen aus denselben Mails, und ein Umbau des techsneeze-Schemas in das von
+parsedmarc brächte weniger Felder als das erneute Einlesen. Vor dem Rückbau
+der alten App am 21.10.2026 ist ihre Datenbank als Dump mit 972 Berichten (ab 2017)
+gesichert worden; danach wurden App, Namespace und Longhorn-Volume entfernt.</p>
+
+<h3 class="relative group">Betrieb
+    <div id="betrieb" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#betrieb" aria-label="Anker">#</a>
+    </span>
+    
+</h3>
+<ul>
+<li>Logs: <code>kubectl logs -n parsedmarc deploy/parsedmarc</code>. Mails, die sich
+nicht parsen lassen, landen in <code>Archive/Invalid</code>. Mails, deren Berichte
+sich dreimal nicht speichern ließen, in <code>Archive/Unsaved</code>.</li>
+<li>Datenbank neu aufbauen: Die Mails liegen vollständig im Postfach. Leeres
+Volume, dann den Import-Job auf die Ordner unter <code>Archive</code> richten
+(Schleife in <code>values.yaml</code> anpassen, etwa <code>Archive/Aggregate</code>).</li>
+<li>Größe: Das Volume hat 2 GiB. Belegung prüfen mit
+<code>kubectl exec -n parsedmarc parsedmarc-postgres-0 -- sh -c 'psql -U postgres -d parsedmarc -c &quot;select pg_size_pretty(pg_database_size(current_database()))&quot;'</code>.</li>
+</ul>
 
 <h3 class="relative group">Installation
     <div id="installation" class="anchor"></div>
@@ -1439,25 +1698,11 @@ Unterbrechung, aber ohne Verklemmung.</p>
     </span>
     
 </h3>
-<p>Die Anwendung wird mit dem <code>app-template</code> aus dem <a href="https://bjw-s-labs.github.io/helm-charts/"  target="_blank" rel="noreferrer">bjw-s-labs Repository</a> bereitgestellt, die Datenbank mit dem Chart <code>mariadb</code> der CloudPirates-Charts. Beide sind Einträge in der <code>kustomization.yaml</code>.</p>
-<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">kubectl kustomize --enable-helm apps/dmarc-report <span class="p">|</span> kubectl apply -n dmarc-report -f -</span></span></code></pre></div></div>
-
-<h3 class="relative group">Abhängigkeiten
-    <div id="abhängigkeiten" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#abh%c3%a4ngigkeiten" aria-label="Anker">#</a>
-    </span>
-    
-</h3>
-<ul>
-<li>Ein laufender Kubernetes-Cluster.</li>
-<li>Ein Ingress-Controller (z.B. Traefik) für den externen Zugriff.</li>
-<li>Eine Zertifikatsmanagement-Lösung (z.B. cert-manager) zur Bereitstellung von TLS-Zertifikaten.</li>
-<li>Ein IMAP-Postfach, das DMARC-Berichte empfängt.</li>
-<li><strong>Longhorn</strong>: Als Storage-Provider für die PersistentVolumes.</li>
-</ul>
+<p>Die Anwendung wird mit dem <code>app-template</code> aus dem
+<a href="https://bjw-s-labs.github.io/helm-charts/"  target="_blank" rel="noreferrer">bjw-s-labs Repository</a>
+bereitgestellt, die Datenbank mit dem Chart <code>postgres</code> der
+CloudPirates-Charts. Beide sind Einträge in der <code>kustomization.yaml</code>.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">kubectl kustomize --enable-helm apps/parsedmarc</span></span></code></pre></div></div>
 
           
           
@@ -1468,7 +1713,7 @@ Unterbrechung, aber ohne Verklemmung.</p>
                 class="email-link m-1 rounded bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
                 href="#"
                 data-email="ZmFicmljZUB6eXJpYS5kZQ=="
-                data-subject="Antwort auf DMARC Report">
+                data-subject="Antwort auf parsedmarc">
                 Per E-Mail antworten
               </a>
               <noscript>
@@ -1690,14 +1935,14 @@ Unterbrechung, aber ohne Verklemmung.</p>
           
             <a
               class="flex text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
-              href="/posts/homelab/k3s-prod/apps/descheduler/readme/">
+              href="/posts/homelab/k3s-prod/apps/paperless/readme/">
               <span class="leading-6">
-                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;Kubernetes Descheduler
+                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;Paperless-ngx
               </span>
             </a>
             
               <span class="ms-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
-                <time datetime="2025-10-05T04:07:09&#43;02:00">5 Oktober 2025</time>
+                <time datetime="2026-10-21T09:31:13&#43;02:00">21 Oktober 2026</time>
               </span>
             
           
@@ -1706,14 +1951,14 @@ Unterbrechung, aber ohne Verklemmung.</p>
           
             <a
               class="flex text-right text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
-              href="/posts/homelab/k3s-prod/apps/maintenance-page/readme/">
+              href="/posts/homelab/k3s-prod/apps/mailstack-new/readme/">
               <span class="leading-6">
-                Maintenance Page&ensp;<span class="inline-block rtl:rotate-180">&rarr;</span>
+                Mailstack&ensp;<span class="inline-block rtl:rotate-180">&rarr;</span>
               </span>
             </a>
             
               <span class="me-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
-                <time datetime="2025-10-17T11:09:29&#43;02:00">17 Oktober 2025</time>
+                <time datetime="2026-10-21T19:50:04&#43;02:00">21 Oktober 2026</time>
               </span>
             
           

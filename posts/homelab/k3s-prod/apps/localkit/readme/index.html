@@ -104,8 +104,8 @@
 	<meta property="og:locale" content="de_de">
 	<meta property="og:type" content="article">
 		<meta property="article:section" content="posts">
-		<meta property="article:published_time" content="2026-10-17T12:25:32+02:00">
-		<meta property="article:modified_time" content="2026-10-17T12:25:32+02:00">
+		<meta property="article:published_time" content="2026-10-21T21:55:14+02:00">
+		<meta property="article:modified_time" content="2026-10-21T21:55:14+02:00">
 		<meta property="article:tag" content="Kubernetes">
 		<meta property="article:tag" content="K3s">
 		<meta property="article:tag" content="Gitops">
@@ -311,15 +311,15 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
       "sameAs": ["https://git.casa-due-pur.de/fabrice.kirchner", "https://git.zyria.de/pyrox", "https://github.com/ricariel", "https://www.linkedin.com/in/fabrice-kirchner-bb5408163/", "https://www.xing.com/profile/Fabrice_Kirchner", "https://kirchner.social/@fabrice", "https://codeberg.org/ricariel"]
     },
     "copyrightYear": "2026",
-    "dateCreated": "2026-10-17T12:25:32\u002b02:00",
-    "datePublished": "2026-10-17T12:25:32\u002b02:00",
+    "dateCreated": "2026-10-21T21:55:14\u002b02:00",
+    "datePublished": "2026-10-21T21:55:14\u002b02:00",
     
-    "dateModified": "2026-10-17T12:25:32\u002b02:00",
+    "dateModified": "2026-10-21T21:55:14\u002b02:00",
     
     "keywords": ["kubernetes","k3s","gitops","argocd","helm","kustomize","homelab","produktion"],
     
     "mainEntityOfPage": "https://zyria.de/posts/homelab/k3s-prod/apps/localkit/readme/",
-    "wordCount": "954"
+    "wordCount": "1207"
   }]
   </script>
 
@@ -964,7 +964,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2026-10-17T12:25:32&#43;02:00">17 Oktober 2026</time><span class="px-2 text-primary-500">&middot;</span><span>954 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
+      <time datetime="2026-10-21T21:55:14&#43;02:00">21 Oktober 2026</time><span class="px-2 text-primary-500">&middot;</span><span>1207 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
 
 
   
@@ -1240,6 +1240,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
         <li><a href="#dokumentation">Dokumentation</a></li>
         <li><a href="#aufbau">Aufbau</a></li>
         <li><a href="#medien">Medien</a></li>
+        <li><a href="#container">Container</a></li>
         <li><a href="#dns-umleitung">DNS-Umleitung</a></li>
         <li><a href="#die-ca">Die CA</a></li>
         <li><a href="#sicherheit">Sicherheit</a></li>
@@ -1266,6 +1267,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
         <li><a href="#dokumentation">Dokumentation</a></li>
         <li><a href="#aufbau">Aufbau</a></li>
         <li><a href="#medien">Medien</a></li>
+        <li><a href="#container">Container</a></li>
         <li><a href="#dns-umleitung">DNS-Umleitung</a></li>
         <li><a href="#die-ca">Die CA</a></li>
         <li><a href="#sicherheit">Sicherheit</a></li>
@@ -1418,20 +1420,27 @@ Home Assistant.</p>
 <ul>
 <li>Localkit läuft aus dem eigenen Fork <code>git.zyria.de/pyrox/localkit</code>
 (Repository <code>pyrox/localkit</code>, Abschnitt &ldquo;About this fork&rdquo; in dessen
-README), der Broker aus <code>ghcr.io/dwyschka/localkit-broker</code>. Beide gibt es
-nur als Branch-Tag <code>main</code>, deshalb sind sie per Digest gepinnt; Renovate
-hebt den Digest.</li>
-<li>Grund für den Fork: Upstream kodiert bei jedem etwa 4 s langen
+README), der Broker aus <code>ghcr.io/dwyschka/localkit-broker</code>. Der Fork
+veröffentlicht Versionstags (<code>X.Y.Z</code>), gepinnt ohne Digest: Sein
+wöchentlicher Neubau pusht denselben Tag erneut, und die Forgejo-Registry
+löscht dabei das vorige Manifest. Ein gepinnter Digest lieferte danach
+404 (21.10.2026, Pod in <code>ImagePullBackOff</code>). Den Broker gibt es nur als
+Branch-Tag <code>main</code>, er ist per Digest gepinnt. Renovate hebt beide.</li>
+<li>Gründe für den Fork: Upstream kodiert bei jedem etwa 4 s langen
 Kamerasegment das ganze bisherige Event neu nach MP4, in der Anfrage des
 Geräts. Bei längeren Events wurde der Container deshalb mehrfach am
 Speicherlimit beendet (17.10.2026). Der Fork hängt Segmente nur noch an
 und kodiert einmal pro Event im Scheduler. Die Änderung ist Upstream als
-Pull Request angeboten.</li>
-<li>Rückweg: Sobald Upstream die Änderung übernommen hat, <code>repository</code> beider
-Localkit-Container in <code>values.yaml</code> wieder auf <code>ghcr.io/dwyschka/localkit</code>
-stellen (Tag <code>main</code> mit aktuellem Digest), <code>LOCALKIT_SCHEDULER_ENABLE</code>
-prüfen (gibt es den Schalter Upstream nicht, entfällt er) und den Fork
-archivieren.</li>
+Pull Request angeboten. Außerdem baut der Fork sein Image seit dem
+21.10.2026 selbst auf dem offiziellen PHP-Image: Upstreams Basisimage
+<code>ghcr.io/dwyschka/localkit-docker</code> (serversideup/php) wurde seit August
+nicht neu gebaut und blieb auf PHP 8.4.24, ohne die Fixes für PHP2Shell
+(CVE-2026-109618 und CVE-2026-109619, behoben in 8.4.27).</li>
+<li>Rückweg: Erst wenn Upstream die Änderung übernommen hat und sein Image
+ein aktuelles PHP mitbringt. Dann <code>main</code> wieder als einen Container aus
+<code>ghcr.io/dwyschka/localkit</code> (Tag <code>main</code> mit aktuellem Digest) mit nginx
+und s6 betreiben, wie vor diesem Umbau (Git-Historie von <code>values.yaml</code>),
+und den Fork archivieren.</li>
 <li>Gerätedateien: siehe <code>device/</code>.</li>
 </ul>
 
@@ -1476,7 +1485,7 @@ archivieren.</li>
 			</tr>
 			<tr>
 					<td><code>values.yaml</code></td>
-					<td><code>app-template</code> von bjw-s mit drei Controllern: <code>main</code> (Localkit und Scheduler-Sidecar, beide aus dem Fork-Image), <code>broker</code> (MQTT-Broker der Geräte) und <code>storage</code> (Garage als S3-Speicher für Bilder und Clips); dazu LoadBalancer, Ingress, Longhorn-Volumes und <code>garage.toml</code></td>
+					<td><code>app-template</code> von bjw-s mit drei Controllern: <code>main</code> (Localkit, siehe Container), <code>broker</code> (MQTT-Broker der Geräte) und <code>storage</code> (Garage als S3-Speicher für Bilder und Clips); dazu LoadBalancer, Ingress, Longhorn-Volumes und <code>garage.toml</code></td>
 			</tr>
 			<tr>
 					<td><code>networkPolicy.yaml</code></td>
@@ -1514,18 +1523,73 @@ Weboberfläche unter System, Media und beim Gerät.</p>
 jedes Segment sofort an den Stream des Events an. Das MP4 entsteht erst, wenn
 60 s lang kein Segment mehr kam (<code>LOCALKIT_CLOUD_STORAGE_ENCODE_DELAY</code>); bis
 dahin wandelt die Weboberfläche den Stream beim Abspielen um.</p>
-<p>Das Image bringt keinen Queue-Worker mit. Jobs laufen mit
-<code>QUEUE_CONNECTION=sync</code> in dem Prozess, der sie auslöst. Der Container
-<code>scheduler</code> im selben Pod führt <code>schedule:work</code> aus und damit jede Minute den
-MP4-Encode fertiger Aufnahmen und täglich das Löschen von Medien, die älter
-als <code>LOCALKIT_MEDIA_RETENTION_DAYS</code> (7) sind. Der Encode braucht deshalb
-Speicher im Container <code>scheduler</code>, nicht im Webcontainer. Den eigenen
-Scheduler des Fork-Images schaltet <code>LOCALKIT_SCHEDULER_ENABLE=false</code> ab, damit
-nichts doppelt läuft.</p>
+<p>Es gibt keinen Queue-Worker. Jobs laufen mit <code>QUEUE_CONNECTION=sync</code> in dem
+Prozess, der sie auslöst. Der Container <code>scheduler</code> führt <code>schedule:work</code> aus
+und damit jede Minute den MP4-Encode fertiger Aufnahmen und täglich das
+Löschen von Medien, die älter als <code>LOCALKIT_MEDIA_RETENTION_DAYS</code> (7) sind.
+Der Encode braucht deshalb Speicher im Container <code>scheduler</code>, nicht in
+php-fpm.</p>
 <p>Garage legt beim ersten Start Layout, Bucket <code>localkit</code> und den Zugangsschlüssel
 aus den <code>GARAGE_DEFAULT_*</code>-Werten an (<code>--single-node --default-bucket</code>).</p>
 <p>Localkit und Broker brauchen je eine eigene IP, weil die Geräte fest auf den
-Ports 80, 443 und 443 (MQTT über TLS) sprechen.</p>
+Ports 80, 443 und 443 (MQTT über TLS) sprechen.
+Beide Pods sind per <code>nodeSelector</code> auf die Control-Plane-Nodes gelegt:
+MetalLB kündigt die LoadBalancer-IPs nur von dort an, und mit
+<code>externalTrafficPolicy: Local</code> verwirft ein Node ohne eigenen Endpunkt die
+Pakete. Auf einem Worker erreichen die Geräte Localkit sonst nicht (am
+21.10.2026 nach dem Umzug von <code>localkit-main</code> auf <code>worker2</code>).</p>
+
+<h3 class="relative group">Container
+    <div id="container" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#container" aria-label="Anker">#</a>
+    </span>
+    
+</h3>
+<p>Das Fork-Image enthält nur php-fpm und die App auf Basis des offiziellen
+PHP-Images mit fester Version (Abschnitt &ldquo;Image layout&rdquo; im README des Forks).
+Jeder Localkit-Prozess läuft als eigener Container im Pod <code>localkit-main</code>:</p>
+<table>
+	<thead>
+			<tr>
+					<th>Container</th>
+					<th>Aufgabe</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><code>init</code> (Init-Container)</td>
+					<td>kopiert <code>public/</code> und die nginx-Konfiguration des Images in das <code>emptyDir</code> <code>web</code> und führt die Migrationen aus</td>
+			</tr>
+			<tr>
+					<td><code>main</code></td>
+					<td>php-fpm, nur auf <code>127.0.0.1:9000</code></td>
+			</tr>
+			<tr>
+					<td><code>nginx</code></td>
+					<td><code>nginx-unprivileged</code>, HTTP auf 8080 und HTTPS auf 8443 mit <code>localkit-api-tls</code>, liefert <code>public/</code> aus und reicht PHP per FastCGI weiter</td>
+			</tr>
+			<tr>
+					<td><code>listen</code></td>
+					<td><code>php artisan localkit:listen</code>, Gerätekommunikation über den Broker</td>
+			</tr>
+			<tr>
+					<td><code>homeassistant</code></td>
+					<td><code>php artisan localkit:homeassistant</code>, MQTT-Bridge zu Home Assistant</td>
+			</tr>
+			<tr>
+					<td><code>scheduler</code></td>
+					<td><code>php artisan schedule:work</code>, Encode und Aufräumen</td>
+			</tr>
+	</tbody>
+</table>
+<p>Endet ein Prozess, startet Kubernetes nur seinen Container neu. Die
+Home-Assistant-Bridge veröffentlicht die MQTT-Discovery nur beim Start; nach
+einem neuen Gerät deshalb:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">kubectl -n localkit <span class="nb">exec</span> deploy/localkit-main -c homeassistant -- sh -c <span class="s1">&#39;kill 1&#39;</span></span></span></code></pre></div></div>
+<p>Die Seite System, Services der Weboberfläche ist ohne s6 ausgeblendet.</p>
 
 <h3 class="relative group">DNS-Umleitung
     <div id="dns-umleitung" class="anchor"></div>
@@ -1895,14 +1959,14 @@ Original-Firmware und spricht mit der Petkit-Cloud.</p>
           
             <a
               class="flex text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
-              href="/posts/homelab/k3s-prod/apps/corenetworks-dns-operator/readme/">
+              href="/posts/homelab/k3s-prod/apps/mailstack-new/readme/">
               <span class="leading-6">
-                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;
+                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;Mailstack
               </span>
             </a>
             
               <span class="ms-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
-                <time datetime="2026-10-17T12:15:30&#43;02:00">17 Oktober 2026</time>
+                <time datetime="2026-10-21T19:50:04&#43;02:00">21 Oktober 2026</time>
               </span>
             
           
@@ -1911,14 +1975,14 @@ Original-Firmware und spricht mit der Petkit-Cloud.</p>
           
             <a
               class="flex text-right text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
-              href="/posts/homelab/k3s-prod/apps/git-pages/readme/">
+              href="/posts/homelab/k3s-prod/ansible/shutdown-startup/">
               <span class="leading-6">
-                &ensp;<span class="inline-block rtl:rotate-180">&rarr;</span>
+                Operational Lifecycle Management: Orchestrierter Shutdown für Kubernetes&ensp;<span class="inline-block rtl:rotate-180">&rarr;</span>
               </span>
             </a>
             
               <span class="me-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
-                <time datetime="2026-10-18T10:17:56&#43;02:00">18 Oktober 2026</time>
+                <time datetime="2024-10-27T10:00:00&#43;01:00">27 Oktober 2024</time>
               </span>
             
           
