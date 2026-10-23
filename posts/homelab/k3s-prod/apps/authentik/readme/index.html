@@ -105,7 +105,7 @@
 	<meta property="og:type" content="article">
 		<meta property="article:section" content="posts">
 		<meta property="article:published_time" content="2025-10-04T12:05:11+02:00">
-		<meta property="article:modified_time" content="2026-09-07T14:43:53+02:00">
+		<meta property="article:modified_time" content="2026-10-22T10:08:24+02:00">
 		<meta property="article:tag" content="Kubernetes">
 		<meta property="article:tag" content="Authentik">
 		<meta property="article:tag" content="Sso">
@@ -312,12 +312,12 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
     "dateCreated": "2025-10-04T12:05:11\u002b02:00",
     "datePublished": "2025-10-04T12:05:11\u002b02:00",
     
-    "dateModified": "2026-09-07T14:43:53\u002b02:00",
+    "dateModified": "2026-10-22T10:08:24\u002b02:00",
     
     "keywords": ["kubernetes","authentik","sso","iam"],
     
     "mainEntityOfPage": "https://zyria.de/posts/homelab/k3s-prod/apps/authentik/readme/",
-    "wordCount": "276"
+    "wordCount": "888"
   }]
   </script>
 
@@ -964,7 +964,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2025-10-04T12:05:11&#43;02:00">4 Oktober 2025</time><span class="px-2 text-primary-500">&middot;</span><time datetime="2026-09-07T14:43:53&#43;02:00">Aktualisiert: 7 September 2026</time><span class="px-2 text-primary-500">&middot;</span><span>276 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
+      <time datetime="2025-10-04T12:05:11&#43;02:00">4 Oktober 2025</time><span class="px-2 text-primary-500">&middot;</span><time datetime="2026-10-22T10:08:24&#43;02:00">Aktualisiert: 22 Oktober 2026</time><span class="px-2 text-primary-500">&middot;</span><span>888 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
 
 
   
@@ -1169,6 +1169,12 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
             <li><a href="#wichtige-einstellungen">Wichtige Einstellungen</a></li>
           </ul>
         </li>
+        <li><a href="#blueprints">Blueprints</a></li>
+        <li><a href="#passwort-self-service">Passwort-Self-Service</a>
+          <ul>
+            <li><a href="#umleitung-der-alten-self-service-password-adresse">Umleitung der alten Self-Service-Password-Adresse</a></li>
+          </ul>
+        </li>
         <li><a href="#installation">Installation</a></li>
         <li><a href="#abhängigkeiten">Abhängigkeiten</a></li>
       </ul>
@@ -1195,6 +1201,12 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
         <li><a href="#lokale-anpassungen">Lokale Anpassungen</a>
           <ul>
             <li><a href="#wichtige-einstellungen">Wichtige Einstellungen</a></li>
+          </ul>
+        </li>
+        <li><a href="#blueprints">Blueprints</a></li>
+        <li><a href="#passwort-self-service">Passwort-Self-Service</a>
+          <ul>
+            <li><a href="#umleitung-der-alten-self-service-password-adresse">Umleitung der alten Self-Service-Password-Adresse</a></li>
           </ul>
         </li>
         <li><a href="#installation">Installation</a></li>
@@ -1409,6 +1421,129 @@ Das Helm-Chart stammt aus dem <a href="https://charts.goauthentik.io"  target="_
 <li><strong>Redis</strong>: Für Caching und Hintergrundaufgaben wird eine dedizierte Redis-Instanz verwendet, deren Daten auf einem Volume gespeichert werden.</li>
 <li><strong>E-Mail</strong>: SMTP ist für den Versand von Benachrichtigungen und Passwort-Resets konfiguriert.</li>
 </ul>
+
+<h3 class="relative group">Blueprints
+    <div id="blueprints" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#blueprints" aria-label="Anker">#</a>
+    </span>
+    
+</h3>
+<p>Ein Teil der Konfiguration liegt als Authentik-Blueprints unter <code>blueprints/</code> im Repository statt nur in der Datenbank. Kustomize erzeugt daraus die ConfigMap <code>authentik-blueprints</code>, das Chart hängt sie über <code>blueprints.configMaps</code> im Worker unter <code>/blueprints/mounted/</code> ein, und Authentik wendet jede Datei an, sobald sich ihr Inhalt ändert. Objekte aus einem Blueprint werden dabei auf den Stand im Repository gesetzt; Änderungen an ihnen im Webinterface gehen beim nächsten Anwenden verloren. Was nicht im Blueprint steht (etwa das Bind-Passwort der LDAP-Quelle), bleibt unverändert, und ein aus der Datei entferntes Objekt wird nicht gelöscht.</p>
+<p>Die Blueprint-Dateien sind in zyria und cdp wortgleich und werden gemeinsam gepflegt. Werte, die sich je Cluster unterscheiden, stehen als Umgebungsvariablen des Workers in <code>values.yaml</code> (<code>worker.env</code>) und werden per <code>!Env</code> gelesen:</p>
+<table>
+	<thead>
+			<tr>
+					<th>Variable</th>
+					<th>Bedeutung</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><code>AK_BLUEPRINT_LDAP_SOURCE_SLUG</code></td>
+					<td>Slug der LDAP-Quelle</td>
+			</tr>
+			<tr>
+					<td><code>AK_BLUEPRINT_LDAP_TRUST_ROOT</code></td>
+					<td>Wurzelzertifikat, mit dem das DC-Zertifikat geprüft wird (<code>ISRG Root X1</code> für RSA, <code>ISRG Root X2</code> für ECDSA)</td>
+			</tr>
+	</tbody>
+</table>
+<p>Eigene Mailvorlagen (deutscher Text für den Passwort-Reset und die Benachrichtigung nach einer Änderung, unabhängig von der Browsersprache) liegen unter <code>email-templates/</code> und werden als ConfigMap <code>authentik-email-templates</code> nach <code>/templates</code> gemountet.</p>
+<p>Vor einem Merge lassen sich die Blueprints im laufenden Authentik prüfen, ohne etwas zu schreiben: <code>Importer.from_string(...).validate()</code> in <code>ak shell</code> wendet sie in einer Transaktion an und rollt sie danach zurück.</p>
+<table>
+	<thead>
+			<tr>
+					<th>Datei</th>
+					<th>Inhalt</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><code>10-ldap-source.yaml</code></td>
+					<td>Zertifikatsprüfung der LDAP-Quelle, Property-Mapping <code>ad-recovery-email</code></td>
+			</tr>
+			<tr>
+					<td><code>20-password-policy.yaml</code></td>
+					<td>Passwortregeln</td>
+			</tr>
+			<tr>
+					<td><code>30-password-flows.yaml</code></td>
+					<td>Flows für Passwort-Self-Service, Benutzereinstellungen, Benachrichtigung</td>
+			</tr>
+	</tbody>
+</table>
+<p>Der Blueprint <code>30-password-flows.yaml</code> setzt auch die Standardsprache der Marke auf Deutsch (<code>attributes.settings.locale</code>). Sie gilt für alle, die in den Benutzereinstellungen keine eigene Sprache gewählt haben.</p>
+
+<h3 class="relative group">Passwort-Self-Service
+    <div id="passwort-self-service" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#passwort-self-service" aria-label="Anker">#</a>
+    </span>
+    
+</h3>
+<p>Authentik ersetzt LTB Self Service Password. Neue Passwörter schreibt Authentik über die LDAP-Quelle ins AD (<code>sync_users_password</code>, <code>unicodePwd</code> über LDAPS). Das Bind-Konto <code>sso</code> braucht dafür am DC das Recht „Reset Password“ auf <code>OU=Benutzer</code>.</p>
+<table>
+	<thead>
+			<tr>
+					<th>Ablauf</th>
+					<th>Adresse</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>Passwort ändern ohne Anmeldung</td>
+					<td><code>/if/flow/password-change/</code></td>
+			</tr>
+			<tr>
+					<td>Passwort vergessen</td>
+					<td><code>/if/flow/password-recovery/</code>, auch als Link auf der Anmeldeseite</td>
+			</tr>
+			<tr>
+					<td>Passwort ändern nach Anmeldung</td>
+					<td>Benutzereinstellungen, Flow <code>password-change-authenticated</code></td>
+			</tr>
+	</tbody>
+</table>
+<p>Passwortregeln: mindestens 10 Zeichen, je ein Klein- und ein Großbuchstabe, Zeichen aus drei von vier Gruppen, keine Namensbestandteile, kein Treffer bei Have I Been Pwned. Für die HIBP-Prüfung gehen die ersten fünf Zeichen des SHA-1-Hashes an <code>api.pwnedpasswords.com</code>. Ist am DC die Komplexität eingeschaltet (<code>pwdProperties</code>), prüft Authentik zusätzlich die AD-Regeln.</p>
+<p>Beim Zurücksetzen wählt der Nutzer „Private Adresse“ oder „Dienstliche Adresse“. Die Auswahl sieht für jeden Namen gleich aus, auch für unbekannte, und verrät deshalb nichts über das Konto. Bei „Private Adresse“ geht die Mail an die erste vorhandene Adresse: die vom Nutzer in den Benutzereinstellungen gepflegte private Adresse (<code>attributes.recovery_email</code>, nur in Authentik gespeichert), die private Adresse aus dem AD (<code>homePhone</code>, wenn es eine Adresse mit <code>@</code> enthält, als <code>attributes.ad_recovery_email</code>; nicht <code>otherMailbox</code>, das der Mailstack für Aliase nutzt), sonst <code>mail</code>. Wer MFA eingerichtet hat, bestätigt sie vor dem neuen Passwort. Nach jeder Passwortänderung geht eine Mail an die AD-Adresse des Kontos. Das gilt auch, wenn Authentik bei einer Anmeldung per LDAP-Bind seinen gespeicherten Hash nachzieht, etwa nach einer Passwortänderung unter Windows; die Mail kommt dann bei der ersten Anmeldung an Authentik danach.</p>
+<p>Der Blueprint <code>Default - Authentication flow</code> setzt <code>configure_flow</code> des Stages <code>default-authentication-password</code> zurück auf <code>default-password-change</code>, wenn ein Authentik-Update diese Datei ändert. Dann gelten beim Ändern nach Anmeldung nur noch die Standardregeln. Prüfen nach Updates:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">kubectl -n authentik <span class="nb">exec</span> deploy/authentik-worker -- ak shell -c <span class="s1">&#39;from authentik.stages.password.models import PasswordStage; print(PasswordStage.objects.get(name=&#34;default-authentication-password&#34;).configure_flow.slug)&#39;</span></span></span></code></pre></div></div>
+<p>Erwartet ist <code>password-change-authenticated</code>; sonst den Blueprint <code>Password self-service - Flows</code> im Webinterface erneut anwenden.</p>
+
+<h4 class="relative group">Umleitung der alten Self-Service-Password-Adresse
+    <div id="umleitung-der-alten-self-service-password-adresse" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#umleitung-der-alten-self-service-password-adresse" aria-label="Anker">#</a>
+    </span>
+    
+</h4>
+<p>LTB Self Service Password ist abgelöst und aus dem Repository entfernt. Damit Lesezeichen und Links in alten Mails weiter funktionieren, leitet <code>ssp-redirect.yaml</code> die alte Adresse auf die Flows oben um. Eine Traefik-<code>IngressRoute</code> ohne Backend (<code>noop@internal</code>) beantwortet jede Anfrage mit einer vorläufigen Umleitung (302):</p>
+<table>
+	<thead>
+			<tr>
+					<th>Aufruf</th>
+					<th>Ziel</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><code>?action=sendtoken</code>, <code>resetbytoken</code>, <code>sendsms</code>, <code>resetbyquestions</code>, <code>setquestions</code></td>
+					<td><code>/if/flow/password-recovery/</code></td>
+			</tr>
+			<tr>
+					<td>alles andere</td>
+					<td><code>/if/flow/password-change/</code></td>
+			</tr>
+	</tbody>
+</table>
+<p>Zertifikat und DNS-Einträge der alten Adresse stehen in <code>certs.yaml</code> und <code>dns-records.yaml</code>.</p>
 
 <h3 class="relative group">Installation
     <div id="installation" class="anchor"></div>

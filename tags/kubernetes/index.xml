@@ -9,7 +9,17 @@
     <managingEditor>fabrice@zyria.de (Fabrice Kirchner)</managingEditor>
     <webMaster>fabrice@zyria.de (Fabrice Kirchner)</webMaster>
     
-    <lastBuildDate>Wed, 21 Oct 2026 21:55:14 +0200</lastBuildDate><atom:link href="https://zyria.de/tags/kubernetes/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 22 Oct 2026 10:08:24 +0200</lastBuildDate><atom:link href="https://zyria.de/tags/kubernetes/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>k3s-prod: Kubernetes Cluster Konfiguration und Anwendungsbereitstellung</title>
+      <link>https://zyria.de/posts/homelab/k3s-prod/</link>
+      <pubDate>Thu, 22 Oct 2026 10:08:24 +0200</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://zyria.de/posts/homelab/k3s-prod/</guid>
+      <description>Zentrale Verwaltung eines k3s-Clusters und seiner Anwendungen mit ArgoCD, Helm und Kustomize.</description>
+      
+    </item>
     
     <item>
       <title>Localkit</title>
@@ -18,16 +28,6 @@
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/posts/homelab/k3s-prod/apps/localkit/readme/</guid>
       <description>Localkit ersetzt die Petkit-Cloud-API und den Aliyun-MQTT-Broker im Heimnetz. Die Geraete vertrauen einer eigenen CA aus cert-manager, die in ihr Steuerprogramm gepatcht wird.</description>
-      
-    </item>
-    
-    <item>
-      <title>k3s-prod: Kubernetes Cluster Konfiguration und Anwendungsbereitstellung</title>
-      <link>https://zyria.de/posts/homelab/k3s-prod/</link>
-      <pubDate>Wed, 21 Oct 2026 19:50:04 +0200</pubDate>
-      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://zyria.de/posts/homelab/k3s-prod/</guid>
-      <description>Zentrale Verwaltung eines k3s-Clusters und seiner Anwendungen mit ArgoCD, Helm und Kustomize.</description>
       
     </item>
     
@@ -428,16 +428,6 @@
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/posts/homelab/k3s-prod/apps/mailstack/readme/</guid>
       <description>Dieser Mailstack integriert mehrere Komponenten wie Postfix, Dovecot, Rspamd und ClamAV, um einen robusten und sicheren E-Mail-Dienst mit Spam- und Virenfilterung bereitzustellen.</description>
-      
-    </item>
-    
-    <item>
-      <title>Self Service Password</title>
-      <link>https://zyria.de/posts/homelab/k3s-prod/apps/self-service-password/readme/</link>
-      <pubDate>Fri, 17 Oct 2025 13:58:27 +0200</pubDate>
-      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/self-service-password/readme/</guid>
-      <description>This document describes the deployment of LTB Self-Service Password, a web application for users to manage their own passwords in an LDAP directory.</description>
       
     </item>
     

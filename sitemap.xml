@@ -45,14 +45,14 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://zyria.de/posts/homelab/k3s-prod/apps/localkit/readme/</loc>
-    <lastmod>2026-10-21T21:55:14+02:00</lastmod>
+    <loc>https://zyria.de/posts/homelab/k3s-prod/</loc>
+    <lastmod>2026-10-22T10:08:24+02:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://zyria.de/posts/homelab/k3s-prod/</loc>
-    <lastmod>2026-10-21T19:50:04+02:00</lastmod>
+    <loc>https://zyria.de/posts/homelab/k3s-prod/apps/localkit/readme/</loc>
+    <lastmod>2026-10-21T21:55:14+02:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -447,12 +447,6 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://zyria.de/posts/homelab/k3s-prod/apps/self-service-password/readme/</loc>
-    <lastmod>2026-09-07T14:43:53+02:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
     <loc>https://zyria.de/posts/homelab/k3s-prod/apps/system-upgrade-controller/readme/</loc>
     <lastmod>2026-09-07T14:43:53+02:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -562,7 +556,7 @@
   </url>
   <url>
     <loc>https://zyria.de/posts/homelab/k3s-prod/apps/authentik/readme/</loc>
-    <lastmod>2026-09-07T14:43:53+02:00</lastmod>
+    <lastmod>2026-10-22T10:08:24+02:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
