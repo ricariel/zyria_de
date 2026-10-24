@@ -105,7 +105,7 @@
 	<meta property="og:type" content="article">
 		<meta property="article:section" content="posts">
 		<meta property="article:published_time" content="2025-10-20T13:46:48+02:00">
-		<meta property="article:modified_time" content="2026-10-13T00:24:43+02:00">
+		<meta property="article:modified_time" content="2026-10-24T03:08:20+02:00">
 		<meta property="article:tag" content="Kubernetes">
 		<meta property="article:tag" content="Unifi">
 		<meta property="article:tag" content="Netzwerk">
@@ -311,12 +311,12 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
     "dateCreated": "2025-10-20T13:46:48\u002b02:00",
     "datePublished": "2025-10-20T13:46:48\u002b02:00",
     
-    "dateModified": "2026-10-13T00:24:43\u002b02:00",
+    "dateModified": "2026-10-24T03:08:20\u002b02:00",
     
     "keywords": ["kubernetes","unifi","netzwerk"],
     
     "mainEntityOfPage": "https://zyria.de/posts/homelab/k3s-prod/apps/unifi-controller/readme/",
-    "wordCount": "587"
+    "wordCount": "687"
   }]
   </script>
 
@@ -963,7 +963,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2025-10-20T13:46:48&#43;02:00">20 Oktober 2025</time><span class="px-2 text-primary-500">&middot;</span><time datetime="2026-10-13T00:24:43&#43;02:00">Aktualisiert: 13 Oktober 2026</time><span class="px-2 text-primary-500">&middot;</span><span>587 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
+      <time datetime="2025-10-20T13:46:48&#43;02:00">20 Oktober 2025</time><span class="px-2 text-primary-500">&middot;</span><time datetime="2026-10-24T03:08:20&#43;02:00">Aktualisiert: 24 Oktober 2026</time><span class="px-2 text-primary-500">&middot;</span><span>687 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
 
 
   
@@ -1337,8 +1337,8 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
     </span>
     
 </h3>
-<p>10.6 ist die letzte Version der selbst gehosteten UniFi Network Application. Ab 11.0 speichert UniFi seine Daten in PostgreSQL statt in MongoDB und läuft nur noch unter UniFi OS Server. Ein Wechsel dorthin ist eine Migration auf eine andere Plattform und kein Image-Update. Renovate hält das Image deshalb auf 10.6.x (<code>renovate.json5</code>).</p>
-<p>Ubiquiti gibt die Network Application ab 9.0 für MongoDB bis 8.0 frei, eine Freigabe für MongoDB 9 wird es nicht mehr geben. Im Betrieb läuft der Rapid Release 8.3 mit Feature Compatibility Version 8.0. Renovate bleibt für dieses Image unter 9. Die Meldung <code>Could not determine Mongo journaling state</code> im <code>server.log</code> hängt nicht an der MongoDB-Version, sondern an der fehlenden Rolle <code>clusterMonitor</code> (siehe unten).</p>
+<p>10.6 ist die letzte Version der selbst gehosteten UniFi Network Application. Ab 11.0 speichert UniFi seine Daten in PostgreSQL statt in MongoDB und läuft nur noch unter UniFi OS Server. Ein Wechsel dorthin ist eine Migration auf eine andere Plattform und kein Image-Update. Renovate hält das Image deshalb auf 10.6.x (<code>renovate.json5</code>). Das Image ist per Digest auf den Versionstag gepinnt, weil LinuxServer denselben Tag mit jedem Build (<code>-lsNNN</code>) neu vergibt; jeder neue Build kommt als Digest-Update. Keel ist nicht im Spiel.</p>
+<p>Ubiquiti gibt die Network Application ab 9.0 für MongoDB bis 8.0 frei, eine Freigabe für MongoDB 9 wird es nicht mehr geben. Im Betrieb läuft der Rapid Release 8.3 mit Feature Compatibility Version 8.0, als fester Patch-Tag. Renovate bleibt für dieses Image unter 9. Die Meldung <code>Could not determine Mongo journaling state</code> im <code>server.log</code> hängt nicht an der MongoDB-Version, sondern an der fehlenden Rolle <code>clusterMonitor</code> (siehe unten).</p>
 
 <h3 class="relative group">Rollen des Datenbanknutzers
     <div id="rollen-des-datenbanknutzers" class="anchor"></div>
@@ -1419,7 +1419,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
 <li>Persistenter Speicher für Konfigurations- und MongoDB-Daten liegt auf Longhorn-Volumes.</li>
 <li>Das Deployment stellt sowohl einen Ingress für den Webzugriff als auch einen LoadBalancer-Dienst für den direkten Zugriff und die Gerätekommunikation bereit.</li>
 <li>Der LoadBalancer-Dienst ist mit spezifischen IPv4- und IPv6-Adressen unter Verwendung von MetalLB konfiguriert.</li>
-<li>Mehrere Ports sind für die UniFi-Gerätekommunikation freigegeben (STUN, Gerätekommunikation, Webadministration, AP-Erkennung, L2-Netzwerk).</li>
+<li>Mehrere Ports sind für die UniFi-Gerätekommunikation freigegeben (STUN, Gerätekommunikation, AP-Erkennung, L2-Netzwerk).</li>
 <li>Eine benutzerdefinierte <code>mongoinit</code> ConfigMap wird verwendet, um die MongoDB-Datenbank mit einem bestimmten Benutzer zu initialisieren.</li>
 </ul>
 
@@ -1434,7 +1434,8 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
 </h4>
 <ul>
 <li><strong>Service-Typ</strong>: Der Controller wird über einen <code>LoadBalancer</code>-Service mit einer dedizierten IP-Adresse im lokalen Netzwerk bereitgestellt. Dies ist notwendig, damit die UniFi-Geräte den Controller zuverlässig finden können (über den &ldquo;Inform Host&rdquo;).</li>
-<li><strong>Ingress</strong>: Zusätzlich ist die Weboberfläche über einen Ingress mit einem Hostnamen erreichbar.</li>
+<li><strong>Ingress</strong>: Zusätzlich ist die Weboberfläche über einen Ingress mit einem Hostnamen erreichbar, hinter der Authentik-Anmeldung (<code>kube-system-authentik</code>). Der zweite Ingress <code>api</code> lässt <code>/api</code>, <code>/v2/api</code>, <code>/wss</code> und <code>/status</code> für die UniFi-App ohne Authentik-Anmeldung durch; dort gilt die Anmeldung des Controllers.</li>
+<li><strong>Kein Web-Port am LoadBalancer</strong>: Der LoadBalancer-Dienst gibt nur die Geräteports frei, nicht 8443. Sonst wäre die Oberfläche an Traefik und damit an der Authentik-Anmeldung vorbei erreichbar. Die Geräte melden sich über Port 8080 (Inform), Traefik erreicht die Oberfläche über den ClusterIP-Dienst <code>unifi-controller-traefik</code>.</li>
 <li><strong>Zeitzone</strong>: Die Zeitzone ist auf <code>Europe/Berlin</code> gesetzt.</li>
 <li><strong>Speicher</strong>: Die Konfiguration des Controllers wird auf einem bestehenden Persistent Volume Claim (<code>unifi-controller-config</code>) gespeichert.</li>
 </ul>

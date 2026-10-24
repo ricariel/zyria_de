@@ -105,7 +105,7 @@
 	<meta property="og:type" content="article">
 		<meta property="article:section" content="posts">
 		<meta property="article:published_time" content="2025-10-04T12:05:11+02:00">
-		<meta property="article:modified_time" content="2026-10-22T10:08:24+02:00">
+		<meta property="article:modified_time" content="2026-10-24T02:22:53+02:00">
 		<meta property="article:tag" content="Kubernetes">
 		<meta property="article:tag" content="Authentik">
 		<meta property="article:tag" content="Sso">
@@ -312,12 +312,12 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
     "dateCreated": "2025-10-04T12:05:11\u002b02:00",
     "datePublished": "2025-10-04T12:05:11\u002b02:00",
     
-    "dateModified": "2026-10-22T10:08:24\u002b02:00",
+    "dateModified": "2026-10-24T02:22:53\u002b02:00",
     
     "keywords": ["kubernetes","authentik","sso","iam"],
     
     "mainEntityOfPage": "https://zyria.de/posts/homelab/k3s-prod/apps/authentik/readme/",
-    "wordCount": "888"
+    "wordCount": "3860"
   }]
   </script>
 
@@ -964,7 +964,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2025-10-04T12:05:11&#43;02:00">4 Oktober 2025</time><span class="px-2 text-primary-500">&middot;</span><time datetime="2026-10-22T10:08:24&#43;02:00">Aktualisiert: 22 Oktober 2026</time><span class="px-2 text-primary-500">&middot;</span><span>888 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
+      <time datetime="2025-10-04T12:05:11&#43;02:00">4 Oktober 2025</time><span class="px-2 text-primary-500">&middot;</span><time datetime="2026-10-24T02:22:53&#43;02:00">Aktualisiert: 24 Oktober 2026</time><span class="px-2 text-primary-500">&middot;</span><span>3860 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
 
 
   
@@ -1167,12 +1167,30 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
         <li><a href="#lokale-anpassungen">Lokale Anpassungen</a>
           <ul>
             <li><a href="#wichtige-einstellungen">Wichtige Einstellungen</a></li>
+            <li><a href="#einstellungen-außerhalb-der-blueprints">Einstellungen außerhalb der Blueprints</a></li>
           </ul>
         </li>
-        <li><a href="#blueprints">Blueprints</a></li>
+        <li><a href="#blueprints">Blueprints</a>
+          <ul>
+            <li><a href="#anmelden-per-mail-link">Anmelden per Mail-Link</a></li>
+            <li><a href="#anmelden-mit-windows">Anmelden mit Windows</a></li>
+            <li><a href="#zweiter-faktor-für-admins">Zweiter Faktor für Admins</a></li>
+            <li><a href="#bremse-gegen-passwortraten">Bremse gegen Passwortraten</a></li>
+            <li><a href="#benachrichtigungen">Benachrichtigungen</a></li>
+            <li><a href="#erzwungener-passwortwechsel">Erzwungener Passwortwechsel</a></li>
+          </ul>
+        </li>
         <li><a href="#passwort-self-service">Passwort-Self-Service</a>
           <ul>
             <li><a href="#umleitung-der-alten-self-service-password-adresse">Umleitung der alten Self-Service-Password-Adresse</a></li>
+          </ul>
+        </li>
+        <li><a href="#betrieb">Betrieb</a>
+          <ul>
+            <li><a href="#ausfallsicherheit">Ausfallsicherheit</a></li>
+            <li><a href="#überwachung">Überwachung</a></li>
+            <li><a href="#netzwerk">Netzwerk</a></li>
+            <li><a href="#datenbanksicherung">Datenbanksicherung</a></li>
           </ul>
         </li>
         <li><a href="#installation">Installation</a></li>
@@ -1201,12 +1219,30 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
         <li><a href="#lokale-anpassungen">Lokale Anpassungen</a>
           <ul>
             <li><a href="#wichtige-einstellungen">Wichtige Einstellungen</a></li>
+            <li><a href="#einstellungen-außerhalb-der-blueprints">Einstellungen außerhalb der Blueprints</a></li>
           </ul>
         </li>
-        <li><a href="#blueprints">Blueprints</a></li>
+        <li><a href="#blueprints">Blueprints</a>
+          <ul>
+            <li><a href="#anmelden-per-mail-link">Anmelden per Mail-Link</a></li>
+            <li><a href="#anmelden-mit-windows">Anmelden mit Windows</a></li>
+            <li><a href="#zweiter-faktor-für-admins">Zweiter Faktor für Admins</a></li>
+            <li><a href="#bremse-gegen-passwortraten">Bremse gegen Passwortraten</a></li>
+            <li><a href="#benachrichtigungen">Benachrichtigungen</a></li>
+            <li><a href="#erzwungener-passwortwechsel">Erzwungener Passwortwechsel</a></li>
+          </ul>
+        </li>
         <li><a href="#passwort-self-service">Passwort-Self-Service</a>
           <ul>
             <li><a href="#umleitung-der-alten-self-service-password-adresse">Umleitung der alten Self-Service-Password-Adresse</a></li>
+          </ul>
+        </li>
+        <li><a href="#betrieb">Betrieb</a>
+          <ul>
+            <li><a href="#ausfallsicherheit">Ausfallsicherheit</a></li>
+            <li><a href="#überwachung">Überwachung</a></li>
+            <li><a href="#netzwerk">Netzwerk</a></li>
+            <li><a href="#datenbanksicherung">Datenbanksicherung</a></li>
           </ul>
         </li>
         <li><a href="#installation">Installation</a></li>
@@ -1352,9 +1388,9 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
 </h3>
 <p>Diese Authentik-Bereitstellung umfasst die folgenden Komponenten:</p>
 <ul>
-<li><strong>Authentik Server:</strong> Die Kernanwendung, die die Identitäts- und Zugriffsverwaltung bereitstellt.</li>
-<li><strong>PostgreSQL:</strong> Die relationale Datenbank, die von Authentik zur Speicherung seiner Daten verwendet wird.</li>
-<li><strong>Redis:</strong> Ein In-Memory-Datenspeicher, der von Authentik für Caching verwendet wird.</li>
+<li><strong>Server und Worker:</strong> die Anwendung selbst (Weboberfläche, API, Flows) und die Hintergrundaufgaben, darunter das Anwenden der Blueprints und der LDAP-Sync. Server und Worker laufen mit je zwei Replikas, siehe Abschnitt Ausfallsicherheit.</li>
+<li><strong>PostgreSQL:</strong> die Datenbank aus dem Bitnami-Subchart, persistent auf dem PVC <code>authentik-db</code> (<code>storage.yaml</code>), zusätzlich täglich als Dump gesichert (<code>dbdump.yaml</code>, siehe Abschnitt Datenbanksicherung). Authentik braucht in dieser Version kein Redis mehr; Cache, Sitzungen und Aufgaben liegen in PostgreSQL.</li>
+<li><strong>Outpost <code>Generic Forward Auth</code>:</strong> ein Proxy-Outpost, den Authentik selbst im Namespace anlegt (Kubernetes-Integration). Er beantwortet die Forward-Auth-Anfragen der Traefik-Middleware <code>kube-system-authentik</code>, siehe <code>62-forward-auth.yaml</code>. Er läuft mit zwei Replikas.</li>
 </ul>
 
 <h3 class="relative group">Quelle
@@ -1392,7 +1428,7 @@ Das Helm-Chart stammt aus dem <a href="https://charts.goauthentik.io"  target="_
     </span>
     
 </h3>
-<p>Dieser Dienst bietet eine umfassende Lösung für Single Sign-On (SSO), Multi-Faktor-Authentifizierung (MFA) und Benutzerverwaltung. Er ermöglicht die sichere Authentifizierung von Benutzern für verschiedene Anwendungen und Dienste.</p>
+<p>Authentik ist der zentrale Anmeldedienst des Clusters (Single Sign-On per OpenID Connect, SAML und Forward-Auth, zweiter Faktor, Passwort-Self-Service). Benutzer und Gruppen kommen per LDAP-Quelle aus dem Samba-AD; Passwörter prüft und schreibt Authentik gegen das AD. Welche Anwendungen angebunden sind und wer sie öffnen darf, steht in den Blueprints <code>60-apps-admin.yaml</code>, <code>61-apps-user.yaml</code>, <code>62-forward-auth.yaml</code> und <code>63-kubernetes.yaml</code>.</p>
 
 <h3 class="relative group">Lokale Anpassungen
     <div id="lokale-anpassungen" class="anchor"></div>
@@ -1403,8 +1439,7 @@ Das Helm-Chart stammt aus dem <a href="https://charts.goauthentik.io"  target="_
     </span>
     
 </h3>
-<p>Die Konfiguration erfolgt über die <code>values.yaml</code>-Datei.</p>
-<p>Die Persistenz für PostgreSQL und Redis wird über vorhandene PVCs (<code>authentik-db</code>, <code>authentik-redis</code>) verwaltet.</p>
+<p>Die Konfiguration erfolgt über die <code>values.yaml</code>-Datei und die Blueprints unter <code>blueprints/</code>.</p>
 
 <h4 class="relative group">Wichtige Einstellungen
     <div id="wichtige-einstellungen" class="anchor"></div>
@@ -1417,10 +1452,52 @@ Das Helm-Chart stammt aus dem <a href="https://charts.goauthentik.io"  target="_
 </h4>
 <ul>
 <li><strong>Ingress</strong>: Der Zugriff auf die Authentik-Weboberfläche wird über einen Ingress mit einem Hostnamen ermöglicht und durch Traefik verwaltet.</li>
-<li><strong>Datenbank</strong>: Authentik verwendet eine dedizierte PostgreSQL-Datenbank, die als Teil des Helm-Charts bereitgestellt wird. Die Daten werden persistent auf einem Volume gespeichert.</li>
-<li><strong>Redis</strong>: Für Caching und Hintergrundaufgaben wird eine dedizierte Redis-Instanz verwendet, deren Daten auf einem Volume gespeichert werden.</li>
+<li><strong>Datenbank</strong>: PostgreSQL aus dem Subchart, Daten auf dem PVC <code>authentik-db</code>. Das Image hat einen festen Versionstag, den Renovate pflegt; Patch- und Minor-Updates mergt es selbst, jedes startet die Datenbank kurz neu. Der Init-Container <code>pgautoupgrade</code> hebt das Datenverzeichnis bei einem Major-Sprung des Images an. Deshalb kommt ein Major-Update von PostgreSQL, <code>pgautoupgrade</code> und dem Dump-Image in <code>dbdump.yaml</code> als ein gemeinsamer PR, der eine Freigabe im Renovate-Dashboard braucht. Keel ist hier bewusst nicht im Spiel: Bei einem beweglichen Tag wie <code>18</code> startete es den Pod neu, der Node nahm aber das zwischengespeicherte alte Image (bis Oktober 2026 lief so 18.1 in zyria und 18.4 in cdp).</li>
 <li><strong>E-Mail</strong>: SMTP ist für den Versand von Benachrichtigungen und Passwort-Resets konfiguriert.</li>
+<li><strong>GeoIP</strong>: Das Image bringt die GeoLite2-Datenbanken (Stadt und ASN) unter <code>/geoip</code> mit; Authentik ergänzt damit Ereignisse um Land und Netz, ohne Daten nach außen zu geben. Die Datenbanken werden mit jedem Authentik-Release erneuert, ein eigener Download von MaxMind ist nicht eingerichtet.</li>
 </ul>
+
+<h4 class="relative group">Einstellungen außerhalb der Blueprints
+    <div id="einstellungen-außerhalb-der-blueprints" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#einstellungen-au%c3%9ferhalb-der-blueprints" aria-label="Anker">#</a>
+    </span>
+    
+</h4>
+<p>Einige Einstellungen kann kein Blueprint schreiben, sie stehen nur in der Datenbank. Nach einem Neuaufbau sind sie von Hand zu setzen:</p>
+<table>
+	<thead>
+			<tr>
+					<th>Einstellung</th>
+					<th>Wert</th>
+					<th>Wo</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>Avatare (Tenant)</td>
+					<td><code>initials</code>; kein Gravatar, damit der Browser keine Hashes der Mailadressen an gravatar.com schickt</td>
+					<td>System, Einstellungen; Blueprints dürfen den Tenant nicht ändern</td>
+			</tr>
+			<tr>
+					<td>Client-Secrets der OAuth2-Provider, Bind-Passwort der LDAP-Quelle</td>
+					<td>geheim</td>
+					<td>jeweiliger Provider bzw. die LDAP-Quelle</td>
+			</tr>
+			<tr>
+					<td>SPNEGO-Keytab der Kerberos-Quelle (nur mit <code>AK_BLUEPRINT_KERBEROS_REALM</code>)</td>
+					<td>geheim, Base64</td>
+					<td>Quelle <code>Windows-Anmeldung (im Büro)</code>, Feld <code>spnego_keytab</code>; Export siehe Abschnitt „Anmelden mit Windows“</td>
+			</tr>
+			<tr>
+					<td>Eingebetteter Outpost</td>
+					<td>ohne Integration (Feld Integration leer)</td>
+					<td>Anwendungen, Outposts; Authentik setzt beim Anlegen die erste Kubernetes-Integration ein. Mit ihr scheiterte der Controller-Task alle paar Minuten mit 403, weil er im Namespace <code>default</code> Objekte suchte. Der Outpost hat keine Provider, Forward Auth läuft über <code>Generic Forward Auth</code></td>
+			</tr>
+	</tbody>
+</table>
 
 <h3 class="relative group">Blueprints
     <div id="blueprints" class="anchor"></div>
@@ -1442,16 +1519,104 @@ Das Helm-Chart stammt aus dem <a href="https://charts.goauthentik.io"  target="_
 	</thead>
 	<tbody>
 			<tr>
+					<td><code>AK_BLUEPRINT_DOMAIN</code></td>
+					<td>Domain des Clusters, Grundlage für Hostnamen wie <code>addc.&lt;domain&gt;</code></td>
+			</tr>
+			<tr>
+					<td><code>AK_BLUEPRINT_BRAND_TITLE</code></td>
+					<td>Titel der Marke (Browser-Tab, Anmeldeseite)</td>
+			</tr>
+			<tr>
+					<td><code>AK_BLUEPRINT_BRAND_LOGO</code></td>
+					<td>Logo auf der Anmeldeseite, Pfad unter <code>/static</code> oder URL; der Browser lädt es von dort (cdp: Logo der Shop-Website, ohne sie fehlt das Bild)</td>
+			</tr>
+			<tr>
+					<td><code>AK_BLUEPRINT_BRAND_FAVICON</code></td>
+					<td>Favicon, Pfad unter <code>/static</code> oder URL</td>
+			</tr>
+			<tr>
 					<td><code>AK_BLUEPRINT_LDAP_SOURCE_SLUG</code></td>
 					<td>Slug der LDAP-Quelle</td>
+			</tr>
+			<tr>
+					<td><code>AK_BLUEPRINT_LDAP_BASE_DN</code></td>
+					<td>Basis-DN des AD, auch für das Bind-Konto <code>CN=sso,CN=Managed Service Accounts,&lt;base_dn&gt;</code></td>
+			</tr>
+			<tr>
+					<td><code>AK_BLUEPRINT_LDAP_USER_FILTER</code></td>
+					<td>LDAP-Filter für Benutzer; zyria lässt deaktivierte Konten weg, cdp holt sie und setzt sie über <code>ad-user-is-active</code> inaktiv</td>
 			</tr>
 			<tr>
 					<td><code>AK_BLUEPRINT_LDAP_TRUST_ROOT</code></td>
 					<td>Wurzelzertifikat, mit dem das DC-Zertifikat geprüft wird (<code>ISRG Root X1</code> für RSA, <code>ISRG Root X2</code> für ECDSA)</td>
 			</tr>
+			<tr>
+					<td><code>AK_BLUEPRINT_GROUP_LONGHORN_EXTRA</code></td>
+					<td>zusätzliche Gruppe mit Zugriff auf Longhorn neben <code>authentik Admins</code> (zyria <code>Admin</code>), leer: keine</td>
+			</tr>
+			<tr>
+					<td><code>AK_BLUEPRINT_MATRIX_ADMIN_HOST</code></td>
+					<td>Hostname von matrix-admin (zyria); liegt außerhalb der Cookie-Domain, deshalb ein eigener Provider; ohne Wert legt der Blueprint die App nicht an</td>
+			</tr>
+			<tr>
+					<td><code>AK_BLUEPRINT_SLUG_ROUNDCUBE</code></td>
+					<td>Slug der Roundcube-App (Teil der Issuer-URL, deshalb nicht angleichen)</td>
+			</tr>
+			<tr>
+					<td><code>AK_BLUEPRINT_NEXTCLOUD_NAME_ID_POLICY</code></td>
+					<td>NameID-Format des Nextcloud-SAML-Providers; eine Änderung ändert die Nutzerkennungen in Nextcloud</td>
+			</tr>
+			<tr>
+					<td><code>AK_BLUEPRINT_CLIENT_ID_&lt;APP&gt;</code></td>
+					<td>Client-ID des OAuth2-Providers einer App (öffentlich, kein Geheimnis); ohne Wert legt der Blueprint die App nicht an. Das Client-Secret steht nur in der Datenbank. Proxy-Provider haben keine solche Variable, siehe unten</td>
+			</tr>
+			<tr>
+					<td><code>AK_BLUEPRINT_SLUG_PBS</code></td>
+					<td>Slug der Proxmox-Backup-Server-App (Teil der Issuer-URL, deshalb nicht angleichen)</td>
+			</tr>
+			<tr>
+					<td><code>AK_BLUEPRINT_PBS_HOST</code></td>
+					<td>Hostname des Backup-Servers ohne Domain</td>
+			</tr>
+			<tr>
+					<td><code>AK_BLUEPRINT_GROUP_WIREGUARD</code></td>
+					<td>Gruppe mit Zugriff auf Headscale und wg-portal</td>
+			</tr>
+			<tr>
+					<td><code>AK_BLUEPRINT_GROUP_PAPERLESS</code></td>
+					<td>Gruppe mit Zugriff auf Paperless (zyria <code>paperlessEnabled</code>), Pflicht, sobald <code>AK_BLUEPRINT_CLIENT_ID_PAPERLESS</code> gesetzt ist</td>
+			</tr>
+			<tr>
+					<td><code>AK_BLUEPRINT_GROUPS_ZAMMAD</code></td>
+					<td>Gruppen der Zammad-Agenten, kommagetrennt (cdp), Pflicht, sobald <code>AK_BLUEPRINT_CLIENT_ID_ZAMMAD</code> gesetzt ist</td>
+			</tr>
+			<tr>
+					<td><code>AK_BLUEPRINT_GROUP_HEADSCALE_EXTRA</code></td>
+					<td>zusätzliche Gruppe mit Zugriff auf Headscale (cdp <code>authentik Admins</code>), leer: keine</td>
+			</tr>
+			<tr>
+					<td><code>AK_BLUEPRINT_GROUP_ADMIN_APPS</code></td>
+					<td>Gruppe, auf die ArgoCD, Grafana, Proxmox, PBS, Semaphore und Portainer beschränkt sind (zyria und cdp <code>authentik Admins</code>), Pflicht</td>
+			</tr>
+			<tr>
+					<td><code>AK_BLUEPRINT_GROUP_KUBERNETES</code></td>
+					<td>Gruppe, die sich per kubelogin an der Kubernetes-API anmelden darf (zyria <code>authentik Admins</code>, cdp <code>kubernetesAdmin</code>), Pflicht für <code>63-kubernetes.yaml</code>; dieselbe Gruppe bindet <code>apps/k3s/rbac-oidc.yaml</code> mit Präfix <code>oidc:</code> an cluster-admin</td>
+			</tr>
+			<tr>
+					<td><code>AK_BLUEPRINT_KERBEROS_REALM</code></td>
+					<td>Kerberos-Realm des AD (Großbuchstaben) für die Anmeldung mit Windows; ohne Wert legt <code>80-kerberos-source.yaml</code> nichts an</td>
+			</tr>
+			<tr>
+					<td><code>AK_BLUEPRINT_MFA_INTERNAL_NETWORKS</code></td>
+					<td>Netze, aus denen normale Nutzer keinen zweiten Faktor brauchen, kommagetrennt; gleich der Middleware <code>localnet</code> in <code>apps/traefik/traefik-middlewares.yaml</code>, bei Änderungen beide pflegen. Pflicht</td>
+			</tr>
+			<tr>
+					<td><code>AK_BLUEPRINT_SUPERUSER_GROUP</code></td>
+					<td>LDAP-Gruppe, deren Mitglieder in Authentik Superuser sind (zyria <code>Admin</code>), leer: keine</td>
+			</tr>
 	</tbody>
 </table>
-<p>Eigene Mailvorlagen (deutscher Text für den Passwort-Reset und die Benachrichtigung nach einer Änderung, unabhängig von der Browsersprache) liegen unter <code>email-templates/</code> und werden als ConfigMap <code>authentik-email-templates</code> nach <code>/templates</code> gemountet.</p>
+<p>Eigene Mailvorlagen (deutscher Text für den Passwort-Reset, den Mail-Link-Login und die Benachrichtigungen nach einer Passwortänderung und einem neuen MFA-Gerät, unabhängig von der Browsersprache) liegen unter <code>email-templates/</code> und werden als ConfigMap <code>authentik-email-templates</code> nach <code>/templates</code> gemountet.</p>
 <p>Vor einem Merge lassen sich die Blueprints im laufenden Authentik prüfen, ohne etwas zu schreiben: <code>Importer.from_string(...).validate()</code> in <code>ak shell</code> wendet sie in einer Transaktion an und rollt sie danach zurück.</p>
 <table>
 	<thead>
@@ -1463,7 +1628,7 @@ Das Helm-Chart stammt aus dem <a href="https://charts.goauthentik.io"  target="_
 	<tbody>
 			<tr>
 					<td><code>10-ldap-source.yaml</code></td>
-					<td>Zertifikatsprüfung der LDAP-Quelle, Property-Mapping <code>ad-recovery-email</code></td>
+					<td>LDAP-Quelle (Verbindung, Sync, Zertifikatsprüfung), Property-Mappings <code>ad-user-is-active</code> und <code>ad-recovery-email</code>; nur das Bind-Passwort steht allein in der Datenbank</td>
 			</tr>
 			<tr>
 					<td><code>20-password-policy.yaml</code></td>
@@ -1471,10 +1636,141 @@ Das Helm-Chart stammt aus dem <a href="https://charts.goauthentik.io"  target="_
 			</tr>
 			<tr>
 					<td><code>30-password-flows.yaml</code></td>
-					<td>Flows für Passwort-Self-Service, Benutzereinstellungen, Benachrichtigung</td>
+					<td>Flows für Passwort-Self-Service, Benutzereinstellungen, Benachrichtigung, Bremse gegen Passwortraten</td>
+			</tr>
+			<tr>
+					<td><code>40-login-flow.yaml</code></td>
+					<td>Anpassungen am Standard-Login: Anmeldung mit Benutzername, Mail oder UPN, Name und Passwort auf einer Seite, passwortloser Login mit Passkey, MFA per Mail, zweiter Faktor als Pflicht für Admins und für Anmeldungen von außerhalb der eigenen Netze, erzwungener Passwortwechsel, Frage „Angemeldet bleiben?“ nach jeder Anmeldung (ja hält die Sitzung 30 Tage, nein endet sie mit dem Browser), Titel, Logo und Favicon der Marke</td>
+			</tr>
+			<tr>
+					<td><code>50-email-login.yaml</code></td>
+					<td>Anmelden per Mail-Link unter <code>/if/flow/email-login/</code>, Mailvorlage <code>email-login.html</code></td>
+			</tr>
+			<tr>
+					<td><code>60-apps-admin.yaml</code></td>
+					<td>Apps für die Administration (ArgoCD, Grafana, Headscale, Proxmox, PBS, Semaphore, Portainer, RustDesk) mit Providern und Zugriffsregeln, Superuser-Gruppe</td>
+			</tr>
+			<tr>
+					<td><code>61-apps-user.yaml</code></td>
+					<td>Apps für alle Nutzer (Forgejo, HedgeDoc, Roundcube, Nextcloud per SAML, Mastodon, Matrix, Home Assistant, Paperless, wg-portal, Zammad als öffentlicher Client mit Regel <code>zammad-agents</code>), Scope-Mappings <code>OpenID 'forgejo'</code>, <code>oauth2-Scope-dovecot</code>, <code>OpenID 'wgportal'</code> und <code>OpenID 'email' (verified)</code></td>
+			</tr>
+			<tr>
+					<td><code>62-forward-auth.yaml</code></td>
+					<td>Proxy-Provider für Traefik Forward Auth (ganze Domain, ohne Bindung) und Longhorn (nur dieser Host, Bindung an <code>authentik Admins</code> und <code>AK_BLUEPRINT_GROUP_LONGHORN_EXTRA</code>), optional matrix-admin (Bindung an <code>authentik Admins</code>), Outpost <code>Generic Forward Auth</code> mit zwei Replikas auf verschiedenen Nodes; der eingebettete Outpost bleibt in der Datenbank</td>
+			</tr>
+			<tr>
+					<td><code>70-notifications.yaml</code></td>
+					<td>Benachrichtigungen bei sicherheitsrelevanten Ereignissen, Mailvorlage <code>mfa-device-added.html</code></td>
+			</tr>
+			<tr>
+					<td><code>63-kubernetes.yaml</code></td>
+					<td>Persönlicher Zugang zu <code>kubectl</code> und k9s per kubelogin: öffentlicher OAuth2-Client mit PKCE und Rückruf auf <code>http://localhost:8000</code> und <code>:18000</code>, Bindung an <code>AK_BLUEPRINT_GROUP_KUBERNETES</code>. Die Gegenstücke im Cluster stehen in <code>apps/k3s/README.md</code></td>
+			</tr>
+			<tr>
+					<td><code>80-kerberos-source.yaml</code></td>
+					<td>Anmelden mit Windows (Kerberos/SPNEGO): Kerberos-Quelle mit Knopf auf der Anmeldeseite, Flow <code>kerberos-login</code>, Property-Mapping <code>kerberos-ldap-user</code>; nur mit <code>AK_BLUEPRINT_KERBEROS_REALM</code></td>
 			</tr>
 	</tbody>
 </table>
+<p>Jede Datei, die Werte aus <code>worker.env</code> liest, beginnt mit einem Wächter: Fehlt eine ihrer Pflichtvariablen, scheitert die ganze Datei, statt Objekte mit leeren Kennungen anzulegen. Anlass: Beim Rollout sieht ein alter Worker-Pod die neue ConfigMap schon, die neuen Variablen aber noch nicht; so entstanden in cdp am 23.10. doppelte Proxy-Provider. Die Instanz steht dann auf <code>error</code> und wird von der stündlichen Discovery (Minute 2) mit dem neuen Pod erneut angewendet. Der Wächter ist ein Eintrag mit <code>state: created</code> auf die Gruppe <code>authentik Admins</code>: Er schreibt nichts, solange alle Variablen da sind. Eine frühere Fassung wendete per <code>metaapplyblueprint</code> <code>20-password-policy.yaml</code> mit an; liefen mehrere Dateien gleichzeitig, brach PostgreSQL sie mit <code>deadlock detected</code> ab. Neue Pflichtvariablen gehören in die Liste des Wächters. Optionale Apps (ohne Client-ID übersprungen) deckt er nicht ab: Wird eine neue optionale App im selben Rollout wie ihre Variable eingeführt, kann ein alter Pod sie überspringen und den Hash der Datei speichern; die Discovery wendet sie dann nicht mehr an. Nach dem Rollout deshalb prüfen, ob die App angelegt ist, und die Instanz sonst im Webinterface erneut anwenden.</p>
+<p>Proxy-Provider (<code>62-forward-auth.yaml</code>) werden über <code>name</code> identifiziert, OAuth2-Provider über <code>client_id</code>. Der Serializer der Proxy-Provider führt <code>client_id</code> als schreibgeschützt: Legt ein Blueprint einen Proxy-Provider neu an, verwirft Authentik die Client-ID aus dem Blueprint und erzeugt eine zufällige. Das nächste Anwenden findet die erwartete ID nicht, will den Provider erneut anlegen und scheitert am doppelten Namen. So geschah es am 23.10.2026 beim ersten Rollout von matrix-admin in zyria. Bestehende Provider waren nicht betroffen, weil sie nur aktualisiert werden.</p>
+<p>Ein Blueprint darf <code>Default - Authentication flow</code> nicht per <code>metaapplyblueprint</code> anwenden, außer <code>30-password-flows.yaml</code>, das danach <code>configure_flow</code> wieder setzt: Das erneute Anwenden setzt diesen Wert auf den Standard zurück.</p>
+
+<h4 class="relative group">Anmelden per Mail-Link
+    <div id="anmelden-per-mail-link" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#anmelden-per-mail-link" aria-label="Anker">#</a>
+    </span>
+    
+</h4>
+<p>Unter <code>/if/flow/email-login/</code> meldet man sich ohne Passwort an: Benutzername, Mail oder UPN eingeben, dann kommt ein Link an die dienstliche Adresse des Kontos (<code>mail</code> aus dem AD, nie eine private). Der Link gilt 15 Minuten und einmal; wer MFA eingerichtet hat, bestätigt sie danach. Die Seite sieht für jeden Namen gleich aus und verrät nicht, ob das Konto existiert. Auf der Anmeldeseite steht kein Link dorthin; die Adresse wird den Nutzern direkt genannt.</p>
+
+<h4 class="relative group">Anmelden mit Windows
+    <div id="anmelden-mit-windows" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#anmelden-mit-windows" aria-label="Anker">#</a>
+    </span>
+    
+</h4>
+<p>Mit <code>AK_BLUEPRINT_KERBEROS_REALM</code> legt <code>80-kerberos-source.yaml</code> eine Kerberos-Quelle an (in Authentik als Vorschau gekennzeichnet). Unter <code>/source/kerberos/kerberos/</code> schickt der Browser eines angemeldeten Windows-Benutzers sein Kerberos-Ticket, Authentik meldet ihn ohne Passwort an. Edge und Chrome tun das nur für Hosts in der Intranetzone oder in <code>AuthServerAllowlist</code>; außerhalb des Firmennetzes bekommt der Client kein Ticket, und es bleibt bei der normalen Anmeldung.</p>
+<p>Die Quelle legt keine Benutzer an. Das Mapping <code>kerberos-ldap-user</code> ordnet den Principal <code>name@REALM</code> dem aktiven Benutzer der LDAP-Quelle mit demselben Namen zu (Groß- und Kleinschreibung egal); findet es keinen, lehnt die Quelle ab. Dienst-Principals, fremde Realms und Konten, die nicht aus dem AD kommen, kommen so nicht hinein, und es entstehen keine Doppelkonten. Die Standard-Mappings für Kerberos sind bewusst nicht gesetzt: Sie lösen <code>SkipObject</code> aus, was die SPNEGO-Anmeldung nicht abfängt. Wer MFA eingerichtet hat, bestätigt sie danach, und Admins ohne Gerät richten eines ein wie beim Mail-Link. Die Anmeldeseite zeigt einen Knopf „Windows-Anmeldung (im Büro)“; ohne Ticket (etwa unterwegs ohne VPN) kommt eine Fehlerseite, und es bleibt die Anmeldung mit Passwort. Die Gruppe <code>kerberos-sso</code>, auf die der Test im Oktober 2026 beschränkt war, entfernt der Blueprint.</p>
+<p>Der DC braucht ein Dienstkonto ohne <code>mail</code> (sonst holt die LDAP-Quelle es als Benutzer) mit dem SPN <code>HTTP/auth.&lt;domain&gt;</code>, nur AES (<code>msDS-SupportedEncryptionTypes</code> 24) und ohne Passwortablauf; ändert sich sein Passwort, passt der Keytab nicht mehr. Der Keytab enthält nur die AES-Schlüssel des SPN und wird Base64-kodiert in <code>spnego_keytab</code> der Quelle gesetzt, nicht im Repository. Wer ihn hat, kann sich gegenüber Authentik als beliebiger aktiver AD-Benutzer ausgeben; nur ein zweiter Faktor hält ihn dann noch auf. Erneuern: Keytab auf dem DC neu exportieren und das Feld neu setzen. Für die Fehlersuche hilft <code>KRB5_TRACE=/dev/stderr</code> am Server.</p>
+
+<h4 class="relative group">Zweiter Faktor für Admins
+    <div id="zweiter-faktor-für-admins" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#zweiter-faktor-f%c3%bcr-admins" aria-label="Anker">#</a>
+    </span>
+    
+</h4>
+<p>Für Superuser (Gruppe <code>authentik Admins</code> und die LDAP-Gruppe aus <code>AK_BLUEPRINT_SUPERUSER_GROUP</code>) und Mitglieder von <code>pveadmin</code> ist der zweite Faktor Pflicht, für alle anderen bleibt er freiwillig. Die Standard-MFA-Stage überspringt weiterhin jeden ohne Gerät. Kommt ein Admin ohne geprüftes Gerät an ihr vorbei, folgt die Stage <code>admin-mfa-validation</code> (Policy <code>admin-mfa-required</code>): Sie verlangt, sofort einen Passkey oder TOTP einzurichten, und lässt erst danach durch. Wer per Passkey ohne Passwort anmeldet oder an der Standard-Stage schon ein Gerät bestätigt hat, sieht sie nicht. Dieselbe Stage hängt im Flow <code>email-login</code>.</p>
+<p>Dieselbe Stage verlangt den zweiten Faktor auch von allen anderen, sobald die Anmeldung von außerhalb der eigenen Netze kommt (Policy <code>external-mfa-required</code>, an derselben Bindung wie <code>admin-mfa-required</code>; es genügt, dass eine der beiden zutrifft). Als intern gelten die Netze aus <code>AK_BLUEPRINT_MFA_INTERNAL_NETWORKS</code>, dieselben wie in der Traefik-Middleware <code>localnet</code>: Büros, Heimanschlüsse, vSwitch und das Pod-Netz, aus dem VPN- und Tailnet-Nutzer über die Router-Pods kommen. Maßgeblich ist die Client-IP, die Authentik sieht (<code>ak_client_ip</code>); seit Traefik keinen Forwarded-Headern mehr vertraut und Authentik nur über die Adressen mit <code>externalTrafficPolicy: Local</code> erreichbar ist, ist das die echte Quelle. Ein Mail-Code zählt von außen nicht, weil dasselbe Passwort das Postfach schützt; wer nur ein Mail-Gerät hat, richtet einen Passkey oder TOTP ein. Wer sich aus einem internen Netz anmeldet, bleibt bei der freiwilligen MFA. Eine Anmeldung per Kerberos geht ohnehin nur im Büro oder VPN und ist nicht gebunden.</p>
+<p>Wer neu in eine dieser Gruppen kommt und kein Gerät hat, muss es bei der nächsten Anmeldung einrichten, alle anderen bei der nächsten Anmeldung von außen. Ein Admin, der sein einziges Gerät verliert, kommt über Wiederherstellungscodes (Benutzereinstellungen, MFA-Geräte) oder darüber hinein, dass ein anderer Admin das verlorene Gerät löscht; dann richtet er beim nächsten Login ein neues ein.</p>
+
+<h4 class="relative group">Bremse gegen Passwortraten
+    <div id="bremse-gegen-passwortraten" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#bremse-gegen-passwortraten" aria-label="Anker">#</a>
+    </span>
+    
+</h4>
+<p>Das AD sperrt Konten nach Fehlversuchen nicht, und jeder Passwortversuch an Authentik landet als Bind am DC. Authentik führt dafür einen Reputationswert je Benutzername und IP: Jeder Fehlversuch senkt ihn um 1, jede Anmeldung hebt ihn um 1, jeder Wert bleibt zwischen -5 und 5 und verfällt 24 Stunden nach seinem ersten Ereignis. Erreicht die Summe aller Werte einer Client-IP -5, zeigen die Anmeldung und <code>/if/flow/password-change/</code> nur noch eine Meldung (Stage <code>reputation-deny</code>, Policy <code>reputation-ip-low</code>, aus <code>30-password-flows.yaml</code>). Die Prüfung läuft bei jeder Anfrage, auch zwischen zwei Versuchen auf derselben Seite. Gezählt wird nur die IP; eine Prüfung auf den Benutzernamen würde jedem erlauben, ein fremdes Konto zu sperren. Hinter einer gemeinsamen NAT-Adresse heben die Anmeldungen der Kollegen die Summe. Der Mail-Link-Login (<code>/if/flow/email-login/</code>) bleibt auch bei gesperrter IP erreichbar.</p>
+<p>Eine gesperrte IP gibt ein Admin frei, indem er ihre Reputationswerte löscht:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">kubectl -n authentik <span class="nb">exec</span> deploy/authentik-worker -- ak shell -c <span class="s1">&#39;from authentik.policies.reputation.models import Reputation; print(Reputation.objects.filter(ip=&#34;203.0.113.10&#34;).delete())&#39;</span></span></span></code></pre></div></div>
+
+<h4 class="relative group">Benachrichtigungen
+    <div id="benachrichtigungen" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#benachrichtigungen" aria-label="Anker">#</a>
+    </span>
+    
+</h4>
+<p><code>70-notifications.yaml</code> schickt Mails bei sicherheitsrelevanten Ereignissen. An die Gruppe <code>authentik Admins</code> (Standardvorlage, zugleich als Meldung im Webinterface):</p>
+<table>
+	<thead>
+			<tr>
+					<th>Regel</th>
+					<th>Auslöser</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><code>notify-admins-impersonation</code></td>
+					<td>ein Admin meldet sich als anderer Benutzer an</td>
+			</tr>
+			<tr>
+					<td><code>notify-admins-privileged-change</code></td>
+					<td>Änderung über API oder Webinterface an einem Superuser, einem Mitglied von <code>pveadmin</code>, den Gruppen <code>authentik Admins</code> und <code>pveadmin</code> oder einer anderen Superuser-Gruppe; jeder gelöschte Benutzer</td>
+			</tr>
+			<tr>
+					<td><code>notify-admins-login-failed-burst</code></td>
+					<td>der fünfte fehlgeschlagene Login innerhalb von 10 Minuten, über alle Benutzer und Adressen</td>
+			</tr>
+	</tbody>
+</table>
+<p>An den Benutzer selbst geht <code>notify-user-mfa-device-created</code>, wenn an seinem Konto ein zweiter Faktor (Passkey, TOTP, Wiederherstellungscodes, Mail) neu eingerichtet wird, und <code>notify-user-password-set</code> aus <code>30-password-flows.yaml</code> nach einer Passwortänderung.</p>
+<p>Änderungen durch den LDAP-Sync erzeugen keine Ereignisse; wer im AD in <code>pveadmin</code> oder die Superuser-Gruppe kommt, löst also keine Mail aus. Bei einer Änderung der Gruppenmitgliedschaft über das Konto statt über die Gruppe sieht die Regel nur den Benutzer: Wird jemandem dabei das Admin-Recht entzogen, ist er danach kein Admin mehr, und die Regel greift nicht.</p>
+
+<h4 class="relative group">Erzwungener Passwortwechsel
+    <div id="erzwungener-passwortwechsel" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#erzwungener-passwortwechsel" aria-label="Anker">#</a>
+    </span>
+    
+</h4>
+<p>Ein Konto mit dem Attribut <code>reset_password: true</code> muss bei der nächsten Anmeldung nach dem Passwort ein neues wählen (Stages <code>Force Password Reset Prompt</code> und <code>Force Password Reset User Write Stage</code>, Policies <code>reset_password_check</code> und <code>reset_password_update</code>). Danach steht das Attribut auf <code>false</code>. Gesetzt wird es im Webinterface unter Verzeichnis, Benutzer, Attribute.</p>
 <p>Der Blueprint <code>30-password-flows.yaml</code> setzt auch die Standardsprache der Marke auf Deutsch (<code>attributes.settings.locale</code>). Sie gilt für alle, die in den Benutzereinstellungen keine eigene Sprache gewählt haben.</p>
 
 <h3 class="relative group">Passwort-Self-Service
@@ -1544,6 +1840,116 @@ Das Helm-Chart stammt aus dem <a href="https://charts.goauthentik.io"  target="_
 	</tbody>
 </table>
 <p>Zertifikat und DNS-Einträge der alten Adresse stehen in <code>certs.yaml</code> und <code>dns-records.yaml</code>.</p>
+
+<h3 class="relative group">Betrieb
+    <div id="betrieb" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#betrieb" aria-label="Anker">#</a>
+    </span>
+    
+</h3>
+
+<h4 class="relative group">Ausfallsicherheit
+    <div id="ausfallsicherheit" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#ausfallsicherheit" aria-label="Anker">#</a>
+    </span>
+    
+</h4>
+<p>Server, Worker und der Outpost <code>Generic Forward Auth</code> laufen mit je zwei Replikas auf verschiedenen Nodes (<code>topologySpreadConstraints</code> mit <code>DoNotSchedule</code>), jeweils mit einem PodDisruptionBudget, das beim Leeren eines Nodes nur einen Pod zugleich räumt. Authentik hält Sitzungen, Flow-Zustand und Cache in PostgreSQL, deshalb kann jede Server-Replika jede Anfrage beantworten; ein Neustart eines Server-Pods unterbricht keine laufende Anmeldung. Die Replikas des Outposts stehen in <code>62-forward-auth.yaml</code> (<code>kubernetes_replicas</code>, Verteilung per <code>kubernetes_json_patches</code>), sein PodDisruptionBudget in <code>outpost-pdb.yaml</code>, weil Authentik selbst keines anlegt. Server und Outpost warten beim Beenden 10 Sekunden (<code>preStop</code> mit <code>sleep</code>), bis Traefik den Pod aus seinen Endpunkten genommen hat; ohne die Pause bekam eine Anfrage in diesem Moment eine 502.</p>
+<p>Die Datenbank bleibt eine einzelne Instanz. Fällt sie aus, stehen Anmeldung und Forward-Auth still, bis Longhorn das Volume auf einem anderen Node bereitstellt.</p>
+
+<h4 class="relative group">Überwachung
+    <div id="überwachung" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%c3%bcberwachung" aria-label="Anker">#</a>
+    </span>
+    
+</h4>
+<p>Server und Worker liefern Metriken auf Port 9300, die ServiceMonitore <code>authentik-server</code> und <code>authentik-worker</code> aus dem Chart holen sie ab. Den Outpost überwacht Authentik selbst mit einem eigenen ServiceMonitor. Die PrometheusRule <code>authentik</code> des Charts (<code>prometheus.rules.enabled</code>) bringt Recording-Regeln und vier Alarme mit:</p>
+<table>
+	<thead>
+			<tr>
+					<th>Alarm</th>
+					<th>Auslöser</th>
+					<th>Stufe</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><code>NoWorkersConnected</code></td>
+					<td>kein Worker meldet sich seit 10 Minuten beim Server</td>
+					<td>critical</td>
+			</tr>
+			<tr>
+					<td><code>PendingMigrations</code></td>
+					<td>ausstehende Datenbankmigrationen seit 10 Minuten</td>
+					<td>critical</td>
+			</tr>
+			<tr>
+					<td><code>FailedSystemTasks</code></td>
+					<td>ein Worker-Task ist in den letzten 2 Stunden mit einer Ausnahme abgebrochen</td>
+					<td>critical</td>
+			</tr>
+			<tr>
+					<td><code>DisconnectedOutposts</code></td>
+					<td>ein Outpost ist seit 30 Minuten nicht mit dem Server verbunden</td>
+					<td>critical</td>
+			</tr>
+	</tbody>
+</table>
+<p>Einen ganz ausgefallenen Server meldet Uptime Kuma (<code>/-/health/live/</code>), fehlende Replikas melden die Standardregeln von kube-prometheus-stack (<code>KubeDeploymentReplicasMismatch</code>). Für Blueprint-Instanzen gibt es keine Metrik: Ein ungültiger Blueprint setzt nur den Status der Instanz auf <code>error</code>, ohne dass der Task abbricht, <code>FailedSystemTasks</code> greift dann nicht. Den Status nach jedem Rollout deshalb weiter von Hand prüfen (siehe Abschnitt Blueprints).</p>
+
+<h4 class="relative group">Netzwerk
+    <div id="netzwerk" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#netzwerk" aria-label="Anker">#</a>
+    </span>
+    
+</h4>
+<p>Authentik vertraut <code>X-Forwarded-For</code> standardmäßig aus allen privaten Netzen (<code>listen.trusted_proxy_cidrs</code>), also auch aus dem Pod-Netz. Reputation, Ereignisse, GeoIP und die Policy für den zweiten Faktor von außen hängen an dieser Adresse. Damit kein Pod Traefik umgehen und eine fremde Adresse vortäuschen kann, lässt die NetworkPolicy <code>authentik-server</code> in <code>networkpolicy.yaml</code> die Web-Ports 9000 und 9443 nur von Traefik und den Metrik-Port 9300 nur von Prometheus zu. Outpost und OIDC-Clients nutzen den öffentlichen Namen und gehen damit über Traefik. Ein neuer Dienst, der den Server clusterintern direkt ansprechen soll, braucht dort eine eigene Regel; ohne sie läuft er in einen Timeout.</p>
+
+<h4 class="relative group">Datenbanksicherung
+    <div id="datenbanksicherung" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#datenbanksicherung" aria-label="Anker">#</a>
+    </span>
+    
+</h4>
+<p>Longhorn sichert das Volume <code>authentik-db</code> täglich als Blockabbild. Zusätzlich schreibt der CronJob <code>authentik-db-dump</code> (<code>dbdump.yaml</code>) jede Nacht um 02:45 einen logischen Dump (<code>pg_dump --format=custom</code>) nach <code>authentik-&lt;Zeitstempel&gt;.dump</code> auf das Volume <code>authentik-db-dump</code> und hält 14 Generationen vor. Anlass: Die Client-Secrets der OAuth2-Provider, das Bind-Passwort der LDAP-Quelle und der SPNEGO-Keytab stehen nur in der Datenbank. Aus dem Dump lassen sich einzelne Objekte zurückholen, ohne das Volume zu klonen. Jeder Dump wird vor dem Ablegen mit <code>pg_restore --list</code> gelesen; ein abgeschnittener Dump lässt den Job scheitern und die älteren Dumps stehen.</p>
+<p>Das Dump-Volume hängt nur während des Jobs. Die nächtliche Longhorn-Sicherung erfasst es deshalb nicht, die Dumps liegen nur im Cluster. Gegen den Verlust des Clusters schützt das Longhorn-Backup von <code>authentik-db</code>.</p>
+<p>Von Hand auslösen:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">kubectl -n authentik create job --from<span class="o">=</span>cronjob/authentik-db-dump authentik-db-dump-manuell</span></span></code></pre></div></div>
+<p>Zum Einsehen oder Zurückspielen einen Hilfs-Pod mit dem Dump-Volume starten, das Image passend zu <code>dbdump.yaml</code>:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">kubectl -n authentik run db-restore --rm -it --restart<span class="o">=</span>Never --image<span class="o">=</span>docker.io/library/postgres:18.6 <span class="se">\
+</span></span></span><span class="line"><span class="ln">2</span><span class="cl">  --overrides<span class="o">=</span><span class="s1">&#39;{&#34;spec&#34;:{&#34;securityContext&#34;:{&#34;runAsUser&#34;:999,&#34;runAsGroup&#34;:999,&#34;fsGroup&#34;:999},&#34;containers&#34;:[{&#34;name&#34;:&#34;db-restore&#34;,&#34;image&#34;:&#34;docker.io/library/postgres:18.6&#34;,&#34;stdin&#34;:true,&#34;tty&#34;:true,&#34;command&#34;:[&#34;bash&#34;],&#34;env&#34;:[{&#34;name&#34;:&#34;PGHOST&#34;,&#34;value&#34;:&#34;authentik-postgresql&#34;},{&#34;name&#34;:&#34;PGUSER&#34;,&#34;value&#34;:&#34;authentik&#34;},{&#34;name&#34;:&#34;PGPASSWORD&#34;,&#34;valueFrom&#34;:{&#34;secretKeyRef&#34;:{&#34;name&#34;:&#34;authentik-postgresql&#34;,&#34;key&#34;:&#34;password&#34;}}}],&#34;volumeMounts&#34;:[{&#34;name&#34;:&#34;backup&#34;,&#34;mountPath&#34;:&#34;/backup&#34;,&#34;readOnly&#34;:true}]}],&#34;volumes&#34;:[{&#34;name&#34;:&#34;backup&#34;,&#34;persistentVolumeClaim&#34;:{&#34;claimName&#34;:&#34;authentik-db-dump&#34;}}]}}&#39;</span></span></span></code></pre></div></div>
+<p>Im Pod einen Dump ansehen oder einzelne Werte nachschlagen. Dafür startet der Pod einen eigenen, flüchtigen PostgreSQL unter <code>/tmp</code> und spielt den Dump dort ein; die laufende Datenbank bleibt unberührt:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">ls -lh /backup
+</span></span><span class="line"><span class="ln">2</span><span class="cl">pg_restore --list /backup/authentik-&lt;Zeitstempel&gt;.dump <span class="p">|</span> less
+</span></span><span class="line"><span class="ln">3</span><span class="cl">initdb -D /tmp/pg -U postgres --auth<span class="o">=</span>trust &gt; /dev/null
+</span></span><span class="line"><span class="ln">4</span><span class="cl">pg_ctl -D /tmp/pg -o <span class="s2">&#34;-k /tmp -c listen_addresses=&#39;&#39;&#34;</span> -l /tmp/pg.log start
+</span></span><span class="line"><span class="ln">5</span><span class="cl">createdb -h /tmp -U postgres authentik_restore
+</span></span><span class="line"><span class="ln">6</span><span class="cl">pg_restore -h /tmp -U postgres --no-owner --dbname<span class="o">=</span>authentik_restore /backup/authentik-&lt;Zeitstempel&gt;.dump
+</span></span><span class="line"><span class="ln">7</span><span class="cl">psql -h /tmp -U postgres -d authentik_restore -c <span class="s1">&#39;select p.name, o.client_id from authentik_providers_oauth2_oauth2provider o join authentik_core_provider p on p.id = o.provider_ptr_id&#39;</span></span></span></code></pre></div></div>
+<p>Beim Verlassen des Pods verschwindet die Wegwerf-Datenbank mit ihm. Erprobt am 24.10.2026: Restore eines aktuellen Dumps (24 MB) in eine Wegwerf-Datenbank, Zahl der Benutzer, Anwendungen, OAuth2-Provider und Blueprint-Instanzen sowie Client-Secrets und Bind-Passwort gleich der laufenden Datenbank.</p>
+<p>Die ganze Datenbank zurückspielen:</p>
+<ol>
+<li>Autosync der Application <code>authentik</code> abschalten, sonst skaliert Argo CD sofort zurück (siehe <code>apps/longhorn/README.md</code>): <code>kubectl -n argocd patch applications.argoproj.io authentik --type json -p '[{&quot;op&quot;:&quot;remove&quot;,&quot;path&quot;:&quot;/spec/syncPolicy/automated&quot;}]'</code></li>
+<li>Server und Worker anhalten: <code>kubectl -n authentik scale deploy/authentik-server deploy/authentik-worker --replicas=0</code></li>
+<li>Im Hilfs-Pod: <code>pg_restore --clean --if-exists --no-owner --dbname=authentik /backup/authentik-&lt;Zeitstempel&gt;.dump</code>. Ohne <code>--single-transaction</code>: Ein einzelner Fehler, etwa ein Fremdschlüssel, der sich nicht anlegen lässt, würde dann den ganzen Restore zurückrollen; so meldet pg_restore ihn und spielt alles andere ein. In zyria lagen bis Oktober 2026 Task-Protokolle (<code>authentik_tasks_tasklog</code>) aus einem Zeitfenster vom 15.12.2025, deren Task fehlte, und Dumps aus dieser Zeit lösen genau diesen Fehler beim Fremdschlüssel <code>authentik_tasks_task_task_id_…</code> aus. Er ist harmlos; andere Fehler sind ernst zu nehmen.</li>
+<li>Autosync wieder einschalten: <code>kubectl -n argocd patch applications.argoproj.io authentik --type merge -p '{&quot;spec&quot;:{&quot;syncPolicy&quot;:{&quot;automated&quot;:{&quot;enabled&quot;:true,&quot;prune&quot;:true,&quot;selfHeal&quot;:true}}}}'</code>. Argo CD startet Server und Worker mit der Zahl aus <code>values.yaml</code>.</li>
+<li>Anmelden und prüfen, ob alle Blueprint-Instanzen <code>successful</code> sind.</li>
+</ol>
 
 <h3 class="relative group">Installation
     <div id="installation" class="anchor"></div>

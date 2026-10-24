@@ -9,7 +9,7 @@
     <managingEditor>fabrice@zyria.de (Fabrice Kirchner)</managingEditor>
     <webMaster>fabrice@zyria.de (Fabrice Kirchner)</webMaster>
     
-    <lastBuildDate>Thu, 22 Oct 2026 10:08:24 +0200</lastBuildDate><atom:link href="https://zyria.de/tags/argocd/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 24 Oct 2026 03:39:20 +0200</lastBuildDate><atom:link href="https://zyria.de/tags/argocd/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Operational Lifecycle Management: Orchestrierter Shutdown für Kubernetes</title>
@@ -18,6 +18,76 @@
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/posts/homelab/k3s-prod/ansible/shutdown-startup/</guid>
       <description>Ein technischer Leitfaden für das geordnete Herunterfahren und Wiederanfahren eines Kubernetes-Clusters (k3s/Longhorn/ArgoCD) zur Vermeidung von Datenkorruption.</description>
+      
+    </item>
+    
+    <item>
+      <title>Ansible Semaphore</title>
+      <link>https://zyria.de/posts/homelab/k3s-prod/apps/ansible-semaphore/readme/</link>
+      <pubDate>Sat, 24 Oct 2026 03:39:20 +0200</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/ansible-semaphore/readme/</guid>
+      <description>Dieses Dokument beschreibt die Bereitstellung von Ansible Semaphore, einer webbasierten Benutzeroberfläche zur Verwaltung und Ausführung von Ansible Playbooks.</description>
+      
+    </item>
+    
+    <item>
+      <title>Unbound</title>
+      <link>https://zyria.de/posts/homelab/k3s-prod/apps/unbound/readme/</link>
+      <pubDate>Sat, 24 Oct 2026 03:21:23 +0200</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/unbound/readme/</guid>
+      <description>Unbound löst Namen selbst rekursiv auf und liefert bei einem Ausfall der autoritativen Nameserver weiterhin die zuletzt bekannten Antworten aus.</description>
+      
+    </item>
+    
+    <item>
+      <title>VPN Standort B - Tailscale Subnet Router</title>
+      <link>https://zyria.de/posts/homelab/k3s-prod/apps/vpn-site-b/readme/</link>
+      <pubDate>Sat, 24 Oct 2026 03:21:23 +0200</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/vpn-site-b/readme/</guid>
+      <description>Ein Pod baut einen OpenVPN-Tunnel zu einem entfernten Standort auf und annonciert die dahinterliegenden Netze via Headscale ins Tailnet.</description>
+      
+    </item>
+    
+    <item>
+      <title>Mastodon</title>
+      <link>https://zyria.de/posts/homelab/k3s-prod/apps/mastodon/readme/</link>
+      <pubDate>Sat, 24 Oct 2026 02:03:53 +0200</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/mastodon/readme/</guid>
+      <description>Mastodon ist eine Open-Source-Alternative zu kommerziellen sozialen Netzwerken. Es ermöglicht Benutzern, eigene, unabhängige Server (Instanzen) zu betreiben, die über das ActivityPub-Protokoll miteinander kommunizieren können (Föderation).</description>
+      
+    </item>
+    
+    <item>
+      <title>Matrix</title>
+      <link>https://zyria.de/posts/homelab/k3s-prod/apps/matrix/readme/</link>
+      <pubDate>Sat, 24 Oct 2026 02:03:53 +0200</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/matrix/readme/</guid>
+      <description>Diese Anwendung stellt einen Matrix-Homeserver (Synapse) und einen Web-Client (Element) bereit, um einen föderierten, Ende-zu-Ende-verschlüsselten Chat-Dienst zu betreiben.</description>
+      
+    </item>
+    
+    <item>
+      <title>Paperless-ngx</title>
+      <link>https://zyria.de/posts/homelab/k3s-prod/apps/paperless/readme/</link>
+      <pubDate>Fri, 23 Oct 2026 13:21:19 +0200</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/paperless/readme/</guid>
+      <description>This document describes the Paperless-ngx deployment, a document management system that transforms physical documents into searchable digital archives.</description>
+      
+    </item>
+    
+    <item>
+      <title>Matrix Synapse Admin</title>
+      <link>https://zyria.de/posts/homelab/k3s-prod/apps/matrix-admin/readme/</link>
+      <pubDate>Fri, 23 Oct 2026 11:56:07 +0200</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/matrix-admin/readme/</guid>
+      <description>Synapse Admin bietet eine einfache grafische Oberfläche, um Benutzer und Räume auf einem Synapse Homeserver zu verwalten, ohne die Admin-API direkt verwenden zu müssen.</description>
       
     </item>
     
@@ -52,26 +122,6 @@
     </item>
     
     <item>
-      <title>Paperless-ngx</title>
-      <link>https://zyria.de/posts/homelab/k3s-prod/apps/paperless/readme/</link>
-      <pubDate>Wed, 21 Oct 2026 09:31:13 +0200</pubDate>
-      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/paperless/readme/</guid>
-      <description>This document describes the Paperless-ngx deployment, a document management system that transforms physical documents into searchable digital archives.</description>
-      
-    </item>
-    
-    <item>
-      <title>Mastodon</title>
-      <link>https://zyria.de/posts/homelab/k3s-prod/apps/mastodon/readme/</link>
-      <pubDate>Tue, 20 Oct 2026 11:51:55 +0200</pubDate>
-      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/mastodon/readme/</guid>
-      <description>Mastodon ist eine Open-Source-Alternative zu kommerziellen sozialen Netzwerken. Es ermöglicht Benutzern, eigene, unabhängige Server (Instanzen) zu betreiben, die über das ActivityPub-Protokoll miteinander kommunizieren können (Föderation).</description>
-      
-    </item>
-    
-    <item>
       <title>Home Assistant</title>
       <link>https://zyria.de/posts/homelab/k3s-prod/apps/home-assistant/readme/</link>
       <pubDate>Tue, 20 Oct 2026 11:35:19 +0200</pubDate>
@@ -102,16 +152,6 @@
     </item>
     
     <item>
-      <title>VPN Standort B - Tailscale Subnet Router</title>
-      <link>https://zyria.de/posts/homelab/k3s-prod/apps/vpn-site-b/readme/</link>
-      <pubDate>Mon, 19 Oct 2026 10:48:45 +0200</pubDate>
-      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/vpn-site-b/readme/</guid>
-      <description>Ein Pod baut einen OpenVPN-Tunnel zu einem entfernten Standort auf und annonciert die dahinterliegenden Netze via Headscale ins Tailnet.</description>
-      
-    </item>
-    
-    <item>
       <title>VPN Standort C - Anbindung an das CDP-Tailnet</title>
       <link>https://zyria.de/posts/homelab/k3s-prod/apps/vpn-site-c/readme/</link>
       <pubDate>Mon, 19 Oct 2026 10:48:45 +0200</pubDate>
@@ -128,16 +168,6 @@
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/posts/homelab/k3s-prod/apps/matrix-new/readme/</guid>
       <description>Migration von apps/matrix auf das offizielle element-hq/ess-helm matrix-stack Chart mit Matrix Authentication Service (MAS), Element Web und Element Admin.</description>
-      
-    </item>
-    
-    <item>
-      <title>Unbound</title>
-      <link>https://zyria.de/posts/homelab/k3s-prod/apps/unbound/readme/</link>
-      <pubDate>Sun, 18 Oct 2026 15:35:30 +0200</pubDate>
-      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/unbound/readme/</guid>
-      <description>Unbound löst Namen selbst rekursiv auf und liefert bei einem Ausfall der autoritativen Nameserver weiterhin die zuletzt bekannten Antworten aus.</description>
       
     </item>
     
@@ -168,16 +198,6 @@
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/posts/homelab/k3s-prod/apps/scrypted/readme/</guid>
       <description>Scrypted übernimmt Kamerastreams per RTSP und stellt sie als HomeKit-Kameras mit Aufnahme bereit. Es hängt wie Home Assistant per Multus direkt im Heimnetz.</description>
-      
-    </item>
-    
-    <item>
-      <title>Ansible Semaphore</title>
-      <link>https://zyria.de/posts/homelab/k3s-prod/apps/ansible-semaphore/readme/</link>
-      <pubDate>Wed, 14 Oct 2026 15:58:41 +0200</pubDate>
-      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/ansible-semaphore/readme/</guid>
-      <description>Dieses Dokument beschreibt die Bereitstellung von Ansible Semaphore, einer webbasierten Benutzeroberfläche zur Verwaltung und Ausführung von Ansible Playbooks.</description>
       
     </item>
     
@@ -268,26 +288,6 @@
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/posts/homelab/k3s-prod/apps/hx53-de/readme/</guid>
       <description>Nginx liefert die statische Webseite hx53.de aus, git-sync zieht den Inhalt laufend aus einem Git-Repository nach.</description>
-      
-    </item>
-    
-    <item>
-      <title>Matrix</title>
-      <link>https://zyria.de/posts/homelab/k3s-prod/apps/matrix/readme/</link>
-      <pubDate>Tue, 25 Aug 2026 09:24:25 +0200</pubDate>
-      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/matrix/readme/</guid>
-      <description>Diese Anwendung stellt einen Matrix-Homeserver (Synapse) und einen Web-Client (Element) bereit, um einen föderierten, Ende-zu-Ende-verschlüsselten Chat-Dienst zu betreiben.</description>
-      
-    </item>
-    
-    <item>
-      <title>Matrix Synapse Admin</title>
-      <link>https://zyria.de/posts/homelab/k3s-prod/apps/matrix-admin/readme/</link>
-      <pubDate>Tue, 25 Aug 2026 09:24:25 +0200</pubDate>
-      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/matrix-admin/readme/</guid>
-      <description>Synapse Admin bietet eine einfache grafische Oberfläche, um Benutzer und Räume auf einem Synapse Homeserver zu verwalten, ohne die Admin-API direkt verwenden zu müssen.</description>
       
     </item>
     

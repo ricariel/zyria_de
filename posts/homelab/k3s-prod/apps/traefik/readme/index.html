@@ -105,7 +105,7 @@
 	<meta property="og:type" content="article">
 		<meta property="article:section" content="posts">
 		<meta property="article:published_time" content="2025-10-20T12:51:49+02:00">
-		<meta property="article:modified_time" content="2026-10-08T14:49:40+02:00">
+		<meta property="article:modified_time" content="2026-10-23T23:22:40+02:00">
 		<meta property="article:tag" content="Kubernetes">
 		<meta property="article:tag" content="Traefik">
 		<meta property="article:tag" content="Ingress">
@@ -311,12 +311,12 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
     "dateCreated": "2025-10-20T12:51:49\u002b02:00",
     "datePublished": "2025-10-20T12:51:49\u002b02:00",
     
-    "dateModified": "2026-10-08T14:49:40\u002b02:00",
+    "dateModified": "2026-10-23T23:22:40\u002b02:00",
     
     "keywords": ["kubernetes","traefik","ingress"],
     
     "mainEntityOfPage": "https://zyria.de/posts/homelab/k3s-prod/apps/traefik/readme/",
-    "wordCount": "615"
+    "wordCount": "1116"
   }]
   </script>
 
@@ -963,7 +963,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2025-10-20T12:51:49&#43;02:00">20 Oktober 2025</time><span class="px-2 text-primary-500">&middot;</span><time datetime="2026-10-08T14:49:40&#43;02:00">Aktualisiert: 8 Oktober 2026</time><span class="px-2 text-primary-500">&middot;</span><span>615 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
+      <time datetime="2025-10-20T12:51:49&#43;02:00">20 Oktober 2025</time><span class="px-2 text-primary-500">&middot;</span><time datetime="2026-10-23T23:22:40&#43;02:00">Aktualisiert: 23 Oktober 2026</time><span class="px-2 text-primary-500">&middot;</span><span>1116 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
 
 
   
@@ -1146,6 +1146,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
         <li><a href="#lokale-anpassungen">Lokale Anpassungen</a>
           <ul>
             <li><a href="#wichtige-einstellungen">Wichtige Einstellungen</a></li>
+            <li><a href="#client-adresse-und-localnet">Client-Adresse und <code>localnet</code></a></li>
           </ul>
         </li>
         <li><a href="#installation">Installation</a></li>
@@ -1173,6 +1174,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
         <li><a href="#lokale-anpassungen">Lokale Anpassungen</a>
           <ul>
             <li><a href="#wichtige-einstellungen">Wichtige Einstellungen</a></li>
+            <li><a href="#client-adresse-und-localnet">Client-Adresse und <code>localnet</code></a></li>
           </ul>
         </li>
         <li><a href="#installation">Installation</a></li>
@@ -1365,12 +1367,13 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
 </h4>
 <ul>
 <li><strong>Deployment-Art</strong>: Traefik wird als <code>Deployment</code> mit 2 Replicas bereitgestellt.</li>
-<li><strong>EntryPoints</strong>: Es sind vier EntryPoints definiert:
+<li><strong>EntryPoints</strong>: Es sind sechs EntryPoints definiert:
 <ul>
 <li><code>web</code> (Port 80): Für unverschlüsselten HTTP-Traffic (wird typischerweise auf HTTPS umgeleitet).</li>
 <li><code>websecure</code> (Port 443): Für verschlüsselten HTTPS-Traffic.</li>
 <li><code>w-alternate</code> (Port 18080): Alternativer HTTP-EntryPoint.</li>
 <li><code>ws-alternate</code> (Port 18443): Alternativer HTTPS-EntryPoint.</li>
+<li><code>svc-web</code> (Port 28080) und <code>svc-websecure</code> (Port 28443): Entrypoints für <code>traefik-services-ip-lb</code>, nicht am Chart-Service und ohne <code>asDefault</code>. Erreichbar sind darüber nur Router, die sie ausdrücklich nennen (siehe &ldquo;Client-Adresse und <code>localnet</code>&rdquo;).</li>
 </ul>
 </li>
 <li><strong>Provider</strong>: Sowohl der <code>kubernetesCRD</code>-Provider (für <code>IngressRoute</code>, <code>Middleware</code>, etc.) als auch der <code>kubernetesIngress</code>-Provider (für Standard-<code>Ingress</code>-Ressourcen) sind aktiviert.</li>
@@ -1426,9 +1429,58 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
 <p><strong>Leere Services</strong>: <code>allowEmptyServices</code> ist für beide Kubernetes-Provider aktiv. Hat ein Service keine bereiten Pods, bleibt die Route bestehen und Traefik antwortet mit 503, das die Fehlerseite abfängt. Ohne die Option entfernt Traefik die Route und antwortet mit 404.</p>
 </li>
 <li>
-<p><strong>Persistenz</strong>: Persistenz ist aktiviert, um z.B. ACME-Zertifikate (von Let&rsquo;s Encrypt) zu speichern.</p>
+<p><strong>Dashboard und API</strong>: nur über die IngressRoute <code>dashboard-ingressroute</code> in <code>traefik-ingress.yaml</code>, hinter <code>localnet</code> und <code>authentik</code>. <code>--api.insecure</code> ist aus. Der Entrypoint <code>traefik</code> auf Port 8080 im Pod liefert damit nur noch <code>/ping</code> für die Probes. Öffentlich ohne Anmeldung ist allein <code>traefik.zyria.de/ping</code> für Uptime Kuma.</p>
+</li>
+<li>
+<p><strong>Persistenz</strong>: Keine (<code>persistence.enabled: false</code>). Zertifikate stellt cert-manager aus und legt sie als Secrets ab.</p>
+</li>
+<li>
+<p><strong>Access-Log</strong>: Jede Anfrage wird als JSON-Zeile nach stdout geschrieben, ohne Filter nach Status oder Dauer. Das Format ist für die automatische Auswertung gedacht, etwa durch CrowdSec mit dem Parser für Traefik. Header werden verworfen, nur <code>User-Agent</code> bleibt erhalten (Feld <code>request_User-Agent</code>). So landen keine Cookies oder <code>Authorization</code>-Header im Log. Query-Parameter stehen weiter im Feld <code>RequestPath</code>. Filter gehören im Chart unter <code>accessLog.filters</code>, direkt unter <code>accessLog</code> ignoriert das Chart sie.</p>
 </li>
 </ul>
+
+<h4 class="relative group">Client-Adresse und <code>localnet</code>
+    <div id="client-adresse-und-localnet" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#client-adresse-und-localnet" aria-label="Anker">#</a>
+    </span>
+    
+</h4>
+<p>Traefik ist mit zwei LoadBalancer-Services erreichbar:</p>
+<table>
+	<thead>
+			<tr>
+					<th>Service</th>
+					<th>Adresse aus</th>
+					<th><code>externalTrafficPolicy</code></th>
+					<th>Namen</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><code>traefik</code> (aus dem Chart)</td>
+					<td><code>values.yaml</code></td>
+					<td><code>Local</code></td>
+					<td>fast alle; IPv4 von außen kommt über die Fritzbox hier an</td>
+			</tr>
+			<tr>
+					<td><code>traefik-services-ip-lb</code></td>
+					<td><code>traefik-services-ip.yaml</code></td>
+					<td><code>Cluster</code></td>
+					<td>AAAA von git, hs, plex, vpn, unifi, controller (<code>dns-records.yaml</code> der Apps)</td>
+			</tr>
+	</tbody>
+</table>
+<p>Die zweite Adresse teilt sich Traefik mit SSH, MQTT, Plex, UniFi, WireGuard, dem DERP-Dienst und der Kubernetes-API. MetalLB erlaubt eine geteilte Adresse nur, wenn alle Services dieselbe Policy oder denselben Selektor haben; <code>Local</code> ist dort deshalb nicht möglich, und die Namen können nicht auf die erste Adresse umziehen, weil ihre übrigen Dienste mitziehen müssten.</p>
+<p>Mit <code>Cluster</code> setzt kube-proxy die Quelle jeder Verbindung auf eine Node-Adresse aus dem Pod-Bereich um (<code>10.44.x.0</code>, <code>10.44.x.1</code>, <code>fd21:da66:909b:x::</code>, <code>fd21:da66:909b:x::1</code>). Traefik und die Anwendungen sehen dann diese Adresse statt des Clients. Daraus folgt:</p>
+<ul>
+<li><code>localnet</code> erlaubt <code>10.0.0.0/8</code> und <code>fd00::/8</code>, damit Tunnel-Nutzer durchkommen (die Router-Pods in <code>apps/wireguard</code> maskieren auf ihre Pod-Adresse). Jeder Client, der über die zweite Adresse kommt, fällt ebenfalls darunter. Traefik routet nach Host und SNI, nicht nach der angesprochenen Adresse; über Port 443 der zweiten Adresse war deshalb jede Route erreichbar, auch die nur mit <code>localnet</code> geschützten, bis die eigenen Entrypoints kamen (unten). <code>localnet</code> ist ein Filter, keine Grenze: Was nicht öffentlich sein darf, braucht zusätzlich <code>authentik</code> oder eine eigene Anmeldung. Das gilt auch für Notsperren.</li>
+<li>Kein Entrypoint vertraut <code>X-Forwarded-For</code> oder dem PROXY-Protokoll. Mit dem Pod-Bereich als vertrauenswürdig konnten Pods und alle Clients über die zweite Adresse ihre Absenderadresse frei wählen, auch gegenüber <code>localnet</code> und der Reputation in Authentik.</li>
+<li>Anwendungen hinter der zweiten Adresse sehen externe Clients über IPv6 als maskierte Node-Adresse; Rate-Limits nach Adresse teilen sich dort einen Topf je Node.</li>
+</ul>
+<p>Abhilfe sind die Entrypoints <code>svc-web</code> und <code>svc-websecure</code>, auf die <code>traefik-services-ip-lb</code> zeigt. Über die zweite Adresse sind damit nur Router erreichbar, die diese Entrypoints ausdrücklich nennen, also die der Namen aus der Tabelle oben. Für diese Router bleibt <code>localnet</code> wirkungslos; sie brauchen eine eigene Anmeldung. Wer einen Namen auf die zweite Adresse legt, nimmt <code>svc-websecure</code> in die Entrypoints seiner Routen auf. Der HTTP-01-Solver in <code>apps/cert-manager</code> nennt <code>svc-web</code> ebenfalls, sonst scheiterte die Erneuerung über IPv6. Gebunden sind die Router von forgejo, headscale, plex, wireguard, unifi-controller und die Asset-Route der Fehlerseite (<code>apps/maintenance-page</code>).</p>
 
 <h3 class="relative group">Installation
     <div id="installation" class="anchor"></div>

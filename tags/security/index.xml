@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Security on Zyria</title>
+    <link>https://zyria.de/tags/security/</link>
+    <description>Recent content in Security on Zyria</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>de-de</language>
+    <managingEditor>fabrice@zyria.de (Fabrice Kirchner)</managingEditor>
+    <webMaster>fabrice@zyria.de (Fabrice Kirchner)</webMaster>
+    
+    <lastBuildDate>Fri, 23 Oct 2026 22:44:06 +0200</lastBuildDate><atom:link href="https://zyria.de/tags/security/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>CrowdSec</title>
+      <link>https://zyria.de/posts/homelab/k3s-prod/apps/crowdsec/readme/</link>
+      <pubDate>Fri, 23 Oct 2026 23:00:00 +0200</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/crowdsec/readme/</guid>
+      <description>CrowdSec liest die JSON-Access-Logs von Traefik, erkennt Scans, Brute-Force und bekannte Exploit-Muster und legt Sperrentscheidungen in seiner Local API ab. Ein Bouncer in Traefik setzt sie ab Phase 2 um.</description>
+      
+    </item>
+    
+  </channel>
+</rss>

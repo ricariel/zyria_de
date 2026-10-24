@@ -104,8 +104,8 @@
 	<meta property="og:locale" content="de_de">
 	<meta property="og:type" content="article">
 		<meta property="article:section" content="posts">
-		<meta property="article:published_time" content="2026-10-14T15:58:41+02:00">
-		<meta property="article:modified_time" content="2026-10-14T15:58:41+02:00">
+		<meta property="article:published_time" content="2026-10-24T03:39:20+02:00">
+		<meta property="article:modified_time" content="2026-10-24T03:39:20+02:00">
 		<meta property="article:tag" content="Kubernetes">
 		<meta property="article:tag" content="K3s">
 		<meta property="article:tag" content="Gitops">
@@ -311,15 +311,15 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
       "sameAs": ["https://git.casa-due-pur.de/fabrice.kirchner", "https://git.zyria.de/pyrox", "https://github.com/ricariel", "https://www.linkedin.com/in/fabrice-kirchner-bb5408163/", "https://www.xing.com/profile/Fabrice_Kirchner", "https://kirchner.social/@fabrice", "https://codeberg.org/ricariel"]
     },
     "copyrightYear": "2026",
-    "dateCreated": "2026-10-14T15:58:41\u002b02:00",
-    "datePublished": "2026-10-14T15:58:41\u002b02:00",
+    "dateCreated": "2026-10-24T03:39:20\u002b02:00",
+    "datePublished": "2026-10-24T03:39:20\u002b02:00",
     
-    "dateModified": "2026-10-14T15:58:41\u002b02:00",
+    "dateModified": "2026-10-24T03:39:20\u002b02:00",
     
     "keywords": ["kubernetes","k3s","gitops","argocd","helm","kustomize","homelab","produktion"],
     
     "mainEntityOfPage": "https://zyria.de/posts/homelab/k3s-prod/apps/ansible-semaphore/readme/",
-    "wordCount": "1681"
+    "wordCount": "1792"
   }]
   </script>
 
@@ -964,7 +964,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2026-10-14T15:58:41&#43;02:00">14 Oktober 2026</time><span class="px-2 text-primary-500">&middot;</span><span>1681 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
+      <time datetime="2026-10-24T03:39:20&#43;02:00">24 Oktober 2026</time><span class="px-2 text-primary-500">&middot;</span><span>1792 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
 
 
   
@@ -1244,6 +1244,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
             <li><a href="#wichtige-einstellungen">Wichtige Einstellungen</a></li>
           </ul>
         </li>
+        <li><a href="#secrets">Secrets</a></li>
         <li><a href="#datenbank">Datenbank</a></li>
         <li><a href="#datenbanksicherung">Datenbanksicherung</a>
           <ul>
@@ -1288,6 +1289,7 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
             <li><a href="#wichtige-einstellungen">Wichtige Einstellungen</a></li>
           </ul>
         </li>
+        <li><a href="#secrets">Secrets</a></li>
         <li><a href="#datenbank">Datenbank</a></li>
         <li><a href="#datenbanksicherung">Datenbanksicherung</a>
           <ul>
@@ -1497,9 +1499,22 @@ href="/site.webmanifest.min.7a9e07ce1f7386689917602ddc5a75750ad842e605ff764f6717
 <li><strong>Datenbank</strong>: <code>MariaDB</code> im selben Namespace, siehe Abschnitt <a href="/posts/homelab/k3s-prod/apps/ansible-semaphore/readme/#datenbank" >Datenbank</a>.</li>
 <li><strong>Ingress</strong>: Der Zugriff auf die Weboberfläche wird über einen Ingress mit einem Hostnamen ermöglicht und durch Traefik verwaltet. Das TLS-Zertifikat wird über <code>cert-manager</code> bereitgestellt.</li>
 <li><strong>Speicher</strong>: Ein PersistentVolume wird für die Speicherung der Konfiguration und der Playbooks verwendet.</li>
-<li><strong>Authentifizierung</strong>: Die Benutzerauthentifizierung erfolgt über LDAP und OIDC.</li>
+<li><strong>Authentifizierung</strong>: Die Anmeldung läuft ausschließlich per OIDC über Authentik; Passwort-Login (<code>general.passwordLoginDisable</code>) und LDAP sind abgeschaltet. Semaphore ordnet OIDC-Anmeldungen bestehenden Konten über Login oder Mail-Adresse zu. Das AD-Konto <code>semaphore</code> dient nur noch der SMTP-Anmeldung unter <code>email:</code>.</li>
 <li><strong>Python-Pakete</strong>: <code>general.additionalPythonPackages</code> installiert zusätzliche Pakete für die Ansible-Läufe, gepinnt als <code>paket==version</code>. Renovate hebt sie über einen eigenen Regex-Manager (<code>renovate.json5</code>) gemeinsam in einem PR an.</li>
 </ul>
+
+<h3 class="relative group">Secrets
+    <div id="secrets" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#secrets" aria-label="Anker">#</a>
+    </span>
+    
+</h3>
+<p>Das Secret <code>ansible-semaphore-runner-token</code> (Schlüssel <code>token</code>) steht nicht im Repository und wird von Hand angelegt. Es enthält das Registrierungstoken für Remote-Runner, die hier nicht genutzt werden (<code>useRemoteRunner: false</code>). Das Chart setzt die Variable trotzdem immer, ohne das Secret startet der Pod nicht. Ohne <code>runner.existingSecret</code> erzeugt das Chart bei jedem Rendern durch Argo CD ein neues Zufallstoken, weil <code>lookup</code> dort keinen Clusterzugriff hat, und jeder Commit auf <code>main</code> startete Semaphore neu, auch mitten in einem laufenden Playbook.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">kubectl -n ansible-semaphore create secret generic ansible-semaphore-runner-token <span class="se">\
+</span></span></span><span class="line"><span class="ln">2</span><span class="cl">  --from-literal<span class="o">=</span><span class="nv">token</span><span class="o">=</span><span class="s2">&#34;</span><span class="k">$(</span>openssl rand -hex 16<span class="k">)</span><span class="s2">&#34;</span></span></span></code></pre></div></div>
 
 <h3 class="relative group">Datenbank
     <div id="datenbank" class="anchor"></div>
@@ -1792,7 +1807,6 @@ Snapshot, das nächtliche Backup auf dem NFS-Ziel und die sieben Dump-Generation
 <li>Ein laufender Kubernetes-Cluster.</li>
 <li>Ein Ingress-Controller (z.B. Traefik) für den externen Zugriff.</li>
 <li>Eine Datenbank (z.B. MariaDB).</li>
-<li>Ein LDAP-Server für die Benutzerauthentifizierung (optional).</li>
 <li>Ein OIDC-Anbieter (z.B. Authentik) für die Authentifizierung (optional).</li>
 <li>Ein SMTP-Server für E-Mail-Benachrichtigungen (optional).</li>
 <li>cert-manager: Wird für die automatische Bereitstellung von TLS-Zertifikaten benötigt.</li>
@@ -2030,14 +2044,14 @@ Snapshot, das nächtliche Backup auf dem NFS-Ziel und die sieben Dump-Generation
           
             <a
               class="flex text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
-              href="/posts/homelab/k3s-prod/apps/multus/readme/">
+              href="/posts/homelab/k3s-prod/apps/unbound/readme/">
               <span class="leading-6">
-                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;Multus CNI
+                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;Unbound
               </span>
             </a>
             
               <span class="ms-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
-                <time datetime="2026-10-12T11:11:43&#43;02:00">12 Oktober 2026</time>
+                <time datetime="2026-10-24T03:21:23&#43;02:00">24 Oktober 2026</time>
               </span>
             
           
@@ -2046,14 +2060,14 @@ Snapshot, das nächtliche Backup auf dem NFS-Ziel und die sieben Dump-Generation
           
             <a
               class="flex text-right text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
-              href="/posts/homelab/k3s-prod/apps/scrypted/readme/">
+              href="/posts/homelab/k3s-prod/ansible/shutdown-startup/">
               <span class="leading-6">
-                Scrypted&ensp;<span class="inline-block rtl:rotate-180">&rarr;</span>
+                Operational Lifecycle Management: Orchestrierter Shutdown für Kubernetes&ensp;<span class="inline-block rtl:rotate-180">&rarr;</span>
               </span>
             </a>
             
               <span class="me-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
-                <time datetime="2026-10-17T01:22:30&#43;02:00">17 Oktober 2026</time>
+                <time datetime="2024-10-27T10:00:00&#43;01:00">27 Oktober 2024</time>
               </span>
             
           

@@ -110,6 +110,13 @@ k3s_cluster:
         - "config=/etc/kubernetes/kubelet-shutdown.yaml"
       kube-proxy-arg:
         - ipvs-strict-arp=true
+      kube-apiserver-arg:
+        # Persoenliche Anmeldung per OIDC (kubelogin ueber Authentik), siehe
+        # apps/k3s/README.md. Geschrieben wird die Datei von
+        # ansible-main/playbooks/k3s.yml - das Playbook muss vor diesem Deploy
+        # gelaufen sein, sonst startet der API-Server nicht. Aenderungen an
+        # der Datei liest der API-Server ohne Neustart neu ein.
+        - "authentication-config=/etc/kubernetes/authentication-config.yaml"
       embedded-registry: true
       node-name: "{{ inventory_hostname }}"
     # Die Agents hatten bisher keine config.yaml. Sie bekommen jetzt eine -
