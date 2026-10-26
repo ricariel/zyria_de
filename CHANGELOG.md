@@ -3,6 +3,34 @@
 Alle nennenswerten Änderungen an diesem Repository.
 Automatisch aus [Conventional Commits](https://www.conventionalcommits.org) via [git-cliff](https://git-cliff.org).
 
+## [2026.43] - 2026-10-26 ([Vergleich zur Vorversion](https://git.zyria.de/pyrox/zyria_de/compare/2026.42...2026.43))
+
+### ✨ Features
+
+- **favicon**: Use the zyria logo for favicons and app icons ([dec18c4](https://git.zyria.de/pyrox/zyria_de/commit/dec18c4c201dfa9e2a79ab6047a45d5233b74c51))
+
+### 📝 Documentation
+
+- **license**: Name the copyright holder ([6b7b89e](https://git.zyria.de/pyrox/zyria_de/commit/6b7b89e9d4d2056585764e1bac7f099d0d80ab38))
+
+### ⬆️ Dependencies
+
+- **deps**: Lock file maintenance
+- **deps**: Lock file maintenance
+
+### 🔧 CI/Build
+
+- **mirror**: Run the mirrors daily and on demand ([3f36baf](https://git.zyria.de/pyrox/zyria_de/commit/3f36baf843a95d2d429ac00005b5baa2dd249b01))
+
+### 🧹 Miscellaneous
+
+- **hugo**: Module aktualisieren
+- **hugo**: Module aktualisieren
+- **hugo**: Module aktualisieren
+- **hugo**: Module aktualisieren
+- **hugo**: Module aktualisieren
+- **hugo**: Module aktualisieren
+
 ## [2026.42] - 2026-10-19 ([Vergleich zur Vorversion](https://git.zyria.de/pyrox/zyria_de/compare/2026.41...2026.42))
 
 ### ✨ Features
