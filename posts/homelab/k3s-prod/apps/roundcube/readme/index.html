@@ -105,7 +105,7 @@
 	<meta property="og:type" content="article">
 		<meta property="article:section" content="posts">
 		<meta property="article:published_time" content="2025-10-17T13:45:53+02:00">
-		<meta property="article:modified_time" content="2026-10-24T03:08:20+02:00">
+		<meta property="article:modified_time" content="2026-10-25T22:55:35+01:00">
 		<meta property="article:tag" content="Kubernetes">
 		<meta property="article:tag" content="Roundcube">
 		<meta property="article:tag" content="Webmail">
@@ -311,12 +311,12 @@ href="/site.webmanifest.min.e231d7c2a5ac29753d1781895bdd4b9a0e5900e75bcee133bb47
     "dateCreated": "2025-10-17T13:45:53\u002b02:00",
     "datePublished": "2025-10-17T13:45:53\u002b02:00",
     
-    "dateModified": "2026-10-24T03:08:20\u002b02:00",
+    "dateModified": "2026-10-25T22:55:35\u002b01:00",
     
     "keywords": ["kubernetes","roundcube","webmail"],
     
     "mainEntityOfPage": "https://zyria.de/posts/homelab/k3s-prod/apps/roundcube/readme/",
-    "wordCount": "397"
+    "wordCount": "631"
   }]
   </script>
 
@@ -963,7 +963,7 @@ href="/site.webmanifest.min.e231d7c2a5ac29753d1781895bdd4b9a0e5900e75bcee133bb47
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2025-10-17T13:45:53&#43;02:00">17 Oktober 2025</time><span class="px-2 text-primary-500">&middot;</span><time datetime="2026-10-24T03:08:20&#43;02:00">Aktualisiert: 24 Oktober 2026</time><span class="px-2 text-primary-500">&middot;</span><span>397 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
+      <time datetime="2025-10-17T13:45:53&#43;02:00">17 Oktober 2025</time><span class="px-2 text-primary-500">&middot;</span><time datetime="2026-10-25T22:55:35&#43;01:00">Aktualisiert: 25 Oktober 2026</time><span class="px-2 text-primary-500">&middot;</span><span>631 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
 
 
   
@@ -1143,7 +1143,11 @@ href="/site.webmanifest.min.e231d7c2a5ac29753d1781895bdd4b9a0e5900e75bcee133bb47
         <li><a href="#quelle">Quelle</a></li>
         <li><a href="#dokumentation">Dokumentation</a></li>
         <li><a href="#funktion">Funktion</a></li>
-        <li><a href="#lokale-anpassungen">Lokale Anpassungen</a></li>
+        <li><a href="#lokale-anpassungen">Lokale Anpassungen</a>
+          <ul>
+            <li><a href="#erscheinungsbild-skin-zyria">Erscheinungsbild (Skin zyria)</a></li>
+          </ul>
+        </li>
         <li><a href="#installation">Installation</a></li>
         <li><a href="#abhängigkeiten">Abhängigkeiten</a></li>
       </ul>
@@ -1166,7 +1170,11 @@ href="/site.webmanifest.min.e231d7c2a5ac29753d1781895bdd4b9a0e5900e75bcee133bb47
         <li><a href="#quelle">Quelle</a></li>
         <li><a href="#dokumentation">Dokumentation</a></li>
         <li><a href="#funktion">Funktion</a></li>
-        <li><a href="#lokale-anpassungen">Lokale Anpassungen</a></li>
+        <li><a href="#lokale-anpassungen">Lokale Anpassungen</a>
+          <ul>
+            <li><a href="#erscheinungsbild-skin-zyria">Erscheinungsbild (Skin zyria)</a></li>
+          </ul>
+        </li>
         <li><a href="#installation">Installation</a></li>
         <li><a href="#abhängigkeiten">Abhängigkeiten</a></li>
       </ul>
@@ -1358,6 +1366,57 @@ kommt als Digest-Update von Renovate. Keel ist nicht im Spiel.</li>
 <li><code>oauth_scope</code> requests <code>offline_access</code>, and the Authentik provider grants it (blueprint <code>61-apps-user.yaml</code>). Without a refresh token Roundcube ends the session when the access token expires after 5 minutes and logs in again; Dovecot then logs a failed PLAIN login from the Roundcube pod.</li>
 <li><code>oauth_verify_peer</code> stays <code>true</code>: Roundcube sends the client secret, codes and tokens to Authentik and must check its certificate. The Roundcube image trusts the Let&rsquo;s Encrypt chain served by Traefik.</li>
 </ul>
+
+<h4 class="relative group">Erscheinungsbild (Skin zyria)
+    <div id="erscheinungsbild-skin-zyria" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#erscheinungsbild-skin-zyria" aria-label="Anker">#</a>
+    </span>
+    
+</h4>
+<p>Roundcube läuft mit dem Skin <code>zyria</code>, einer Variante von Elastic in den
+Farben von zyria: Petrol für Auswahl, Fokus und Links, Graphit für Menü und
+Hauptknöpfe, neutrale Grautöne, Systemschrift und ein passender Dunkelmodus.
+Logos und Statusfarben setzt <code>config/skin.php</code> beziehungsweise bleiben die von
+Elastic.</p>
+<table>
+	<thead>
+			<tr>
+					<th>Datei</th>
+					<th>Inhalt</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><code>skin/less/_variables.less</code>, <code>skin/less/_styles.less</code></td>
+					<td>Eingaben aus <code>pyrox/zyria-design</code> (<code>dist/roundcube/</code>), hier nicht von Hand ändern</td>
+			</tr>
+			<tr>
+					<td><code>skin/zyria/</code></td>
+					<td>der fertige Skin: <code>meta.json</code> (erbt von Elastic), <code>styles/styles.css</code>, Logos</td>
+			</tr>
+	</tbody>
+</table>
+<p>Die ConfigMap <code>roundcube-skin</code> hängt <code>skin/zyria/</code> unter
+<code>/var/www/html/skins/zyria</code> ein, <code>ROUNDCUBEMAIL_SKIN</code> wählt den Skin. Der
+Entrypoint installiert nur Skins, deren Verzeichnis fehlt, und meldet beim
+Start, dass <code>/var/www/html</code> nicht leer ist; das verzögert den Start um zehn
+Sekunden und ist harmlos.</p>
+<p>Das CSS hängt an den Elastic-Quellen der laufenden Version. Gebaut wird es
+automatisch: <code>sync.py</code> in <code>pyrox/zyria-design</code> liest die Roundcube-Version aus
+<code>values.yaml</code>, übersetzt Elastic aus dem Release-Archiv dieser Version (gleich
+den Quellen im Image) zusammen mit den LESS-Dateien und öffnet einen PR vom
+Branch <code>design/sync</code>. Der Workflow läuft alle sechs Stunden; nach einem
+Roundcube-Update durch Renovate folgt der passende Sync-PR also von selbst.
+<code>skin/zyria/</code> und <code>skin/less/</code> deshalb nicht von Hand ändern.</p>
+<p>Die Datei heißt <code>styles.css</code>, obwohl sie minifiziert ist: Für Elastics
+Vorlagen sucht Roundcube <code>styles.css</code> in allen Skins, bevor es auf
+<code>styles.min.css</code> ausweicht, nur so gewinnt die zyria-Fassung. Verweise auf
+Schriften und Bilder zeigen auf Elastics Verzeichnisse.</p>
+<p>Elastic steht unter Creative Commons Attribution-ShareAlike 3.0; der
+abgeleitete Skin trägt dieselbe Lizenz und nennt den Urheber in <code>meta.json</code>.</p>
 
 <h3 class="relative group">Installation
     <div id="installation" class="anchor"></div>

@@ -105,7 +105,7 @@
 	<meta property="og:type" content="article">
 		<meta property="article:section" content="posts">
 		<meta property="article:published_time" content="2025-10-20T14:23:44+02:00">
-		<meta property="article:modified_time" content="2026-10-24T02:39:10+02:00">
+		<meta property="article:modified_time" content="2026-10-25T22:55:35+01:00">
 		<meta property="article:tag" content="Kubernetes">
 		<meta property="article:tag" content="Nextcloud">
 		<meta property="article:tag" content="Dateien">
@@ -311,12 +311,12 @@ href="/site.webmanifest.min.e231d7c2a5ac29753d1781895bdd4b9a0e5900e75bcee133bb47
     "dateCreated": "2025-10-20T14:23:44\u002b02:00",
     "datePublished": "2025-10-20T14:23:44\u002b02:00",
     
-    "dateModified": "2026-10-24T02:39:10\u002b02:00",
+    "dateModified": "2026-10-25T22:55:35\u002b01:00",
     
     "keywords": ["kubernetes","nextcloud","dateien"],
     
     "mainEntityOfPage": "https://zyria.de/posts/homelab/k3s-prod/apps/nextcloud/readme/",
-    "wordCount": "2604"
+    "wordCount": "2825"
   }]
   </script>
 
@@ -963,7 +963,7 @@ href="/site.webmanifest.min.e231d7c2a5ac29753d1781895bdd4b9a0e5900e75bcee133bb47
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2025-10-20T14:23:44&#43;02:00">20 Oktober 2025</time><span class="px-2 text-primary-500">&middot;</span><time datetime="2026-10-24T02:39:10&#43;02:00">Aktualisiert: 24 Oktober 2026</time><span class="px-2 text-primary-500">&middot;</span><span>2604 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
+      <time datetime="2025-10-20T14:23:44&#43;02:00">20 Oktober 2025</time><span class="px-2 text-primary-500">&middot;</span><time datetime="2026-10-25T22:55:35&#43;01:00">Aktualisiert: 25 Oktober 2026</time><span class="px-2 text-primary-500">&middot;</span><span>2825 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
 
 
   
@@ -1155,6 +1155,7 @@ href="/site.webmanifest.min.e231d7c2a5ac29753d1781895bdd4b9a0e5900e75bcee133bb47
             <li><a href="#caching-und-file-locking">Caching und File-Locking</a></li>
             <li><a href="#trusted-proxies">Trusted Proxies</a></li>
             <li><a href="#collabora-online-nextcloud-office">Collabora Online (Nextcloud Office)</a></li>
+            <li><a href="#erscheinungsbild">Erscheinungsbild</a></li>
           </ul>
         </li>
         <li><a href="#installation">Installation</a></li>
@@ -1191,6 +1192,7 @@ href="/site.webmanifest.min.e231d7c2a5ac29753d1781895bdd4b9a0e5900e75bcee133bb47
             <li><a href="#caching-und-file-locking">Caching und File-Locking</a></li>
             <li><a href="#trusted-proxies">Trusted Proxies</a></li>
             <li><a href="#collabora-online-nextcloud-office">Collabora Online (Nextcloud Office)</a></li>
+            <li><a href="#erscheinungsbild">Erscheinungsbild</a></li>
           </ul>
         </li>
         <li><a href="#installation">Installation</a></li>
@@ -1891,6 +1893,67 @@ fuer ArgoCD gibt. Sie tragen die Annotation
 <p>Nach einem Wechsel des Proof-Keys in Nextcloud <code>occ richdocuments:activate-config</code>
 ausfuehren, damit die neue Discovery mit dem oeffentlichen Schluessel geladen
 wird.</p>
+
+<h4 class="relative group">Erscheinungsbild
+    <div id="erscheinungsbild" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#erscheinungsbild" aria-label="Anker">#</a>
+    </span>
+    
+</h4>
+<p>Name, Farben, Logos und Favicon setzt <code>theming/init/50-theming.sh</code> bei jedem
+Start des Containers. Das LinuxServer-Image führt alle ausführbaren Dateien
+in <code>/custom-cont-init.d</code> aus, dorthin hängt die ConfigMap
+<code>nextcloud-theming-init</code> das Skript. Es arbeitet im Hintergrund und wartet bis
+zu zehn Minuten, bis <code>occ status</code> eine installierte Instanz meldet; der Start
+des Webservers hängt also nicht an der Datenbank.</p>
+<p>Die Werte stehen als <code>THEMING_*</code> in <code>values.yaml</code>, jede ist optional:</p>
+<table>
+	<thead>
+			<tr>
+					<th>Variable</th>
+					<th>Wirkung</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><code>THEMING_NAME</code></td>
+					<td>Name in Titel und Anmeldeseite</td>
+			</tr>
+			<tr>
+					<td><code>THEMING_PRIMARY_COLOR</code></td>
+					<td>Knöpfe, Links, Fokus</td>
+			</tr>
+			<tr>
+					<td><code>THEMING_BACKGROUND_COLOR</code></td>
+					<td>Anmeldeseite und Kopfzeile</td>
+			</tr>
+			<tr>
+					<td><code>THEMING_BACKGROUND_PLAIN</code></td>
+					<td><code>true</code>: kein Hintergrundbild, nur die Farbe</td>
+			</tr>
+			<tr>
+					<td><code>THEMING_LOGO</code>, <code>THEMING_LOGOHEADER</code>, <code>THEMING_FAVICON</code></td>
+					<td>Bilddatei für Anmeldeseite, Kopfzeile und Browser-Tab</td>
+			</tr>
+	</tbody>
+</table>
+<p>Name und Farben setzt das Skript per <code>occ theming:config</code>. Bilder und den
+Verzicht auf das Hintergrundbild kennt <code>occ</code> nicht; dafür ruft es
+<code>theming/apply-images.php</code> auf, das die Bild-Verwaltung der Theming-App
+benutzt wie ein Upload in den Verwaltungseinstellungen. Die Bilder liegen
+mit dem Hilfsskript in der ConfigMap <code>nextcloud-theming</code> unter <code>/theming</code>.
+Sie stammen aus <code>pyrox/zyria-design</code> (<code>dist/logo/</code>: <code>lockup-dark.svg</code>,
+<code>mark-dark.svg</code>, <code>icon.svg</code>) und kommen per Sync-PR (Branch <code>design/sync</code>), hier
+nicht von Hand ändern. Eine SVG-Datei muss
+mit dem <code>&lt;svg&gt;</code>-Element beginnen; steht davor ein Kommentar, hält Nextcloud
+sie für HTML und lehnt sie ab.</p>
+<p>Was im Webinterface unter Design geändert wird, überschreibt der nächste
+Start wieder, sofern die Variable gesetzt ist. Ergebnis und Fehler stehen im
+Log des Containers in Zeilen mit <code>[theming]</code>. Eigene Hintergründe der Nutzer
+bleiben unberührt.</p>
 
 <h3 class="relative group">Installation
     <div id="installation" class="anchor"></div>
