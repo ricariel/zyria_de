@@ -1237,7 +1237,7 @@ href="/site.webmanifest.min.e231d7c2a5ac29753d1781895bdd4b9a0e5900e75bcee133bb47
     <li><a href="#6-deep-dive-fehleranalyse-und-edge-cases"><strong>6. Deep Dive: Fehleranalyse und Edge Cases</strong></a>
       <ul>
         <li><a href="#blockierende-finalizers-auf-pvcs"><strong>Blockierende Finalizers auf PVCs</strong></a></li>
-        <li><a href="#die"><strong>Die “ArgoCD Fighting Back” Race Condition</strong></a></li>
+        <li><a href="#die-argocd-fighting-back-race-condition"><strong>Die “ArgoCD Fighting Back” Race Condition</strong></a></li>
       </ul>
     </li>
     <li><a href="#7-ungeplanter-shutdown-einzelner-nodes"><strong>7. Ungeplanter Shutdown einzelner Nodes</strong></a>
@@ -1295,7 +1295,7 @@ href="/site.webmanifest.min.e231d7c2a5ac29753d1781895bdd4b9a0e5900e75bcee133bb47
     <li><a href="#6-deep-dive-fehleranalyse-und-edge-cases"><strong>6. Deep Dive: Fehleranalyse und Edge Cases</strong></a>
       <ul>
         <li><a href="#blockierende-finalizers-auf-pvcs"><strong>Blockierende Finalizers auf PVCs</strong></a></li>
-        <li><a href="#die"><strong>Die “ArgoCD Fighting Back” Race Condition</strong></a></li>
+        <li><a href="#die-argocd-fighting-back-race-condition"><strong>Die “ArgoCD Fighting Back” Race Condition</strong></a></li>
       </ul>
     </li>
     <li><a href="#7-ungeplanter-shutdown-einzelner-nodes"><strong>7. Ungeplanter Shutdown einzelner Nodes</strong></a>
@@ -1938,11 +1938,11 @@ wird ArgoCD sofort versuchen, die Workloads wieder zu starten. Dies erzeugt eine
 <p>Ein häufiges Problem beim Shutdown ist, dass Ressourcen im Status Terminating hängen bleiben. Ein Pod im Status Terminating kann immer noch einen Lock auf ein Longhorn-Volume halten. Das Ansible Playbook verlässt sich darauf, dass k8s_scale den Controller zwingt, die Pods zu entfernen. Reagiert das Kubelet auf einem Node nicht, bleibt das Pod-Objekt bestehen.</p>
 
 <h3 class="relative group"><strong>Die &ldquo;ArgoCD Fighting Back&rdquo; Race Condition</strong>
-    <div id="die" class="anchor"></div>
+    <div id="die-argocd-fighting-back-race-condition" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#die" aria-label="Anker">#</a>
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#die-argocd-fighting-back-race-condition" aria-label="Anker">#</a>
     </span>
     
 </h3>
