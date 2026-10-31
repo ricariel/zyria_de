@@ -105,7 +105,7 @@
 	<meta property="og:type" content="article">
 		<meta property="article:section" content="posts">
 		<meta property="article:published_time" content="2025-08-13T17:04:53+02:00">
-		<meta property="article:modified_time" content="2026-10-24T00:49:22+02:00">
+		<meta property="article:modified_time" content="2026-10-30T21:29:00+01:00">
 		<meta property="article:tag" content="Kubernetes">
 		<meta property="article:tag" content="Ansible">
 		<meta property="article:tag" content="Automatisierung">
@@ -311,12 +311,12 @@ href="/site.webmanifest.min.e231d7c2a5ac29753d1781895bdd4b9a0e5900e75bcee133bb47
     "dateCreated": "2025-08-13T17:04:53\u002b02:00",
     "datePublished": "2025-08-13T17:04:53\u002b02:00",
     
-    "dateModified": "2026-10-24T00:49:22\u002b02:00",
+    "dateModified": "2026-10-30T21:29:00\u002b01:00",
     
     "keywords": ["kubernetes","ansible","automatisierung"],
     
     "mainEntityOfPage": "https://zyria.de/posts/homelab/k3s-prod/ansible/readme/",
-    "wordCount": "704"
+    "wordCount": "997"
   }]
   </script>
 
@@ -963,7 +963,7 @@ href="/site.webmanifest.min.e231d7c2a5ac29753d1781895bdd4b9a0e5900e75bcee133bb47
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2025-08-13T17:04:53&#43;02:00">13 August 2025</time><span class="px-2 text-primary-500">&middot;</span><time datetime="2026-10-24T00:49:22&#43;02:00">Aktualisiert: 24 Oktober 2026</time><span class="px-2 text-primary-500">&middot;</span><span>704 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
+      <time datetime="2025-08-13T17:04:53&#43;02:00">13 August 2025</time><span class="px-2 text-primary-500">&middot;</span><time datetime="2026-10-30T21:29:00&#43;01:00">Aktualisiert: 30 Oktober 2026</time><span class="px-2 text-primary-500">&middot;</span><span>997 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
 
 
   
@@ -1147,6 +1147,7 @@ href="/site.webmanifest.min.e231d7c2a5ac29753d1781895bdd4b9a0e5900e75bcee133bb47
           <ul>
             <li><a href="#beispiel-cluster-initialisierenaktualisieren">Beispiel: Cluster initialisieren/aktualisieren</a></li>
             <li><a href="#kubelet-konfiguration">Kubelet-Konfiguration</a></li>
+            <li><a href="#pause-image">Pause-Image</a></li>
             <li><a href="#anmeldung-per-oidc">Anmeldung per OIDC</a></li>
             <li><a href="#benutzer-anlegen">Benutzer anlegen</a></li>
             <li><a href="#herunterfahren-und-wiederanfahren">Herunterfahren und Wiederanfahren</a></li>
@@ -1178,6 +1179,7 @@ href="/site.webmanifest.min.e231d7c2a5ac29753d1781895bdd4b9a0e5900e75bcee133bb47
           <ul>
             <li><a href="#beispiel-cluster-initialisierenaktualisieren">Beispiel: Cluster initialisieren/aktualisieren</a></li>
             <li><a href="#kubelet-konfiguration">Kubelet-Konfiguration</a></li>
+            <li><a href="#pause-image">Pause-Image</a></li>
             <li><a href="#anmeldung-per-oidc">Anmeldung per OIDC</a></li>
             <li><a href="#benutzer-anlegen">Benutzer anlegen</a></li>
             <li><a href="#herunterfahren-und-wiederanfahren">Herunterfahren und Wiederanfahren</a></li>
@@ -1386,9 +1388,14 @@ herunter- und wieder hochfahren. Alles, was danach im Cluster läuft, kommt
 	</tbody>
 </table>
 <p><code>k3s_version</code> in <code>inventory.yaml</code> hebt Renovate auf die aktuelle Version im
-k3s-Kanal <code>stable</code> (eigene Datenquelle in <code>renovate.json5</code>). Das ändert nur
-das Inventar; der laufende Cluster bekommt die Version erst, wenn
-<code>deploy.yaml</code> wieder läuft. Weil die Datenquelle keinen
+k3s-Kanal <code>stable</code> (eigene Datenquelle in <code>renovate.json5</code>). Laufende Nodes
+hebt der system-upgrade-controller (<code>apps/system-upgrade-controller</code>) aus
+demselben Kanal, ohne Freigabe und meist vor dem Renovate-PR. Er tauscht nur
+das Binary; <code>config.yaml</code> und damit alles aus <code>server_config_yaml</code> und
+<code>agent_config_yaml</code> rollt allein <code>deploy.yaml</code> aus. Die Collection installiert
+k3s nur, wenn die Version auf der Node älter ist als <code>k3s_version</code>, und stuft
+nie zurück. Der Wert wirkt deshalb vor allem bei neu aufgesetzten Nodes und
+hält sie auf dem Stand der übrigen. Weil die Datenquelle keinen
 Veröffentlichungszeitpunkt liefert, gilt für sie
 <code>minimumReleaseAgeBehaviour: timestamp-optional</code>; die Karenzzeit des Presets
 entfällt, der Kanal <code>stable</code> übernimmt diese Rolle.</p>
@@ -1460,10 +1467,45 @@ Repository schreibt, sondern Playbooks aus <code>ansible-main</code>:</p>
 nicht. Die Werte der Image-Garbage-Collection stehen im Inventar von
 <code>ansible-main</code> (<code>k3s_image_gc_high_threshold</code>, <code>k3s_image_gc_low_threshold</code>,
 <code>k3s_image_maximum_gc_age</code>), ohne sie gelten die kubelet-Standards.</p>
-<p>kubelet liest die Dateien nur beim Start. <code>deploy.yaml</code> startet k3s aber nur
-neu, wenn sich die <code>config.yaml</code> ändert. Nach einer Änderung allein an diesen
-Dateien deshalb k3s beziehungsweise k3s-agent auf jeder Node nacheinander neu
-starten. Die Container laufen dabei weiter.</p>
+<p>kubelet liest die Dateien nur beim Start. Die Collection startet k3s
+beziehungsweise k3s-agent bei jedem Lauf von <code>deploy.yaml</code> auf jeder Node des
+Laufs neu, auch ohne Änderung an der <code>config.yaml</code>. Eine Änderung an diesen
+Dateien greift deshalb mit dem nächsten Lauf; ohne Lauf genügt es, k3s
+beziehungsweise k3s-agent auf jeder Node nacheinander neu zu starten. Die
+Container laufen dabei weiter.</p>
+<p>Weil jeder Lauf neu startet, <code>deploy.yaml</code> immer mit <code>--limit</code> auf eine Node
+ausführen und vor der nächsten prüfen, dass etcd einen Leader hat und die Node
+<code>Ready</code> meldet. Ohne <code>--limit</code> laufen die Server parallel neu an.</p>
+
+<h4 class="relative group">Pause-Image
+    <div id="pause-image" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#pause-image" aria-label="Anker">#</a>
+    </span>
+    
+</h4>
+<p><code>server_config_yaml</code> und <code>agent_config_yaml</code> setzen <code>pause-image</code>
+vollqualifiziert auf <code>docker.io/rancher/mirrored-pause:&lt;version&gt;</code>. Der
+Standard von k3s ist der Kurzname <code>rancher/mirrored-pause:&lt;version&gt;</code>, den k3s
+wörtlich in <code>pinned_images</code> der containerd-Konfiguration schreibt. containerd
+2.x setzt das Label <code>io.cri-containerd.pinned</code> aber nur, wenn dieser Eintrag
+genau dem normalisierten Namen gleicht, mit dem es das Image ablegt. Ohne Pin
+behandelt kubelet das Pause-Image wie jedes andere ungenutzte Image, weil es
+Sandboxes nicht als Nutzung zählt; mit <code>imageMaximumGCAge</code> löschte es das Image
+deshalb sieben Tage nach dem k3s-Start alle paar Minuten. Neue Pods mussten es
+dann erst über Spegel oder Docker Hub neu ziehen.</p>
+<p>Prüfen auf einer Node:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">k3s crictl inspecti docker.io/rancher/mirrored-pause:3.10.2 <span class="p">|</span> grep pinned</span></span></code></pre></div></div>
+<p>Erwartet ist <code>&quot;pinned&quot;: true</code>. containerd trägt den Pin beim Start von k3s
+auch an einem schon vorhandenen Image nach.</p>
+<p>Upstream ist das als k3s-io/k3s#14923 gemeldet und mit k3s-io/k3s#14929
+behoben. Sobald eine k3s-Version mit dem Fix ausgerollt ist, kann
+<code>pause-image</code> wieder entfallen; bis dahin hält Renovate die Version aktuell.
+Das Upgrade durch den system-upgrade-controller lässt die Zeile in der
+<code>config.yaml</code> stehen. Entfernt ist sie erst, wenn sie aus dem Inventar
+gestrichen und per <code>deploy.yaml</code> Node für Node ausgerollt ist.</p>
 
 <h4 class="relative group">Anmeldung per OIDC
     <div id="anmeldung-per-oidc" class="anchor"></div>

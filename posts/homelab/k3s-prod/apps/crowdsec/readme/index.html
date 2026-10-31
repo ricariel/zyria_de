@@ -105,7 +105,7 @@
 	<meta property="og:type" content="article">
 		<meta property="article:section" content="posts">
 		<meta property="article:published_time" content="2026-10-23T23:00:00+02:00">
-		<meta property="article:modified_time" content="2026-10-23T22:44:06+02:00">
+		<meta property="article:modified_time" content="2026-10-30T11:19:14+01:00">
 		<meta property="article:tag" content="Kubernetes">
 		<meta property="article:tag" content="Crowdsec">
 		<meta property="article:tag" content="Security">
@@ -313,12 +313,12 @@ href="/site.webmanifest.min.e231d7c2a5ac29753d1781895bdd4b9a0e5900e75bcee133bb47
     "dateCreated": "2026-10-23T23:00:00\u002b02:00",
     "datePublished": "2026-10-23T23:00:00\u002b02:00",
     
-    "dateModified": "2026-10-23T22:44:06\u002b02:00",
+    "dateModified": "2026-10-30T11:19:14\u002b01:00",
     
     "keywords": ["kubernetes","crowdsec","security","traefik","postgresql"],
     
     "mainEntityOfPage": "https://zyria.de/posts/homelab/k3s-prod/apps/crowdsec/readme/",
-    "wordCount": "914"
+    "wordCount": "1696"
   }]
   </script>
 
@@ -938,6 +938,8 @@ href="/site.webmanifest.min.e231d7c2a5ac29753d1781895bdd4b9a0e5900e75bcee133bb47
   
 
   
+    
+  
 
   
     
@@ -963,7 +965,7 @@ href="/site.webmanifest.min.e231d7c2a5ac29753d1781895bdd4b9a0e5900e75bcee133bb47
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2026-10-23T23:00:00&#43;02:00">23 Oktober 2026</time><span class="px-2 text-primary-500">&middot;</span><span>914 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
+      <time datetime="2026-10-23T23:00:00&#43;02:00">23 Oktober 2026</time><span class="px-2 text-primary-500">&middot;</span><time datetime="2026-10-30T11:19:14&#43;01:00">Aktualisiert: 30 Oktober 2026</time><span class="px-2 text-primary-500">&middot;</span><span>1696 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
 
 
   
@@ -1183,7 +1185,9 @@ href="/site.webmanifest.min.e231d7c2a5ac29753d1781895bdd4b9a0e5900e75bcee133bb47
         <li><a href="#konfiguration">Konfiguration</a></li>
         <li><a href="#central-api-und-console">Central API und Console</a></li>
         <li><a href="#secrets">Secrets</a></li>
+        <li><a href="#appsec">AppSec</a></li>
         <li><a href="#betrieb">Betrieb</a></li>
+        <li><a href="#bouncer-testen">Bouncer testen</a></li>
         <li><a href="#installation">Installation</a></li>
       </ul>
     </li>
@@ -1207,7 +1211,9 @@ href="/site.webmanifest.min.e231d7c2a5ac29753d1781895bdd4b9a0e5900e75bcee133bb47
         <li><a href="#konfiguration">Konfiguration</a></li>
         <li><a href="#central-api-und-console">Central API und Console</a></li>
         <li><a href="#secrets">Secrets</a></li>
+        <li><a href="#appsec">AppSec</a></li>
         <li><a href="#betrieb">Betrieb</a></li>
+        <li><a href="#bouncer-testen">Bouncer testen</a></li>
         <li><a href="#installation">Installation</a></li>
       </ul>
     </li>
@@ -1359,28 +1365,42 @@ die Entscheidungen von einem Bouncer, hier einem Traefik-Plugin.</p>
 			<tr>
 					<td>1</td>
 					<td>LAPI und Agent, nur erkennen, kein Bouncer</td>
-					<td>diese App</td>
+					<td>live</td>
 			</tr>
 			<tr>
-					<td>2</td>
-					<td>Bouncer-Plugin in Traefik an einer einzelnen Route</td>
-					<td>offen</td>
+					<td>2a</td>
+					<td>Bouncer-Plugin in Traefik geladen, Middleware <code>crowdsec</code> angelegt</td>
+					<td>live</td>
+			</tr>
+			<tr>
+					<td>2b</td>
+					<td>Middleware <code>crowdsec</code> an einer einzelnen Route: <code>zyria.de/whoami</code> (<code>apps/whoami</code>), Probesperre bestanden</td>
+					<td>live</td>
 			</tr>
 			<tr>
 					<td>3</td>
 					<td>Bouncer am Entrypoint <code>websecure</code> und <code>ws-alternate</code></td>
-					<td>offen</td>
+					<td>live</td>
 			</tr>
 			<tr>
-					<td>4</td>
-					<td>AppSec mit Virtual Patching</td>
+					<td>4a</td>
+					<td>AppSec mit Virtual Patching, nur protokollierend (<code>zyria/appsec-observe</code>)</td>
+					<td>in Arbeit</td>
+			</tr>
+			<tr>
+					<td>4b</td>
+					<td>AppSec blockierend (<code>crowdsecurity/appsec-default</code>)</td>
 					<td>offen</td>
 			</tr>
 	</tbody>
 </table>
-<p>Solange kein Bouncer registriert ist, sperrt CrowdSec niemanden. Alarme und
-Entscheidungen entstehen trotzdem und lassen sich mit <code>cscli</code> prüfen
-(Abschnitt Betrieb).</p>
+<p>Gesperrt wird an allen Routen der Entrypoints <code>websecure</code> und
+<code>ws-alternate</code>, an denen die Middleware <code>crowdsec</code> hängt (README von
+<code>apps/traefik</code>). Nicht geschützt sind die Routen, die nur über
+<code>svc-websecure</code> erreichbar sind, also die IPv6-Zugriffe auf forgejo,
+headscale, plex, wireguard und unifi-controller: Dort sieht Traefik nur
+Adressen aus dem Pod-Bereich, und die gelten als vertraut. Alarme und
+Entscheidungen lassen sich mit <code>cscli</code> prüfen (Abschnitt Betrieb).</p>
 
 <h3 class="relative group">Quelle
     <div id="quelle" class="anchor"></div>
@@ -1445,7 +1465,12 @@ pinbaren Versionen, ein Neustart kann neuere Fassungen bringen.</p>
 					<td>registriert die Instanz einmalig bei der Central API und legt das Secret <code>crowdsec-capi-credentials</code> an</td>
 			</tr>
 			<tr>
-					<td><code>crowdsec-service</code>, <code>crowdsec-agent-service</code></td>
+					<td><code>crowdsec-appsec</code></td>
+					<td>Deployment, 2 Replikas</td>
+					<td>prüft jede Anfrage, die der Bouncer von Traefik weiterreicht, gegen WAF-Regeln</td>
+			</tr>
+			<tr>
+					<td><code>crowdsec-service</code>, <code>crowdsec-agent-service</code>, <code>crowdsec-appsec-service</code></td>
 					<td>ServiceMonitor</td>
 					<td>Metriken für <code>apps/prometheus</code></td>
 			</tr>
@@ -1471,7 +1496,11 @@ rollt ohne Unterbrechung aus.</p>
 <ul>
 <li>Datenbank, Aufräumregeln (<code>flush</code>) und automatische Registrierung der
 Agents stehen in <code>config.config.yaml.local</code> in <code>values.yaml</code>, wie im
-Beispiel der Doku.</li>
+Beispiel der Doku. Anders als dort hat <code>bouncers_autodelete</code> eine Woche
+statt einer Stunde: Jeder Traefik-Pod legt einen Eintrag
+<code>traefik@&lt;Pod-IP&gt;</code> an, die Frist räumt die alten ab. Der Schlüssel
+<code>BOUNCER_KEY_traefik</code> selbst wird nur beim Start der LAPI registriert und
+überstünde mit einer Stunde keinen längeren Traefik-Ausfall.</li>
 <li><code>allowed_ranges</code> der automatischen Registrierung umfasst nur das Pod-Netz
 des Clusters.</li>
 <li>Eigene Adressen stehen in der Whitelist <code>zyria-whitelist.yaml</code>
@@ -1479,6 +1508,16 @@ des Clusters.</li>
 <code>localnet</code> von <code>apps/traefik</code>. Private Bereiche deckt der Parser
 <code>crowdsecurity/whitelists</code> ab. Eine Adresse auf der Whitelist erzeugt
 keinen Alarm, keine Entscheidung und kein Signal an die Central API.</li>
+<li><code>config.simulation.yaml</code> schaltet einzelne Szenarien in den
+Simulationsmodus: Sie melden weiter Alarme, ihre Entscheidungen erreichen
+den Bouncer aber nicht (<code>cscli decisions list</code> zeigt sie als simuliert).
+Betroffen ist <code>LePresidente/http-generic-403-bf</code>. Es zählt POST-Anfragen
+mit 403, und jede Route hinter <code>localnet</code> antwortet Clients von außen mit
+403. Am 30.10.2026 sperrte es so die Home-Assistant-App eines Handys im
+Mobilfunk für 4 h an allen Routen. Abschalten per <code>DISABLE_SCENARIOS</code>
+geht nicht, das Szenario steht mit <code>crowdsecurity/http-generic-bf</code> und
+<code>LePresidente/http-generic-401-bf</code> in einer Datei, und die beiden sperren
+weiter.</li>
 </ul>
 
 <h3 class="relative group">Central API und Console
@@ -1550,6 +1589,18 @@ der Console einmal angenommen werden.</p>
 					<td>optional, Anmeldung an der Console</td>
 			</tr>
 			<tr>
+					<td></td>
+					<td></td>
+					<td><code>BOUNCER_KEY_traefik</code></td>
+					<td>registriert den Bouncer von Traefik bei der LAPI</td>
+			</tr>
+			<tr>
+					<td><code>crowdsec-bouncer-key</code></td>
+					<td><code>secretGenerator</code> in <code>apps/traefik/kustomization.yaml</code>, Namespace <code>kube-system</code></td>
+					<td><code>BOUNCER_KEY_traefik</code></td>
+					<td>derselbe Wert, Traefik liest ihn als Datei</td>
+			</tr>
+			<tr>
 					<td><code>crowdsec-capi-credentials</code></td>
 					<td>angelegt vom Job <code>crowdsec-capi-register-job</code></td>
 					<td><code>online_api_credentials.yaml</code></td>
@@ -1591,9 +1642,68 @@ und hängt ihn an <code>crowdsec-keys</code> an:</p>
 </span></span></span><span class="line"><span class="ln">6</span><span class="cl"><span class="s1">     | (.secretGenerator[].literals[] | select(test(&#34;^ENROLL_KEY=&#34;))) line_comment = &#34;gitleaks:allow&#34;&#39;</span> kustomization.yaml <span class="se">\
 </span></span></span><span class="line"><span class="ln">7</span><span class="cl">  <span class="o">&amp;&amp;</span> <span class="nb">unset</span> ENROLL <span class="se">\
 </span></span></span><span class="line"><span class="ln">8</span><span class="cl">  <span class="o">&amp;&amp;</span> git diff --stat kustomization.yaml</span></span></code></pre></div></div>
+<p>Den Schlüssel des Bouncers erzeugt dieser Befehl, ohne ihn auszugeben,
+und schreibt ihn in beide Secrets. Er überschreibt einen vorhandenen
+<code>BOUNCER_KEY_traefik</code>:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln"> 1</span><span class="cl"><span class="nb">cd</span> <span class="s2">&#34;</span><span class="k">$(</span>git rev-parse --show-toplevel<span class="k">)</span><span class="s2">/apps&#34;</span> <span class="se">\
+</span></span></span><span class="line"><span class="ln"> 2</span><span class="cl">  <span class="o">&amp;&amp;</span> <span class="nb">export</span> <span class="nv">BOUNCER_KEY</span><span class="o">=</span><span class="s2">&#34;</span><span class="k">$(</span>openssl rand -hex 32<span class="k">)</span><span class="s2">&#34;</span> <span class="se">\
+</span></span></span><span class="line"><span class="ln"> 3</span><span class="cl">  <span class="o">&amp;&amp;</span> yq -i <span class="s1">&#39;(.secretGenerator[] | select(.name == &#34;crowdsec-keys&#34;) | .literals) |= (map(select(test(&#34;^BOUNCER_KEY_traefik=&#34;) | not)) + [&#34;BOUNCER_KEY_traefik=&#34; + strenv(BOUNCER_KEY)])
+</span></span></span><span class="line"><span class="ln"> 4</span><span class="cl"><span class="s1">     | (.secretGenerator[].literals[] | select(test(&#34;^BOUNCER_KEY_traefik=&#34;))) line_comment = &#34;gitleaks:allow&#34;&#39;</span> crowdsec/kustomization.yaml <span class="se">\
+</span></span></span><span class="line"><span class="ln"> 5</span><span class="cl">  <span class="o">&amp;&amp;</span> yq -i <span class="s1">&#39;.secretGenerator = [
+</span></span></span><span class="line"><span class="ln"> 6</span><span class="cl"><span class="s1">       {&#34;name&#34;: &#34;crowdsec-bouncer-key&#34;, &#34;namespace&#34;: &#34;kube-system&#34;, &#34;literals&#34;: [
+</span></span></span><span class="line"><span class="ln"> 7</span><span class="cl"><span class="s1">         &#34;BOUNCER_KEY_traefik=&#34; + strenv(BOUNCER_KEY)]}]
+</span></span></span><span class="line"><span class="ln"> 8</span><span class="cl"><span class="s1">     | (.secretGenerator[].literals[]) line_comment = &#34;gitleaks:allow&#34;&#39;</span> traefik/kustomization.yaml <span class="se">\
+</span></span></span><span class="line"><span class="ln"> 9</span><span class="cl">  <span class="o">&amp;&amp;</span> <span class="nb">unset</span> BOUNCER_KEY <span class="se">\
+</span></span></span><span class="line"><span class="ln">10</span><span class="cl">  <span class="o">&amp;&amp;</span> git diff --stat crowdsec/kustomization.yaml traefik/kustomization.yaml</span></span></code></pre></div></div>
+<p><code>.secretGenerator = [...]</code> in <code>apps/traefik/kustomization.yaml</code> setzt
+die Liste dort neu. Kommt dort später ein weiteres Secret dazu, muss der
+Befehl angepasst werden.</p>
 <p><code>crowdsec-capi-credentials</code> gehört nicht zu Argo CD und bleibt beim
 Entfernen der App stehen. Wird es gelöscht, registriert der Job die
 Instanz beim nächsten Sync neu.</p>
+
+<h3 class="relative group">AppSec
+    <div id="appsec" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#appsec" aria-label="Anker">#</a>
+    </span>
+    
+</h3>
+<p>Der Bouncer schickt jede Anfrage an <code>crowdsec-appsec-service</code> (Port 7422),
+den Body bis 10 MB. AppSec prüft sie gegen die Regeln aus
+<code>crowdsecurity/appsec-virtual-patching</code> (Virtual Patches für bekannte
+Lücken, darunter <code>vpatch-CVE-2026-109618</code> für PHP2Shell) und
+<code>crowdsecurity/appsec-generic-rules</code>.</p>
+<p>Zurzeit läuft AppSec nur protokollierend: Die Konfiguration
+<code>zyria/appsec-observe</code> in <code>values.yaml</code> lädt dieselben Regeln wie
+<code>crowdsecurity/appsec-default</code>, antwortet bei jedem Treffer aber mit
+<code>allow</code> (<code>on_match</code>). Die Anfrage geht durch, CrowdSec legt einen Alarm mit
+Quelladresse und Regel an (Art <code>waf</code>), eine Sperre entsteht nicht.
+Out-of-band-Regeln taugen dafür nicht: Ihre Ereignisse erreichen kein
+Szenario und erscheinen nur als Zähler in <code>cscli metrics show appsec</code>.</p>
+<p>Scharf geschaltet wird, indem <code>appsec_configs</code> in <code>appsec.acquisitions</code>
+auf <code>crowdsecurity/appsec-default</code> umgestellt wird. Dann beantwortet
+AppSec einen Treffer mit 403. Eine Sperre der Adresse folgt daraus nicht:
+Im Test vom 30.10.2026 erreichten die AppSec-Ereignisse die Szenarien
+<code>appsec-vpatch</code> und <code>appsec-native</code> nicht (in <code>cscli metrics show acquisition</code> als &ldquo;unparsed&rdquo;). Ändert ein Hub-Update das, würden auch im
+Beobachtungsmodus wiederholte Treffer einer Adresse zu Sperren führen;
+nach Hub-Updates deshalb <code>cscli decisions list</code> im Blick behalten.</p>
+<p>Ohne Volume behält das Image den Hub-Stand von seinem Bau und aktualisiert
+ihn nie: Am 30.10.2026 brachte v1.8.1 <code>appsec-virtual-patching</code> 15.8 ohne
+die PHP2Shell-Regel mit. Deshalb liegen <code>/etc/crowdsec/hub</code> und
+<code>/var/lib/crowdsec/data</code> als <code>emptyDir</code> vor, und das Startskript holt bei
+jedem Start den aktuellen Hub (<code>cscli hub update</code>, <code>cscli hub upgrade</code>).
+Ist der Hub dabei nicht erreichbar, startet der Pod nicht; der Bouncer
+lässt dann ungeprüft durch. Agent und LAPI haben die Volumes nicht und
+laufen mit dem Hub-Stand des Images.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">kubectl -n crowdsec <span class="nb">exec</span> deploy/crowdsec-appsec -- cscli metrics show appsec
+</span></span><span class="line"><span class="ln">2</span><span class="cl">kubectl -n crowdsec <span class="nb">exec</span> deploy/crowdsec-lapi -- cscli alerts list</span></span></code></pre></div></div>
+<p>Treffer von AppSec stehen in <code>cscli alerts list</code> mit dem Regelnamen als
+Grund, etwa <code>crowdsecurity/vpatch-CVE-2026-109618</code>, und ohne Sperre. In
+<code>cscli metrics show appsec</code> zählen sie unter &ldquo;Blocked&rdquo;, obwohl die Anfrage
+durchgelassen wurde.</p>
 
 <h3 class="relative group">Betrieb
     <div id="betrieb" class="anchor"></div>
@@ -1617,6 +1727,29 @@ Agent-Pod (Abschnitt &ldquo;Acquisition Metrics&rdquo;, Spalten &ldquo;Lines par
 &ldquo;Lines unparsed&rdquo;). Das allgemeine Log von Traefik steht als Text im selben
 Stream und landet unter &ldquo;unparsed&rdquo;.</p>
 <div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">kubectl -n crowdsec <span class="nb">exec</span> ds/crowdsec-agent -- cscli metrics show acquisition parsers</span></span></code></pre></div></div>
+
+<h3 class="relative group">Bouncer testen
+    <div id="bouncer-testen" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#bouncer-testen" aria-label="Anker">#</a>
+    </span>
+    
+</h3>
+<p>Den Bouncer prüft eine kurze Sperre gegen eine Adresse außerhalb der
+eigenen Netze, die <code>zyria.de/whoami</code> abfragt, etwa ein cdp-Host per
+Ansible ad hoc. Eigene und private Netze stehen in <code>clientTrustedIPs</code> und
+werden nie gesperrt. Nach höchstens 60 s (<code>updateIntervalSeconds</code>)
+bekommt die gesperrte Adresse auf allen Routen von <code>websecure</code> 403, also
+nur eine Adresse nehmen, die sonst nichts in zyria braucht. Probelauf vom
+30.10.2026 mit cl07 noch an der einzelnen Route: Sperre und Aufhebung
+wirkten jeweils innerhalb von 75 s.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">kubectl -n crowdsec <span class="nb">exec</span> deploy/crowdsec-lapi -- cscli decisions add --ip 192.0.2.10 --duration 10m --reason <span class="s2">&#34;bouncer test&#34;</span>
+</span></span><span class="line"><span class="ln">2</span><span class="cl">kubectl -n crowdsec <span class="nb">exec</span> deploy/crowdsec-lapi -- cscli bouncers list
+</span></span><span class="line"><span class="ln">3</span><span class="cl">kubectl -n crowdsec <span class="nb">exec</span> deploy/crowdsec-lapi -- cscli decisions delete --ip 192.0.2.10</span></span></code></pre></div></div>
+<p><code>cscli bouncers list</code> zeigt unter &ldquo;Last API pull&rdquo;, ob Traefik die
+Sperrliste abholt. Das tut es erst, wenn eine Route die Middleware nutzt.</p>
 
 <h3 class="relative group">Installation
     <div id="installation" class="anchor"></div>

@@ -118,11 +118,19 @@ k3s_cluster:
         # der Datei liest der API-Server ohne Neustart neu ein.
         - "authentication-config=/etc/kubernetes/authentication-config.yaml"
       embedded-registry: true
+      # Vollqualifiziert, damit containerd das Sandbox-Image pinnt. k3s
+      # schreibt seinen Standard als Kurznamen nach pinned_images, containerd
+      # vergleicht aber mit dem normalisierten Namen (docker.io/...) und
+      # pinnt nie. Mit imageMaximumGCAge loeschte kubelet das Image dann alle
+      # paar Minuten. Upstream behoben in k3s-io/k3s#14929, noch in keinem
+      # Release; danach kann die Zeile weg. Siehe ansible/README.md.
+      # renovate: datasource=docker depName=docker.io/rancher/mirrored-pause
+      pause-image: "docker.io/rancher/mirrored-pause:3.10.2"
       node-name: "{{ inventory_hostname }}"
     # Die Agents hatten bisher keine config.yaml. Sie bekommen jetzt eine -
-    # bewusst nur mit dem resolv-conf-Schalter, damit sich an ihrer uebrigen
-    # Konfiguration nichts aendert. Der Deploy schreibt die Datei und startet
-    # k3s-agent neu.
+    # bewusst nur mit den kubelet-Dateien und dem Pause-Image, damit sich an
+    # ihrer uebrigen Konfiguration nichts aendert. Der Deploy schreibt die
+    # Datei und startet k3s-agent neu.
     agent_config_yaml: |
       # This is now an inner yaml file. Maintain the indentation.
       # YAML here will be placed as the content of /etc/rancher/k3s/config.yaml
@@ -130,6 +138,9 @@ k3s_cluster:
         - "resolv-conf=/etc/kubernetes/resolv.conf"
         # Siehe server_config_yaml.
         - "config=/etc/kubernetes/kubelet-shutdown.yaml"
+      # Siehe server_config_yaml.
+      # renovate: datasource=docker depName=docker.io/rancher/mirrored-pause
+      pause-image: "docker.io/rancher/mirrored-pause:3.10.2"
     registries_config_yaml: |
       mirrors:
         docker.io:
