@@ -3,6 +3,24 @@
 Alle nennenswerten Änderungen an diesem Repository.
 Automatisch aus [Conventional Commits](https://www.conventionalcommits.org) via [git-cliff](https://git-cliff.org).
 
+## [2026.44] - 2026-11-02 ([Vergleich zur Vorversion](https://git.zyria.de/pyrox/zyria_de/compare/2026.43...2026.44))
+
+### ⬆️ Dependencies
+
+- **deps**: Lock file maintenance
+- **deps**: Update dependency autoprefixer ( 10.6.1 → 10.6.2 )
+- **deps**: Update pre-commit hook igorshubovych/markdownlint-cli ( v0.49.1 → v0.50.0 )
+
+### 🧹 Miscellaneous
+
+- **hugo**: Module aktualisieren
+- **hugo**: Module aktualisieren
+- **hugo**: Module aktualisieren
+- **hugo**: Module aktualisieren
+- **hugo**: Module aktualisieren
+- **hugo**: Module aktualisieren
+- **design**: Sync from zyria-design
+
 ## [2026.43] - 2026-10-26 ([Vergleich zur Vorversion](https://git.zyria.de/pyrox/zyria_de/compare/2026.42...2026.43))
 
 ### ✨ Features
