@@ -9,7 +9,7 @@
     <managingEditor>fabrice@zyria.de (Fabrice Kirchner)</managingEditor>
     <webMaster>fabrice@zyria.de (Fabrice Kirchner)</webMaster>
     
-    <lastBuildDate>Sat, 31 Oct 2026 12:20:42 +0100</lastBuildDate><atom:link href="https://zyria.de/tags/argocd/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 02 Nov 2026 01:35:37 +0100</lastBuildDate><atom:link href="https://zyria.de/tags/argocd/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Operational Lifecycle Management: Orchestrierter Shutdown für Kubernetes</title>
@@ -18,6 +18,36 @@
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/posts/homelab/k3s-prod/ansible/shutdown-startup/</guid>
       <description>Ein technischer Leitfaden für das geordnete Herunterfahren und Wiederanfahren eines Kubernetes-Clusters (k3s/Longhorn/ArgoCD) zur Vermeidung von Datenkorruption.</description>
+      
+    </item>
+    
+    <item>
+      <title>Fluent Bit</title>
+      <link>https://zyria.de/posts/homelab/k3s-prod/apps/fluent-bit/readme/</link>
+      <pubDate>Mon, 02 Nov 2026 01:35:37 +0100</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/fluent-bit/readme/</guid>
+      <description>Fluent Bit läuft als DaemonSet auf jedem Knoten, liest Container-Logs und das Journal, reichert sie mit Kubernetes-Metadaten an und schickt sie an OpenObserve; eine einzelne Instanz liefert die Kubernetes-Ereignisse.</description>
+      
+    </item>
+    
+    <item>
+      <title>OpenObserve</title>
+      <link>https://zyria.de/posts/homelab/k3s-prod/apps/openobserve/readme/</link>
+      <pubDate>Mon, 02 Nov 2026 01:35:37 +0100</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/openobserve/readme/</guid>
+      <description>OpenObserve speichert die Container-Logs, die Fluent Bit einliefert, 90 Tage lang auf einem Longhorn-Volume, macht sie durchsuchbar und liefert die Traefik-Access-Logs für ein Replay in CrowdSec. Anmeldung per Single Sign-on über Dex und Authentik.</description>
+      
+    </item>
+    
+    <item>
+      <title>k3s-prod: Kubernetes Cluster Konfiguration und Anwendungsbereitstellung</title>
+      <link>https://zyria.de/posts/homelab/k3s-prod/</link>
+      <pubDate>Mon, 02 Nov 2026 00:04:33 +0100</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://zyria.de/posts/homelab/k3s-prod/</guid>
+      <description>Zentrale Verwaltung eines k3s-Clusters und seiner Anwendungen mit ArgoCD, Helm und Kustomize.</description>
       
     </item>
     
@@ -88,16 +118,6 @@
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/posts/homelab/k3s-prod/apps/matrix-admin/readme/</guid>
       <description>Synapse Admin bietet eine einfache grafische Oberfläche, um Benutzer und Räume auf einem Synapse Homeserver zu verwalten, ohne die Admin-API direkt verwenden zu müssen.</description>
-      
-    </item>
-    
-    <item>
-      <title>k3s-prod: Kubernetes Cluster Konfiguration und Anwendungsbereitstellung</title>
-      <link>https://zyria.de/posts/homelab/k3s-prod/</link>
-      <pubDate>Thu, 22 Oct 2026 10:08:24 +0200</pubDate>
-      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://zyria.de/posts/homelab/k3s-prod/</guid>
-      <description>Zentrale Verwaltung eines k3s-Clusters und seiner Anwendungen mit ArgoCD, Helm und Kustomize.</description>
       
     </item>
     
@@ -208,26 +228,6 @@
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/posts/homelab/k3s-prod/apps/multus/readme/</guid>
       <description>Multus ermöglicht es, Pods mehrere Netzwerkschnittstellen zuzuweisen, und ist die Grundlage für direkte Layer-2-Netzwerkanbindungen im Cluster.</description>
-      
-    </item>
-    
-    <item>
-      <title>Fluent Bit</title>
-      <link>https://zyria.de/posts/homelab/k3s-prod/apps/fluent-bit/readme/</link>
-      <pubDate>Sat, 10 Oct 2026 16:11:30 +0200</pubDate>
-      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/fluent-bit/readme/</guid>
-      <description>Fluent Bit laeuft als DaemonSet auf jedem Knoten, liest Container-Logs, Kubernetes-Ereignisse und das Journal des Hosts und schickt sie an OpenObserve.</description>
-      
-    </item>
-    
-    <item>
-      <title>OpenObserve</title>
-      <link>https://zyria.de/posts/homelab/k3s-prod/apps/openobserve/readme/</link>
-      <pubDate>Sat, 10 Oct 2026 16:11:30 +0200</pubDate>
-      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/openobserve/readme/</guid>
-      <description>OpenObserve nimmt Logs, Metriken und Traces des Clusters entgegen, speichert sie lokal auf Platte und haelt seine Metadaten in einer PostgreSQL-Datenbank.</description>
       
     </item>
     

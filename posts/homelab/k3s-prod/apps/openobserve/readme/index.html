@@ -31,7 +31,7 @@
     
   
   
-    <meta name="description" content="OpenObserve nimmt Logs, Metriken und Traces des Clusters entgegen, speichert sie lokal auf Platte und haelt seine Metadaten in einer PostgreSQL-Datenbank.">
+    <meta name="description" content="OpenObserve speichert die Container-Logs, die Fluent Bit einliefert, 90 Tage lang auf einem Longhorn-Volume, macht sie durchsuchbar und liefert die Traefik-Access-Logs für ein Replay in CrowdSec. Anmeldung per Single Sign-on über Dex und Authentik.">
   
   
     <meta name="keywords" content="kubernetes,k3s,gitops,argocd,helm,kustomize,homelab,produktion,">
@@ -100,12 +100,12 @@
   <meta property="og:url" content="https://zyria.de/posts/homelab/k3s-prod/apps/openobserve/readme/">
 	<meta property="og:site_name" content="Zyria">
 	<meta property="og:title" content="OpenObserve">
-	<meta property="og:description" content="Bereitstellung von OpenObserve als Log- und Metrikspeicher">
+	<meta property="og:description" content="Zentrale Ablage und Suche für die Logs des Clusters">
 	<meta property="og:locale" content="de_de">
 	<meta property="og:type" content="article">
 		<meta property="article:section" content="posts">
-		<meta property="article:published_time" content="2026-10-10T16:11:30+02:00">
-		<meta property="article:modified_time" content="2026-10-10T16:11:30+02:00">
+		<meta property="article:published_time" content="2026-11-02T01:35:37+01:00">
+		<meta property="article:modified_time" content="2026-11-02T01:35:37+01:00">
 		<meta property="article:tag" content="Kubernetes">
 		<meta property="article:tag" content="K3s">
 		<meta property="article:tag" content="Gitops">
@@ -116,7 +116,7 @@
   
 	<meta name="twitter:card" content="summary">
 	<meta name="twitter:title" content="OpenObserve">
-	<meta name="twitter:description" content="Bereitstellung von OpenObserve als Log- und Metrikspeicher">
+	<meta name="twitter:description" content="Zentrale Ablage und Suche für die Logs des Clusters">
 
   
   
@@ -301,7 +301,7 @@ href="/site.webmanifest.min.e231d7c2a5ac29753d1781895bdd4b9a0e5900e75bcee133bb47
     "articleSection": "Beiträge",
     "name": "OpenObserve",
     "headline": "OpenObserve",
-    "description": "Bereitstellung von OpenObserve als Log- und Metrikspeicher",
+    "description": "Zentrale Ablage und Suche für die Logs des Clusters",
     "inLanguage": "de-de",
     "url" : "https://zyria.de/posts/homelab/k3s-prod/apps/openobserve/readme/",
     "author" : {
@@ -311,15 +311,15 @@ href="/site.webmanifest.min.e231d7c2a5ac29753d1781895bdd4b9a0e5900e75bcee133bb47
       "sameAs": ["https://git.casa-due-pur.de/fabrice.kirchner", "https://git.zyria.de/pyrox", "https://github.com/ricariel", "https://www.linkedin.com/in/fabrice-kirchner-bb5408163/", "https://www.xing.com/profile/Fabrice_Kirchner", "https://kirchner.social/@fabrice", "https://codeberg.org/ricariel"]
     },
     "copyrightYear": "2026",
-    "dateCreated": "2026-10-10T16:11:30\u002b02:00",
-    "datePublished": "2026-10-10T16:11:30\u002b02:00",
+    "dateCreated": "2026-11-02T01:35:37\u002b01:00",
+    "datePublished": "2026-11-02T01:35:37\u002b01:00",
     
-    "dateModified": "2026-10-10T16:11:30\u002b02:00",
+    "dateModified": "2026-11-02T01:35:37\u002b01:00",
     
     "keywords": ["kubernetes","k3s","gitops","argocd","helm","kustomize","homelab","produktion"],
     
     "mainEntityOfPage": "https://zyria.de/posts/homelab/k3s-prod/apps/openobserve/readme/",
-    "wordCount": "316"
+    "wordCount": "1625"
   }]
   </script>
 
@@ -964,7 +964,7 @@ href="/site.webmanifest.min.e231d7c2a5ac29753d1781895bdd4b9a0e5900e75bcee133bb47
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2026-10-10T16:11:30&#43;02:00">10 Oktober 2026</time><span class="px-2 text-primary-500">&middot;</span><span>316 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
+      <time datetime="2026-11-02T01:35:37&#43;01:00">2 November 2026</time><span class="px-2 text-primary-500">&middot;</span><span>1625 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
 
 
   
@@ -1239,12 +1239,11 @@ href="/site.webmanifest.min.e231d7c2a5ac29753d1781895bdd4b9a0e5900e75bcee133bb47
         <li><a href="#quelle">Quelle</a></li>
         <li><a href="#dokumentation">Dokumentation</a></li>
         <li><a href="#funktion">Funktion</a></li>
-        <li><a href="#lokale-anpassungen">Lokale Anpassungen</a>
-          <ul>
-            <li><a href="#wichtige-einstellungen">Wichtige Einstellungen</a></li>
-            <li><a href="#betriebsmittel">Betriebsmittel</a></li>
-          </ul>
-        </li>
+        <li><a href="#speicher">Speicher</a></li>
+        <li><a href="#zugang">Zugang</a></li>
+        <li><a href="#lizenz-und-datenabfluss">Lizenz und Datenabfluss</a></li>
+        <li><a href="#secrets">Secrets</a></li>
+        <li><a href="#logs-für-ein-crowdsec-replay-exportieren">Logs für ein CrowdSec-Replay exportieren</a></li>
         <li><a href="#installation">Installation</a></li>
         <li><a href="#abhängigkeiten">Abhängigkeiten</a></li>
       </ul>
@@ -1267,12 +1266,11 @@ href="/site.webmanifest.min.e231d7c2a5ac29753d1781895bdd4b9a0e5900e75bcee133bb47
         <li><a href="#quelle">Quelle</a></li>
         <li><a href="#dokumentation">Dokumentation</a></li>
         <li><a href="#funktion">Funktion</a></li>
-        <li><a href="#lokale-anpassungen">Lokale Anpassungen</a>
-          <ul>
-            <li><a href="#wichtige-einstellungen">Wichtige Einstellungen</a></li>
-            <li><a href="#betriebsmittel">Betriebsmittel</a></li>
-          </ul>
-        </li>
+        <li><a href="#speicher">Speicher</a></li>
+        <li><a href="#zugang">Zugang</a></li>
+        <li><a href="#lizenz-und-datenabfluss">Lizenz und Datenabfluss</a></li>
+        <li><a href="#secrets">Secrets</a></li>
+        <li><a href="#logs-für-ein-crowdsec-replay-exportieren">Logs für ein CrowdSec-Replay exportieren</a></li>
         <li><a href="#installation">Installation</a></li>
         <li><a href="#abhängigkeiten">Abhängigkeiten</a></li>
       </ul>
@@ -1403,9 +1401,11 @@ href="/site.webmanifest.min.e231d7c2a5ac29753d1781895bdd4b9a0e5900e75bcee133bb47
     </span>
     
 </h2>
-<p><a href="https://openobserve.ai/"  target="_blank" rel="noreferrer">OpenObserve</a> ist eine Beobachtungsplattform für Logs,
-Metriken und Traces. Sie tritt an die Stelle eines Elastic- oder Loki-Stapels
-und kommt mit deutlich weniger Betriebsmitteln aus.</p>
+<p><a href="https://openobserve.ai/"  target="_blank" rel="noreferrer">OpenObserve</a> nimmt Logs per HTTP an, legt sie als
+komprimierte Parquet-Dateien ab und bietet Suche, Dashboards, Alarme und
+Verarbeitungs-Pipelines in einer Oberfläche. Hier dient es als zentrale
+Ablage der Container-Logs, damit sie den Austausch eines Pods überleben. Die
+Logs unter <code>/var/log/pods</code> verschwinden mit dem Pod.</p>
 
 <h3 class="relative group">Quelle
     <div id="quelle" class="anchor"></div>
@@ -1416,7 +1416,6 @@ und kommt mit deutlich weniger Betriebsmitteln aus.</p>
     </span>
     
 </h3>
-<p>Zwei Helm-Charts in einem Kustomize-Verbund:</p>
 <table>
 	<thead>
 			<tr>
@@ -1427,17 +1426,20 @@ und kommt mit deutlich weniger Betriebsmitteln aus.</p>
 	</thead>
 	<tbody>
 			<tr>
-					<td><code>openobserve</code></td>
+					<td><code>openobserve-standalone</code></td>
 					<td><a href="https://charts.openobserve.ai"  target="_blank" rel="noreferrer">charts.openobserve.ai</a></td>
-					<td>Die Anwendung selbst</td>
+					<td>Die Anwendung als ein StatefulSet</td>
 			</tr>
 			<tr>
-					<td><code>cloudnative-pg</code></td>
-					<td><a href="https://cloudnative-pg.github.io/charts"  target="_blank" rel="noreferrer">cloudnative-pg.github.io/charts</a></td>
-					<td>PostgreSQL-Operator für die Metadaten</td>
+					<td><code>dex</code></td>
+					<td><a href="https://charts.dexidp.io"  target="_blank" rel="noreferrer">charts.dexidp.io</a></td>
+					<td>OIDC-Vermittler zwischen OpenObserve und Authentik</td>
 			</tr>
 	</tbody>
 </table>
+<p>Das verteilte Chart <code>openobserve</code> (Router, Ingester, Querier, NATS,
+CloudNativePG) ist für diese Datenmenge überdimensioniert und wird nicht
+genutzt.</p>
 
 <h3 class="relative group">Dokumentation
     <div id="dokumentation" class="anchor"></div>
@@ -1450,8 +1452,8 @@ und kommt mit deutlich weniger Betriebsmitteln aus.</p>
 </h3>
 <ul>
 <li><a href="https://openobserve.ai/docs/"  target="_blank" rel="noreferrer">OpenObserve-Dokumentation</a></li>
-<li><a href="https://github.com/openobserve/openobserve"  target="_blank" rel="noreferrer">OpenObserve auf GitHub</a></li>
-<li><a href="https://cloudnative-pg.io/"  target="_blank" rel="noreferrer">CloudNativePG</a></li>
+<li><a href="https://openobserve.ai/docs/user-guide/identity-and-access-management/sso/"  target="_blank" rel="noreferrer">SSO mit Dex</a></li>
+<li><a href="https://dexidp.io/docs/"  target="_blank" rel="noreferrer">Dex</a></li>
 </ul>
 
 <h3 class="relative group">Funktion
@@ -1463,94 +1465,340 @@ und kommt mit deutlich weniger Betriebsmitteln aus.</p>
     </span>
     
 </h3>
-<p>Daten werden über die HTTP-Schnittstelle eingeliefert, üblicherweise von
-Fluent Bit aus dem Cluster. OpenObserve legt die Datenströme als komprimierte
-Parquet-Dateien ab und fragt sie über DataFusion ab.</p>
-<p>Die Trennung ist wesentlich: die <strong>Nutzdaten</strong> liegen auf Platte im Container,
-die <strong>Metadaten</strong> — Organisationen, Datenströme, Benutzer, gespeicherte
-Abfragen — in PostgreSQL.</p>
-
-<h3 class="relative group">Lokale Anpassungen
-    <div id="lokale-anpassungen" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#lokale-anpassungen" aria-label="Anker">#</a>
-    </span>
-    
-</h3>
-<p>Die Konfiguration erfolgt vollständig über <code>values.yaml</code>.</p>
-
-<h4 class="relative group">Wichtige Einstellungen
-    <div id="wichtige-einstellungen" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#wichtige-einstellungen" aria-label="Anker">#</a>
-    </span>
-    
-</h4>
+<ul>
+<li>Ein Pod mit allen Rollen, Metadaten in SQLite, Daten als Parquet, beides auf
+dem Longhorn-Volume <code>data-openobserve-0</code> (50Gi). Keine Ausfallsicherheit:
+Fällt der Pod aus, puffert Fluent Bit auf den Knoten, bis er zurück ist.</li>
+<li><a href="../fluent-bit/" >Fluent Bit</a> liefert über den internen Service
+<code>openobserve.openobserve.svc:5080</code> in die Organisation <code>default</code>, in diese
+Streams:</li>
+</ul>
 <table>
 	<thead>
 			<tr>
-					<th>Schlüssel</th>
-					<th>Wert</th>
-					<th>Bedeutung</th>
+					<th>Stream</th>
+					<th>Inhalt</th>
 			</tr>
 	</thead>
 	<tbody>
 			<tr>
-					<td><code>ZO_LOCAL_MODE</code></td>
-					<td><code>true</code></td>
-					<td>Einzelknotenbetrieb, alle Rollen in einem Pod</td>
+					<td><code>traefik</code></td>
+					<td>Access-Logs von Traefik (<code>kube-system/traefik-*</code>). Die JSON-Felder sind eigene Spalten, das Feld <code>log</code> enthält die Originalzeile</td>
 			</tr>
 			<tr>
-					<td><code>ZO_LOCAL_MODE_STORAGE</code></td>
-					<td><code>disk</code></td>
-					<td>Ablage auf Platte statt in einem Objektspeicher</td>
+					<td><code>kubernetes</code></td>
+					<td>Alle übrigen Container-Logs mit Namespace, Pod, Container, Labels und Knoten</td>
 			</tr>
 			<tr>
-					<td><code>ZO_META_STORE</code></td>
-					<td><code>postgres</code></td>
-					<td>Metadaten in PostgreSQL</td>
+					<td><code>journal</code></td>
+					<td>Journal der Knoten (k3s, Kubelet, containerd, Kernel)</td>
 			</tr>
 			<tr>
-					<td><code>ZO_HTTP_PORT</code></td>
-					<td><code>5080</code></td>
-					<td>Weboberfläche und Einlieferungsschnittstelle</td>
-			</tr>
-			<tr>
-					<td><code>ZO_GRPC_PORT</code></td>
-					<td><code>5081</code></td>
-					<td>Interne Knotenkommunikation</td>
+					<td><code>k8s_events</code></td>
+					<td>Kubernetes-Ereignisse aller Namespaces</td>
 			</tr>
 	</tbody>
 </table>
 <ul>
-<li><strong>Ingress</strong>: Traefik am <code>websecure</code>-EntryPoint. Die Middleware <code>localnet</code>
-beschränkt den Zugriff auf das lokale Netz — die Oberfläche ist aus dem
-Internet nicht erreichbar.</li>
-<li><strong>Zertifikat</strong>: <code>certs.yaml</code> fordert über cert-manager und den ClusterIssuer
-<code>letsencrypt-production</code> ein Zertifikat an.</li>
-<li><strong>Zugangsdaten</strong>: Der Erstbenutzer und die Anbindungen an SMTP und
-Objektspeicher stehen im <code>auth</code>-Block der <code>values.yaml</code>.</li>
+<li>Aufbewahrung: 90 Tage für alle Streams (<code>ZO_COMPACT_DATA_RETENTION_DAYS</code>).
+Einzelne Streams können in der Oberfläche kürzer gesetzt werden.</li>
 </ul>
 
-<h4 class="relative group">Betriebsmittel
-    <div id="betriebsmittel" class="anchor"></div>
+<h3 class="relative group">Speicher
+    <div id="speicher" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#betriebsmittel" aria-label="Anker">#</a>
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#speicher" aria-label="Anker">#</a>
     </span>
     
-</h4>
-<p><code>ZO_LOCAL_MODE=true</code> bedeutet <strong>einen</strong> Knoten ohne Ausfallsicherheit. Für
-diesen Cluster ist das die passende Größe; ein verteilter Betrieb erfordert
-einen Objektspeicher statt der lokalen Platte.</p>
-<p>Die Speicherbelegung folgt der Aufbewahrungsdauer der Datenströme. Diese wird
-in der Oberfläche je Datenstrom gesetzt, nicht in der <code>values.yaml</code> — ohne
-Begrenzung wächst die Ablage unbegrenzt.</p>
+</h3>
+<p>Traefik allein schreibt rund 30.000 Zeilen in der Stunde (Stand November
+2026, vor allem <code>git.zyria.de</code>). Das Volume hat 50Gi.</p>
+<p>Die Größe steht im <code>volumeClaimTemplate</code> des StatefulSets, und das lässt
+Kubernetes nicht ändern. Zum Vergrößern drei Schritte, die Daten bleiben
+erhalten:</p>
+<ol>
+<li>
+<p><code>persistence.size</code> in <code>values.yaml</code> erhöhen und mergen; Argo CD meldet den
+StatefulSet danach als nicht synchronisierbar.</p>
+</li>
+<li>
+<p>Den PVC vergrößern (Longhorn erweitert das Volume im Betrieb):</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">direnv <span class="nb">exec</span> ~/git/zyria kubectl -n openobserve patch pvc data-openobserve-0 -p <span class="s1">&#39;{&#34;spec&#34;:{&#34;resources&#34;:{&#34;requests&#34;:{&#34;storage&#34;:&#34;50Gi&#34;}}}}&#39;</span></span></span></code></pre></div></div>
+</li>
+<li>
+<p>Den StatefulSet ohne seine Pods löschen; Argo CD legt ihn mit dem neuen
+Template wieder an, der Pod läuft weiter:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">direnv <span class="nb">exec</span> ~/git/zyria kubectl -n openobserve delete statefulset openobserve --cascade<span class="o">=</span>orphan</span></span></code></pre></div></div>
+</li>
+</ol>
+<p><code>kustomization.yaml</code> ergänzt im Template die Felder, die der API-Server selbst
+einträgt (<code>apiVersion</code>, <code>kind</code>, <code>volumeMode</code>, <code>status</code>); ohne sie vergleicht
+Argo CD die Liste als Ganzes und meldet den StatefulSet dauerhaft als
+<code>OutOfSync</code>.</p>
+
+<h3 class="relative group">Zugang
+    <div id="zugang" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#zugang" aria-label="Anker">#</a>
+    </span>
+    
+</h3>
+<p><code>https://o2.zyria.de</code>, nur aus dem lokalen Netz (Middleware <code>localnet</code>).</p>
+<ul>
+<li>Single Sign-on: OpenObserve spricht OIDC mit Dex unter
+<code>https://o2.zyria.de/dex</code>, Dex mit Authentik (Application <code>openobserve</code> im
+Blueprint <code>apps/authentik/blueprints/60-apps-admin.yaml</code>, Client-ID in
+<code>AK_BLUEPRINT_CLIENT_ID_OPENOBSERVE</code>). Zugelassen ist nur die Gruppe
+<code>authentik Admins</code>; jeder SSO-Benutzer ist in OpenObserve Administrator der
+Organisation <code>default</code>.</li>
+<li>Das Root-Konto aus dem Secret <code>openobserve-keys</code> bleibt über das
+Anmeldeformular nutzbar, falls Authentik nicht erreichbar ist.</li>
+<li>Am Ingress stehen nur die Annotationen von Traefik. Die Chart-Defaults
+<code>kubernetes.io/tls-acme</code> und <code>nginx.ingress.kubernetes.io/enable-cors</code> sind
+in <code>values.yaml</code> auf <code>null</code> gesetzt: Mit <code>tls-acme</code> legte der Ingress-Shim
+von cert-manager ein eigenes Certificate gleichen Namens an und überschrieb
+das aus <code>certs.yaml</code>.</li>
+</ul>
+
+<h3 class="relative group">Lizenz und Datenabfluss
+    <div id="lizenz-und-datenabfluss" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#lizenz-und-datenabfluss" aria-label="Anker">#</a>
+    </span>
+    
+</h3>
+<p>Das Image ist die Enterprise-Ausgabe, nötig für SSO und den KI-Assistenten.
+Sie ist bis 50 GB Ingest pro Tag kostenlos
+(<a href="https://openobserve.ai/legal/enterprise-license/"  target="_blank" rel="noreferrer">Enterprise License</a>).
+Einen Lizenzschlüssel trägt man in der Oberfläche ein (Organisation <code>_meta</code>,
+Management, License); er liegt in der Metadatenbank auf dem Volume, nicht im
+Repository. Die Bedingungen der freien Stufe:</p>
+<ul>
+<li>Die Telemetrie an <code>e1.zinclabs.dev</code> muss eingeschaltet bleiben
+(<code>ZO_TELEMETRY</code>). Sie meldet Ingest-Mengen, Cluster-ID und Kontaktdaten,
+laut Lizenz keine Log-Inhalte.</li>
+<li>Nur für den internen Betrieb, nicht als Dienst für Dritte. Die Grenze gilt
+je juristischer Person.</li>
+<li>OpenObserve kann die freie Nutzung mit 30 Tagen Frist beenden und die
+Lizenz jederzeit ändern.</li>
+</ul>
+<p>Weitere Verbindungen nach außen:</p>
+<table>
+	<thead>
+			<tr>
+					<th>Ziel</th>
+					<th>Wozu</th>
+					<th>Was geht hinaus</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>Anthropic-API</td>
+					<td>KI-Assistent o2ai (<code>claude-sonnet-5-5</code>), Deployment <code>openobserve-o2ai</code></td>
+					<td>Fragen, Log-Ausschnitte und Clusterzustand, die der Assistent als Kontext nutzt</td>
+			</tr>
+			<tr>
+					<td><code>geoip.zinclabs.dev</code></td>
+					<td>GeoIP-Datenbanken City und ASN, alle 30 Tage</td>
+					<td>nur der Abruf</td>
+			</tr>
+			<tr>
+					<td><code>smtp.zyria.de</code></td>
+					<td>Mails zu Alarmen und Berichten, Absender <code>o2@zyria.de</code></td>
+					<td>eigener Mailstack</td>
+			</tr>
+	</tbody>
+</table>
+<p>o2ai darf im Cluster nur lesen: Pods samt Logs, Events, Workloads, Nodes,
+Namespaces, PVCs und Ingresses, keine Secrets und keine ConfigMaps. Der
+Chart-Default gäbe Schreib- und Löschrechte clusterweit samt Secrets; die
+Regeln stehen deshalb in <code>values.yaml</code>. Als Werkzeug nutzt o2ai <code>kubectl</code> mit
+<code>get</code>, <code>describe</code> und <code>logs</code> (CLI-Konfiguration des Charts, freigegeben über
+<code>O2_CLI_ALLOWED_BINARIES</code>). Sein Bash-Werkzeug läuft in einer
+bubblewrap-Sandbox, die <code>mount</code> braucht; das AppArmor-Profil von containerd
+verbietet das, deshalb läuft der o2ai-Container mit
+<code>appArmorProfile: Unconfined</code> (Patch in <code>kustomization.yaml</code>). Die anderen
+Container behalten das Profil.</p>
+<p>Die Ressourcen von o2ai (768Mi bis 2Gi; mit 1Gi wurde er beim ersten Chat
+beendet) setzt ein Patch in <code>kustomization.yaml</code>, weil das Chart sie aus
+<code>resources.o2ai</code> liest und damit mit dem Hauptcontainer vermischt. OpenObserve
+und o2ai teilen <code>O2_AI_INTERNAL_SECRET</code>; ohne ihn nimmt o2ai Aufrufe der
+Hintergrund-Ursachenanalyse ohne Anmeldung an. Der Standardwert des Charts für
+<code>ZO_MMDB_GEOLITE_CITYDB_SHA256_URL</code> zeigt auf die ASN-Prüfsumme und ist in
+<code>values.yaml</code> korrigiert.</p>
+
+<h3 class="relative group">Secrets
+    <div id="secrets" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#secrets" aria-label="Anker">#</a>
+    </span>
+    
+</h3>
+<table>
+	<thead>
+			<tr>
+					<th>Secret</th>
+					<th>Herkunft</th>
+					<th>Schlüssel</th>
+					<th>Zweck</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><code>openobserve-keys</code></td>
+					<td><code>secretGenerator</code> in <code>kustomization.yaml</code></td>
+					<td><code>ZO_ROOT_USER_EMAIL</code>, <code>ZO_ROOT_USER_PASSWORD</code></td>
+					<td>Root-Konto, legt OpenObserve beim ersten Start an</td>
+			</tr>
+			<tr>
+					<td></td>
+					<td></td>
+					<td><code>ZO_REPORT_SERVER_SECRET</code></td>
+					<td>Schlüssel des Report-Servers, siehe unten</td>
+			</tr>
+			<tr>
+					<td></td>
+					<td></td>
+					<td><code>O2_DEX_CLIENT_SECRET</code></td>
+					<td>Secret zwischen OpenObserve und Dex</td>
+			</tr>
+			<tr>
+					<td></td>
+					<td></td>
+					<td><code>AUTHENTIK_CLIENT_SECRET</code></td>
+					<td>Client-Secret des Authentik-Providers <code>OpenObserve</code>, von Dex genutzt</td>
+			</tr>
+			<tr>
+					<td></td>
+					<td></td>
+					<td><code>O2_AI_API_KEY</code></td>
+					<td>API-Key für Anthropic, von o2ai genutzt</td>
+			</tr>
+			<tr>
+					<td></td>
+					<td></td>
+					<td><code>ZO_SMTP_PASSWORD</code></td>
+					<td>Passwort des Mailkontos <code>o2@zyria.de</code></td>
+			</tr>
+			<tr>
+					<td></td>
+					<td></td>
+					<td><code>O2_AI_INTERNAL_SECRET</code></td>
+					<td>Zufallswert zwischen OpenObserve und o2ai</td>
+			</tr>
+			<tr>
+					<td><code>fluent-bit-openobserve</code></td>
+					<td><code>secretGenerator</code> in <code>apps/fluent-bit/kustomization.yaml</code></td>
+					<td><code>OPENOBSERVE_USER</code>, <code>OPENOBSERVE_PASSWORD</code></td>
+					<td>Einlieferung durch Fluent Bit, dasselbe Root-Konto</td>
+			</tr>
+	</tbody>
+</table>
+<p>Das Chart erzeugt <code>ZO_REPORT_SERVER_SECRET</code> ohne festen Wert bei jedem Rendern
+neu, weil <code>lookup</code> in Argo CD keinen Clusterzugriff hat, und würde den Pod mit
+jedem Sync neu starten. <code>kustomization.yaml</code> entfernt deshalb das Secret des
+Charts samt Checksum-Annotation und verweist auf <code>openobserve-keys</code>.</p>
+<p>Angelegt werden beide Secrets mit diesem Befehl aus dem Wurzelverzeichnis des
+Repositories. Er erzeugt die Werte, ohne sie auszugeben, und setzt
+<code>.secretGenerator</code> in beiden Dateien neu. Das Root-Passwort muss Groß- und
+Kleinbuchstaben, eine Ziffer und ein Sonderzeichen enthalten, sonst bricht
+OpenObserve den Start ab; daher der feste Rahmen <code>Ob-…7Z</code>. Es gilt nur beim
+ersten Start mit leerem Volume; danach wird es in der Oberfläche geändert:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln"> 1</span><span class="cl"><span class="nb">cd</span> <span class="s2">&#34;</span><span class="k">$(</span>git rev-parse --show-toplevel<span class="k">)</span><span class="s2">&#34;</span> <span class="se">\
+</span></span></span><span class="line"><span class="ln"> 2</span><span class="cl">  <span class="o">&amp;&amp;</span> <span class="nb">export</span> <span class="nv">ROOT_PW</span><span class="o">=</span><span class="s2">&#34;Ob-</span><span class="k">$(</span>openssl rand -hex 20<span class="k">)</span><span class="s2">7Z&#34;</span> <span class="nv">REPORT_SECRET</span><span class="o">=</span><span class="s2">&#34;</span><span class="k">$(</span>openssl rand -hex 32<span class="k">)</span><span class="s2">&#34;</span> <span class="se">\
+</span></span></span><span class="line"><span class="ln"> 3</span><span class="cl">       <span class="nv">DEX_SECRET</span><span class="o">=</span><span class="s2">&#34;</span><span class="k">$(</span>openssl rand -hex 32<span class="k">)</span><span class="s2">&#34;</span> <span class="nv">AK_SECRET</span><span class="o">=</span><span class="s2">&#34;</span><span class="k">$(</span>openssl rand -hex 48<span class="k">)</span><span class="s2">&#34;</span> <span class="se">\
+</span></span></span><span class="line"><span class="ln"> 4</span><span class="cl">       <span class="nv">INTERNAL_SECRET</span><span class="o">=</span><span class="s2">&#34;</span><span class="k">$(</span>openssl rand -hex 32<span class="k">)</span><span class="s2">&#34;</span> <span class="se">\
+</span></span></span><span class="line"><span class="ln"> 5</span><span class="cl">  <span class="o">&amp;&amp;</span> yq -i <span class="s1">&#39;.secretGenerator = [
+</span></span></span><span class="line"><span class="ln"> 6</span><span class="cl"><span class="s1">       {&#34;name&#34;: &#34;openobserve-keys&#34;, &#34;namespace&#34;: &#34;openobserve&#34;, &#34;literals&#34;: [
+</span></span></span><span class="line"><span class="ln"> 7</span><span class="cl"><span class="s1">         &#34;ZO_ROOT_USER_EMAIL=fabrice@zyria.de&#34;,
+</span></span></span><span class="line"><span class="ln"> 8</span><span class="cl"><span class="s1">         &#34;ZO_ROOT_USER_PASSWORD=&#34; + strenv(ROOT_PW),
+</span></span></span><span class="line"><span class="ln"> 9</span><span class="cl"><span class="s1">         &#34;ZO_REPORT_SERVER_SECRET=&#34; + strenv(REPORT_SECRET),
+</span></span></span><span class="line"><span class="ln">10</span><span class="cl"><span class="s1">         &#34;O2_DEX_CLIENT_SECRET=&#34; + strenv(DEX_SECRET),
+</span></span></span><span class="line"><span class="ln">11</span><span class="cl"><span class="s1">         &#34;AUTHENTIK_CLIENT_SECRET=&#34; + strenv(AK_SECRET),
+</span></span></span><span class="line"><span class="ln">12</span><span class="cl"><span class="s1">         &#34;O2_AI_INTERNAL_SECRET=&#34; + strenv(INTERNAL_SECRET)]}]
+</span></span></span><span class="line"><span class="ln">13</span><span class="cl"><span class="s1">     | (.secretGenerator[].literals[] | select(test(&#34;PASSWORD=|SECRET=&#34;))) line_comment = &#34;gitleaks:allow&#34;&#39;</span> apps/openobserve/kustomization.yaml <span class="se">\
+</span></span></span><span class="line"><span class="ln">14</span><span class="cl">  <span class="o">&amp;&amp;</span> yq -i <span class="s1">&#39;.secretGenerator = [
+</span></span></span><span class="line"><span class="ln">15</span><span class="cl"><span class="s1">       {&#34;name&#34;: &#34;fluent-bit-openobserve&#34;, &#34;namespace&#34;: &#34;fluent-bit&#34;, &#34;literals&#34;: [
+</span></span></span><span class="line"><span class="ln">16</span><span class="cl"><span class="s1">         &#34;OPENOBSERVE_USER=fabrice@zyria.de&#34;,
+</span></span></span><span class="line"><span class="ln">17</span><span class="cl"><span class="s1">         &#34;OPENOBSERVE_PASSWORD=&#34; + strenv(ROOT_PW)]}]
+</span></span></span><span class="line"><span class="ln">18</span><span class="cl"><span class="s1">     | (.secretGenerator[].literals[] | select(test(&#34;PASSWORD=&#34;))) line_comment = &#34;gitleaks:allow&#34;&#39;</span> apps/fluent-bit/kustomization.yaml <span class="se">\
+</span></span></span><span class="line"><span class="ln">19</span><span class="cl">  <span class="o">&amp;&amp;</span> <span class="nb">unset</span> ROOT_PW REPORT_SECRET DEX_SECRET AK_SECRET INTERNAL_SECRET <span class="se">\
+</span></span></span><span class="line"><span class="ln">20</span><span class="cl">  <span class="o">&amp;&amp;</span> git diff --stat</span></span></code></pre></div></div>
+<p>API-Key und SMTP-Passwort kommen nicht aus dem Zufallsgenerator. Dieser
+Befehl fragt beide verdeckt ab und hängt sie an <code>openobserve-keys</code> an; ein
+vorhandener Eintrag desselben Namens wird ersetzt. Er braucht ein
+interaktives Terminal:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl"><span class="nb">cd</span> <span class="s2">&#34;</span><span class="k">$(</span>git rev-parse --show-toplevel<span class="k">)</span><span class="s2">&#34;</span> <span class="se">\
+</span></span></span><span class="line"><span class="ln">2</span><span class="cl">  <span class="o">&amp;&amp;</span> <span class="nb">printf</span> <span class="s1">&#39;Anthropic API key: &#39;</span> <span class="o">&amp;&amp;</span> <span class="nb">read</span> -rs O2_AI_KEY <span class="o">&amp;&amp;</span> <span class="nb">echo</span> <span class="se">\
+</span></span></span><span class="line"><span class="ln">3</span><span class="cl">  <span class="o">&amp;&amp;</span> <span class="nb">printf</span> <span class="s1">&#39;SMTP password o2@zyria.de: &#39;</span> <span class="o">&amp;&amp;</span> <span class="nb">read</span> -rs SMTP_PW <span class="o">&amp;&amp;</span> <span class="nb">echo</span> <span class="se">\
+</span></span></span><span class="line"><span class="ln">4</span><span class="cl">  <span class="o">&amp;&amp;</span> <span class="nb">test</span> -n <span class="s2">&#34;</span><span class="si">${</span><span class="nv">O2_AI_KEY</span><span class="si">}</span><span class="s2">&#34;</span> <span class="o">&amp;&amp;</span> <span class="nb">test</span> -n <span class="s2">&#34;</span><span class="si">${</span><span class="nv">SMTP_PW</span><span class="si">}</span><span class="s2">&#34;</span> <span class="se">\
+</span></span></span><span class="line"><span class="ln">5</span><span class="cl">  <span class="o">&amp;&amp;</span> <span class="nb">export</span> O2_AI_KEY SMTP_PW <span class="se">\
+</span></span></span><span class="line"><span class="ln">6</span><span class="cl">  <span class="o">&amp;&amp;</span> yq -i <span class="s1">&#39;(.secretGenerator[] | select(.name == &#34;openobserve-keys&#34;) | .literals) |= (map(select(test(&#34;^(O2_AI_API_KEY|ZO_SMTP_PASSWORD)=&#34;) | not)) + [&#34;O2_AI_API_KEY=&#34; + strenv(O2_AI_KEY), &#34;ZO_SMTP_PASSWORD=&#34; + strenv(SMTP_PW)])
+</span></span></span><span class="line"><span class="ln">7</span><span class="cl"><span class="s1">     | (.secretGenerator[].literals[] | select(test(&#34;PASSWORD=|SECRET=|API_KEY=&#34;))) line_comment = &#34;gitleaks:allow&#34;&#39;</span> apps/openobserve/kustomization.yaml <span class="se">\
+</span></span></span><span class="line"><span class="ln">8</span><span class="cl">  <span class="o">&amp;&amp;</span> <span class="nb">unset</span> O2_AI_KEY SMTP_PW <span class="se">\
+</span></span></span><span class="line"><span class="ln">9</span><span class="cl">  <span class="o">&amp;&amp;</span> git diff --stat</span></span></code></pre></div></div>
+<p>Den Provider in Authentik legt der Blueprint mit einem eigenen Zufallssecret
+an. Nach dem ersten Sync von Authentik schreibt dieser Befehl den Wert aus
+<code>openobserve-keys</code> per Pipe hinein, ohne ihn auszugeben, und zeigt zum
+Vergleich Länge und SHA-256-Präfix beider Seiten:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">direnv <span class="nb">exec</span> ~/git/zyria kubectl -n openobserve get secret openobserve-keys -o <span class="nv">jsonpath</span><span class="o">=</span><span class="s1">&#39;{.data.AUTHENTIK_CLIENT_SECRET}&#39;</span> <span class="p">|</span> base64 -d <span class="se">\
+</span></span></span><span class="line"><span class="ln">2</span><span class="cl">  <span class="p">|</span> direnv <span class="nb">exec</span> ~/git/zyria kubectl -n authentik <span class="nb">exec</span> -i deploy/authentik-worker -- ak shell -c <span class="s1">&#39;import sys, hashlib; from authentik.providers.oauth2.models import OAuth2Provider; p = OAuth2Provider.objects.get(name=&#34;OpenObserve&#34;); p.client_secret = sys.stdin.read().strip(); p.save(); print(len(p.client_secret), hashlib.sha256(p.client_secret.encode()).hexdigest()[:12])&#39;</span></span></span></code></pre></div></div>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">direnv <span class="nb">exec</span> ~/git/zyria kubectl -n openobserve <span class="nb">exec</span> deploy/dex -- sh -c <span class="s1">&#39;printf %s &#34;$AUTHENTIK_CLIENT_SECRET&#34; | wc -c; printf %s &#34;$AUTHENTIK_CLIENT_SECRET&#34; | sha256sum | cut -c1-12&#39;</span></span></span></code></pre></div></div>
+
+<h3 class="relative group">Logs für ein CrowdSec-Replay exportieren
+    <div id="logs-für-ein-crowdsec-replay-exportieren" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#logs-f%c3%bcr-ein-crowdsec-replay-exportieren" aria-label="Anker">#</a>
+    </span>
+    
+</h3>
+<p>Die Abfrage liefert die Originalzeilen aus dem Feld <code>log</code>, seitenweise zu
+10.000 Zeilen. Zeitraum und optional eine Client-IP oben anpassen; ohne IP
+kommen alle Zeilen. Zuerst die Verbindung in einem eigenen Terminal:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">direnv <span class="nb">exec</span> ~/git/zyria kubectl -n openobserve port-forward svc/openobserve 5080:5080</span></span></code></pre></div></div>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln"> 1</span><span class="cl"><span class="nv">O2_USER</span><span class="o">=</span><span class="k">$(</span>direnv <span class="nb">exec</span> ~/git/zyria kubectl -n openobserve get secret openobserve-keys -o <span class="nv">jsonpath</span><span class="o">=</span><span class="s1">&#39;{.data.ZO_ROOT_USER_EMAIL}&#39;</span> <span class="p">|</span> base64 -d<span class="k">)</span>
+</span></span><span class="line"><span class="ln"> 2</span><span class="cl"><span class="nv">O2_PASS</span><span class="o">=</span><span class="k">$(</span>direnv <span class="nb">exec</span> ~/git/zyria kubectl -n openobserve get secret openobserve-keys -o <span class="nv">jsonpath</span><span class="o">=</span><span class="s1">&#39;{.data.ZO_ROOT_USER_PASSWORD}&#39;</span> <span class="p">|</span> base64 -d<span class="k">)</span>
+</span></span><span class="line"><span class="ln"> 3</span><span class="cl"><span class="nv">START</span><span class="o">=</span><span class="k">$((</span> <span class="k">$(</span>date -j -f <span class="s1">&#39;%Y-%m-%d %H:%M&#39;</span> <span class="s1">&#39;2026-11-01 00:00&#39;</span> +%s<span class="k">)</span> <span class="o">*</span> <span class="m">1000000</span> <span class="k">))</span>
+</span></span><span class="line"><span class="ln"> 4</span><span class="cl"><span class="nv">END</span><span class="o">=</span><span class="k">$((</span> <span class="k">$(</span>date -j -f <span class="s1">&#39;%Y-%m-%d %H:%M&#39;</span> <span class="s1">&#39;2026-11-02 00:00&#39;</span> +%s<span class="k">)</span> <span class="o">*</span> <span class="m">1000000</span> <span class="k">))</span>
+</span></span><span class="line"><span class="ln"> 5</span><span class="cl"><span class="nv">IP</span><span class="o">=</span><span class="s1">&#39;&#39;</span>
+</span></span><span class="line"><span class="ln"> 6</span><span class="cl"><span class="nv">WHERE</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">;</span> <span class="o">[</span> -n <span class="s2">&#34;</span><span class="si">${</span><span class="nv">IP</span><span class="si">}</span><span class="s2">&#34;</span> <span class="o">]</span> <span class="o">&amp;&amp;</span> <span class="nv">WHERE</span><span class="o">=</span><span class="s2">&#34;WHERE clienthost = &#39;</span><span class="si">${</span><span class="nv">IP</span><span class="si">}</span><span class="s2">&#39;&#34;</span>
+</span></span><span class="line"><span class="ln"> 7</span><span class="cl"><span class="nv">FROM</span><span class="o">=</span><span class="m">0</span>
+</span></span><span class="line"><span class="ln"> 8</span><span class="cl">: &gt; traefik.log
+</span></span><span class="line"><span class="ln"> 9</span><span class="cl"><span class="k">while</span> :<span class="p">;</span> <span class="k">do</span>
+</span></span><span class="line"><span class="ln">10</span><span class="cl">  <span class="nv">N</span><span class="o">=</span><span class="k">$(</span>jq -n --arg sql <span class="s2">&#34;SELECT _timestamp, log FROM \&#34;traefik\&#34; </span><span class="si">${</span><span class="nv">WHERE</span><span class="si">}</span><span class="s2"> ORDER BY _timestamp&#34;</span> <span class="se">\
+</span></span></span><span class="line"><span class="ln">11</span><span class="cl">        --argjson start <span class="s2">&#34;</span><span class="si">${</span><span class="nv">START</span><span class="si">}</span><span class="s2">&#34;</span> --argjson end <span class="s2">&#34;</span><span class="si">${</span><span class="nv">END</span><span class="si">}</span><span class="s2">&#34;</span> --argjson from <span class="s2">&#34;</span><span class="si">${</span><span class="nv">FROM</span><span class="si">}</span><span class="s2">&#34;</span> <span class="se">\
+</span></span></span><span class="line"><span class="ln">12</span><span class="cl">        <span class="s1">&#39;{query: {sql: $sql, start_time: $start, end_time: $end, from: $from, size: 10000}}&#39;</span> <span class="se">\
+</span></span></span><span class="line"><span class="ln">13</span><span class="cl">    <span class="p">|</span> curl -s -u <span class="s2">&#34;</span><span class="si">${</span><span class="nv">O2_USER</span><span class="si">}</span><span class="s2">:</span><span class="si">${</span><span class="nv">O2_PASS</span><span class="si">}</span><span class="s2">&#34;</span> -H <span class="s1">&#39;Content-Type: application/json&#39;</span> -d @- http://localhost:5080/api/default/_search <span class="se">\
+</span></span></span><span class="line"><span class="ln">14</span><span class="cl">    <span class="p">|</span> jq -r <span class="s1">&#39;.hits[].log&#39;</span> <span class="p">|</span> tee -a traefik.log <span class="p">|</span> wc -l<span class="k">)</span>
+</span></span><span class="line"><span class="ln">15</span><span class="cl">  <span class="o">[</span> <span class="s2">&#34;</span><span class="si">${</span><span class="nv">N</span><span class="si">}</span><span class="s2">&#34;</span> -lt <span class="m">10000</span> <span class="o">]</span> <span class="o">&amp;&amp;</span> <span class="nb">break</span>
+</span></span><span class="line"><span class="ln">16</span><span class="cl">  <span class="nv">FROM</span><span class="o">=</span><span class="k">$((</span> FROM <span class="o">+</span> <span class="m">10000</span> <span class="k">))</span>
+</span></span><span class="line"><span class="ln">17</span><span class="cl"><span class="k">done</span>
+</span></span><span class="line"><span class="ln">18</span><span class="cl"><span class="nb">unset</span> O2_PASS
+</span></span><span class="line"><span class="ln">19</span><span class="cl">wc -l traefik.log</span></span></code></pre></div></div>
+<p>OpenObserve schreibt Feldnamen klein (<code>ClientHost</code> wird <code>clienthost</code>).</p>
+<p>Ausgewertet wird lokal in Podman mit derselben CrowdSec-Version wie im Cluster
+(<code>kubectl -n crowdsec get ds crowdsec-agent -o jsonpath='{..image}'</code>), nicht im
+Agent-Pod, dessen Konfiguration Alarme an die produktive LAPI schickt. Ein
+Replay am 23.10.2026 zeigte: Eine ganze Datei auf einmal verliert Ereignisse,
+je Client-IP einzeln abgespielt stimmt das Ergebnis. Deshalb pro IP exportieren
+oder die Datei vorher nach <code>ClientHost</code> aufteilen:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">podman run --rm -v <span class="s2">&#34;</span><span class="nv">$PWD</span><span class="s2">/traefik.log:/tmp/traefik.log:ro&#34;</span> <span class="se">\
+</span></span></span><span class="line"><span class="ln">2</span><span class="cl">  -e <span class="nv">DSN</span><span class="o">=</span>file:///tmp/traefik.log -e <span class="nv">TYPE</span><span class="o">=</span>traefik <span class="se">\
+</span></span></span><span class="line"><span class="ln">3</span><span class="cl">  -e <span class="nv">COLLECTIONS</span><span class="o">=</span><span class="s1">&#39;crowdsecurity/traefik crowdsecurity/http-cve&#39;</span> <span class="se">\
+</span></span></span><span class="line"><span class="ln">4</span><span class="cl">  -e <span class="nv">CROWDSEC_BYPASS_DB_VOLUME_CHECK</span><span class="o">=</span><span class="nb">true</span> -e <span class="nv">DISABLE_ONLINE_API</span><span class="o">=</span><span class="nb">true</span> <span class="se">\
+</span></span></span><span class="line"><span class="ln">5</span><span class="cl">  docker.io/crowdsecurity/crowdsec:v1.8.2 2&gt;<span class="p">&amp;</span><span class="m">1</span> <span class="p">|</span> grep -E <span class="s1">&#39;performed|Acquisition is finished&#39;</span></span></span></code></pre></div></div>
+<p>Jede Zeile <code>Ip … performed '…'</code> ist ein Alarm, Sperren entstehen dabei nicht.
+Getestet am 01.11.2026 mit 1.808 Zeilen eines Traefik-Pods.</p>
 
 <h3 class="relative group">Installation
     <div id="installation" class="anchor"></div>
@@ -1561,10 +1809,9 @@ Begrenzung wächst die Ablage unbegrenzt.</p>
     </span>
     
 </h3>
-<p>Bereitgestellt über ArgoCD mit Kustomize und Helm. Von Hand:</p>
-<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">kubectl kustomize --enable-helm apps/openobserve <span class="p">|</span> kubectl apply -n openobserve -f -</span></span></code></pre></div></div>
-<p>Der CloudNativePG-Operator muss vorhanden sein, bevor die Datenbank angelegt
-werden kann — im Kustomize-Verbund wird er mitinstalliert.</p>
+<p>Bereitgestellt über Argo CD mit Kustomize und Helm (<code>manifests.yaml</code>).
+Prüfen ohne Anwenden:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">kubectl kustomize --enable-helm apps/openobserve</span></span></code></pre></div></div>
 
 <h3 class="relative group">Abhängigkeiten
     <div id="abhängigkeiten" class="anchor"></div>
@@ -1576,10 +1823,11 @@ werden kann — im Kustomize-Verbund wird er mitinstalliert.</p>
     
 </h3>
 <ul>
-<li><strong>Traefik</strong> als Ingress-Controller, samt der Middleware <code>localnet</code></li>
-<li><strong>cert-manager</strong> für das TLS-Zertifikat</li>
-<li><strong>CloudNativePG</strong> für die Metadatenbank</li>
-<li><strong>Fluent Bit</strong> als Lieferant der Cluster-Logs</li>
+<li>Traefik mit der Middleware <code>localnet</code></li>
+<li>cert-manager für <code>openobserve-server-tls</code> (<code>letsencrypt-production</code>)</li>
+<li>Authentik für die Anmeldung</li>
+<li>Longhorn für das Datenvolume</li>
+<li>Fluent Bit als Lieferant</li>
 </ul>
 
           
@@ -1813,14 +2061,14 @@ werden kann — im Kustomize-Verbund wird er mitinstalliert.</p>
           
             <a
               class="flex text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
-              href="/posts/homelab/k3s-prod/apps/rustdesk/readme/">
+              href="/posts/homelab/k3s-prod/apps/ansible-semaphore/readme/">
               <span class="leading-6">
-                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;RustDesk-Server - Fernwartung im Tailnet
+                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;Ansible Semaphore
               </span>
             </a>
             
               <span class="ms-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
-                <time datetime="2026-10-10T16:11:30&#43;02:00">10 Oktober 2026</time>
+                <time datetime="2026-10-24T03:39:20&#43;02:00">24 Oktober 2026</time>
               </span>
             
           
@@ -1836,7 +2084,7 @@ werden kann — im Kustomize-Verbund wird er mitinstalliert.</p>
             </a>
             
               <span class="me-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
-                <time datetime="2026-10-10T16:11:30&#43;02:00">10 Oktober 2026</time>
+                <time datetime="2026-11-02T01:35:37&#43;01:00">2 November 2026</time>
               </span>
             
           
