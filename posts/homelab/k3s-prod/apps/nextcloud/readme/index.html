@@ -105,7 +105,7 @@
 	<meta property="og:type" content="article">
 		<meta property="article:section" content="posts">
 		<meta property="article:published_time" content="2025-10-20T14:23:44+02:00">
-		<meta property="article:modified_time" content="2026-10-25T22:55:35+01:00">
+		<meta property="article:modified_time" content="2026-11-03T02:04:09+01:00">
 		<meta property="article:tag" content="Kubernetes">
 		<meta property="article:tag" content="Nextcloud">
 		<meta property="article:tag" content="Dateien">
@@ -311,12 +311,12 @@ href="/site.webmanifest.min.e231d7c2a5ac29753d1781895bdd4b9a0e5900e75bcee133bb47
     "dateCreated": "2025-10-20T14:23:44\u002b02:00",
     "datePublished": "2025-10-20T14:23:44\u002b02:00",
     
-    "dateModified": "2026-10-25T22:55:35\u002b01:00",
+    "dateModified": "2026-11-03T02:04:09\u002b01:00",
     
     "keywords": ["kubernetes","nextcloud","dateien"],
     
     "mainEntityOfPage": "https://zyria.de/posts/homelab/k3s-prod/apps/nextcloud/readme/",
-    "wordCount": "2825"
+    "wordCount": "5145"
   }]
   </script>
 
@@ -963,7 +963,7 @@ href="/site.webmanifest.min.e231d7c2a5ac29753d1781895bdd4b9a0e5900e75bcee133bb47
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2025-10-20T14:23:44&#43;02:00">20 Oktober 2025</time><span class="px-2 text-primary-500">&middot;</span><time datetime="2026-10-25T22:55:35&#43;01:00">Aktualisiert: 25 Oktober 2026</time><span class="px-2 text-primary-500">&middot;</span><span>2825 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
+      <time datetime="2025-10-20T14:23:44&#43;02:00">20 Oktober 2025</time><span class="px-2 text-primary-500">&middot;</span><time datetime="2026-11-03T02:04:09&#43;01:00">Aktualisiert: 3 November 2026</time><span class="px-2 text-primary-500">&middot;</span><span>5145 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
 
 
   
@@ -1156,6 +1156,9 @@ href="/site.webmanifest.min.e231d7c2a5ac29753d1781895bdd4b9a0e5900e75bcee133bb47
             <li><a href="#trusted-proxies">Trusted Proxies</a></li>
             <li><a href="#collabora-online-nextcloud-office">Collabora Online (Nextcloud Office)</a></li>
             <li><a href="#erscheinungsbild">Erscheinungsbild</a></li>
+            <li><a href="#icloud-fotos-icloudpd">iCloud-Fotos (icloudpd)</a></li>
+            <li><a href="#icloud-kontakte-und--kalender-vdirsyncer">iCloud-Kontakte und -Kalender (vdirsyncer)</a></li>
+            <li><a href="#icloud-drive-und-notizen-icloud-backup">iCloud Drive und Notizen (icloud-backup)</a></li>
           </ul>
         </li>
         <li><a href="#installation">Installation</a></li>
@@ -1193,6 +1196,9 @@ href="/site.webmanifest.min.e231d7c2a5ac29753d1781895bdd4b9a0e5900e75bcee133bb47
             <li><a href="#trusted-proxies">Trusted Proxies</a></li>
             <li><a href="#collabora-online-nextcloud-office">Collabora Online (Nextcloud Office)</a></li>
             <li><a href="#erscheinungsbild">Erscheinungsbild</a></li>
+            <li><a href="#icloud-fotos-icloudpd">iCloud-Fotos (icloudpd)</a></li>
+            <li><a href="#icloud-kontakte-und--kalender-vdirsyncer">iCloud-Kontakte und -Kalender (vdirsyncer)</a></li>
+            <li><a href="#icloud-drive-und-notizen-icloud-backup">iCloud Drive und Notizen (icloud-backup)</a></li>
           </ul>
         </li>
         <li><a href="#installation">Installation</a></li>
@@ -1353,6 +1359,9 @@ href="/site.webmanifest.min.e231d7c2a5ac29753d1781895bdd4b9a0e5900e75bcee133bb47
 <li><strong>Redis:</strong> Ein In-Memory-Datenspeicher, der für Caching und Dateisperren verwendet wird, um die Leistung zu verbessern.</li>
 <li><strong>ClamAV:</strong> Eine Antiviren-Engine, die hochgeladene Dateien auf Malware scannt.</li>
 <li><strong>PhpMyAdmin:</strong> Ein webbasiertes Verwaltungstool für die MariaDB-Datenbank, verfügbar unter <code>/php</code>.</li>
+<li><strong>icloudpd:</strong> spiegelt iCloud-Fotos in die Nextcloud, siehe „iCloud-Fotos (icloudpd)“.</li>
+<li><strong>vdirsyncer:</strong> kopiert iCloud-Kontakte und -Kalender in die Nextcloud, siehe „iCloud-Kontakte und -Kalender (vdirsyncer)“.</li>
+<li><strong>icloud-backup:</strong> kopiert iCloud Drive und iCloud-Notizen in die Nextcloud, siehe „iCloud Drive und Notizen (icloud-backup)“.</li>
 </ul>
 
 <h3 class="relative group">Dokumentation
@@ -1789,7 +1798,8 @@ Traefik-Pod-IP als Client protokollieren.</p>
 und Nextcloud eine beliebige Client-Adresse vortäuschen. Das verhindert die
 NetworkPolicy in <a href="networkpolicy.yaml" >networkpolicy.yaml</a>: Den Web-Port 443
 erreicht nur Traefik, SSH (2222) bleibt offen, alle übrigen Ports des Pods
-sind von außerhalb gesperrt. Ein neuer Dienst, der Nextcloud clusterintern
+sind von außerhalb gesperrt. Einzige Ausnahme ist icloud-backup auf Port 80,
+siehe „iCloud Drive und Notizen (icloud-backup)“. Ein neuer Dienst, der Nextcloud clusterintern
 direkt ansprechen soll, braucht dort eine eigene Regel; ohne sie läuft er
 in einen Timeout.</p>
 <p>Zwei offene Punkte, bewusst nicht auf Verdacht geändert:</p>
@@ -1829,18 +1839,24 @@ eingebunden als zweiter <code>helmCharts</code>-Eintrag in <code>kustomization.y
 Werte stehen in <code>values-collabora.yaml</code>.</p>
 <p>Collabora hat keine eigene Subdomain. Der Nextcloud-Ingress leitet die Pfade
 <code>/browser</code>, <code>/hosting/discovery</code>, <code>/hosting/capabilities</code> und <code>/cool</code> auf
-<code>cloud.casa-due-pur.de</code> an den Service <code>collabora-online</code>. Grund ist die
+<code>cloud.zyria.de</code> an den Service <code>collabora-online</code>. Grund ist die
 globale Traefik-Middleware <code>kube-system-default-headers</code>: Sie setzt fuer alle
 Hosts <code>frame-ancestors 'self'</code>. Auf einer eigenen Subdomain liesse sich
 Collabora nicht in Nextcloud einbetten, ohne diese Regel fuer alle
 Anwendungen zu lockern.</p>
 <p>In Nextcloud ist <code>richdocuments</code> so konfiguriert:</p>
-<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">occ config:app:set richdocuments wopi_url --value<span class="o">=</span><span class="s2">&#34;https://cloud.casa-due-pur.de&#34;</span>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">occ config:app:set richdocuments wopi_url --value<span class="o">=</span><span class="s2">&#34;https://cloud.zyria.de&#34;</span>
 </span></span><span class="line"><span class="ln">2</span><span class="cl">occ config:app:set richdocuments disable_certificate_verification --value<span class="o">=</span><span class="s2">&#34;no&#34;</span>
 </span></span><span class="line"><span class="ln">3</span><span class="cl">occ config:app:set richdocuments wopi_allowlist --value<span class="o">=</span><span class="s2">&#34;10.44.0.0/16,fd21:da66:909b::/48&#34;</span>  <span class="c1"># infra-leak-ok</span>
 </span></span><span class="line"><span class="ln">4</span><span class="cl">occ richdocuments:activate-config</span></span></code></pre></div></div>
 <p><code>wopi_allowlist</code> enthaelt die Pod-Netze, weil Collabora die WOPI-Aufrufe ueber
-Traefik schickt und Nextcloud per X-Forwarded-For die Pod-Adresse sieht. Der
+Traefik schickt und Nextcloud per X-Forwarded-For die Pod-Adresse sieht. Das
+gilt nur, solange der Aufruf im Cluster bleibt: Ueber DNS und IPv4 ginge er an
+die oeffentliche Adresse, ueber den Router zurueck, und Nextcloud saehe die
+oeffentliche IP (&ldquo;WOPI request denied&rdquo; in <code>/data/nextcloud.log</code>). Deshalb
+setzt <code>values-collabora.yaml</code> per <code>deployment.hostAliases</code> <code>cloud.zyria.de</code>
+auf die MetalLB-Adresse von Traefik. Aendert sich diese Adresse in
+<code>apps/traefik/values.yaml</code>, muss der Eintrag mit. Der
 Wert <code>*</code> funktioniert nicht: <code>IpUtils::checkIp</code> behandelt ihn nicht als
 Platzhalter und lehnt jede Anfrage ab.</p>
 <p>Die coolwsd-Optionen stehen als Container-Argumente im Patch in
@@ -1857,8 +1873,7 @@ ignoriert coolwsd die Variable <code>extra_params</code>.</p>
     
 </h5>
 <p>Zwei Secrets liegen bewusst nicht im Repo, solange es keine Secret-Verwaltung
-fuer ArgoCD gibt. Sie tragen die Annotation
-<code>manage.casa-due-pur.de/origin</code> und werden von ArgoCD nicht verwaltet.</p>
+fuer ArgoCD gibt, und werden von ArgoCD nicht verwaltet.</p>
 <table>
 	<thead>
 			<tr>
@@ -1954,6 +1969,404 @@ sie für HTML und lehnt sie ab.</p>
 Start wieder, sofern die Variable gesetzt ist. Ergebnis und Fehler stehen im
 Log des Containers in Zeilen mit <code>[theming]</code>. Eigene Hintergründe der Nutzer
 bleiben unberührt.</p>
+
+<h4 class="relative group">iCloud-Fotos (icloudpd)
+    <div id="icloud-fotos-icloudpd" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#icloud-fotos-icloudpd" aria-label="Anker">#</a>
+    </span>
+    
+</h4>
+<p><a href="https://github.com/icloud-photos-downloader/icloud_photos_downloader"  target="_blank" rel="noreferrer">icloudpd</a>
+spiegelt die eigene iCloud-Fotomediathek nach
+<code>Photos/iCloudPrivat</code> und die geteilte Familienmediathek nach
+<code>Photos/iCloudFamily</code> im Konto <code>fabrice@zyria.de</code>. Es läuft als Container
+<code>icloudpd</code> im Nextcloud-Pod, weil <code>nextcloud-data</code> ReadWriteOnce ist, und
+prüft alle zwölf Stunden (<code>--watch-with-interval 43200</code>). <code>--auto-delete</code>
+löscht lokal, was in iCloud gelöscht wurde. Die Werte stehen in
+<code>values-icloudpd.yaml</code>, eingebunden über <code>additionalValuesFiles</code> in
+<code>kustomization.yaml</code>.</p>
+<p>Ein Prozess bedient beide Mediatheken (je ein <code>--username</code>-Block mit
+demselben Konto). So gibt es eine gemeinsame Sitzung und eine
+Weboberfläche auf Port 8080. Die Blöcke laufen nacheinander. Jeder legt
+eine eigene Verbindung an, liest aber dieselben Sitzungsdateien
+(<code>/cookie/fabricezyriade</code> und <code>.session</code>, benannt nach der Apple-ID samt
+Client-ID); pyicloud schreibt sie nach jeder Anfrage. Der zweite Block
+übernimmt also die Sitzung, die der erste gerade erneuert hat, und fragt
+weder Passwort noch Code ab. Belegt im Quellcode von 1.32.3
+(<code>pyicloud_ipd/session.py</code>, <code>base.py</code>), nicht mit einer echten Erneuerung.</p>
+
+<h5 class="relative group">Anmeldung erneuern
+    <div id="anmeldung-erneuern" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#anmeldung-erneuern" aria-label="Anker">#</a>
+    </span>
+    
+</h5>
+<p>Apple lässt die Sitzung mit zweitem Faktor nach etwa zwei Monaten
+ablaufen. icloudpd läuft mit <code>--mfa-provider webui</code>. Ist die Sitzung
+abgelaufen, geschieht Folgendes:</p>
+<ol>
+<li>icloudpd meldet sich mit dem Passwort aus dem Secret an und schickt eine
+Mail an <code>fabrice@zyria.de</code> mit dem Betreff „iCloud-Fotos: neuer Code
+noetig“ und dem Link auf die Weboberfläche (siehe „Mail mit Link“).</li>
+<li>Apple zeigt auf iPhone und Mac den Hinweis zur Anmeldung und danach den
+sechsstelligen Code.</li>
+<li><a href="https://icloudpd.zyria.de"  target="_blank" rel="noreferrer">https://icloudpd.zyria.de</a> öffnen (im LAN, VPN oder Tailnet, Anmeldung
+über Authentik, nur <code>authentik Admins</code>) und den Code eingeben.</li>
+</ol>
+<p>Danach läuft der Abgleich wieder allein. icloudpd wartet auf den Code,
+ohne erneut bei Apple anzufragen. Ein falsch eingetippter Code lässt sich in
+derselben Seite korrigieren. Die Oberfläche zeigt außerdem den Fortschritt
+des laufenden Abgleichs.</p>
+<p>Kommt ein leerer Code an, gerät 1.32.3 in eine Schleife; das ist ein Fehler
+im Programm, auch im aktuellen Entwicklungsstand. Nach „did not get code for
+SUPPLIED_MFA status“ meldet es sich alle paar Sekunden neu an, jedes Mal mit
+Push und Mail, und jeder Versuch scheitert an „Expected NO_INPUT_NEEDED, but
+got NEED_MFA“. Erst wenn Apple mit 503 ablehnt (am 02.11.2026 nach einer
+Minute und 17 Versuchen), wartet icloudpd bis zum nächsten Lauf in zwölf
+Stunden. Deshalb nur einen vollständigen Code absenden. Ist es doch
+passiert, eine Weile warten, damit Apple wieder annimmt, und dann den
+Container neu starten, um sofort einen neuen Versuch zu bekommen
+(<code>kubectl -n nextcloud rollout restart deploy/nextcloud</code>, startet die ganze
+Nextcloud neu). Der leere Code entstand vermutlich durch die Schleife beim
+Forward Auth (siehe <code>apps/authentik/README.md</code>, Abschnitt Forward Auth).</p>
+<p>Das Passwort kommt nur aus dem Secret (<code>--password-provider parameter</code>),
+nicht zusätzlich aus der Weboberfläche. In 1.32.3 wiederholt icloudpd ein
+abgelehntes Passwort sofort und ohne Pause, sobald <code>webui</code> als
+Passwortquelle mitläuft. Das kann zur Sperre des Apple-Kontos führen, wie
+am 19.10.2026 bei iCloud3 in Home Assistant. So endet ein abgelehntes
+Passwort mit einem Fehler im Log, und der nächste Versuch kommt erst nach
+zwölf Stunden. Nach einem Wechsel des Apple-Passworts deshalb das Secret
+anpassen und den Pod neu starten.</p>
+<p>Die Weboberfläche hat keine eigene Anmeldung. Davor stehen die
+Traefik-Middlewares <code>localnet</code> und <code>authentik</code>. Für den Host gibt es in
+Authentik einen eigenen Proxy-Provider <code>icloudpd</code>, gebunden an <code>authentik Admins</code> (<code>apps/authentik/blueprints/62-forward-auth.yaml</code>, Variable
+<code>AK_BLUEPRINT_ICLOUDPD_HOST</code>). Der Provider für die ganze Domain ließe jedes
+angemeldete Konto durch.</p>
+
+<h5 class="relative group">Mail mit Link
+    <div id="mail-mit-link" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#mail-mit-link" aria-label="Anker">#</a>
+    </span>
+    
+</h5>
+<p>Die eingebaute Mail von icloudpd hat einen festen Text ohne Link. Statt ihrer
+läuft <code>icloudpd/notify.sh</code> (ConfigMap <code>nextcloud-icloudpd-notify</code>,
+eingebunden unter <code>/notify</code>) als <code>--notification-script</code>. icloudpd ruft das
+Skript ohne Argumente auf, sobald Apple einen Code verlangt, und wartet, bis
+es fertig ist. Die <code>--smtp-*</code>-Optionen und <code>--notification-email</code> sind
+entfernt, sonst käme die eingebaute Mail zusätzlich. Empfänger, Apple-ID und
+Link stehen als <code>NOTIFY_*</code> in <code>values-icloudpd.yaml</code>.</p>
+<p>Im Image gibt es nur BusyBox. Dessen <code>sendmail</code> kann kein STARTTLS, deshalb
+geht die Mail über Port 465 (TLS ab dem ersten Byte): <code>nc</code> baut die
+Verbindung auf, <code>ssl_client</code> verschlüsselt sie, <code>sendmail</code> meldet sich mit
+<code>SMTP_USERNAME</code> und <code>SMTP_PASSWORD</code> an und liest beide über einen
+Dateideskriptor, damit sie nicht in der Prozessliste stehen. Port 25 scheidet
+aus, Postfix weist dort Pods ohne passenden Reverse-DNS-Eintrag ab
+(<code>reject_unknown_client</code>). <code>ssl_client</code> prüft das Zertifikat des Servers
+nicht; die Verbindung bleibt im eigenen Netz.</p>
+<p>Scheitert der Versand, steht im Log des Containers <code>icloudpd</code> eine Zeile mit
+<code>[icloudpd-notify]</code>, und es bleibt nur der Hinweis von Apple auf den Geräten.
+Getestet im Image 1.32.3 gegen einen nachgebauten SMTP-Server und mit dem
+TLS-Aufbau gegen <code>smtp.zyria.de:465</code>, aber noch nicht mit einer echten
+Erneuerung.</p>
+
+<h5 class="relative group">Dateien in Nextcloud bekannt machen
+    <div id="dateien-in-nextcloud-bekannt-machen" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#dateien-in-nextcloud-bekannt-machen" aria-label="Anker">#</a>
+    </span>
+    
+</h5>
+<p>icloudpd schreibt am Nextcloud vorbei direkt ins Datenverzeichnis, und
+Nextcloud bemerkt solche Änderungen nicht von selbst
+(<code>filesystem_check_changes</code> ist aus). Ohne Scan fehlen neue Fotos in der
+Oberfläche, und gelöschte stehen weiter in der Liste. Das Startskript
+<code>icloudpd/60-icloudpd-scan.sh</code> läuft deshalb im Nextcloud-Container (über
+die ConfigMap <code>nextcloud-theming-init</code> in <code>/custom-cont-init.d</code>). Es prüft
+alle zehn Minuten, ob sich unter den Ordnern aus <code>ICLOUDPD_SCAN_PATHS</code>
+(<code>values.yaml</code>) ein Verzeichnis geändert hat. Ist das so, ruft es
+<code>occ files:scan --path=…</code> für diesen Ordner auf. Das geschieht praktisch
+einmal nach jedem Lauf von icloudpd, dazu einmal nach jedem Start des
+Containers. Das Ergebnis steht im Log des Containers <code>nextcloud</code> in Zeilen mit
+<code>[icloudpd-scan]</code>.</p>
+<p>icloudpd selbst kann den Scan nicht auslösen: <code>occ</code> gibt es nur im
+Nextcloud-Container, und icloudpd kennt keinen Aufruf nach einem
+Abgleich, nur <code>--notification-script</code> für den Ablauf der Sitzung.
+Ein neues Foto ändert die Änderungszeit seines Verzeichnisses, ebenso ein
+gelöschtes. Deshalb genügt der Blick auf die Verzeichnisse, und zwischen
+zwei Läufen kostet die Prüfung kaum etwas.</p>
+
+<h5 class="relative group">Secret <code>icloudpd</code>
+    <div id="secret-icloudpd" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#secret-icloudpd" aria-label="Anker">#</a>
+    </span>
+    
+</h5>
+<p>Das Secret liegt nicht im Repository. Der Container liest es per <code>envFrom</code>
+und <code>optional: true</code>, damit ein fehlendes Secret nicht den ganzen
+Nextcloud-Pod am Start hindert. Ohne Secret scheitert die Anmeldung einmal
+je Lauf und Mediathek.</p>
+<table>
+	<thead>
+			<tr>
+					<th>Schlüssel</th>
+					<th>Zweck</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><code>ICLOUD_PASSWORD</code></td>
+					<td>Passwort der Apple-ID <code>fabrice@zyria.de</code></td>
+			</tr>
+			<tr>
+					<td><code>SMTP_USERNAME</code></td>
+					<td>Konto für den Versand über <code>smtp.zyria.de:465</code>; ist zugleich der Absender</td>
+			</tr>
+			<tr>
+					<td><code>SMTP_PASSWORD</code></td>
+					<td>Passwort dieses Kontos</td>
+			</tr>
+	</tbody>
+</table>
+<p>Anlegen oder ändern, ohne dass Werte auf dem Terminal oder in der Historie
+landen:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl"><span class="nb">read</span> -rs <span class="s1">&#39;ICLOUD_PASSWORD?Apple-Passwort: &#39;</span> <span class="o">&amp;&amp;</span> <span class="nb">echo</span> <span class="o">&amp;&amp;</span> <span class="nb">read</span> -r <span class="s1">&#39;SMTP_USERNAME?SMTP-Konto: &#39;</span> <span class="o">&amp;&amp;</span> <span class="nb">read</span> -rs <span class="s1">&#39;SMTP_PASSWORD?SMTP-Passwort: &#39;</span> <span class="o">&amp;&amp;</span> <span class="nb">echo</span> <span class="o">&amp;&amp;</span> kubectl -n nextcloud create secret generic icloudpd --from-literal<span class="o">=</span><span class="nv">ICLOUD_PASSWORD</span><span class="o">=</span><span class="s2">&#34;</span><span class="nv">$ICLOUD_PASSWORD</span><span class="s2">&#34;</span> --from-literal<span class="o">=</span><span class="nv">SMTP_USERNAME</span><span class="o">=</span><span class="s2">&#34;</span><span class="nv">$SMTP_USERNAME</span><span class="s2">&#34;</span> --from-literal<span class="o">=</span><span class="nv">SMTP_PASSWORD</span><span class="o">=</span><span class="s2">&#34;</span><span class="nv">$SMTP_PASSWORD</span><span class="s2">&#34;</span> --dry-run<span class="o">=</span>client -o yaml <span class="p">|</span> kubectl apply -f - <span class="o">&amp;&amp;</span> <span class="nb">unset</span> ICLOUD_PASSWORD SMTP_PASSWORD
+</span></span><span class="line"><span class="ln">2</span><span class="cl">kubectl -n nextcloud rollout restart deploy/nextcloud</span></span></code></pre></div></div>
+<p>Der Befehl ist für zsh geschrieben (<code>read 'VAR?Prompt'</code>). Als SMTP-Konto
+eignet sich ein Dienstkonto wie <code>uptimebot@ad.zyria.de</code>, das schon Uptime
+Kuma nutzt. Der Mailstack nimmt nur Absender an, die dem angemeldeten Konto
+gehören, und <code>notify.sh</code> setzt das Konto selbst als Absender.</p>
+
+<h5 class="relative group">Volume <code>icloudpd-cookie-v2</code>
+    <div id="volume-icloudpd-cookie-v2" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#volume-icloudpd-cookie-v2" aria-label="Anker">#</a>
+    </span>
+    
+</h5>
+<p>Die Sitzungsdaten liegen auf dem dynamischen Longhorn-Volume
+<code>icloudpd-cookie-v2</code> (100Mi, ext4 mit 4-KiB-Blöcken). Es löst das statische
+Volume <code>icloudpd-cookie</code> ab, ein ext4 mit 10Mi, das wahrscheinlich
+1-KiB-Blöcke hatte (Risiko durch das Read-Modify-Write von Longhorn v1).
+Die alte Sitzung war ohnehin abgelaufen; deshalb ist nichts umgezogen. Der
+Init-Container <code>icloudpd-cookie-owner</code> gibt das Volume bei jedem Start dem
+Benutzer 1000, unter dem icloudpd läuft. Das alte Longhorn-Volume
+<code>icloudpd-cookie</code> bleibt nach dem Entfernen von PV und PVC (Retain) stehen
+und wird von Hand gelöscht.</p>
+
+<h5 class="relative group">Erste Anmeldung
+    <div id="erste-anmeldung" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#erste-anmeldung" aria-label="Anker">#</a>
+    </span>
+    
+</h5>
+<p>Nach dem Ausrollen fehlt eine gültige Sitzung. Der Ablauf ist derselbe wie
+unter „Anmeldung erneuern“. Der Name <code>icloudpd.zyria.de</code> ist neu: Wurde er
+vor dem Anlegen schon abgefragt, kann ihn das LAN bis zu 30 Minuten als
+NXDOMAIN halten.</p>
+
+<h4 class="relative group">iCloud-Kontakte und -Kalender (vdirsyncer)
+    <div id="icloud-kontakte-und--kalender-vdirsyncer" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#icloud-kontakte-und--kalender-vdirsyncer" aria-label="Anker">#</a>
+    </span>
+    
+</h4>
+<p><a href="https://vdirsyncer.pimutils.org/"  target="_blank" rel="noreferrer">vdirsyncer</a> kopiert die Adressbücher und
+Kalender der Apple-ID <code>fabrice@zyria.de</code> in das Nextcloud-Konto
+<code>fabrice@zyria.de</code>. Das ist eine Rückfallebene, falls das Apple-Konto
+nicht mehr erreichbar ist. iCloud bleibt die Quelle, auf den Geräten ändert
+sich nichts. Der Abgleich läuft nur in eine Richtung:</p>
+<ul>
+<li>Die iCloud-Seite ist <code>read_only</code>, vdirsyncer schreibt dort nie.</li>
+<li>Änderungen auf der Nextcloud-Seite setzt der nächste Lauf zurück
+(<code>partial_sync = &quot;revert&quot;</code>, <code>conflict_resolution = &quot;a wins&quot;</code>).</li>
+<li>Löschungen in iCloud kommen auch in der Nextcloud an. Liefert eine Seite
+plötzlich gar keine Einträge mehr, bricht vdirsyncer mit einem Fehler ab,
+statt die andere Seite zu leeren.</li>
+<li>Neue Adressbücher und Kalender in iCloud legt <code>vdirsyncer discover</code> bei
+jedem Lauf in der Nextcloud an. Ihre URI ist die Kennung aus iCloud, der
+Anzeigename und die Farbe kommen per <code>metasync</code> mit. Erinnerungen fehlen,
+sie sind seit iOS 13 nicht mehr über CalDAV erreichbar.</li>
+</ul>
+<p>Jeder Lauf hat drei Stufen (<code>vdirsyncer/config</code>):</p>
+<ol>
+<li><code>contacts_raw</code>, <code>calendars_raw</code>: iCloud in einfache Dateien unter
+<code>raw/</code> auf dem Volume. Diese Stufe nimmt jeden Eintrag so, wie iCloud ihn
+liefert, und ist zugleich eine vollständige <code>.vcf</code>- und <code>.ics</code>-Sicherung.</li>
+<li><code>vdirsyncer/repair.py</code> spiegelt <code>raw/</code> nach <code>clean/</code> und behebt, was die
+Nextcloud als ungültiges iCalendar ablehnt (HTTP 415). Am 02.11.2026 waren
+das 210 von rund 7.700 Terminen: 199 alte Einträge eines importierten
+Feeds mit <code>ENCODING=UTF-8</code> (der Parameter fällt weg) und 11 mit einem
+Zeilenumbruch im Parameter von <code>X-APPLE-STRUCTURED-LOCATION</code> (die
+Apple-Eigenschaft fällt weg, <code>LOCATION</code> behält die Adresse). Alles
+andere bleibt byte-gleich.</li>
+<li><code>contacts_nextcloud</code>, <code>calendars_nextcloud</code>: <code>clean/</code> in die Nextcloud.</li>
+</ol>
+<p>Kommt ein neuer Fehler dieser Art hinzu, endet der Lauf rot mit der
+Meldung der Nextcloud im Log des Jobs; der Eintrag fehlt dann nur in der
+Nextcloud, nicht in <code>raw/</code>.</p>
+<p>Der CronJob <code>nextcloud-vdirsyncer</code> läuft alle sechs Stunden (Minute 17).
+Werte in <code>values-vdirsyncer.yaml</code>, Konfiguration und Skript in <code>vdirsyncer/</code>
+(ConfigMap <code>nextcloud-vdirsyncer</code>). Der Job spricht die Nextcloud über
+<code>https://cloud.zyria.de</code> an, also über Traefik, weil die NetworkPolicy den
+Web-Port nur für Traefik öffnet. Er braucht <code>nextcloud-data</code> nicht und
+läuft deshalb nicht im Nextcloud-Pod. Den Stand des Abgleichs (<code>state/</code>) und
+beide Kopien hält das dynamische Longhorn-Volume <code>vdirsyncer-status</code> (1Gi,
+belegt etwa 70 MB); ohne den Stand würden Löschungen nicht übertragen. Ein erfolgreicher Lauf räumt sich sofort ab,
+gescheiterte bleiben sichtbar (<code>kubectl -n nextcloud get jobs</code>).</p>
+<p>Für die iCloud-Seite reicht ein app-spezifisches Passwort. Anders als bei
+icloudpd läuft keine Sitzung ab, eine Erneuerung per Code entfällt. Das
+Passwort lässt sich unter <a href="https://account.apple.com"  target="_blank" rel="noreferrer">https://account.apple.com</a> einzeln widerrufen.</p>
+
+<h5 class="relative group">Secret <code>vdirsyncer</code>
+    <div id="secret-vdirsyncer" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#secret-vdirsyncer" aria-label="Anker">#</a>
+    </span>
+    
+</h5>
+<p>Das Secret liegt nicht im Repository und wird als Dateien unter <code>/secrets</code>
+eingehängt. Fehlt es, startet der Pod nicht, und der Lauf endet nach
+<code>activeDeadlineSeconds</code> (30 Minuten) als gescheitert.</p>
+<table>
+	<thead>
+			<tr>
+					<th>Schlüssel</th>
+					<th>Zweck</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><code>ICLOUD_APP_PASSWORD</code></td>
+					<td>app-spezifisches Passwort der Apple-ID, angelegt unter <a href="https://account.apple.com"  target="_blank" rel="noreferrer">https://account.apple.com</a>, Anmeldung und Sicherheit</td>
+			</tr>
+			<tr>
+					<td><code>NEXTCLOUD_APP_PASSWORD</code></td>
+					<td>App-Passwort des Nextcloud-Kontos, angelegt unter Einstellungen, Sicherheit</td>
+			</tr>
+	</tbody>
+</table>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl"><span class="nb">read</span> -rs <span class="s1">&#39;ICLOUD_APP_PASSWORD?Apple, app-spezifisches Passwort: &#39;</span> <span class="o">&amp;&amp;</span> <span class="nb">echo</span> <span class="o">&amp;&amp;</span> <span class="nb">read</span> -rs <span class="s1">&#39;NEXTCLOUD_APP_PASSWORD?Nextcloud, App-Passwort: &#39;</span> <span class="o">&amp;&amp;</span> <span class="nb">echo</span> <span class="o">&amp;&amp;</span> kubectl -n nextcloud create secret generic vdirsyncer --from-literal<span class="o">=</span><span class="nv">ICLOUD_APP_PASSWORD</span><span class="o">=</span><span class="s2">&#34;</span><span class="nv">$ICLOUD_APP_PASSWORD</span><span class="s2">&#34;</span> --from-literal<span class="o">=</span><span class="nv">NEXTCLOUD_APP_PASSWORD</span><span class="o">=</span><span class="s2">&#34;</span><span class="nv">$NEXTCLOUD_APP_PASSWORD</span><span class="s2">&#34;</span> --dry-run<span class="o">=</span>client -o yaml <span class="p">|</span> kubectl apply -f - <span class="o">&amp;&amp;</span> <span class="nb">unset</span> ICLOUD_APP_PASSWORD NEXTCLOUD_APP_PASSWORD</span></span></code></pre></div></div>
+<p>Einen Lauf außer der Reihe startet
+<code>kubectl -n nextcloud create job --from=cronjob/nextcloud-vdirsyncer vdirsyncer-manual</code>.
+Er hängt am CronJob (<code>ownerReferences</code>), der ihn nach Erfolg wie die
+geplanten Läufe sofort löscht (<code>successfulJobsHistory: 0</code>); ein gescheiterter
+bleibt stehen und wird von Hand gelöscht.</p>
+
+<h4 class="relative group">iCloud Drive und Notizen (icloud-backup)
+    <div id="icloud-drive-und-notizen-icloud-backup" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#icloud-drive-und-notizen-icloud-backup" aria-label="Anker">#</a>
+    </span>
+    
+</h4>
+<p><a href="https://git.zyria.de/pyrox/icloud-backup"  target="_blank" rel="noreferrer">icloud-backup</a> kopiert iCloud
+Drive nach <code>iCloud Drive/</code> und die iCloud-Notizen als HTML samt Bildern und
+Anhängen nach <code>iCloud Notizen/&lt;Ordner&gt;/</code> im Konto <code>fabrice@zyria.de</code>. Wie
+vdirsyncer ist es eine Rückfallebene in eine Richtung: iCloud bleibt die
+Quelle und wird nie beschrieben. Verhalten, Schutzmechanismen und alle
+Variablen beschreibt die README des Images.</p>
+<p>Zwei Entscheidungen prägen den Aufbau:</p>
+<ul>
+<li>Die Dateien gehen über WebDAV in die Nextcloud, nicht direkt auf
+<code>nextcloud-data</code>. Nur so legt die Nextcloud bei einer in iCloud geänderten
+Datei eine Version an und verschiebt eine in iCloud gelöschte in den
+Papierkorb. Ein Test am 02.11.2026 hat gezeigt, dass direkt geschriebene
+und per <code>occ files:scan</code> erfasste Dateien weder Versionen noch
+Papierkorb-Einträge bekommen. Das gilt auch für icloudpd.</li>
+<li>Das Programm meldet sich nicht selbst bei Apple an, sondern übernimmt die
+Sitzung von icloudpd. Es liest <code>icloudpd-cookie-v2</code> schreibgeschützt,
+kopiert die beiden Sitzungsdateien vor jedem Lauf und meldet sich ohne
+Passwort an. Eine neue Anmeldung mit Code ist damit ausgeschlossen. Die
+Erneuerung alle zwei Monate über die icloudpd-Weboberfläche gilt also für
+beide. Ist die Sitzung abgelaufen, endet der Lauf mit Exit-Code 2.</li>
+</ul>
+<p>Der CronJob <code>nextcloud-icloud-backup</code> läuft täglich um 03:40. Werte in
+<code>values-icloud-backup.yaml</code>. Weil <code>icloudpd-cookie-v2</code> ReadWriteOnce ist,
+muss der Job auf dem Node des Nextcloud-Pods laufen (Pod-Affinität). Ein
+laufender Job hält das Volume dort fest. Ein Rollout der Nextcloud auf einen
+anderen Node wartet dann, bis der Job fertig ist. Der Stand der Uploads liegt
+auf dem dynamischen Longhorn-Volume <code>icloud-backup-state</code> (100Mi). Die
+Downloads landen einzeln in einem <code>emptyDir</code> mit 20Gi, das deshalb größer
+sein muss als die größte Datei. Jeder Lauf fragt den Drive-Baum Ordner für
+Ordner bei Apple ab; allein das dauert Stunden (am 02.11.2026 rund 500
+Sekunden je 100 Ordner). Der erste Lauf überträgt zudem alles (etwa 26 GB),
+spätere nur Änderungen. Ein Lauf darf deshalb 23 Stunden dauern
+(<code>activeDeadlineSeconds</code>), so überschneidet er sich nicht mit dem nächsten.</p>
+<p>Die Uploads gehen nicht über Traefik, sondern direkt an den Nextcloud-Pod
+(<code>http://nextcloud-main.nextcloud.svc</code>, Port 80 des Services). Traefik bricht
+einen Request ab, dessen Body nicht binnen 60 Sekunden gelesen ist
+(<code>readTimeout</code>); am 02.11.2026 scheiterten daran große Chunks. Den Port
+öffnet die NetworkPolicy nur für den Controller <code>icloud-backup</code>. Weil
+<code>overwritehost</code> gesetzt ist, akzeptiert Nextcloud den internen Hostnamen
+ohne Eintrag in <code>trusted_domains</code>.</p>
+<p>Damit auch alte Webprojekte aus iCloud Drive vollständig ankommen, setzt
+<code>config/zz-zyria.config.php</code> <code>forbidden_filenames</code> auf eine leere Liste;
+Standard ist <code>['.htaccess']</code>. Dateien mit Virenfund blockiert
+files_antivirus weiterhin bewusst. Sie gelten nicht als gesichert, und
+jeder Lauf versucht sie erneut.</p>
+<p>Ein Lauf löscht nichts, wenn ein Ordner nicht gelistet werden konnte. Er
+löscht auch nicht mehr als 25 Prozent der bekannten Dateien oder Notizen
+(<code>MAX_DELETE_RATIO</code>). Ist eine größere Löschung gewollt, für einen Lauf von
+Hand erhöhen. Gesperrte Notizen lassen sich nicht lesen und bleiben, wie sie
+zuletzt gesichert wurden.</p>
+
+<h5 class="relative group">Secret <code>icloud-backup</code>
+    <div id="secret-icloud-backup" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#secret-icloud-backup" aria-label="Anker">#</a>
+    </span>
+    
+</h5>
+<table>
+	<thead>
+			<tr>
+					<th>Schlüssel</th>
+					<th>Zweck</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><code>NEXTCLOUD_APP_PASSWORD</code></td>
+					<td>eigenes App-Passwort des Nextcloud-Kontos, angelegt unter Einstellungen, Sicherheit</td>
+			</tr>
+	</tbody>
+</table>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl"><span class="nb">read</span> -rs <span class="s1">&#39;NEXTCLOUD_APP_PASSWORD?Nextcloud, App-Passwort: &#39;</span> <span class="o">&amp;&amp;</span> <span class="nb">echo</span> <span class="o">&amp;&amp;</span> kubectl -n nextcloud create secret generic icloud-backup --from-literal<span class="o">=</span><span class="nv">NEXTCLOUD_APP_PASSWORD</span><span class="o">=</span><span class="s2">&#34;</span><span class="nv">$NEXTCLOUD_APP_PASSWORD</span><span class="s2">&#34;</span> --dry-run<span class="o">=</span>client -o yaml <span class="p">|</span> kubectl apply -f - <span class="o">&amp;&amp;</span> <span class="nb">unset</span> NEXTCLOUD_APP_PASSWORD</span></span></code></pre></div></div>
+<p>Einen Lauf außer der Reihe startet
+<code>kubectl -n nextcloud create job --from=cronjob/nextcloud-icloud-backup icloud-backup-manual</code>.
+Wie die geplanten Läufe räumt der CronJob ihn nach Erfolg selbst ab, ein
+gescheiterter bleibt stehen. Ein Trockenlauf (<code>DRY_RUN=true</code>) listet genauso
+vollständig bei Apple wie ein echter Lauf und zählt gegen dieselben Limits;
+deshalb nur in Ausnahmefällen.</p>
 
 <h3 class="relative group">Installation
     <div id="installation" class="anchor"></div>

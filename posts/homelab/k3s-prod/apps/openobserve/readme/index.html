@@ -104,8 +104,8 @@
 	<meta property="og:locale" content="de_de">
 	<meta property="og:type" content="article">
 		<meta property="article:section" content="posts">
-		<meta property="article:published_time" content="2026-11-02T01:35:37+01:00">
-		<meta property="article:modified_time" content="2026-11-02T01:35:37+01:00">
+		<meta property="article:published_time" content="2026-11-02T08:23:40+01:00">
+		<meta property="article:modified_time" content="2026-11-02T08:23:40+01:00">
 		<meta property="article:tag" content="Kubernetes">
 		<meta property="article:tag" content="K3s">
 		<meta property="article:tag" content="Gitops">
@@ -311,15 +311,15 @@ href="/site.webmanifest.min.e231d7c2a5ac29753d1781895bdd4b9a0e5900e75bcee133bb47
       "sameAs": ["https://git.casa-due-pur.de/fabrice.kirchner", "https://git.zyria.de/pyrox", "https://github.com/ricariel", "https://www.linkedin.com/in/fabrice-kirchner-bb5408163/", "https://www.xing.com/profile/Fabrice_Kirchner", "https://kirchner.social/@fabrice", "https://codeberg.org/ricariel"]
     },
     "copyrightYear": "2026",
-    "dateCreated": "2026-11-02T01:35:37\u002b01:00",
-    "datePublished": "2026-11-02T01:35:37\u002b01:00",
+    "dateCreated": "2026-11-02T08:23:40\u002b01:00",
+    "datePublished": "2026-11-02T08:23:40\u002b01:00",
     
-    "dateModified": "2026-11-02T01:35:37\u002b01:00",
+    "dateModified": "2026-11-02T08:23:40\u002b01:00",
     
     "keywords": ["kubernetes","k3s","gitops","argocd","helm","kustomize","homelab","produktion"],
     
     "mainEntityOfPage": "https://zyria.de/posts/homelab/k3s-prod/apps/openobserve/readme/",
-    "wordCount": "1625"
+    "wordCount": "2255"
   }]
   </script>
 
@@ -964,7 +964,7 @@ href="/site.webmanifest.min.e231d7c2a5ac29753d1781895bdd4b9a0e5900e75bcee133bb47
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2026-11-02T01:35:37&#43;01:00">2 November 2026</time><span class="px-2 text-primary-500">&middot;</span><span>1625 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
+      <time datetime="2026-11-02T08:23:40&#43;01:00">2 November 2026</time><span class="px-2 text-primary-500">&middot;</span><span>2255 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
 
 
   
@@ -1243,6 +1243,7 @@ href="/site.webmanifest.min.e231d7c2a5ac29753d1781895bdd4b9a0e5900e75bcee133bb47
         <li><a href="#zugang">Zugang</a></li>
         <li><a href="#lizenz-und-datenabfluss">Lizenz und Datenabfluss</a></li>
         <li><a href="#secrets">Secrets</a></li>
+        <li><a href="#logs-durchsuchen">Logs durchsuchen</a></li>
         <li><a href="#logs-für-ein-crowdsec-replay-exportieren">Logs für ein CrowdSec-Replay exportieren</a></li>
         <li><a href="#installation">Installation</a></li>
         <li><a href="#abhängigkeiten">Abhängigkeiten</a></li>
@@ -1270,6 +1271,7 @@ href="/site.webmanifest.min.e231d7c2a5ac29753d1781895bdd4b9a0e5900e75bcee133bb47
         <li><a href="#zugang">Zugang</a></li>
         <li><a href="#lizenz-und-datenabfluss">Lizenz und Datenabfluss</a></li>
         <li><a href="#secrets">Secrets</a></li>
+        <li><a href="#logs-durchsuchen">Logs durchsuchen</a></li>
         <li><a href="#logs-für-ein-crowdsec-replay-exportieren">Logs für ein CrowdSec-Replay exportieren</a></li>
         <li><a href="#installation">Installation</a></li>
         <li><a href="#abhängigkeiten">Abhängigkeiten</a></li>
@@ -1753,6 +1755,224 @@ Vergleich Länge und SHA-256-Präfix beider Seiten:</p>
 </span></span></span><span class="line"><span class="ln">2</span><span class="cl">  <span class="p">|</span> direnv <span class="nb">exec</span> ~/git/zyria kubectl -n authentik <span class="nb">exec</span> -i deploy/authentik-worker -- ak shell -c <span class="s1">&#39;import sys, hashlib; from authentik.providers.oauth2.models import OAuth2Provider; p = OAuth2Provider.objects.get(name=&#34;OpenObserve&#34;); p.client_secret = sys.stdin.read().strip(); p.save(); print(len(p.client_secret), hashlib.sha256(p.client_secret.encode()).hexdigest()[:12])&#39;</span></span></span></code></pre></div></div>
 <div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">direnv <span class="nb">exec</span> ~/git/zyria kubectl -n openobserve <span class="nb">exec</span> deploy/dex -- sh -c <span class="s1">&#39;printf %s &#34;$AUTHENTIK_CLIENT_SECRET&#34; | wc -c; printf %s &#34;$AUTHENTIK_CLIENT_SECRET&#34; | sha256sum | cut -c1-12&#39;</span></span></span></code></pre></div></div>
 
+<h3 class="relative group">Logs durchsuchen
+    <div id="logs-durchsuchen" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#logs-durchsuchen" aria-label="Anker">#</a>
+    </span>
+    
+</h3>
+<p>Eine Übersetzung von <code>grep</code>, <code>tail -f</code> und <code>journalctl</code> in die Suche von
+OpenObserve. Die Abfragen sind gegen v1.1.2 über die Such-API geprüft.</p>
+<p>In der Oberfläche links <strong>Logs</strong> wählen, oben links den Stream, oben rechts
+den Zeitraum. Es gibt keine Dateien: Ein Stream ist eine Tabelle, und jede
+Zeile trägt ihre Herkunft als Felder. Statt in das Logverzeichnis eines Pods
+zu wechseln, filtert man auf <code>kubernetes_namespace_name = 'forgejo'</code>; statt
+rotierte Dateien mit <code>zgrep</code> zu durchsuchen, vergrößert man den Zeitraum.</p>
+<table>
+	<thead>
+			<tr>
+					<th>Stream</th>
+					<th>Textfeld</th>
+					<th>Wichtige Felder</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><code>kubernetes</code></td>
+					<td><code>log</code></td>
+					<td><code>kubernetes_namespace_name</code>, <code>kubernetes_pod_name</code>, <code>kubernetes_container_name</code>, <code>k8s_node_name</code>, <code>stream</code> (<code>stdout</code>/<code>stderr</code>), <code>kubernetes_labels_*</code></td>
+			</tr>
+			<tr>
+					<td><code>traefik</code></td>
+					<td><code>log</code></td>
+					<td><code>requesthost</code>, <code>requestpath</code>, <code>requestmethod</code>, <code>downstreamstatus</code>, <code>clienthost</code>, <code>duration</code> (Nanosekunden), <code>routername</code></td>
+			</tr>
+			<tr>
+					<td><code>journal</code></td>
+					<td><code>message</code></td>
+					<td><code>hostname</code>, <code>systemd_unit</code>, <code>syslog_identifier</code>, <code>transport</code>, <code>priority</code> (Text: <code>'3'</code>)</td>
+			</tr>
+			<tr>
+					<td><code>k8s_events</code></td>
+					<td><code>message</code></td>
+					<td><code>type</code> (<code>Normal</code>/<code>Warning</code>), <code>reason</code>, <code>involvedobject_kind</code>, <code>involvedobject_name</code>, <code>involvedobject_namespace</code></td>
+			</tr>
+	</tbody>
+</table>
+<p>Im <strong>Quick Mode</strong> steht im Eingabefeld nur, was nach <code>WHERE</code> käme. Der
+<strong>SQL Mode</strong> (Schalter neben dem Feld) nimmt eine vollständige Abfrage und ist
+für Zählen und Gruppieren nötig. Den Zeitraum liefert in beiden Fällen die
+Auswahl oben rechts.</p>
+<p>Textsuche:</p>
+<table>
+	<thead>
+			<tr>
+					<th>Funktion</th>
+					<th>Entspricht</th>
+					<th>Verhalten</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><code>str_match(log, 'Error')</code></td>
+					<td><code>grep 'Error'</code></td>
+					<td>Teilstring, Schreibung zählt</td>
+			</tr>
+			<tr>
+					<td><code>str_match_ignore_case(log, 'error')</code></td>
+					<td><code>grep -i error</code></td>
+					<td>Teilstring, Schreibung egal; der Normalfall</td>
+			</tr>
+			<tr>
+					<td><code>re_match(log, '(?i)refused|timeout')</code></td>
+					<td><code>grep -iE</code></td>
+					<td>Regex, <code>(?i)</code> ignoriert die Schreibung; Backslashes doppelt (<code>'\\d+'</code>)</td>
+			</tr>
+			<tr>
+					<td><code>match_all('error')</code></td>
+					<td>Suche über alle Textfelder</td>
+					<td>ohne Feldangabe, liefert aber andere Mengen als <code>str_match_ignore_case</code>, siehe unten</td>
+			</tr>
+	</tbody>
+</table>
+<p>Exakte Feldwerte mit <code>=</code> vergleichen, Platzhalter mit <code>LIKE</code>
+(<code>kubernetes_pod_name LIKE 'forgejo-%'</code>). Pod-Namen ändern sich mit jedem
+Rollout, <code>LIKE</code> mit dem Präfix trägt länger.</p>
+<table>
+	<thead>
+			<tr>
+					<th>Klassisch</th>
+					<th>Stream</th>
+					<th>Modus</th>
+					<th>Abfrage</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><code>grep -i error</code> in einem Namespace</td>
+					<td><code>kubernetes</code></td>
+					<td>Quick</td>
+					<td><code>kubernetes_namespace_name = 'forgejo' AND str_match_ignore_case(log, 'error')</code></td>
+			</tr>
+			<tr>
+					<td><code>kubectl logs deploy/&lt;name&gt; -c &lt;container&gt;</code></td>
+					<td><code>kubernetes</code></td>
+					<td>Quick</td>
+					<td><code>kubernetes_pod_name LIKE 'forgejo-%' AND kubernetes_container_name = 'main'</code></td>
+			</tr>
+			<tr>
+					<td><code>grep -v</code></td>
+					<td><code>kubernetes</code></td>
+					<td>Quick</td>
+					<td><code>kubernetes_namespace_name = 'nameserver' AND NOT str_match(log, 'NOERROR')</code></td>
+			</tr>
+			<tr>
+					<td><code>grep -w error</code></td>
+					<td><code>kubernetes</code></td>
+					<td>Quick</td>
+					<td><code>re_match(log, '(?i)\\berror\\b')</code></td>
+			</tr>
+			<tr>
+					<td>nur stderr</td>
+					<td><code>kubernetes</code></td>
+					<td>Quick</td>
+					<td><code>stream = 'stderr'</code></td>
+			</tr>
+			<tr>
+					<td><code>grep -i error | sort | uniq -c</code> je Pod</td>
+					<td><code>kubernetes</code></td>
+					<td>SQL</td>
+					<td><code>SELECT kubernetes_pod_name, count(*) AS n FROM &quot;kubernetes&quot; WHERE str_match_ignore_case(log, 'error') GROUP BY kubernetes_pod_name ORDER BY n DESC</code></td>
+			</tr>
+			<tr>
+					<td>Treffer je fünf Minuten</td>
+					<td><code>kubernetes</code></td>
+					<td>SQL</td>
+					<td><code>SELECT histogram(_timestamp, '5 minute') AS t, count(*) AS n FROM &quot;kubernetes&quot; WHERE str_match_ignore_case(log, 'error') GROUP BY t ORDER BY t</code></td>
+			</tr>
+			<tr>
+					<td><code>journalctl -u k3s</code></td>
+					<td><code>journal</code></td>
+					<td>Quick</td>
+					<td><code>systemd_unit = 'k3s.service'</code></td>
+			</tr>
+			<tr>
+					<td><code>journalctl -p warning</code></td>
+					<td><code>journal</code></td>
+					<td>Quick</td>
+					<td><code>priority IN ('0', '1', '2', '3', '4')</code></td>
+			</tr>
+			<tr>
+					<td><code>journalctl -k</code></td>
+					<td><code>journal</code></td>
+					<td>Quick</td>
+					<td><code>transport = 'kernel'</code></td>
+			</tr>
+			<tr>
+					<td>langsame etcd-Schreibzugriffe</td>
+					<td><code>journal</code></td>
+					<td>Quick</td>
+					<td><code>systemd_unit = 'k3s.service' AND str_match(message, 'slow fdatasync')</code></td>
+			</tr>
+			<tr>
+					<td><code>kubectl get events -A --field-selector type=Warning</code></td>
+					<td><code>k8s_events</code></td>
+					<td>Quick</td>
+					<td><code>type = 'Warning'</code></td>
+			</tr>
+			<tr>
+					<td>häufigste Warnungen</td>
+					<td><code>k8s_events</code></td>
+					<td>SQL</td>
+					<td><code>SELECT reason, count(*) AS n FROM &quot;k8s_events&quot; WHERE type = 'Warning' GROUP BY reason ORDER BY n DESC</code></td>
+			</tr>
+			<tr>
+					<td>Fehlerantworten</td>
+					<td><code>traefik</code></td>
+					<td>Quick</td>
+					<td><code>downstreamstatus &gt;= 400</code></td>
+			</tr>
+			<tr>
+					<td>Clients mit den meisten Fehlern</td>
+					<td><code>traefik</code></td>
+					<td>SQL</td>
+					<td><code>SELECT clienthost, count(*) AS n FROM &quot;traefik&quot; WHERE downstreamstatus &gt;= 400 GROUP BY clienthost ORDER BY n DESC</code></td>
+			</tr>
+			<tr>
+					<td>Requests über zwei Sekunden</td>
+					<td><code>traefik</code></td>
+					<td>Quick</td>
+					<td><code>duration &gt; 2000000000</code></td>
+			</tr>
+	</tbody>
+</table>
+<p><code>tail -f</code> entspricht einem kurzen Zeitraum (etwa die letzten fünf Minuten)
+mit Auto-Refresh neben dem Knopf zum Ausführen. Das Histogramm über den
+Treffern zeigt Ausschläge; ein dort aufgezogener Bereich wird zum Zeitraum.
+Den Kontext um einen Treffer (<code>grep -C</code>) liefert eine zweite Abfrage: Pod aus
+dem aufgeklappten Treffer als Filter übernehmen, Textfilter entfernen,
+Zeitraum auf etwa eine Minute um den Treffer setzen. Wiederkehrende Abfragen
+lassen sich als Saved View speichern.</p>
+<p>Stolpersteine:</p>
+<ul>
+<li>Der voreingestellte Zeitraum ist kurz; ältere Ereignisse fehlen, bis er
+vergrößert ist.</li>
+<li>Traefik steht nicht im Stream <code>kubernetes</code>, Knoten-Logs stehen in <code>journal</code>.</li>
+<li>Feldnamen sind klein geschrieben (<code>ClientHost</code> wird <code>clienthost</code>).</li>
+<li><code>error</code> als Teilstring trifft auch <code>NOERROR</code> aus CoreDNS und Unbound.</li>
+<li>Ein einfacher Backslash im Regex findet nichts, <code>'\\b'</code> statt <code>'\b'</code>.</li>
+<li><code>match_all('error')</code> fand im Test deutlich weniger Zeilen als
+<code>str_match_ignore_case(log, 'error')</code>, <code>NOERROR</code> mal mit, mal ohne. Für
+Zählungen das Feld nennen.</li>
+<li>Neue Zeilen erscheinen einige Sekunden nach dem Schreiben.</li>
+<li>Zeitspalten aus SQL (<code>histogram</code>) sind UTC, die Trefferliste zeigt Ortszeit.</li>
+<li>Im Journal ist <code>priority</code> Text: <code>priority = '3'</code>, nicht <code>priority = 3</code>.
+Seltene Journal-Felder landen im Sammelfeld <code>_all</code>.</li>
+</ul>
+
 <h3 class="relative group">Logs für ein CrowdSec-Replay exportieren
     <div id="logs-für-ein-crowdsec-replay-exportieren" class="anchor"></div>
     
@@ -2061,14 +2281,14 @@ Prüfen ohne Anwenden:</p>
           
             <a
               class="flex text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
-              href="/posts/homelab/k3s-prod/apps/ansible-semaphore/readme/">
+              href="/posts/homelab/k3s-prod/apps/fluent-bit/readme/">
               <span class="leading-6">
-                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;Ansible Semaphore
+                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;Fluent Bit
               </span>
             </a>
             
               <span class="ms-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
-                <time datetime="2026-10-24T03:39:20&#43;02:00">24 Oktober 2026</time>
+                <time datetime="2026-11-02T01:35:37&#43;01:00">2 November 2026</time>
               </span>
             
           
@@ -2077,14 +2297,14 @@ Prüfen ohne Anwenden:</p>
           
             <a
               class="flex text-right text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
-              href="/posts/homelab/k3s-prod/apps/fluent-bit/readme/">
+              href="/posts/homelab/k3s-prod/apps/paperless/readme/">
               <span class="leading-6">
-                Fluent Bit&ensp;<span class="inline-block rtl:rotate-180">&rarr;</span>
+                Paperless-ngx&ensp;<span class="inline-block rtl:rotate-180">&rarr;</span>
               </span>
             </a>
             
               <span class="me-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
-                <time datetime="2026-11-02T01:35:37&#43;01:00">2 November 2026</time>
+                <time datetime="2026-11-02T09:03:22&#43;01:00">2 November 2026</time>
               </span>
             
           

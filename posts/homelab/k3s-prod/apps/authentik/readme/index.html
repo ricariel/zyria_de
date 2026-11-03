@@ -105,7 +105,7 @@
 	<meta property="og:type" content="article">
 		<meta property="article:section" content="posts">
 		<meta property="article:published_time" content="2025-10-04T12:05:11+02:00">
-		<meta property="article:modified_time" content="2026-11-02T00:04:33+01:00">
+		<meta property="article:modified_time" content="2026-11-02T11:15:34+01:00">
 		<meta property="article:tag" content="Kubernetes">
 		<meta property="article:tag" content="Authentik">
 		<meta property="article:tag" content="Sso">
@@ -312,12 +312,12 @@ href="/site.webmanifest.min.e231d7c2a5ac29753d1781895bdd4b9a0e5900e75bcee133bb47
     "dateCreated": "2025-10-04T12:05:11\u002b02:00",
     "datePublished": "2025-10-04T12:05:11\u002b02:00",
     
-    "dateModified": "2026-11-02T00:04:33\u002b01:00",
+    "dateModified": "2026-11-02T11:15:34\u002b01:00",
     
     "keywords": ["kubernetes","authentik","sso","iam"],
     
     "mainEntityOfPage": "https://zyria.de/posts/homelab/k3s-prod/apps/authentik/readme/",
-    "wordCount": "4194"
+    "wordCount": "4367"
   }]
   </script>
 
@@ -964,7 +964,7 @@ href="/site.webmanifest.min.e231d7c2a5ac29753d1781895bdd4b9a0e5900e75bcee133bb47
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2025-10-04T12:05:11&#43;02:00">4 Oktober 2025</time><span class="px-2 text-primary-500">&middot;</span><time datetime="2026-11-02T00:04:33&#43;01:00">Aktualisiert: 2 November 2026</time><span class="px-2 text-primary-500">&middot;</span><span>4194 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
+      <time datetime="2025-10-04T12:05:11&#43;02:00">4 Oktober 2025</time><span class="px-2 text-primary-500">&middot;</span><time datetime="2026-11-02T11:15:34&#43;01:00">Aktualisiert: 2 November 2026</time><span class="px-2 text-primary-500">&middot;</span><span>4367 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
 
 
   
@@ -1189,6 +1189,7 @@ href="/site.webmanifest.min.e231d7c2a5ac29753d1781895bdd4b9a0e5900e75bcee133bb47
         <li><a href="#betrieb">Betrieb</a>
           <ul>
             <li><a href="#ausfallsicherheit">Ausfallsicherheit</a></li>
+            <li><a href="#forward-auth">Forward Auth</a></li>
             <li><a href="#überwachung">Überwachung</a></li>
             <li><a href="#netzwerk">Netzwerk</a></li>
             <li><a href="#datenbanksicherung">Datenbanksicherung</a></li>
@@ -1242,6 +1243,7 @@ href="/site.webmanifest.min.e231d7c2a5ac29753d1781895bdd4b9a0e5900e75bcee133bb47
         <li><a href="#betrieb">Betrieb</a>
           <ul>
             <li><a href="#ausfallsicherheit">Ausfallsicherheit</a></li>
+            <li><a href="#forward-auth">Forward Auth</a></li>
             <li><a href="#überwachung">Überwachung</a></li>
             <li><a href="#netzwerk">Netzwerk</a></li>
             <li><a href="#datenbanksicherung">Datenbanksicherung</a></li>
@@ -1392,7 +1394,7 @@ href="/site.webmanifest.min.e231d7c2a5ac29753d1781895bdd4b9a0e5900e75bcee133bb47
 <ul>
 <li><strong>Server und Worker:</strong> die Anwendung selbst (Weboberfläche, API, Flows) und die Hintergrundaufgaben, darunter das Anwenden der Blueprints und der LDAP-Sync. Server und Worker laufen mit je zwei Replikas, siehe Abschnitt Ausfallsicherheit.</li>
 <li><strong>PostgreSQL:</strong> die Datenbank aus dem Bitnami-Subchart, persistent auf dem PVC <code>authentik-db</code> (<code>storage.yaml</code>), zusätzlich täglich als Dump gesichert (<code>dbdump.yaml</code>, siehe Abschnitt Datenbanksicherung). Authentik braucht in dieser Version kein Redis mehr; Cache, Sitzungen und Aufgaben liegen in PostgreSQL.</li>
-<li><strong>Outpost <code>Generic Forward Auth</code>:</strong> ein Proxy-Outpost, den Authentik selbst im Namespace anlegt (Kubernetes-Integration). Er beantwortet die Forward-Auth-Anfragen der Traefik-Middleware <code>kube-system-authentik</code>, siehe <code>62-forward-auth.yaml</code>. Er läuft mit zwei Replikas.</li>
+<li><strong>Eingebetteter Outpost:</strong> Teil des Servers. Er beantwortet die Forward-Auth-Anfragen der Traefik-Middleware <code>kube-system-authentik</code> (Adresse <code>authentik-server.authentik.svc.cluster.local</code>) und hält die Sitzungen in PostgreSQL, siehe <code>62-forward-auth.yaml</code> und Abschnitt Forward Auth.</li>
 </ul>
 
 <h3 class="relative group">Quelle
@@ -1454,7 +1456,7 @@ Das Helm-Chart stammt aus dem <a href="https://charts.goauthentik.io"  target="_
 </h4>
 <ul>
 <li><strong>Ingress</strong>: Der Zugriff auf die Authentik-Weboberfläche wird über einen Ingress mit einem Hostnamen ermöglicht und durch Traefik verwaltet.</li>
-<li><strong>Datenbank</strong>: PostgreSQL aus dem Subchart, Daten auf dem PVC <code>authentik-db</code>. Das Image hat einen festen Versionstag, den Renovate pflegt; Patch- und Minor-Updates mergt es selbst, jedes startet die Datenbank kurz neu. Der Init-Container <code>pgautoupgrade</code> hebt das Datenverzeichnis bei einem Major-Sprung des Images an. Deshalb kommt ein Major-Update von PostgreSQL, <code>pgautoupgrade</code> und dem Dump-Image in <code>dbdump.yaml</code> als ein gemeinsamer PR, der eine Freigabe im Renovate-Dashboard braucht. Keel ist hier bewusst nicht im Spiel: Bei einem beweglichen Tag wie <code>18</code> startete es den Pod neu, der Node nahm aber das zwischengespeicherte alte Image (bis Oktober 2026 lief so 18.1 in zyria und 18.4 in cdp).</li>
+<li><strong>Datenbank</strong>: PostgreSQL aus dem Subchart, Daten auf dem PVC <code>authentik-db</code>. Das Image hat einen festen Versionstag, den Renovate pflegt; Patch- und Minor-Updates mergt es selbst, jedes startet die Datenbank kurz neu. Der Init-Container <code>pgautoupgrade</code> hebt das Datenverzeichnis bei einem Major-Sprung des Images an. Deshalb kommt ein Major-Update von PostgreSQL, <code>pgautoupgrade</code> und dem Dump-Image in <code>dbdump.yaml</code> als ein gemeinsamer PR, der eine Freigabe im Renovate-Dashboard braucht. Der Tag nennt die Debian-Variante (<code>-trixie</code>) ausdrücklich: Die Sortierung von Text hängt an der glibc-Version, ein stiller Wechsel auf ein anderes Debian-Release oder auf Alpine bringt Text-Indizes durcheinander und verlangt ein <code>REINDEX</code>. Keel ist hier bewusst nicht im Spiel: Bei einem beweglichen Tag wie <code>18</code> startete es den Pod neu, der Node nahm aber das zwischengespeicherte alte Image (bis Oktober 2026 lief so 18.1 in zyria und 18.4 in cdp).</li>
 <li><strong>E-Mail</strong>: SMTP ist für den Versand von Benachrichtigungen und Passwort-Resets konfiguriert.</li>
 <li><strong>GeoIP</strong>: Das Image bringt die GeoLite2-Datenbanken (Stadt und ASN) unter <code>/geoip</code> mit; Authentik ergänzt damit Ereignisse um Land und Netz, ohne Daten nach außen zu geben. Die Datenbanken werden mit jedem Authentik-Release erneuert, ein eigener Download von MaxMind ist nicht eingerichtet.</li>
 </ul>
@@ -1496,7 +1498,7 @@ Das Helm-Chart stammt aus dem <a href="https://charts.goauthentik.io"  target="_
 			<tr>
 					<td>Eingebetteter Outpost</td>
 					<td>ohne Integration (Feld Integration leer)</td>
-					<td>Anwendungen, Outposts; Authentik setzt beim Anlegen die erste Kubernetes-Integration ein. Mit ihr scheiterte der Controller-Task alle paar Minuten mit 403, weil er im Namespace <code>default</code> Objekte suchte. Der Outpost hat keine Provider, Forward Auth läuft über <code>Generic Forward Auth</code></td>
+					<td>Anwendungen, Outposts; Authentik setzt beim Anlegen die erste Kubernetes-Integration ein. Mit ihr scheiterte der Controller-Task alle paar Minuten mit 403, weil er im Namespace <code>default</code> Objekte suchte. Die Provider für Forward Auth setzt <code>62-forward-auth.yaml</code></td>
 			</tr>
 	</tbody>
 </table>
@@ -1607,6 +1609,10 @@ des Servers (Reloader) und ein Neuladen im Browser.</p>
 					<td>Hostname von matrix-admin (zyria); liegt außerhalb der Cookie-Domain, deshalb ein eigener Provider; ohne Wert legt der Blueprint die App nicht an</td>
 			</tr>
 			<tr>
+					<td><code>AK_BLUEPRINT_ICLOUDPD_HOST</code></td>
+					<td>Hostname der Weboberfläche von icloudpd (zyria, <code>apps/nextcloud</code>); eigener Provider, damit die Bindung an <code>authentik Admins</code> greift (der Domain-Provider lässt jedes Konto durch); ohne Wert legt der Blueprint die App nicht an</td>
+			</tr>
+			<tr>
 					<td><code>AK_BLUEPRINT_SLUG_ROUNDCUBE</code></td>
 					<td>Slug der Roundcube-App (Teil der Issuer-URL, deshalb nicht angleichen)</td>
 			</tr>
@@ -1704,7 +1710,7 @@ des Servers (Reloader) und ein Neuladen im Browser.</p>
 			</tr>
 			<tr>
 					<td><code>62-forward-auth.yaml</code></td>
-					<td>Proxy-Provider für Traefik Forward Auth (ganze Domain, ohne Bindung) und Longhorn (nur dieser Host, Bindung an <code>authentik Admins</code> und <code>AK_BLUEPRINT_GROUP_LONGHORN_EXTRA</code>), optional matrix-admin (Bindung an <code>authentik Admins</code>), Outpost <code>Generic Forward Auth</code> mit zwei Replikas auf verschiedenen Nodes; der eingebettete Outpost bleibt in der Datenbank</td>
+					<td>Proxy-Provider für Traefik Forward Auth (ganze Domain, ohne Bindung) und Longhorn (nur dieser Host, Bindung an <code>authentik Admins</code> und <code>AK_BLUEPRINT_GROUP_LONGHORN_EXTRA</code>), optional matrix-admin und icloudpd (je Bindung an <code>authentik Admins</code>); alle am eingebetteten Outpost, der eigenständige Outpost <code>Generic Forward Auth</code> wird entfernt (<code>state: absent</code>)</td>
 			</tr>
 			<tr>
 					<td><code>70-notifications.yaml</code></td>
@@ -1908,7 +1914,19 @@ des Servers (Reloader) und ein Neuladen im Browser.</p>
     </span>
     
 </h4>
-<p>Server, Worker und der Outpost <code>Generic Forward Auth</code> laufen mit je zwei Replikas auf verschiedenen Nodes (<code>topologySpreadConstraints</code> mit <code>DoNotSchedule</code>), jeweils mit einem PodDisruptionBudget, das beim Leeren eines Nodes nur einen Pod zugleich räumt. Authentik hält Sitzungen, Flow-Zustand und Cache in PostgreSQL, deshalb kann jede Server-Replika jede Anfrage beantworten; ein Neustart eines Server-Pods unterbricht keine laufende Anmeldung. Die Replikas des Outposts stehen in <code>62-forward-auth.yaml</code> (<code>kubernetes_replicas</code>, Verteilung per <code>kubernetes_json_patches</code>), sein PodDisruptionBudget in <code>outpost-pdb.yaml</code>, weil Authentik selbst keines anlegt. Server und Outpost warten beim Beenden 10 Sekunden (<code>preStop</code> mit <code>sleep</code>), bis Traefik den Pod aus seinen Endpunkten genommen hat; ohne die Pause bekam eine Anfrage in diesem Moment eine 502.</p>
+<p>Server und Worker laufen mit je zwei Replikas auf verschiedenen Nodes (<code>topologySpreadConstraints</code> mit <code>DoNotSchedule</code>), jeweils mit einem PodDisruptionBudget, das beim Leeren eines Nodes nur einen Pod zugleich räumt. Authentik hält Sitzungen, Flow-Zustand und Cache in PostgreSQL, deshalb kann jede Server-Replika jede Anfrage beantworten; ein Neustart eines Server-Pods unterbricht keine laufende Anmeldung. Das gilt auch für Forward Auth, weil der eingebettete Outpost im Server läuft. Der Server wartet beim Beenden 10 Sekunden (<code>preStop</code> mit <code>sleep</code>), bis Traefik den Pod aus seinen Endpunkten genommen hat; ohne die Pause bekam eine Anfrage in diesem Moment eine 502.</p>
+
+<h4 class="relative group">Forward Auth
+    <div id="forward-auth" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#forward-auth" aria-label="Anker">#</a>
+    </span>
+    
+</h4>
+<p>Die Middleware <code>kube-system-authentik</code> fragt den eingebetteten Outpost im Server. Bis zum 02.11.2026 lief dafür ein eigenständiger Outpost <code>Generic Forward Auth</code> mit zwei Replikas. Ein eigenständiger Outpost speichert seine Sitzungen als Dateien im eigenen Pod (Authentik 2026.8.5, <code>internal/outpost/proxyv2/refresh.go</code>: <code>SessionBackend()</code> ist dort <code>filesystem</code>, nur der eingebettete nutzt <code>postgres</code>). Landete eine Anfrage beim anderen Pod, war die Sitzung dort unbekannt, und der Browser wurde wieder zur Anmeldung geschickt. Bei Seiten, die laufend nachladen (icloudpd), entstand daraus eine Schleife. Mehr Replikas eines eigenständigen Outposts sind deshalb keine Option.</p>
+<p>Provider im Modus <code>forward_single</code> (Longhorn, matrix-admin, icloudpd) schicken den Browser nach der Anmeldung an <code>https://&lt;host&gt;/outpost.goauthentik.io/callback</code>. Diesen Pfad leitet <code>outpost-ingress.yaml</code> je Host an den Server; der eigenständige Outpost hatte diesen Ingress selbst angelegt. Ein neuer Provider dieser Art braucht dort seinen Host. Der Domain-Provider nutzt <code>auth.zyria.de</code>, das der Server-Ingress schon abdeckt.</p>
 <p>Die Datenbank bleibt eine einzelne Instanz. Fällt sie aus, stehen Anmeldung und Forward-Auth still, bis Longhorn das Volume auf einem anderen Node bereitstellt.</p>
 
 <h4 class="relative group">Überwachung
@@ -1920,7 +1938,7 @@ des Servers (Reloader) und ein Neuladen im Browser.</p>
     </span>
     
 </h4>
-<p>Server und Worker liefern Metriken auf Port 9300, die ServiceMonitore <code>authentik-server</code> und <code>authentik-worker</code> aus dem Chart holen sie ab. Den Outpost überwacht Authentik selbst mit einem eigenen ServiceMonitor. Die PrometheusRule <code>authentik</code> des Charts (<code>prometheus.rules.enabled</code>) bringt Recording-Regeln und vier Alarme mit:</p>
+<p>Server und Worker liefern Metriken auf Port 9300, die ServiceMonitore <code>authentik-server</code> und <code>authentik-worker</code> aus dem Chart holen sie ab. Die PrometheusRule <code>authentik</code> des Charts (<code>prometheus.rules.enabled</code>) bringt Recording-Regeln und vier Alarme mit:</p>
 <table>
 	<thead>
 			<tr>
@@ -1979,8 +1997,8 @@ des Servers (Reloader) und ein Neuladen im Browser.</p>
 <p>Von Hand auslösen:</p>
 <div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">kubectl -n authentik create job --from<span class="o">=</span>cronjob/authentik-db-dump authentik-db-dump-manuell</span></span></code></pre></div></div>
 <p>Zum Einsehen oder Zurückspielen einen Hilfs-Pod mit dem Dump-Volume starten, das Image passend zu <code>dbdump.yaml</code>:</p>
-<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">kubectl -n authentik run db-restore --rm -it --restart<span class="o">=</span>Never --image<span class="o">=</span>docker.io/library/postgres:18.6 <span class="se">\
-</span></span></span><span class="line"><span class="ln">2</span><span class="cl">  --overrides<span class="o">=</span><span class="s1">&#39;{&#34;spec&#34;:{&#34;securityContext&#34;:{&#34;runAsUser&#34;:999,&#34;runAsGroup&#34;:999,&#34;fsGroup&#34;:999},&#34;containers&#34;:[{&#34;name&#34;:&#34;db-restore&#34;,&#34;image&#34;:&#34;docker.io/library/postgres:18.6&#34;,&#34;stdin&#34;:true,&#34;tty&#34;:true,&#34;command&#34;:[&#34;bash&#34;],&#34;env&#34;:[{&#34;name&#34;:&#34;PGHOST&#34;,&#34;value&#34;:&#34;authentik-postgresql&#34;},{&#34;name&#34;:&#34;PGUSER&#34;,&#34;value&#34;:&#34;authentik&#34;},{&#34;name&#34;:&#34;PGPASSWORD&#34;,&#34;valueFrom&#34;:{&#34;secretKeyRef&#34;:{&#34;name&#34;:&#34;authentik-postgresql&#34;,&#34;key&#34;:&#34;password&#34;}}}],&#34;volumeMounts&#34;:[{&#34;name&#34;:&#34;backup&#34;,&#34;mountPath&#34;:&#34;/backup&#34;,&#34;readOnly&#34;:true}]}],&#34;volumes&#34;:[{&#34;name&#34;:&#34;backup&#34;,&#34;persistentVolumeClaim&#34;:{&#34;claimName&#34;:&#34;authentik-db-dump&#34;}}]}}&#39;</span></span></span></code></pre></div></div>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">kubectl -n authentik run db-restore --rm -it --restart<span class="o">=</span>Never --image<span class="o">=</span>docker.io/library/postgres:18.6-trixie <span class="se">\
+</span></span></span><span class="line"><span class="ln">2</span><span class="cl">  --overrides<span class="o">=</span><span class="s1">&#39;{&#34;spec&#34;:{&#34;securityContext&#34;:{&#34;runAsUser&#34;:999,&#34;runAsGroup&#34;:999,&#34;fsGroup&#34;:999},&#34;containers&#34;:[{&#34;name&#34;:&#34;db-restore&#34;,&#34;image&#34;:&#34;docker.io/library/postgres:18.6-trixie&#34;,&#34;stdin&#34;:true,&#34;tty&#34;:true,&#34;command&#34;:[&#34;bash&#34;],&#34;env&#34;:[{&#34;name&#34;:&#34;PGHOST&#34;,&#34;value&#34;:&#34;authentik-postgresql&#34;},{&#34;name&#34;:&#34;PGUSER&#34;,&#34;value&#34;:&#34;authentik&#34;},{&#34;name&#34;:&#34;PGPASSWORD&#34;,&#34;valueFrom&#34;:{&#34;secretKeyRef&#34;:{&#34;name&#34;:&#34;authentik-postgresql&#34;,&#34;key&#34;:&#34;password&#34;}}}],&#34;volumeMounts&#34;:[{&#34;name&#34;:&#34;backup&#34;,&#34;mountPath&#34;:&#34;/backup&#34;,&#34;readOnly&#34;:true}]}],&#34;volumes&#34;:[{&#34;name&#34;:&#34;backup&#34;,&#34;persistentVolumeClaim&#34;:{&#34;claimName&#34;:&#34;authentik-db-dump&#34;}}]}}&#39;</span></span></span></code></pre></div></div>
 <p>Im Pod einen Dump ansehen oder einzelne Werte nachschlagen. Dafür startet der Pod einen eigenen, flüchtigen PostgreSQL unter <code>/tmp</code> und spielt den Dump dort ein; die laufende Datenbank bleibt unberührt:</p>
 <div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">ls -lh /backup
 </span></span><span class="line"><span class="ln">2</span><span class="cl">pg_restore --list /backup/authentik-&lt;Zeitstempel&gt;.dump <span class="p">|</span> less

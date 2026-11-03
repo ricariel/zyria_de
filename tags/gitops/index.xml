@@ -9,7 +9,57 @@
     <managingEditor>fabrice@zyria.de (Fabrice Kirchner)</managingEditor>
     <webMaster>fabrice@zyria.de (Fabrice Kirchner)</webMaster>
     
-    <lastBuildDate>Mon, 02 Nov 2026 01:35:37 +0100</lastBuildDate><atom:link href="https://zyria.de/tags/gitops/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 02 Nov 2026 11:15:34 +0100</lastBuildDate><atom:link href="https://zyria.de/tags/gitops/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Matrix Synapse Admin</title>
+      <link>https://zyria.de/posts/homelab/k3s-prod/apps/matrix-admin/readme/</link>
+      <pubDate>Mon, 02 Nov 2026 11:15:34 +0100</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/matrix-admin/readme/</guid>
+      <description>Synapse Admin bietet eine einfache grafische Oberfläche, um Benutzer und Räume auf einem Synapse Homeserver zu verwalten, ohne die Admin-API direkt verwenden zu müssen.</description>
+      
+    </item>
+    
+    <item>
+      <title>Mastodon</title>
+      <link>https://zyria.de/posts/homelab/k3s-prod/apps/mastodon/readme/</link>
+      <pubDate>Mon, 02 Nov 2026 09:03:22 +0100</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/mastodon/readme/</guid>
+      <description>Mastodon ist eine Open-Source-Alternative zu kommerziellen sozialen Netzwerken. Es ermöglicht Benutzern, eigene, unabhängige Server (Instanzen) zu betreiben, die über das ActivityPub-Protokoll miteinander kommunizieren können (Föderation).</description>
+      
+    </item>
+    
+    <item>
+      <title>Matrix</title>
+      <link>https://zyria.de/posts/homelab/k3s-prod/apps/matrix/readme/</link>
+      <pubDate>Mon, 02 Nov 2026 09:03:22 +0100</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/matrix/readme/</guid>
+      <description>Diese Anwendung stellt einen Matrix-Homeserver (Synapse) und einen Web-Client (Element) bereit, um einen föderierten, Ende-zu-Ende-verschlüsselten Chat-Dienst zu betreiben.</description>
+      
+    </item>
+    
+    <item>
+      <title>Paperless-ngx</title>
+      <link>https://zyria.de/posts/homelab/k3s-prod/apps/paperless/readme/</link>
+      <pubDate>Mon, 02 Nov 2026 09:03:22 +0100</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/paperless/readme/</guid>
+      <description>This document describes the Paperless-ngx deployment, a document management system that transforms physical documents into searchable digital archives.</description>
+      
+    </item>
+    
+    <item>
+      <title>OpenObserve</title>
+      <link>https://zyria.de/posts/homelab/k3s-prod/apps/openobserve/readme/</link>
+      <pubDate>Mon, 02 Nov 2026 08:23:40 +0100</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/openobserve/readme/</guid>
+      <description>OpenObserve speichert die Container-Logs, die Fluent Bit einliefert, 90 Tage lang auf einem Longhorn-Volume, macht sie durchsuchbar und liefert die Traefik-Access-Logs für ein Replay in CrowdSec. Anmeldung per Single Sign-on über Dex und Authentik.</description>
+      
+    </item>
     
     <item>
       <title>Fluent Bit</title>
@@ -18,16 +68,6 @@
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/posts/homelab/k3s-prod/apps/fluent-bit/readme/</guid>
       <description>Fluent Bit läuft als DaemonSet auf jedem Knoten, liest Container-Logs und das Journal, reichert sie mit Kubernetes-Metadaten an und schickt sie an OpenObserve; eine einzelne Instanz liefert die Kubernetes-Ereignisse.</description>
-      
-    </item>
-    
-    <item>
-      <title>OpenObserve</title>
-      <link>https://zyria.de/posts/homelab/k3s-prod/apps/openobserve/readme/</link>
-      <pubDate>Mon, 02 Nov 2026 01:35:37 +0100</pubDate>
-      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/openobserve/readme/</guid>
-      <description>OpenObserve speichert die Container-Logs, die Fluent Bit einliefert, 90 Tage lang auf einem Longhorn-Volume, macht sie durchsuchbar und liefert die Traefik-Access-Logs für ein Replay in CrowdSec. Anmeldung per Single Sign-on über Dex und Authentik.</description>
       
     </item>
     
@@ -68,46 +108,6 @@
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/posts/homelab/k3s-prod/apps/vpn-site-b/readme/</guid>
       <description>Ein Pod baut einen OpenVPN-Tunnel zu einem entfernten Standort auf und annonciert die dahinterliegenden Netze via Headscale ins Tailnet.</description>
-      
-    </item>
-    
-    <item>
-      <title>Mastodon</title>
-      <link>https://zyria.de/posts/homelab/k3s-prod/apps/mastodon/readme/</link>
-      <pubDate>Sat, 24 Oct 2026 02:03:53 +0200</pubDate>
-      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/mastodon/readme/</guid>
-      <description>Mastodon ist eine Open-Source-Alternative zu kommerziellen sozialen Netzwerken. Es ermöglicht Benutzern, eigene, unabhängige Server (Instanzen) zu betreiben, die über das ActivityPub-Protokoll miteinander kommunizieren können (Föderation).</description>
-      
-    </item>
-    
-    <item>
-      <title>Matrix</title>
-      <link>https://zyria.de/posts/homelab/k3s-prod/apps/matrix/readme/</link>
-      <pubDate>Sat, 24 Oct 2026 02:03:53 +0200</pubDate>
-      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/matrix/readme/</guid>
-      <description>Diese Anwendung stellt einen Matrix-Homeserver (Synapse) und einen Web-Client (Element) bereit, um einen föderierten, Ende-zu-Ende-verschlüsselten Chat-Dienst zu betreiben.</description>
-      
-    </item>
-    
-    <item>
-      <title>Paperless-ngx</title>
-      <link>https://zyria.de/posts/homelab/k3s-prod/apps/paperless/readme/</link>
-      <pubDate>Fri, 23 Oct 2026 13:21:19 +0200</pubDate>
-      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/paperless/readme/</guid>
-      <description>This document describes the Paperless-ngx deployment, a document management system that transforms physical documents into searchable digital archives.</description>
-      
-    </item>
-    
-    <item>
-      <title>Matrix Synapse Admin</title>
-      <link>https://zyria.de/posts/homelab/k3s-prod/apps/matrix-admin/readme/</link>
-      <pubDate>Fri, 23 Oct 2026 11:56:07 +0200</pubDate>
-      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/matrix-admin/readme/</guid>
-      <description>Synapse Admin bietet eine einfache grafische Oberfläche, um Benutzer und Räume auf einem Synapse Homeserver zu verwalten, ohne die Admin-API direkt verwenden zu müssen.</description>
       
     </item>
     
