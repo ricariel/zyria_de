@@ -104,8 +104,8 @@
 	<meta property="og:locale" content="de_de">
 	<meta property="og:type" content="article">
 		<meta property="article:section" content="posts">
-		<meta property="article:published_time" content="2026-10-17T01:22:30+02:00">
-		<meta property="article:modified_time" content="2026-10-17T01:22:30+02:00">
+		<meta property="article:published_time" content="2026-11-07T15:06:59+01:00">
+		<meta property="article:modified_time" content="2026-11-07T15:06:59+01:00">
 		<meta property="article:tag" content="Kubernetes">
 		<meta property="article:tag" content="K3s">
 		<meta property="article:tag" content="Gitops">
@@ -311,15 +311,15 @@ href="/site.webmanifest.min.e231d7c2a5ac29753d1781895bdd4b9a0e5900e75bcee133bb47
       "sameAs": ["https://git.casa-due-pur.de/fabrice.kirchner", "https://git.zyria.de/pyrox", "https://github.com/ricariel", "https://www.linkedin.com/in/fabrice-kirchner-bb5408163/", "https://www.xing.com/profile/Fabrice_Kirchner", "https://kirchner.social/@fabrice", "https://codeberg.org/ricariel"]
     },
     "copyrightYear": "2026",
-    "dateCreated": "2026-10-17T01:22:30\u002b02:00",
-    "datePublished": "2026-10-17T01:22:30\u002b02:00",
+    "dateCreated": "2026-11-07T15:06:59\u002b01:00",
+    "datePublished": "2026-11-07T15:06:59\u002b01:00",
     
-    "dateModified": "2026-10-17T01:22:30\u002b02:00",
+    "dateModified": "2026-11-07T15:06:59\u002b01:00",
     
     "keywords": ["kubernetes","k3s","gitops","argocd","helm","kustomize","homelab","produktion"],
     
     "mainEntityOfPage": "https://zyria.de/posts/homelab/k3s-prod/apps/scrypted/readme/",
-    "wordCount": "237"
+    "wordCount": "373"
   }]
   </script>
 
@@ -964,7 +964,7 @@ href="/site.webmanifest.min.e231d7c2a5ac29753d1781895bdd4b9a0e5900e75bcee133bb47
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2026-10-17T01:22:30&#43;02:00">17 Oktober 2026</time><span class="px-2 text-primary-500">&middot;</span><span>237 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
+      <time datetime="2026-11-07T15:06:59&#43;01:00">7 November 2026</time><span class="px-2 text-primary-500">&middot;</span><span>373 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
 
 
   
@@ -1444,7 +1444,7 @@ Aufnahmen.</p>
 	<tbody>
 			<tr>
 					<td><code>values.yaml</code></td>
-					<td>Deployment mit Init-Container für das Routing, Service, Ingress, Volume</td>
+					<td>Deployment mit Init-Containern für Routing und Portsperre im Heimnetz, Service, Ingress, Volume</td>
 			</tr>
 			<tr>
 					<td><code>networkAttachmentDefinition.yaml</code></td>
@@ -1476,6 +1476,19 @@ feste Adresse aus <code>values.yaml</code>). Der Init-Container legt Multicast
 mit der Cluster-IP an, die die iPhones nicht erreichen, und Kamerastreams
 kommen nicht an. Dasselbe Problem hatte die HomeKit-Integration von Home
 Assistant.</p>
+<p>Der Scrypted-Server lauscht auf allen Schnittstellen, also auch im Heimnetz.
+Ein zweiter Init-Container (<code>guard-net1</code>) sperrt deshalb per nftables im
+Netz-Namespace des Pods die Server-Ports 10081 (Debug), 10443 und 11080 auf
+<code>net1</code>. Die Weboberfläche bleibt über Traefik auf <code>eth0</code> erreichbar, mit
+<code>localnet</code> und Authentik. HomeKit, mDNS und RTP laufen über andere Ports und
+bleiben offen. Ohne diese Sperre erreicht jedes Gerät im Heimnetz den Server
+ohne Anmeldung; seine Anfragen werden schon vor der Anmeldung verarbeitet
+(CVE-2026-111497 in Node, pyrox/k3s-prod#1128). Die Firewall der UCG hilft
+hier nicht, weil Geräte im selben Netz sie nicht passieren, und die Option
+<code>SCRYPTED_SERVER_LISTEN_HOSTNAMES</code> prüft erst nach dieser Verarbeitung.</p>
+<p>Die Regel steht in der ConfigMap aus <code>values.yaml</code> (<code>guard.nft</code>). Prüfen
+lässt sie sich nur mit einem Werkzeug, das <code>nft</code> mitbringt, etwa per
+<code>kubectl debug</code> mit demselben Image; im Scrypted-Image fehlt <code>nft</code>.</p>
 
 <h3 class="relative group">Einrichtung in der Oberfläche
     <div id="einrichtung-in-der-oberfläche" class="anchor"></div>
@@ -1730,14 +1743,14 @@ iCloud+-Abo. Die Aufnahmen speichert Apple verschlüsselt in iCloud.</p>
           
             <a
               class="flex text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
-              href="/posts/homelab/k3s-prod/apps/multus/readme/">
+              href="/posts/homelab/k3s-prod/apps/vpn-site-a/readme/">
               <span class="leading-6">
-                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;Multus CNI
+                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;VPN Standort A - Tailscale Subnet Router
               </span>
             </a>
             
               <span class="ms-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
-                <time datetime="2026-10-12T11:11:43&#43;02:00">12 Oktober 2026</time>
+                <time datetime="2026-11-07T14:35:49&#43;01:00">7 November 2026</time>
               </span>
             
           
@@ -1746,14 +1759,14 @@ iCloud+-Abo. Die Aufnahmen speichert Apple verschlüsselt in iCloud.</p>
           
             <a
               class="flex text-right text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
-              href="/posts/homelab/k3s-prod/apps/corenetworks-dns-operator/readme/">
+              href="/posts/homelab/k3s-prod/apps/home-assistant/readme/">
               <span class="leading-6">
-                &ensp;<span class="inline-block rtl:rotate-180">&rarr;</span>
+                Home Assistant&ensp;<span class="inline-block rtl:rotate-180">&rarr;</span>
               </span>
             </a>
             
               <span class="me-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
-                <time datetime="2026-10-17T12:15:30&#43;02:00">17 Oktober 2026</time>
+                <time datetime="2026-11-07T15:32:12&#43;01:00">7 November 2026</time>
               </span>
             
           
