@@ -104,8 +104,8 @@
 	<meta property="og:locale" content="de_de">
 	<meta property="og:type" content="article">
 		<meta property="article:section" content="posts">
-		<meta property="article:published_time" content="2026-10-24T03:21:23+02:00">
-		<meta property="article:modified_time" content="2026-10-24T03:21:23+02:00">
+		<meta property="article:published_time" content="2026-11-08T12:16:24+01:00">
+		<meta property="article:modified_time" content="2026-11-08T12:16:24+01:00">
 		<meta property="article:tag" content="Kubernetes">
 		<meta property="article:tag" content="K3s">
 		<meta property="article:tag" content="Gitops">
@@ -311,15 +311,15 @@ href="/site.webmanifest.min.e231d7c2a5ac29753d1781895bdd4b9a0e5900e75bcee133bb47
       "sameAs": ["https://git.casa-due-pur.de/fabrice.kirchner", "https://git.zyria.de/pyrox", "https://github.com/ricariel", "https://www.linkedin.com/in/fabrice-kirchner-bb5408163/", "https://www.xing.com/profile/Fabrice_Kirchner", "https://kirchner.social/@fabrice", "https://codeberg.org/ricariel"]
     },
     "copyrightYear": "2026",
-    "dateCreated": "2026-10-24T03:21:23\u002b02:00",
-    "datePublished": "2026-10-24T03:21:23\u002b02:00",
+    "dateCreated": "2026-11-08T12:16:24\u002b01:00",
+    "datePublished": "2026-11-08T12:16:24\u002b01:00",
     
-    "dateModified": "2026-10-24T03:21:23\u002b02:00",
+    "dateModified": "2026-11-08T12:16:24\u002b01:00",
     
     "keywords": ["kubernetes","k3s","gitops","argocd","helm","kustomize","homelab","produktion"],
     
     "mainEntityOfPage": "https://zyria.de/posts/homelab/k3s-prod/apps/vpn-site-b/readme/",
-    "wordCount": "1586"
+    "wordCount": "1676"
   }]
   </script>
 
@@ -964,7 +964,7 @@ href="/site.webmanifest.min.e231d7c2a5ac29753d1781895bdd4b9a0e5900e75bcee133bb47
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2026-10-24T03:21:23&#43;02:00">24 Oktober 2026</time><span class="px-2 text-primary-500">&middot;</span><span>1586 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
+      <time datetime="2026-11-08T12:16:24&#43;01:00">8 November 2026</time><span class="px-2 text-primary-500">&middot;</span><span>1676 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
 
 
   
@@ -1467,13 +1467,17 @@ href="/site.webmanifest.min.e231d7c2a5ac29753d1781895bdd4b9a0e5900e75bcee133bb47
 	</tbody>
 </table>
 <p>Ohne <code>askpass</code> fragt OpenVPN das Zertifikatspasswort interaktiv auf der Konsole ab und der Container bleibt beim Start hängen. Es ist in der Regel <strong>nicht</strong> identisch mit dem Passwort in der <code>passfile</code>.</p>
-<p>An der gelieferten <code>config.ovpn</code> sind drei Anpassungen nötig:</p>
-<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="ln">1</span><span class="cl">pkcs12 /etc/openvpn/zertifikat.p12
-</span></span><span class="line"><span class="ln">2</span><span class="cl">auth-user-pass /etc/openvpn/passfile
-</span></span><span class="line"><span class="ln">3</span><span class="cl">askpass /etc/openvpn/askpass
-</span></span><span class="line"><span class="ln">4</span><span class="cl">
-</span></span><span class="line"><span class="ln">5</span><span class="cl">pull-filter ignore &#34;redirect-gateway&#34;
-</span></span><span class="line"><span class="ln">6</span><span class="cl">pull-filter ignore &#34;dhcp-option DNS&#34;</span></span></code></pre></div></div>
+<p>An der gelieferten <code>config.ovpn</code> sind diese Anpassungen nötig:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="ln"> 1</span><span class="cl">pkcs12 /etc/openvpn/zertifikat.p12
+</span></span><span class="line"><span class="ln"> 2</span><span class="cl">auth-user-pass /etc/openvpn/passfile
+</span></span><span class="line"><span class="ln"> 3</span><span class="cl">askpass /etc/openvpn/askpass
+</span></span><span class="line"><span class="ln"> 4</span><span class="cl">
+</span></span><span class="line"><span class="ln"> 5</span><span class="cl">pull-filter ignore &#34;redirect-gateway&#34;
+</span></span><span class="line"><span class="ln"> 6</span><span class="cl">pull-filter ignore &#34;dhcp-option DNS&#34;
+</span></span><span class="line"><span class="ln"> 7</span><span class="cl">
+</span></span><span class="line"><span class="ln"> 8</span><span class="cl">pull-filter ignore &#34;ping-restart&#34;
+</span></span><span class="line"><span class="ln"> 9</span><span class="cl">ping-restart 60
+</span></span><span class="line"><span class="ln">10</span><span class="cl">hand-window 20</span></span></code></pre></div></div>
 <p><strong>Absolute Pfade sind Pflicht.</strong> Relative Pfade löst OpenVPN gegen das Arbeitsverzeichnis auf, nicht gegen das Config-Verzeichnis — und das ist bei <code>exec openvpn --config ...</code> schlicht <code>/</code>.</p>
 
 <h3 class="relative group">Warum die pull-filter Zeilen
@@ -1488,6 +1492,7 @@ href="/site.webmanifest.min.e231d7c2a5ac29753d1781895bdd4b9a0e5900e75bcee133bb47
 <ul>
 <li><strong><code>redirect-gateway</code></strong> ist das OpenVPN-Äquivalent zu <code>AllowedIPs = 0.0.0.0/0</code>. Pusht der Server das, wandert die Default-Route des Pods in den Tunnel und die Verbindung zu Cluster und Headscale ist weg. Anders als bei WireGuard kann die Gegenstelle das erzwingen — deshalb der Filter.</li>
 <li><strong><code>dhcp-option DNS</code></strong> ist ohne <code>--up</code>-Skript zwar wirkungslos, wird aber vorsorglich verworfen, damit <code>/etc/resolv.conf</code> im Pod unangetastet bleibt.</li>
+<li><strong><code>ping-restart</code></strong> pusht die Gegenstelle mit 90 s. Bei Störungen auf dem Weg dorthin kommen über die bestehende Sitzung minutenlang keine Pakete an, eine neue Sitzung kommt teils sofort durch. Der lokale Wert von 60 s erkennt die Lücke früher, <code>hand-window 20</code> wiederholt einen scheiternden Handshake nach 20 statt 60 s. Kürzer als 60 s sollte <code>ping-restart</code> nicht sein, weil die Gegenstelle ihre Keepalives nur alle 30 s schickt; in ruhigen Phasen gäbe es sonst grundlose Neustarts. Der gepushte <code>ping 30</code> bleibt wirksam.</li>
 </ul>
 <p><code>persist-tun</code> sollte gesetzt sein: ohne die Option reißt OpenVPN bei jedem Reconnect <code>tun0</code> ab, die Routen sind weg und <code>tailscaled</code> annonciert ins Leere. <code>persist-key</code> ist ab OpenVPN 2.6 wirkungslos — Schlüssel werden immer über Neustarts gehalten, die Option wird nur noch mit einer Deprecation-Meldung quittiert.</p>
 <p>Der Container läuft mit <code>readOnlyRootFilesystem: true</code>. OpenVPN besteht aber auf einem beschreibbaren <code>--tmp-dir</code> und bricht sonst schon beim Parsen der Optionen ab. Dafür ist ein eigenes <code>emptyDir</code> auf <code>/tmp</code> eingehängt, statt das read-only-Root aufzugeben.</p>
@@ -1876,14 +1881,14 @@ href="/site.webmanifest.min.e231d7c2a5ac29753d1781895bdd4b9a0e5900e75bcee133bb47
           
             <a
               class="flex text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
-              href="/posts/homelab/k3s-prod/apps/crowdsec/readme/">
+              href="/posts/homelab/k3s-prod/apps/home-assistant/readme/">
               <span class="leading-6">
-                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;CrowdSec
+                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;Home Assistant
               </span>
             </a>
             
               <span class="ms-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
-                <time datetime="2026-10-23T23:00:00&#43;02:00">23 Oktober 2026</time>
+                <time datetime="2026-11-07T15:32:12&#43;01:00">7 November 2026</time>
               </span>
             
           
@@ -1892,14 +1897,14 @@ href="/site.webmanifest.min.e231d7c2a5ac29753d1781895bdd4b9a0e5900e75bcee133bb47
           
             <a
               class="flex text-right text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
-              href="/posts/homelab/k3s-prod/apps/unbound/readme/">
+              href="/posts/homelab/k3s-prod/apps/ansible-semaphore/readme/">
               <span class="leading-6">
-                Unbound&ensp;<span class="inline-block rtl:rotate-180">&rarr;</span>
+                Ansible Semaphore&ensp;<span class="inline-block rtl:rotate-180">&rarr;</span>
               </span>
             </a>
             
               <span class="me-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
-                <time datetime="2026-10-24T03:21:23&#43;02:00">24 Oktober 2026</time>
+                <time datetime="2026-11-08T15:02:21&#43;01:00">8 November 2026</time>
               </span>
             
           

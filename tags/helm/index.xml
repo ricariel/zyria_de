@@ -9,7 +9,27 @@
     <managingEditor>fabrice@zyria.de (Fabrice Kirchner)</managingEditor>
     <webMaster>fabrice@zyria.de (Fabrice Kirchner)</webMaster>
     
-    <lastBuildDate>Sat, 07 Nov 2026 15:32:12 +0100</lastBuildDate><atom:link href="https://zyria.de/tags/helm/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 08 Nov 2026 15:02:21 +0100</lastBuildDate><atom:link href="https://zyria.de/tags/helm/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Ansible Semaphore</title>
+      <link>https://zyria.de/posts/homelab/k3s-prod/apps/ansible-semaphore/readme/</link>
+      <pubDate>Sun, 08 Nov 2026 15:02:21 +0100</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/ansible-semaphore/readme/</guid>
+      <description>Dieses Dokument beschreibt die Bereitstellung von Ansible Semaphore, einer webbasierten Benutzeroberfläche zur Verwaltung und Ausführung von Ansible Playbooks.</description>
+      
+    </item>
+    
+    <item>
+      <title>VPN Standort B - Tailscale Subnet Router</title>
+      <link>https://zyria.de/posts/homelab/k3s-prod/apps/vpn-site-b/readme/</link>
+      <pubDate>Sun, 08 Nov 2026 12:16:24 +0100</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/vpn-site-b/readme/</guid>
+      <description>Ein Pod baut einen OpenVPN-Tunnel zu einem entfernten Standort auf und annonciert die dahinterliegenden Netze via Headscale ins Tailnet.</description>
+      
+    </item>
     
     <item>
       <title>Home Assistant</title>
@@ -132,32 +152,12 @@
     </item>
     
     <item>
-      <title>Ansible Semaphore</title>
-      <link>https://zyria.de/posts/homelab/k3s-prod/apps/ansible-semaphore/readme/</link>
-      <pubDate>Sat, 24 Oct 2026 03:39:20 +0200</pubDate>
-      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/ansible-semaphore/readme/</guid>
-      <description>Dieses Dokument beschreibt die Bereitstellung von Ansible Semaphore, einer webbasierten Benutzeroberfläche zur Verwaltung und Ausführung von Ansible Playbooks.</description>
-      
-    </item>
-    
-    <item>
       <title>Unbound</title>
       <link>https://zyria.de/posts/homelab/k3s-prod/apps/unbound/readme/</link>
       <pubDate>Sat, 24 Oct 2026 03:21:23 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/posts/homelab/k3s-prod/apps/unbound/readme/</guid>
       <description>Unbound löst Namen selbst rekursiv auf und liefert bei einem Ausfall der autoritativen Nameserver weiterhin die zuletzt bekannten Antworten aus.</description>
-      
-    </item>
-    
-    <item>
-      <title>VPN Standort B - Tailscale Subnet Router</title>
-      <link>https://zyria.de/posts/homelab/k3s-prod/apps/vpn-site-b/readme/</link>
-      <pubDate>Sat, 24 Oct 2026 03:21:23 +0200</pubDate>
-      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/vpn-site-b/readme/</guid>
-      <description>Ein Pod baut einen OpenVPN-Tunnel zu einem entfernten Standort auf und annonciert die dahinterliegenden Netze via Headscale ins Tailnet.</description>
       
     </item>
     
