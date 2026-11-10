@@ -9,7 +9,7 @@
     <managingEditor>fabrice@zyria.de (Fabrice Kirchner)</managingEditor>
     <webMaster>fabrice@zyria.de (Fabrice Kirchner)</webMaster>
     
-    <lastBuildDate>Sun, 08 Nov 2026 16:43:00 +0100</lastBuildDate><atom:link href="https://zyria.de/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 09 Nov 2026 19:10:27 +0100</lastBuildDate><atom:link href="https://zyria.de/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Erste Hilfe</title>
@@ -218,16 +218,6 @@
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/posts/homelab/k3s-prod/apps/localkit/readme/</guid>
       <description>Localkit ersetzt die Petkit-Cloud-API und den Aliyun-MQTT-Broker im Heimnetz. Die Geraete vertrauen einer eigenen CA aus cert-manager, die in ihr Steuerprogramm gepatcht wird.</description>
-      
-    </item>
-    
-    <item>
-      <title>Mailstack</title>
-      <link>https://zyria.de/posts/homelab/k3s-prod/apps/mailstack-new/readme/</link>
-      <pubDate>Wed, 21 Oct 2026 19:50:04 +0200</pubDate>
-      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/mailstack-new/readme/</guid>
-      <description>Dieser Mailstack integriert mehrere Komponenten wie Postfix, Dovecot, Rspamd und ClamAV, um einen robusten und sicheren E-Mail-Dienst mit Spam- und Virenfilterung bereitzustellen.</description>
       
     </item>
     
