@@ -1,0 +1,4 @@
+dn: CN=Organizational-Person,CN=Schema,CN=Configuration,DC=ad,DC=zyria,DC=de
+changetype: modify
+add: mayContain
+mayContain: mailQuota
