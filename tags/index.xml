@@ -9,7 +9,47 @@
     <managingEditor>fabrice@zyria.de (Fabrice Kirchner)</managingEditor>
     <webMaster>fabrice@zyria.de (Fabrice Kirchner)</webMaster>
     
-    <lastBuildDate>Mon, 09 Nov 2026 19:10:27 +0100</lastBuildDate><atom:link href="https://zyria.de/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 10 Nov 2026 09:42:16 +0100</lastBuildDate><atom:link href="https://zyria.de/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Active Directory</title>
+      <link>https://zyria.de/tags/active-directory/</link>
+      <pubDate>Tue, 10 Nov 2026 09:42:16 +0100</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://zyria.de/tags/active-directory/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Homelab</title>
+      <link>https://zyria.de/tags/homelab/</link>
+      <pubDate>Tue, 10 Nov 2026 09:42:16 +0100</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://zyria.de/tags/homelab/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Samba</title>
+      <link>https://zyria.de/tags/samba/</link>
+      <pubDate>Tue, 10 Nov 2026 09:42:16 +0100</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://zyria.de/tags/samba/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Software</title>
+      <link>https://zyria.de/tags/software/</link>
+      <pubDate>Tue, 10 Nov 2026 09:42:16 +0100</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://zyria.de/tags/software/</guid>
+      <description></description>
+      
+    </item>
     
     <item>
       <title>Argocd</title>
@@ -37,16 +77,6 @@
       <pubDate>Mon, 09 Nov 2026 17:41:49 +0100</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/tags/helm/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>Homelab</title>
-      <link>https://zyria.de/tags/homelab/</link>
-      <pubDate>Mon, 09 Nov 2026 17:41:49 +0100</pubDate>
-      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://zyria.de/tags/homelab/</guid>
       <description></description>
       
     </item>
@@ -162,16 +192,6 @@
     </item>
     
     <item>
-      <title>Active-Directory</title>
-      <link>https://zyria.de/tags/active-directory/</link>
-      <pubDate>Wed, 14 Oct 2026 14:11:08 +0200</pubDate>
-      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://zyria.de/tags/active-directory/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
       <title>Bash</title>
       <link>https://zyria.de/tags/bash/</link>
       <pubDate>Wed, 14 Oct 2026 14:11:08 +0200</pubDate>
@@ -257,16 +277,6 @@
       <pubDate>Wed, 14 Oct 2026 14:11:08 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/tags/snippets/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>Software</title>
-      <link>https://zyria.de/tags/software/</link>
-      <pubDate>Wed, 14 Oct 2026 14:11:08 +0200</pubDate>
-      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://zyria.de/tags/software/</guid>
       <description></description>
       
     </item>
@@ -917,16 +927,6 @@
       <pubDate>Tue, 01 Jul 2025 17:06:46 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/tags/%C3%BCber-mich/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>Samba</title>
-      <link>https://zyria.de/tags/samba/</link>
-      <pubDate>Tue, 01 Jul 2025 13:37:34 +0200</pubDate>
-      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://zyria.de/tags/samba/</guid>
       <description></description>
       
     </item>

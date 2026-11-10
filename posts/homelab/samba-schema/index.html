@@ -104,12 +104,12 @@
 	<meta property="og:locale" content="de_de">
 	<meta property="og:type" content="article">
 		<meta property="article:section" content="posts">
-		<meta property="article:published_time" content="2025-07-01T13:37:34+02:00">
-		<meta property="article:modified_time" content="2025-07-01T13:37:34+02:00">
+		<meta property="article:published_time" content="2026-11-10T09:42:16+01:00">
+		<meta property="article:modified_time" content="2026-11-10T09:42:16+01:00">
 		<meta property="article:tag" content="Homelab">
 		<meta property="article:tag" content="Software">
 		<meta property="article:tag" content="Samba">
-		<meta property="article:tag" content="Active-Directory">
+		<meta property="article:tag" content="Active Directory">
 
   
 	<meta name="twitter:card" content="summary">
@@ -308,16 +308,16 @@ href="/site.webmanifest.min.e231d7c2a5ac29753d1781895bdd4b9a0e5900e75bcee133bb47
       "image": "https://zyria.de/images/chibi-head.jpg",
       "sameAs": ["https://git.casa-due-pur.de/fabrice.kirchner", "https://git.zyria.de/pyrox", "https://github.com/ricariel", "https://www.linkedin.com/in/fabrice-kirchner-bb5408163/", "https://www.xing.com/profile/Fabrice_Kirchner", "https://kirchner.social/@fabrice", "https://codeberg.org/ricariel"]
     },
-    "copyrightYear": "2025",
-    "dateCreated": "2025-07-01T13:37:34\u002b02:00",
-    "datePublished": "2025-07-01T13:37:34\u002b02:00",
+    "copyrightYear": "2026",
+    "dateCreated": "2026-11-10T09:42:16\u002b01:00",
+    "datePublished": "2026-11-10T09:42:16\u002b01:00",
     
-    "dateModified": "2025-07-01T13:37:34\u002b02:00",
+    "dateModified": "2026-11-10T09:42:16\u002b01:00",
     
     "keywords": ["homelab","software","samba","active directory"],
     
     "mainEntityOfPage": "https://zyria.de/posts/homelab/samba-schema/",
-    "wordCount": "162"
+    "wordCount": "246"
   }]
   </script>
 
@@ -953,7 +953,7 @@ href="/site.webmanifest.min.e231d7c2a5ac29753d1781895bdd4b9a0e5900e75bcee133bb47
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2025-07-01T13:37:34&#43;02:00">1 Juli 2025</time><span class="px-2 text-primary-500">&middot;</span><span>162 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
+      <time datetime="2026-11-10T09:42:16&#43;01:00">10 November 2026</time><span class="px-2 text-primary-500">&middot;</span><span>246 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
 
 
   
@@ -1083,7 +1083,7 @@ href="/site.webmanifest.min.e231d7c2a5ac29753d1781895bdd4b9a0e5900e75bcee133bb47
     <span
       class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
   
-    Active-Directory
+    Active Directory
   </span>
 </span>
 
@@ -1126,6 +1126,8 @@ href="/site.webmanifest.min.e231d7c2a5ac29753d1781895bdd4b9a0e5900e75bcee133bb47
     <li><a href="#modify-computer">modify computer</a></li>
     <li><a href="#ldappublickey">ldapPublicKey</a></li>
     <li><a href="#modify-user">modify user</a></li>
+    <li><a href="#mailquota">mailQuota</a></li>
+    <li><a href="#modify-organizationalperson">modify organizationalPerson</a></li>
   </ul>
 </nav>
   </div>
@@ -1143,6 +1145,8 @@ href="/site.webmanifest.min.e231d7c2a5ac29753d1781895bdd4b9a0e5900e75bcee133bb47
     <li><a href="#modify-computer">modify computer</a></li>
     <li><a href="#ldappublickey">ldapPublicKey</a></li>
     <li><a href="#modify-user">modify user</a></li>
+    <li><a href="#mailquota">mailQuota</a></li>
+    <li><a href="#modify-organizationalperson">modify organizationalPerson</a></li>
   </ul>
 </nav>
   </div>
@@ -1471,6 +1475,98 @@ href="/site.webmanifest.min.e231d7c2a5ac29753d1781895bdd4b9a0e5900e75bcee133bb47
 
 
 
+<h2 class="relative group">mailQuota
+    <div id="mailquota" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#mailquota" aria-label="Anker">#</a>
+    </span>
+    
+</h2>
+<p>Grenze für das Postfach eines Kontos, etwa <code>5G</code>. Dovecot liest sie über den Global Catalog; ohne Wert ist das Postfach unbegrenzt. OID und Syntax entsprechen dem Attribut aus dem Schema von qmail-ldap.</p>
+
+
+  
+
+
+
+
+  
+
+
+
+
+
+
+  
+  
+  
+
+
+
+
+
+
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="ln"> 1</span><span class="cl">dn: CN=mailQuota,CN=Schema,CN=Configuration,DC=ad,DC=zyria,DC=de
+</span></span><span class="line"><span class="ln"> 2</span><span class="cl">changetype: add
+</span></span><span class="line"><span class="ln"> 3</span><span class="cl">objectClass: top
+</span></span><span class="line"><span class="ln"> 4</span><span class="cl">objectClass: attributeSchema
+</span></span><span class="line"><span class="ln"> 5</span><span class="cl">attributeID: 1.3.6.1.4.1.7914.1.2.1.5
+</span></span><span class="line"><span class="ln"> 6</span><span class="cl">cn: mailQuota
+</span></span><span class="line"><span class="ln"> 7</span><span class="cl">name: mailQuota
+</span></span><span class="line"><span class="ln"> 8</span><span class="cl">lDAPDisplayName: mailQuota
+</span></span><span class="line"><span class="ln"> 9</span><span class="cl">description: Mail quota of the account, e.g. 5G; read by Dovecot
+</span></span><span class="line"><span class="ln">10</span><span class="cl">attributeSyntax: 2.5.5.4
+</span></span><span class="line"><span class="ln">11</span><span class="cl">oMSyntax: 20
+</span></span><span class="line"><span class="ln">12</span><span class="cl">isSingleValued: TRUE
+</span></span><span class="line"><span class="ln">13</span><span class="cl">isMemberOfPartialAttributeSet: TRUE
+</span></span><span class="line"><span class="ln">14</span><span class="cl">rangeLower: 0
+</span></span><span class="line"><span class="ln">15</span><span class="cl">rangeUpper: 32
+</span></span></code></pre></div>
+
+
+
+<h2 class="relative group">modify organizationalPerson
+    <div id="modify-organizationalperson" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#modify-organizationalperson" aria-label="Anker">#</a>
+    </span>
+    
+</h2>
+
+
+  
+
+
+
+
+  
+
+
+
+
+
+
+  
+  
+  
+
+
+
+
+
+
+  <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="ln">1</span><span class="cl">dn: CN=Organizational-Person,CN=Schema,CN=Configuration,DC=ad,DC=zyria,DC=de
+</span></span><span class="line"><span class="ln">2</span><span class="cl">changetype: modify
+</span></span><span class="line"><span class="ln">3</span><span class="cl">add: mayContain
+</span></span><span class="line"><span class="ln">4</span><span class="cl">mayContain: mailQuota
+</span></span></code></pre></div>
+
+
+
           
           
           
@@ -1700,19 +1796,32 @@ href="/site.webmanifest.min.e231d7c2a5ac29753d1781895bdd4b9a0e5900e75bcee133bb47
       <div class="flex justify-between pt-3">
         <span class="flex flex-col">
           
+            <a
+              class="flex text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+              href="/posts/homelab/debian-upgrade/">
+              <span class="leading-6">
+                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;Debian Upgrade
+              </span>
+            </a>
+            
+              <span class="ms-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
+                <time datetime="2026-10-14T14:11:08&#43;02:00">14 Oktober 2026</time>
+              </span>
+            
+          
         </span>
         <span class="flex flex-col items-end">
           
             <a
               class="flex text-right text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
-              href="/posts/homelab/netzwerk/">
+              href="/posts/homelab/erste_hilfe/">
               <span class="leading-6">
-                &ensp;<span class="inline-block rtl:rotate-180">&rarr;</span>
+                Erste Hilfe&ensp;<span class="inline-block rtl:rotate-180">&rarr;</span>
               </span>
             </a>
             
               <span class="me-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
-                <time datetime="2025-08-14T11:42:35&#43;02:00">14 August 2025</time>
+                <time datetime="2023-10-19T13:28:04&#43;02:00">19 Oktober 2023</time>
               </span>
             
           

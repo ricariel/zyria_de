@@ -1,0 +1,15 @@
+dn: CN=mailQuota,CN=Schema,CN=Configuration,DC=ad,DC=zyria,DC=de
+changetype: add
+objectClass: top
+objectClass: attributeSchema
+attributeID: 1.3.6.1.4.1.7914.1.2.1.5
+cn: mailQuota
+name: mailQuota
+lDAPDisplayName: mailQuota
+description: Mail quota of the account, e.g. 5G; read by Dovecot
+attributeSyntax: 2.5.5.4
+oMSyntax: 20
+isSingleValued: TRUE
+isMemberOfPartialAttributeSet: TRUE
+rangeLower: 0
+rangeUpper: 32
