@@ -9,7 +9,57 @@
     <managingEditor>fabrice@zyria.de (Fabrice Kirchner)</managingEditor>
     <webMaster>fabrice@zyria.de (Fabrice Kirchner)</webMaster>
     
-    <lastBuildDate>Mon, 09 Nov 2026 17:41:49 +0100</lastBuildDate><atom:link href="https://zyria.de/tags/produktion/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 11 Nov 2026 11:43:04 +0100</lastBuildDate><atom:link href="https://zyria.de/tags/produktion/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>hx53.de</title>
+      <link>https://zyria.de/posts/homelab/k3s-prod/apps/hx53-de/readme/</link>
+      <pubDate>Wed, 11 Nov 2026 11:43:04 +0100</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/hx53-de/readme/</guid>
+      <description>Nginx liefert die statische Webseite hx53.de aus, git-sync zieht den Inhalt laufend aus einem Git-Repository nach.</description>
+      
+    </item>
+    
+    <item>
+      <title>quaecki.de</title>
+      <link>https://zyria.de/posts/homelab/k3s-prod/apps/quaecki-de/readme/</link>
+      <pubDate>Wed, 11 Nov 2026 11:43:04 +0100</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/quaecki-de/readme/</guid>
+      <description>Nginx liefert die statische Webseite quaecki.de aus, git-sync zieht den Inhalt laufend aus einem Git-Repository nach.</description>
+      
+    </item>
+    
+    <item>
+      <title>solarchart.de</title>
+      <link>https://zyria.de/posts/homelab/k3s-prod/apps/solarchart-de/readme/</link>
+      <pubDate>Wed, 11 Nov 2026 11:43:04 +0100</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/solarchart-de/readme/</guid>
+      <description>Nginx liefert die Solarprognose-Seite aus, git-sync zieht den Inhalt laufend aus einem privaten Git-Repository nach.</description>
+      
+    </item>
+    
+    <item>
+      <title>zyria.de Webseite</title>
+      <link>https://zyria.de/posts/homelab/k3s-prod/apps/zyria-de/readme/</link>
+      <pubDate>Wed, 11 Nov 2026 11:43:04 +0100</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/zyria-de/readme/</guid>
+      <description>Bereitstellung der statischen Webseite für zyria.de, deren Inhalt per git-sync aus einem Git-Repository nachgezogen wird.</description>
+      
+    </item>
+    
+    <item>
+      <title>Ansible Semaphore</title>
+      <link>https://zyria.de/posts/homelab/k3s-prod/apps/ansible-semaphore/readme/</link>
+      <pubDate>Wed, 11 Nov 2026 09:58:49 +0100</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/ansible-semaphore/readme/</guid>
+      <description>Dieses Dokument beschreibt die Bereitstellung von Ansible Semaphore, einer webbasierten Benutzeroberfläche zur Verwaltung und Ausführung von Ansible Playbooks.</description>
+      
+    </item>
     
     <item>
       <title>k3s-prod: Kubernetes Cluster Konfiguration und Anwendungsbereitstellung</title>
@@ -18,16 +68,6 @@
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/posts/homelab/k3s-prod/</guid>
       <description>Zentrale Verwaltung eines k3s-Clusters und seiner Anwendungen mit ArgoCD, Helm und Kustomize.</description>
-      
-    </item>
-    
-    <item>
-      <title>Ansible Semaphore</title>
-      <link>https://zyria.de/posts/homelab/k3s-prod/apps/ansible-semaphore/readme/</link>
-      <pubDate>Sun, 08 Nov 2026 15:02:21 +0100</pubDate>
-      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/ansible-semaphore/readme/</guid>
-      <description>Dieses Dokument beschreibt die Bereitstellung von Ansible Semaphore, einer webbasierten Benutzeroberfläche zur Verwaltung und Ausführung von Ansible Playbooks.</description>
       
     </item>
     
@@ -238,46 +278,6 @@
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/posts/homelab/k3s-prod/apps/nextcloud-new/readme/</guid>
       <description>In-Place-Ablösung von apps/nextcloud im bestehenden Namespace: Nextcloud, MariaDB, Redis, ClamAV, phpMyAdmin, SSH und icloudpd laufen als getrennte Deployments bzw. StatefulSets und kommunizieren über Services.</description>
-      
-    </item>
-    
-    <item>
-      <title>zyria.de Webseite</title>
-      <link>https://zyria.de/posts/homelab/k3s-prod/apps/zyria-de/readme/</link>
-      <pubDate>Tue, 15 Sep 2026 12:10:58 +0200</pubDate>
-      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/zyria-de/readme/</guid>
-      <description>Bereitstellung der statischen Webseite für zyria.de, deren Inhalt per git-sync aus einem Git-Repository nachgezogen wird.</description>
-      
-    </item>
-    
-    <item>
-      <title>solarchart.de</title>
-      <link>https://zyria.de/posts/homelab/k3s-prod/apps/solarchart-de/readme/</link>
-      <pubDate>Tue, 15 Sep 2026 12:08:48 +0200</pubDate>
-      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/solarchart-de/readme/</guid>
-      <description>Nginx liefert die Solarprognose-Seite aus, git-sync zieht den Inhalt laufend aus einem privaten Git-Repository nach.</description>
-      
-    </item>
-    
-    <item>
-      <title>quaecki.de</title>
-      <link>https://zyria.de/posts/homelab/k3s-prod/apps/quaecki-de/readme/</link>
-      <pubDate>Tue, 15 Sep 2026 12:07:24 +0200</pubDate>
-      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/quaecki-de/readme/</guid>
-      <description>Nginx liefert die statische Webseite quaecki.de aus, git-sync zieht den Inhalt laufend aus einem Git-Repository nach.</description>
-      
-    </item>
-    
-    <item>
-      <title>hx53.de</title>
-      <link>https://zyria.de/posts/homelab/k3s-prod/apps/hx53-de/readme/</link>
-      <pubDate>Tue, 15 Sep 2026 12:04:29 +0200</pubDate>
-      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/hx53-de/readme/</guid>
-      <description>Nginx liefert die statische Webseite hx53.de aus, git-sync zieht den Inhalt laufend aus einem Git-Repository nach.</description>
       
     </item>
     

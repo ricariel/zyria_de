@@ -105,7 +105,7 @@
 	<meta property="og:type" content="article">
 		<meta property="article:section" content="posts">
 		<meta property="article:published_time" content="2025-10-18T07:10:10+02:00">
-		<meta property="article:modified_time" content="2026-11-10T16:57:10+01:00">
+		<meta property="article:modified_time" content="2026-11-11T11:15:08+01:00">
 		<meta property="article:tag" content="Kubernetes">
 		<meta property="article:tag" content="Mail">
 		<meta property="article:tag" content="Postfix">
@@ -312,12 +312,12 @@ href="/site.webmanifest.min.e231d7c2a5ac29753d1781895bdd4b9a0e5900e75bcee133bb47
     "dateCreated": "2025-10-18T07:10:10\u002b02:00",
     "datePublished": "2025-10-18T07:10:10\u002b02:00",
     
-    "dateModified": "2026-11-10T16:57:10\u002b01:00",
+    "dateModified": "2026-11-11T11:15:08\u002b01:00",
     
     "keywords": ["kubernetes","mail","postfix","dovecot"],
     
     "mainEntityOfPage": "https://zyria.de/posts/homelab/k3s-prod/apps/mailstack/readme/",
-    "wordCount": "5991"
+    "wordCount": "6176"
   }]
   </script>
 
@@ -964,7 +964,7 @@ href="/site.webmanifest.min.e231d7c2a5ac29753d1781895bdd4b9a0e5900e75bcee133bb47
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2025-10-18T07:10:10&#43;02:00">18 Oktober 2025</time><span class="px-2 text-primary-500">&middot;</span><time datetime="2026-11-10T16:57:10&#43;01:00">Aktualisiert: 10 November 2026</time><span class="px-2 text-primary-500">&middot;</span><span>5991 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
+      <time datetime="2025-10-18T07:10:10&#43;02:00">18 Oktober 2025</time><span class="px-2 text-primary-500">&middot;</span><time datetime="2026-11-11T11:15:08&#43;01:00">Aktualisiert: 11 November 2026</time><span class="px-2 text-primary-500">&middot;</span><span>6176 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
 
 
   
@@ -1562,6 +1562,75 @@ beziehungsweise die Registry der Forgejo-Instanz bezogen.</p>
 </span></span><span class="line"><span class="ln">4</span><span class="cl"><span class="k">done</span>
 </span></span><span class="line"><span class="ln">5</span><span class="cl"><span class="nb">unset</span> PW</span></span></code></pre></div></div>
 <p>Nach einer Änderung des Werts muss rspamd neu starten, weil das Image <code>worker-controller.inc</code> nur beim Containerstart schreibt.</p>
+</li>
+<li>
+<p><strong>Alarmregeln</strong>: <code>prometheus-rules.yaml</code> enthält die Regeln für rspamd, die Postfix-Queue und Dovecot, alle mit dem Label <code>area: mail</code>. Alertmanager meldet sie wie alle Alarme (siehe <code>apps/prometheus/README.md</code>, „Alarmierung“), das Dashboard <code>mail</code> in Grafana zeigt die zugehörigen Metriken. Regeln auf Postfix- und Dovecot-Metriken aggregieren <code>instance</code> und <code>node</code> weg, damit ein Neustart von <code>main</code> einen laufenden Alarm nicht als behoben und gleich neu meldet.</p>
+<table>
+	<thead>
+			<tr>
+					<th>Regel</th>
+					<th>Schweregrad</th>
+					<th>Bedeutung</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><code>RspamdDown</code></td>
+					<td>critical</td>
+					<td>Prometheus erreicht den rspamd-Controller seit fünf Minuten nicht; hängt auch der Proxy, lehnt Port 25 vorübergehend ab und Einlieferungen landen in der Hold-Queue</td>
+			</tr>
+			<tr>
+					<td><code>RspamdNoMailScanned</code></td>
+					<td>critical</td>
+					<td>sechs Stunden lang keine Mail geprüft</td>
+			</tr>
+			<tr>
+					<td><code>RspamdHighRejectRate</code></td>
+					<td>warning</td>
+					<td>mehr als die Hälfte der Mails einer Stunde abgewiesen (ab 20 Mails)</td>
+			</tr>
+			<tr>
+					<td><code>RspamdBayesNotLearning</code></td>
+					<td>warning</td>
+					<td>Bayes-Statistik seit zwei Tagen unverändert</td>
+			</tr>
+			<tr>
+					<td><code>PostfixShowqUnavailable</code></td>
+					<td>warning</td>
+					<td>der Exporter erreicht den <code>showq</code>-Socket nicht</td>
+			</tr>
+			<tr>
+					<td><code>PostfixQueueLarge</code></td>
+					<td>warning</td>
+					<td>mehr als 50 Mails in der Queue</td>
+			</tr>
+			<tr>
+					<td><code>PostfixHoldQueueStuck</code></td>
+					<td>warning</td>
+					<td>Mails länger als fünf Minuten in der Hold-Queue</td>
+			</tr>
+			<tr>
+					<td><code>PostfixDeferredMailOld</code></td>
+					<td>warning</td>
+					<td>zurückgestellte Mails älter als etwa 2,8 Stunden</td>
+			</tr>
+			<tr>
+					<td><code>DovecotMetricsDown</code></td>
+					<td>warning</td>
+					<td>der <code>stats</code>-Dienst von Dovecot ist nicht erreichbar</td>
+			</tr>
+			<tr>
+					<td><code>DovecotAuthFailuresHigh</code></td>
+					<td>warning</td>
+					<td>mehr als 1500 fehlgeschlagene Anmeldungen pro Stunde (November 2026: höchstens etwa 130)</td>
+			</tr>
+			<tr>
+					<td><code>DovecotNoDeliveries</code></td>
+					<td>warning</td>
+					<td>zwölf Stunden lang keine Zustellung per LMTP</td>
+			</tr>
+	</tbody>
+</table>
 </li>
 <li>
 <p><strong>LDAP-Integration</strong>: Postfix und Dovecot sind mit einem LDAP-Server integriert, um Benutzer, Aliase und Weiterleitungen zu verwalten.</p>

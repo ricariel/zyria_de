@@ -104,8 +104,8 @@
 	<meta property="og:locale" content="de_de">
 	<meta property="og:type" content="article">
 		<meta property="article:section" content="posts">
-		<meta property="article:published_time" content="2026-11-08T15:02:21+01:00">
-		<meta property="article:modified_time" content="2026-11-08T15:02:21+01:00">
+		<meta property="article:published_time" content="2026-11-11T09:58:49+01:00">
+		<meta property="article:modified_time" content="2026-11-11T09:58:49+01:00">
 		<meta property="article:tag" content="Kubernetes">
 		<meta property="article:tag" content="K3s">
 		<meta property="article:tag" content="Gitops">
@@ -311,15 +311,15 @@ href="/site.webmanifest.min.e231d7c2a5ac29753d1781895bdd4b9a0e5900e75bcee133bb47
       "sameAs": ["https://git.casa-due-pur.de/fabrice.kirchner", "https://git.zyria.de/pyrox", "https://github.com/ricariel", "https://www.linkedin.com/in/fabrice-kirchner-bb5408163/", "https://www.xing.com/profile/Fabrice_Kirchner", "https://kirchner.social/@fabrice", "https://codeberg.org/ricariel"]
     },
     "copyrightYear": "2026",
-    "dateCreated": "2026-11-08T15:02:21\u002b01:00",
-    "datePublished": "2026-11-08T15:02:21\u002b01:00",
+    "dateCreated": "2026-11-11T09:58:49\u002b01:00",
+    "datePublished": "2026-11-11T09:58:49\u002b01:00",
     
-    "dateModified": "2026-11-08T15:02:21\u002b01:00",
+    "dateModified": "2026-11-11T09:58:49\u002b01:00",
     
     "keywords": ["kubernetes","k3s","gitops","argocd","helm","kustomize","homelab","produktion"],
     
     "mainEntityOfPage": "https://zyria.de/posts/homelab/k3s-prod/apps/ansible-semaphore/readme/",
-    "wordCount": "2045"
+    "wordCount": "2226"
   }]
   </script>
 
@@ -964,7 +964,7 @@ href="/site.webmanifest.min.e231d7c2a5ac29753d1781895bdd4b9a0e5900e75bcee133bb47
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2026-11-08T15:02:21&#43;01:00">8 November 2026</time><span class="px-2 text-primary-500">&middot;</span><span>2045 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
+      <time datetime="2026-11-11T09:58:49&#43;01:00">11 November 2026</time><span class="px-2 text-primary-500">&middot;</span><span>2226 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
 
 
   
@@ -1245,6 +1245,7 @@ href="/site.webmanifest.min.e231d7c2a5ac29753d1781895bdd4b9a0e5900e75bcee133bb47
           </ul>
         </li>
         <li><a href="#secrets">Secrets</a></li>
+        <li><a href="#metriken-und-alarme">Metriken und Alarme</a></li>
         <li><a href="#tailnet-zugang-zu-thw">Tailnet-Zugang zu THW</a></li>
         <li><a href="#datenbank">Datenbank</a></li>
         <li><a href="#datenbanksicherung">Datenbanksicherung</a>
@@ -1291,6 +1292,7 @@ href="/site.webmanifest.min.e231d7c2a5ac29753d1781895bdd4b9a0e5900e75bcee133bb47
           </ul>
         </li>
         <li><a href="#secrets">Secrets</a></li>
+        <li><a href="#metriken-und-alarme">Metriken und Alarme</a></li>
         <li><a href="#tailnet-zugang-zu-thw">Tailnet-Zugang zu THW</a></li>
         <li><a href="#datenbank">Datenbank</a></li>
         <li><a href="#datenbanksicherung">Datenbanksicherung</a>
@@ -1518,6 +1520,44 @@ href="/site.webmanifest.min.e231d7c2a5ac29753d1781895bdd4b9a0e5900e75bcee133bb47
 <div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">kubectl -n ansible-semaphore create secret generic ansible-semaphore-runner-token <span class="se">\
 </span></span></span><span class="line"><span class="ln">2</span><span class="cl">  --from-literal<span class="o">=</span><span class="nv">token</span><span class="o">=</span><span class="s2">&#34;</span><span class="k">$(</span>openssl rand -hex 16<span class="k">)</span><span class="s2">&#34;</span></span></span></code></pre></div></div>
 
+<h3 class="relative group">Metriken und Alarme
+    <div id="metriken-und-alarme" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#metriken-und-alarme" aria-label="Anker">#</a>
+    </span>
+    
+</h3>
+<p>Semaphore liefert seit 2.20 Metriken unter <code>/api/metrics</code> auf dem Hauptport (<a href="https://docs.semaphoreui.com/administration-guide/metrics/"  target="_blank" rel="noreferrer">Doku</a>). Eingeschaltet wird der Endpunkt über <code>SEMAPHORE_METRICS_*</code> in <code>values.yaml</code> (<code>extraEnvVariables</code>, <code>extraEnvSecrets</code>). Er verlangt Basic Auth; ohne Zugangsdaten antwortet er immer mit 401. Die Annotations-Jobs von Prometheus können das nicht, deshalb fragt der ServiceMonitor aus <code>servicemonitor.yaml</code> ab, mit denselben Zugangsdaten.</p>
+<p>Das Secret <code>ansible-semaphore-metrics</code> steht nicht im Repository und muss vor dem Rollout da sein, sonst startet der Pod nicht (<code>CreateContainerConfigError</code>). Das Passwort muss niemand kennen, Semaphore und Prometheus lesen es beide aus dem Secret:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">kubectl -n ansible-semaphore create secret generic ansible-semaphore-metrics <span class="se">\
+</span></span></span><span class="line"><span class="ln">2</span><span class="cl">  --from-literal<span class="o">=</span><span class="nv">username</span><span class="o">=</span>prometheus --from-literal<span class="o">=</span><span class="nv">password</span><span class="o">=</span><span class="s2">&#34;</span><span class="k">$(</span>openssl rand -hex 24<span class="k">)</span><span class="s2">&#34;</span></span></span></code></pre></div></div>
+<p>Geliefert werden nur <code>semaphore_tasks_running</code> und <code>semaphore_tasks_total{status}</code> (<code>success</code>, <code>error</code>, <code>stopped</code>), dazu Go- und Prozessmetriken. Wartende Tasks und Laufzeiten fehlen. Die Regeln in <code>prometheus-rules.yaml</code>:</p>
+<table>
+	<thead>
+			<tr>
+					<th>Alarm</th>
+					<th>Bedingung</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><code>SemaphoreTaskFailed</code></td>
+					<td>in der letzten Stunde mindestens ein Task mit Status <code>error</code>; ergänzt die Mails, die Semaphore für Templates mit Alarm selbst verschickt</td>
+			</tr>
+			<tr>
+					<td><code>SemaphoreTaskRunningLong</code></td>
+					<td>seit vier Stunden ununterbrochen mindestens ein laufender Task</td>
+			</tr>
+			<tr>
+					<td><code>SemaphoreMetricsMissing</code></td>
+					<td>Prometheus hat kein Ziel für den Job <code>ansible-semaphore</code></td>
+			</tr>
+	</tbody>
+</table>
+<p>Antwortet der Endpunkt nicht oder mit 401, meldet das die Standardregel <code>TargetDown</code>.</p>
+
 <h3 class="relative group">Tailnet-Zugang zu THW
     <div id="tailnet-zugang-zu-thw" class="anchor"></div>
     
@@ -1615,8 +1655,9 @@ Datenbank kommt auf einen Stand zurück. Eine einzelne Tabelle, ein einzelner Da
 Daten ohne Volume-Klon geht damit nicht.</p>
 <p>Dafür gibt es zusätzlich einen logischen Dump. Der CronJob <code>ansible-semaphore-dbdump</code> läuft täglich um 00:40,
 schreibt <code>ansible-semaphore-&lt;Zeitstempel&gt;.sql.gz</code> in das Volume <code>ansible-semaphore-db-backup</code> (1Gi) und hält
-sieben Generationen vor. Das Backup-Volume ist dynamisch angelegt und liegt damit ebenfalls in der Gruppe
-<code>default</code>; die Uhrzeit ist so gewählt, dass die Sicherung um 01:10 den Dump derselben Nacht noch mitnimmt.</p>
+sieben Generationen vor. Weil nur der CronJob das Backup-Volume einhängt, liegt es in der Longhorn-Gruppe
+<code>detached</code>, die es täglich um 05:10 sichert; ein Volume der Gruppe <code>default</code> wäre um 01:10 nicht angehängt
+und bekäme kein Backup.</p>
 <p>Der Dump läuft mit <code>--single-transaction</code>, Semaphore bleibt also währenddessen online, auch wenn gerade ein
 Ansible-Lauf in die Task-Logs schreibt. Als Ziel dient der <code>ExternalName</code>-Service <code>db</code>, nicht der Service der
 Datenbank selbst: wird <code>db</code> auf eine andere Instanz umgebogen, folgt der Dump automatisch mit.</p>
@@ -2107,14 +2148,14 @@ Snapshot, das nächtliche Backup auf dem NFS-Ziel und die sieben Dump-Generation
           
             <a
               class="flex text-right text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
-              href="/posts/homelab/k3s-prod/ansible/shutdown-startup/">
+              href="/posts/homelab/k3s-prod/apps/zyria-de/readme/">
               <span class="leading-6">
-                Operational Lifecycle Management: Orchestrierter Shutdown für Kubernetes&ensp;<span class="inline-block rtl:rotate-180">&rarr;</span>
+                zyria.de Webseite&ensp;<span class="inline-block rtl:rotate-180">&rarr;</span>
               </span>
             </a>
             
               <span class="me-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
-                <time datetime="2024-10-27T10:00:00&#43;01:00">27 Oktober 2024</time>
+                <time datetime="2026-11-11T11:43:04&#43;01:00">11 November 2026</time>
               </span>
             
           
