@@ -105,7 +105,7 @@
 	<meta property="og:type" content="article">
 		<meta property="article:section" content="posts">
 		<meta property="article:published_time" content="2025-10-17T13:23:29+02:00">
-		<meta property="article:modified_time" content="2026-11-11T11:15:08+01:00">
+		<meta property="article:modified_time" content="2026-11-14T06:14:45+01:00">
 		<meta property="article:tag" content="Kubernetes">
 		<meta property="article:tag" content="Prometheus">
 		<meta property="article:tag" content="Monitoring">
@@ -313,12 +313,12 @@ href="/site.webmanifest.min.e231d7c2a5ac29753d1781895bdd4b9a0e5900e75bcee133bb47
     "dateCreated": "2025-10-17T13:23:29\u002b02:00",
     "datePublished": "2025-10-17T13:23:29\u002b02:00",
     
-    "dateModified": "2026-11-11T11:15:08\u002b01:00",
+    "dateModified": "2026-11-14T06:14:45\u002b01:00",
     
     "keywords": ["kubernetes","prometheus","monitoring","alertmanager","grafana"],
     
     "mainEntityOfPage": "https://zyria.de/posts/homelab/k3s-prod/apps/prometheus/readme/",
-    "wordCount": "2059"
+    "wordCount": "2926"
   }]
   </script>
 
@@ -965,7 +965,7 @@ href="/site.webmanifest.min.e231d7c2a5ac29753d1781895bdd4b9a0e5900e75bcee133bb47
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2025-10-17T13:23:29&#43;02:00">17 Oktober 2025</time><span class="px-2 text-primary-500">&middot;</span><time datetime="2026-11-11T11:15:08&#43;01:00">Aktualisiert: 11 November 2026</time><span class="px-2 text-primary-500">&middot;</span><span>2059 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
+      <time datetime="2025-10-17T13:23:29&#43;02:00">17 Oktober 2025</time><span class="px-2 text-primary-500">&middot;</span><time datetime="2026-11-14T06:14:45&#43;01:00">Aktualisiert: 14 November 2026</time><span class="px-2 text-primary-500">&middot;</span><span>2926 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
 
 
   
@@ -1192,8 +1192,10 @@ href="/site.webmanifest.min.e231d7c2a5ac29753d1781895bdd4b9a0e5900e75bcee133bb47
         </li>
         <li><a href="#grafana">Grafana</a>
           <ul>
+            <li><a href="#dashboards-ordner-und-navigation">Dashboards, Ordner und Navigation</a></li>
             <li><a href="#status-dashboard">Status-Dashboard</a></li>
             <li><a href="#mail-dashboard">Mail-Dashboard</a></li>
+            <li><a href="#generierte-dashboards">Generierte Dashboards</a></li>
           </ul>
         </li>
         <li><a href="#secrets">Secrets</a></li>
@@ -1229,8 +1231,10 @@ href="/site.webmanifest.min.e231d7c2a5ac29753d1781895bdd4b9a0e5900e75bcee133bb47
         </li>
         <li><a href="#grafana">Grafana</a>
           <ul>
+            <li><a href="#dashboards-ordner-und-navigation">Dashboards, Ordner und Navigation</a></li>
             <li><a href="#status-dashboard">Status-Dashboard</a></li>
             <li><a href="#mail-dashboard">Mail-Dashboard</a></li>
+            <li><a href="#generierte-dashboards">Generierte Dashboards</a></li>
           </ul>
         </li>
         <li><a href="#secrets">Secrets</a></li>
@@ -1444,9 +1448,11 @@ href="/site.webmanifest.min.e231d7c2a5ac29753d1781895bdd4b9a0e5900e75bcee133bb47
 <p>Dort stehen auch zwei Sonderfälle:</p>
 <ul>
 <li><strong>Longhorn</strong>: Jeder longhorn-manager liefert nur die Metriken seines Nodes, deshalb fragt der Job <code>longhorn</code> jeden Endpunkt einzeln ab. Damit stehen unter anderem <code>longhorn_volume_robustness</code>, <code>longhorn_backup_state</code> und <code>longhorn_node_storage_*</code> zur Verfügung. Die NetworkPolicy dafür liegt in <code>apps/longhorn</code> und lässt Pods mit den Labels <code>app.kubernetes.io/name: prometheus</code> und <code>app.kubernetes.io/component: server</code> zu. Das zweite Label setzt <code>prometheusSpec.podMetadata</code>.</li>
+<li><strong>kube-state-metrics</strong>: Der ServiceMonitor setzt <code>instance</code> fest auf <code>kube-state-metrics</code> und verwirft die Ziel-Labels <code>pod</code>, <code>container</code> und <code>endpoint</code> (<code>kube-state-metrics.prometheus.monitor.http.relabelings</code> in <code>values.yaml</code>). Sonst trugen alle Serien ohne eigenes <code>pod</code>-Label, etwa <code>kube_cronjob_*</code> und <code>kube_job_*</code>, Pod-Name und Pod-IP des Exporters. Nach jedem neuen Pod (Descheduler, Drain, Update) meldete Alertmanager laufende Alarme darauf erneut und die alte Fassung als resolved. Labels, die die Metriken selbst tragen, bleiben über <code>honorLabels</code> erhalten.</li>
 <li><strong>rspamd</strong>: Der Job <code>rspamd</code> fragt den rspamd-Controller im Mailstack ab und schickt das Lese-Passwort im Header <code>Password</code>. Das Secret <code>rspamd-read-pass</code> wird über <code>prometheusSpec.secrets</code> unter <code>/etc/prometheus/secrets/rspamd-read-pass/</code> eingehängt. Anlegen des Secrets siehe <code>apps/mailstack/README.md</code>.</li>
 </ul>
-<p>Die Proxmox-Hosts liegen außerhalb des Clusters. <code>proxmox-scrape.yaml</code> listet sie als <code>ScrapeConfig</code> mit dem Job <code>proxmox</code> und fragt ihren node-exporter auf Port 9100 ab. Installiert wird er von der Rolle <code>node_exporter</code> aus <code>ansible-main</code>. Die Ziele stehen mit ihrer lokalen IPv4-Adresse drin, weil die öffentlichen Namen für IPv4 auf den Router zeigen. Das Label <code>instance</code> trägt den Hostnamen. Der Job heißt bewusst nicht <code>node-exporter</code>: die Standardregeln und Dashboards für Nodes bleiben so auf die k3s-Nodes beschränkt.</p>
+<p>Einige Hosts liegen außerhalb des Clusters und werden als <code>ScrapeConfig</code> geführt: die Virtualisierungsknoten in <code>proxmox-scrape.yaml</code> (Job <code>proxmox</code>) und der Domaincontroller des Verzeichnisdienstes in <code>samba-scrape.yaml</code> (Job <code>samba</code>). Beide fragen den node-exporter auf Port 9100 ab, installiert von der Rolle <code>node_exporter</code> aus <code>ansible-main</code>. Die Ziele stehen mit ihrer lokalen IPv4-Adresse drin, weil die öffentlichen Namen für IPv4 auf den Router zeigen. Das Label <code>instance</code> trägt den Hostnamen. Die Jobs heißen bewusst nicht <code>node-exporter</code>: die Standardregeln und Dashboards für Nodes bleiben so auf die k3s-Nodes beschränkt.</p>
+<p>Jedes dieser Ziele trägt zusätzlich das Label <code>scope: host</code>. Die Regelgruppe <code>host-common</code> greift darauf zu, statt eine Liste von Jobnamen zu führen; ein neuer Host-Job ist damit ohne Änderung an den Regeln erfasst. Bis November 2026 filterten alle Hostregeln auf <code>job=&quot;proxmox&quot;</code> und ließen den Domaincontroller aus, obwohl er denselben node-exporter mit demselben Textfile-Collector betreibt. Dass das Label gesetzt ist, überwacht die Regel <code>HostScopeLabelMissing</code>.</p>
 
 <h3 class="relative group">Anpassungen an k3s
     <div id="anpassungen-an-k3s" class="anchor"></div>
@@ -1520,7 +1526,7 @@ href="/site.webmanifest.min.e231d7c2a5ac29753d1781895bdd4b9a0e5900e75bcee133bb47
     
 </h4>
 <p>Prometheus und Alertmanager tragen <code>reloader.stakater.com/auto: &quot;false&quot;</code> (über <code>prometheus.annotations</code> und <code>alertmanager.annotations</code>, der Operator überträgt sie auf die StatefulSets). Neue Regeln und Konfiguration lädt der Sidecar <code>config-reloader</code> ohne Neustart nach. Reloader würde sonst bei jeder Regeländerung neu starten, und jeder Alarm in <code>pending</code> begänne mit seiner Wartezeit von vorn.</p>
-<p><code>cluster-rules.yaml</code> ergänzt die Standardregeln von kube-prometheus-stack um Zustände, die diese nicht abdecken. Die Regeln für die Proxmox-Hosts stehen getrennt in <code>proxmox-rules.yaml</code>. Die Prometheus-Ressource wählt Regeln aus allen Namespaces ohne Label-Filter aus.</p>
+<p><code>cluster-rules.yaml</code> ergänzt die Standardregeln von kube-prometheus-stack um Zustände, die diese nicht abdecken. Die Regeln für die Hosts außerhalb des Clusters stehen getrennt: <code>host-rules.yaml</code> für alles, was auf jedem dieser Hosts gilt, <code>proxmox-rules.yaml</code> und <code>samba-rules.yaml</code> für das, was nur auf einem Virtualisierungsknoten beziehungsweise nur auf dem Domaincontroller Sinn hat. Die Prometheus-Ressource wählt Regeln aus allen Namespaces ohne Label-Filter aus.</p>
 <table>
 	<thead>
 			<tr>
@@ -1546,13 +1552,21 @@ href="/site.webmanifest.min.e231d7c2a5ac29753d1781895bdd4b9a0e5900e75bcee133bb47
 					<td>Apps nicht synchron oder nicht gesund, fehlgeschlagene Syncs</td>
 			</tr>
 			<tr>
+					<td><code>host-common</code></td>
+					<td>für jeden Host mit <code>scope=&quot;host&quot;</code>: Neustart steht seit mehr als drei Tagen aus (ab 14 Tagen kritisch), Neustart-Metrik fehlt oder ist veraltet, wenig Platz auf einem Dateisystem (unter 15 %, in <code>/boot</code> unter 150 MB, in <code>/usr</code> unter 1,5 GB; kritisch unter 5 % oder in <code>/boot</code> unter 60 MB), node-exporter außerhalb des Clusters ohne <code>scope</code>-Label</td>
+			</tr>
+			<tr>
 					<td><code>proxmox</code></td>
-					<td>Neustart eines Proxmox-Hosts steht seit mehr als drei Tagen aus (ab 14 Tagen kritisch), Neustart-Metrik fehlt oder ist veraltet, Quelle der nft-Blockliste nicht geladen, Blockliste älter als 26 Stunden oder von nft abgelehnt, wenig Platz auf einem Dateisystem des Hosts (unter 15 %, in <code>/boot</code> unter 150 MB, in <code>/usr</code> unter 1,5 GB; kritisch unter 5 % oder in <code>/boot</code> unter 60 MB), ZFS-Pool über 80 % belegt (über 90 % kritisch), ZFS-Pool-Metrik fehlt</td>
+					<td>nur Virtualisierungsknoten: Quelle der nft-Blockliste nicht geladen, Blockliste älter als 26 Stunden oder von nft abgelehnt, ZFS-Pool über 80 % belegt (über 90 % kritisch), ZFS-Pool-Metrik fehlt</td>
+			</tr>
+			<tr>
+					<td><code>samba</code></td>
+					<td>nur Domaincontroller: Sicherung des Verzeichnisdienstes älter als 36 Stunden (ab sieben Tagen kritisch), letzter Lauf gescheitert, <code>dbcheck</code> meldet Fehler, Sicherungsmetrik fehlt</td>
 			</tr>
 	</tbody>
 </table>
 <p>Regeln, die nur eine App betreffen, liegen in deren Verzeichnis, etwa <code>apps/ansible-semaphore/prometheus-rules.yaml</code> (gescheiterte und lange laufende Semaphore-Tasks) und <code>apps/mailstack/prometheus-rules.yaml</code> (rspamd, Postfix-Queue und Dovecot, Liste in der README des Mailstacks).</p>
-<p>Kritisch, also zusätzlich per Mail, sind nur <code>NodeFilesystemReadOnly</code>, <code>LonghornVolumeFaulted</code>, <code>RspamdDown</code>, <code>RspamdNoMailScanned</code>, <code>ProxmoxRebootOverdue</code>, <code>ProxmoxFilesystemFull</code> und <code>ProxmoxZfsPoolFull</code>. Abfragen über lange Zeiträume enthalten einen <code>offset</code>-Teil, der sie stumm hält, bis genug Verlauf vorliegt. Vor einer Änderung lassen sich die Regeln mit <code>promtool check rules</code> prüfen, nachdem die <code>groups</code> aus den PrometheusRule-Objekten in eine eigene Datei übernommen wurden.</p>
+<p>Kritisch, also zusätzlich per Mail, sind nur <code>NodeFilesystemReadOnly</code>, <code>LonghornVolumeFaulted</code>, <code>RspamdDown</code>, <code>RspamdNoMailScanned</code>, <code>HostRebootOverdue</code>, <code>HostFilesystemFull</code>, <code>ProxmoxZfsPoolFull</code>, <code>SambaDomainBackupOverdue</code> und <code>MatrixZustellungGescheitert</code>. Abfragen über lange Zeiträume enthalten einen <code>offset</code>-Teil, der sie stumm hält, bis genug Verlauf vorliegt. Vor einer Änderung lassen sich die Regeln mit <code>promtool check rules</code> prüfen, nachdem die <code>groups</code> aus den PrometheusRule-Objekten in eine eigene Datei übernommen wurden.</p>
 
 <h3 class="relative group">Grafana
     <div id="grafana" class="anchor"></div>
@@ -1567,6 +1581,57 @@ href="/site.webmanifest.min.e231d7c2a5ac29753d1781895bdd4b9a0e5900e75bcee133bb47
 <p>In Authentik wird dafür ein OAuth2/OpenID-Provider mit Application-Slug <code>grafana</code> angelegt. Redirect-URI ist <code>https://&lt;grafana-host&gt;/login/generic_oauth</code>. Der Provider muss den Claim <code>groups</code> liefern.</p>
 <p>Fällt die Zustellung nach Matrix aus, meldet der Receiver Alertmanager trotzdem Erfolg; <code>alertmanager_notifications_failed_total</code> zeigt das nicht. Die Regel <code>MatrixZustellungGescheitert</code> in <code>matrix-receiver-rules.yaml</code> wertet deshalb die Zähler des Receivers aus (gescheiterter Raumbeitritt, Senden oder Vorlage, oder Alarme empfangen ohne erfolgreiche Nachricht) und meldet mit Schweregrad <code>critical</code>.</p>
 <p>Die Datenquellen heißen <code>Prometheus</code> und <code>Alertmanager</code>. Links in die Alarmansicht von Grafana geben die Alertmanager-Datenquelle mit ihrem Namen an (<code>/alerting/groups?alertmanager=Alertmanager</code>). Mit der UID <code>alertmanager</code> zeigt Grafana stattdessen seinen eigenen, leeren Alertmanager an.</p>
+
+<h4 class="relative group">Dashboards, Ordner und Navigation
+    <div id="dashboards-ordner-und-navigation" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#dashboards-ordner-und-navigation" aria-label="Anker">#</a>
+    </span>
+    
+</h4>
+<p>Alle Dashboards kommen als ConfigMap mit dem Label <code>grafana_dashboard: &quot;1&quot;</code> in den Cluster; der Sidecar von Grafana sammelt sie aus allen Namespaces. Die Annotation <code>grafana_folder</code> nennt den Ordner, in dem das Dashboard landet (<code>grafana.sidecar.dashboards.folderAnnotation</code> und <code>provider.foldersFromFilesStructure</code> in <code>values.yaml</code>). Ohne die Annotation lägen alle Dashboards in einem Ordner.</p>
+<table>
+	<thead>
+			<tr>
+					<th>Ordner</th>
+					<th>Dashboards</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><code>Status</code></td>
+					<td>Cluster-Status (Startseite), Erreichbarkeit</td>
+			</tr>
+			<tr>
+					<td><code>Hosts</code></td>
+					<td>Hosts</td>
+			</tr>
+			<tr>
+					<td><code>Speicher</code></td>
+					<td>Speicher und Backup</td>
+			</tr>
+			<tr>
+					<td><code>Netz</code></td>
+					<td>Ingress und Anfragen, Zertifikate, UniFi</td>
+			</tr>
+			<tr>
+					<td><code>Dienste</code></td>
+					<td>Mail, DMARC Reports, Workloads und Automatisierung, Anmeldung und SSO</td>
+			</tr>
+			<tr>
+					<td><code>Sicherheit</code></td>
+					<td>CrowdSec</td>
+			</tr>
+			<tr>
+					<td><code>Kubernetes</code></td>
+					<td>die Dashboards, die der Chart mitbringt (<code>grafana.sidecar.dashboards.annotations</code>)</td>
+			</tr>
+	</tbody>
+</table>
+<p>Jedes eigene Dashboard trägt den Tag <code>nav</code> und oben dieselbe Linkzeile: ein Auswahlmenü über alle Dashboards mit diesem Tag, den Weg zurück zum Status-Dashboard und die Alarmliste. Ein neues Dashboard mit dem Tag erscheint damit in der Navigation aller anderen, ohne dass sie geändert werden müssen.</p>
+<p>Nicht alles, was der Chart mitbringt, ist hier sinnvoll: <code>nodeExporter.operatingSystems.aix</code> und <code>.darwin</code> sind abgeschaltet (keine solchen Nodes), und das Dashboard <code>k8s-resources-multicluster</code> entfernt ein Patch in <code>kustomization.yaml</code>, weil der Chart dafür keinen Schalter hat und in diesem Prometheus nur ein Cluster liegt.</p>
 
 <h4 class="relative group">Status-Dashboard
     <div id="status-dashboard" class="anchor"></div>
@@ -1593,7 +1658,11 @@ href="/site.webmanifest.min.e231d7c2a5ac29753d1781895bdd4b9a0e5900e75bcee133bb47
 			</tr>
 			<tr>
 					<td>zweite Zeile</td>
-					<td>Ampel je Bereich: Hosts und Cluster, Workloads, Speicher und Backup, Argo CD, Zertifikate, Mail, Windows und SQL Server, Sonstige</td>
+					<td>Ampel je Bereich: Hosts und Cluster, Workloads, Speicher und Backup, Netzwerk, Sicherheit, Mail, Zertifikate, Argo CD</td>
+			</tr>
+			<tr>
+					<td>dritte Zeile</td>
+					<td>Sonstige (Alarme ohne <code>area</code>) und fünf Kennzahlen mit eigenem Schwellwert: nicht gesunde Longhorn-Volumes, Alter der ältesten Sicherung, nicht synchrone Argo-CD-Apps, kürzeste Restlaufzeit eines Zertifikats, Alter des jüngsten DMARC-Berichts (orange ab 25, rot ab 35 Tagen)</td>
 			</tr>
 			<tr>
 					<td>Offene Punkte</td>
@@ -1631,7 +1700,7 @@ href="/site.webmanifest.min.e231d7c2a5ac29753d1781895bdd4b9a0e5900e75bcee133bb47
 			<tr>
 					<td><code>cluster</code></td>
 					<td>Hosts &amp; Cluster</td>
-					<td><code>defaultRules.additionalRuleGroupLabels</code> (Nodes, Kubelet, API-Server, Ressourcen), eigene Regeln zu Nodes und Proxmox</td>
+					<td><code>defaultRules.additionalRuleGroupLabels</code> (Nodes, Kubelet, API-Server, Ressourcen), eigene Regeln zu Nodes und zu den Hosts außerhalb des Clusters (<code>host-rules.yaml</code>, <code>proxmox-rules.yaml</code>)</td>
 			</tr>
 			<tr>
 					<td><code>workloads</code></td>
@@ -1644,9 +1713,19 @@ href="/site.webmanifest.min.e231d7c2a5ac29753d1781895bdd4b9a0e5900e75bcee133bb47
 					<td><code>defaultRules.additionalRuleGroupLabels</code> (<code>kubernetesStorage</code>), eigene Regeln zu Longhorn, Backups und PVCs</td>
 			</tr>
 			<tr>
-					<td><code>argocd</code>, <code>certificates</code>, <code>mail</code>, <code>windows</code></td>
+					<td><code>argocd</code>, <code>certificates</code>, <code>mail</code></td>
 					<td>gleichnamige Kachel</td>
 					<td>eigene Regeln in <code>cluster-rules.yaml</code>, für <code>mail</code> in <code>apps/mailstack/prometheus-rules.yaml</code></td>
+			</tr>
+			<tr>
+					<td><code>network</code></td>
+					<td>Netzwerk</td>
+					<td><code>apps/unpoller/prometheus-rules.yaml</code> (UniFi-Gateway, Switches, Access Points), <code>apps/metallb/prometheus-rules.yaml</code> und <code>prometheus.prometheusRule</code> in <code>apps/metallb/values.yaml</code> (Speaker, Adresspool, Konfiguration)</td>
+			</tr>
+			<tr>
+					<td><code>security</code></td>
+					<td>Sicherheit</td>
+					<td><code>apps/crowdsec/prometheus-rules.yaml</code> (Agent, Bouncer, AppSec, Community-Blockliste)</td>
 			</tr>
 	</tbody>
 </table>
@@ -1654,12 +1733,13 @@ href="/site.webmanifest.min.e231d7c2a5ac29753d1781895bdd4b9a0e5900e75bcee133bb47
 <p>Wege zum Problem:</p>
 <ul>
 <li>Klick auf eine Kachel öffnet die Alarmansicht von Grafana, gefiltert auf den Bereich. Dort stehen Beschreibung, Runbook-Link und die Schaltfläche zum Stummschalten.</li>
+<li>Jede Bereichskachel führt zusätzlich in ihr Detaildashboard: Hosts und Cluster zu <code>hosts</code>, Workloads und Argo CD zu <code>workloads</code>, Speicher und Backup zu <code>longhorn</code>, Netzwerk zu <code>traefik</code> und <code>unpoller</code>, Sicherheit zu <code>crowdsec</code>, Zertifikate zu <code>certificates</code>, Mail zu <code>mail</code>, Monitoring und Alarmweg zu den Übersichten von Prometheus und Alertmanager.</li>
 <li>In der Tabelle führt der Alarmname zu derselben Ansicht, zur Regel oder direkt zum Stummschalten. Der Namespace führt zur gleichnamigen Argo-CD-App und zum Ressourcen-Dashboard des Namespace, das Objekt zum Ressourcen-Dashboard des Pods.</li>
 <li>Die Kachel „Nicht erreichbar“ und die Monitornamen in der Tabelle darunter führen zu Uptime Kuma.</li>
 <li>Die Links oben verweisen auf Argo CD, Longhorn, die Statusseite von Uptime Kuma und das gleiche Dashboard im anderen Cluster.</li>
 </ul>
 <p>Stummgeschaltete Alarme bleiben in der Tabelle und im Gesamtstatus, weil <code>ALERTS</code> von Stummschaltungen nichts weiß. Die Kachel „Stumm oder unterdrückt“ zeigt, wie viele es sind. „Bedingung seit“ ist der Zeitpunkt, ab dem die Bedingung erfüllt war, die Wartezeit <code>for</code> der Regel eingeschlossen.</p>
-<p>Das Dashboard ist in beiden Clustern gleich, bis auf die Hostnamen der Links. Grafana speichert ein so bereitgestelltes Dashboard nicht. Zum Ändern das Dashboard in Grafana bearbeiten, als JSON exportieren und die Datei hier ersetzen.</p>
+<p>Das Dashboard ist in beiden Clustern gleich, bis auf die Hostnamen der Links. Grafana speichert ein so bereitgestelltes Dashboard nicht. <code>cluster-status.json</code> und <code>mail.json</code> werden von Hand gepflegt: zum Ändern das Dashboard in Grafana bearbeiten, als JSON exportieren und die Datei hier ersetzen. Die übrigen Dashboards dieses Verzeichnisses erzeugt <code>dashboards/build.py</code>; ein Export aus Grafana würde beim nächsten Lauf überschrieben.</p>
 
 <h4 class="relative group">Mail-Dashboard
     <div id="mail-dashboard" class="anchor"></div>
@@ -1671,6 +1751,65 @@ href="/site.webmanifest.min.e231d7c2a5ac29753d1781895bdd4b9a0e5900e75bcee133bb47
     
 </h4>
 <p><code>dashboards/mail.json</code> (uid <code>mail</code>, ConfigMap <code>grafana-dashboard-mail</code>) zeigt den Mailstack auf einer Seite: Kopfzeile mit dem Status der Alarme mit <code>area: mail</code>, Anmeldungen und Fehlanmeldungen der letzten Stunde, Zustellungen der letzten 24 Stunden und die Postfix-Queue; darunter Verläufe für Dovecot (Anmeldungen, IMAP-Befehle, Zustellungen und Einlieferungen, Sitzungen), Postfix (Queue nach Art) und rspamd (geprüfte und abgewiesene Mails, Aktionen, Lernen) sowie die offenen Mail-Alarme. Die Dovecot-Zähler kommen aus dem Dienst <code>stats</code> (<code>apps/mailstack</code>, Service <code>mailstack-dovecot-metrics</code>) und beginnen bei jedem Neustart von <code>mailstack-main</code> bei null; die Panels rechnen deshalb mit <code>rate</code> und <code>increase</code>. Die Log-Zähler des postfix-exporters (Verbindungen, SASL-Fehler) sind nicht eingerichtet und fehlen bewusst. Die Kachel „Mail“ im Status-Dashboard verlinkt dorthin.</p>
+
+<h4 class="relative group">Generierte Dashboards
+    <div id="generierte-dashboards" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#generierte-dashboards" aria-label="Anker">#</a>
+    </span>
+    
+</h4>
+<p><code>dashboards/build.py</code> erzeugt die folgenden Dashboards; <code>dashboards/grafana.py</code> enthält die gemeinsamen Bausteine (Panels, Linkzeile, Alarmtabelle). Nach einer Änderung einmal <code>apps/prometheus/dashboards/build.py</code> ausführen und die erzeugten Dateien mitcommitten. Jedes Dashboard beginnt mit einer Kopfzeile aus Kennzahlen und endet, wo es einen Bereich gibt, mit den offenen Alarmen dieses Bereichs.</p>
+<table>
+	<thead>
+			<tr>
+					<th>Datei</th>
+					<th>uid</th>
+					<th>Inhalt</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><code>hosts.json</code></td>
+					<td><code>hosts</code></td>
+					<td>k3s-Nodes und Virtualisierungsknoten in einer Ansicht, umschaltbar über die Variablen <code>job</code> und <code>instance</code>: Auslastung, Dateisysteme, Netz, Platten-IO, dazu eingeklappt ZFS-Pools, ausstehende Neustarts und der Zustand der nft-Blockliste</td>
+			</tr>
+			<tr>
+					<td><code>longhorn.json</code></td>
+					<td><code>longhorn</code></td>
+					<td>Zustand der Volumes, Alter der Sicherungen, Zustand des Backupziels, Belegung der Platten je Knoten</td>
+			</tr>
+			<tr>
+					<td><code>traefik.json</code></td>
+					<td><code>traefik</code></td>
+					<td>Anfragen je Entrypoint und Statusklasse, Dienste mit den meisten Anfragen und Fehlern, Antwortzeiten, Fehlerquote je Dienst</td>
+			</tr>
+			<tr>
+					<td><code>workloads.json</code></td>
+					<td><code>workloads</code></td>
+					<td>Pods, Neustarts und OOM-Abbrüche, CronJobs und ihr letzter Erfolg, gescheiterte Jobs, dazu eingeklappt Argo CD und die Ansible-Läufe aus Semaphore</td>
+			</tr>
+			<tr>
+					<td><code>authentik.json</code></td>
+					<td><code>authentik</code></td>
+					<td>Anfragen und Antwortzeiten des Authentik-Servers, Flows, Policies, Outposts, Hintergrundaufgaben und Datenbank</td>
+			</tr>
+			<tr>
+					<td><code>kuma.json</code></td>
+					<td><code>kuma</code></td>
+					<td>Monitore von Uptime Kuma: nicht erreichbare Monitore, Zustand je Monitor als Zeitleiste, Antwortzeiten, Restlaufzeit der von außen geprüften Zertifikate</td>
+			</tr>
+			<tr>
+					<td><code>certs.json</code></td>
+					<td><code>certificates</code></td>
+					<td>Restlaufzeiten aus drei Quellen: cert-manager, die von Traefik ausgelieferten Zertifikate und die Prüfung von außen durch Kuma</td>
+			</tr>
+	</tbody>
+</table>
+<p>Zwei Besonderheiten der Datenquellen: <code>authentik_main_request_duration_seconds</code> ist eine Summary, die Perzentile kommen deshalb aus dem Label <code>quantile</code> und nicht aus <code>histogram_quantile</code>. Die Kachel „Letzter DMARC-Bericht“ im Status-Dashboard fragt die Datenquelle <code>parsedmarc</code> (PostgreSQL, angelegt in <code>apps/parsedmarc</code>) ab; fällt die Datenbank aus, zeigt die Kachel „Keine Daten“. Sie zeigt das Alter des jüngsten Berichts und nicht die Erfolgsquote: Berichte treffen mit Verzug ein, und gescheiterte Prüfungen stammen oft von fremden Absendern, die den Namen missbrauchen. Ein stehengebliebener Wert zeigt dagegen, dass der Abruf des Postfachs nicht mehr funktioniert.</p>
+<p>Die Schwellen richten sich nach dem Aufkommen und sind deshalb je Cluster verschieden. Gemessen über das Jahr vor dem 14.11.2026: in zyria kamen an 68 Tagen Berichte, mittlerer Abstand 5 Tage, 95. Perzentil 15 Tage, größter Abstand 22 Tage; hier steht die Kachel deshalb auf orange ab 25 und rot ab 35 Tagen. In cdp kam an allen 365 Tagen mindestens ein Bericht, dort genügen orange ab 3 und rot ab 7 Tagen. Eine Alarmregel gibt es dazu nicht, weil die Datenbank nicht von Prometheus abgefragt wird.</p>
 
 <h3 class="relative group">Secrets
     <div id="secrets" class="anchor"></div>

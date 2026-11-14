@@ -105,7 +105,7 @@
 	<meta property="og:type" content="article">
 		<meta property="article:section" content="posts">
 		<meta property="article:published_time" content="2025-10-18T07:10:10+02:00">
-		<meta property="article:modified_time" content="2026-11-11T11:15:08+01:00">
+		<meta property="article:modified_time" content="2026-11-11T11:39:25+01:00">
 		<meta property="article:tag" content="Kubernetes">
 		<meta property="article:tag" content="Mail">
 		<meta property="article:tag" content="Postfix">
@@ -312,12 +312,12 @@ href="/site.webmanifest.min.e231d7c2a5ac29753d1781895bdd4b9a0e5900e75bcee133bb47
     "dateCreated": "2025-10-18T07:10:10\u002b02:00",
     "datePublished": "2025-10-18T07:10:10\u002b02:00",
     
-    "dateModified": "2026-11-11T11:15:08\u002b01:00",
+    "dateModified": "2026-11-11T11:39:25\u002b01:00",
     
     "keywords": ["kubernetes","mail","postfix","dovecot"],
     
     "mainEntityOfPage": "https://zyria.de/posts/homelab/k3s-prod/apps/mailstack/readme/",
-    "wordCount": "6176"
+    "wordCount": "6397"
   }]
   </script>
 
@@ -964,7 +964,7 @@ href="/site.webmanifest.min.e231d7c2a5ac29753d1781895bdd4b9a0e5900e75bcee133bb47
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2025-10-18T07:10:10&#43;02:00">18 Oktober 2025</time><span class="px-2 text-primary-500">&middot;</span><time datetime="2026-11-11T11:15:08&#43;01:00">Aktualisiert: 11 November 2026</time><span class="px-2 text-primary-500">&middot;</span><span>6176 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
+      <time datetime="2025-10-18T07:10:10&#43;02:00">18 Oktober 2025</time><span class="px-2 text-primary-500">&middot;</span><time datetime="2026-11-11T11:39:25&#43;01:00">Aktualisiert: 11 November 2026</time><span class="px-2 text-primary-500">&middot;</span><span>6397 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
 
 
   
@@ -2466,6 +2466,12 @@ relativ zur Domain-DN — so erwartet es <code>samba-tool</code>).</p>
     
 </h6>
 <p>Der CronJob <code>rspamdcron</code> (<code>rspamd/entrypoint.sh</code>) läuft um 06:45, 14:45, 18:45 und 22:45. Er lernt Spam aus den Junk-Ordnern (auch aus <code>expunged/.Junk</code>) und Ham aus den übrigen Ordnern der Postfächer und legt für Junk Fuzzy-Hashes an. Fehlgeschlagene Aufrufe zählt er und meldet sie per Heartbeat an Uptime Kuma (<code>KUMA_PUSH_URL</code>).</p>
+<p>Die Push-URL steht im Secret <code>mailstack-kuma-push</code> (Schlüssel <code>KUMA_PUSH_URL</code>), das von Hand angelegt wird und nicht im Repository steht. Sie hat die Form <code>https://&lt;kuma&gt;/api/push/&lt;token&gt;</code>. Eine angehängte Query, wie sie die Kuma-Oberfläche anzeigt, schneidet das Skript ab und setzt Status und Meldung selbst. Fehlt das Secret, läuft der Job ohne Heartbeat (<code>optional: true</code>), und Kuma meldet den Monitor nach Ablauf des Intervalls als „down“. Anlegen oder ersetzen mit verdeckter Eingabe:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl"><span class="nb">read</span> -rs KUMA_PUSH_URL
+</span></span><span class="line"><span class="ln">2</span><span class="cl">kubectl -n mailstack create secret generic mailstack-kuma-push <span class="se">\
+</span></span></span><span class="line"><span class="ln">3</span><span class="cl">  --from-literal<span class="o">=</span><span class="nv">KUMA_PUSH_URL</span><span class="o">=</span><span class="s2">&#34;</span><span class="nv">$KUMA_PUSH_URL</span><span class="s2">&#34;</span> --dry-run<span class="o">=</span>client -o yaml <span class="p">|</span> kubectl apply -f -
+</span></span><span class="line"><span class="ln">4</span><span class="cl"><span class="nb">unset</span> KUMA_PUSH_URL</span></span></code></pre></div></div>
+<p>Der nächste Lauf liest den neuen Wert; ein Neustart ist nicht nötig.</p>
 <p>Nur der Lauf um 06:45 (<code>CORPUS_HOUR</code>, Europe/Berlin) lädt zusätzlich den Monatskorpus von <a href="http://untroubled.org/spam/"  target="_blank" rel="noreferrer">untroubled.org</a>. Das sind Honeypot-Spams, 300 bis 6000 im Monat. Der Job legt für sie nur Fuzzy-Hashes mit Flag 11 (<code>LOCAL_FUZZY_DENIED</code>) an und lernt sie nicht in Bayes. Gemessen an eigenem Ham hat Bayes mit dem fremden Korpus mehr Fehlalarme erzeugt, ohne mehr Spam zu erkennen, während die Fuzzy-Hashes keine Ham-Einstufung geändert haben (pyrox/k3s-prod#1161). Die Seite aktualisiert die Datei einmal täglich und sperrt Clients, die öfter laden. Deshalb gibt es nur einen Abruf pro Tag mit einem Versuch, ein persistenter Cache ist nicht nötig. Die Hashes verfallen nach 90 Tagen, jedes tägliche Hinzufügen erhöht ihr Gewicht.</p>
 <ul>
 <li>Der Korpus landet im <code>emptyDir</code> <code>rspamdcron-cache</code> unter <code>/var/cache/rspamd</code>. Das Image hat dieses Verzeichnis nicht, und <code>_rspamd</code> darf weder dort noch im Arbeitsverzeichnis <code>/</code> schreiben. Bis November 2026 scheiterte der Download deshalb still.</li>
@@ -2729,6 +2735,18 @@ relativ zur Domain-DN — so erwartet es <code>samba-tool</code>).</p>
     
 </h6>
 <p>Postfix ist der Mail Transfer Agent (MTA). Er nimmt E-Mails von externen Servern entgegen, leitet sie zur Prüfung an Rspamd weiter und übergibt sie anschließend zur lokalen Zustellung an Dovecot. Er ist ebenfalls für den Versand ausgehender E-Mails zuständig.</p>
+
+<h6 class="relative group">Banner auf Submission ohne Namensauflösung
+    <div id="banner-auf-submission-ohne-namensauflösung" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#banner-auf-submission-ohne-namensaufl%c3%b6sung" aria-label="Anker">#</a>
+    </span>
+    
+</h6>
+<p>Postfix löst beim Verbindungsaufbau die Adresse des Clients rückwärts auf (<code>smtpd_peername_lookup</code>) und sendet das Banner <code>220</code> erst danach. Zeigt der PTR eines Clients in eine Zone, deren Nameserver von außen nicht antworten, wartet Postfix bis zum Timeout des Resolvers; Geräte mit kurzem Banner-Timeout, etwa Scanner, geben vorher auf (<code>lost connection after CONNECT</code>).</p>
+<p>Auf Submission (587) und submissions (465) ist die Auflösung deshalb abgeschaltet (<code>POSTFIXMASTER__submission__inet__smtpd_peername_lookup</code> und <code>POSTFIXMASTER__submissions__inet__smtpd_peername_lookup</code> am Postfix-Container). Dort melden sich nur angemeldete Clients an. rspamd wertet für sie keine Hostname-Symbole, und <code>reject_unknown_client</code> in <code>smtpd_client_restrictions</code> greift wegen <code>smtpd_delay_reject = yes</code> erst nach <code>permit_sasl_authenticated</code>. Im Log erscheinen diese Clients als <code>unknown[&lt;adresse&gt;]</code>. Port 25 löst weiter auf, weil die Prüfungen dort den Namen brauchen.</p>
 
 <h6 class="relative group">Verhalten bei einem rspamd-Ausfall
     <div id="verhalten-bei-einem-rspamd-ausfall" class="anchor"></div>

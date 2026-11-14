@@ -105,7 +105,7 @@
 	<meta property="og:type" content="article">
 		<meta property="article:section" content="posts">
 		<meta property="article:published_time" content="2026-10-23T23:00:00+02:00">
-		<meta property="article:modified_time" content="2026-11-02T21:04:11+01:00">
+		<meta property="article:modified_time" content="2026-11-14T04:48:59+01:00">
 		<meta property="article:tag" content="Kubernetes">
 		<meta property="article:tag" content="Crowdsec">
 		<meta property="article:tag" content="Security">
@@ -313,12 +313,12 @@ href="/site.webmanifest.min.e231d7c2a5ac29753d1781895bdd4b9a0e5900e75bcee133bb47
     "dateCreated": "2026-10-23T23:00:00\u002b02:00",
     "datePublished": "2026-10-23T23:00:00\u002b02:00",
     
-    "dateModified": "2026-11-02T21:04:11\u002b01:00",
+    "dateModified": "2026-11-14T04:48:59\u002b01:00",
     
     "keywords": ["kubernetes","crowdsec","security","traefik","postgresql"],
     
     "mainEntityOfPage": "https://zyria.de/posts/homelab/k3s-prod/apps/crowdsec/readme/",
-    "wordCount": "2047"
+    "wordCount": "2092"
   }]
   </script>
 
@@ -965,7 +965,7 @@ href="/site.webmanifest.min.e231d7c2a5ac29753d1781895bdd4b9a0e5900e75bcee133bb47
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2026-10-23T23:00:00&#43;02:00">23 Oktober 2026</time><span class="px-2 text-primary-500">&middot;</span><time datetime="2026-11-02T21:04:11&#43;01:00">Aktualisiert: 2 November 2026</time><span class="px-2 text-primary-500">&middot;</span><span>2047 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
+      <time datetime="2026-10-23T23:00:00&#43;02:00">23 Oktober 2026</time><span class="px-2 text-primary-500">&middot;</span><time datetime="2026-11-14T04:48:59&#43;01:00">Aktualisiert: 14 November 2026</time><span class="px-2 text-primary-500">&middot;</span><span>2092 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
 
 
   
@@ -1791,13 +1791,17 @@ in <code>agent.acquisition</code>.</p>
 			</tr>
 	</tbody>
 </table>
+<p>Alle Regeln tragen <code>area: security</code>. Im Status-Dashboard hat dieser Bereich
+eine eigene Kachel, die auf dieses Dashboard führt.</p>
 <p>Das Dashboard &ldquo;CrowdSec&rdquo; in Grafana (<code>dashboards/crowdsec.json</code>) zeigt
 eigene und Community-Sperren, gelesene Logzeilen je Traefik-Pod, ausgelöste
 Szenarien, AppSec-Prüfungen und -Treffer je Regel, die Prüfdauer und die
 Abrufe der Bouncer. Es ist eigens gebaut, weil die Dashboards von CrowdSec
 (<code>crowdsecurity/grafana-dashboards</code>) auf v1.5 stehen und AppSec nicht
 kennen. Änderungen in Grafana werden nicht gespeichert; die Datei im
-Repository ist die Quelle.</p>
+Repository ist die Quelle. Die ConfigMap trägt die Annotation
+<code>grafana_folder: Sicherheit</code>, das Dashboard liegt also in diesem Ordner, und
+mit dem Tag <code>nav</code> steht es in der Linkzeile aller anderen Dashboards.</p>
 
 <h3 class="relative group">Bouncer testen
     <div id="bouncer-testen" class="anchor"></div>

@@ -105,7 +105,7 @@
 	<meta property="og:type" content="article">
 		<meta property="article:section" content="posts">
 		<meta property="article:published_time" content="2026-10-21T17:00:00+02:00">
-		<meta property="article:modified_time" content="2026-10-21T19:50:04+02:00">
+		<meta property="article:modified_time" content="2026-11-14T05:48:19+01:00">
 		<meta property="article:tag" content="Kubernetes">
 		<meta property="article:tag" content="Dmarc">
 		<meta property="article:tag" content="Mail">
@@ -313,12 +313,12 @@ href="/site.webmanifest.min.e231d7c2a5ac29753d1781895bdd4b9a0e5900e75bcee133bb47
     "dateCreated": "2026-10-21T17:00:00\u002b02:00",
     "datePublished": "2026-10-21T17:00:00\u002b02:00",
     
-    "dateModified": "2026-10-21T19:50:04\u002b02:00",
+    "dateModified": "2026-11-14T05:48:19\u002b01:00",
     
     "keywords": ["kubernetes","dmarc","mail","grafana","postgresql"],
     
     "mainEntityOfPage": "https://zyria.de/posts/homelab/k3s-prod/apps/parsedmarc/readme/",
-    "wordCount": "1395"
+    "wordCount": "1544"
   }]
   </script>
 
@@ -938,6 +938,8 @@ href="/site.webmanifest.min.e231d7c2a5ac29753d1781895bdd4b9a0e5900e75bcee133bb47
   
 
   
+    
+  
 
   
     
@@ -963,7 +965,7 @@ href="/site.webmanifest.min.e231d7c2a5ac29753d1781895bdd4b9a0e5900e75bcee133bb47
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2026-10-21T17:00:00&#43;02:00">21 Oktober 2026</time><span class="px-2 text-primary-500">&middot;</span><span>1395 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
+      <time datetime="2026-10-21T17:00:00&#43;02:00">21 Oktober 2026</time><span class="px-2 text-primary-500">&middot;</span><time datetime="2026-11-14T05:48:19&#43;01:00">Aktualisiert: 14 November 2026</time><span class="px-2 text-primary-500">&middot;</span><span>1544 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
 
 
   
@@ -1184,7 +1186,11 @@ href="/site.webmanifest.min.e231d7c2a5ac29753d1781895bdd4b9a0e5900e75bcee133bb47
         <li><a href="#konfiguration">Konfiguration</a></li>
         <li><a href="#secrets">Secrets</a></li>
         <li><a href="#grafana">Grafana</a></li>
-        <li><a href="#altdaten">Altdaten</a></li>
+        <li><a href="#altdaten">Altdaten</a>
+          <ul>
+            <li><a href="#berichte-aus-dem-junk-ordner">Berichte aus dem Junk-Ordner</a></li>
+          </ul>
+        </li>
         <li><a href="#betrieb">Betrieb</a></li>
         <li><a href="#installation">Installation</a></li>
       </ul>
@@ -1210,7 +1216,11 @@ href="/site.webmanifest.min.e231d7c2a5ac29753d1781895bdd4b9a0e5900e75bcee133bb47
         <li><a href="#konfiguration">Konfiguration</a></li>
         <li><a href="#secrets">Secrets</a></li>
         <li><a href="#grafana">Grafana</a></li>
-        <li><a href="#altdaten">Altdaten</a></li>
+        <li><a href="#altdaten">Altdaten</a>
+          <ul>
+            <li><a href="#berichte-aus-dem-junk-ordner">Berichte aus dem Junk-Ordner</a></li>
+          </ul>
+        </li>
         <li><a href="#betrieb">Betrieb</a></li>
         <li><a href="#installation">Installation</a></li>
       </ul>
@@ -1345,7 +1355,11 @@ href="/site.webmanifest.min.e231d7c2a5ac29753d1781895bdd4b9a0e5900e75bcee133bb47
 DMARC-Aggregat- und Fehlerberichte sowie die SMTP-TLS-Berichte (RFC 8460)
 aus dem DMARC-Postfach (Server und Benutzer in <code>values.yaml</code>), reichert sie um Land, Reverse-DNS und
 Absendername der Quell-IP an und schreibt sie in PostgreSQL. Angezeigt
-werden sie in Grafana aus <code>apps/prometheus</code>, Dashboard &ldquo;DMARC Reports&rdquo;.</p>
+werden sie in Grafana aus <code>apps/prometheus</code>, Dashboard &ldquo;DMARC Reports&rdquo;.
+<code>dashboards/build.sh</code> setzt dabei den Tag <code>nav</code> und die Linkzeile, damit das
+Dashboard in der Navigation der anderen steht. Die Kachel „DMARC bestanden“
+im Status-Dashboard fragt dieselbe Datenbank über die Datenquelle
+<code>parsedmarc</code> ab.</p>
 <p>Die App ersetzt <code>dmarc-report</code>, die am 21.10.2026 abgeschaltet und danach entfernt wurde:
 deren Image läuft auf PHP 8.1, für das es gegen PHP2Shell keinen Fix gibt,
 und Image, Viewer und Parser werden seit 2023 nicht mehr gepflegt.</p>
@@ -1407,7 +1421,7 @@ parsedmarc-Repository, angepasst durch <code>dashboards/build.sh</code>.</li>
 			<tr>
 					<td><code>grafana-dashboard-parsedmarc</code></td>
 					<td>ConfigMap</td>
-					<td>Dashboard, vom Grafana-Sidecar über das Label <code>grafana_dashboard</code> gefunden</td>
+					<td>Dashboard, vom Grafana-Sidecar über das Label <code>grafana_dashboard</code> gefunden, Ordner über die Annotation <code>grafana_folder: Dienste</code></td>
 			</tr>
 			<tr>
 					<td><code>grafana-datasource-parsedmarc</code></td>
@@ -1645,10 +1659,12 @@ zusammenpassen.</p>
 Abschalten eingegangen sind, liegen in <code>INBOX</code> und werden beim ersten Start
 verarbeitet.</p>
 <p>Die Altberichte liest der Job <code>parsedmarc-import</code> ein. Er ist in
-<code>values.yaml</code> unter <code>controllers.import</code> mit <code>enabled: false</code> vorbereitet.
+<code>values.yaml</code> unter <code>controllers.import</code> mit <code>enabled: false</code> vorbereitet
+und taugt für jeden Ordner, den das Deployment nicht beobachtet; welche das
+sind, steht in der Schleife <code>for folder in ...</code> im Skript des Jobs.
 Ein Einmallauf von parsedmarc verarbeitet nur einen Stapel, deshalb ruft
-das Skript des Jobs parsedmarc für <code>processed</code> und danach für <code>error</code> so
-lange auf, bis der Ordner leer ist, je 100 Mails pro Lauf. Die Mails
+das Skript parsedmarc je Ordner so lange auf, bis dieser leer ist, je 100
+Mails pro Lauf. Die Mails
 wandern dabei wie neue Berichte nach <code>Archive/...</code>, nicht lesbare nach
 <code>Archive/Invalid</code>. Ein Stapel, der sich nicht speichern lässt, geht sofort
 nach <code>Archive/Unsaved</code> (<code>MAX_UNSAVED_RETRIES</code> 0), damit jeder Lauf
@@ -1663,6 +1679,26 @@ die Zeilen <code>import:</code> nennen den Rest je Ordner.</li>
 </ol>
 <p>Danach sind <code>processed</code> und <code>error</code> leer und können gelöscht werden; alle
 Mails liegen unter <code>Archive</code>.</p>
+
+<h4 class="relative group">Berichte aus dem Junk-Ordner
+    <div id="berichte-aus-dem-junk-ordner" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#berichte-aus-dem-junk-ordner" aria-label="Anker">#</a>
+    </span>
+    
+</h4>
+<p>Am 14.11.2026 endete die Auswertung am 06.11., obwohl das Postfach weiter
+Berichte bekam: rspamd bewertete den zip-Anhang der Google-Berichte hoch
+genug für <code>add header</code>, Dovecot legte sie deshalb in <code>Junk</code>, und das
+Deployment beobachtet nur <code>INBOX</code>. Sechs Berichte vom 28.10. bis 05.11.
+lagen dort unbearbeitet. Die Ursache ist im rspamd-Image behoben
+(Ausnahme für die Report-Postfächer); die liegengebliebenen Berichte hat
+derselbe Import-Job mit <code>Junk</code> als Ordner nachgelesen.</p>
+<p>Fällt die Auswertung wieder zurück, zeigt das die Kachel „Letzter
+DMARC-Bericht&quot; im Status-Dashboard (<code>apps/prometheus</code>). Ein Blick in <code>Junk</code>
+lohnt dann als Erstes.</p>
 <p>Die Daten in der MariaDB von <code>dmarc-report</code> werden nicht übernommen. Sie
 stammen aus denselben Mails, und ein Umbau des techsneeze-Schemas in das von
 parsedmarc brächte weniger Felder als das erneute Einlesen. Vor dem Rückbau

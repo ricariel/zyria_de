@@ -105,7 +105,7 @@
 	<meta property="og:type" content="article">
 		<meta property="article:section" content="posts">
 		<meta property="article:published_time" content="2025-10-04T15:31:37+02:00">
-		<meta property="article:modified_time" content="2026-09-07T14:43:53+02:00">
+		<meta property="article:modified_time" content="2026-11-14T06:14:45+01:00">
 		<meta property="article:tag" content="Kubernetes">
 		<meta property="article:tag" content="Metallb">
 		<meta property="article:tag" content="Loadbalancer">
@@ -312,12 +312,12 @@ href="/site.webmanifest.min.e231d7c2a5ac29753d1781895bdd4b9a0e5900e75bcee133bb47
     "dateCreated": "2025-10-04T15:31:37\u002b02:00",
     "datePublished": "2025-10-04T15:31:37\u002b02:00",
     
-    "dateModified": "2026-09-07T14:43:53\u002b02:00",
+    "dateModified": "2026-11-14T06:14:45\u002b01:00",
     
     "keywords": ["kubernetes","metallb","loadbalancer","networking"],
     
     "mainEntityOfPage": "https://zyria.de/posts/homelab/k3s-prod/apps/metallb/readme/",
-    "wordCount": "253"
+    "wordCount": "463"
   }]
   </script>
 
@@ -964,7 +964,7 @@ href="/site.webmanifest.min.e231d7c2a5ac29753d1781895bdd4b9a0e5900e75bcee133bb47
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2025-10-04T15:31:37&#43;02:00">4 Oktober 2025</time><span class="px-2 text-primary-500">&middot;</span><time datetime="2026-09-07T14:43:53&#43;02:00">Aktualisiert: 7 September 2026</time><span class="px-2 text-primary-500">&middot;</span><span>253 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
+      <time datetime="2025-10-04T15:31:37&#43;02:00">4 Oktober 2025</time><span class="px-2 text-primary-500">&middot;</span><time datetime="2026-11-14T06:14:45&#43;01:00">Aktualisiert: 14 November 2026</time><span class="px-2 text-primary-500">&middot;</span><span>463 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
 
 
   
@@ -1168,6 +1168,7 @@ href="/site.webmanifest.min.e231d7c2a5ac29753d1781895bdd4b9a0e5900e75bcee133bb47
             <li><a href="#wichtige-einstellungen">Wichtige Einstellungen</a></li>
           </ul>
         </li>
+        <li><a href="#überwachung">Überwachung</a></li>
         <li><a href="#installation">Installation</a></li>
         <li><a href="#abhängigkeiten">Abhängigkeiten</a></li>
       </ul>
@@ -1195,6 +1196,7 @@ href="/site.webmanifest.min.e231d7c2a5ac29753d1781895bdd4b9a0e5900e75bcee133bb47
             <li><a href="#wichtige-einstellungen">Wichtige Einstellungen</a></li>
           </ul>
         </li>
+        <li><a href="#überwachung">Überwachung</a></li>
         <li><a href="#installation">Installation</a></li>
         <li><a href="#abhängigkeiten">Abhängigkeiten</a></li>
       </ul>
@@ -1386,7 +1388,63 @@ href="/site.webmanifest.min.e231d7c2a5ac29753d1781895bdd4b9a0e5900e75bcee133bb47
 <li><strong>L2 Advertisement:</strong> Alle Adressen des Pools werden per ARP/NDP angekündigt, allerdings nur von den Control-Plane-Knoten (<code>nodeSelectors</code>).</li>
 <li><strong>Logging:</strong> Log-Level von Controller und Speaker steht auf <code>warn</code>.</li>
 <li><strong>FRR:</strong> Free Range Routing (FRR) ist deaktiviert (<code>frr.enabled: false</code>). Es wird der native MetalLB-Speaker verwendet.</li>
+<li><strong>Metriken:</strong> Controller und Speaker liefern Metriken, der Chart legt dafür je einen <code>ServiceMonitor</code> an (<code>prometheus.serviceMonitor.enabled</code>). Die Metriken gehen ausschließlich über HTTPS und verlangen ein Bearer-Token; der Chart gibt dem Dienstkonto von Prometheus deshalb eine Role im Namespace, weshalb <code>prometheus.serviceAccount</code> und <code>prometheus.namespace</code> gesetzt sein müssen. Das Zertifikat ist selbst ausgestellt, der ServiceMonitor prüft es nicht.</li>
 </ul>
+
+<h3 class="relative group">Überwachung
+    <div id="überwachung" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%c3%bcberwachung" aria-label="Anker">#</a>
+    </span>
+    
+</h3>
+<p>Die Alarmregeln kommen aus zwei Quellen.</p>
+<p>Aus dem Chart (<code>prometheus.prometheusRule</code>), mit <code>area: network</code> je Regel:</p>
+<table>
+	<thead>
+			<tr>
+					<th>Alarm</th>
+					<th>Bedingung</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><code>MetalLBStaleConfig</code></td>
+					<td>ein Pod arbeitet länger als eine Minute mit veralteter Konfiguration</td>
+			</tr>
+			<tr>
+					<td><code>MetalLBConfigNotLoaded</code></td>
+					<td>ein Pod hat die Konfiguration nicht geladen</td>
+			</tr>
+			<tr>
+					<td><code>MetalLBAddressPoolExhausted</code></td>
+					<td>alle Adressen eines Pools sind vergeben</td>
+			</tr>
+	</tbody>
+</table>
+<p>Abgeschaltet sind die Staffel <code>addressPoolUsage</code> (75, 85 und 95 Prozent sind Zahlen ohne Messung dahinter; von 50 IPv4-Adressen im Pool sind 8 vergeben) und <code>bgpSessionDown</code> (der Speaker läuft im L2-Modus, eine BGP-Sitzung gibt es nicht, die Regel könnte nie feuern und würde Abdeckung vortäuschen).</p>
+<p>Aus <code>prometheus-rules.yaml</code> dieses Verzeichnisses, bewusst über kube-state-metrics statt über die MetalLB-Metriken, damit sie auch greifen, wenn der Metrik-Endpunkt von MetalLB selbst nicht erreichbar ist:</p>
+<table>
+	<thead>
+			<tr>
+					<th>Alarm</th>
+					<th>Bedingung</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><code>MetalLBSpeakerMissing</code></td>
+					<td>auf mindestens einem Node läuft seit zehn Minuten kein Speaker</td>
+			</tr>
+			<tr>
+					<td><code>MetalLBServiceWithoutAddress</code></td>
+					<td>ein Dienst vom Typ <code>LoadBalancer</code> hat seit zehn Minuten keine Adresse</td>
+			</tr>
+	</tbody>
+</table>
+<p>Dass ein Metrik-Ziel ausfällt, meldet <code>TargetDown</code> aus den Standardregeln von kube-prometheus-stack; dafür braucht es hier keine eigene Regel.</p>
 
 <h3 class="relative group">Installation
     <div id="installation" class="anchor"></div>
