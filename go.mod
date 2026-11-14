@@ -6,7 +6,7 @@ require (
 	git.zyria.de/pyrox/hugo-default-coder v1.0.2 // indirect
 	git.zyria.de/pyrox/hugo-legal v1.0.2 // indirect
 	git.zyria.de/pyrox/hugo-shortcodes v1.0.2 // indirect
-	git.zyria.de/pyrox/k3s-prod v0.0.0-20261113003339-ab4323e51019 // indirect
+	git.zyria.de/pyrox/k3s-prod v0.0.0-20261114052740-d59dfb5a6b2f // indirect
 	github.com/hugomods/shortcodes v0.25.1 // indirect
 	github.com/nunocoracao/blowfish/v2 v2.106.0 // indirect
 )
