@@ -104,8 +104,8 @@
 	<meta property="og:locale" content="de_de">
 	<meta property="og:type" content="article">
 		<meta property="article:section" content="posts">
-		<meta property="article:published_time" content="2026-11-02T09:03:22+01:00">
-		<meta property="article:modified_time" content="2026-11-02T09:03:22+01:00">
+		<meta property="article:published_time" content="2026-11-14T08:08:00+01:00">
+		<meta property="article:modified_time" content="2026-11-14T08:08:00+01:00">
 		<meta property="article:tag" content="Kubernetes">
 		<meta property="article:tag" content="K3s">
 		<meta property="article:tag" content="Gitops">
@@ -311,15 +311,15 @@ href="/site.webmanifest.min.e231d7c2a5ac29753d1781895bdd4b9a0e5900e75bcee133bb47
       "sameAs": ["https://git.casa-due-pur.de/fabrice.kirchner", "https://git.zyria.de/pyrox", "https://github.com/ricariel", "https://www.linkedin.com/in/fabrice-kirchner-bb5408163/", "https://www.xing.com/profile/Fabrice_Kirchner", "https://kirchner.social/@fabrice", "https://codeberg.org/ricariel"]
     },
     "copyrightYear": "2026",
-    "dateCreated": "2026-11-02T09:03:22\u002b01:00",
-    "datePublished": "2026-11-02T09:03:22\u002b01:00",
+    "dateCreated": "2026-11-14T08:08:00\u002b01:00",
+    "datePublished": "2026-11-14T08:08:00\u002b01:00",
     
-    "dateModified": "2026-11-02T09:03:22\u002b01:00",
+    "dateModified": "2026-11-14T08:08:00\u002b01:00",
     
     "keywords": ["kubernetes","k3s","gitops","argocd","helm","kustomize","homelab","produktion"],
     
     "mainEntityOfPage": "https://zyria.de/posts/homelab/k3s-prod/apps/matrix/readme/",
-    "wordCount": "351"
+    "wordCount": "527"
   }]
   </script>
 
@@ -964,7 +964,7 @@ href="/site.webmanifest.min.e231d7c2a5ac29753d1781895bdd4b9a0e5900e75bcee133bb47
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2026-11-02T09:03:22&#43;01:00">2 November 2026</time><span class="px-2 text-primary-500">&middot;</span><span>351 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
+      <time datetime="2026-11-14T08:08:00&#43;01:00">14 November 2026</time><span class="px-2 text-primary-500">&middot;</span><span>527 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
 
 
   
@@ -1244,6 +1244,7 @@ href="/site.webmanifest.min.e231d7c2a5ac29753d1781895bdd4b9a0e5900e75bcee133bb47
             <li><a href="#wichtige-einstellungen">Wichtige Einstellungen</a></li>
           </ul>
         </li>
+        <li><a href="#überwachung">Überwachung</a></li>
         <li><a href="#installation">Installation</a></li>
         <li><a href="#abhängigkeiten">Abhängigkeiten</a></li>
       </ul>
@@ -1271,6 +1272,7 @@ href="/site.webmanifest.min.e231d7c2a5ac29753d1781895bdd4b9a0e5900e75bcee133bb47
             <li><a href="#wichtige-einstellungen">Wichtige Einstellungen</a></li>
           </ul>
         </li>
+        <li><a href="#überwachung">Überwachung</a></li>
         <li><a href="#installation">Installation</a></li>
         <li><a href="#abhängigkeiten">Abhängigkeiten</a></li>
       </ul>
@@ -1473,6 +1475,20 @@ href="/site.webmanifest.min.e231d7c2a5ac29753d1781895bdd4b9a0e5900e75bcee133bb47
 <li><strong>Datenbank</strong>: Synapse verwendet eine dedizierte PostgreSQL-Datenbank, die als Sidecar-Container läuft. Das Image hat einen festen Versionstag, den Renovate pflegt; Patch- und Minor-Updates mergt es selbst, jedes startet den Pod kurz neu. Der Init-Container <code>dbupgrade</code> (<code>pgautoupgrade</code>) hebt das Datenverzeichnis bei einem Major-Sprung an. Ein solches Update kommt deshalb zusammen mit <code>pgautoupgrade</code> als ein PR, der eine Freigabe im Renovate-Dashboard braucht. Der Tag nennt die Debian-Variante (<code>-trixie</code>) ausdrücklich: Die Sortierung von Text hängt an der glibc-Version, ein stiller Wechsel auf ein anderes Debian-Release oder auf Alpine bringt Text-Indizes durcheinander und verlangt ein <code>REINDEX</code>. Keel ist hier bewusst nicht im Spiel: Bei beweglichen Tags startete es den Pod neu, der Node nahm aber das zwischengespeicherte alte Image (bis Oktober 2026 lief so 18.1 statt 18.6).</li>
 <li><strong>Speicher</strong>: Die persistenten Daten liegen auf Longhorn-Volumes: Synapse-Daten und Medien auf <code>matrix-synapse</code>, die Bridge auf <code>matrix-bridge</code>, die Datenbank auf <code>matrix-db</code>.</li>
 </ul>
+
+<h3 class="relative group">Überwachung
+    <div id="überwachung" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%c3%bcberwachung" aria-label="Anker">#</a>
+    </span>
+    
+</h3>
+<p>Synapse liefert Metriken über einen eigenen Listener vom Typ <code>metrics</code> in <code>homeserver.yaml</code>, zusammen mit <code>enable_metrics: true</code>. Der Listener bindet ausdrücklich <code>0.0.0.0</code>; mit dem Standard hörte er nur auf localhost und das Pod-Netz käme nicht heran. Er trägt keine <code>client</code>- oder <code>federation</code>-Ressource und liefert deshalb nur <code>/_synapse/metrics</code>.</p>
+<p>Der Port liegt als weiterer Port am vorhandenen Service, nicht an einem eigenen: <code>app-template</code> lässt das Namenssuffix im Service nur weg, solange es genau einen Service gibt, ein zweiter würde den laufenden Service umbenennen. Der Ingress bildet nur <code>http</code> und <code>streaming</code> ab, der Metrik-Port bleibt clusterintern. Abgefragt wird er über <code>servicemonitor.yaml</code>.</p>
+<p>Synapse läuft hier als Monolith, ein Ziel deckt also den ganzen Homeserver ab. Alarmregeln gibt es noch nicht; sie kommen als eigene Änderung, sobald Messwerte dieser Instanz vorliegen.</p>
+<p>Für die Datenbank gibt es noch keine Metriken. Sie kommen nach der Entscheidung vom 14.11.2026 nicht über einen eigenen <code>postgres-exporter</code>-Container, sondern mit der Modernisierung der Datenbank-Charts über deren eigenen Schalter (pyrox/k3s-prod#1249). Davon unabhängig offen bleibt, die Zugangsdaten der Datenbank an einer Stelle zu führen statt dreifach im Klartext (pyrox/k3s-prod#1244).</p>
 
 <h3 class="relative group">Installation
     <div id="installation" class="anchor"></div>
@@ -1732,14 +1748,14 @@ href="/site.webmanifest.min.e231d7c2a5ac29753d1781895bdd4b9a0e5900e75bcee133bb47
           
             <a
               class="flex text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
-              href="/posts/homelab/k3s-prod/apps/paperless/readme/">
+              href="/posts/homelab/k3s-prod/apps/unpoller/readme/">
               <span class="leading-6">
-                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;Paperless-ngx
+                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;unpoller
               </span>
             </a>
             
               <span class="ms-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
-                <time datetime="2026-11-02T09:03:22&#43;01:00">2 November 2026</time>
+                <time datetime="2026-11-14T04:48:59&#43;01:00">14 November 2026</time>
               </span>
             
           
@@ -1748,14 +1764,14 @@ href="/site.webmanifest.min.e231d7c2a5ac29753d1781895bdd4b9a0e5900e75bcee133bb47
           
             <a
               class="flex text-right text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
-              href="/posts/homelab/k3s-prod/apps/mastodon/readme/">
+              href="/posts/homelab/k3s-prod/ansible/shutdown-startup/">
               <span class="leading-6">
-                Mastodon&ensp;<span class="inline-block rtl:rotate-180">&rarr;</span>
+                Operational Lifecycle Management: Orchestrierter Shutdown für Kubernetes&ensp;<span class="inline-block rtl:rotate-180">&rarr;</span>
               </span>
             </a>
             
               <span class="me-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
-                <time datetime="2026-11-02T09:03:22&#43;01:00">2 November 2026</time>
+                <time datetime="2024-10-27T10:00:00&#43;01:00">27 Oktober 2024</time>
               </span>
             
           

@@ -105,7 +105,7 @@
 	<meta property="og:type" content="article">
 		<meta property="article:section" content="posts">
 		<meta property="article:published_time" content="2025-10-17T13:23:29+02:00">
-		<meta property="article:modified_time" content="2026-11-14T06:14:45+01:00">
+		<meta property="article:modified_time" content="2026-11-14T12:09:08+01:00">
 		<meta property="article:tag" content="Kubernetes">
 		<meta property="article:tag" content="Prometheus">
 		<meta property="article:tag" content="Monitoring">
@@ -313,12 +313,12 @@ href="/site.webmanifest.min.e231d7c2a5ac29753d1781895bdd4b9a0e5900e75bcee133bb47
     "dateCreated": "2025-10-17T13:23:29\u002b02:00",
     "datePublished": "2025-10-17T13:23:29\u002b02:00",
     
-    "dateModified": "2026-11-14T06:14:45\u002b01:00",
+    "dateModified": "2026-11-14T12:09:08\u002b01:00",
     
     "keywords": ["kubernetes","prometheus","monitoring","alertmanager","grafana"],
     
     "mainEntityOfPage": "https://zyria.de/posts/homelab/k3s-prod/apps/prometheus/readme/",
-    "wordCount": "2926"
+    "wordCount": "2984"
   }]
   </script>
 
@@ -965,7 +965,7 @@ href="/site.webmanifest.min.e231d7c2a5ac29753d1781895bdd4b9a0e5900e75bcee133bb47
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2025-10-17T13:23:29&#43;02:00">17 Oktober 2025</time><span class="px-2 text-primary-500">&middot;</span><time datetime="2026-11-14T06:14:45&#43;01:00">Aktualisiert: 14 November 2026</time><span class="px-2 text-primary-500">&middot;</span><span>2926 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
+      <time datetime="2025-10-17T13:23:29&#43;02:00">17 Oktober 2025</time><span class="px-2 text-primary-500">&middot;</span><time datetime="2026-11-14T12:09:08&#43;01:00">Aktualisiert: 14 November 2026</time><span class="px-2 text-primary-500">&middot;</span><span>2984 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
 
 
   
@@ -1556,6 +1556,10 @@ href="/site.webmanifest.min.e231d7c2a5ac29753d1781895bdd4b9a0e5900e75bcee133bb47
 					<td>für jeden Host mit <code>scope=&quot;host&quot;</code>: Neustart steht seit mehr als drei Tagen aus (ab 14 Tagen kritisch), Neustart-Metrik fehlt oder ist veraltet, wenig Platz auf einem Dateisystem (unter 15 %, in <code>/boot</code> unter 150 MB, in <code>/usr</code> unter 1,5 GB; kritisch unter 5 % oder in <code>/boot</code> unter 60 MB), node-exporter außerhalb des Clusters ohne <code>scope</code>-Label</td>
 			</tr>
 			<tr>
+					<td><code>host-common</code> (Laufwerke)</td>
+					<td>für jeden Host mit <code>scope=&quot;host&quot;</code>, <code>area: storage</code>: SMART-Gesamtbewertung nicht mehr bestanden (kritisch), NVMe mit gesetztem <code>critical_warning</code> (kritisch), NVMe mit verbrauchter Lebensdauer (<code>percentage_used</code> ab 100 %), neue NVMe-Medienfehler innerhalb von 24 Stunden, wachsende Zahl ersetzter oder wartender Sektoren innerhalb von 24 Stunden, Laufwerksmetrik fehlt oder ist veraltet</td>
+			</tr>
+			<tr>
 					<td><code>proxmox</code></td>
 					<td>nur Virtualisierungsknoten: Quelle der nft-Blockliste nicht geladen, Blockliste älter als 26 Stunden oder von nft abgelehnt, ZFS-Pool über 80 % belegt (über 90 % kritisch), ZFS-Pool-Metrik fehlt</td>
 			</tr>
@@ -1566,7 +1570,7 @@ href="/site.webmanifest.min.e231d7c2a5ac29753d1781895bdd4b9a0e5900e75bcee133bb47
 	</tbody>
 </table>
 <p>Regeln, die nur eine App betreffen, liegen in deren Verzeichnis, etwa <code>apps/ansible-semaphore/prometheus-rules.yaml</code> (gescheiterte und lange laufende Semaphore-Tasks) und <code>apps/mailstack/prometheus-rules.yaml</code> (rspamd, Postfix-Queue und Dovecot, Liste in der README des Mailstacks).</p>
-<p>Kritisch, also zusätzlich per Mail, sind nur <code>NodeFilesystemReadOnly</code>, <code>LonghornVolumeFaulted</code>, <code>RspamdDown</code>, <code>RspamdNoMailScanned</code>, <code>HostRebootOverdue</code>, <code>HostFilesystemFull</code>, <code>ProxmoxZfsPoolFull</code>, <code>SambaDomainBackupOverdue</code> und <code>MatrixZustellungGescheitert</code>. Abfragen über lange Zeiträume enthalten einen <code>offset</code>-Teil, der sie stumm hält, bis genug Verlauf vorliegt. Vor einer Änderung lassen sich die Regeln mit <code>promtool check rules</code> prüfen, nachdem die <code>groups</code> aus den PrometheusRule-Objekten in eine eigene Datei übernommen wurden.</p>
+<p>Kritisch, also zusätzlich per Mail, sind nur <code>NodeFilesystemReadOnly</code>, <code>LonghornVolumeFaulted</code>, <code>RspamdDown</code>, <code>RspamdNoMailScanned</code>, <code>HostRebootOverdue</code>, <code>HostFilesystemFull</code>, <code>HostDriveFailed</code>, <code>HostDriveNvmeCritical</code>, <code>ProxmoxZfsPoolFull</code>, <code>SambaDomainBackupOverdue</code> und <code>MatrixZustellungGescheitert</code>. Abfragen über lange Zeiträume enthalten einen <code>offset</code>-Teil, der sie stumm hält, bis genug Verlauf vorliegt. Vor einer Änderung lassen sich die Regeln mit <code>promtool check rules</code> prüfen, nachdem die <code>groups</code> aus den PrometheusRule-Objekten in eine eigene Datei übernommen wurden.</p>
 
 <h3 class="relative group">Grafana
     <div id="grafana" class="anchor"></div>
@@ -1700,7 +1704,7 @@ href="/site.webmanifest.min.e231d7c2a5ac29753d1781895bdd4b9a0e5900e75bcee133bb47
 			<tr>
 					<td><code>cluster</code></td>
 					<td>Hosts &amp; Cluster</td>
-					<td><code>defaultRules.additionalRuleGroupLabels</code> (Nodes, Kubelet, API-Server, Ressourcen), eigene Regeln zu Nodes und zu den Hosts außerhalb des Clusters (<code>host-rules.yaml</code>, <code>proxmox-rules.yaml</code>)</td>
+					<td><code>defaultRules.additionalRuleGroupLabels</code> (Nodes, Kubelet, API-Server, Ressourcen), eigene Regeln zu Nodes und zu den Hosts außerhalb des Clusters (<code>host-rules.yaml</code> ohne die Laufwerksregeln, <code>proxmox-rules.yaml</code>)</td>
 			</tr>
 			<tr>
 					<td><code>workloads</code></td>
@@ -1710,7 +1714,7 @@ href="/site.webmanifest.min.e231d7c2a5ac29753d1781895bdd4b9a0e5900e75bcee133bb47
 			<tr>
 					<td><code>storage</code></td>
 					<td>Speicher &amp; Backup</td>
-					<td><code>defaultRules.additionalRuleGroupLabels</code> (<code>kubernetesStorage</code>), eigene Regeln zu Longhorn, Backups und PVCs</td>
+					<td><code>defaultRules.additionalRuleGroupLabels</code> (<code>kubernetesStorage</code>), eigene Regeln zu Longhorn, Backups und PVCs, die Laufwerksregeln <code>HostDrive*</code> in <code>host-rules.yaml</code></td>
 			</tr>
 			<tr>
 					<td><code>argocd</code>, <code>certificates</code>, <code>mail</code></td>

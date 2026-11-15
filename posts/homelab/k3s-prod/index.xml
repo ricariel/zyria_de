@@ -9,7 +9,7 @@
     <managingEditor>fabrice@zyria.de (Fabrice Kirchner)</managingEditor>
     <webMaster>fabrice@zyria.de (Fabrice Kirchner)</webMaster>
     
-    <lastBuildDate>Sat, 14 Nov 2026 06:14:45 +0100</lastBuildDate><atom:link href="https://zyria.de/posts/homelab/k3s-prod/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 14 Nov 2026 12:09:08 +0100</lastBuildDate><atom:link href="https://zyria.de/posts/homelab/k3s-prod/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Operational Lifecycle Management: Orchestrierter Shutdown für Kubernetes</title>
@@ -18,6 +18,16 @@
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/posts/homelab/k3s-prod/ansible/shutdown-startup/</guid>
       <description>Ein technischer Leitfaden für das geordnete Herunterfahren und Wiederanfahren eines Kubernetes-Clusters (k3s/Longhorn/ArgoCD) zur Vermeidung von Datenkorruption.</description>
+      
+    </item>
+    
+    <item>
+      <title>Matrix</title>
+      <link>https://zyria.de/posts/homelab/k3s-prod/apps/matrix/readme/</link>
+      <pubDate>Sat, 14 Nov 2026 08:08:00 +0100</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/matrix/readme/</guid>
+      <description>Diese Anwendung stellt einen Matrix-Homeserver (Synapse) und einen Web-Client (Element) bereit, um einen föderierten, Ende-zu-Ende-verschlüsselten Chat-Dienst zu betreiben.</description>
       
     </item>
     
@@ -178,16 +188,6 @@
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/posts/homelab/k3s-prod/apps/mastodon/readme/</guid>
       <description>Mastodon ist eine Open-Source-Alternative zu kommerziellen sozialen Netzwerken. Es ermöglicht Benutzern, eigene, unabhängige Server (Instanzen) zu betreiben, die über das ActivityPub-Protokoll miteinander kommunizieren können (Föderation).</description>
-      
-    </item>
-    
-    <item>
-      <title>Matrix</title>
-      <link>https://zyria.de/posts/homelab/k3s-prod/apps/matrix/readme/</link>
-      <pubDate>Mon, 02 Nov 2026 09:03:22 +0100</pubDate>
-      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/matrix/readme/</guid>
-      <description>Diese Anwendung stellt einen Matrix-Homeserver (Synapse) und einen Web-Client (Element) bereit, um einen föderierten, Ende-zu-Ende-verschlüsselten Chat-Dienst zu betreiben.</description>
       
     </item>
     
