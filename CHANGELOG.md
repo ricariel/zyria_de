@@ -3,6 +3,26 @@
 Alle nennenswerten Änderungen an diesem Repository.
 Automatisch aus [Conventional Commits](https://www.conventionalcommits.org) via [git-cliff](https://git-cliff.org).
 
+## [2026.46] - 2026-11-16 ([Vergleich zur Vorversion](https://git.zyria.de/pyrox/zyria_de/compare/2026.45...2026.46))
+
+### 📝 Documentation
+
+- **samba**: Document the mailquota schema extension ([7e7b5d1](https://git.zyria.de/pyrox/zyria_de/commit/7e7b5d13feb359340805ac6b9c65de94ba1ca58b))
+
+### ⬆️ Dependencies
+
+- **deps**: Lock file maintenance
+
+### 🧹 Miscellaneous
+
+- **hugo**: Module aktualisieren
+- **hugo**: Module aktualisieren
+- **hugo**: Module aktualisieren
+- **hugo**: Module aktualisieren
+- **hugo**: Module aktualisieren
+- **hugo**: Module aktualisieren
+- **hugo**: Module aktualisieren
+
 ## [2026.45] - 2026-11-09 ([Vergleich zur Vorversion](https://git.zyria.de/pyrox/zyria_de/compare/2026.44...2026.45))
 
 ### ⬆️ Dependencies
