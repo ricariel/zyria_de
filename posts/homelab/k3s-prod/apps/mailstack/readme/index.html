@@ -105,7 +105,7 @@
 	<meta property="og:type" content="article">
 		<meta property="article:section" content="posts">
 		<meta property="article:published_time" content="2025-10-18T07:10:10+02:00">
-		<meta property="article:modified_time" content="2026-11-16T00:39:01+01:00">
+		<meta property="article:modified_time" content="2026-11-16T12:59:10+01:00">
 		<meta property="article:tag" content="Kubernetes">
 		<meta property="article:tag" content="Mail">
 		<meta property="article:tag" content="Postfix">
@@ -312,12 +312,12 @@ href="/site.webmanifest.min.e231d7c2a5ac29753d1781895bdd4b9a0e5900e75bcee133bb47
     "dateCreated": "2025-10-18T07:10:10\u002b02:00",
     "datePublished": "2025-10-18T07:10:10\u002b02:00",
     
-    "dateModified": "2026-11-16T00:39:01\u002b01:00",
+    "dateModified": "2026-11-16T12:59:10\u002b01:00",
     
     "keywords": ["kubernetes","mail","postfix","dovecot"],
     
     "mainEntityOfPage": "https://zyria.de/posts/homelab/k3s-prod/apps/mailstack/readme/",
-    "wordCount": "6651"
+    "wordCount": "7129"
   }]
   </script>
 
@@ -964,7 +964,7 @@ href="/site.webmanifest.min.e231d7c2a5ac29753d1781895bdd4b9a0e5900e75bcee133bb47
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2025-10-18T07:10:10&#43;02:00">18 Oktober 2025</time><span class="px-2 text-primary-500">&middot;</span><time datetime="2026-11-16T00:39:01&#43;01:00">Aktualisiert: 16 November 2026</time><span class="px-2 text-primary-500">&middot;</span><span>6651 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
+      <time datetime="2025-10-18T07:10:10&#43;02:00">18 Oktober 2025</time><span class="px-2 text-primary-500">&middot;</span><time datetime="2026-11-16T12:59:10&#43;01:00">Aktualisiert: 16 November 2026</time><span class="px-2 text-primary-500">&middot;</span><span>7129 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
 
 
   
@@ -1465,7 +1465,7 @@ href="/site.webmanifest.min.e231d7c2a5ac29753d1781895bdd4b9a0e5900e75bcee133bb47
     </span>
     
 </h3>
-<p>Kein eigenes Chart, sondern ein Verbund aus zwei Quellen:</p>
+<p>Zwei Charts:</p>
 <table>
 	<thead>
 			<tr>
@@ -1476,9 +1476,9 @@ href="/site.webmanifest.min.e231d7c2a5ac29753d1781895bdd4b9a0e5900e75bcee133bb47
 	</thead>
 	<tbody>
 			<tr>
-					<td><code>app-template</code></td>
-					<td><a href="https://bjw-s-labs.github.io/helm-charts"  target="_blank" rel="noreferrer">BJW-S Labs</a></td>
-					<td>Alle Mail-Komponenten als Container eines Verbunds</td>
+					<td><code>mailstack</code></td>
+					<td><code>pyrox/mailstack-chart</code>, Helm-Registry <code>https://git.zyria.de/api/packages/pyrox/helm</code> (Spiegel auf Codeberg für cdp und hfmdk)</td>
+					<td>Gemeinsame Basis von zyria, cdp und hfmdk: alle Mail-Komponenten als Controller des <code>app-template</code> von BJW-S Labs, mit Images, Probes und Postfix-Einstellungen</td>
 			</tr>
 			<tr>
 					<td><code>redis</code></td>
@@ -1487,6 +1487,12 @@ href="/site.webmanifest.min.e231d7c2a5ac29753d1781895bdd4b9a0e5900e75bcee133bb47
 			</tr>
 	</tbody>
 </table>
+<p><code>values.yaml</code> enthält nur noch, was zyria benennt: Hostnamen, Domains,
+Zertifikats-Secrets, Load-Balancer-Adressen und die Registry der eigenen
+Images. Alles Gemeinsame, auch die Image-Versionen, ändert ein PR im
+Chart-Repository und danach eine neue Chart-Version hier in
+<code>kustomization.yaml</code>. Listen in den app-template-Werten (Ports, Env)
+ersetzen den Chart-Standard vollständig, Maps werden zusammengeführt.</p>
 <p>Die Container-Images stammen aus den eigenen Repositories (<code>postfix-docker</code>,
 <code>dovecot-docker</code>, <code>rspamd-docker</code>, <code>unbound-docker</code>) und werden über Docker Hub
 beziehungsweise die Registry der Forgejo-Instanz bezogen.</p>
@@ -1517,7 +1523,7 @@ beziehungsweise die Registry der Forgejo-Instanz bezogen.</p>
 <li><strong>Dovecot</strong>: Der Mail Delivery Agent (MDA), der E-Mails in den Postfächern der Benutzer ablegt und den Zugriff über IMAP ermöglicht. Dient auch zur SASL-Authentifizierung für Postfix.</li>
 <li><strong>Rspamd</strong>: Ein fortschrittliches Spam-Filtersystem. Es prüft eingehende E-Mails auf Spam-Merkmale, signiert ausgehende E-Mails mit DKIM und stellt eine Weboberfläche zur Verwaltung bereit.</li>
 <li><strong>ClamAV</strong>: Ein Virenscanner, der E-Mail-Anhänge auf Malware überprüft. Das Image ist die Variante <code>_base</code> ohne Signaturen; <code>freshclam</code> lädt sie in das Volume <code>mailstack-clamav-db</code>. Ein neues, leeres Volume braucht deshalb beim ersten Start den vollständigen Download, bevor <code>clamd</code> antwortet.</li>
-<li><strong>Unbound</strong>: Ein lokaler DNS-Resolver, der für DNS-Abfragen (z.B. für RBLs) verwendet wird.</li>
+<li><strong>Unbound</strong>: Ein lokaler DNS-Resolver, der für DNS-Abfragen (z.B. für RBLs) verwendet wird. Er läuft als Benutzer <code>unbound</code> (UID 100, GID 101 aus dem Image) ohne Capabilities; Port 53 öffnet der Pod-Sysctl <code>net.ipv4.ip_unprivileged_port_start=53</code>, der nur im Netz-Namespace des Pods gilt. Einzelheiten im README von <code>unbound-docker</code>, Abschnitt „Running without root“.</li>
 <li><strong>Redis</strong>: Dient als schneller Cache und Speicher für Rspamd.</li>
 </ul>
 
@@ -1530,7 +1536,7 @@ beziehungsweise die Registry der Forgejo-Instanz bezogen.</p>
     </span>
     
 </h3>
-<p>Die Konfiguration ist sehr umfangreich und erfolgt über die <code>values.yaml</code>-Datei, sowie diverse ConfigMaps und Secrets.</p>
+<p>Die Konfiguration verteilt sich auf das Chart <code>mailstack</code> (gemeinsame Werte), <code>values.yaml</code> (Werte von zyria) sowie die Standortdateien in <code>dovecot/</code>, <code>postfix/ldap/</code> und <code>rspamd/local.d/</code>, aus denen <code>kustomization.yaml</code> Secrets erzeugt. Die gemeinsamen Dateien (Dovecot-Grundkonfiguration, Sieve-Skripte, ClamAV, das Skript des Lern-CronJobs, <code>sender_bypass</code>) liegen im Chart unter <code>charts/mailstack/files/</code> und kommen als ConfigMaps; <code>dovecot-init</code> kopiert erst diese und dann die Standortdateien aus dem Secret <code>dovecot-config</code> nach <code>/etc/dovecot</code>. Eine Standortdatei mit gleichem Namen ersetzt die gemeinsame.</p>
 
 <h4 class="relative group">Wichtige Einstellungen
     <div id="wichtige-einstellungen" class="anchor"></div>
@@ -1552,7 +1558,7 @@ beziehungsweise die Registry der Forgejo-Instanz bezogen.</p>
 <p><strong>Postfix-Queue</strong>: Der Sidecar <code>postfix-exporter</code> (<code>ghcr.io/hsn723/postfix_exporter</code>) liest Größe und Alter der Mails in der Queue über den <code>showq</code>-Socket im gemeinsamen Spool-Volume, das er nur lesend einhängt. Er läuft ohne Root mit der Gruppe <code>postdrop</code> (GID 102), die das Verzeichnis <code>public/</code> durchqueren darf. Prometheus findet ihn über den Service <code>mailstack-postfix-metrics</code> (Port 9154). Zustellstatistiken aus den Logs (Bounces, Ablehnungen) sind nicht eingerichtet; dafür bräuchte der Exporter seine Kubernetes-Logquelle und RBAC-Rechte.</p>
 </li>
 <li>
-<p><strong>Dovecot-Metriken</strong>: Der Dienst <code>stats</code> liefert OpenMetrics auf Port 9900 (<code>/metrics</code>), eingerichtet in <code>dovecot/metrics.conf.ext</code> mit den empfohlenen Zählern <code>@metric_defaults = backend</code> (Anmeldungen erfolgreich und fehlgeschlagen, IMAP-Befehle, Zustellungen, Einlieferungen, Sitzungen). Prometheus findet ihn über den Service <code>mailstack-dovecot-metrics</code>. Der Port ist nur im Cluster erreichbar, kein <code>hostPort</code>.</p>
+<p><strong>Dovecot-Metriken</strong>: Der Dienst <code>stats</code> liefert OpenMetrics auf Port 9900 (<code>/metrics</code>), eingerichtet in <code>metrics.conf.ext</code> (Chart) mit den empfohlenen Zählern <code>@metric_defaults = backend</code> (Anmeldungen erfolgreich und fehlgeschlagen, IMAP-Befehle, Zustellungen, Einlieferungen, Sitzungen). Prometheus findet ihn über den Service <code>mailstack-dovecot-metrics</code>. Der Port ist nur im Cluster erreichbar, kein <code>hostPort</code>.</p>
 </li>
 <li>
 <p><strong>Rspamd-Metriken</strong>: <code>RSPAMD_READ_PASS</code> setzt ein Lese-Passwort für den Controller (Weboberfläche im Lesemodus, <code>/stat</code>, <code>/metrics</code>); <code>RSPAMD_PASS</code> gilt dann nur noch für Lernen und Einstellungen. Prometheus fragt <code>/metrics</code> mit dem Lese-Passwort ab (Job <code>rspamd</code> in <code>apps/prometheus</code>). Das Passwort liegt im Secret <code>rspamd-read-pass</code> (Schlüssel <code>password</code>), das von Hand in den Namespaces <code>mailstack</code> und <code>prometheus</code> mit demselben Wert angelegt wird und nicht im Repository steht:</p>
@@ -1561,6 +1567,50 @@ beziehungsweise die Registry der Forgejo-Instanz bezogen.</p>
 </span></span><span class="line"><span class="ln">3</span><span class="cl">  kubectl -n <span class="s2">&#34;</span><span class="nv">$ns</span><span class="s2">&#34;</span> create secret generic rspamd-read-pass --from-literal<span class="o">=</span><span class="nv">password</span><span class="o">=</span><span class="s2">&#34;</span><span class="nv">$PW</span><span class="s2">&#34;</span>
 </span></span><span class="line"><span class="ln">4</span><span class="cl"><span class="k">done</span>
 </span></span><span class="line"><span class="ln">5</span><span class="cl"><span class="nb">unset</span> PW</span></span></code></pre></div></div>
+</li>
+<li>
+<p><strong>Zugangsdaten</strong>: Bind-Passwörter für LDAP (Dovecot und Postfix), die Introspection-URL für OAuth2, die passwd-Dateien für Master- und Smarthost-Logins, das rspamd-Passwort, die API-Schlüssel für VirusTotal und Google und der DKIM-Schlüssel stehen nicht im Repository. Sie liegen verschlüsselt im Inventar von <code>ansible-main</code> (<code>group_vars/all/mailstack*.yml</code>), und <code>playbooks/mailstack_secrets.yml</code> schreibt sie in die Secrets <code>mailstack-credentials</code> und <code>rspamd-dkim</code>. Argo CD verwaltet diese Secrets nicht. Nach einer Änderung am Inventar:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl"><span class="nb">cd</span> ~/git/zyria/ansible-main <span class="o">&amp;&amp;</span> direnv <span class="nb">exec</span> ~/git/zyria ansible-playbook playbooks/mailstack_secrets.yml --check --diff</span></span></code></pre></div></div>
+<p>Ohne <code>--check</code> schreibt der Lauf die Secrets. Reloader startet <code>mailstack-main</code> und <code>mailstack-rspamd</code> danach neu (Auto-Modus); Umgebungsvariablen aus Secrets liest ein Container nur beim Start.</p>
+<table>
+	<thead>
+			<tr>
+					<th>Schlüssel in <code>mailstack-credentials</code></th>
+					<th>genutzt von</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><code>dovecot-ldap-password</code></td>
+					<td><code>auth-ldap.conf.ext</code> (<code>ldap_auth_dn_password = &lt;/run/secrets/mailstack/...</code>), <code>acl-sync.sh</code></td>
+			</tr>
+			<tr>
+					<td><code>doveadm-api-key</code></td>
+					<td><code>doveadm_api_key</code> der doveadm-HTTP-API, Client <code>acl-sync.sh</code> im CronJob <code>aclsync</code></td>
+			</tr>
+			<tr>
+					<td><code>postfix-ldap-password</code></td>
+					<td>Postfix-Variable <code>LDAP_BIND_PW</code> für <code>bind_pw = $ENV:LDAP_BIND_PW</code> in <code>postfix/ldap/*.cf</code>, ersetzt von <code>10-copy</code> des Images</td>
+			</tr>
+			<tr>
+					<td><code>oauth2-introspection-url</code></td>
+					<td><code>auth-oauth2.conf.ext</code></td>
+			</tr>
+			<tr>
+					<td><code>master-users</code>, <code>smarthost-passwd</code></td>
+					<td><code>auth-master.conf.ext</code>, <code>auth-smarthost.conf.ext</code> als <code>passwd_file_path</code></td>
+			</tr>
+			<tr>
+					<td><code>rspamd-password</code></td>
+					<td><code>RSPAMD_PASS</code> in rspamd und rspamdcron, <code>rspamd.conf</code> für die Lernskripte</td>
+			</tr>
+			<tr>
+					<td><code>virustotal-api-key</code>, <code>google-api-key</code></td>
+					<td><code>VIRUSTOTAL</code>, <code>GOOGLE_API_KEY</code> in rspamd</td>
+			</tr>
+	</tbody>
+</table>
+<p>Die Secrets sind in Dovecot unter <code>/run/secrets/mailstack/</code> eingehängt, <code>rspamd-dkim</code> in rspamd unter <code>/data/dkim/</code> (Pfad in <code>dkim_signing.conf</code> und <code>arc.conf</code>). Die Postfix-Variable heißt bewusst nicht <code>POSTFIX_...</code>: <code>25-postconf</code> schriebe sie sonst als Parameter in <code>main.cf</code> und ins Log.</p>
 <p>Nach einer Änderung des Werts muss rspamd neu starten, weil das Image <code>worker-controller.inc</code> nur beim Containerstart schreibt.</p>
 </li>
 <li>
@@ -2303,18 +2353,20 @@ betroffen ist.</p>
     </span>
     
 </h4>
-<p><code>aclsync</code> läuft alle 15 Minuten und ruft per <code>kubectl exec</code>
-<a href="apps/mailstack/dovecot/acl-sync.sh" >acl-sync.sh</a> <strong>im Dovecot-Container</strong> auf.
-Der Umweg ist nötig, weil <code>doveadm</code> für die userdb-Auflösung den auth-Socket der
-laufenden Dovecot-Instanz braucht — ein eigener Pod mit gemountetem Mail-Volume
-könnte das nicht. Der CronJob-Pod hält deshalb weder Mail-Storage noch
-Konfiguration, nur ein <code>kubectl</code>-Binary.</p>
+<p><code>aclsync</code> läuft alle 15 Minuten in einem eigenen Pod und spricht Dovecot über die
+doveadm-HTTP-API an (Service <code>mailstack-doveadm</code>, Port 8080, Schlüssel
+<code>doveadm-api-key</code> aus <code>mailstack-credentials</code>). Das Skript <code>acl-sync.sh</code> kommt aus
+dem Chart (<code>charts/mailstack/files/aclsync/</code>), das Image ist das eigene
+<code>dovecot</code>-Image wegen <code>ldapsearch</code>, <code>jq</code> und <code>curl</code>. Der Pod hat keinen Zugriff
+auf die Kubernetes-API und keinen Mail-Speicher; <code>doveadm-api.conf.ext</code> erlaubt
+über die API nur <code>user</code>, <code>acl get|set|delete</code> und <code>mailbox subscribe|unsubscribe</code>.</p>
 <p>Das Skript</p>
 <ol>
-<li>liest die LDAP-Zugangsdaten aus <code>/etc/dovecot/auth-ldap.conf.ext</code> (keine
-zweite Kopie der Credentials im Repository),</li>
+<li>liest Server, Bind-DN und Basis aus <code>/etc/dovecot/auth-ldap.conf.ext</code> und
+das Bind-Passwort aus der Datei, auf die <code>ldap_auth_dn_password = &lt;...</code>
+dort zeigt (Secret <code>mailstack-credentials</code>),</li>
 <li>sucht alle Gruppen <code>Mailbox-*</code> und löst deren Mitglieder auf,</li>
-<li>gleicht je Postfach den Soll- gegen den Ist-Zustand aus <code>doveadm acl get</code> ab
+<li>gleicht je Postfach den Soll- gegen den Ist-Zustand aus <code>aclGet</code> der API ab
 und setzt bzw. entfernt <code>user=</code>-Einträge auf der INBOX
 (<code>acl_defaults_from_inbox = yes</code> vererbt das an die Unterordner),</li>
 <li>abonniert den Delegierten den Ordner <code>shared/&lt;adresse&gt;/INBOX</code>, damit er im
@@ -2339,13 +2391,16 @@ Lauf. Postfächer ohne solche Gruppe fasst der Job nicht an.</li>
 sieht der Job nicht mehr, die ACLs blieben bestehen.</li>
 <li>Schlägt eine LDAP-Abfrage fehl, bricht der Lauf <strong>vor</strong> jeder Änderung ab —
 ein LDAP-Ausfall entzieht also keine Rechte.</li>
-<li><code>pods/exec</code> ist ein weitreichendes Recht (faktisch Vollzugriff auf alle
-Postfächer). Der Job hat deshalb einen eigenen ServiceAccount
-<code>mailstack-aclsync</code> und hängt nicht am <code>mailstack-main</code>-Account.</li>
-<li>Trockenlauf zum Prüfen, ohne etwas zu ändern:</li>
+<li>Liegen die Gruppen außerhalb von <code>ldap_base</code> aus <code>auth-ldap.conf.ext</code>, setzt
+<code>ACL_LDAP_BASE</code> am Container die Suchbasis.</li>
+<li>Trockenlauf zum Prüfen, ohne etwas zu ändern (einmaliger Job aus dem CronJob
+mit <code>ACL_DRY_RUN=1</code>):</li>
 </ul>
-<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="ln">1</span><span class="cl">kubectl <span class="nb">exec</span> -n mailstack deploy/mailstack-main -c dovecot -- <span class="se">\
-</span></span></span><span class="line"><span class="ln">2</span><span class="cl">  env <span class="nv">ACL_DRY_RUN</span><span class="o">=</span><span class="m">1</span> /etc/dovecot/acl-sync.sh</span></span></code></pre></div></div>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="ln">1</span><span class="cl">kubectl create job -n mailstack acl-sync-dry --from<span class="o">=</span>cronjob/mailstack-aclsync --dry-run<span class="o">=</span>client -o yaml <span class="se">\
+</span></span></span><span class="line"><span class="ln">2</span><span class="cl">  <span class="p">|</span> yq <span class="s1">&#39;.spec.template.spec.containers[0].env += [{&#34;name&#34;: &#34;ACL_DRY_RUN&#34;, &#34;value&#34;: &#34;1&#34;}]&#39;</span> <span class="se">\
+</span></span></span><span class="line"><span class="ln">3</span><span class="cl">  <span class="p">|</span> kubectl apply -f -
+</span></span><span class="line"><span class="ln">4</span><span class="cl">kubectl logs -n mailstack job/acl-sync-dry -f
+</span></span><span class="line"><span class="ln">5</span><span class="cl">kubectl delete job -n mailstack acl-sync-dry</span></span></code></pre></div></div>
 <ul>
 <li>Logs des letzten Laufs:</li>
 </ul>
@@ -2368,7 +2423,9 @@ nicht im Image liegen, sondern wird über stdin hineingereicht.</p>
 <p><strong>1. CronJob anhalten</strong>, damit kein Lauf Rechte abräumt, für die es noch keine
 Gruppe gibt:</p>
 <div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="ln">1</span><span class="cl">kubectl patch cronjob mailstack-aclsync -n mailstack -p <span class="s1">&#39;{&#34;spec&#34;:{&#34;suspend&#34;:true}}&#39;</span></span></span></code></pre></div></div>
-<p><strong>2. Bestand auswerten:</strong></p>
+<p><strong>2. Bestand auswerten:</strong> Das Skript braucht bash; seit Dovecot aus dem
+Upstream-Image ohne bash läuft, geht der folgende Aufruf nur noch mit dem alten
+Image (<code>dovecot</code> bis 2.3). Die Übernahme ist in zyria abgeschlossen.</p>
 <div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="ln">1</span><span class="cl">kubectl <span class="nb">exec</span> -i -n mailstack deploy/mailstack-main -c dovecot -- bash -s <span class="se">\
 </span></span></span><span class="line"><span class="ln">2</span><span class="cl">  &lt; apps/mailstack/dovecot/acl-migrate.sh &gt; mailbox-groups.sh</span></span></code></pre></div></div>
 <p>Der Bericht auf stderr listet, was übernommen wird, und was Handarbeit braucht:
@@ -2386,10 +2443,8 @@ vorhandene Gruppen und Mitgliedschaften werden nicht doppelt angelegt, fehlende
 oder mehrfach vergebene Adressen werden gemeldet und übersprungen (Exit-Code 1).
 Die Ziel-OU steckt in <code>GROUP_OU</code> am Kopf des Skripts (Vorgabe <code>OU=Gruppen</code>,
 relativ zur Domain-DN — so erwartet es <code>samba-tool</code>).</p>
-<p><strong>4. Trockenlauf und CronJob wieder aktivieren:</strong></p>
-<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="ln">1</span><span class="cl">kubectl <span class="nb">exec</span> -n mailstack deploy/mailstack-main -c dovecot -- <span class="se">\
-</span></span></span><span class="line"><span class="ln">2</span><span class="cl">  env <span class="nv">ACL_DRY_RUN</span><span class="o">=</span><span class="m">1</span> /etc/dovecot/acl-sync.sh
-</span></span><span class="line"><span class="ln">3</span><span class="cl">kubectl patch cronjob mailstack-aclsync -n mailstack -p <span class="s1">&#39;{&#34;spec&#34;:{&#34;suspend&#34;:false}}&#39;</span></span></span></code></pre></div></div>
+<p><strong>4. Trockenlauf wie oben und CronJob wieder aktivieren:</strong></p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="ln">1</span><span class="cl">kubectl patch cronjob mailstack-aclsync -n mailstack -p <span class="s1">&#39;{&#34;spec&#34;:{&#34;suspend&#34;:false}}&#39;</span></span></span></code></pre></div></div>
 
 <h3 class="relative group">Betrieb und Wartung
     <div id="betrieb-und-wartung" class="anchor"></div>
@@ -2466,7 +2521,7 @@ relativ zur Domain-DN — so erwartet es <code>samba-tool</code>).</p>
     </span>
     
 </h6>
-<p>Der CronJob <code>rspamdcron</code> (<code>rspamd/entrypoint.sh</code>) läuft um 06:45, 14:45, 18:45 und 22:45. Er lernt Spam aus den Junk-Ordnern (auch aus <code>expunged/.Junk</code>) und Ham aus den übrigen Ordnern der Postfächer und legt für Junk Fuzzy-Hashes an. Fehlgeschlagene Aufrufe zählt er und meldet sie per Heartbeat an Uptime Kuma (<code>KUMA_PUSH_URL</code>).</p>
+<p>Der CronJob <code>rspamdcron</code> (<code>entrypoint.sh</code> im Chart, ConfigMap <code>rspamd-cron-entrypoint</code>) läuft um 06:45, 14:45, 18:45 und 22:45. Er lernt Spam aus den Junk-Ordnern (auch aus <code>expunged/.Junk</code>) und Ham aus den übrigen Ordnern der Postfächer und legt für Junk Fuzzy-Hashes an. Fehlgeschlagene Aufrufe zählt er und meldet sie per Heartbeat an Uptime Kuma (<code>KUMA_PUSH_URL</code>).</p>
 <p>Aus den Junk-Ordnern lernt er nur Mails ohne <code>X-Spam: Yes</code> und ohne <code>X-Spam-Status: Yes</code>, also solche, die Nutzer selbst dorthin verschoben haben. Mails, die rspamd selbst markiert und <code>global_sieve_before.sieve</code> abgelegt hat, überspringt er. Bis November 2026 lernte er auch diese als Spam und legte Fuzzy-Hashes an (Flag 12 <code>LOCAL_FUZZY_PROB</code> aus <code>.Junk</code>, Flag 11 <code>LOCAL_FUZZY_DENIED</code> aus <code>expunged/.Junk</code>). Jeder Fehlalarm, den niemand binnen eines Tages zurückholte, machte so die nächste Ausgabe desselben Newsletters verdächtig. Was rspamd sicher als Spam erkennt, lernt das Autolearn ab 20 Punkten ohnehin. Wie viele Mails übersprungen wurden, steht im Log des Laufs („Skipped … Junk messages flagged by rspamd itself“).</p>
 <p>Die Push-URL steht im Secret <code>mailstack-kuma-push</code> (Schlüssel <code>KUMA_PUSH_URL</code>), das von Hand angelegt wird und nicht im Repository steht. Sie hat die Form <code>https://&lt;kuma&gt;/api/push/&lt;token&gt;</code>. Eine angehängte Query, wie sie die Kuma-Oberfläche anzeigt, schneidet das Skript ab und setzt Status und Meldung selbst. Fehlt das Secret, läuft der Job ohne Heartbeat (<code>optional: true</code>), und Kuma meldet den Monitor nach Ablauf des Intervalls als „down“. Anlegen oder ersetzen mit verdeckter Eingabe:</p>
 <div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl"><span class="nb">read</span> -rs KUMA_PUSH_URL
@@ -2478,7 +2533,7 @@ relativ zur Domain-DN — so erwartet es <code>samba-tool</code>).</p>
 <ul>
 <li>Der Korpus landet im <code>emptyDir</code> <code>rspamdcron-cache</code> unter <code>/var/cache/rspamd</code>. Das Image hat dieses Verzeichnis nicht, und <code>_rspamd</code> darf weder dort noch im Arbeitsverzeichnis <code>/</code> schreiben. Bis November 2026 scheiterte der Download deshalb still.</li>
 <li>Der Fuzzy-Worker öffnet beim Sync (minütlich) für jedes ausstehende Update eine eigene Redis-Verbindung, und derselbe Redis bedient Bayes, Neural und History. <code>CORPUS_DELAY</code> (0,2 s je Mail) hält einen Monatskorpus deutlich unter <code>maxclients</code> (10000).</li>
-<li>Mails ohne verwertbaren Inhalt beantwortet rspamc mit „No content to generate fuzzy“ und Exit 1. Das zählt nicht als Fehler. Schlägt dagegen der Download, das Entpacken oder ein anderer <code>fuzzy_add</code> fehl, steht das als <code>FEHLER</code> oder <code>WARNUNG</code> im Log und setzt den Heartbeat auf „down“.</li>
+<li>Mails ohne verwertbaren Inhalt beantwortet rspamc mit „No content to generate fuzzy“ und Exit 1. Das zählt nicht als Fehler, beim Korpus wie bei den Junk-Ordnern. Schlägt dagegen der Download, das Entpacken oder ein anderer <code>fuzzy_add</code> fehl, steht das als <code>FEHLER</code> oder <code>WARNUNG</code> im Log und setzt den Heartbeat auf „down“.</li>
 <li>Reloader lässt den CronJob und seine Jobs aus (<code>reloader.stakater.com/auto: &quot;false&quot;</code> am CronJob, per Patch in <code>kustomization.yaml</code> auch am Job-Template). Sonst startete jede Änderung an <code>mailstack-config</code> sofort einen zusätzlichen Lauf und legte den aufbewahrten letzten Job neu an. Am 09.11.2026 liefen so zwei Lernläufe gleichzeitig als Pods ohne Besitzer, die niemand aufräumt (pyrox/k3s-prod#1177). Neue Werte übernimmt der nächste geplante Lauf.</li>
 </ul>
 
@@ -2524,7 +2579,7 @@ relativ zur Domain-DN — so erwartet es <code>samba-tool</code>).</p>
     
 </h6>
 <p>Dovecot fungiert in diesem Setup als MDA, Sieve und IMAP Server.</p>
-<p>Die globalen Sieve-Skripte liegen unter <code>dovecot/sieve/</code>: <code>global_sieve_before.sieve</code> (<code>sieve_before</code>: Spam nach <code>Junk</code>, sowohl <code>add header</code> mit <code>X-Spam: Yes</code> als auch <code>rewrite subject</code>, das nur <code>X-Spam-Status: Yes</code> setzt; bis November 2026 blieb <code>rewrite subject</code> im Posteingang), <code>global_sieve_after.sieve</code> (<code>sieve_after</code>: Duplikate verwerfen), <code>report-spam.sieve</code> und <code>report-ham.sieve</code> (IMAPSieve: Lernen beim Verschieben in und aus <code>Junk</code>) sowie die Pipe-Programme <code>sa-learn-spam.sh</code> und <code>sa-learn-ham.sh</code>. Der Secret-Generator legt alle Dateien flach im Secret <code>dovecot-config</code> ab. <code>dovecot-init</code> verschiebt sie deshalb nach <code>/etc/dovecot/sieve/</code>, wohin <code>local.conf</code> zeigt. Das Verzeichnis gehört <code>root:vmail</code> mit Modus <code>2775</code>, damit Dovecot die kompilierten Binaries der globalen Skripte dort ablegen kann. Fehlt ein globales Skript, meldet Dovecot keinen Fehler; ob <code>sieve_after</code> läuft, zeigen die Header <code>X-Sieve-Filtered-Start</code> und <code>X-Sieve-Filtered-Done</code> einer zugestellten Mail.</p>
+<p>Die globalen Sieve-Skripte liegen im Chart unter <code>charts/mailstack/files/dovecot/sieve/</code>: <code>global_sieve_before.sieve</code> (<code>sieve_before</code>: Spam nach <code>Junk</code>, sowohl <code>add header</code> mit <code>X-Spam: Yes</code> als auch <code>rewrite subject</code>, das nur <code>X-Spam-Status: Yes</code> setzt; bis November 2026 blieb <code>rewrite subject</code> im Posteingang), <code>global_sieve_after.sieve</code> (<code>sieve_after</code>: Duplikate verwerfen), <code>report-spam.sieve</code> und <code>report-ham.sieve</code> (IMAPSieve: Lernen beim Verschieben in und aus <code>Junk</code>) sowie die Pipe-Programme <code>sa-learn-spam.sh</code> und <code>sa-learn-ham.sh</code>. Das Chart legt alle Dateien flach in der ConfigMap <code>mailstack-dovecot-base</code> ab. <code>dovecot-init</code> verschiebt sie deshalb nach <code>/etc/dovecot/sieve/</code>, wohin <code>local.conf</code> zeigt. Das Verzeichnis gehört <code>root:vmail</code> mit Modus <code>2775</code>, damit Dovecot die kompilierten Binaries der globalen Skripte dort ablegen kann. Fehlt ein globales Skript, meldet Dovecot keinen Fehler; ob <code>sieve_after</code> läuft, zeigen die Header <code>X-Sieve-Filtered-Start</code> und <code>X-Sieve-Filtered-Done</code> einer zugestellten Mail.</p>
 <p>Die Reihenfolge ist <code>sieve_before</code>, persönliches Skript, <code>sieve_after</code>. Ein Skript, das per <code>fileinto</code> ablegt, hebt das implizite <code>keep</code> auf, und Dovecot führt die folgenden Skripte nur aus, solange es gilt. Deshalb steht die Spam-Behandlung in <code>sieve_before</code>: Spam landet genau einmal in <code>Junk</code>, persönliche Regeln sortieren ihn nicht in andere Ordner. <code>sieve_after</code> läuft nur für Mails, die keine persönliche Regel abgelegt hat; nur diese tragen die Header <code>X-Sieve-Filtered-*</code>.</p>
 <p>Persönliche Skripte liegen im Postfach unter <code>sieve/</code>, das aktive ist über den Link <code>.dovecot.sieve</code> eingebunden. Die kompilierte Fassung legt Dovecot daneben als <code>.dovecot.svbin</code> ab, nicht im Verzeichnis <code>sieve/</code>.</p>
 <p><code>sa-learn-spam.sh</code> und <code>sa-learn-ham.sh</code> schicken die Mail an den rspamd-Controller (<code>/learnspam</code>, <code>/learnham</code>) und werten den HTTP-Status aus. <code>sa-learn-ham.sh</code> löscht danach die Fuzzy-Hashes der Mail mit den Flags 12 und 11 (<code>/fuzzydel</code>), damit ein zurückgeholter Fehlalarm nicht weiter ähnliche Mails belastet. Die drei Aufrufe sind so begrenzt, dass sie zusammen unter den 10 s bleiben, nach denen Dovecot Pipe-Programme beendet. Dovecot übernimmt nur ihre Standardfehlerausgabe ins Log, deshalb erscheint jede Zeile als <code>imap: Error:</code>; die eigentliche Stufe steht danach als <code>INFO:</code> oder <code>ERROR:</code>:</p>
@@ -2597,7 +2652,7 @@ relativ zur Domain-DN — so erwartet es <code>samba-tool</code>).</p>
     </span>
     
 </h6>
-<p>Seit November 2026 läuft Dovecot 2.4 (Image <code>dovecot</code> ab 2.1.0, Basis <code>dovecot/dovecot:2.4.5-root</code>, pyrox/k3s-prod#1136). Die Konfiguration steht in <code>dovecot/</code> in 2.4-Syntax: <code>local.conf</code> mit den globalen Einstellungen, <code>auth-*.conf.ext</code> für die Anmeldewege (LDAP, OAuth2, Master, Smarthost, Sperrliste) samt den Zugangsdaten, <code>imapsieve.conf.ext</code> für das Spam-Training und <code>quota-warning.conf.ext</code> für die Quota-Warnungen. Die früheren Dateien <code>dovecot-ldap.conf.ext</code>, <code>dovecot-oauth2.conf.ext</code> und <code>dovecot-trash.conf.ext</code> gibt es nicht mehr.</p>
+<p>Seit November 2026 läuft Dovecot 2.4, seit Chart 0.3.0 direkt aus dem Upstream-Image <code>dovecot/dovecot</code> ohne root (vorher eigenes Image <code>dovecot</code> auf Basis <code>-root</code>, pyrox/k3s-prod#1136). Dem Upstream-Image fehlen bash, cat, sed, grep, date und rm; die Skripte im Container (Lernskripte, <code>quota-warning.sh</code>, <code>rspamd.conf</code>) sind deshalb POSIX-sh mit Builtins und <code>curl</code>. Debian-Sicherheitsupdates kommen dort nur mit Upstream-Releases. Die Konfiguration steht in 2.4-Syntax, die gemeinsamen Dateien im Chart, die von zyria in <code>dovecot/</code>: <code>local.conf</code> mit den globalen Einstellungen, <code>auth-*.conf.ext</code> für die Anmeldewege (LDAP, OAuth2, Master, Smarthost, Sperrliste), die Zugangsdaten selbst im Secret <code>mailstack-credentials</code>, <code>imapsieve.conf.ext</code> für das Spam-Training und <code>quota-warning.conf.ext</code> für die Quota-Warnungen. Die früheren Dateien <code>dovecot-ldap.conf.ext</code>, <code>dovecot-oauth2.conf.ext</code> und <code>dovecot-trash.conf.ext</code> gibt es nicht mehr.</p>
 <p>Dovecot lauscht auf Ports über 1024, wie die Upstream-Variante ohne root: IMAP 31143, IMAPS 31993, ManageSieve 34190, POP3 31110 und 31995, LMTP 31024 (lmtps 31025), quota-status 31762. Die <code>hostPort</code>s und die Services <code>mailstack-main</code> und <code>mailstack-dovecot-intern</code> bilden sie auf die Standardports 143, 993, 4190, 24 und 762 ab; Clients, Postfix (<code>virtual_transport</code>, Policy-Dienst) und Monitore sehen keine Änderung. Dovecot läuft ohne root: Master und alle Dienste laufen als <code>vmail</code> (UID/GID 1000), gesetzt über <code>securityContext</code> des Containers <code>dovecot</code>. Weil kein Prozess den Benutzer wechseln oder <code>chroot</code> nutzen kann, stehen <code>default_internal_user</code>, <code>default_internal_group</code> und <code>default_login_user</code> auf <code>vmail</code>, die Login-Dienste haben <code>chroot =</code>, und <code>service auth</code> läuft nicht mehr als root. <code>base_dir</code> (<code>/run/dovecot</code>) ist ein <code>emptyDir</code>, weil das Verzeichnis im Image root gehört. <code>dovecot-init</code> läuft weiter als root und übergibt die Wurzel <code>/srv/mail</code> und <code>state_dir</code> (<code>/var/lib/dovecot</code>) an <code>vmail</code>. Das Image ist weiter die Variante <code>-root</code>: Die Upstream-Variante ohne root hat weder <code>apt-get</code> noch <code>bash</code>, <code>grep</code> oder <code>sed</code>, die <code>acl-sync.sh</code>, <code>quota-warning.sh</code> und die Lernskripte brauchen (pyrox/dovecot-docker#27). <code>acl-sync.sh</code> braucht <code>ldapsearch</code> aus dem Image (ab 2.2.0), nachinstallieren kann es als <code>vmail</code> nicht.</p>
 <p>Abweichungen von der 2.3-Konfiguration, die das Verhalten erhalten:</p>
 <table>

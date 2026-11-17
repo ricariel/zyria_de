@@ -42,6 +42,16 @@
     </item>
     
     <item>
+      <title>Unbound</title>
+      <link>https://zyria.de/posts/homelab/k3s-prod/apps/unbound/readme/</link>
+      <pubDate>Wed, 11 Nov 2026 11:49:22 +0100</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/unbound/readme/</guid>
+      <description>Unbound löst Namen selbst rekursiv auf und liefert bei einem Ausfall der autoritativen Nameserver weiterhin die zuletzt bekannten Antworten aus.</description>
+      
+    </item>
+    
+    <item>
       <title>hx53.de</title>
       <link>https://zyria.de/posts/homelab/k3s-prod/apps/hx53-de/readme/</link>
       <pubDate>Wed, 11 Nov 2026 11:43:04 +0100</pubDate>
@@ -208,16 +218,6 @@
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/posts/homelab/k3s-prod/apps/paperless/readme/</guid>
       <description>This document describes the Paperless-ngx deployment, a document management system that transforms physical documents into searchable digital archives.</description>
-      
-    </item>
-    
-    <item>
-      <title>Unbound</title>
-      <link>https://zyria.de/posts/homelab/k3s-prod/apps/unbound/readme/</link>
-      <pubDate>Sat, 24 Oct 2026 03:21:23 +0200</pubDate>
-      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/unbound/readme/</guid>
-      <description>Unbound löst Namen selbst rekursiv auf und liefert bei einem Ausfall der autoritativen Nameserver weiterhin die zuletzt bekannten Antworten aus.</description>
       
     </item>
     

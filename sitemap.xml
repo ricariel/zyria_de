@@ -57,6 +57,12 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://zyria.de/posts/homelab/k3s-prod/apps/unbound/readme/</loc>
+    <lastmod>2026-11-11T11:49:22+01:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://zyria.de/posts/homelab/k3s-prod/apps/hx53-de/readme/</loc>
     <lastmod>2026-11-11T11:43:04+01:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -161,12 +167,6 @@
   <url>
     <loc>https://zyria.de/posts/homelab/k3s-prod/apps/paperless/readme/</loc>
     <lastmod>2026-11-02T09:03:22+01:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://zyria.de/posts/homelab/k3s-prod/apps/unbound/readme/</loc>
-    <lastmod>2026-10-24T03:21:23+02:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -460,7 +460,7 @@
   </url>
   <url>
     <loc>https://zyria.de/posts/homelab/k3s-prod/apps/mailstack/readme/</loc>
-    <lastmod>2026-11-16T00:39:01+01:00</lastmod>
+    <lastmod>2026-11-16T12:59:10+01:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -586,7 +586,7 @@
   </url>
   <url>
     <loc>https://zyria.de/posts/homelab/k3s-prod/apps/longhorn/readme/</loc>
-    <lastmod>2026-11-11T09:58:49+01:00</lastmod>
+    <lastmod>2026-11-16T18:23:13+01:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
