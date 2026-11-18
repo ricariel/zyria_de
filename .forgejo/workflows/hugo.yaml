@@ -7,9 +7,9 @@ on:
     branches:
       - main
       - master
-  # Manuell ausloesbar, damit sich eine Seite auch ohne Inhaltsaenderung neu
-  # bauen laesst — die Lauf-Weiche ueberspringt sonst jeden Lauf, bei dem sich
-  # nur CI-Beiwerk geaendert hat.
+  # Can be triggered by hand so that a site can be rebuilt without a change
+  # of content — the run gate skips every run in which only CI scaffolding
+  # changed otherwise.
   workflow_dispatch:
 
 jobs:
@@ -18,13 +18,14 @@ jobs:
     steps:
       - uses: https://git.zyria.de/pyrox/actions/hugo@v1
         with:
-          # Zugriff auf dieses Repository: der eingebaute Token des Laufs.
-          # Er muss nirgends gepflegt werden und gilt genau fuer das Repo,
-          # in dem er laeuft — mehr braucht der Push in den pages-Branch nicht.
+          # Access to this repository: the built-in token of the run. It has
+          # to be maintained nowhere and is valid for exactly the
+          # repository it runs in — the push into the pages branch needs
+          # no more than that.
           token: ${{ secrets.FORGEJO_TOKEN }}
-          # Nur fuer Hugo-Module aus PRIVATEN Repositories derselben Instanz
-          # (k3s-prod bei zyria_de und doc-site). Der eingebaute Token kommt
-          # dort nicht heran, weil er auf das laufende Repo beschraenkt ist.
-          # Wo keines dieser Secrets existiert, bleibt der Wert leer und es
-          # wird keine .netrc geschrieben — oeffentliche Module brauchen keine.
+          # Only for Hugo modules from PRIVATE repositories of the same
+          # instance (k3s-prod for zyria_de and doc-site). The built-in
+          # token does not reach them because it is limited to the running
+          # repository. Where neither secret exists the value stays empty
+          # and no .netrc is written — public modules need none.
           modules-token: ${{ secrets.REGISTRY_TOKEN }}
