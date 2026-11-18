@@ -1,7 +1,7 @@
 ---
-# Reusable workflow: CalVer-Tag für den abgeschlossenen Zeitraum erzeugen
+# Reusable workflow: create a CalVer tag for the period that has ended
 #
-# Aufruf im Consumer-Repo (montags 04:00 UTC + manuell):
+# Call in the consumer repository (Mondays 04:00 UTC plus by hand):
 #
 #   on:
 #     schedule:
@@ -11,12 +11,12 @@
 #       uses: https://git.zyria.de/pyrox/actions/.forgejo/workflows/calver-tag.yaml@v1
 #       secrets: inherit
 #
-# Erzeugt NUR den Tag (+ datierten Changelog-Abschnitt). Ein Forgejo-Release
-# entsteht daraus nur, wenn das Repo forgejo-release.yaml hat UND dessen
-# Ausloeser passt: der horcht auf 'v*' und trifft damit nie einen CalVer-Tag
-# wie 2026.33. Wer aus dem CalVer-Tag ein Release will, muss den Ausloeser
-# dort erweitern.
-name: 'Reusable · CalVer-Tag'
+# Creates the tag ONLY (plus a dated changelog section). A Forgejo release
+# follows from it only if the repository has forgejo-release.yaml AND its
+# trigger matches: that one listens for 'v*' and so never matches a CalVer
+# tag such as 2026.33. Whoever wants a release from the CalVer tag has to
+# widen the trigger there.
+name: 'Reusable · CalVer tag'
 
 # yamllint disable-line rule:truthy
 on:
@@ -26,32 +26,32 @@ on:
   workflow_call:
     inputs:
       branch:
-        description: 'Branch, auf den der Changelog-Commit gepusht wird'
+        description: 'Branch the changelog commit is pushed to'
         type: string
         required: false
         default: 'main'
       tag-format:
-        description: 'date(1)-Format des Tags; Standard "%G.%V" = JAHR.KW'
+        description: 'date(1) format of the tag; default "%G.%V" = YEAR.WEEK'
         type: string
         required: false
         default: '%G.%V'
       date-offset:
-        description: 'date(1)-Offset zur Zeitraumbestimmung'
+        description: 'date(1) offset that determines the period'
         type: string
         required: false
         default: '-1 day'
       update-changelog:
-        description: "'true' = datierten Changelog-Abschnitt mitschreiben"
+        description: "'true' = write a dated changelog section as well"
         type: string
         required: false
         default: 'true'
       config:
-        description: 'Pfad zur git-cliff-Config (Fallback: Standard aus pyrox/actions)'
+        description: 'Path to the git-cliff config (fallback: default from pyrox/actions)'
         type: string
         required: false
         default: 'cliff.toml'
       output:
-        description: 'Changelog-Datei'
+        description: 'Changelog file'
         type: string
         required: false
         default: 'CHANGELOG.md'
@@ -60,7 +60,7 @@ jobs:
   calver-tag:
     runs-on: ubuntu-latest
     steps:
-      - name: CalVer-Tag erzeugen
+      - name: Create the CalVer tag
         uses: https://git.zyria.de/pyrox/actions/calver-tag@v1
         with:
           token: ${{ secrets.token || secrets.GITHUB_TOKEN }}

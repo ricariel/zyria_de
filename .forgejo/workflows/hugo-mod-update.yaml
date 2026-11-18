@@ -1,20 +1,20 @@
 ---
-# Aktualisiert die Hugo-Module (`hugo mod get -u ./...` + `hugo mod tidy`) und
-# committet go.mod/go.sum zurück.
+# Updates the Hugo modules (`hugo mod get -u ./...` plus `hugo mod tidy`)
+# and commits go.mod/go.sum back.
 #
-# Ergänzt Renovate, ersetzt es nicht: Renovate hebt die Versionen bereits
-# eingetragener Module, löst aber den Modulgraphen nicht neu auf. Neu
-# hinzugekommene transitive Module und das Entfernen verwaister Einträge
-# passieren nur hier.
-name: 'Reusable · Hugo-Module aktualisieren'
+# Complements Renovate, it does not replace it: Renovate raises the versions
+# of modules already listed, but does not resolve the module graph anew.
+# Newly added transitive modules and the removal of orphaned entries happen
+# here only.
+name: 'Reusable · Hugo module update'
 
 # yamllint disable-line rule:truthy
 on:
   push:
     branches: [main, master]
-    # go.mod/go.sum ausgenommen: sonst löst der eigene Rück-Commit den Workflow
-    # erneut aus. Der zweite Lauf fände zwar nichts mehr zu tun, wäre aber ein
-    # vollständiger Leerlauf inklusive Hugo- und Go-Setup.
+    # go.mod/go.sum excluded: the workflow's own commit back would start it
+    # again otherwise. The second run would find nothing left to do, but it
+    # would be a full idle run including the Hugo and Go setup.
     paths-ignore:
       - 'go.mod'
       - 'go.sum'
@@ -24,17 +24,17 @@ on:
   workflow_call:
     inputs:
       branch:
-        description: 'Branch, auf den zurückgepusht wird'
+        description: 'Branch that is pushed back to'
         type: string
         required: false
         default: 'main'
       tidy:
-        description: "'false' überspringt `hugo mod tidy`"
+        description: "'false' skips `hugo mod tidy`"
         type: string
         required: false
         default: 'true'
       hugo-version:
-        description: 'Hugo-Version'
+        description: 'Hugo version'
         type: string
         required: false
         default: 'latest'
@@ -43,13 +43,13 @@ jobs:
   hugo-mod-update:
     runs-on: ubuntu-latest
     steps:
-      - name: Hugo-Module aktualisieren
+      - name: Update the Hugo modules
         uses: https://git.zyria.de/pyrox/actions/hugo-mod-update@v1
         with:
-          # Nicht der eingebaute Token: die Action schreibt eine .netrc und setzt
-          # GOPRIVATE, um Hugo-Module zu holen. Liegt ein Modul in einem privaten
-          # Repository derselben Instanz (k3s-prod), reicht ein auf das laufende
-          # Repo beschraenkter Token nicht.
+          # Not the built-in token: the action writes a .netrc and sets
+          # GOPRIVATE to fetch Hugo modules. If a module lives in a private
+          # repository of the same instance (k3s-prod), a token limited to
+          # the running repository is not enough.
           token: ${{ secrets.REGISTRY_TOKEN }}
           branch: ${{ inputs.branch }}
           tidy: ${{ inputs.tidy }}
