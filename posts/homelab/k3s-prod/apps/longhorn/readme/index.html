@@ -105,7 +105,7 @@
 	<meta property="og:type" content="article">
 		<meta property="article:section" content="posts">
 		<meta property="article:published_time" content="2025-09-30T17:24:46+02:00">
-		<meta property="article:modified_time" content="2026-11-16T18:23:13+01:00">
+		<meta property="article:modified_time" content="2026-11-17T10:51:01+01:00">
 		<meta property="article:tag" content="Kubernetes">
 		<meta property="article:tag" content="Longhorn">
 		<meta property="article:tag" content="Storage">
@@ -311,12 +311,12 @@ href="/site.webmanifest.min.e231d7c2a5ac29753d1781895bdd4b9a0e5900e75bcee133bb47
     "dateCreated": "2025-09-30T17:24:46\u002b02:00",
     "datePublished": "2025-09-30T17:24:46\u002b02:00",
     
-    "dateModified": "2026-11-16T18:23:13\u002b01:00",
+    "dateModified": "2026-11-17T10:51:01\u002b01:00",
     
     "keywords": ["kubernetes","longhorn","storage"],
     
     "mainEntityOfPage": "https://zyria.de/posts/homelab/k3s-prod/apps/longhorn/readme/",
-    "wordCount": "1768"
+    "wordCount": "1846"
   }]
   </script>
 
@@ -963,7 +963,7 @@ href="/site.webmanifest.min.e231d7c2a5ac29753d1781895bdd4b9a0e5900e75bcee133bb47
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2025-09-30T17:24:46&#43;02:00">30 September 2025</time><span class="px-2 text-primary-500">&middot;</span><time datetime="2026-11-16T18:23:13&#43;01:00">Aktualisiert: 16 November 2026</time><span class="px-2 text-primary-500">&middot;</span><span>1768 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
+      <time datetime="2025-09-30T17:24:46&#43;02:00">30 September 2025</time><span class="px-2 text-primary-500">&middot;</span><time datetime="2026-11-17T10:51:01&#43;01:00">Aktualisiert: 17 November 2026</time><span class="px-2 text-primary-500">&middot;</span><span>1846 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
 
 
   
@@ -1397,6 +1397,9 @@ href="/site.webmanifest.min.e231d7c2a5ac29753d1781895bdd4b9a0e5900e75bcee133bb47
 <div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">kubectl -n longhorn-system get snapshots.longhorn.io -o json <span class="se">\
 </span></span></span><span class="line"><span class="ln">2</span><span class="cl">  <span class="p">|</span> jq <span class="s1">&#39;[.items[] | select(.status.userCreated and (.status.labels.RecurringJob == &#34;snapshot&#34;))]
 </span></span></span><span class="line"><span class="ln">3</span><span class="cl"><span class="s1">      | {gesamt: length, mit_pruefsumme: map(select(.status.checksum)) | length}&#39;</span></span></span></code></pre></div></div>
+</li>
+<li>
+<p><strong>Fast Replica Rebuild</strong>: steht für v1 auf <code>false</code>, solange Longhorn v1.13.0 läuft. In dieser Version übernimmt ein wiederverwendetes Replikat beim Rebuild die alte <code>.img.checksum</code> eines Snapshots, den ein Purge oder Coalesce verändert hat, überspringt die Datei (<code>Skipped syncing file</code>) und liefert danach alte oder genullte Blöcke, bis die Integritätsprüfung es auswirft (longhorn/longhorn#14096, behoben in v1.13.1 und v1.14.0). Nach dem Update auf eine Version mit Fix wieder einschalten. Ohne Fast-Rebuild vergleicht ein Rebuild die Snapshot-Dateien blockweise und dauert länger.</p>
 </li>
 <li>
 <p><strong>Backup-Target</strong>: Das Standard-Backup-Target steht unter <code>defaultBackupStore</code> in der <code>values.yaml</code>. Es zeigt auf einen NFS-Export auf SSD; der Backupstore besteht aus sehr vielen kleinen Dateien und ist auf langsamen Festplatten, besonders SMR, zu träge für Löschungen und Abgleich.</p>
