@@ -442,7 +442,7 @@
   </url>
   <url>
     <loc>https://zyria.de/posts/homelab/k3s-prod/apps/traefik/readme/</loc>
-    <lastmod>2026-10-30T10:17:55+01:00</lastmod>
+    <lastmod>2026-11-18T08:47:51+01:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -460,7 +460,7 @@
   </url>
   <url>
     <loc>https://zyria.de/posts/homelab/k3s-prod/apps/mailstack/readme/</loc>
-    <lastmod>2026-11-17T12:33:52+01:00</lastmod>
+    <lastmod>2026-11-18T10:43:35+01:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
