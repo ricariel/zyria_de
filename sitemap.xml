@@ -45,6 +45,30 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://zyria.de/posts/homelab/k3s-prod/apps/hx53-de/readme/</loc>
+    <lastmod>2026-11-20T00:29:08+01:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://zyria.de/posts/homelab/k3s-prod/apps/quaecki-de/readme/</loc>
+    <lastmod>2026-11-20T00:29:08+01:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://zyria.de/posts/homelab/k3s-prod/apps/solarchart-de/readme/</loc>
+    <lastmod>2026-11-20T00:29:08+01:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://zyria.de/posts/homelab/k3s-prod/apps/zyria-de/readme/</loc>
+    <lastmod>2026-11-20T00:29:08+01:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://zyria.de/posts/homelab/k3s-prod/apps/fluent-bit/readme/</loc>
     <lastmod>2026-11-17T13:37:59+01:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -65,30 +89,6 @@
   <url>
     <loc>https://zyria.de/posts/homelab/k3s-prod/apps/unbound/readme/</loc>
     <lastmod>2026-11-11T11:49:22+01:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://zyria.de/posts/homelab/k3s-prod/apps/hx53-de/readme/</loc>
-    <lastmod>2026-11-11T11:43:04+01:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://zyria.de/posts/homelab/k3s-prod/apps/quaecki-de/readme/</loc>
-    <lastmod>2026-11-11T11:43:04+01:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://zyria.de/posts/homelab/k3s-prod/apps/solarchart-de/readme/</loc>
-    <lastmod>2026-11-11T11:43:04+01:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://zyria.de/posts/homelab/k3s-prod/apps/zyria-de/readme/</loc>
-    <lastmod>2026-11-11T11:43:04+01:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -490,7 +490,7 @@
   </url>
   <url>
     <loc>https://zyria.de/posts/homelab/k3s-prod/apps/mta-sts/readme/</loc>
-    <lastmod>2026-11-11T11:42:01+01:00</lastmod>
+    <lastmod>2026-11-20T00:29:08+01:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -532,7 +532,7 @@
   </url>
   <url>
     <loc>https://zyria.de/posts/homelab/k3s-prod/apps/maintenance-page/readme/</loc>
-    <lastmod>2026-11-11T11:43:04+01:00</lastmod>
+    <lastmod>2026-11-20T00:29:08+01:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
