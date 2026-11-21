@@ -9,7 +9,7 @@
     <managingEditor>fabrice@zyria.de (Fabrice Kirchner)</managingEditor>
     <webMaster>fabrice@zyria.de (Fabrice Kirchner)</webMaster>
     
-    <lastBuildDate>Fri, 20 Nov 2026 00:29:08 +0100</lastBuildDate><atom:link href="https://zyria.de/tags/homelab/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 20 Nov 2026 11:44:21 +0100</lastBuildDate><atom:link href="https://zyria.de/tags/homelab/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Erste Hilfe</title>
@@ -28,6 +28,16 @@
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/posts/homelab/vms/</guid>
       <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Paperless-ngx</title>
+      <link>https://zyria.de/posts/homelab/k3s-prod/apps/paperless/readme/</link>
+      <pubDate>Fri, 20 Nov 2026 11:44:21 +0100</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/paperless/readme/</guid>
+      <description>This document describes the Paperless-ngx deployment, a document management system that transforms physical documents into searchable digital archives.</description>
       
     </item>
     
@@ -228,16 +238,6 @@
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/posts/homelab/k3s-prod/apps/mastodon/readme/</guid>
       <description>Mastodon ist eine Open-Source-Alternative zu kommerziellen sozialen Netzwerken. Es ermöglicht Benutzern, eigene, unabhängige Server (Instanzen) zu betreiben, die über das ActivityPub-Protokoll miteinander kommunizieren können (Föderation).</description>
-      
-    </item>
-    
-    <item>
-      <title>Paperless-ngx</title>
-      <link>https://zyria.de/posts/homelab/k3s-prod/apps/paperless/readme/</link>
-      <pubDate>Mon, 02 Nov 2026 09:03:22 +0100</pubDate>
-      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/paperless/readme/</guid>
-      <description>This document describes the Paperless-ngx deployment, a document management system that transforms physical documents into searchable digital archives.</description>
       
     </item>
     
