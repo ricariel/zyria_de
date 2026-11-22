@@ -299,15 +299,15 @@ href="/site.webmanifest.min.e231d7c2a5ac29753d1781895bdd4b9a0e5900e75bcee133bb47
       "sameAs": ["https://git.casa-due-pur.de/fabrice.kirchner", "https://git.zyria.de/pyrox", "https://github.com/ricariel", "https://www.linkedin.com/in/fabrice-kirchner-bb5408163/", "https://www.xing.com/profile/Fabrice_Kirchner", "https://kirchner.social/@fabrice", "https://codeberg.org/ricariel"]
     },
     "copyrightYear": "2026",
-    "dateCreated": "2026-11-09T17:41:49\u002b01:00",
-    "datePublished": "2026-11-09T17:41:49\u002b01:00",
+    "dateCreated": "2026-11-21T22:16:58\u002b01:00",
+    "datePublished": "2026-11-21T22:16:58\u002b01:00",
     
-    "dateModified": "2026-11-09T17:41:49\u002b01:00",
+    "dateModified": "2026-11-21T22:16:58\u002b01:00",
     
     "keywords": ["kubernetes","k3s","gitops","argocd","helm","kustomize","homelab","produktion"],
     
     "mainEntityOfPage": "https://zyria.de/posts/homelab/k3s-prod/",
-    "wordCount": "1039"
+    "wordCount": "1111"
   }]
   </script>
 
@@ -1168,6 +1168,10 @@ setzt ArgoCD beim nächsten Abgleich zurück.</p>
 					<td>Je ein Verzeichnis pro Anwendung, jedes mit eigener README</td>
 			</tr>
 			<tr>
+					<td><a href="charts/" ><code>charts/</code></a></td>
+					<td>Fremde Helm-Charts, eingecheckt, damit ein Rollout ohne ihre Herkunft auskommt</td>
+			</tr>
+			<tr>
 					<td><a href="components/" ><code>components/</code></a></td>
 					<td>Kustomize-Components, die mehrere Anwendungen einbinden</td>
 			</tr>
@@ -1840,12 +1844,18 @@ Vorlage gedacht.</p>
     
 </h3>
 <p>Eine Anwendung rendern, ohne sie anzuwenden:</p>
-<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">kubectl kustomize --enable-helm apps/&lt;app&gt;</span></span></code></pre></div></div>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">kubectl kustomize --enable-helm --load-restrictor LoadRestrictionsNone apps/&lt;app&gt;</span></span></code></pre></div></div>
 <p><code>--enable-helm</code> ist nötig, sobald die Kustomization einen <code>helmCharts</code>-Block
 enthält — ohne das Flag bleibt der Block stillschweigend unbeachtet und das
 Ergebnis ist unvollständig.</p>
+<p><code>--load-restrictor LoadRestrictionsNone</code> ist nötig, weil die Anwendungen ihr
+Chart aus <a href="charts/" ><code>charts/</code></a> nehmen. Das Verzeichnis liegt oberhalb von
+<code>apps/&lt;app&gt;/</code>, und kustomize verweigert Dateien außerhalb des
+Kustomization-Verzeichnisses sonst mit <code>security; file ... is not in or below ...</code>. ArgoCD trägt dasselbe Flag in <code>kustomize.buildOptions</code>.</p>
+<p>Dass eine Anwendung wirklich ohne Netz rendert, prüft <code>tests/run.sh charts</code>
+in einem Container ohne Netzwerk.</p>
 <p>Von Hand anwenden, falls ArgoCD nicht zur Verfügung steht:</p>
-<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">kubectl kustomize --enable-helm apps/&lt;app&gt; <span class="p">|</span> kubectl apply -n &lt;namespace&gt; -f -</span></span></code></pre></div></div>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">kubectl kustomize --enable-helm --load-restrictor LoadRestrictionsNone apps/&lt;app&gt; <span class="p">|</span> kubectl apply -n &lt;namespace&gt; -f -</span></span></code></pre></div></div>
 
 <h4 class="relative group">Testen von Anwendungen lokal (z.B. mit Podman)
     <div id="testen-von-anwendungen-lokal-zb-mit-podman" class="anchor"></div>
@@ -2019,7 +2029,7 @@ Hostnamen gehören nicht hinein.</p>
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2025-10-18T07:10:10&#43;02:00">18 Oktober 2025</time><span class="px-2 text-primary-500">&middot;</span><time datetime="2026-11-18T10:43:35&#43;01:00">Aktualisiert: 18 November 2026</time><span class="px-2 text-primary-500">&middot;</span><span>6986 Wörter</span>
+      <time datetime="2025-10-18T07:10:10&#43;02:00">18 Oktober 2025</time><span class="px-2 text-primary-500">&middot;</span><time datetime="2026-11-21T22:49:03&#43;01:00">Aktualisiert: 21 November 2026</time><span class="px-2 text-primary-500">&middot;</span><span>6986 Wörter</span>
     
 
     
@@ -4815,7 +4825,7 @@ Hostnamen gehören nicht hinein.</p>
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2025-10-17T11:57:17&#43;02:00">17 Oktober 2025</time><span class="px-2 text-primary-500">&middot;</span><time datetime="2026-11-04T10:14:52&#43;01:00">Aktualisiert: 4 November 2026</time><span class="px-2 text-primary-500">&middot;</span><span>1177 Wörter</span>
+      <time datetime="2025-10-17T11:57:17&#43;02:00">17 Oktober 2025</time><span class="px-2 text-primary-500">&middot;</span><time datetime="2026-11-21T22:34:39&#43;01:00">Aktualisiert: 21 November 2026</time><span class="px-2 text-primary-500">&middot;</span><span>1177 Wörter</span>
     
 
     
@@ -6290,7 +6300,7 @@ Hostnamen gehören nicht hinein.</p>
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2025-10-04T15:31:37&#43;02:00">4 Oktober 2025</time><span class="px-2 text-primary-500">&middot;</span><time datetime="2026-11-20T19:00:22&#43;01:00">Aktualisiert: 20 November 2026</time><span class="px-2 text-primary-500">&middot;</span><span>902 Wörter</span>
+      <time datetime="2025-10-04T15:31:37&#43;02:00">4 Oktober 2025</time><span class="px-2 text-primary-500">&middot;</span><time datetime="2026-11-21T20:43:06&#43;01:00">Aktualisiert: 21 November 2026</time><span class="px-2 text-primary-500">&middot;</span><span>964 Wörter</span>
     
 
     

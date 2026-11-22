@@ -299,15 +299,15 @@ href="/site.webmanifest.min.e231d7c2a5ac29753d1781895bdd4b9a0e5900e75bcee133bb47
       "sameAs": ["https://git.casa-due-pur.de/fabrice.kirchner", "https://git.zyria.de/pyrox", "https://github.com/ricariel", "https://www.linkedin.com/in/fabrice-kirchner-bb5408163/", "https://www.xing.com/profile/Fabrice_Kirchner", "https://kirchner.social/@fabrice", "https://codeberg.org/ricariel"]
     },
     "copyrightYear": "2026",
-    "dateCreated": "2026-11-09T17:41:49\u002b01:00",
-    "datePublished": "2026-11-09T17:41:49\u002b01:00",
+    "dateCreated": "2026-11-21T22:16:58\u002b01:00",
+    "datePublished": "2026-11-21T22:16:58\u002b01:00",
     
-    "dateModified": "2026-11-09T17:41:49\u002b01:00",
+    "dateModified": "2026-11-21T22:16:58\u002b01:00",
     
     "keywords": ["kubernetes","k3s","gitops","argocd","helm","kustomize","homelab","produktion"],
     
     "mainEntityOfPage": "https://zyria.de/posts/homelab/k3s-prod/",
-    "wordCount": "1039"
+    "wordCount": "1111"
   }]
   </script>
 
@@ -1168,6 +1168,10 @@ setzt ArgoCD beim nächsten Abgleich zurück.</p>
 					<td>Je ein Verzeichnis pro Anwendung, jedes mit eigener README</td>
 			</tr>
 			<tr>
+					<td><a href="charts/" ><code>charts/</code></a></td>
+					<td>Fremde Helm-Charts, eingecheckt, damit ein Rollout ohne ihre Herkunft auskommt</td>
+			</tr>
+			<tr>
 					<td><a href="components/" ><code>components/</code></a></td>
 					<td>Kustomize-Components, die mehrere Anwendungen einbinden</td>
 			</tr>
@@ -1840,12 +1844,18 @@ Vorlage gedacht.</p>
     
 </h3>
 <p>Eine Anwendung rendern, ohne sie anzuwenden:</p>
-<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">kubectl kustomize --enable-helm apps/&lt;app&gt;</span></span></code></pre></div></div>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">kubectl kustomize --enable-helm --load-restrictor LoadRestrictionsNone apps/&lt;app&gt;</span></span></code></pre></div></div>
 <p><code>--enable-helm</code> ist nötig, sobald die Kustomization einen <code>helmCharts</code>-Block
 enthält — ohne das Flag bleibt der Block stillschweigend unbeachtet und das
 Ergebnis ist unvollständig.</p>
+<p><code>--load-restrictor LoadRestrictionsNone</code> ist nötig, weil die Anwendungen ihr
+Chart aus <a href="charts/" ><code>charts/</code></a> nehmen. Das Verzeichnis liegt oberhalb von
+<code>apps/&lt;app&gt;/</code>, und kustomize verweigert Dateien außerhalb des
+Kustomization-Verzeichnisses sonst mit <code>security; file ... is not in or below ...</code>. ArgoCD trägt dasselbe Flag in <code>kustomize.buildOptions</code>.</p>
+<p>Dass eine Anwendung wirklich ohne Netz rendert, prüft <code>tests/run.sh charts</code>
+in einem Container ohne Netzwerk.</p>
 <p>Von Hand anwenden, falls ArgoCD nicht zur Verfügung steht:</p>
-<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">kubectl kustomize --enable-helm apps/&lt;app&gt; <span class="p">|</span> kubectl apply -n &lt;namespace&gt; -f -</span></span></code></pre></div></div>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">kubectl kustomize --enable-helm --load-restrictor LoadRestrictionsNone apps/&lt;app&gt; <span class="p">|</span> kubectl apply -n &lt;namespace&gt; -f -</span></span></code></pre></div></div>
 
 <h4 class="relative group">Testen von Anwendungen lokal (z.B. mit Podman)
     <div id="testen-von-anwendungen-lokal-zb-mit-podman" class="anchor"></div>
@@ -1903,6 +1913,1374 @@ Hostnamen gehören nicht hinein.</p>
         
           
             
+            
+              
+
+
+
+
+
+
+
+
+  
+  
+  
+
+
+
+
+
+
+
+
+  
+  
+    
+    
+
+    
+    
+      
+      
+        
+      
+        
+      
+        
+      
+    
+
+    
+    
+      
+      
+    
+
+    
+    
+      
+    
+  
+
+
+
+<article class="article-link--simple flex flex-col md:flex-row relative overflow-hidden rounded-lg border border-neutral-300 dark:border-neutral-600">
+  
+  <div class=" p-4">
+    <header class="items-center text-start text-xl font-semibold">
+      <a
+        
+          href="/posts/homelab/k3s-prod/apps/plex/readme/"
+        
+        class="not-prose before:absolute before:inset-0 decoration-primary-500 dark:text-neutral text-xl font-bold text-neutral-800 hover:underline hover:underline-offset-2">
+        <h2>
+          Plex Media Server
+          
+        </h2>
+      </a>
+      
+      
+    </header>
+    <div class="text-sm text-neutral-500 dark:text-neutral-400">
+      
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="2026-11-21T22:34:39&#43;01:00">21 November 2026</time><span class="px-2 text-primary-500">&middot;</span><span>354 Wörter</span>
+    
+
+    
+    
+  </div>
+
+  
+    <div class="flex flex-row flex-wrap items-center">
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+  
+
+  
+  
+    <div class="flex flex-row flex-wrap items-center">
+      
+        
+      
+        
+          
+            
+              
+                <a class="relative mt-[0.5rem] me-2" href="/categories/k3s-prod/">
+                  
+                  <span class="flex cursor-pointer">
+  
+  
+  
+    
+    
+  
+  
+    <span
+      class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+  
+    K3s-Prod
+  </span>
+</span>
+
+                </a>
+              
+            
+          
+        
+      
+        
+      
+        
+          
+            
+              
+                <a class="relative mt-[0.5rem] me-2" href="/tags/kubernetes/">
+                  <span class="flex cursor-pointer">
+  
+  
+  
+  
+    <span
+      class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+  
+    Kubernetes
+  </span>
+</span>
+
+                </a>
+              
+            
+          
+            
+              
+                <a class="relative mt-[0.5rem] me-2" href="/tags/k3s/">
+                  <span class="flex cursor-pointer">
+  
+  
+  
+  
+    <span
+      class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+  
+    K3s
+  </span>
+</span>
+
+                </a>
+              
+            
+          
+            
+              
+                <a class="relative mt-[0.5rem] me-2" href="/tags/gitops/">
+                  <span class="flex cursor-pointer">
+  
+  
+  
+  
+    <span
+      class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+  
+    Gitops
+  </span>
+</span>
+
+                </a>
+              
+            
+          
+            
+              
+                <a class="relative mt-[0.5rem] me-2" href="/tags/argocd/">
+                  <span class="flex cursor-pointer">
+  
+  
+  
+  
+    <span
+      class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+  
+    Argocd
+  </span>
+</span>
+
+                </a>
+              
+            
+          
+            
+              
+                <a class="relative mt-[0.5rem] me-2" href="/tags/helm/">
+                  <span class="flex cursor-pointer">
+  
+  
+  
+  
+    <span
+      class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+  
+    Helm
+  </span>
+</span>
+
+                </a>
+              
+            
+          
+            
+              
+                <a class="relative mt-[0.5rem] me-2" href="/tags/kustomize/">
+                  <span class="flex cursor-pointer">
+  
+  
+  
+  
+    <span
+      class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+  
+    Kustomize
+  </span>
+</span>
+
+                </a>
+              
+            
+          
+            
+              
+                <a class="relative mt-[0.5rem] me-2" href="/tags/homelab/">
+                  <span class="flex cursor-pointer">
+  
+  
+  
+  
+    <span
+      class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+  
+    Homelab
+  </span>
+</span>
+
+                </a>
+              
+            
+          
+            
+              
+                <a class="relative mt-[0.5rem] me-2" href="/tags/produktion/">
+                  <span class="flex cursor-pointer">
+  
+  
+  
+  
+    <span
+      class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+  
+    Produktion
+  </span>
+</span>
+
+                </a>
+              
+            
+          
+        
+      
+    </div>
+  
+
+
+    </div>
+    
+      <div class="article-link__summary prose dark:prose-invert max-w-fit mt-1 line-clamp-3">
+        Dieses Dokument beschreibt die Bereitstellung des Plex Media Servers, einer beliebten Anwendung zum Organisieren und Streamen von Medien.
+      </div>
+    
+  </div>
+  <div class="px-6 pt-4 pb-2"></div>
+</article>
+
+            
+              
+
+
+
+
+
+
+
+
+  
+  
+  
+
+
+
+
+
+
+
+
+  
+  
+    
+    
+
+    
+    
+      
+      
+        
+      
+        
+      
+        
+      
+    
+
+    
+    
+      
+      
+    
+
+    
+    
+      
+    
+  
+
+
+
+<article class="article-link--simple flex flex-col md:flex-row relative overflow-hidden rounded-lg border border-neutral-300 dark:border-neutral-600">
+  
+  <div class=" p-4">
+    <header class="items-center text-start text-xl font-semibold">
+      <a
+        
+          href="/posts/homelab/k3s-prod/apps/localkit/readme/"
+        
+        class="not-prose before:absolute before:inset-0 decoration-primary-500 dark:text-neutral text-xl font-bold text-neutral-800 hover:underline hover:underline-offset-2">
+        <h2>
+          Localkit
+          
+        </h2>
+      </a>
+      
+      
+    </header>
+    <div class="text-sm text-neutral-500 dark:text-neutral-400">
+      
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="2026-11-21T22:34:39&#43;01:00">21 November 2026</time><span class="px-2 text-primary-500">&middot;</span><span>1211 Wörter</span>
+    
+
+    
+    
+  </div>
+
+  
+    <div class="flex flex-row flex-wrap items-center">
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+  
+
+  
+  
+    <div class="flex flex-row flex-wrap items-center">
+      
+        
+      
+        
+          
+            
+              
+                <a class="relative mt-[0.5rem] me-2" href="/categories/k3s-prod/">
+                  
+                  <span class="flex cursor-pointer">
+  
+  
+  
+    
+    
+  
+  
+    <span
+      class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+  
+    K3s-Prod
+  </span>
+</span>
+
+                </a>
+              
+            
+          
+        
+      
+        
+      
+        
+          
+            
+              
+                <a class="relative mt-[0.5rem] me-2" href="/tags/kubernetes/">
+                  <span class="flex cursor-pointer">
+  
+  
+  
+  
+    <span
+      class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+  
+    Kubernetes
+  </span>
+</span>
+
+                </a>
+              
+            
+          
+            
+              
+                <a class="relative mt-[0.5rem] me-2" href="/tags/k3s/">
+                  <span class="flex cursor-pointer">
+  
+  
+  
+  
+    <span
+      class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+  
+    K3s
+  </span>
+</span>
+
+                </a>
+              
+            
+          
+            
+              
+                <a class="relative mt-[0.5rem] me-2" href="/tags/gitops/">
+                  <span class="flex cursor-pointer">
+  
+  
+  
+  
+    <span
+      class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+  
+    Gitops
+  </span>
+</span>
+
+                </a>
+              
+            
+          
+            
+              
+                <a class="relative mt-[0.5rem] me-2" href="/tags/argocd/">
+                  <span class="flex cursor-pointer">
+  
+  
+  
+  
+    <span
+      class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+  
+    Argocd
+  </span>
+</span>
+
+                </a>
+              
+            
+          
+            
+              
+                <a class="relative mt-[0.5rem] me-2" href="/tags/helm/">
+                  <span class="flex cursor-pointer">
+  
+  
+  
+  
+    <span
+      class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+  
+    Helm
+  </span>
+</span>
+
+                </a>
+              
+            
+          
+            
+              
+                <a class="relative mt-[0.5rem] me-2" href="/tags/kustomize/">
+                  <span class="flex cursor-pointer">
+  
+  
+  
+  
+    <span
+      class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+  
+    Kustomize
+  </span>
+</span>
+
+                </a>
+              
+            
+          
+            
+              
+                <a class="relative mt-[0.5rem] me-2" href="/tags/homelab/">
+                  <span class="flex cursor-pointer">
+  
+  
+  
+  
+    <span
+      class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+  
+    Homelab
+  </span>
+</span>
+
+                </a>
+              
+            
+          
+            
+              
+                <a class="relative mt-[0.5rem] me-2" href="/tags/produktion/">
+                  <span class="flex cursor-pointer">
+  
+  
+  
+  
+    <span
+      class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+  
+    Produktion
+  </span>
+</span>
+
+                </a>
+              
+            
+          
+        
+      
+    </div>
+  
+
+
+    </div>
+    
+      <div class="article-link__summary prose dark:prose-invert max-w-fit mt-1 line-clamp-3">
+        Localkit ersetzt die Petkit-Cloud-API und den Aliyun-MQTT-Broker im Heimnetz. Die Geraete vertrauen einer eigenen CA aus cert-manager, die in ihr Steuerprogramm gepatcht wird.
+      </div>
+    
+  </div>
+  <div class="px-6 pt-4 pb-2"></div>
+</article>
+
+            
+              
+
+
+
+
+
+
+
+
+  
+  
+  
+
+
+
+
+
+
+
+
+  
+  
+    
+    
+
+    
+    
+      
+      
+        
+      
+        
+      
+        
+      
+    
+
+    
+    
+      
+      
+    
+
+    
+    
+      
+    
+  
+
+
+
+<article class="article-link--simple flex flex-col md:flex-row relative overflow-hidden rounded-lg border border-neutral-300 dark:border-neutral-600">
+  
+  <div class=" p-4">
+    <header class="items-center text-start text-xl font-semibold">
+      <a
+        
+          href="/posts/homelab/k3s-prod/apps/home-assistant/readme/"
+        
+        class="not-prose before:absolute before:inset-0 decoration-primary-500 dark:text-neutral text-xl font-bold text-neutral-800 hover:underline hover:underline-offset-2">
+        <h2>
+          Home Assistant
+          
+        </h2>
+      </a>
+      
+      
+    </header>
+    <div class="text-sm text-neutral-500 dark:text-neutral-400">
+      
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="2026-11-21T22:34:39&#43;01:00">21 November 2026</time><span class="px-2 text-primary-500">&middot;</span><span>1061 Wörter</span>
+    
+
+    
+    
+  </div>
+
+  
+    <div class="flex flex-row flex-wrap items-center">
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+  
+
+  
+  
+    <div class="flex flex-row flex-wrap items-center">
+      
+        
+      
+        
+          
+            
+              
+                <a class="relative mt-[0.5rem] me-2" href="/categories/k3s-prod/">
+                  
+                  <span class="flex cursor-pointer">
+  
+  
+  
+    
+    
+  
+  
+    <span
+      class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+  
+    K3s-Prod
+  </span>
+</span>
+
+                </a>
+              
+            
+          
+        
+      
+        
+      
+        
+          
+            
+              
+                <a class="relative mt-[0.5rem] me-2" href="/tags/kubernetes/">
+                  <span class="flex cursor-pointer">
+  
+  
+  
+  
+    <span
+      class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+  
+    Kubernetes
+  </span>
+</span>
+
+                </a>
+              
+            
+          
+            
+              
+                <a class="relative mt-[0.5rem] me-2" href="/tags/k3s/">
+                  <span class="flex cursor-pointer">
+  
+  
+  
+  
+    <span
+      class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+  
+    K3s
+  </span>
+</span>
+
+                </a>
+              
+            
+          
+            
+              
+                <a class="relative mt-[0.5rem] me-2" href="/tags/gitops/">
+                  <span class="flex cursor-pointer">
+  
+  
+  
+  
+    <span
+      class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+  
+    Gitops
+  </span>
+</span>
+
+                </a>
+              
+            
+          
+            
+              
+                <a class="relative mt-[0.5rem] me-2" href="/tags/argocd/">
+                  <span class="flex cursor-pointer">
+  
+  
+  
+  
+    <span
+      class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+  
+    Argocd
+  </span>
+</span>
+
+                </a>
+              
+            
+          
+            
+              
+                <a class="relative mt-[0.5rem] me-2" href="/tags/helm/">
+                  <span class="flex cursor-pointer">
+  
+  
+  
+  
+    <span
+      class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+  
+    Helm
+  </span>
+</span>
+
+                </a>
+              
+            
+          
+            
+              
+                <a class="relative mt-[0.5rem] me-2" href="/tags/kustomize/">
+                  <span class="flex cursor-pointer">
+  
+  
+  
+  
+    <span
+      class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+  
+    Kustomize
+  </span>
+</span>
+
+                </a>
+              
+            
+          
+            
+              
+                <a class="relative mt-[0.5rem] me-2" href="/tags/homelab/">
+                  <span class="flex cursor-pointer">
+  
+  
+  
+  
+    <span
+      class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+  
+    Homelab
+  </span>
+</span>
+
+                </a>
+              
+            
+          
+            
+              
+                <a class="relative mt-[0.5rem] me-2" href="/tags/produktion/">
+                  <span class="flex cursor-pointer">
+  
+  
+  
+  
+    <span
+      class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+  
+    Produktion
+  </span>
+</span>
+
+                </a>
+              
+            
+          
+        
+      
+    </div>
+  
+
+
+    </div>
+    
+      <div class="article-link__summary prose dark:prose-invert max-w-fit mt-1 line-clamp-3">
+        Home Assistant ist das Gehirn des Smart Homes. Im selben Namespace laufen Mosquitto (MQTT-Broker), python-matter-server und ein OpenThread Border Router (OTBR) als eigenständige Deployments.
+      </div>
+    
+  </div>
+  <div class="px-6 pt-4 pb-2"></div>
+</article>
+
+            
+              
+
+
+
+
+
+
+
+
+  
+  
+  
+
+
+
+
+
+
+
+
+  
+  
+    
+    
+
+    
+    
+      
+      
+        
+      
+        
+      
+        
+      
+    
+
+    
+    
+      
+      
+    
+
+    
+    
+      
+    
+  
+
+
+
+<article class="article-link--simple flex flex-col md:flex-row relative overflow-hidden rounded-lg border border-neutral-300 dark:border-neutral-600">
+  
+  <div class=" p-4">
+    <header class="items-center text-start text-xl font-semibold">
+      <a
+        
+          href="/posts/homelab/k3s-prod/apps/fluent-bit/readme/"
+        
+        class="not-prose before:absolute before:inset-0 decoration-primary-500 dark:text-neutral text-xl font-bold text-neutral-800 hover:underline hover:underline-offset-2">
+        <h2>
+          Fluent Bit
+          
+        </h2>
+      </a>
+      
+      
+    </header>
+    <div class="text-sm text-neutral-500 dark:text-neutral-400">
+      
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="2026-11-21T22:34:39&#43;01:00">21 November 2026</time><span class="px-2 text-primary-500">&middot;</span><span>862 Wörter</span>
+    
+
+    
+    
+  </div>
+
+  
+    <div class="flex flex-row flex-wrap items-center">
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+  
+
+  
+  
+    <div class="flex flex-row flex-wrap items-center">
+      
+        
+      
+        
+          
+            
+              
+                <a class="relative mt-[0.5rem] me-2" href="/categories/k3s-prod/">
+                  
+                  <span class="flex cursor-pointer">
+  
+  
+  
+    
+    
+  
+  
+    <span
+      class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+  
+    K3s-Prod
+  </span>
+</span>
+
+                </a>
+              
+            
+          
+        
+      
+        
+      
+        
+          
+            
+              
+                <a class="relative mt-[0.5rem] me-2" href="/tags/kubernetes/">
+                  <span class="flex cursor-pointer">
+  
+  
+  
+  
+    <span
+      class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+  
+    Kubernetes
+  </span>
+</span>
+
+                </a>
+              
+            
+          
+            
+              
+                <a class="relative mt-[0.5rem] me-2" href="/tags/k3s/">
+                  <span class="flex cursor-pointer">
+  
+  
+  
+  
+    <span
+      class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+  
+    K3s
+  </span>
+</span>
+
+                </a>
+              
+            
+          
+            
+              
+                <a class="relative mt-[0.5rem] me-2" href="/tags/gitops/">
+                  <span class="flex cursor-pointer">
+  
+  
+  
+  
+    <span
+      class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+  
+    Gitops
+  </span>
+</span>
+
+                </a>
+              
+            
+          
+            
+              
+                <a class="relative mt-[0.5rem] me-2" href="/tags/argocd/">
+                  <span class="flex cursor-pointer">
+  
+  
+  
+  
+    <span
+      class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+  
+    Argocd
+  </span>
+</span>
+
+                </a>
+              
+            
+          
+            
+              
+                <a class="relative mt-[0.5rem] me-2" href="/tags/helm/">
+                  <span class="flex cursor-pointer">
+  
+  
+  
+  
+    <span
+      class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+  
+    Helm
+  </span>
+</span>
+
+                </a>
+              
+            
+          
+            
+              
+                <a class="relative mt-[0.5rem] me-2" href="/tags/kustomize/">
+                  <span class="flex cursor-pointer">
+  
+  
+  
+  
+    <span
+      class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+  
+    Kustomize
+  </span>
+</span>
+
+                </a>
+              
+            
+          
+            
+              
+                <a class="relative mt-[0.5rem] me-2" href="/tags/homelab/">
+                  <span class="flex cursor-pointer">
+  
+  
+  
+  
+    <span
+      class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+  
+    Homelab
+  </span>
+</span>
+
+                </a>
+              
+            
+          
+            
+              
+                <a class="relative mt-[0.5rem] me-2" href="/tags/produktion/">
+                  <span class="flex cursor-pointer">
+  
+  
+  
+  
+    <span
+      class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+  
+    Produktion
+  </span>
+</span>
+
+                </a>
+              
+            
+          
+        
+      
+    </div>
+  
+
+
+    </div>
+    
+      <div class="article-link__summary prose dark:prose-invert max-w-fit mt-1 line-clamp-3">
+        Fluent Bit läuft als DaemonSet auf jedem Knoten, liest Container-Logs und das Journal, reichert sie mit Kubernetes-Metadaten an und schickt sie an OpenObserve; eine einzelne Instanz liefert die Kubernetes-Ereignisse.
+      </div>
+    
+  </div>
+  <div class="px-6 pt-4 pb-2"></div>
+</article>
+
             
               
 
@@ -3671,348 +5049,6 @@ Hostnamen gehören nicht hinein.</p>
     <header class="items-center text-start text-xl font-semibold">
       <a
         
-          href="/posts/homelab/k3s-prod/apps/fluent-bit/readme/"
-        
-        class="not-prose before:absolute before:inset-0 decoration-primary-500 dark:text-neutral text-xl font-bold text-neutral-800 hover:underline hover:underline-offset-2">
-        <h2>
-          Fluent Bit
-          
-        </h2>
-      </a>
-      
-      
-    </header>
-    <div class="text-sm text-neutral-500 dark:text-neutral-400">
-      
-
-
-
-
-
-
-
-  
-
-  
-  
-  
-    
-  
-
-  
-
-  
-    
-  
-
-  
-
-  
-    
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
-  <div class="flex flex-row flex-wrap items-center">
-    
-    
-      <time datetime="2026-11-17T13:37:59&#43;01:00">17 November 2026</time><span class="px-2 text-primary-500">&middot;</span><span>862 Wörter</span>
-    
-
-    
-    
-  </div>
-
-  
-    <div class="flex flex-row flex-wrap items-center">
-      
-        
-          
-        
-      
-        
-      
-        
-      
-        
-      
-    </div>
-  
-
-  
-  
-    <div class="flex flex-row flex-wrap items-center">
-      
-        
-      
-        
-          
-            
-              
-                <a class="relative mt-[0.5rem] me-2" href="/categories/k3s-prod/">
-                  
-                  <span class="flex cursor-pointer">
-  
-  
-  
-    
-    
-  
-  
-    <span
-      class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-  
-    K3s-Prod
-  </span>
-</span>
-
-                </a>
-              
-            
-          
-        
-      
-        
-      
-        
-          
-            
-              
-                <a class="relative mt-[0.5rem] me-2" href="/tags/kubernetes/">
-                  <span class="flex cursor-pointer">
-  
-  
-  
-  
-    <span
-      class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-  
-    Kubernetes
-  </span>
-</span>
-
-                </a>
-              
-            
-          
-            
-              
-                <a class="relative mt-[0.5rem] me-2" href="/tags/k3s/">
-                  <span class="flex cursor-pointer">
-  
-  
-  
-  
-    <span
-      class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-  
-    K3s
-  </span>
-</span>
-
-                </a>
-              
-            
-          
-            
-              
-                <a class="relative mt-[0.5rem] me-2" href="/tags/gitops/">
-                  <span class="flex cursor-pointer">
-  
-  
-  
-  
-    <span
-      class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-  
-    Gitops
-  </span>
-</span>
-
-                </a>
-              
-            
-          
-            
-              
-                <a class="relative mt-[0.5rem] me-2" href="/tags/argocd/">
-                  <span class="flex cursor-pointer">
-  
-  
-  
-  
-    <span
-      class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-  
-    Argocd
-  </span>
-</span>
-
-                </a>
-              
-            
-          
-            
-              
-                <a class="relative mt-[0.5rem] me-2" href="/tags/helm/">
-                  <span class="flex cursor-pointer">
-  
-  
-  
-  
-    <span
-      class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-  
-    Helm
-  </span>
-</span>
-
-                </a>
-              
-            
-          
-            
-              
-                <a class="relative mt-[0.5rem] me-2" href="/tags/kustomize/">
-                  <span class="flex cursor-pointer">
-  
-  
-  
-  
-    <span
-      class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-  
-    Kustomize
-  </span>
-</span>
-
-                </a>
-              
-            
-          
-            
-              
-                <a class="relative mt-[0.5rem] me-2" href="/tags/homelab/">
-                  <span class="flex cursor-pointer">
-  
-  
-  
-  
-    <span
-      class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-  
-    Homelab
-  </span>
-</span>
-
-                </a>
-              
-            
-          
-            
-              
-                <a class="relative mt-[0.5rem] me-2" href="/tags/produktion/">
-                  <span class="flex cursor-pointer">
-  
-  
-  
-  
-    <span
-      class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-  
-    Produktion
-  </span>
-</span>
-
-                </a>
-              
-            
-          
-        
-      
-    </div>
-  
-
-
-    </div>
-    
-      <div class="article-link__summary prose dark:prose-invert max-w-fit mt-1 line-clamp-3">
-        Fluent Bit läuft als DaemonSet auf jedem Knoten, liest Container-Logs und das Journal, reichert sie mit Kubernetes-Metadaten an und schickt sie an OpenObserve; eine einzelne Instanz liefert die Kubernetes-Ereignisse.
-      </div>
-    
-  </div>
-  <div class="px-6 pt-4 pb-2"></div>
-</article>
-
-            
-              
-
-
-
-
-
-
-
-
-  
-  
-  
-
-
-
-
-
-
-
-
-  
-  
-    
-    
-
-    
-    
-      
-      
-        
-      
-        
-      
-        
-      
-    
-
-    
-    
-      
-      
-    
-
-    
-    
-      
-    
-  
-
-
-
-<article class="article-link--simple flex flex-col md:flex-row relative overflow-hidden rounded-lg border border-neutral-300 dark:border-neutral-600">
-  
-  <div class=" p-4">
-    <header class="items-center text-start text-xl font-semibold">
-      <a
-        
           href="/posts/homelab/k3s-prod/apps/matrix/readme/"
         
         class="not-prose before:absolute before:inset-0 decoration-primary-500 dark:text-neutral text-xl font-bold text-neutral-800 hover:underline hover:underline-offset-2">
@@ -5659,348 +6695,6 @@ Hostnamen gehören nicht hinein.</p>
     
       <div class="article-link__summary prose dark:prose-invert max-w-fit mt-1 line-clamp-3">
         Ein Pod baut einen OpenVPN-Tunnel zu einem entfernten Standort auf und annonciert die dahinterliegenden Netze via Headscale ins Tailnet.
-      </div>
-    
-  </div>
-  <div class="px-6 pt-4 pb-2"></div>
-</article>
-
-            
-              
-
-
-
-
-
-
-
-
-  
-  
-  
-
-
-
-
-
-
-
-
-  
-  
-    
-    
-
-    
-    
-      
-      
-        
-      
-        
-      
-        
-      
-    
-
-    
-    
-      
-      
-    
-
-    
-    
-      
-    
-  
-
-
-
-<article class="article-link--simple flex flex-col md:flex-row relative overflow-hidden rounded-lg border border-neutral-300 dark:border-neutral-600">
-  
-  <div class=" p-4">
-    <header class="items-center text-start text-xl font-semibold">
-      <a
-        
-          href="/posts/homelab/k3s-prod/apps/home-assistant/readme/"
-        
-        class="not-prose before:absolute before:inset-0 decoration-primary-500 dark:text-neutral text-xl font-bold text-neutral-800 hover:underline hover:underline-offset-2">
-        <h2>
-          Home Assistant
-          
-        </h2>
-      </a>
-      
-      
-    </header>
-    <div class="text-sm text-neutral-500 dark:text-neutral-400">
-      
-
-
-
-
-
-
-
-  
-
-  
-  
-  
-    
-  
-
-  
-
-  
-    
-  
-
-  
-
-  
-    
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
-  <div class="flex flex-row flex-wrap items-center">
-    
-    
-      <time datetime="2026-11-07T15:32:12&#43;01:00">7 November 2026</time><span class="px-2 text-primary-500">&middot;</span><span>1061 Wörter</span>
-    
-
-    
-    
-  </div>
-
-  
-    <div class="flex flex-row flex-wrap items-center">
-      
-        
-          
-        
-      
-        
-      
-        
-      
-        
-      
-    </div>
-  
-
-  
-  
-    <div class="flex flex-row flex-wrap items-center">
-      
-        
-      
-        
-          
-            
-              
-                <a class="relative mt-[0.5rem] me-2" href="/categories/k3s-prod/">
-                  
-                  <span class="flex cursor-pointer">
-  
-  
-  
-    
-    
-  
-  
-    <span
-      class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-  
-    K3s-Prod
-  </span>
-</span>
-
-                </a>
-              
-            
-          
-        
-      
-        
-      
-        
-          
-            
-              
-                <a class="relative mt-[0.5rem] me-2" href="/tags/kubernetes/">
-                  <span class="flex cursor-pointer">
-  
-  
-  
-  
-    <span
-      class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-  
-    Kubernetes
-  </span>
-</span>
-
-                </a>
-              
-            
-          
-            
-              
-                <a class="relative mt-[0.5rem] me-2" href="/tags/k3s/">
-                  <span class="flex cursor-pointer">
-  
-  
-  
-  
-    <span
-      class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-  
-    K3s
-  </span>
-</span>
-
-                </a>
-              
-            
-          
-            
-              
-                <a class="relative mt-[0.5rem] me-2" href="/tags/gitops/">
-                  <span class="flex cursor-pointer">
-  
-  
-  
-  
-    <span
-      class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-  
-    Gitops
-  </span>
-</span>
-
-                </a>
-              
-            
-          
-            
-              
-                <a class="relative mt-[0.5rem] me-2" href="/tags/argocd/">
-                  <span class="flex cursor-pointer">
-  
-  
-  
-  
-    <span
-      class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-  
-    Argocd
-  </span>
-</span>
-
-                </a>
-              
-            
-          
-            
-              
-                <a class="relative mt-[0.5rem] me-2" href="/tags/helm/">
-                  <span class="flex cursor-pointer">
-  
-  
-  
-  
-    <span
-      class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-  
-    Helm
-  </span>
-</span>
-
-                </a>
-              
-            
-          
-            
-              
-                <a class="relative mt-[0.5rem] me-2" href="/tags/kustomize/">
-                  <span class="flex cursor-pointer">
-  
-  
-  
-  
-    <span
-      class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-  
-    Kustomize
-  </span>
-</span>
-
-                </a>
-              
-            
-          
-            
-              
-                <a class="relative mt-[0.5rem] me-2" href="/tags/homelab/">
-                  <span class="flex cursor-pointer">
-  
-  
-  
-  
-    <span
-      class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-  
-    Homelab
-  </span>
-</span>
-
-                </a>
-              
-            
-          
-            
-              
-                <a class="relative mt-[0.5rem] me-2" href="/tags/produktion/">
-                  <span class="flex cursor-pointer">
-  
-  
-  
-  
-    <span
-      class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-  
-    Produktion
-  </span>
-</span>
-
-                </a>
-              
-            
-          
-        
-      
-    </div>
-  
-
-
-    </div>
-    
-      <div class="article-link__summary prose dark:prose-invert max-w-fit mt-1 line-clamp-3">
-        Home Assistant ist das Gehirn des Smart Homes. Im selben Namespace laufen Mosquitto (MQTT-Broker), python-matter-server und ein OpenThread Border Router (OTBR) als eigenständige Deployments.
       </div>
     
   </div>
@@ -8053,635 +8747,6 @@ Hostnamen gehören nicht hinein.</p>
     
       <div class="article-link__summary prose dark:prose-invert max-w-fit mt-1 line-clamp-3">
         Synapse Admin bietet eine einfache grafische Oberfläche, um Benutzer und Räume auf einem Synapse Homeserver zu verwalten, ohne die Admin-API direkt verwenden zu müssen.
-      </div>
-    
-  </div>
-  <div class="px-6 pt-4 pb-2"></div>
-</article>
-
-            
-              
-
-
-
-
-
-
-
-
-  
-  
-  
-
-
-
-
-
-
-
-
-  
-  
-    
-    
-
-    
-    
-      
-      
-        
-      
-        
-      
-        
-      
-    
-
-    
-    
-      
-      
-    
-
-    
-    
-      
-    
-  
-
-
-
-<article class="article-link--simple flex flex-col md:flex-row relative overflow-hidden rounded-lg border border-neutral-300 dark:border-neutral-600">
-  
-  <div class=" p-4">
-    <header class="items-center text-start text-xl font-semibold">
-      <a
-        
-          href="/posts/homelab/k3s-prod/apps/mastodon/readme/"
-        
-        class="not-prose before:absolute before:inset-0 decoration-primary-500 dark:text-neutral text-xl font-bold text-neutral-800 hover:underline hover:underline-offset-2">
-        <h2>
-          Mastodon
-          
-        </h2>
-      </a>
-      
-      
-    </header>
-    <div class="text-sm text-neutral-500 dark:text-neutral-400">
-      
-
-
-
-
-
-
-
-  
-
-  
-  
-  
-    
-  
-
-  
-
-  
-    
-  
-
-  
-
-  
-    
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
-  <div class="flex flex-row flex-wrap items-center">
-    
-    
-      <time datetime="2026-11-02T09:03:22&#43;01:00">2 November 2026</time><span class="px-2 text-primary-500">&middot;</span><span>554 Wörter</span>
-    
-
-    
-    
-  </div>
-
-  
-    <div class="flex flex-row flex-wrap items-center">
-      
-        
-          
-        
-      
-        
-      
-        
-      
-        
-      
-    </div>
-  
-
-  
-  
-    <div class="flex flex-row flex-wrap items-center">
-      
-        
-      
-        
-          
-            
-              
-                <a class="relative mt-[0.5rem] me-2" href="/categories/k3s-prod/">
-                  
-                  <span class="flex cursor-pointer">
-  
-  
-  
-    
-    
-  
-  
-    <span
-      class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-  
-    K3s-Prod
-  </span>
-</span>
-
-                </a>
-              
-            
-          
-        
-      
-        
-      
-        
-          
-            
-              
-                <a class="relative mt-[0.5rem] me-2" href="/tags/kubernetes/">
-                  <span class="flex cursor-pointer">
-  
-  
-  
-  
-    <span
-      class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-  
-    Kubernetes
-  </span>
-</span>
-
-                </a>
-              
-            
-          
-            
-              
-                <a class="relative mt-[0.5rem] me-2" href="/tags/k3s/">
-                  <span class="flex cursor-pointer">
-  
-  
-  
-  
-    <span
-      class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-  
-    K3s
-  </span>
-</span>
-
-                </a>
-              
-            
-          
-            
-              
-                <a class="relative mt-[0.5rem] me-2" href="/tags/gitops/">
-                  <span class="flex cursor-pointer">
-  
-  
-  
-  
-    <span
-      class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-  
-    Gitops
-  </span>
-</span>
-
-                </a>
-              
-            
-          
-            
-              
-                <a class="relative mt-[0.5rem] me-2" href="/tags/argocd/">
-                  <span class="flex cursor-pointer">
-  
-  
-  
-  
-    <span
-      class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-  
-    Argocd
-  </span>
-</span>
-
-                </a>
-              
-            
-          
-            
-              
-                <a class="relative mt-[0.5rem] me-2" href="/tags/helm/">
-                  <span class="flex cursor-pointer">
-  
-  
-  
-  
-    <span
-      class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-  
-    Helm
-  </span>
-</span>
-
-                </a>
-              
-            
-          
-            
-              
-                <a class="relative mt-[0.5rem] me-2" href="/tags/kustomize/">
-                  <span class="flex cursor-pointer">
-  
-  
-  
-  
-    <span
-      class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-  
-    Kustomize
-  </span>
-</span>
-
-                </a>
-              
-            
-          
-            
-              
-                <a class="relative mt-[0.5rem] me-2" href="/tags/homelab/">
-                  <span class="flex cursor-pointer">
-  
-  
-  
-  
-    <span
-      class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-  
-    Homelab
-  </span>
-</span>
-
-                </a>
-              
-            
-          
-            
-              
-                <a class="relative mt-[0.5rem] me-2" href="/tags/produktion/">
-                  <span class="flex cursor-pointer">
-  
-  
-  
-  
-    <span
-      class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-  
-    Produktion
-  </span>
-</span>
-
-                </a>
-              
-            
-          
-        
-      
-    </div>
-  
-
-
-    </div>
-    
-      <div class="article-link__summary prose dark:prose-invert max-w-fit mt-1 line-clamp-3">
-        Mastodon ist eine Open-Source-Alternative zu kommerziellen sozialen Netzwerken. Es ermöglicht Benutzern, eigene, unabhängige Server (Instanzen) zu betreiben, die über das ActivityPub-Protokoll miteinander kommunizieren können (Föderation).
-      </div>
-    
-  </div>
-  <div class="px-6 pt-4 pb-2"></div>
-</article>
-
-            
-              
-
-
-
-
-
-
-
-
-  
-  
-  
-
-
-
-
-
-
-
-
-  
-  
-    
-    
-
-    
-    
-      
-      
-        
-      
-        
-      
-        
-      
-    
-
-    
-    
-      
-      
-    
-
-    
-    
-      
-    
-  
-
-
-
-<article class="article-link--simple flex flex-col md:flex-row relative overflow-hidden rounded-lg border border-neutral-300 dark:border-neutral-600">
-  
-  <div class=" p-4">
-    <header class="items-center text-start text-xl font-semibold">
-      <a
-        
-          href="/posts/homelab/k3s-prod/apps/crowdsec/readme/"
-        
-        class="not-prose before:absolute before:inset-0 decoration-primary-500 dark:text-neutral text-xl font-bold text-neutral-800 hover:underline hover:underline-offset-2">
-        <h2>
-          CrowdSec
-          
-        </h2>
-      </a>
-      
-      
-    </header>
-    <div class="text-sm text-neutral-500 dark:text-neutral-400">
-      
-
-
-
-
-
-
-
-  
-
-  
-  
-  
-    
-  
-
-  
-
-  
-    
-  
-
-  
-    
-  
-
-  
-    
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
-  <div class="flex flex-row flex-wrap items-center">
-    
-    
-      <time datetime="2026-10-23T23:00:00&#43;02:00">23 Oktober 2026</time><span class="px-2 text-primary-500">&middot;</span><time datetime="2026-11-14T04:48:59&#43;01:00">Aktualisiert: 14 November 2026</time><span class="px-2 text-primary-500">&middot;</span><span>2092 Wörter</span>
-    
-
-    
-    
-  </div>
-
-  
-    <div class="flex flex-row flex-wrap items-center">
-      
-        
-          
-        
-      
-        
-      
-        
-      
-        
-      
-    </div>
-  
-
-  
-  
-    <div class="flex flex-row flex-wrap items-center">
-      
-        
-      
-        
-          
-            
-              
-                <a class="relative mt-[0.5rem] me-2" href="/categories/k3s-prod/">
-                  
-                  <span class="flex cursor-pointer">
-  
-  
-  
-    
-    
-  
-  
-    <span
-      class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-  
-    K3s-Prod
-  </span>
-</span>
-
-                </a>
-              
-            
-          
-        
-      
-        
-      
-        
-          
-            
-              
-                <a class="relative mt-[0.5rem] me-2" href="/tags/kubernetes/">
-                  <span class="flex cursor-pointer">
-  
-  
-  
-  
-    <span
-      class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-  
-    Kubernetes
-  </span>
-</span>
-
-                </a>
-              
-            
-          
-            
-              
-                <a class="relative mt-[0.5rem] me-2" href="/tags/crowdsec/">
-                  <span class="flex cursor-pointer">
-  
-  
-  
-  
-    <span
-      class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-  
-    Crowdsec
-  </span>
-</span>
-
-                </a>
-              
-            
-          
-            
-              
-                <a class="relative mt-[0.5rem] me-2" href="/tags/security/">
-                  <span class="flex cursor-pointer">
-  
-  
-  
-  
-    <span
-      class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-  
-    Security
-  </span>
-</span>
-
-                </a>
-              
-            
-          
-            
-              
-                <a class="relative mt-[0.5rem] me-2" href="/tags/traefik/">
-                  <span class="flex cursor-pointer">
-  
-  
-  
-  
-    <span
-      class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-  
-    Traefik
-  </span>
-</span>
-
-                </a>
-              
-            
-          
-            
-              
-                <a class="relative mt-[0.5rem] me-2" href="/tags/postgresql/">
-                  <span class="flex cursor-pointer">
-  
-  
-  
-  
-    <span
-      class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-  
-    Postgresql
-  </span>
-</span>
-
-                </a>
-              
-            
-          
-        
-      
-    </div>
-  
-
-
-    </div>
-    
-      <div class="article-link__summary prose dark:prose-invert max-w-fit mt-1 line-clamp-3">
-        CrowdSec liest die JSON-Access-Logs von Traefik, erkennt Scans, Brute-Force und bekannte Exploit-Muster und legt Sperrentscheidungen in seiner Local API ab. Ein Bouncer in Traefik setzt sie ab Phase 2 um.
       </div>
     
   </div>

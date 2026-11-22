@@ -84,6 +84,18 @@ k3s_cluster:
         - "192.168.178.29"
         - "2003:a:b16:4700::29"
         - "2003:a:b16:4700:be24:11ff:fe63:f371"
+        # Servernetz (VLAN 20) fuer den Netzumzug: Server auf ens21 und die
+        # kuenftige Adresse von kubernetes-vip. Die alten Eintraege oben
+        # entfallen, wenn alle Nodes umgezogen sind (plans/zyria-netz-umzug.md
+        # in claude-private, Phase 5).
+        - "192.168.120.150"
+        - "192.168.120.152"
+        - "192.168.120.153"
+        - "192.168.120.29"
+        - "2003:a:b16:4794::150"
+        - "2003:a:b16:4794::152"
+        - "2003:a:b16:4794::153"
+        - "2003:a:b16:4794::29"
       write-kubeconfig-mode: 644
       flannel-ipv6-masq: true
       flannel-backend: wireguard-native
