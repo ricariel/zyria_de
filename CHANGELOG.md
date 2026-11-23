@@ -1,9 +1,29 @@
 # Changelog
 
-Alle nennenswerten Änderungen an diesem Repository.
-Automatisch aus [Conventional Commits](https://www.conventionalcommits.org) via [git-cliff](https://git-cliff.org).
+All notable changes to this repository.
+Generated automatically from [Conventional Commits](https://www.conventionalcommits.org) via [git-cliff](https://git-cliff.org).
 
-## [2026.46] - 2026-11-16 ([Vergleich zur Vorversion](https://git.zyria.de/pyrox/zyria_de/compare/2026.45...2026.46))
+## [2026.47] - 2026-11-23 ([compare with the previous version](https://git.zyria.de/pyrox/zyria_de/compare/2026.46...2026.47))
+
+### ⬆️ Dependencies
+
+- **deps**: Update dependency autoprefixer ( 10.6.2 → 10.7.0 )
+
+### 🔧 CI/Build
+
+- **workflows**: Take over the english workflow templates ([666be00](https://git.zyria.de/pyrox/zyria_de/commit/666be00aca8f6c7e4c7c45e12d9a51939a105829))
+
+### 🧹 Miscellaneous
+
+- **hugo**: Update the modules
+- **hugo**: Update the modules
+- **hugo**: Update the modules
+- **hugo**: Update the modules
+- **hugo**: Update the modules
+- **hugo**: Module aktualisieren
+- **hugo**: Module aktualisieren
+
+## [2026.46] - 2026-11-16 ([compare with the previous version](https://git.zyria.de/pyrox/zyria_de/compare/2026.45...2026.46))
 
 ### 📝 Documentation
 
@@ -23,7 +43,7 @@ Automatisch aus [Conventional Commits](https://www.conventionalcommits.org) via 
 - **hugo**: Module aktualisieren
 - **hugo**: Module aktualisieren
 
-## [2026.45] - 2026-11-09 ([Vergleich zur Vorversion](https://git.zyria.de/pyrox/zyria_de/compare/2026.44...2026.45))
+## [2026.45] - 2026-11-09 ([compare with the previous version](https://git.zyria.de/pyrox/zyria_de/compare/2026.44...2026.45))
 
 ### ⬆️ Dependencies
 
@@ -39,7 +59,7 @@ Automatisch aus [Conventional Commits](https://www.conventionalcommits.org) via 
 - **hugo**: Module aktualisieren
 - **hugo**: Module aktualisieren
 
-## [2026.44] - 2026-11-02 ([Vergleich zur Vorversion](https://git.zyria.de/pyrox/zyria_de/compare/2026.43...2026.44))
+## [2026.44] - 2026-11-02 ([compare with the previous version](https://git.zyria.de/pyrox/zyria_de/compare/2026.43...2026.44))
 
 ### ⬆️ Dependencies
 
@@ -57,7 +77,7 @@ Automatisch aus [Conventional Commits](https://www.conventionalcommits.org) via 
 - **hugo**: Module aktualisieren
 - **design**: Sync from zyria-design
 
-## [2026.43] - 2026-10-26 ([Vergleich zur Vorversion](https://git.zyria.de/pyrox/zyria_de/compare/2026.42...2026.43))
+## [2026.43] - 2026-10-26 ([compare with the previous version](https://git.zyria.de/pyrox/zyria_de/compare/2026.42...2026.43))
 
 ### ✨ Features
 
@@ -85,7 +105,7 @@ Automatisch aus [Conventional Commits](https://www.conventionalcommits.org) via 
 - **hugo**: Module aktualisieren
 - **hugo**: Module aktualisieren
 
-## [2026.42] - 2026-10-19 ([Vergleich zur Vorversion](https://git.zyria.de/pyrox/zyria_de/compare/2026.41...2026.42))
+## [2026.42] - 2026-10-19 ([compare with the previous version](https://git.zyria.de/pyrox/zyria_de/compare/2026.41...2026.42))
 
 ### ✨ Features
 
@@ -110,7 +130,7 @@ Automatisch aus [Conventional Commits](https://www.conventionalcommits.org) via 
 - **hugo**: Module aktualisieren
 - **hugo**: Module aktualisieren
 
-## [2026.41] - 2026-10-12 ([Vergleich zur Vorversion](https://git.zyria.de/pyrox/zyria_de/compare/2026.40...2026.41))
+## [2026.41] - 2026-10-12 ([compare with the previous version](https://git.zyria.de/pyrox/zyria_de/compare/2026.40...2026.41))
 
 ### 🔧 CI/Build
 
@@ -123,7 +143,7 @@ Automatisch aus [Conventional Commits](https://www.conventionalcommits.org) via 
 - **hugo**: Module aktualisieren
 - **hugo**: Module aktualisieren
 
-## [2026.40] - 2026-10-05 ([Vergleich zur Vorversion](https://git.zyria.de/pyrox/zyria_de/compare/2026.39...2026.40))
+## [2026.40] - 2026-10-05 ([compare with the previous version](https://git.zyria.de/pyrox/zyria_de/compare/2026.39...2026.40))
 
 ### 🧹 Miscellaneous
 
@@ -133,7 +153,7 @@ Automatisch aus [Conventional Commits](https://www.conventionalcommits.org) via 
 - **hugo**: Module aktualisieren
 - **pre-commit**: Enable no-infra-leaks and pin v1.1.3
 
-## [2026.39] - 2026-09-28 ([Vergleich zur Vorversion](https://git.zyria.de/pyrox/zyria_de/compare/2026.38...2026.39))
+## [2026.39] - 2026-09-28 ([compare with the previous version](https://git.zyria.de/pyrox/zyria_de/compare/2026.38...2026.39))
 
 ### ⬆️ Dependencies
 
@@ -150,7 +170,7 @@ Automatisch aus [Conventional Commits](https://www.conventionalcommits.org) via 
 - **hugo**: Module aktualisieren
 - **hugo**: Module aktualisieren
 
-## [2026.38] - 2026-09-21 ([Vergleich zur Vorversion](https://git.zyria.de/pyrox/zyria_de/compare/2026.37...2026.38))
+## [2026.38] - 2026-09-21 ([compare with the previous version](https://git.zyria.de/pyrox/zyria_de/compare/2026.37...2026.38))
 
 ### ⬆️ Dependencies
 
@@ -166,7 +186,7 @@ Automatisch aus [Conventional Commits](https://www.conventionalcommits.org) via 
 - **hugo**: Module aktualisieren
 - **hugo**: Module aktualisieren
 
-## [2026.37] - 2026-09-14 ([Vergleich zur Vorversion](https://git.zyria.de/pyrox/zyria_de/compare/2026.36...2026.37))
+## [2026.37] - 2026-09-14 ([compare with the previous version](https://git.zyria.de/pyrox/zyria_de/compare/2026.36...2026.37))
 
 ### ⬆️ Dependencies
 
@@ -177,7 +197,7 @@ Automatisch aus [Conventional Commits](https://www.conventionalcommits.org) via 
 - **hugo**: Module aktualisieren
 - **hugo**: Module aktualisieren
 
-## [2026.36] - 2026-09-07 ([Vergleich zur Vorversion](https://git.zyria.de/pyrox/zyria_de/compare/2026.35...2026.36))
+## [2026.36] - 2026-09-07 ([compare with the previous version](https://git.zyria.de/pyrox/zyria_de/compare/2026.35...2026.36))
 
 ### ⬆️ Dependencies
 
@@ -190,7 +210,7 @@ Automatisch aus [Conventional Commits](https://www.conventionalcommits.org) via 
 - **hugo**: Module aktualisieren
 - **hugo**: Module aktualisieren
 
-## [2026.35] - 2026-08-31 ([Vergleich zur Vorversion](https://git.zyria.de/pyrox/zyria_de/compare/2026.34...2026.35))
+## [2026.35] - 2026-08-31 ([compare with the previous version](https://git.zyria.de/pyrox/zyria_de/compare/2026.34...2026.35))
 
 ### 🧹 Miscellaneous
 
