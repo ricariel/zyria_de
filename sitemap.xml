@@ -448,7 +448,7 @@
   </url>
   <url>
     <loc>https://zyria.de/posts/homelab/k3s-prod/apps/wireguard/readme/</loc>
-    <lastmod>2026-11-21T22:34:39+01:00</lastmod>
+    <lastmod>2026-11-23T11:44:10+01:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -460,7 +460,7 @@
   </url>
   <url>
     <loc>https://zyria.de/posts/homelab/k3s-prod/apps/mailstack/readme/</loc>
-    <lastmod>2026-11-21T22:49:03+01:00</lastmod>
+    <lastmod>2026-11-23T14:06:48+01:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -550,7 +550,7 @@
   </url>
   <url>
     <loc>https://zyria.de/posts/homelab/k3s-prod/apps/k3s/readme/</loc>
-    <lastmod>2026-10-24T01:14:53+02:00</lastmod>
+    <lastmod>2026-11-24T01:45:44+01:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>

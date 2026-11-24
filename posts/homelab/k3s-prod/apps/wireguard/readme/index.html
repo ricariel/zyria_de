@@ -105,7 +105,7 @@
 	<meta property="og:type" content="article">
 		<meta property="article:section" content="posts">
 		<meta property="article:published_time" content="2025-10-18T07:57:54+02:00">
-		<meta property="article:modified_time" content="2026-11-21T22:34:39+01:00">
+		<meta property="article:modified_time" content="2026-11-23T11:44:10+01:00">
 		<meta property="article:tag" content="Kubernetes">
 		<meta property="article:tag" content="Wireguard">
 		<meta property="article:tag" content="Vpn">
@@ -311,12 +311,12 @@ href="/site.webmanifest.min.e231d7c2a5ac29753d1781895bdd4b9a0e5900e75bcee133bb47
     "dateCreated": "2025-10-18T07:57:54\u002b02:00",
     "datePublished": "2025-10-18T07:57:54\u002b02:00",
     
-    "dateModified": "2026-11-21T22:34:39\u002b01:00",
+    "dateModified": "2026-11-23T11:44:10\u002b01:00",
     
     "keywords": ["kubernetes","wireguard","vpn"],
     
     "mainEntityOfPage": "https://zyria.de/posts/homelab/k3s-prod/apps/wireguard/readme/",
-    "wordCount": "1336"
+    "wordCount": "1376"
   }]
   </script>
 
@@ -963,7 +963,7 @@ href="/site.webmanifest.min.e231d7c2a5ac29753d1781895bdd4b9a0e5900e75bcee133bb47
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2025-10-18T07:57:54&#43;02:00">18 Oktober 2025</time><span class="px-2 text-primary-500">&middot;</span><time datetime="2026-11-21T22:34:39&#43;01:00">Aktualisiert: 21 November 2026</time><span class="px-2 text-primary-500">&middot;</span><span>1336 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
+      <time datetime="2025-10-18T07:57:54&#43;02:00">18 Oktober 2025</time><span class="px-2 text-primary-500">&middot;</span><time datetime="2026-11-23T11:44:10&#43;01:00">Aktualisiert: 23 November 2026</time><span class="px-2 text-primary-500">&middot;</span><span>1376 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
 
 
   
@@ -1404,7 +1404,12 @@ der Abgleich nutzt <code>sync_filter</code>.</li>
 <li>Die SSH-Host-Schlüssel kommen aus einem Secret, das aus dem Verzeichnis <code>ssh/</code>
 erzeugt wird — sie bleiben damit über Neustarts hinweg stabil, und Clients
 bekommen keine Warnung über einen gewechselten Schlüssel.</li>
-<li>Für den Bastion gilt eine eigene <code>sshd</code>-Konfiguration, eingebunden als ConfigMap <code>sshd-config</code>.</li>
+<li>Für den Bastion gilt eine eigene <code>sshd</code>-Konfiguration, eingebunden als ConfigMap
+<code>sshd-config</code> unter <code>/etc/ssh/sshd_config.d/00-bastion.conf</code>. Das Image bringt
+dieselben Direktiven als <code>50-bastion.conf</code> mit; <code>sshd</code> nimmt den ersten Wert je
+Schlüsselwort und liest die Drop-ins lexikalisch, deshalb gewinnt <code>00-</code>. Die
+Datei ist wortgleich mit <code>sshd_config</code> aus <code>pyrox/docker-ssh-bastion</code> und wird
+nur gemeinsam mit ihr geändert.</li>
 <li><code>/lib/modules</code> wird vom Host als einziges <code>hostPath</code> durchgereicht — WireGuard
 braucht das Kernelmodul des Hosts.</li>
 <li>Der Bastion Container stellt einen SSH Jumphost bereit. Primär für die Nutzung von Ansible. Damit lassen sich alle Geräte hinter den NATs erreichen, welche im

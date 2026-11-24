@@ -4,26 +4,26 @@ k3s_cluster:
     server:
       hosts:
         control0.zyria.de:
-          ansible_host: 192.168.178.150
+          ansible_host: 192.168.120.150
 #        control1.zyria.de:
 #          ansible_host: 192.168.178.151
         control2.zyria.de:
-          ansible_host: 192.168.178.152
+          ansible_host: 192.168.120.152
         control3.zyria.de:
-          ansible_host: 192.168.178.153
+          ansible_host: 192.168.120.153
     agent:
       # Agents sprechen die API ueber kubernetes-vip an (MetalLB L2 auf den
       # Control-Nodes, verteilt auf alle API-Server, im Zertifikat enthalten).
-      # Die Server bleiben bei 192.168.178.150, weil die VIP beim Aufbau eines
+      # Die Server bleiben bei 192.168.120.150, weil die VIP beim Aufbau eines
       # neuen Clusters noch nicht existiert. Frueher stand hier nichts, und die
       # Agent-Unit zeigte allein auf control0.
       vars:
-        api_endpoint: "192.168.178.29"
+        api_endpoint: "192.168.120.29"
       hosts:
         worker1.zyria.de:
-          ansible_host: 192.168.178.161
+          ansible_host: 192.168.120.161
         worker2.zyria.de:
-          ansible_host: 192.168.178.162
+          ansible_host: 192.168.120.162
 #        worker3.zyria.de:
 #          ansible_host: 192.168.178.163
 #        worker4.zyria.de:
@@ -45,7 +45,7 @@ k3s_cluster:
           62663431396639373736656466303937643063353362336533636335383362616137336134616537
           34373638333833633730333738636330646263343535613739366665313362616662326235363361
           63333865633333663562
-    api_endpoint: "192.168.178.150"
+    api_endpoint: "192.168.120.150"
     extra_server_args: ""
     extra_agent_args: ""
 
