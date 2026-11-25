@@ -75,19 +75,13 @@ k3s_cluster:
         - local-storage
       cluster-cidr: 10.44.0.0/16,fd21:da66:909b::/48
       service-cidr: 10.45.0.0/16,fd21:da66:64::/112
+      # Server im Servernetz (VLAN 20) und kubernetes-vip. Die Node-Adressen
+      # der Server, ihre Hostnamen und die Namen des Services kubernetes
+      # nimmt k3s von selbst auf. Ein hier entfernter Eintrag bleibt im
+      # Zertifikat, bis die Annotation listener.cattle.io/cn-* am Secret
+      # kube-system/k3s-serving entfernt und das Zertifikat neu erzeugt ist,
+      # siehe ansible/README.md.
       tls-san:
-        - "2003:a:b16:4700:be24:11ff:fec8:ae7f"
-        - "192.168.178.150"
-        - "192.168.178.151"
-        - "192.168.178.152"
-        - "192.168.178.153"
-        - "192.168.178.29"
-        - "2003:a:b16:4700::29"
-        - "2003:a:b16:4700:be24:11ff:fe63:f371"
-        # Servernetz (VLAN 20) fuer den Netzumzug: Server auf ens21 und die
-        # kuenftige Adresse von kubernetes-vip. Die alten Eintraege oben
-        # entfallen, wenn alle Nodes umgezogen sind (plans/zyria-netz-umzug.md
-        # in claude-private, Phase 5).
         - "192.168.120.150"
         - "192.168.120.152"
         - "192.168.120.153"

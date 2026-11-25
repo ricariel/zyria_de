@@ -105,7 +105,7 @@
 	<meta property="og:type" content="article">
 		<meta property="article:section" content="posts">
 		<meta property="article:published_time" content="2025-08-13T17:04:53+02:00">
-		<meta property="article:modified_time" content="2026-10-30T21:29:00+01:00">
+		<meta property="article:modified_time" content="2026-11-24T08:39:01+01:00">
 		<meta property="article:tag" content="Kubernetes">
 		<meta property="article:tag" content="Ansible">
 		<meta property="article:tag" content="Automatisierung">
@@ -311,12 +311,12 @@ href="/site.webmanifest.min.e231d7c2a5ac29753d1781895bdd4b9a0e5900e75bcee133bb47
     "dateCreated": "2025-08-13T17:04:53\u002b02:00",
     "datePublished": "2025-08-13T17:04:53\u002b02:00",
     
-    "dateModified": "2026-10-30T21:29:00\u002b01:00",
+    "dateModified": "2026-11-24T08:39:01\u002b01:00",
     
     "keywords": ["kubernetes","ansible","automatisierung"],
     
     "mainEntityOfPage": "https://zyria.de/posts/homelab/k3s-prod/ansible/readme/",
-    "wordCount": "997"
+    "wordCount": "1262"
   }]
   </script>
 
@@ -963,7 +963,7 @@ href="/site.webmanifest.min.e231d7c2a5ac29753d1781895bdd4b9a0e5900e75bcee133bb47
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2025-08-13T17:04:53&#43;02:00">13 August 2025</time><span class="px-2 text-primary-500">&middot;</span><time datetime="2026-10-30T21:29:00&#43;01:00">Aktualisiert: 30 Oktober 2026</time><span class="px-2 text-primary-500">&middot;</span><span>997 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
+      <time datetime="2025-08-13T17:04:53&#43;02:00">13 August 2025</time><span class="px-2 text-primary-500">&middot;</span><time datetime="2026-11-24T08:39:01&#43;01:00">Aktualisiert: 24 November 2026</time><span class="px-2 text-primary-500">&middot;</span><span>1262 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
 
 
   
@@ -1148,6 +1148,7 @@ href="/site.webmanifest.min.e231d7c2a5ac29753d1781895bdd4b9a0e5900e75bcee133bb47
             <li><a href="#beispiel-cluster-initialisierenaktualisieren">Beispiel: Cluster initialisieren/aktualisieren</a></li>
             <li><a href="#kubelet-konfiguration">Kubelet-Konfiguration</a></li>
             <li><a href="#pause-image">Pause-Image</a></li>
+            <li><a href="#sans-des-api-zertifikats">SANs des API-Zertifikats</a></li>
             <li><a href="#anmeldung-per-oidc">Anmeldung per OIDC</a></li>
             <li><a href="#benutzer-anlegen">Benutzer anlegen</a></li>
             <li><a href="#herunterfahren-und-wiederanfahren">Herunterfahren und Wiederanfahren</a></li>
@@ -1180,6 +1181,7 @@ href="/site.webmanifest.min.e231d7c2a5ac29753d1781895bdd4b9a0e5900e75bcee133bb47
             <li><a href="#beispiel-cluster-initialisierenaktualisieren">Beispiel: Cluster initialisieren/aktualisieren</a></li>
             <li><a href="#kubelet-konfiguration">Kubelet-Konfiguration</a></li>
             <li><a href="#pause-image">Pause-Image</a></li>
+            <li><a href="#sans-des-api-zertifikats">SANs des API-Zertifikats</a></li>
             <li><a href="#anmeldung-per-oidc">Anmeldung per OIDC</a></li>
             <li><a href="#benutzer-anlegen">Benutzer anlegen</a></li>
             <li><a href="#herunterfahren-und-wiederanfahren">Herunterfahren und Wiederanfahren</a></li>
@@ -1506,6 +1508,47 @@ behoben. Sobald eine k3s-Version mit dem Fix ausgerollt ist, kann
 Das Upgrade durch den system-upgrade-controller lässt die Zeile in der
 <code>config.yaml</code> stehen. Entfernt ist sie erst, wenn sie aus dem Inventar
 gestrichen und per <code>deploy.yaml</code> Node für Node ausgerollt ist.</p>
+
+<h4 class="relative group">SANs des API-Zertifikats
+    <div id="sans-des-api-zertifikats" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#sans-des-api-zertifikats" aria-label="Anker">#</a>
+    </span>
+    
+</h4>
+<p>Das Serving-Zertifikat der API (Port 6443) erzeugt k3s mit dynamiclistener.
+Seine SANs stehen als Annotationen <code>listener.cattle.io/cn-*</code> am Secret
+<code>kube-system/k3s-serving</code>, jeder Server hält eine Kopie in
+<code>/var/lib/rancher/k3s/server/tls/dynamic-cert.json</code>. Aufgenommen werden die
+Einträge aus <code>tls-san</code>, Hostnamen und Adressen der Server-Nodes und die Namen
+des Services <code>kubernetes</code>. k3s fügt nur hinzu und entfernt nie: Ein aus
+<code>tls-san</code> gestrichener Eintrag und alte Node-Adressen bleiben im Zertifikat,
+auch nach einem Neustart oder <code>k3s certificate rotate</code>, weil jeder Server
+seine Kopie mit dem Secret zusammenführt. Ein Löschen des Secrets bringt
+nichts, die laufenden Server legen es sofort mit allen alten Einträgen wieder
+an.</p>
+<p>Entfernen lassen sich Einträge so, nachdem die neue Konfiguration auf allen
+Servern ausgerollt ist und kein Client mehr eine der Adressen nutzt:</p>
+<ol>
+<li>Die Annotationen der alten Einträge am Secret löschen
+(<code>kubectl -n kube-system annotate secret k3s-serving &lt;schlüssel&gt;-</code>), dazu
+die Annotation eines erlaubten Namens, etwa des kurzen Hostnamens eines
+Servers. Die Server übernehmen die gekürzte Liste in ihre Kopie, das
+Zertifikat selbst bleibt unverändert.</li>
+<li>Den erlaubten Namen per SNI an genau diesem Server anfragen
+(<code>openssl s_client -connect &lt;adresse des servers&gt;:6443 -servername &lt;name&gt;</code>).
+Der Server nimmt den Namen wieder auf, signiert dabei ein neues Zertifikat
+aus der gekürzten Liste, und die anderen Server übernehmen es aus dem
+Secret. Ein Neustart ist nicht nötig.</li>
+</ol>
+<p>Der Weg über <code>k3s certificate rotate --service k3s-server</code> (Datei
+<code>dynamic-cert-regenerate</code> und Neustart) taugt dafür nicht sicher: Beim Start
+liest der Server das Secret ein, und behält dessen alte Fassung, wenn sie
+dieselben Einträge trägt.</p>
+<p>Prüfen gegen jeden Server und die VIP:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl"><span class="nb">echo</span> <span class="p">|</span> openssl s_client -connect &lt;adresse&gt;:6443 2&gt;/dev/null <span class="p">|</span> openssl x509 -noout -ext subjectAltName</span></span></code></pre></div></div>
 
 <h4 class="relative group">Anmeldung per OIDC
     <div id="anmeldung-per-oidc" class="anchor"></div>

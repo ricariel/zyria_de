@@ -9,7 +9,17 @@
     <managingEditor>fabrice@zyria.de (Fabrice Kirchner)</managingEditor>
     <webMaster>fabrice@zyria.de (Fabrice Kirchner)</webMaster>
     
-    <lastBuildDate>Tue, 24 Nov 2026 01:45:44 +0100</lastBuildDate><atom:link href="https://zyria.de/categories/k3s-prod/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 25 Nov 2026 02:23:12 +0100</lastBuildDate><atom:link href="https://zyria.de/categories/k3s-prod/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Music Assistant</title>
+      <link>https://zyria.de/posts/homelab/k3s-prod/apps/music-assistant/readme/</link>
+      <pubDate>Wed, 25 Nov 2026 02:23:12 +0100</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/music-assistant/readme/</guid>
+      <description>Music Assistant verbindet verschiedene Musikquellen und -player zu einer zentralen Steuerungsebene und ist über eine direkte Netzwerkschnittstelle ins Heimnetz eingebunden.</description>
+      
+    </item>
     
     <item>
       <title>Fluent Bit</title>
@@ -308,16 +318,6 @@
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/posts/homelab/k3s-prod/apps/nextcloud-new/readme/</guid>
       <description>In-Place-Ablösung von apps/nextcloud im bestehenden Namespace: Nextcloud, MariaDB, Redis, ClamAV, phpMyAdmin, SSH und icloudpd laufen als getrennte Deployments bzw. StatefulSets und kommunizieren über Services.</description>
-      
-    </item>
-    
-    <item>
-      <title>Music Assistant</title>
-      <link>https://zyria.de/posts/homelab/k3s-prod/apps/music-assistant/readme/</link>
-      <pubDate>Tue, 25 Aug 2026 09:24:25 +0200</pubDate>
-      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/music-assistant/readme/</guid>
-      <description>Music Assistant verbindet verschiedene Musikquellen und -player zu einer zentralen Steuerungsebene und ist über eine direkte Netzwerkschnittstelle ins Heimnetz eingebunden.</description>
       
     </item>
     

@@ -45,6 +45,12 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://zyria.de/posts/homelab/k3s-prod/apps/music-assistant/readme/</loc>
+    <lastmod>2026-11-25T02:23:12+01:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://zyria.de/posts/homelab/k3s-prod/apps/fluent-bit/readme/</loc>
     <lastmod>2026-11-21T22:34:39+01:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -327,12 +333,6 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://zyria.de/posts/homelab/k3s-prod/apps/music-assistant/readme/</loc>
-    <lastmod>2026-08-25T09:24:25+02:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
     <loc>https://zyria.de/posts/homelab/k3s-prod/apps/opendtu/readme/</loc>
     <lastmod>2026-08-25T09:24:25+02:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -562,7 +562,7 @@
   </url>
   <url>
     <loc>https://zyria.de/posts/homelab/k3s-prod/apps/metallb/readme/</loc>
-    <lastmod>2026-11-21T20:43:06+01:00</lastmod>
+    <lastmod>2026-11-25T02:20:48+01:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -616,7 +616,7 @@
   </url>
   <url>
     <loc>https://zyria.de/posts/homelab/k3s-prod/ansible/readme/</loc>
-    <lastmod>2026-10-30T21:29:00+01:00</lastmod>
+    <lastmod>2026-11-24T08:39:01+01:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
