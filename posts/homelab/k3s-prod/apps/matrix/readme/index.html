@@ -31,7 +31,7 @@
     
   
   
-    <meta name="description" content="Diese Anwendung stellt einen Matrix-Homeserver (Synapse) und einen Web-Client (Element) bereit, um einen föderierten, Ende-zu-Ende-verschlüsselten Chat-Dienst zu betreiben.">
+    <meta name="description" content="Diese Anwendung stellt einen Matrix-Homeserver (Synapse) mit Web-Client und Administrationsoberfläche aus dem offiziellen ESS-Chart bereit.">
   
   
     <meta name="keywords" content="kubernetes,k3s,gitops,argocd,helm,kustomize,homelab,produktion,">
@@ -104,8 +104,8 @@
 	<meta property="og:locale" content="de_de">
 	<meta property="og:type" content="article">
 		<meta property="article:section" content="posts">
-		<meta property="article:published_time" content="2026-11-14T08:08:00+01:00">
-		<meta property="article:modified_time" content="2026-11-14T08:08:00+01:00">
+		<meta property="article:published_time" content="2026-11-26T00:56:09+01:00">
+		<meta property="article:modified_time" content="2026-11-26T00:56:09+01:00">
 		<meta property="article:tag" content="Kubernetes">
 		<meta property="article:tag" content="K3s">
 		<meta property="article:tag" content="Gitops">
@@ -311,15 +311,15 @@ href="/site.webmanifest.min.e231d7c2a5ac29753d1781895bdd4b9a0e5900e75bcee133bb47
       "sameAs": ["https://git.casa-due-pur.de/fabrice.kirchner", "https://git.zyria.de/pyrox", "https://github.com/ricariel", "https://www.linkedin.com/in/fabrice-kirchner-bb5408163/", "https://www.xing.com/profile/Fabrice_Kirchner", "https://kirchner.social/@fabrice", "https://codeberg.org/ricariel"]
     },
     "copyrightYear": "2026",
-    "dateCreated": "2026-11-14T08:08:00\u002b01:00",
-    "datePublished": "2026-11-14T08:08:00\u002b01:00",
+    "dateCreated": "2026-11-26T00:56:09\u002b01:00",
+    "datePublished": "2026-11-26T00:56:09\u002b01:00",
     
-    "dateModified": "2026-11-14T08:08:00\u002b01:00",
+    "dateModified": "2026-11-26T00:56:09\u002b01:00",
     
     "keywords": ["kubernetes","k3s","gitops","argocd","helm","kustomize","homelab","produktion"],
     
     "mainEntityOfPage": "https://zyria.de/posts/homelab/k3s-prod/apps/matrix/readme/",
-    "wordCount": "527"
+    "wordCount": "1088"
   }]
   </script>
 
@@ -964,7 +964,7 @@ href="/site.webmanifest.min.e231d7c2a5ac29753d1781895bdd4b9a0e5900e75bcee133bb47
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2026-11-14T08:08:00&#43;01:00">14 November 2026</time><span class="px-2 text-primary-500">&middot;</span><span>527 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
+      <time datetime="2026-11-26T00:56:09&#43;01:00">26 November 2026</time><span class="px-2 text-primary-500">&middot;</span><span>1088 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
 
 
   
@@ -1242,9 +1242,10 @@ href="/site.webmanifest.min.e231d7c2a5ac29753d1781895bdd4b9a0e5900e75bcee133bb47
         <li><a href="#lokale-anpassungen">Lokale Anpassungen</a>
           <ul>
             <li><a href="#wichtige-einstellungen">Wichtige Einstellungen</a></li>
+            <li><a href="#worker">Worker</a></li>
           </ul>
         </li>
-        <li><a href="#überwachung">Überwachung</a></li>
+        <li><a href="#stufen-der-umstellung">Stufen der Umstellung</a></li>
         <li><a href="#installation">Installation</a></li>
         <li><a href="#abhängigkeiten">Abhängigkeiten</a></li>
       </ul>
@@ -1270,9 +1271,10 @@ href="/site.webmanifest.min.e231d7c2a5ac29753d1781895bdd4b9a0e5900e75bcee133bb47
         <li><a href="#lokale-anpassungen">Lokale Anpassungen</a>
           <ul>
             <li><a href="#wichtige-einstellungen">Wichtige Einstellungen</a></li>
+            <li><a href="#worker">Worker</a></li>
           </ul>
         </li>
-        <li><a href="#überwachung">Überwachung</a></li>
+        <li><a href="#stufen-der-umstellung">Stufen der Umstellung</a></li>
         <li><a href="#installation">Installation</a></li>
         <li><a href="#abhängigkeiten">Abhängigkeiten</a></li>
       </ul>
@@ -1413,7 +1415,10 @@ href="/site.webmanifest.min.e231d7c2a5ac29753d1781895bdd4b9a0e5900e75bcee133bb47
     </span>
     
 </h3>
-<p>Die Anwendung wird als generisches <code>app-template</code> Helm-Chart von <a href="https://bjw-s-labs.github.io/helm-charts"  target="_blank" rel="noreferrer">BJW-S Labs</a> bereitgestellt. Die verwendeten Docker-Images sind <code>matrixdotorg/synapse</code> für den Server und <code>vectorim/element-web</code> für den Client.</p>
+<p>Die Anwendung wird mit dem Helm-Chart <code>matrix-stack</code> aus <a href="https://github.com/element-hq/ess-helm"  target="_blank" rel="noreferrer">Element Server Suite
+Community</a> (<code>oci://ghcr.io/element-hq/ess-helm/</code>)
+bereitgestellt. Die Chart-Version steht in <code>kustomization.yaml</code>, das Chart selbst unter
+<code>charts/</code>.</p>
 
 <h3 class="relative group">Dokumentation
     <div id="dokumentation" class="anchor"></div>
@@ -1425,7 +1430,9 @@ href="/site.webmanifest.min.e231d7c2a5ac29753d1781895bdd4b9a0e5900e75bcee133bb47
     
 </h3>
 <ul>
-<li><strong>Synapse</strong>: <a href="https://matrix-org.github.io/synapse/latest/"  target="_blank" rel="noreferrer">matrix-org.github.io/synapse</a></li>
+<li><strong>ESS Helm-Chart</strong>: <a href="https://github.com/element-hq/ess-helm"  target="_blank" rel="noreferrer">github.com/element-hq/ess-helm</a></li>
+<li><strong>Synapse</strong>: <a href="https://element-hq.github.io/synapse/latest/"  target="_blank" rel="noreferrer">element-hq.github.io/synapse</a></li>
+<li><strong>Matrix Authentication Service</strong>: <a href="https://element-hq.github.io/matrix-authentication-service/"  target="_blank" rel="noreferrer">element-hq.github.io/matrix-authentication-service</a></li>
 <li><strong>Element</strong>: <a href="https://element.io/help"  target="_blank" rel="noreferrer">element.io/help</a></li>
 </ul>
 
@@ -1438,11 +1445,21 @@ href="/site.webmanifest.min.e231d7c2a5ac29753d1781895bdd4b9a0e5900e75bcee133bb47
     </span>
     
 </h3>
-<p>Dieser Dienst stellt eine vollständige Matrix-Infrastruktur bereit:</p>
 <ul>
-<li><strong>Synapse</strong>: Der Homeserver, das Herzstück des Dienstes. Er speichert die Benutzerkonten, die Raum-Historie und kommuniziert mit anderen Homeservern im globalen Matrix-Netzwerk (Föderation). Er wird unter <code>matrix.&lt;matrix-domain&gt;</code> bereitgestellt.</li>
-<li><strong>PostgreSQL</strong>: Die Datenbank, in der Synapse alle seine Daten speichert.</li>
-<li><strong>Element</strong>: Ein funktionsreicher Web-Client für Matrix, der unter <code>element.&lt;matrix-domain&gt;</code> erreichbar ist und sich mit dem lokalen Synapse-Server verbindet.</li>
+<li><strong>Synapse</strong>: Der Homeserver. Er speichert Benutzerkonten und Raum-Historie und föderiert mit
+anderen Homeservern. Er läuft hier als Monolith, siehe „Worker“.</li>
+<li><strong>PostgreSQL</strong>: Datenbank für Synapse und später den Matrix Authentication Service, vom Chart
+als eigener Pod betrieben. Das Chart rechnet <code>shared_buffers</code>, <code>effective_cache_size</code> und
+<code>max_connections</code> aus dem Speicherlimit des Containers.</li>
+<li><strong>Element Web</strong>: Web-Client unter <code>chat.&lt;matrix-domain&gt;</code>. Die alte Adresse
+<code>element.&lt;matrix-domain&gt;</code> antwortet mit einer dauerhaften Weiterleitung
+(<code>element-redirect.yaml</code>).</li>
+<li><strong>Well-Known-Delegation</strong>: Liefert <code>.well-known/matrix</code> unter dem Servernamen aus, damit
+Clients und andere Server den Homeserver über Port 443 finden. Die SRV-Einträge der Zone
+bleiben daneben bestehen.</li>
+<li><strong>Matrix Authentication Service</strong> und <strong>Element Admin</strong> sind vorbereitet, aber noch
+abgeschaltet, siehe „Stufen der Umstellung“. <strong>MatrixRTC</strong> (Element Call) kommt als eigene
+Änderung, weil es eigene öffentliche Ports braucht.</li>
 </ul>
 
 <h3 class="relative group">Lokale Anpassungen
@@ -1454,7 +1471,9 @@ href="/site.webmanifest.min.e231d7c2a5ac29753d1781895bdd4b9a0e5900e75bcee133bb47
     </span>
     
 </h3>
-<p>Die Konfiguration erfolgt über die <code>values.yaml</code>-Datei sowie Konfigurationsdateien, die auf einem persistenten Volume gespeichert sind.</p>
+<p>Die Konfiguration erfolgt vollständig über <code>values.yaml</code>. Servername und Hostnamen stehen dort
+unter <code>serverName</code> und den <code>ingress.host</code>-Schlüsseln, das Zertifikat mit denselben Namen in
+<code>certs.yaml</code>.</p>
 
 <h4 class="relative group">Wichtige Einstellungen
     <div id="wichtige-einstellungen" class="anchor"></div>
@@ -1466,29 +1485,157 @@ href="/site.webmanifest.min.e231d7c2a5ac29753d1781895bdd4b9a0e5900e75bcee133bb47
     
 </h4>
 <ul>
-<li><strong>Ingress</strong>:
-<ul>
-<li>Der Element-Web-Client ist unter <code>element.&lt;matrix-domain&gt;</code> erreichbar.</li>
-<li>Der Synapse-Homeserver ist für Client-Server- und Server-Server-Kommunikation unter <code>matrix.&lt;matrix-domain&gt;</code> erreichbar. Es wird der <code>websecure</code>-EntryPoint (Port 443) verwendet.</li>
-</ul>
-</li>
-<li><strong>Datenbank</strong>: Synapse verwendet eine dedizierte PostgreSQL-Datenbank, die als Sidecar-Container läuft. Das Image hat einen festen Versionstag, den Renovate pflegt; Patch- und Minor-Updates mergt es selbst, jedes startet den Pod kurz neu. Der Init-Container <code>dbupgrade</code> (<code>pgautoupgrade</code>) hebt das Datenverzeichnis bei einem Major-Sprung an. Ein solches Update kommt deshalb zusammen mit <code>pgautoupgrade</code> als ein PR, der eine Freigabe im Renovate-Dashboard braucht. Der Tag nennt die Debian-Variante (<code>-trixie</code>) ausdrücklich: Die Sortierung von Text hängt an der glibc-Version, ein stiller Wechsel auf ein anderes Debian-Release oder auf Alpine bringt Text-Indizes durcheinander und verlangt ein <code>REINDEX</code>. Keel ist hier bewusst nicht im Spiel: Bei beweglichen Tags startete es den Pod neu, der Node nahm aber das zwischengespeicherte alte Image (bis Oktober 2026 lief so 18.1 statt 18.6).</li>
-<li><strong>Speicher</strong>: Die persistenten Daten liegen auf Longhorn-Volumes: Synapse-Daten und Medien auf <code>matrix-synapse</code>, die Bridge auf <code>matrix-bridge</code>, die Datenbank auf <code>matrix-db</code>.</li>
+<li><strong>Servername</strong>: <code>matrix.kirchner.social</code>. Er ist nach dem ersten Start nicht mehr änderbar und
+trägt die Föderationsidentität des Servers.</li>
+<li><strong>Ingress</strong>: Traefik über den EntryPoint <code>websecure</code>. Ein gemeinsames Zertifikat
+(<code>matrix-server-tls</code>, ClusterIssuer <code>letsencrypt-production</code>) deckt alle Hostnamen ab. Die
+Middleware <code>remove-csp</code> leert die CSP-Header des Entrypoints; Element Web bekommt stattdessen
+eine eigene Policy und Kompression (<code>traefik-middlewares.yaml</code>).</li>
+<li><strong>Übernommene Geheimnisse</strong>: <code>synapse.signingKey</code> und <code>synapse.macaroon</code> zeigen auf das Secret
+<code>matrix-carryover</code>, das von Hand angelegt wird und nicht im Repository liegt. Der
+Signierungsschlüssel ist die Föderationsidentität: ohne ihn gilt der Server den Partnern als
+neuer Server. Der Macaroon-Schlüssel signiert Access-Tokens und Geräte-Sitzungen: ein neuer
+würde jeden Client abmelden und die Gerätebestätigung der verschlüsselten Räume verlieren.
+Alle übrigen internen Schlüssel erzeugt der <code>initSecrets</code>-Job.</li>
+<li><strong>Medien</strong>: Uploads bis 1024 MB wie vor der Umstellung. Fremde Medien werden nach 30 Tagen
+gelöscht, eigene nach 5 Jahren. Die Dateien liegen weiter auf dem PVC <code>matrix-synapse</code> aus
+<code>storage.yaml</code>, das als <code>existingClaim</code> übergeben wird; das Chart mountet es auf <code>/media</code> und
+liest <code>/media/media_store</code>.</li>
+<li><strong>Mailversand</strong>: Über Submission (Port 587) mit Anmeldung als <code>matrix@zyria.de</code>,
+<code>require_transport_security: true</code>. Der Mailserver kennt die Absenderadresse
+<code>noreply@matrix.kirchner.social</code> als Eigentum des Kontos <code>matrix</code>, und
+<code>reject_sender_login_mismatch</code> lehnt sie unangemeldet dauerhaft mit 553 ab. Synapse kennt
+kein <code>smtp_pass_path</code> und liest nur, was in der Datei steht, deshalb liegt der ganze
+<code>email</code>-Block im Secret <code>matrix-smtp-config</code> (Schlüssel <code>smtp.yaml</code>), das von Hand angelegt
+wird; das Chart bindet die Datei in die Konfigurationskette jedes Synapse-Prozesses ein. Der
+Init-Container, den die alte Installation dafür brauchte, entfällt. Geprüft wird das am
+gerenderten Manifest durch <code>tests/charts/check_matrix_smtp.py</code> in der Suite <code>charts</code>.</li>
+<li><strong>Synapse-Einstellungen</strong>: Abweichungen von den Chart-Vorgaben stehen unter
+<code>synapse.additional</code> (Präsenz, öffentliches Raumverzeichnis, Benutzerverzeichnis,
+automatisches Annehmen von Einladungen lokaler Benutzer).</li>
+<li><strong>Argo CD</strong>: Zwei Kustomize-Patches in <code>kustomization.yaml</code> halten die App auf <code>Synced</code>. Die
+Helm-Hooks des Charts bekommen <code>argocd.argoproj.io/hook-delete-policy</code>; ohne Löschregel bleiben
+sie nach dem Sync liegen und Argo CD meldet sie dauerhaft als zu entfernen. Der ServiceMonitor
+von Synapse bekommt <code>action: replace</code> ausgeschrieben, den Standardwert, den die CRD sonst
+selbst einträgt.</li>
 </ul>
 
-<h3 class="relative group">Überwachung
-    <div id="überwachung" class="anchor"></div>
+<h4 class="relative group">Worker
+    <div id="worker" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%c3%bcberwachung" aria-label="Anker">#</a>
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#worker" aria-label="Anker">#</a>
+    </span>
+    
+</h4>
+<p>Synapse läuft als Monolith: In <code>values.yaml</code> sind alle Worker-Typen aufgeführt und auf
+<code>enabled: false</code> gestellt, das Einschalten ist je Worker eine Zeile. Was dabei automatisch
+mitkommt:</p>
+<table>
+	<thead>
+			<tr>
+					<th>Was</th>
+					<th>Verhalten beim ersten eingeschalteten Worker</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>Valkey</td>
+					<td>Das Chart rollt es selbst aus, sobald ein Worker aktiv ist</td>
+			</tr>
+			<tr>
+					<td>HAProxy</td>
+					<td>Läuft ohnehin, die Routen werden neu gerendert</td>
+			</tr>
+			<tr>
+					<td><code>instance_map</code>, <code>stream_writers</code></td>
+					<td>Schreibt das Chart</td>
+			</tr>
+			<tr>
+					<td>Datenbank</td>
+					<td>Keine Migration nötig, alle Prozesse teilen dieselbe Datenbank</td>
+			</tr>
+			<tr>
+					<td>Neustart</td>
+					<td>Beim Hinzufügen oder Entfernen von Event-Persistern, Federation-Sendern und Pushern verlangt Synapse, dass alle Prozesse gemeinsam neu starten; das Rollout tut das</td>
+			</tr>
+			<tr>
+					<td>Überwachung</td>
+					<td>Mit Workern veröffentlicht das Chart ein Ziel je Worker statt eines für den ganzen Homeserver; Alarmregeln müssen dann alle Jobs abdecken</td>
+			</tr>
+	</tbody>
+</table>
+<p>Als Referenz für eine aufgeteilte Installation dient die Instanz in hfmdk: dort sind alle
+Worker aktiv außer <code>sso-login</code>, jeder mit einer Replika. Ein Worker wieder abzuschalten ist in
+der Synapse-Dokumentation schlechter beschrieben als das Einschalten, deshalb nur mit Grund.</p>
+
+<h3 class="relative group">Stufen der Umstellung
+    <div id="stufen-der-umstellung" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#stufen-der-umstellung" aria-label="Anker">#</a>
     </span>
     
 </h3>
-<p>Synapse liefert Metriken über einen eigenen Listener vom Typ <code>metrics</code> in <code>homeserver.yaml</code>, zusammen mit <code>enable_metrics: true</code>. Der Listener bindet ausdrücklich <code>0.0.0.0</code>; mit dem Standard hörte er nur auf localhost und das Pod-Netz käme nicht heran. Er trägt keine <code>client</code>- oder <code>federation</code>-Ressource und liefert deshalb nur <code>/_synapse/metrics</code>.</p>
-<p>Der Port liegt als weiterer Port am vorhandenen Service, nicht an einem eigenen: <code>app-template</code> lässt das Namenssuffix im Service nur weg, solange es genau einen Service gibt, ein zweiter würde den laufenden Service umbenennen. Der Ingress bildet nur <code>http</code> und <code>streaming</code> ab, der Metrik-Port bleibt clusterintern. Abgefragt wird er über <code>servicemonitor.yaml</code>.</p>
-<p>Synapse läuft hier als Monolith, ein Ziel deckt also den ganzen Homeserver ab. Alarmregeln gibt es noch nicht; sie kommen als eigene Änderung, sobald Messwerte dieser Instanz vorliegen.</p>
-<p>Für die Datenbank gibt es noch keine Metriken. Sie kommen nach der Entscheidung vom 14.11.2026 nicht über einen eigenen <code>postgres-exporter</code>-Container, sondern mit der Modernisierung der Datenbank-Charts über deren eigenen Schalter (pyrox/k3s-prod#1249). Davon unabhängig offen bleibt, die Zugangsdaten der Datenbank an einer Stelle zu führen statt dreifach im Klartext (pyrox/k3s-prod#1244).</p>
+<p>Der eingecheckte Stand ist Stufe 1. Die Stufen 2 und 3 sind die syn2mas-Kette des Charts und
+werden im Wartungsfenster des Umstiegs nacheinander gemergt. Die Deployment-Marker des Charts
+schreiben den erreichten Zustand fest und verhindern einen Rückschritt.</p>
+<table>
+	<thead>
+			<tr>
+					<th>Stufe</th>
+					<th>Änderung in <code>values.yaml</code></th>
+					<th>Zustand</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>1</td>
+					<td>Stand dieser Datei: <code>matrixAuthenticationService.enabled: false</code></td>
+					<td><code>legacy_auth</code></td>
+			</tr>
+			<tr>
+					<td>2</td>
+					<td><code>matrixAuthenticationService.enabled: true</code>, <code>syn2mas.enabled: true</code>, <code>syn2mas.dryRun: true</code>, dazu der Upstream-Anbieter und das Passwort-Schema (unten)</td>
+					<td>Probelauf, Anmeldung läuft weiter</td>
+			</tr>
+			<tr>
+					<td>3</td>
+					<td><code>syn2mas.dryRun: false</code>, danach in einem weiteren Schritt <code>syn2mas.enabled: false</code> und <code>elementAdmin.enabled: true</code></td>
+					<td><code>syn2mas_migrated</code>, dann <code>delegated_auth</code></td>
+			</tr>
+	</tbody>
+</table>
+<p>Für Stufe 2 gehört unter <code>matrixAuthenticationService.additional</code> der Upstream-Anbieter
+Authentik. Zwei Punkte sind dabei zwingend:</p>
+<ul>
+<li><code>synapse_idp_id: oidc-authentik</code>. Synapse stellt seinen <code>idp_id</code> intern das Präfix <code>oidc-</code>
+voran, und genau dieser Wert steht in <code>user_external_ids</code> der bestehenden Datenbank. Ohne ihn
+findet syn2mas die Verknüpfung der SSO-Konten nicht.</li>
+<li>Ein <code>passwords</code>-Schema der Version 1 mit <code>algorithm: bcrypt</code> und
+<code>unicode_normalization: true</code>, damit die Konten mit lokalem Passwort sich weiter anmelden
+können. Synapse hat hier kein Pepper gesetzt, es muss also keines übernommen werden.</li>
+</ul>
+<p>Die Claim-Templates gehören dem Matrix Authentication Service, nicht Helm. Das Chart rendert
+die Inline-Konfiguration unter <code>additional</code> seit Version 26.11.2 mit Go-Templates, deshalb
+stehen sie als Literale in der Form <code>'{{ &quot;{{ user.email }}&quot; }}'</code>. Ohne diese Schreibweise bricht
+das Rendern mit <code>function &quot;user&quot; not defined</code> ab.</p>
+<p>Die OIDC-Anmeldung von Synapse gegen Authentik (<code>synapse.additional.1-oidc</code>, Inhalt im
+Secret <code>matrix-oidc</code>) bleibt in den Stufen 1 und 2 stehen und geht mit Stufe 3 heraus. Beides
+ist zwingend, im Probelauf am 26.11.2026 belegt:</p>
+<ul>
+<li>Ohne den Provider in der Synapse-Konfiguration bricht der syn2mas-Checker ab, weil die
+Datenbank Nutzer von <code>oidc-authentik</code> trägt: „Synapse database contains 2 users associated
+to the OpenID Connect or OAuth2 provider &lsquo;oidc-authentik&rsquo; but the Synapse configuration does
+not contain this provider&quot;.</li>
+<li>Nach der Migration ist der Stack auf <code>delegated_auth</code>, und dann lehnt die
+Konfigurationsprüfung denselben Provider ab: „SSO cannot be enabled when OAuth delegation is
+enabled&quot;. Mit Stufe 3 entfällt der Eintrag, und das Secret <code>matrix-oidc</code> kann mit ihm gehen.</li>
+</ul>
+<p>Ein Overlay kann den Eintrag nicht auf <code>null</code> setzen, das Chart-Schema lehnt das ab
+(<code>at '/synapse/additional/1-oidc': got null, want object</code>); er wird gelöscht.</p>
 
 <h3 class="relative group">Installation
     <div id="installation" class="anchor"></div>
@@ -1499,7 +1646,9 @@ href="/site.webmanifest.min.e231d7c2a5ac29753d1781895bdd4b9a0e5900e75bcee133bb47
     </span>
     
 </h3>
-<p>Die Anwendung wird mittels Kustomize und Helm durch ArgoCD im Kubernetes-Cluster bereitgestellt. Die Konfiguration befindet sich im <code>apps/matrix</code>-Verzeichnis. Eine manuelle Installation kann mit folgendem Befehl durchgeführt werden:</p>
+<p>Die Anwendung wird mittels Kustomize und Helm durch Argo CD im Kubernetes-Cluster
+bereitgestellt. Die Konfiguration befindet sich im <code>apps/matrix</code>-Verzeichnis. Eine manuelle
+Installation kann mit folgendem Befehl durchgeführt werden:</p>
 <div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">kubectl kustomize --enable-helm apps/matrix <span class="p">|</span> kubectl apply -n matrix -f -</span></span></code></pre></div></div>
 
 <h3 class="relative group">Abhängigkeiten
@@ -1512,9 +1661,12 @@ href="/site.webmanifest.min.e231d7c2a5ac29753d1781895bdd4b9a0e5900e75bcee133bb47
     
 </h3>
 <ul>
-<li><strong>Traefik</strong>: Wird als Ingress-Controller für den externen Zugriff benötigt.</li>
-<li><strong>cert-manager</strong>: Wird für die automatische Bereitstellung von TLS-Zertifikaten benötigt.</li>
-<li><strong>Longhorn</strong>: Als Storage-Provider für das PersistentVolume.</li>
+<li><strong>Traefik</strong>: Ingress-Controller für den externen Zugriff.</li>
+<li><strong>cert-manager</strong>: Mit dem ClusterIssuer <code>letsencrypt-production</code> für das TLS-Zertifikat.</li>
+<li><strong>Longhorn</strong>: Storage-Provider für die PersistentVolumes.</li>
+<li><strong>Authentik</strong>: OIDC-Anbieter der Anmeldung, ab Stufe 2 über den Matrix Authentication Service.</li>
+<li><strong>kube-prometheus-stack</strong>: Optional. Ist die ServiceMonitor-CRD vorhanden, legt das Chart
+ServiceMonitore für Synapse, PostgreSQL und HAProxy an.</li>
 </ul>
 
           
@@ -1748,14 +1900,14 @@ href="/site.webmanifest.min.e231d7c2a5ac29753d1781895bdd4b9a0e5900e75bcee133bb47
           
             <a
               class="flex text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
-              href="/posts/homelab/k3s-prod/apps/unpoller/readme/">
+              href="/posts/homelab/k3s-prod/apps/ucg-dns/readme/">
               <span class="leading-6">
-                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;unpoller
+                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;UCG DNS
               </span>
             </a>
             
               <span class="ms-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
-                <time datetime="2026-11-14T04:48:59&#43;01:00">14 November 2026</time>
+                <time datetime="2026-11-26T00:30:00&#43;01:00">26 November 2026</time>
               </span>
             
           
@@ -1764,14 +1916,14 @@ href="/site.webmanifest.min.e231d7c2a5ac29753d1781895bdd4b9a0e5900e75bcee133bb47
           
             <a
               class="flex text-right text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
-              href="/posts/homelab/k3s-prod/apps/zyria-de/readme/">
+              href="/posts/homelab/k3s-prod/ansible/shutdown-startup/">
               <span class="leading-6">
-                zyria.de Webseite&ensp;<span class="inline-block rtl:rotate-180">&rarr;</span>
+                Operational Lifecycle Management: Orchestrierter Shutdown für Kubernetes&ensp;<span class="inline-block rtl:rotate-180">&rarr;</span>
               </span>
             </a>
             
               <span class="me-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
-                <time datetime="2026-11-20T00:29:08&#43;01:00">20 November 2026</time>
+                <time datetime="2024-10-27T10:00:00&#43;01:00">27 Oktober 2024</time>
               </span>
             
           

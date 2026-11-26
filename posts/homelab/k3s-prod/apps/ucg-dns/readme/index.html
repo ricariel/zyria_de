@@ -15,8 +15,8 @@
 
   
   
-    <title>Matrix (neu) &middot; Zyria</title>
-    <meta name="title" content="Matrix (neu) &middot; Zyria">
+    <title>UCG DNS &middot; Zyria</title>
+    <meta name="title" content="UCG DNS &middot; Zyria">
   
 
   
@@ -31,14 +31,14 @@
     
   
   
-    <meta name="description" content="Migration von apps/matrix auf das offizielle element-hq/ess-helm matrix-stack Chart mit Matrix Authentication Service (MAS), Element Web und Element Admin.">
+    <meta name="description" content="Ein CronJob gleicht die DNS-Policies des Gateways mit policies.yaml ab, damit die LAN-Clients die eigenen öffentlichen Namen intern auflösen.">
   
   
-    <meta name="keywords" content="kubernetes,k3s,gitops,argocd,helm,kustomize,homelab,produktion,">
+    <meta name="keywords" content="unifi,dns,cronjob,">
   
   
   
-  <link rel="canonical" href="https://zyria.de/posts/homelab/k3s-prod/apps/matrix-new/readme/">
+  <link rel="canonical" href="https://zyria.de/posts/homelab/k3s-prod/apps/ucg-dns/readme/">
   
   
 
@@ -97,26 +97,23 @@
   
 
   
-  <meta property="og:url" content="https://zyria.de/posts/homelab/k3s-prod/apps/matrix-new/readme/">
+  <meta property="og:url" content="https://zyria.de/posts/homelab/k3s-prod/apps/ucg-dns/readme/">
 	<meta property="og:site_name" content="Zyria">
-	<meta property="og:title" content="Matrix (neu)">
-	<meta property="og:description" content="Matrix-Homeserver-Stack auf Basis des offiziellen ESS Helm Charts.">
+	<meta property="og:title" content="UCG DNS">
+	<meta property="og:description" content="Hält die DNS-Policies des UniFi Cloud Gateway auf dem Stand einer Datei im Repository.">
 	<meta property="og:locale" content="de_de">
 	<meta property="og:type" content="article">
 		<meta property="article:section" content="posts">
-		<meta property="article:published_time" content="2026-10-19T08:55:26+02:00">
-		<meta property="article:modified_time" content="2026-10-19T08:55:26+02:00">
-		<meta property="article:tag" content="Kubernetes">
-		<meta property="article:tag" content="K3s">
-		<meta property="article:tag" content="Gitops">
-		<meta property="article:tag" content="Argocd">
-		<meta property="article:tag" content="Helm">
-		<meta property="article:tag" content="Kustomize">
+		<meta property="article:published_time" content="2026-11-26T00:30:00+01:00">
+		<meta property="article:modified_time" content="2026-11-26T01:24:56+01:00">
+		<meta property="article:tag" content="Unifi">
+		<meta property="article:tag" content="Dns">
+		<meta property="article:tag" content="Cronjob">
 
   
 	<meta name="twitter:card" content="summary">
-	<meta name="twitter:title" content="Matrix (neu)">
-	<meta name="twitter:description" content="Matrix-Homeserver-Stack auf Basis des offiziellen ESS Helm Charts.">
+	<meta name="twitter:title" content="UCG DNS">
+	<meta name="twitter:description" content="Hält die DNS-Policies des UniFi Cloud Gateway auf dem Stand einer Datei im Repository.">
 
   
   
@@ -299,11 +296,11 @@ href="/site.webmanifest.min.e231d7c2a5ac29753d1781895bdd4b9a0e5900e75bcee133bb47
     "@context": "https://schema.org",
     "@type": "Article",
     "articleSection": "Beiträge",
-    "name": "Matrix (neu)",
-    "headline": "Matrix (neu)",
-    "description": "Matrix-Homeserver-Stack auf Basis des offiziellen ESS Helm Charts.",
+    "name": "UCG DNS",
+    "headline": "UCG DNS",
+    "description": "Hält die DNS-Policies des UniFi Cloud Gateway auf dem Stand einer Datei im Repository.",
     "inLanguage": "de-de",
-    "url" : "https://zyria.de/posts/homelab/k3s-prod/apps/matrix-new/readme/",
+    "url" : "https://zyria.de/posts/homelab/k3s-prod/apps/ucg-dns/readme/",
     "author" : {
       "@type": "Person",
       "name": "Fabrice Kirchner",
@@ -311,15 +308,15 @@ href="/site.webmanifest.min.e231d7c2a5ac29753d1781895bdd4b9a0e5900e75bcee133bb47
       "sameAs": ["https://git.casa-due-pur.de/fabrice.kirchner", "https://git.zyria.de/pyrox", "https://github.com/ricariel", "https://www.linkedin.com/in/fabrice-kirchner-bb5408163/", "https://www.xing.com/profile/Fabrice_Kirchner", "https://kirchner.social/@fabrice", "https://codeberg.org/ricariel"]
     },
     "copyrightYear": "2026",
-    "dateCreated": "2026-10-19T08:55:26\u002b02:00",
-    "datePublished": "2026-10-19T08:55:26\u002b02:00",
+    "dateCreated": "2026-11-26T00:30:00\u002b01:00",
+    "datePublished": "2026-11-26T00:30:00\u002b01:00",
     
-    "dateModified": "2026-10-19T08:55:26\u002b02:00",
+    "dateModified": "2026-11-26T01:24:56\u002b01:00",
     
-    "keywords": ["kubernetes","k3s","gitops","argocd","helm","kustomize","homelab","produktion"],
+    "keywords": ["unifi","dns","cronjob"],
     
-    "mainEntityOfPage": "https://zyria.de/posts/homelab/k3s-prod/apps/matrix-new/readme/",
-    "wordCount": "474"
+    "mainEntityOfPage": "https://zyria.de/posts/homelab/k3s-prod/apps/ucg-dns/readme/",
+    "wordCount": "660"
   }]
   </script>
 
@@ -900,8 +897,8 @@ href="/site.webmanifest.min.e231d7c2a5ac29753d1781895bdd4b9a0e5900e75bcee133bb47
 
   
   <li class="hidden">
-    <a class="hover:underline decoration-neutral-300 dark:underline-neutral-600" href="/posts/homelab/k3s-prod/apps/matrix-new/readme/"
-      >Matrix (neu)</a
+    <a class="hover:underline decoration-neutral-300 dark:underline-neutral-600" href="/posts/homelab/k3s-prod/apps/ucg-dns/readme/"
+      >UCG DNS</a
     ><span class="px-1 text-primary-500">/</span>
   </li>
 
@@ -910,7 +907,7 @@ href="/site.webmanifest.min.e231d7c2a5ac29753d1781895bdd4b9a0e5900e75bcee133bb47
 
       
       <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
-        Matrix (neu)
+        UCG DNS
       </h1>
       <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
         
@@ -964,7 +961,7 @@ href="/site.webmanifest.min.e231d7c2a5ac29753d1781895bdd4b9a0e5900e75bcee133bb47
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2026-10-19T08:55:26&#43;02:00">19 Oktober 2026</time><span class="px-2 text-primary-500">&middot;</span><span>474 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
+      <time datetime="2026-11-26T00:30:00&#43;01:00">26 November 2026</time><span class="px-2 text-primary-500">&middot;</span><span>660 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
 
 
   
@@ -972,7 +969,7 @@ href="/site.webmanifest.min.e231d7c2a5ac29753d1781895bdd4b9a0e5900e75bcee133bb47
 
 <span class="mb-[2px]">
   <a
-    href="https://git.zyria.de/pyrox/zyria_de/src/branch/main/content/posts/homelab/k3s-prod/apps/matrix-new/README.md"
+    href="https://git.zyria.de/pyrox/zyria_de/src/branch/main/content/posts/homelab/k3s-prod/apps/ucg-dns/README.md"
     class="text-lg hover:text-primary-500"
     rel="noopener noreferrer"
     target="_blank"
@@ -1053,7 +1050,7 @@ href="/site.webmanifest.min.e231d7c2a5ac29753d1781895bdd4b9a0e5900e75bcee133bb47
           
             
               
-                <a class="relative mt-[0.5rem] me-2" href="/tags/kubernetes/">
+                <a class="relative mt-[0.5rem] me-2" href="/tags/unifi/">
                   <span class="flex cursor-pointer">
   
   
@@ -1062,7 +1059,7 @@ href="/site.webmanifest.min.e231d7c2a5ac29753d1781895bdd4b9a0e5900e75bcee133bb47
     <span
       class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
   
-    Kubernetes
+    Unifi
   </span>
 </span>
 
@@ -1072,7 +1069,7 @@ href="/site.webmanifest.min.e231d7c2a5ac29753d1781895bdd4b9a0e5900e75bcee133bb47
           
             
               
-                <a class="relative mt-[0.5rem] me-2" href="/tags/k3s/">
+                <a class="relative mt-[0.5rem] me-2" href="/tags/dns/">
                   <span class="flex cursor-pointer">
   
   
@@ -1081,7 +1078,7 @@ href="/site.webmanifest.min.e231d7c2a5ac29753d1781895bdd4b9a0e5900e75bcee133bb47
     <span
       class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
   
-    K3s
+    Dns
   </span>
 </span>
 
@@ -1091,7 +1088,7 @@ href="/site.webmanifest.min.e231d7c2a5ac29753d1781895bdd4b9a0e5900e75bcee133bb47
           
             
               
-                <a class="relative mt-[0.5rem] me-2" href="/tags/gitops/">
+                <a class="relative mt-[0.5rem] me-2" href="/tags/cronjob/">
                   <span class="flex cursor-pointer">
   
   
@@ -1100,102 +1097,7 @@ href="/site.webmanifest.min.e231d7c2a5ac29753d1781895bdd4b9a0e5900e75bcee133bb47
     <span
       class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
   
-    Gitops
-  </span>
-</span>
-
-                </a>
-              
-            
-          
-            
-              
-                <a class="relative mt-[0.5rem] me-2" href="/tags/argocd/">
-                  <span class="flex cursor-pointer">
-  
-  
-  
-  
-    <span
-      class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-  
-    Argocd
-  </span>
-</span>
-
-                </a>
-              
-            
-          
-            
-              
-                <a class="relative mt-[0.5rem] me-2" href="/tags/helm/">
-                  <span class="flex cursor-pointer">
-  
-  
-  
-  
-    <span
-      class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-  
-    Helm
-  </span>
-</span>
-
-                </a>
-              
-            
-          
-            
-              
-                <a class="relative mt-[0.5rem] me-2" href="/tags/kustomize/">
-                  <span class="flex cursor-pointer">
-  
-  
-  
-  
-    <span
-      class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-  
-    Kustomize
-  </span>
-</span>
-
-                </a>
-              
-            
-          
-            
-              
-                <a class="relative mt-[0.5rem] me-2" href="/tags/homelab/">
-                  <span class="flex cursor-pointer">
-  
-  
-  
-  
-    <span
-      class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-  
-    Homelab
-  </span>
-</span>
-
-                </a>
-              
-            
-          
-            
-              
-                <a class="relative mt-[0.5rem] me-2" href="/tags/produktion/">
-                  <span class="flex cursor-pointer">
-  
-  
-  
-  
-    <span
-      class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-  
-    Produktion
+    Cronjob
   </span>
 </span>
 
@@ -1234,22 +1136,16 @@ href="/site.webmanifest.min.e231d7c2a5ac29753d1781895bdd4b9a0e5900e75bcee133bb47
     class="min-w-[220px] py-2 border-dotted border-s-1 -ms-5 ps-5 dark:border-neutral-600">
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#matrix-matrix-new">Matrix (matrix-new)</a>
+    <li><a href="#ucg-dns">UCG DNS</a>
       <ul>
-        <li><a href="#komponenten">Komponenten</a></li>
-        <li><a href="#unterschiede-zur-alten-konfiguration">Unterschiede zur alten Konfiguration</a></li>
-        <li><a href="#storage">Storage</a></li>
-        <li><a href="#aktivierung-manifestsyaml">Aktivierung (manifests.yaml)</a></li>
-      </ul>
-    </li>
-    <li><a href="#datenmigration">Datenmigration</a>
-      <ul>
-        <li><a href="#schritt-1--signierungsschlüssel-sichern">Schritt 1 — Signierungsschlüssel sichern</a></li>
-        <li><a href="#schritt-2--postgresql-daten-migrieren">Schritt 2 — PostgreSQL-Daten migrieren</a></li>
-        <li><a href="#schritt-3--media-dateien-migrieren">Schritt 3 — Media-Dateien migrieren</a></li>
-        <li><a href="#schritt-4--cutover">Schritt 4 — Cutover</a></li>
-        <li><a href="#alternative-bestehende-longhorn-volumes-direkt-übernehmen">Alternative: Bestehende Longhorn-Volumes direkt übernehmen</a></li>
-        <li><a href="#nutzer-migration-mas">Nutzer-Migration (MAS)</a></li>
+        <li><a href="#zweck">Zweck</a></li>
+        <li><a href="#was-die-dateien-sind">Was die Dateien sind</a></li>
+        <li><a href="#anhalten-und-scharfschalten">Anhalten und Scharfschalten</a></li>
+        <li><a href="#verhalten-des-jobs">Verhalten des Jobs</a></li>
+        <li><a href="#zugangsdaten">Zugangsdaten</a></li>
+        <li><a href="#grenzen">Grenzen</a></li>
+        <li><a href="#installation">Installation</a></li>
+        <li><a href="#abhängigkeiten">Abhängigkeiten</a></li>
       </ul>
     </li>
   </ul>
@@ -1265,22 +1161,16 @@ href="/site.webmanifest.min.e231d7c2a5ac29753d1781895bdd4b9a0e5900e75bcee133bb47
     class="py-2 border-dotted border-neutral-300 border-s-1 -ms-5 ps-5 dark:border-neutral-600">
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#matrix-matrix-new">Matrix (matrix-new)</a>
+    <li><a href="#ucg-dns">UCG DNS</a>
       <ul>
-        <li><a href="#komponenten">Komponenten</a></li>
-        <li><a href="#unterschiede-zur-alten-konfiguration">Unterschiede zur alten Konfiguration</a></li>
-        <li><a href="#storage">Storage</a></li>
-        <li><a href="#aktivierung-manifestsyaml">Aktivierung (manifests.yaml)</a></li>
-      </ul>
-    </li>
-    <li><a href="#datenmigration">Datenmigration</a>
-      <ul>
-        <li><a href="#schritt-1--signierungsschlüssel-sichern">Schritt 1 — Signierungsschlüssel sichern</a></li>
-        <li><a href="#schritt-2--postgresql-daten-migrieren">Schritt 2 — PostgreSQL-Daten migrieren</a></li>
-        <li><a href="#schritt-3--media-dateien-migrieren">Schritt 3 — Media-Dateien migrieren</a></li>
-        <li><a href="#schritt-4--cutover">Schritt 4 — Cutover</a></li>
-        <li><a href="#alternative-bestehende-longhorn-volumes-direkt-übernehmen">Alternative: Bestehende Longhorn-Volumes direkt übernehmen</a></li>
-        <li><a href="#nutzer-migration-mas">Nutzer-Migration (MAS)</a></li>
+        <li><a href="#zweck">Zweck</a></li>
+        <li><a href="#was-die-dateien-sind">Was die Dateien sind</a></li>
+        <li><a href="#anhalten-und-scharfschalten">Anhalten und Scharfschalten</a></li>
+        <li><a href="#verhalten-des-jobs">Verhalten des Jobs</a></li>
+        <li><a href="#zugangsdaten">Zugangsdaten</a></li>
+        <li><a href="#grenzen">Grenzen</a></li>
+        <li><a href="#installation">Installation</a></li>
+        <li><a href="#abhängigkeiten">Abhängigkeiten</a></li>
       </ul>
     </li>
   </ul>
@@ -1400,273 +1290,188 @@ href="/site.webmanifest.min.e231d7c2a5ac29753d1781895bdd4b9a0e5900e75bcee133bb47
 
         <div class="article-content max-w-prose mb-20">
           
-<h2 class="relative group">Matrix (matrix-new)
-    <div id="matrix-matrix-new" class="anchor"></div>
+<h2 class="relative group">UCG DNS
+    <div id="ucg-dns" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#matrix-matrix-new" aria-label="Anker">#</a>
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#ucg-dns" aria-label="Anker">#</a>
     </span>
     
 </h2>
-<p>Migration des <code>matrix</code>-Namespace auf das offizielle
-<a href="https://github.com/element-hq/ess-helm"  target="_blank" rel="noreferrer">ESS Helm Chart (matrix-stack)</a>.</p>
-<p>In diesem Cluster ist <code>matrix-new</code> ein Testserver mit eigener Domain. Der
-produktive Server bleibt <code>apps/matrix</code>. Hostnamen, Zertifikat und
-<code>serverName</code> dürfen sich deshalb nicht mit denen des produktiven Servers
-überschneiden; ein Matrix-<code>serverName</code> lässt sich nach dem ersten Start
-nicht mehr ändern.</p>
 
-<h3 class="relative group">Komponenten
-    <div id="komponenten" class="anchor"></div>
+<h3 class="relative group">Zweck
+    <div id="zweck" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#komponenten" aria-label="Anker">#</a>
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#zweck" aria-label="Anker">#</a>
+    </span>
+    
+</h3>
+<p>Das UniFi Cloud Gateway ist der Resolver aller LAN-Clients: Keines der sieben
+Netze verteilt per DHCP einen anderen (gemessen am 25.11.2026,
+<code>dhcpd_dns_enabled</code> ist überall <code>false</code>). Die Umlenkung der eigenen
+öffentlichen Namen auf ihre internen Adressen, die <code>apps/coredns</code> für das
+Cluster und <code>apps/nameserver</code> für das Tailnet tragen, erreicht diese Clients
+deshalb nur über die DNS-Policies des Gateways. Ohne sie lösen ein Mac oder
+ein Telefon im Heimnetz <code>git.zyria.de</code> weiter auf die öffentliche IPv4 auf und
+laufen über die Fritzbox und per Hairpin zurück.</p>
+<p>Hintergrund und Messungen: pyrox/k3s-prod#1424, Umsetzung pyrox/k3s-prod#1432,
+Weg E2b des Plans.</p>
+
+<h3 class="relative group">Was die Dateien sind
+    <div id="was-die-dateien-sind" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#was-die-dateien-sind" aria-label="Anker">#</a>
     </span>
     
 </h3>
 <table>
 	<thead>
 			<tr>
-					<th>Komponente</th>
-					<th>URL</th>
+					<th>Datei</th>
+					<th>Rolle</th>
 			</tr>
 	</thead>
 	<tbody>
 			<tr>
-					<td>Synapse (Matrix-Server)</td>
-					<td><code>matrix.&lt;matrix-domain&gt;</code></td>
+					<td><code>policies.yaml</code></td>
+					<td>die Wahrheit, von Hand gepflegt und begründet; die generierte Region darin kommt aus <code>bin/split-dns-build.py</code></td>
 			</tr>
 			<tr>
-					<td>Element Web (Client)</td>
-					<td><code>chat.&lt;matrix-domain&gt;</code></td>
+					<td><code>policies.json</code></td>
+					<td>derselbe Inhalt, erzeugt vom Generator, weil das schlanke Python-Image keinen YAML-Parser bringt; nur diese Datei liest der Job</td>
 			</tr>
 			<tr>
-					<td>Element Admin</td>
-					<td><code>admin.&lt;matrix-domain&gt;</code></td>
-			</tr>
-			<tr>
-					<td>Matrix Authentication Service (MAS)</td>
-					<td><code>account.&lt;matrix-domain&gt;</code></td>
-			</tr>
-			<tr>
-					<td>Well-known Delegation</td>
-					<td><code>matrix.&lt;matrix-domain&gt;/.well-known/matrix/…</code></td>
+					<td><code>sync_dns_policies.py</code></td>
+					<td>legt an, korrigiert und meldet</td>
 			</tr>
 	</tbody>
 </table>
+<p>Nach einer Änderung an <code>policies.yaml</code> oder an einer <code>dns-records.yaml</code>:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">bin/split-dns-build.py --write apps/ucg-dns/policies.yaml</span></span></code></pre></div></div>
+<p>Das schreibt die Region und den JSON-Zwilling. Der Pre-commit-Hook
+<code>split-dns-region</code> und die Suite <code>split-dns</code> halten beide Dateien nach, die
+Suite <code>ucg-dns</code> prüft den Planer des Jobs.</p>
 
-<h3 class="relative group">Unterschiede zur alten Konfiguration
-    <div id="unterschiede-zur-alten-konfiguration" class="anchor"></div>
+<h3 class="relative group">Anhalten und Scharfschalten
+    <div id="anhalten-und-scharfschalten" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#unterschiede-zur-alten-konfiguration" aria-label="Anker">#</a>
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#anhalten-und-scharfschalten" aria-label="Anker">#</a>
     </span>
     
 </h3>
-<table>
-	<thead>
-			<tr>
-					<th>Aspekt</th>
-					<th>Alt (<code>matrix</code>)</th>
-					<th>Neu (<code>matrix-new</code>)</th>
-			</tr>
-	</thead>
-	<tbody>
-			<tr>
-					<td>Helm Chart</td>
-					<td>bjw-s app-template</td>
-					<td>element-hq/ess-helm matrix-stack</td>
-			</tr>
-			<tr>
-					<td>Auth</td>
-					<td>Synapse OIDC → Authentik</td>
-					<td>Matrix Authentication Service (MAS)</td>
-			</tr>
-			<tr>
-					<td>Client-URL</td>
-					<td><code>element.&lt;matrix-domain&gt;</code></td>
-					<td><code>chat.&lt;matrix-domain&gt;</code></td>
-			</tr>
-			<tr>
-					<td>OIDC-IdP</td>
-					<td><code>&lt;authentik-host&gt;</code> (Authentik)</td>
-					<td><code>idp.&lt;matrix-domain&gt;</code></td>
-			</tr>
-			<tr>
-					<td>PostgreSQL</td>
-					<td>Sidecar-Container</td>
-					<td>Dedizierter Pod via Chart</td>
-			</tr>
-	</tbody>
-</table>
+<p>Der Job läuft seit dem 26.11.2026 stündlich. Ausgeliefert wurde er angehalten,
+weil sein erster Lauf 52 Policies an einem Gerät außerhalb des Clusters
+angelegt hätte; beim Scharfschalten stand der Bestand schon auf dem Stand der
+Datei.</p>
+<p>Anhalten geht mit <code>suspend: true</code> im <code>cronjob</code>-Block von <code>values.yaml</code>. Vor
+einer größeren Änderung an <code>policies.yaml</code> empfiehlt sich derselbe Weg wie
+damals: anhalten, einen Job von Hand mit <code>DRY_RUN=1</code> erzeugen, das Ergebnis
+ansehen, dann wieder scharf schalten.</p>
+<p><strong><code>suspend: true</code> verhindert keinen Lauf von Hand.</strong> Ein Job, der aus dem
+CronJob erzeugt wird, etwa über die Aktion „Create Job&quot; in Argo CD oder mit
+<code>kubectl create job --from=cronjob/ucg-dns</code>, läuft trotzdem, und er läuft den
+normalen Weg, also ohne <code>DRY_RUN</code> und damit schreibend. Beim Scharfschalten
+dieser App stand der Bestand am Gateway schon richtig, weil genau das um 00:43
+passiert ist, ohne dass sich der Urheber feststellen ließ (pyrox/ops#67). Wer
+einen Lauf nur ansehen will, setzt <code>DRY_RUN=1</code> in die Umgebung des erzeugten
+Jobs.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">kubectl --kubeconfig ~/.kube/prod.zyria.de create job --from<span class="o">=</span>cronjob/ucg-dns <span class="se">\
+</span></span></span><span class="line"><span class="ln">2</span><span class="cl">  ucg-dns-dryrun -n ucg-dns --dry-run<span class="o">=</span>client -o yaml &gt; /tmp/job.yaml
+</span></span><span class="line"><span class="ln">3</span><span class="cl"><span class="c1"># DRY_RUN=1 in die Umgebung des Containers eintragen, dann anwenden</span></span></span></code></pre></div></div>
 
-<h3 class="relative group">Storage
-    <div id="storage" class="anchor"></div>
+<h3 class="relative group">Verhalten des Jobs
+    <div id="verhalten-des-jobs" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#storage" aria-label="Anker">#</a>
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#verhalten-des-jobs" aria-label="Anker">#</a>
     </span>
     
 </h3>
-<p>Das Chart verwaltet PVCs selbst über die StorageClass <code>longhorn</code> (global via
-<code>storage.storageClassName</code>). Vor der ersten Migration gilt:</p>
 <ul>
-<li><code>matrix-new-postgres-data</code> (10 Gi) — dynamisch provisioniert</li>
-<li><code>matrix-new-synapse-media</code> (10 Gi) — dynamisch provisioniert</li>
+<li>Er legt an, was fehlt, und korrigiert, was abweicht. Ein von Hand geänderter
+Eintrag steht damit höchstens eine Stunde.</li>
+<li>Er löscht nichts. Einträge, die die Datei nicht kennt, meldet er im Log und
+lässt sie stehen: Am Gateway klickt auch ein Mensch, und ein unbekannter
+Eintrag ist eher gewollt als ein Überrest. Wer das anders will, setzt
+<code>DELETE_EXTRA</code> auf <code>true</code>.</li>
+<li>Gleich ist eine Policy für ihn, wenn Typ und Name übereinstimmen. <code>id</code> und
+<code>metadata</code> des Gateways vergleicht er nicht, sonst schriebe er jede Stunde
+alles neu.</li>
+<li><code>DRY_RUN=1</code> sagt nur, was er täte.</li>
 </ul>
-<p><code>storage.yaml</code> ist ein Migrations-Template für die spätere Übernahme bestehender Volumes
-(siehe Kommentare darin). Es ist <strong>nicht</strong> in <code>kustomization.yaml</code> aktiv.</p>
 
-<h3 class="relative group">Aktivierung (manifests.yaml)
-    <div id="aktivierung-manifestsyaml" class="anchor"></div>
+<h3 class="relative group">Zugangsdaten
+    <div id="zugangsdaten" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#aktivierung-manifestsyaml" aria-label="Anker">#</a>
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#zugangsdaten" aria-label="Anker">#</a>
     </span>
     
 </h3>
-<p>Den auskommentierten Eintrag aktivieren:</p>
-<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="ln">1</span><span class="cl">- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">matrix-new</span><span class="w">
-</span></span></span><span class="line"><span class="ln">2</span><span class="cl"><span class="w">  </span><span class="nt">dir</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;apps/matrix-new&#34;</span><span class="w">
-</span></span></span><span class="line"><span class="ln">3</span><span class="cl"><span class="w">  </span><span class="nt">namespace</span><span class="p">:</span><span class="w"> </span><span class="l">matrix-new</span></span></span></code></pre></div></div>
-<hr>
+<p>Der Job braucht den Schlüssel der Integration-API als Secret <code>ucg-api</code> im
+Namespace, Schlüsselname <code>api-key</code>. Es wird von Hand angelegt und steht nicht
+im Repository:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl"><span class="nb">read</span> -rs <span class="s2">&#34;?Integration-API-Schlüssel des UCG: &#34;</span> key <span class="o">&amp;&amp;</span> <span class="se">\
+</span></span></span><span class="line"><span class="ln">2</span><span class="cl">  kubectl --kubeconfig ~/.kube/prod.zyria.de create secret generic ucg-api <span class="se">\
+</span></span></span><span class="line"><span class="ln">3</span><span class="cl">  -n ucg-dns --from-literal<span class="o">=</span>api-key<span class="o">=</span><span class="s2">&#34;</span><span class="nv">$key</span><span class="s2">&#34;</span><span class="p">;</span> <span class="nb">unset</span> key</span></span></code></pre></div></div>
+<p>Das Zertifikat des Gateways kommt von <code>apps/ucg-cert</code>; der Job verbindet sich
+zur LAN-Adresse und prüft es auf den Namen <code>ucg.zyria.de</code>, weil dieser Name
+selbst nur ein öffentliches AAAA trägt. Schlägt die Prüfung fehl, bricht er
+ab, statt ungeprüft weiterzumachen.</p>
 
-<h2 class="relative group">Datenmigration
-    <div id="datenmigration" class="anchor"></div>
+<h3 class="relative group">Grenzen
+    <div id="grenzen" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#datenmigration" aria-label="Anker">#</a>
-    </span>
-    
-</h2>
-<blockquote><p><strong>Kritisch</strong>: Der Synapse-Signierungsschlüssel muss übernommen werden.
-Ohne ihn gilt der Server gegenüber Federation-Partnern als neuer Server.</p>
-</blockquote>
-<h3 class="relative group">Schritt 1 — Signierungsschlüssel sichern
-    <div id="schritt-1--signierungsschlüssel-sichern" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#schritt-1--signierungsschl%c3%bcssel-sichern" aria-label="Anker">#</a>
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#grenzen" aria-label="Anker">#</a>
     </span>
     
 </h3>
-<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl"><span class="nv">SIGNING_KEY</span><span class="o">=</span><span class="k">$(</span>kubectl <span class="nb">exec</span> -n matrix deploy/matrix -c main -- <span class="se">\
-</span></span></span><span class="line"><span class="ln">2</span><span class="cl">  cat /data/matrix.&lt;matrix-domain&gt;.signing.key<span class="k">)</span>
-</span></span><span class="line"><span class="ln">3</span><span class="cl">
-</span></span><span class="line"><span class="ln">4</span><span class="cl">kubectl create secret generic matrix-signing-key <span class="se">\
-</span></span></span><span class="line"><span class="ln">5</span><span class="cl">  --from-literal<span class="o">=</span><span class="nv">key</span><span class="o">=</span><span class="s2">&#34;</span><span class="nv">$SIGNING_KEY</span><span class="s2">&#34;</span> <span class="se">\
-</span></span></span><span class="line"><span class="ln">6</span><span class="cl">  -n matrix-new</span></span></code></pre></div></div>
-<p>In <code>values.yaml</code> unter <code>synapse:</code> eintragen:</p>
-<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="ln">1</span><span class="cl"><span class="nt">synapse</span><span class="p">:</span><span class="w">
-</span></span></span><span class="line"><span class="ln">2</span><span class="cl"><span class="w">  </span><span class="nt">signingKey</span><span class="p">:</span><span class="w">
-</span></span></span><span class="line"><span class="ln">3</span><span class="cl"><span class="w">    </span><span class="nt">secret</span><span class="p">:</span><span class="w"> </span><span class="l">matrix-signing-key</span><span class="w">
-</span></span></span><span class="line"><span class="ln">4</span><span class="cl"><span class="w">    </span><span class="nt">secretKey</span><span class="p">:</span><span class="w"> </span><span class="l">key</span></span></span></code></pre></div></div>
+<ul>
+<li>Die Integration-API kennt für die Policies nur <code>A_RECORD</code>, <code>AAAA_RECORD</code>,
+<code>CNAME_RECORD</code>, <code>MX_RECORD</code>, <code>SRV_RECORD</code>, <code>TXT_RECORD</code> und
+<code>FORWARD_DOMAIN</code>. Portweiterleitungen und NAT-Regeln sind über sie nicht
+erreichbar.</li>
+<li>Ob ein Wildcard als <code>domain</code> angenommen wird, ist ungeprüft. <code>*.pages.zyria.de</code>
+läuft deshalb als <code>FORWARD_DOMAIN</code> der Zone an den Cluster-Resolver, der den
+Unterbaum samt seinem <code>template</code>-Block beantwortet.</li>
+<li>AAAA-Einträge braucht es nicht: Das veröffentlichte AAAA dieser Namen zeigt
+schon intern.</li>
+</ul>
 
-<h3 class="relative group">Schritt 2 — PostgreSQL-Daten migrieren
-    <div id="schritt-2--postgresql-daten-migrieren" class="anchor"></div>
+<h3 class="relative group">Installation
+    <div id="installation" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#schritt-2--postgresql-daten-migrieren" aria-label="Anker">#</a>
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#installation" aria-label="Anker">#</a>
     </span>
     
 </h3>
-<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln"> 1</span><span class="cl"><span class="c1"># Export aus altem Namespace</span>
-</span></span><span class="line"><span class="ln"> 2</span><span class="cl">kubectl <span class="nb">exec</span> -n matrix deploy/matrix -c db -- <span class="se">\
-</span></span></span><span class="line"><span class="ln"> 3</span><span class="cl">  pg_dump -U synapse synapse &gt; /tmp/synapse-dump.sql
-</span></span><span class="line"><span class="ln"> 4</span><span class="cl">
-</span></span><span class="line"><span class="ln"> 5</span><span class="cl"><span class="c1"># Import in neuen Postgres-Pod</span>
-</span></span><span class="line"><span class="ln"> 6</span><span class="cl"><span class="nv">NEW_PG</span><span class="o">=</span><span class="k">$(</span>kubectl get pod -n matrix-new -l app.kubernetes.io/component<span class="o">=</span>postgres <span class="se">\
-</span></span></span><span class="line"><span class="ln"> 7</span><span class="cl">  -o <span class="nv">jsonpath</span><span class="o">=</span><span class="s1">&#39;{.items[0].metadata.name}&#39;</span><span class="k">)</span>
-</span></span><span class="line"><span class="ln"> 8</span><span class="cl">
-</span></span><span class="line"><span class="ln"> 9</span><span class="cl">kubectl cp /tmp/synapse-dump.sql matrix-new/<span class="nv">$NEW_PG</span>:/tmp/synapse-dump.sql
-</span></span><span class="line"><span class="ln">10</span><span class="cl">kubectl <span class="nb">exec</span> -n matrix-new <span class="nv">$NEW_PG</span> -- <span class="se">\
-</span></span></span><span class="line"><span class="ln">11</span><span class="cl">  psql -U synapse -d synapse -f /tmp/synapse-dump.sql</span></span></code></pre></div></div>
+<p>Die App wird mit Kustomize und Helm über ArgoCD ausgerollt.</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">kubectl kustomize --enable-helm apps/ucg-dns <span class="p">|</span> kubectl apply -n ucg-dns -f -</span></span></code></pre></div></div>
 
-<h3 class="relative group">Schritt 3 — Media-Dateien migrieren
-    <div id="schritt-3--media-dateien-migrieren" class="anchor"></div>
+<h3 class="relative group">Abhängigkeiten
+    <div id="abhängigkeiten" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#schritt-3--media-dateien-migrieren" aria-label="Anker">#</a>
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#abh%c3%a4ngigkeiten" aria-label="Anker">#</a>
     </span>
     
 </h3>
-<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl"><span class="nv">NEW_SYNAPSE</span><span class="o">=</span><span class="k">$(</span>kubectl get pod -n matrix-new -l app.kubernetes.io/component<span class="o">=</span>synapse <span class="se">\
-</span></span></span><span class="line"><span class="ln">2</span><span class="cl">  -o <span class="nv">jsonpath</span><span class="o">=</span><span class="s1">&#39;{.items[0].metadata.name}&#39;</span><span class="k">)</span>
-</span></span><span class="line"><span class="ln">3</span><span class="cl">
-</span></span><span class="line"><span class="ln">4</span><span class="cl">kubectl <span class="nb">exec</span> -n matrix deploy/matrix -c main -- <span class="se">\
-</span></span></span><span class="line"><span class="ln">5</span><span class="cl">  tar cf - /data/media_store <span class="p">|</span> <span class="se">\
-</span></span></span><span class="line"><span class="ln">6</span><span class="cl">  kubectl <span class="nb">exec</span> -i -n matrix-new <span class="nv">$NEW_SYNAPSE</span> -- <span class="se">\
-</span></span></span><span class="line"><span class="ln">7</span><span class="cl">  tar xf - -C /data/</span></span></code></pre></div></div>
-
-<h3 class="relative group">Schritt 4 — Cutover
-    <div id="schritt-4--cutover" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#schritt-4--cutover" aria-label="Anker">#</a>
-    </span>
-    
-</h3>
-<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl"><span class="c1"># Alte Instanz stoppen</span>
-</span></span><span class="line"><span class="ln">2</span><span class="cl">kubectl scale deploy/matrix -n matrix --replicas<span class="o">=</span><span class="m">0</span>
-</span></span><span class="line"><span class="ln">3</span><span class="cl">
-</span></span><span class="line"><span class="ln">4</span><span class="cl"><span class="c1"># ArgoCD-Sync für matrix-new anstoßen</span></span></span></code></pre></div></div>
-<p>DNS: <code>element.&lt;matrix-domain&gt;</code> → Nutzer auf <code>chat.&lt;matrix-domain&gt;</code> hinweisen.</p>
-
-<h3 class="relative group">Alternative: Bestehende Longhorn-Volumes direkt übernehmen
-    <div id="alternative-bestehende-longhorn-volumes-direkt-übernehmen" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#alternative-bestehende-longhorn-volumes-direkt-%c3%bcbernehmen" aria-label="Anker">#</a>
-    </span>
-    
-</h3>
-<p>Statt Datenkopie können die alten Volumes nach Löschen des alten Namespace direkt
-gebunden werden:</p>
-<ol>
-<li>
-<p>Alten Namespace stoppen, PVCs löschen</p>
-</li>
-<li>
-<p><code>claimRef</code> aus PVs entfernen:</p>
-<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">kubectl patch pv matrix-db --type<span class="o">=</span>json <span class="se">\
-</span></span></span><span class="line"><span class="ln">2</span><span class="cl">  -p<span class="o">=</span><span class="s1">&#39;[{&#34;op&#34;:&#34;remove&#34;,&#34;path&#34;:&#34;/spec/claimRef&#34;}]&#39;</span></span></span></code></pre></div></div>
-</li>
-<li>
-<p>In <code>storage.yaml</code> die <code>volumeHandle</code>-Werte anpassen, Datei in
-<code>kustomization.yaml</code> aktivieren</p>
-</li>
-<li>
-<p><code>existingClaim</code> in <code>values.yaml</code> setzen (Kommentare in <code>storage.yaml</code> beachten)</p>
-</li>
-</ol>
-
-<h3 class="relative group">Nutzer-Migration (MAS)
-    <div id="nutzer-migration-mas" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#nutzer-migration-mas" aria-label="Anker">#</a>
-    </span>
-    
-</h3>
-<p>Bestehende Authentik-Nutzer können via MAS-CLI migriert werden:</p>
-<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl"><span class="nv">MAS_POD</span><span class="o">=</span><span class="k">$(</span>kubectl get pod -n matrix-new -l app.kubernetes.io/component<span class="o">=</span>matrix-authentication-service <span class="se">\
-</span></span></span><span class="line"><span class="ln">2</span><span class="cl">  -o <span class="nv">jsonpath</span><span class="o">=</span><span class="s1">&#39;{.items[0].metadata.name}&#39;</span><span class="k">)</span>
-</span></span><span class="line"><span class="ln">3</span><span class="cl">
-</span></span><span class="line"><span class="ln">4</span><span class="cl">kubectl <span class="nb">exec</span> -n matrix-new <span class="nv">$MAS_POD</span> -- mas-cli manage <span class="se">\
-</span></span></span><span class="line"><span class="ln">5</span><span class="cl">  migrate-upstream --help</span></span></code></pre></div></div>
-<p>Siehe: <a href="https://element-hq.github.io/matrix-authentication-service/topics/migrating-existing-users.html"  target="_blank" rel="noreferrer">MAS Migrationsdokumentation</a></p>
+<p>Das Secret <code>ucg-api</code>, das Zertifikat aus <code>apps/ucg-cert</code> und die Erreichbarkeit
+der LAN-Adresse des Gateways (NetworkPolicy lässt nur diese zu).</p>
 
           
           
@@ -1677,7 +1482,7 @@ gebunden werden:</p>
                 class="email-link m-1 rounded bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
                 href="#"
                 data-email="ZmFicmljZUB6eXJpYS5kZQ=="
-                data-subject="Antwort auf Matrix (neu)">
+                data-subject="Antwort auf UCG DNS">
                 Per E-Mail antworten
               </a>
               <noscript>
@@ -1899,14 +1704,14 @@ gebunden werden:</p>
           
             <a
               class="flex text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
-              href="/posts/homelab/k3s-prod/apps/git-pages/readme/">
+              href="/posts/homelab/k3s-prod/apps/cve-dashboard/readme/">
               <span class="leading-6">
                 <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;
               </span>
             </a>
             
               <span class="ms-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
-                <time datetime="2026-10-18T10:17:56&#43;02:00">18 Oktober 2026</time>
+                <time datetime="2026-11-25T18:23:49&#43;01:00">25 November 2026</time>
               </span>
             
           
@@ -1915,14 +1720,14 @@ gebunden werden:</p>
           
             <a
               class="flex text-right text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
-              href="/posts/homelab/k3s-prod/apps/parsedmarc/readme/">
+              href="/posts/homelab/k3s-prod/apps/matrix/readme/">
               <span class="leading-6">
-                parsedmarc&ensp;<span class="inline-block rtl:rotate-180">&rarr;</span>
+                Matrix&ensp;<span class="inline-block rtl:rotate-180">&rarr;</span>
               </span>
             </a>
             
               <span class="me-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
-                <time datetime="2026-10-21T17:00:00&#43;02:00">21 Oktober 2026</time>
+                <time datetime="2026-11-26T00:56:09&#43;01:00">26 November 2026</time>
               </span>
             
           

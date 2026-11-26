@@ -105,7 +105,7 @@
 	<meta property="og:type" content="article">
 		<meta property="article:section" content="posts">
 		<meta property="article:published_time" content="2025-10-18T07:57:54+02:00">
-		<meta property="article:modified_time" content="2026-11-23T11:44:10+01:00">
+		<meta property="article:modified_time" content="2026-11-25T22:13:52+01:00">
 		<meta property="article:tag" content="Kubernetes">
 		<meta property="article:tag" content="Wireguard">
 		<meta property="article:tag" content="Vpn">
@@ -311,12 +311,12 @@ href="/site.webmanifest.min.e231d7c2a5ac29753d1781895bdd4b9a0e5900e75bcee133bb47
     "dateCreated": "2025-10-18T07:57:54\u002b02:00",
     "datePublished": "2025-10-18T07:57:54\u002b02:00",
     
-    "dateModified": "2026-11-23T11:44:10\u002b01:00",
+    "dateModified": "2026-11-25T22:13:52\u002b01:00",
     
     "keywords": ["kubernetes","wireguard","vpn"],
     
     "mainEntityOfPage": "https://zyria.de/posts/homelab/k3s-prod/apps/wireguard/readme/",
-    "wordCount": "1376"
+    "wordCount": "1445"
   }]
   </script>
 
@@ -963,7 +963,7 @@ href="/site.webmanifest.min.e231d7c2a5ac29753d1781895bdd4b9a0e5900e75bcee133bb47
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2025-10-18T07:57:54&#43;02:00">18 Oktober 2025</time><span class="px-2 text-primary-500">&middot;</span><time datetime="2026-11-23T11:44:10&#43;01:00">Aktualisiert: 23 November 2026</time><span class="px-2 text-primary-500">&middot;</span><span>1376 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
+      <time datetime="2025-10-18T07:57:54&#43;02:00">18 Oktober 2025</time><span class="px-2 text-primary-500">&middot;</span><time datetime="2026-11-25T22:13:52&#43;01:00">Aktualisiert: 25 November 2026</time><span class="px-2 text-primary-500">&middot;</span><span>1445 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
 
 
   
@@ -1445,6 +1445,7 @@ Hauptadressen, und ohne Route läuft IPv6 am Tailnet vorbei.</li>
 <li><code>login_filter</code> und <code>sync_filter</code> verlangen beide die Gruppe <code>wireguardEnabled</code>. <code>registration_enabled: true</code> ist nötig, damit die Anmeldung auch per <code>sAMAccountName</code> oder <code>otherMailbox</code> klappt.</li>
 <li>Admin wird, wer Mitglied von <code>Domain Admins</code> ist (<code>admin_group</code>); der lokale Admin ist abgeschaltet.</li>
 <li>Der Sync sperrt Nutzer, die aus dem <code>sync_filter</code> fallen (<code>disable_missing</code>), und gibt sie bei Rückkehr wieder frei (<code>auto_re_enable</code>).</li>
+<li>Der Mailversand geht über Submission mit Anmeldung (<code>smtp.zyria.de:587</code>, <code>auth_type: plain</code>, Konto <code>vpn@zyria.de</code>). Das Kennwort steht im von Hand gepflegten Secret <code>wireguard-smtp</code> und kommt als <code>WG_PORTAL_MAIL_PASSWORD</code> in die Umgebung, nicht in <code>wg-portal-secrets</code>: Das entsteht aus Literalen im Repository. Grund für die Anmeldung: Nach der Umlenkung der öffentlichen Namen nach innen kommt der Pod mit seiner Pod-Adresse am Mailserver an, für die es keinen PTR gibt, und <code>smtpd_client_restrictions</code> endet auf <code>reject_unknown_client</code>.</li>
 <li><code>import_existing: false</code> und <code>restore_state: false</code>: <code>wg0</code> legt weiterhin <code>wg-quick</code> im Container <code>wireguard</code> an. wg-portal verwaltet nur die Peers und schreibt <code>wg0.conf</code> nach <code>/etc/wireguard/wg_confs</code> (<code>config_storage_path</code>).</li>
 <li>Am Interface <code>wg0</code> muss im Portal die Routing-Tabelle auf <code>off</code> stehen. Sonst legt v2 bei jeder Peer-Änderung eine eigene fwmark, Policy-Routing-Regeln und Routen auf <code>wg0</code> an und entfernt die Kernel-Route des wg0-Netzes aus <code>main</code>.</li>
 <li>Jede Änderung an <code>wg-portal-config</code> oder <code>wg-portal-secrets</code> startet über Reloader den ganzen Pod <code>wireguard-main</code> neu, also auch WireGuard-Server und Bastion.</li>

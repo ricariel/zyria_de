@@ -9,7 +9,37 @@
     <managingEditor>fabrice@zyria.de (Fabrice Kirchner)</managingEditor>
     <webMaster>fabrice@zyria.de (Fabrice Kirchner)</webMaster>
     
-    <lastBuildDate>Wed, 25 Nov 2026 02:23:12 +0100</lastBuildDate><atom:link href="https://zyria.de/tags/kubernetes/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 26 Nov 2026 00:56:09 +0100</lastBuildDate><atom:link href="https://zyria.de/tags/kubernetes/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Matrix</title>
+      <link>https://zyria.de/posts/homelab/k3s-prod/apps/matrix/readme/</link>
+      <pubDate>Thu, 26 Nov 2026 00:56:09 +0100</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/matrix/readme/</guid>
+      <description>Diese Anwendung stellt einen Matrix-Homeserver (Synapse) mit Web-Client und Administrationsoberfläche aus dem offiziellen ESS-Chart bereit.</description>
+      
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://zyria.de/posts/homelab/k3s-prod/apps/cve-dashboard/readme/</link>
+      <pubDate>Wed, 25 Nov 2026 18:23:49 +0100</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/cve-dashboard/readme/</guid>
+      <description>&lt;h1 class=&#34;relative group&#34;&gt;cve-dashboard&#xA;    &lt;div id=&#34;cve-dashboard&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#cve-dashboard&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h1&gt;&#xA;&lt;p&gt;Liefert die Übersicht der bekannten CVEs über alle Umgebungen als statische&#xA;Seite aus, erreichbar unter &lt;code&gt;cve.&amp;lt;domain&amp;gt;&lt;/code&gt;. Vorher lag sie nur als lokale Datei&#xA;auf einem Arbeitsplatzrechner und war per &lt;code&gt;file://&lt;/code&gt; zu öffnen.&lt;/p&gt;&#xA;&#xA;&lt;h2 class=&#34;relative group&#34;&gt;Aufbau&#xA;    &lt;div id=&#34;aufbau&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#aufbau&#34; aria-label=&#34;Anker&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;&lt;code&gt;components/static-site&lt;/code&gt; mit &lt;code&gt;nginx/nginx-unprivileged&lt;/code&gt; und git-sync, wie bei&#xA;den übrigen statischen Seiten. Der Inhalt kommt aus einem eigenen,&#xA;&lt;strong&gt;privaten&lt;/strong&gt; Repository, in das der Übersichtslauf seine Ausgabe pusht:&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Ansible Semaphore</title>
+      <link>https://zyria.de/posts/homelab/k3s-prod/apps/ansible-semaphore/readme/</link>
+      <pubDate>Wed, 25 Nov 2026 12:15:58 +0100</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/ansible-semaphore/readme/</guid>
+      <description>Dieses Dokument beschreibt die Bereitstellung von Ansible Semaphore, einer webbasierten Benutzeroberfläche zur Verwaltung und Ausführung von Ansible Playbooks.</description>
+      
+    </item>
     
     <item>
       <title>Music Assistant</title>
@@ -122,16 +152,6 @@
     </item>
     
     <item>
-      <title>Matrix</title>
-      <link>https://zyria.de/posts/homelab/k3s-prod/apps/matrix/readme/</link>
-      <pubDate>Sat, 14 Nov 2026 08:08:00 +0100</pubDate>
-      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/matrix/readme/</guid>
-      <description>Diese Anwendung stellt einen Matrix-Homeserver (Synapse) und einen Web-Client (Element) bereit, um einen föderierten, Ende-zu-Ende-verschlüsselten Chat-Dienst zu betreiben.</description>
-      
-    </item>
-    
-    <item>
       <title>unpoller</title>
       <link>https://zyria.de/posts/homelab/k3s-prod/apps/unpoller/readme/</link>
       <pubDate>Sat, 14 Nov 2026 04:48:59 +0100</pubDate>
@@ -148,16 +168,6 @@
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/posts/homelab/k3s-prod/apps/unbound/readme/</guid>
       <description>Unbound löst Namen selbst rekursiv auf und liefert bei einem Ausfall der autoritativen Nameserver weiterhin die zuletzt bekannten Antworten aus.</description>
-      
-    </item>
-    
-    <item>
-      <title>Ansible Semaphore</title>
-      <link>https://zyria.de/posts/homelab/k3s-prod/apps/ansible-semaphore/readme/</link>
-      <pubDate>Wed, 11 Nov 2026 09:58:49 +0100</pubDate>
-      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/ansible-semaphore/readme/</guid>
-      <description>Dieses Dokument beschreibt die Bereitstellung von Ansible Semaphore, einer webbasierten Benutzeroberfläche zur Verwaltung und Ausführung von Ansible Playbooks.</description>
       
     </item>
     
@@ -258,16 +268,6 @@
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/posts/homelab/k3s-prod/apps/parsedmarc/readme/</guid>
       <description>parsedmarc liest die Berichte per IMAP, schreibt sie in eine eigene PostgreSQL-Datenbank, Grafana zeigt sie im Dashboard DMARC Reports.</description>
-      
-    </item>
-    
-    <item>
-      <title>Matrix (neu)</title>
-      <link>https://zyria.de/posts/homelab/k3s-prod/apps/matrix-new/readme/</link>
-      <pubDate>Mon, 19 Oct 2026 08:55:26 +0200</pubDate>
-      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/matrix-new/readme/</guid>
-      <description>Migration von apps/matrix auf das offizielle element-hq/ess-helm matrix-stack Chart mit Matrix Authentication Service (MAS), Element Web und Element Admin.</description>
       
     </item>
     

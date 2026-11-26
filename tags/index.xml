@@ -9,12 +9,12 @@
     <managingEditor>fabrice@zyria.de (Fabrice Kirchner)</managingEditor>
     <webMaster>fabrice@zyria.de (Fabrice Kirchner)</webMaster>
     
-    <lastBuildDate>Wed, 25 Nov 2026 02:23:12 +0100</lastBuildDate><atom:link href="https://zyria.de/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 26 Nov 2026 01:24:56 +0100</lastBuildDate><atom:link href="https://zyria.de/tags/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Argocd</title>
       <link>https://zyria.de/tags/argocd/</link>
-      <pubDate>Wed, 25 Nov 2026 02:23:12 +0100</pubDate>
+      <pubDate>Thu, 26 Nov 2026 00:56:09 +0100</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/tags/argocd/</guid>
       <description></description>
@@ -24,7 +24,7 @@
     <item>
       <title>Gitops</title>
       <link>https://zyria.de/tags/gitops/</link>
-      <pubDate>Wed, 25 Nov 2026 02:23:12 +0100</pubDate>
+      <pubDate>Thu, 26 Nov 2026 00:56:09 +0100</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/tags/gitops/</guid>
       <description></description>
@@ -34,7 +34,7 @@
     <item>
       <title>Helm</title>
       <link>https://zyria.de/tags/helm/</link>
-      <pubDate>Wed, 25 Nov 2026 02:23:12 +0100</pubDate>
+      <pubDate>Thu, 26 Nov 2026 00:56:09 +0100</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/tags/helm/</guid>
       <description></description>
@@ -44,7 +44,7 @@
     <item>
       <title>Homelab</title>
       <link>https://zyria.de/tags/homelab/</link>
-      <pubDate>Wed, 25 Nov 2026 02:23:12 +0100</pubDate>
+      <pubDate>Thu, 26 Nov 2026 00:56:09 +0100</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/tags/homelab/</guid>
       <description></description>
@@ -54,7 +54,7 @@
     <item>
       <title>K3s</title>
       <link>https://zyria.de/tags/k3s/</link>
-      <pubDate>Wed, 25 Nov 2026 02:23:12 +0100</pubDate>
+      <pubDate>Thu, 26 Nov 2026 00:56:09 +0100</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/tags/k3s/</guid>
       <description></description>
@@ -64,7 +64,7 @@
     <item>
       <title>Kubernetes</title>
       <link>https://zyria.de/tags/kubernetes/</link>
-      <pubDate>Wed, 25 Nov 2026 02:23:12 +0100</pubDate>
+      <pubDate>Thu, 26 Nov 2026 00:56:09 +0100</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/tags/kubernetes/</guid>
       <description></description>
@@ -74,7 +74,7 @@
     <item>
       <title>Kustomize</title>
       <link>https://zyria.de/tags/kustomize/</link>
-      <pubDate>Wed, 25 Nov 2026 02:23:12 +0100</pubDate>
+      <pubDate>Thu, 26 Nov 2026 00:56:09 +0100</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/tags/kustomize/</guid>
       <description></description>
@@ -84,9 +84,39 @@
     <item>
       <title>Produktion</title>
       <link>https://zyria.de/tags/produktion/</link>
-      <pubDate>Wed, 25 Nov 2026 02:23:12 +0100</pubDate>
+      <pubDate>Thu, 26 Nov 2026 00:56:09 +0100</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/tags/produktion/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Cronjob</title>
+      <link>https://zyria.de/tags/cronjob/</link>
+      <pubDate>Thu, 26 Nov 2026 00:30:00 +0100</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://zyria.de/tags/cronjob/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Dns</title>
+      <link>https://zyria.de/tags/dns/</link>
+      <pubDate>Thu, 26 Nov 2026 00:30:00 +0100</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://zyria.de/tags/dns/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Unifi</title>
+      <link>https://zyria.de/tags/unifi/</link>
+      <pubDate>Thu, 26 Nov 2026 00:30:00 +0100</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://zyria.de/tags/unifi/</guid>
       <description></description>
       
     </item>
@@ -342,16 +372,6 @@
     </item>
     
     <item>
-      <title>Unifi</title>
-      <link>https://zyria.de/tags/unifi/</link>
-      <pubDate>Tue, 28 Jul 2026 13:53:46 +0200</pubDate>
-      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://zyria.de/tags/unifi/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
       <title>Energie</title>
       <link>https://zyria.de/tags/energie/</link>
       <pubDate>Thu, 23 Jul 2026 15:53:31 +0200</pubDate>
@@ -487,16 +507,6 @@
       <pubDate>Mon, 20 Oct 2025 12:51:49 +0200</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/tags/ingress/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>Dns</title>
-      <link>https://zyria.de/tags/dns/</link>
-      <pubDate>Sat, 18 Oct 2025 07:42:43 +0200</pubDate>
-      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://zyria.de/tags/dns/</guid>
       <description></description>
       
     </item>

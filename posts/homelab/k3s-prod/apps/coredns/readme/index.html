@@ -105,7 +105,7 @@
 	<meta property="og:type" content="article">
 		<meta property="article:section" content="posts">
 		<meta property="article:published_time" content="2025-08-18T14:52:07+02:00">
-		<meta property="article:modified_time" content="2026-09-07T14:43:53+02:00">
+		<meta property="article:modified_time" content="2026-11-25T23:22:15+01:00">
 		<meta property="article:tag" content="Kubernetes">
 		<meta property="article:tag" content="Coredns">
 		<meta property="article:tag" content="Dns">
@@ -311,12 +311,12 @@ href="/site.webmanifest.min.e231d7c2a5ac29753d1781895bdd4b9a0e5900e75bcee133bb47
     "dateCreated": "2025-08-18T14:52:07\u002b02:00",
     "datePublished": "2025-08-18T14:52:07\u002b02:00",
     
-    "dateModified": "2026-09-07T14:43:53\u002b02:00",
+    "dateModified": "2026-11-25T23:22:15\u002b01:00",
     
     "keywords": ["kubernetes","coredns","dns"],
     
     "mainEntityOfPage": "https://zyria.de/posts/homelab/k3s-prod/apps/coredns/readme/",
-    "wordCount": "373"
+    "wordCount": "707"
   }]
   </script>
 
@@ -963,7 +963,7 @@ href="/site.webmanifest.min.e231d7c2a5ac29753d1781895bdd4b9a0e5900e75bcee133bb47
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2025-08-18T14:52:07&#43;02:00">18 August 2025</time><span class="px-2 text-primary-500">&middot;</span><time datetime="2026-09-07T14:43:53&#43;02:00">Aktualisiert: 7 September 2026</time><span class="px-2 text-primary-500">&middot;</span><span>373 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
+      <time datetime="2025-08-18T14:52:07&#43;02:00">18 August 2025</time><span class="px-2 text-primary-500">&middot;</span><time datetime="2026-11-25T23:22:15&#43;01:00">Aktualisiert: 25 November 2026</time><span class="px-2 text-primary-500">&middot;</span><span>707 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
 
 
   
@@ -1146,6 +1146,7 @@ href="/site.webmanifest.min.e231d7c2a5ac29753d1781895bdd4b9a0e5900e75bcee133bb47
         <li><a href="#lokale-anpassungen">Lokale Anpassungen</a>
           <ul>
             <li><a href="#wichtige-einstellungen">Wichtige Einstellungen</a></li>
+            <li><a href="#split-dns-für-die-eigenen-öffentlichen-namen">Split-DNS für die eigenen öffentlichen Namen</a></li>
           </ul>
         </li>
         <li><a href="#installation">Installation</a></li>
@@ -1173,6 +1174,7 @@ href="/site.webmanifest.min.e231d7c2a5ac29753d1781895bdd4b9a0e5900e75bcee133bb47
         <li><a href="#lokale-anpassungen">Lokale Anpassungen</a>
           <ul>
             <li><a href="#wichtige-einstellungen">Wichtige Einstellungen</a></li>
+            <li><a href="#split-dns-für-die-eigenen-öffentlichen-namen">Split-DNS für die eigenen öffentlichen Namen</a></li>
           </ul>
         </li>
         <li><a href="#installation">Installation</a></li>
@@ -1377,6 +1379,51 @@ Das Helm-Chart stammt aus dem <a href="https://coredns.github.io/helm"  target="
 <li><strong>Interne Zonen</strong>: Zonen, die es nur im LAN gibt (Active Directory, Router, Reverse-Lookup), beantwortet dieses CoreDNS nicht selbst, sondern reicht sie an die App <code>nameserver</code> weiter. Dort liegen die Weiterleitungsziele an einer Stelle, statt hier ein zweites Mal gepflegt zu werden. Angesprochen wird sie über die ClusterIP: der Service läuft mit <code>externalTrafficPolicy: Local</code>, über seine LoadBalancer-Adresse fragten CoreDNS-Pods auf Nodes ohne <code>nameserver</code>-Replica ins Leere.</li>
 <li><strong>Upstreams</strong>: Die <code>/etc/resolv.conf</code> der Pods stammt nicht von <code>systemd-resolved</code>, sondern aus einer eigenen Datei, die Ansible auf jede Node schreibt und kubelet per <code>resolv-conf</code> untergeschoben bekommt. Damit ist die Upstream-Liste auf allen Nodes identisch und bleibt unter dem kubelet-Limit von drei Nameservern.</li>
 <li><strong>Scheduling</strong>: CoreDNS-Pods werden bevorzugt auf den Control-Plane-Nodes ausgeführt und sind über <code>topologySpreadConstraints</code> auf verschiedene Nodes und Zonen verteilt, um die Ausfallsicherheit zu erhöhen.</li>
+</ul>
+
+<h4 class="relative group">Split-DNS für die eigenen öffentlichen Namen
+    <div id="split-dns-für-die-eigenen-öffentlichen-namen" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#split-dns-f%c3%bcr-die-eigenen-%c3%b6ffentlichen-namen" aria-label="Anker">#</a>
+    </span>
+    
+</h4>
+<p>Die <code>hosts</code>- und <code>template</code>-Blöcke zwischen den Markern
+<code># BEGIN split-dns &lt;teil&gt;</code> und <code># END split-dns &lt;teil&gt;</code> beantworten die eigenen
+öffentlichen Namen mit ihrer internen Adresse. Ohne sie lösen Pods zum Beispiel
+<code>git.zyria.de</code> auf die öffentliche IPv4 auf, weil ihre einzige IPv6-Quelladresse
+eine ULA ist und RFC 6724 dann IPv4 wählt: Der Verkehr verlässt das Netz zur
+Fritzbox und kommt per Hairpin zurück. Gemessen am 25.11.2026 kostete das im
+Median 90,15 ms statt 6,26 ms, beim Verbindungsaufbau unter Last p99
+1104,95 ms statt unter 1,1 ms, mit verlorenen SYN-Paketen.</p>
+<ul>
+<li>Die Blöcke sind <strong>generiert</strong>, nicht gepflegt: <code>bin/split-dns-build.py</code> liest
+jeden A-Record mit einer öffentlichen Adresse aus <code>apps/*/dns-records.yaml</code>
+und leitet die interne IPv4 aus dem AAAA desselben Namens ab. Nach einer
+Änderung an einer <code>dns-records.yaml</code> den Generator mit <code>--write</code> laufen
+lassen; der Pre-commit-Hook <code>split-dns-region</code> und die Suite <code>split-dns</code>
+halten Datei und Records zusammen.</li>
+<li>Die Einträge stehen <strong>inline im vorhandenen <code>hosts</code>-Plugin</strong>. Ein zweites
+<code>hosts</code> im selben Serverblock lässt CoreDNS nicht mehr starten
+(<code>plugin.ErrOnce</code> in <code>hostsParse</code>), und das Cluster wäre ohne DNS.</li>
+<li>Je Name stehen <strong>beide Familien</strong> dort. Das <code>hosts</code>-Plugin antwortet für
+einen Namen, den es kennt, autoritativ: Mit nur der A-Zeile käme auf eine
+AAAA-Frage NODATA zurück, und <code>fallthrough</code> fängt das nicht auf.</li>
+<li>Der Wildcard-Name <code>*.pages.zyria.de</code> braucht <code>template</code>, weil <code>hosts</code> keine
+Wildcards kennt. <code>template</code> läuft vor <code>hosts</code> (Position 62 gegen 64 in
+<code>plugin.cfg</code>), deshalb darf die Regex den Apex <code>pages.zyria.de</code> nicht fangen.</li>
+<li>Namen von Apps, die nicht in <code>manifests.yaml</code> stehen, lässt der Generator aus
+und meldet sie: Ihre Records schreibt der Operator nicht, die Datei ist dort
+eine Absicht und nicht der veröffentlichte Wert.</li>
+<li><strong>In cdp gibt es diesen Block nicht.</strong> Dort sind die öffentlichen Adressen
+selbst MetalLB-Adressen, es gibt also keinen Umweg zu beseitigen. Die
+Abweichung ist gewollt, und steht aus demselben Grund auch in der README des
+dortigen <code>apps/coredns</code>.</li>
+<li>Der Außenblick auf dieselben Namen liegt nicht mehr bei der Uptime Kuma im
+Cluster, die nach dieser Umlenkung den internen Weg misst, sondern bei
+HetrixTools (Liste in <code>ansible-inventory</code>, Playbook in <code>ansible-main</code>).</li>
 </ul>
 
 <h3 class="relative group">Installation

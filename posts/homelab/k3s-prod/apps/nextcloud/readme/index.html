@@ -105,7 +105,7 @@
 	<meta property="og:type" content="article">
 		<meta property="article:section" content="posts">
 		<meta property="article:published_time" content="2025-10-20T14:23:44+02:00">
-		<meta property="article:modified_time" content="2026-11-21T22:34:39+01:00">
+		<meta property="article:modified_time" content="2026-11-25T22:40:33+01:00">
 		<meta property="article:tag" content="Kubernetes">
 		<meta property="article:tag" content="Nextcloud">
 		<meta property="article:tag" content="Dateien">
@@ -311,12 +311,12 @@ href="/site.webmanifest.min.e231d7c2a5ac29753d1781895bdd4b9a0e5900e75bcee133bb47
     "dateCreated": "2025-10-20T14:23:44\u002b02:00",
     "datePublished": "2025-10-20T14:23:44\u002b02:00",
     
-    "dateModified": "2026-11-21T22:34:39\u002b01:00",
+    "dateModified": "2026-11-25T22:40:33\u002b01:00",
     
     "keywords": ["kubernetes","nextcloud","dateien"],
     
     "mainEntityOfPage": "https://zyria.de/posts/homelab/k3s-prod/apps/nextcloud/readme/",
-    "wordCount": "5777"
+    "wordCount": "5939"
   }]
   </script>
 
@@ -963,7 +963,7 @@ href="/site.webmanifest.min.e231d7c2a5ac29753d1781895bdd4b9a0e5900e75bcee133bb47
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2025-10-20T14:23:44&#43;02:00">20 Oktober 2025</time><span class="px-2 text-primary-500">&middot;</span><time datetime="2026-11-21T22:34:39&#43;01:00">Aktualisiert: 21 November 2026</time><span class="px-2 text-primary-500">&middot;</span><span>5777 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
+      <time datetime="2025-10-20T14:23:44&#43;02:00">20 Oktober 2025</time><span class="px-2 text-primary-500">&middot;</span><time datetime="2026-11-25T22:40:33&#43;01:00">Aktualisiert: 25 November 2026</time><span class="px-2 text-primary-500">&middot;</span><span>5939 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
 
 
   
@@ -1147,6 +1147,7 @@ href="/site.webmanifest.min.e231d7c2a5ac29753d1781895bdd4b9a0e5900e75bcee133bb47
         <li><a href="#lokale-anpassungen">Lokale Anpassungen</a>
           <ul>
             <li><a href="#wichtige-einstellungen">Wichtige Einstellungen</a></li>
+            <li><a href="#sftp-zugang-zum-datenvolumen">SFTP-Zugang zum Datenvolumen</a></li>
             <li><a href="#app-updates">App-Updates</a></li>
             <li><a href="#php-fpm-tuning">php-fpm-Tuning</a></li>
             <li><a href="#nachtrag-24082026--cpu-limit-opcache-ptrace">Nachtrag 24.08.2026 — CPU-Limit, Opcache, ptrace</a></li>
@@ -1188,6 +1189,7 @@ href="/site.webmanifest.min.e231d7c2a5ac29753d1781895bdd4b9a0e5900e75bcee133bb47
         <li><a href="#lokale-anpassungen">Lokale Anpassungen</a>
           <ul>
             <li><a href="#wichtige-einstellungen">Wichtige Einstellungen</a></li>
+            <li><a href="#sftp-zugang-zum-datenvolumen">SFTP-Zugang zum Datenvolumen</a></li>
             <li><a href="#app-updates">App-Updates</a></li>
             <li><a href="#php-fpm-tuning">php-fpm-Tuning</a></li>
             <li><a href="#nachtrag-24082026--cpu-limit-opcache-ptrace">Nachtrag 24.08.2026 — CPU-Limit, Opcache, ptrace</a></li>
@@ -1441,6 +1443,32 @@ bei <code>IfNotPresent</code> (Redis, ClamAV) nahm der Node dabei das alte Image
 <li><strong>Datenlokalität</strong>: <code>nextcloud-data</code> steht in Longhorn auf <code>dataLocality: disabled</code>, abweichend vom Cluster-Standard <code>best-effort</code>. Zieht der Pod auf einen anderen Node, etwa nach einem Neustart, liest er die Daten über das Storage-Netz, statt dass Longhorn ein lokales Replikat des 400-GiB-Volumes kopiert. Eine solche Kopie hat am 19.10.2026 bei Plex etcd blockiert. Die Einstellung liegt am Longhorn-Volume, nicht in diesem Verzeichnis, weil das PV statisch angelegt ist: <code>kubectl patch volumes.longhorn.io -n longhorn-system nextcloud-data --type merge -p '{&quot;spec&quot;:{&quot;dataLocality&quot;:&quot;disabled&quot;}}'</code>. Die übrigen Volumes der App bleiben auf <code>best-effort</code>.</li>
 <li><strong>Virenscanner</strong>: Der integrierte ClamAV-Dienst ist so konfiguriert, dass er über einen Socket mit der Nextcloud-Anwendung kommuniziert.</li>
 </ul>
+
+<h4 class="relative group">SFTP-Zugang zum Datenvolumen
+    <div id="sftp-zugang-zum-datenvolumen" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#sftp-zugang-zum-datenvolumen" aria-label="Anker">#</a>
+    </span>
+    
+</h4>
+<p>Der Container <code>ssh</code> (<code>lscr.io/linuxserver/openssh-server</code>) gibt das Volume
+<code>nextcloud-data</code> per SFTP heraus, nur mit Schluessel. Nach aussen haengt er
+ueber <code>nextcloud-ssh-service</code> an der geteilten Dienstadresse, nicht an der
+Adresse von Traefik (Adressen und Port in <code>values.yaml</code>, 4022 nach 2222).</p>
+<p>Deshalb hat der Zugang in <code>dns-records.yaml</code> seinen eigenen Namen
+<code>sftp.cloud.zyria.de</code>. <code>cloud.zyria.de</code> taugt nicht: Dessen AAAA zeigt seit dem
+21.11.2026 auf Traefik, und dort hoert nichts auf 4022, ein IPv6-Client laeuft
+in einen Timeout. Ueber IPv4 fiel das nicht auf, weil die Portweiterleitung
+4022 an die Dienstadresse schickt. Am 25.11.2026 von der Pruef-VM <code>probe</code> aus
+gemessen, in beide Richtungen.</p>
+<p>Eine Adresse fuer Web und SFTP zugleich verlangt, dass beide Ports auf
+dieselben Pods zeigen: MetalLB teilt eine Adresse nur zwischen Services mit
+gleichem Sharing-Key und verschiedenen Ports, und dann nur, wenn beide
+<code>externalTrafficPolicy: Cluster</code> tragen oder dieselben Pods bedienen. Traefik
+steht auf <code>Local</code>, damit die echte Client-Adresse ankommt. Die Wege zu einer
+Adresse je Familie stehen im Plan <code>netz-eingang-alternativen</code>, Abschnitt W6.7.</p>
 
 <h4 class="relative group">App-Updates
     <div id="app-updates" class="anchor"></div>

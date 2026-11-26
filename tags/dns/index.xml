@@ -9,7 +9,17 @@
     <managingEditor>fabrice@zyria.de (Fabrice Kirchner)</managingEditor>
     <webMaster>fabrice@zyria.de (Fabrice Kirchner)</webMaster>
     
-    <lastBuildDate>Sat, 21 Nov 2026 22:34:39 +0100</lastBuildDate><atom:link href="https://zyria.de/tags/dns/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 26 Nov 2026 01:24:56 +0100</lastBuildDate><atom:link href="https://zyria.de/tags/dns/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>UCG DNS</title>
+      <link>https://zyria.de/posts/homelab/k3s-prod/apps/ucg-dns/readme/</link>
+      <pubDate>Thu, 26 Nov 2026 00:30:00 +0100</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/ucg-dns/readme/</guid>
+      <description>Ein CronJob gleicht die DNS-Policies des Gateways mit policies.yaml ab, damit die LAN-Clients die eigenen öffentlichen Namen intern auflösen.</description>
+      
+    </item>
     
     <item>
       <title>Pi-hole</title>
