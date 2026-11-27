@@ -104,8 +104,8 @@
 	<meta property="og:locale" content="de_de">
 	<meta property="og:type" content="article">
 		<meta property="article:section" content="posts">
-		<meta property="article:published_time" content="2026-11-07T14:35:49+01:00">
-		<meta property="article:modified_time" content="2026-11-07T14:35:49+01:00">
+		<meta property="article:published_time" content="2026-11-26T23:37:51+01:00">
+		<meta property="article:modified_time" content="2026-11-26T23:37:51+01:00">
 		<meta property="article:tag" content="Kubernetes">
 		<meta property="article:tag" content="K3s">
 		<meta property="article:tag" content="Gitops">
@@ -311,15 +311,15 @@ href="/site.webmanifest.min.e231d7c2a5ac29753d1781895bdd4b9a0e5900e75bcee133bb47
       "sameAs": ["https://git.casa-due-pur.de/fabrice.kirchner", "https://git.zyria.de/pyrox", "https://github.com/ricariel", "https://www.linkedin.com/in/fabrice-kirchner-bb5408163/", "https://www.xing.com/profile/Fabrice_Kirchner", "https://kirchner.social/@fabrice", "https://codeberg.org/ricariel"]
     },
     "copyrightYear": "2026",
-    "dateCreated": "2026-11-07T14:35:49\u002b01:00",
-    "datePublished": "2026-11-07T14:35:49\u002b01:00",
+    "dateCreated": "2026-11-26T23:37:51\u002b01:00",
+    "datePublished": "2026-11-26T23:37:51\u002b01:00",
     
-    "dateModified": "2026-11-07T14:35:49\u002b01:00",
+    "dateModified": "2026-11-26T23:37:51\u002b01:00",
     
     "keywords": ["kubernetes","k3s","gitops","argocd","helm","kustomize","homelab","produktion"],
     
     "mainEntityOfPage": "https://zyria.de/posts/homelab/k3s-prod/apps/vpn-site-c/readme/",
-    "wordCount": "1350"
+    "wordCount": "1522"
   }]
   </script>
 
@@ -964,7 +964,7 @@ href="/site.webmanifest.min.e231d7c2a5ac29753d1781895bdd4b9a0e5900e75bcee133bb47
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2026-11-07T14:35:49&#43;01:00">7 November 2026</time><span class="px-2 text-primary-500">&middot;</span><span>1350 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
+      <time datetime="2026-11-26T23:37:51&#43;01:00">26 November 2026</time><span class="px-2 text-primary-500">&middot;</span><span>1522 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
 
 
   
@@ -1251,6 +1251,8 @@ href="/site.webmanifest.min.e231d7c2a5ac29753d1781895bdd4b9a0e5900e75bcee133bb47
         <li><a href="#installation">Installation</a></li>
         <li><a href="#abhängigkeiten">Abhängigkeiten</a></li>
         <li><a href="#offene-punkte">Offene Punkte</a></li>
+        <li><a href="#selbstheilung-des-tunnels">Selbstheilung des Tunnels</a></li>
+        <li><a href="#alarm">Alarm</a></li>
       </ul>
     </li>
   </ul>
@@ -1283,6 +1285,8 @@ href="/site.webmanifest.min.e231d7c2a5ac29753d1781895bdd4b9a0e5900e75bcee133bb47
         <li><a href="#installation">Installation</a></li>
         <li><a href="#abhängigkeiten">Abhängigkeiten</a></li>
         <li><a href="#offene-punkte">Offene Punkte</a></li>
+        <li><a href="#selbstheilung-des-tunnels">Selbstheilung des Tunnels</a></li>
+        <li><a href="#alarm">Alarm</a></li>
       </ul>
     </li>
   </ul>
@@ -1615,6 +1619,28 @@ href="/site.webmanifest.min.e231d7c2a5ac29753d1781895bdd4b9a0e5900e75bcee133bb47
 </h3>
 <p>Der private WireGuard-Schlüssel und der Headscale-Pre-Auth-Key liegen im Klartext im Repository. Das ist konsistent mit dem restlichen Repo, bleibt aber die offene Security-Aufgabe (SOPS oder Sealed Secrets), die auch in <code>.pre-commit-config.yaml</code> vermerkt ist.</p>
 
+<h3 class="relative group">Selbstheilung des Tunnels
+    <div id="selbstheilung-des-tunnels" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#selbstheilung-des-tunnels" aria-label="Anker">#</a>
+    </span>
+    
+</h3>
+<p>Der Sidecar <code>reresolve</code> prüft alle 30 Sekunden das Alter des letzten Handshakes. Ab 180 Sekunden setzt er den Endpoint neu, damit eine geänderte IP der Gegenstelle übernommen wird. Ab 300 Sekunden wechselt er zusätzlich den lokalen UDP-Port (<code>wg set wg0 listen-port 0</code>), höchstens einmal je 300 Sekunden. Anlass: Am 26.11.2026 fiel das WAN von etwa 02:58 bis 03:01 aus, danach blieben <code>vpn-site-a</code> und <code>vpn-site-c</code> fünf Stunden ohne Handshake, obwohl Endpoint und Gegenstellen unverändert waren; erst ein Neustart mit neuem Port heilte sie. Wahrscheinlich hielt ein veralteter NAT-Eintrag auf dem Weg nach draußen die Verbindung fest, die Keepalives hielten ihn am Leben. Ein neuer Port legt überall neue Einträge an. Der Wechsel ist im Log als <code>[REBIND]</code> zu sehen; die Suite <code>vpn-reresolve</code> prüft ihn gegen echtes WireGuard.</p>
+
+<h3 class="relative group">Alarm
+    <div id="alarm" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#alarm" aria-label="Anker">#</a>
+    </span>
+    
+</h3>
+<p>Der Namespace trägt <code>alerting.zyria.de/criticality: critical</code>. Ist 20 Minuten lang kein Pod bereit, meldet <code>CriticalServiceDown</code> sofort als kritischen Alarm (Matrix und Mail), siehe <code>apps/prometheus/README.md</code>. Die Readiness-Probe bildet den Tunnel ab, ein nicht bereiter Pod heißt also: Der Standort ist nicht erreichbar.</p>
+
           
           
           
@@ -1846,14 +1872,14 @@ href="/site.webmanifest.min.e231d7c2a5ac29753d1781895bdd4b9a0e5900e75bcee133bb47
           
             <a
               class="flex text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
-              href="/posts/homelab/k3s-prod/apps/openobserve/readme/">
+              href="/posts/homelab/k3s-prod/apps/vpn-site-b/readme/">
               <span class="leading-6">
-                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;OpenObserve
+                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;VPN Standort B - Tailscale Subnet Router
               </span>
             </a>
             
               <span class="ms-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
-                <time datetime="2026-11-06T15:13:27&#43;01:00">6 November 2026</time>
+                <time datetime="2026-11-26T12:51:54&#43;01:00">26 November 2026</time>
               </span>
             
           
@@ -1869,7 +1895,7 @@ href="/site.webmanifest.min.e231d7c2a5ac29753d1781895bdd4b9a0e5900e75bcee133bb47
             </a>
             
               <span class="me-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
-                <time datetime="2026-11-07T14:35:49&#43;01:00">7 November 2026</time>
+                <time datetime="2026-11-26T23:37:51&#43;01:00">26 November 2026</time>
               </span>
             
           

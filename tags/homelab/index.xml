@@ -9,7 +9,7 @@
     <managingEditor>fabrice@zyria.de (Fabrice Kirchner)</managingEditor>
     <webMaster>fabrice@zyria.de (Fabrice Kirchner)</webMaster>
     
-    <lastBuildDate>Thu, 26 Nov 2026 00:56:09 +0100</lastBuildDate><atom:link href="https://zyria.de/tags/homelab/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 27 Nov 2026 00:16:57 +0100</lastBuildDate><atom:link href="https://zyria.de/tags/homelab/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Erste Hilfe</title>
@@ -34,10 +34,50 @@
     <item>
       <title>Matrix</title>
       <link>https://zyria.de/posts/homelab/k3s-prod/apps/matrix/readme/</link>
-      <pubDate>Thu, 26 Nov 2026 00:56:09 +0100</pubDate>
+      <pubDate>Fri, 27 Nov 2026 00:16:57 +0100</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/posts/homelab/k3s-prod/apps/matrix/readme/</guid>
       <description>Diese Anwendung stellt einen Matrix-Homeserver (Synapse) mit Web-Client und Administrationsoberfläche aus dem offiziellen ESS-Chart bereit.</description>
+      
+    </item>
+    
+    <item>
+      <title>VPN Standort A - Tailscale Subnet Router</title>
+      <link>https://zyria.de/posts/homelab/k3s-prod/apps/vpn-site-a/readme/</link>
+      <pubDate>Thu, 26 Nov 2026 23:37:51 +0100</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/vpn-site-a/readme/</guid>
+      <description>Ein Pod baut einen WireGuard-Tunnel zu einem entfernten Standort auf und annonciert die dahinterliegenden Netze via Headscale ins Tailnet.</description>
+      
+    </item>
+    
+    <item>
+      <title>VPN Standort C - Anbindung an das CDP-Tailnet</title>
+      <link>https://zyria.de/posts/homelab/k3s-prod/apps/vpn-site-c/readme/</link>
+      <pubDate>Thu, 26 Nov 2026 23:37:51 +0100</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/vpn-site-c/readme/</guid>
+      <description>Ein Pod baut einen WireGuard-Tunnel zum WireGuard-Server im CDP-Cluster auf und annonciert die Adressbereiche des CDP-Tailnets via Headscale ins eigene Tailnet.</description>
+      
+    </item>
+    
+    <item>
+      <title>VPN Standort B - Tailscale Subnet Router</title>
+      <link>https://zyria.de/posts/homelab/k3s-prod/apps/vpn-site-b/readme/</link>
+      <pubDate>Thu, 26 Nov 2026 12:51:54 +0100</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/vpn-site-b/readme/</guid>
+      <description>Ein Pod baut einen OpenVPN-Tunnel zu einem entfernten Standort auf und annonciert die dahinterliegenden Netze via Headscale ins Tailnet.</description>
+      
+    </item>
+    
+    <item>
+      <title>UCG-Zertifikat</title>
+      <link>https://zyria.de/posts/homelab/k3s-prod/apps/ucg-cert/readme/</link>
+      <pubDate>Thu, 26 Nov 2026 09:24:19 +0100</pubDate>
+      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
+      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/ucg-cert/readme/</guid>
+      <description>cert-manager stellt das Zertifikat per DNS-01 aus, ein CronJob lädt es über die Zertifikats-API von UniFi OS auf das Gateway und aktiviert es.</description>
       
     </item>
     
@@ -202,16 +242,6 @@
     </item>
     
     <item>
-      <title>VPN Standort B - Tailscale Subnet Router</title>
-      <link>https://zyria.de/posts/homelab/k3s-prod/apps/vpn-site-b/readme/</link>
-      <pubDate>Sun, 08 Nov 2026 12:16:24 +0100</pubDate>
-      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/vpn-site-b/readme/</guid>
-      <description>Ein Pod baut einen OpenVPN-Tunnel zu einem entfernten Standort auf und annonciert die dahinterliegenden Netze via Headscale ins Tailnet.</description>
-      
-    </item>
-    
-    <item>
       <title>Scrypted</title>
       <link>https://zyria.de/posts/homelab/k3s-prod/apps/scrypted/readme/</link>
       <pubDate>Sat, 07 Nov 2026 15:06:59 +0100</pubDate>
@@ -222,42 +252,12 @@
     </item>
     
     <item>
-      <title>VPN Standort A - Tailscale Subnet Router</title>
-      <link>https://zyria.de/posts/homelab/k3s-prod/apps/vpn-site-a/readme/</link>
-      <pubDate>Sat, 07 Nov 2026 14:35:49 +0100</pubDate>
-      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/vpn-site-a/readme/</guid>
-      <description>Ein Pod baut einen WireGuard-Tunnel zu einem entfernten Standort auf und annonciert die dahinterliegenden Netze via Headscale ins Tailnet.</description>
-      
-    </item>
-    
-    <item>
-      <title>VPN Standort C - Anbindung an das CDP-Tailnet</title>
-      <link>https://zyria.de/posts/homelab/k3s-prod/apps/vpn-site-c/readme/</link>
-      <pubDate>Sat, 07 Nov 2026 14:35:49 +0100</pubDate>
-      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/vpn-site-c/readme/</guid>
-      <description>Ein Pod baut einen WireGuard-Tunnel zum WireGuard-Server im CDP-Cluster auf und annonciert die Adressbereiche des CDP-Tailnets via Headscale ins eigene Tailnet.</description>
-      
-    </item>
-    
-    <item>
       <title>OpenObserve</title>
       <link>https://zyria.de/posts/homelab/k3s-prod/apps/openobserve/readme/</link>
       <pubDate>Fri, 06 Nov 2026 15:13:27 +0100</pubDate>
       <author>fabrice@zyria.de (Fabrice Kirchner)</author>
       <guid>https://zyria.de/posts/homelab/k3s-prod/apps/openobserve/readme/</guid>
       <description>OpenObserve speichert die Container-Logs, die Fluent Bit einliefert, 90 Tage lang auf einem Longhorn-Volume, macht sie durchsuchbar und liefert die Traefik-Access-Logs für ein Replay in CrowdSec. Anmeldung per Single Sign-on über Dex und Authentik.</description>
-      
-    </item>
-    
-    <item>
-      <title>UCG-Zertifikat</title>
-      <link>https://zyria.de/posts/homelab/k3s-prod/apps/ucg-cert/readme/</link>
-      <pubDate>Fri, 06 Nov 2026 13:29:36 +0100</pubDate>
-      <author>fabrice@zyria.de (Fabrice Kirchner)</author>
-      <guid>https://zyria.de/posts/homelab/k3s-prod/apps/ucg-cert/readme/</guid>
-      <description>cert-manager stellt das Zertifikat per DNS-01 aus, ein CronJob lädt es über die Zertifikats-API von UniFi OS auf das Gateway und aktiviert es.</description>
       
     </item>
     

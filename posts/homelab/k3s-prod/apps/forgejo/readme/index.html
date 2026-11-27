@@ -105,7 +105,7 @@
 	<meta property="og:type" content="article">
 		<meta property="article:section" content="posts">
 		<meta property="article:published_time" content="2025-10-17T11:57:17+02:00">
-		<meta property="article:modified_time" content="2026-11-25T11:10:10+01:00">
+		<meta property="article:modified_time" content="2026-11-27T00:22:24+01:00">
 		<meta property="article:tag" content="Kubernetes">
 		<meta property="article:tag" content="Forgejo">
 		<meta property="article:tag" content="Git">
@@ -311,12 +311,12 @@ href="/site.webmanifest.min.e231d7c2a5ac29753d1781895bdd4b9a0e5900e75bcee133bb47
     "dateCreated": "2025-10-17T11:57:17\u002b02:00",
     "datePublished": "2025-10-17T11:57:17\u002b02:00",
     
-    "dateModified": "2026-11-25T11:10:10\u002b01:00",
+    "dateModified": "2026-11-27T00:22:24\u002b01:00",
     
     "keywords": ["kubernetes","forgejo","git"],
     
     "mainEntityOfPage": "https://zyria.de/posts/homelab/k3s-prod/apps/forgejo/readme/",
-    "wordCount": "1260"
+    "wordCount": "1473"
   }]
   </script>
 
@@ -963,7 +963,7 @@ href="/site.webmanifest.min.e231d7c2a5ac29753d1781895bdd4b9a0e5900e75bcee133bb47
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2025-10-17T11:57:17&#43;02:00">17 Oktober 2025</time><span class="px-2 text-primary-500">&middot;</span><time datetime="2026-11-25T11:10:10&#43;01:00">Aktualisiert: 25 November 2026</time><span class="px-2 text-primary-500">&middot;</span><span>1260 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
+      <time datetime="2025-10-17T11:57:17&#43;02:00">17 Oktober 2025</time><span class="px-2 text-primary-500">&middot;</span><time datetime="2026-11-27T00:22:24&#43;01:00">Aktualisiert: 27 November 2026</time><span class="px-2 text-primary-500">&middot;</span><span>1473 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
 
 
   
@@ -1153,6 +1153,7 @@ href="/site.webmanifest.min.e231d7c2a5ac29753d1781895bdd4b9a0e5900e75bcee133bb47
         </li>
         <li><a href="#installation">Installation</a></li>
         <li><a href="#abhängigkeiten">Abhängigkeiten</a></li>
+        <li><a href="#benachrichtigungen-nach-matrix">Benachrichtigungen nach Matrix</a></li>
         <li><a href="#bewusst-nicht-aktivierte-funktionen">Bewusst nicht aktivierte Funktionen</a></li>
         <li><a href="#hinweise-zum-betrieb">Hinweise zum Betrieb</a></li>
       </ul>
@@ -1185,6 +1186,7 @@ href="/site.webmanifest.min.e231d7c2a5ac29753d1781895bdd4b9a0e5900e75bcee133bb47
         </li>
         <li><a href="#installation">Installation</a></li>
         <li><a href="#abhängigkeiten">Abhängigkeiten</a></li>
+        <li><a href="#benachrichtigungen-nach-matrix">Benachrichtigungen nach Matrix</a></li>
         <li><a href="#bewusst-nicht-aktivierte-funktionen">Bewusst nicht aktivierte Funktionen</a></li>
         <li><a href="#hinweise-zum-betrieb">Hinweise zum Betrieb</a></li>
       </ul>
@@ -1560,6 +1562,65 @@ Datei.</p>
 <li><strong>Longhorn</strong>: Als Storage-Provider für die PersistentVolumes.</li>
 <li>Ein SMTP-Server für E-Mail-Benachrichtigungen.</li>
 </ul>
+
+<h3 class="relative group">Benachrichtigungen nach Matrix
+    <div id="benachrichtigungen-nach-matrix" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#benachrichtigungen-nach-matrix" aria-label="Anker">#</a>
+    </span>
+    
+</h3>
+<p>Forgejo bringt einen eigenen Webhook-Typ <code>matrix</code> mit
+(<code>services/webhook/matrix.go</code>), und <code>[webhook] ALLOWED_HOST_LIST</code> steht auf
+<code>external,private</code>, lässt also Ziele im Internet und im LAN zu. Damit landen
+fehlgeschlagene Actions-Läufe, neue Pull Requests und Releases in einem
+Matrix-Raum, statt nur als Mail.</p>
+<p>Der Webhook ist Zustand in der Forgejo-Datenbank, nicht im Repository: Die
+API-Definition dieser Instanz führt im Feld <code>CreateHookOption.type</code> kein
+<code>matrix</code>, sodass der Webhook über die Oberfläche angelegt wird. Deshalb als
+Standard-Webhook im Administrationsbereich (Einstellungen, Webhooks), der für
+alle Repositories gilt, statt je Repository einen eigenen.</p>
+<table>
+	<thead>
+			<tr>
+					<th>Feld</th>
+					<th>Wert</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>Homeserver-URL</td>
+					<td>der Homeserver des Bot-Kontos</td>
+			</tr>
+			<tr>
+					<td>Raum-ID</td>
+					<td>die interne ID des Ziel-Raums (<code>!abc:server</code>), nicht der Alias</td>
+			</tr>
+			<tr>
+					<td>Access-Token</td>
+					<td>Token des Bot-Kontos, siehe unten</td>
+			</tr>
+			<tr>
+					<td>Nachrichtentyp</td>
+					<td><code>m.notice</code>, damit Clients die Nachricht nicht als Anrede behandeln</td>
+			</tr>
+			<tr>
+					<td>Ereignisse</td>
+					<td>mindestens Actions-Läufe, Pull Requests und Releases; Pushes nur, wenn der Raum sie tragen soll</td>
+			</tr>
+	</tbody>
+</table>
+<p>Das Token stellt der Homeserver aus. Läuft dort der Matrix Authentication
+Service, erzeugt ein Admin ein nicht ablaufendes Kompatibilitätstoken:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">kubectl <span class="nb">exec</span> -n matrix deploy/matrix-matrix-authentication-service -- <span class="se">\
+</span></span></span><span class="line"><span class="ln">2</span><span class="cl">  mas-cli manage issue-compatibility-token &lt;bot-konto&gt;</span></span></code></pre></div></div>
+<p>Das Bot-Konto muss Mitglied des Raums sein; anders als der Shoutrrr-Sender von
+Keel nimmt Forgejo keine Einladung selbst an. Fällt die Verfallsfrist für
+untätige Sitzungen auf das Token (180 Tage, siehe <code>apps/matrix/README.md</code>),
+muss ein neues her; bei einem Repository mit Actions-Läufen tritt das
+praktisch nicht ein.</p>
 
 <h3 class="relative group">Bewusst nicht aktivierte Funktionen
     <div id="bewusst-nicht-aktivierte-funktionen" class="anchor"></div>

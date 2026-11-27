@@ -46,13 +46,37 @@
   </url>
   <url>
     <loc>https://zyria.de/posts/homelab/k3s-prod/apps/matrix/readme/</loc>
-    <lastmod>2026-11-26T00:56:09+01:00</lastmod>
+    <lastmod>2026-11-27T00:16:57+01:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://zyria.de/posts/homelab/k3s-prod/apps/vpn-site-a/readme/</loc>
+    <lastmod>2026-11-26T23:37:51+01:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://zyria.de/posts/homelab/k3s-prod/apps/vpn-site-c/readme/</loc>
+    <lastmod>2026-11-26T23:37:51+01:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://zyria.de/posts/homelab/k3s-prod/apps/vpn-site-b/readme/</loc>
+    <lastmod>2026-11-26T12:51:54+01:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://zyria.de/posts/homelab/k3s-prod/apps/ucg-cert/readme/</loc>
+    <lastmod>2026-11-26T09:24:19+01:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://zyria.de/posts/homelab/k3s-prod/apps/ucg-dns/readme/</loc>
-    <lastmod>2026-11-26T01:24:56+01:00</lastmod>
+    <lastmod>2026-11-26T23:28:01+01:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -153,38 +177,14 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://zyria.de/posts/homelab/k3s-prod/apps/vpn-site-b/readme/</loc>
-    <lastmod>2026-11-08T12:16:24+01:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
     <loc>https://zyria.de/posts/homelab/k3s-prod/apps/scrypted/readme/</loc>
     <lastmod>2026-11-07T15:06:59+01:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://zyria.de/posts/homelab/k3s-prod/apps/vpn-site-a/readme/</loc>
-    <lastmod>2026-11-07T14:35:49+01:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://zyria.de/posts/homelab/k3s-prod/apps/vpn-site-c/readme/</loc>
-    <lastmod>2026-11-07T14:35:49+01:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
     <loc>https://zyria.de/posts/homelab/k3s-prod/apps/openobserve/readme/</loc>
     <lastmod>2026-11-06T15:13:27+01:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://zyria.de/posts/homelab/k3s-prod/apps/ucg-cert/readme/</loc>
-    <lastmod>2026-11-06T13:29:36+01:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -490,7 +490,7 @@
   </url>
   <url>
     <loc>https://zyria.de/posts/homelab/k3s-prod/apps/prometheus/readme/</loc>
-    <lastmod>2026-11-14T12:09:08+01:00</lastmod>
+    <lastmod>2026-11-26T12:51:54+01:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -502,7 +502,7 @@
   </url>
   <url>
     <loc>https://zyria.de/posts/homelab/k3s-prod/apps/keel/readme/</loc>
-    <lastmod>2026-11-10T09:15:18+01:00</lastmod>
+    <lastmod>2026-11-27T00:21:12+01:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -532,7 +532,7 @@
   </url>
   <url>
     <loc>https://zyria.de/posts/homelab/k3s-prod/apps/forgejo/readme/</loc>
-    <lastmod>2026-11-25T11:10:10+01:00</lastmod>
+    <lastmod>2026-11-27T00:22:24+01:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>

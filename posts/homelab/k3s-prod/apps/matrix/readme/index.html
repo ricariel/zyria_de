@@ -104,8 +104,8 @@
 	<meta property="og:locale" content="de_de">
 	<meta property="og:type" content="article">
 		<meta property="article:section" content="posts">
-		<meta property="article:published_time" content="2026-11-26T00:56:09+01:00">
-		<meta property="article:modified_time" content="2026-11-26T00:56:09+01:00">
+		<meta property="article:published_time" content="2026-11-27T00:16:57+01:00">
+		<meta property="article:modified_time" content="2026-11-27T00:16:57+01:00">
 		<meta property="article:tag" content="Kubernetes">
 		<meta property="article:tag" content="K3s">
 		<meta property="article:tag" content="Gitops">
@@ -311,15 +311,15 @@ href="/site.webmanifest.min.e231d7c2a5ac29753d1781895bdd4b9a0e5900e75bcee133bb47
       "sameAs": ["https://git.casa-due-pur.de/fabrice.kirchner", "https://git.zyria.de/pyrox", "https://github.com/ricariel", "https://www.linkedin.com/in/fabrice-kirchner-bb5408163/", "https://www.xing.com/profile/Fabrice_Kirchner", "https://kirchner.social/@fabrice", "https://codeberg.org/ricariel"]
     },
     "copyrightYear": "2026",
-    "dateCreated": "2026-11-26T00:56:09\u002b01:00",
-    "datePublished": "2026-11-26T00:56:09\u002b01:00",
+    "dateCreated": "2026-11-27T00:16:57\u002b01:00",
+    "datePublished": "2026-11-27T00:16:57\u002b01:00",
     
-    "dateModified": "2026-11-26T00:56:09\u002b01:00",
+    "dateModified": "2026-11-27T00:16:57\u002b01:00",
     
     "keywords": ["kubernetes","k3s","gitops","argocd","helm","kustomize","homelab","produktion"],
     
     "mainEntityOfPage": "https://zyria.de/posts/homelab/k3s-prod/apps/matrix/readme/",
-    "wordCount": "1088"
+    "wordCount": "2240"
   }]
   </script>
 
@@ -964,7 +964,7 @@ href="/site.webmanifest.min.e231d7c2a5ac29753d1781895bdd4b9a0e5900e75bcee133bb47
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2026-11-26T00:56:09&#43;01:00">26 November 2026</time><span class="px-2 text-primary-500">&middot;</span><span>1088 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
+      <time datetime="2026-11-27T00:16:57&#43;01:00">27 November 2026</time><span class="px-2 text-primary-500">&middot;</span><span>2240 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
 
 
   
@@ -1242,6 +1242,9 @@ href="/site.webmanifest.min.e231d7c2a5ac29753d1781895bdd4b9a0e5900e75bcee133bb47
         <li><a href="#lokale-anpassungen">Lokale Anpassungen</a>
           <ul>
             <li><a href="#wichtige-einstellungen">Wichtige Einstellungen</a></li>
+            <li><a href="#hookshot-als-feedleser">Hookshot als Feedleser</a></li>
+            <li><a href="#von-hand-angelegte-secrets">Von Hand angelegte Secrets</a></li>
+            <li><a href="#element-call">Element Call</a></li>
             <li><a href="#worker">Worker</a></li>
           </ul>
         </li>
@@ -1271,6 +1274,9 @@ href="/site.webmanifest.min.e231d7c2a5ac29753d1781895bdd4b9a0e5900e75bcee133bb47
         <li><a href="#lokale-anpassungen">Lokale Anpassungen</a>
           <ul>
             <li><a href="#wichtige-einstellungen">Wichtige Einstellungen</a></li>
+            <li><a href="#hookshot-als-feedleser">Hookshot als Feedleser</a></li>
+            <li><a href="#von-hand-angelegte-secrets">Von Hand angelegte Secrets</a></li>
+            <li><a href="#element-call">Element Call</a></li>
             <li><a href="#worker">Worker</a></li>
           </ul>
         </li>
@@ -1457,9 +1463,15 @@ als eigener Pod betrieben. Das Chart rechnet <code>shared_buffers</code>, <code>
 <li><strong>Well-Known-Delegation</strong>: Liefert <code>.well-known/matrix</code> unter dem Servernamen aus, damit
 Clients und andere Server den Homeserver über Port 443 finden. Die SRV-Einträge der Zone
 bleiben daneben bestehen.</li>
-<li><strong>Matrix Authentication Service</strong> und <strong>Element Admin</strong> sind vorbereitet, aber noch
-abgeschaltet, siehe „Stufen der Umstellung“. <strong>MatrixRTC</strong> (Element Call) kommt als eigene
-Änderung, weil es eigene öffentliche Ports braucht.</li>
+<li><strong>Matrix Authentication Service</strong>: Übernimmt die Anmeldung. Als Upstream-Anbieter ist
+Authentik per OIDC eingebunden; der Matrix-Benutzername kommt aus <code>preferred_username</code>.</li>
+<li><strong>Element Admin</strong>: Web-Oberfläche zur Verwaltung des Homeservers unter
+<code>admin.&lt;matrix-domain&gt;</code>.</li>
+<li><strong>Hookshot</strong>: Brücke, hier nur als Leser von RSS- und Atom-Feeds, erreichbar unter
+<code>/_matrix/hookshot</code> am Namen von Synapse, siehe den Abschnitt Hookshot.</li>
+<li><strong>MatrixRTC</strong> (Element Call): Der Autorisierungsdienst antwortet wie die übrigen
+Komponenten über Traefik unter <code>mrtc.&lt;matrix-domain&gt;</code>. Die Medienströme der SFU gehen nicht
+über Traefik, siehe den Abschnitt Element Call.</li>
 </ul>
 
 <h3 class="relative group">Lokale Anpassungen
@@ -1512,13 +1524,214 @@ Init-Container, den die alte Installation dafür brauchte, entfällt. Geprüft w
 gerenderten Manifest durch <code>tests/charts/check_matrix_smtp.py</code> in der Suite <code>charts</code>.</li>
 <li><strong>Synapse-Einstellungen</strong>: Abweichungen von den Chart-Vorgaben stehen unter
 <code>synapse.additional</code> (Präsenz, öffentliches Raumverzeichnis, Benutzerverzeichnis,
-automatisches Annehmen von Einladungen lokaler Benutzer).</li>
+automatisches Annehmen von Einladungen lokaler Benutzer). <code>suppress_key_server_warning</code>
+unterdrückt die mehrzeilige Warnung, die Synapse sonst bei jedem Start über das Vertrauen
+in den Schlüsselserver von matrix.org schreibt; das Vertrauen selbst ist gewollt
+(<code>trusted_key_servers</code>).</li>
+<li><strong>Element Web</strong>: <code>bug_report_endpoint_url</code> steht auf <code>null</code>. Das Chart setzt dort sonst den
+Rageshake-Dienst von Element ein, und ein Fehlerbericht nimmt den Logpuffer des Clients mit;
+mit <code>null</code> verschwindet die Schaltfläche. <code>map_style_url</code> bleibt dagegen auf dem Wert des
+Charts: ohne ihn zeigt eine geteilte Standortfreigabe keine Karte. <code>feature_login_with_qr</code>
+schaltet die Anmeldung per QR-Code frei, deren Gegenstück <code>msc4108_enabled</code> das Chart in
+Synapse setzt, sobald der Authentication Service die Anmeldung führt.</li>
+<li><strong>Support-Kontakt</strong>: <code>wellKnownDelegation.additional.support</code> füllt
+<code>/.well-known/matrix/support</code> (MSC1929) mit Matrix-ID und Mailadresse des Administrators.
+Ohne Eintrag antwortet der Pfad <code>{}</code>, was Partner nicht von einem Server unterscheiden
+können, der nie einen Kontakt hinterlegt hat.</li>
+<li><strong>Mailversand des Authentication Service</strong>: Der Dienst startet mit
+<code>transport: blackhole</code> und sendet von sich aus nichts. Der <code>email</code>-Block liegt wegen des
+SMTP-Kennworts im Secret <code>matrix-mas-mail</code> (Schlüssel <code>3mail.yaml</code>), das von Hand angelegt
+wird, wie <code>matrix-smtp-config</code> bei Synapse. Absender ist <code>noreply@kirchner.social</code>, nicht die
+Subdomain: Postfix schreibt <code>matrix.kirchner.social</code> wegen <code>masquerade_domains</code> ohnehin auf
+die Hauptdomain um (pyrox/k3s-prod#1464), und die hier eingetragene Adresse ist damit die,
+die auch ausgeliefert wird. Darauf setzt <code>account.password_recovery_enabled</code> auf: Die Konten
+mit lokalem Passwort können es über einen Mail-Link selbst zurücksetzen. Das wirkt nur für
+ein Konto, das im Dienst eine Adresse hinterlegt hat; am 27.11.2026 war das eines von sechs.
+Die Ratenbegrenzung des Dienstes steht dafür schon vorbelegt (drei Versuche je IP und
+Adresse). Geprüft wird am gerenderten Manifest, dass die Wiederherstellung nicht ohne die
+Mail-Datei eingeschaltet ist (<code>tests/charts/check_matrix_switches.py</code>).</li>
+<li><strong>Sitzungen und Auftritt des Authentication Service</strong>: <code>matrixAuthenticationService.additional</code>
+trägt neben dem Upstream-Anbieter einen Block mit <code>branding</code> (Name des Dienstes sowie Links
+auf Datenschutz und Impressum auf der öffentlich erreichbaren Anmeldeseite) und
+<code>experimental.inactive_session_expiration</code>. Sitzungen laufen sonst nie ab. Die Frist von
+180 Tagen (<code>ttl: 15552000</code>) ist an den vorhandenen Sitzungen gemessen: Am 27.11.2026 waren
+von 27 offenen Sitzungen vier seit mehr als einem Jahr unbenutzt (die älteste seit dem
+10.01.2023), während die längste Pause einer noch genutzten Sitzung 46 Tage betrug. Compat-
+Sitzungen laufen mit ab, weil 26 der 27 Sitzungen Compat-Sitzungen sind und die Einstellung
+ohne sie wirkungslos bliebe. Darunter sind die Token der Bots (<code>alertmanager</code>, <code>uptimebot</code>,
+<code>homeassistant</code>): Ein Bot, der länger als die Frist nichts sendet, verliert sein Token.</li>
 <li><strong>Argo CD</strong>: Zwei Kustomize-Patches in <code>kustomization.yaml</code> halten die App auf <code>Synced</code>. Die
 Helm-Hooks des Charts bekommen <code>argocd.argoproj.io/hook-delete-policy</code>; ohne Löschregel bleiben
 sie nach dem Sync liegen und Argo CD meldet sie dauerhaft als zu entfernen. Der ServiceMonitor
 von Synapse bekommt <code>action: replace</code> ausgeschrieben, den Standardwert, den die CRD sonst
 selbst einträgt.</li>
 </ul>
+
+<h4 class="relative group">Hookshot als Feedleser
+    <div id="hookshot-als-feedleser" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#hookshot-als-feedleser" aria-label="Anker">#</a>
+    </span>
+    
+</h4>
+<p>Hookshot läuft als Appservice im selben Namespace und ist hier nur als Leser von RSS- und
+Atom-Feeds eingeschaltet (<code>feeds.enabled</code>, Abruf alle 600 Sekunden). Was das Chart dabei von
+selbst erledigt:</p>
+<table>
+	<thead>
+			<tr>
+					<th>Was</th>
+					<th>Wie</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>Erreichbarkeit</td>
+					<td>Ohne eigenen <code>ingress.host</code> hängen Webhook- und Widget-Pfad unter <code>/_matrix/hookshot</code> am Ingress von Synapse. Kein neuer Name, kein Zertifikat, keine Freigabe am Gateway</td>
+			</tr>
+			<tr>
+					<td>Anmeldung am Homeserver</td>
+					<td>Die Appservice-Registrierung erzeugt der <code>initSecrets</code>-Job, und Synapse liest sie über <code>app_service_config_files</code>. Das Brücken-Konto <code>@hookshot</code> entsteht beim ersten Start</td>
+			</tr>
+			<tr>
+					<td>Zustandsspeicher</td>
+					<td>Dieselbe Valkey, die das Chart für Element Call betreibt, auf <code>db 1</code>. Sie hält fest, welche Feedeinträge schon gesehen wurden; ohne sie wäre jeder Start ein „initial sync“ und würde alles Ältere überspringen</td>
+			</tr>
+			<tr>
+					<td>Speicher</td>
+					<td>Kein Volume. Das Chart legt ein PVC nur bei <code>enableEncryption: true</code> an</td>
+			</tr>
+	</tbody>
+</table>
+<p>Einen Feed abonniert man aus dem Raum heraus: den Bot <code>@hookshot</code> einladen, ihm die Rechte
+eines Moderators geben und <code>!hookshot feed &lt;URL&gt;</code> schreiben. <code>!hookshot feed list</code> zeigt die
+Abos des Raums. Beim Einrichten erscheint zusätzlich ein Widget im Raum
+(<code>roomSetupWidget.addOnInvite</code> aus den Chart-Vorgaben).</p>
+<p>Bewusst aus bleiben die generischen Webhooks. Sie würden auf dem öffentlichen Namen von
+Synapse einen Endpunkt öffnen, dessen einziger Schutz das Geheimnis in der URL ist;
+nachrüsten wäre <code>generic: {enabled: true}</code> im selben Block. Die Rechte aus den Chart-Vorgaben
+erlauben jedem Konto dieses Servers, Verbindungen zu verwalten.</p>
+
+<h4 class="relative group">Von Hand angelegte Secrets
+    <div id="von-hand-angelegte-secrets" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#von-hand-angelegte-secrets" aria-label="Anker">#</a>
+    </span>
+    
+</h4>
+<p>Vier Secrets liegen nicht im Repository, weil sie Geheimnisse tragen. Argo CD verwaltet sie
+nicht und löscht sie auch nicht; fehlt eines, startet die betroffene Komponente nicht.</p>
+<table>
+	<thead>
+			<tr>
+					<th>Secret</th>
+					<th>Schlüssel</th>
+					<th>Inhalt</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><code>matrix-carryover</code></td>
+					<td><code>SIGNING_KEY</code>, <code>MACAROON</code></td>
+					<td>Föderationsidentität und Token-Signatur der alten Installation</td>
+			</tr>
+			<tr>
+					<td><code>matrix-smtp-config</code></td>
+					<td><code>smtp.yaml</code></td>
+					<td>der <code>email</code>-Block von Synapse samt SMTP-Kennwort</td>
+			</tr>
+			<tr>
+					<td><code>matrix-mas-config</code></td>
+					<td><code>1sso.yaml</code></td>
+					<td>Upstream-Anbieter Authentik und Passwort-Schema des Authentication Service samt Client-Secret</td>
+			</tr>
+			<tr>
+					<td><code>matrix-mas-mail</code></td>
+					<td><code>3mail.yaml</code></td>
+					<td>der <code>email</code>-Block des Authentication Service samt SMTP-Kennwort</td>
+			</tr>
+	</tbody>
+</table>
+<p><code>matrix-mas-mail</code> neu anlegen oder das Kennwort wechseln, ohne dass ein Wert auf dem Terminal
+landet (das Kennwort ist dasselbe, das <code>matrix-smtp-config</code> trägt, also das des Kontos
+<code>matrix</code>):</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln"> 1</span><span class="cl"><span class="nv">T</span><span class="o">=</span><span class="k">$(</span>mktemp -d<span class="k">)</span> <span class="o">&amp;&amp;</span> chmod <span class="m">700</span> <span class="s2">&#34;</span><span class="nv">$T</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="ln"> 2</span><span class="cl"><span class="nb">read</span> -rs <span class="s2">&#34;?SMTP-Kennwort des Kontos matrix: &#34;</span> PW <span class="o">&amp;&amp;</span> <span class="nb">echo</span>
+</span></span><span class="line"><span class="ln"> 3</span><span class="cl">cat &gt; <span class="s2">&#34;</span><span class="nv">$T</span><span class="s2">/3mail.yaml&#34;</span> <span class="s">&lt;&lt;YAML
+</span></span></span><span class="line"><span class="ln"> 4</span><span class="cl"><span class="s">email:
+</span></span></span><span class="line"><span class="ln"> 5</span><span class="cl"><span class="s">  from: &#39;&#34;Matrix kirchner.social&#34; &lt;noreply@kirchner.social&gt;&#39;
+</span></span></span><span class="line"><span class="ln"> 6</span><span class="cl"><span class="s">  reply_to: &#39;&#34;Matrix kirchner.social&#34; &lt;noreply@kirchner.social&gt;&#39;
+</span></span></span><span class="line"><span class="ln"> 7</span><span class="cl"><span class="s">  transport: smtp
+</span></span></span><span class="line"><span class="ln"> 8</span><span class="cl"><span class="s">  mode: starttls
+</span></span></span><span class="line"><span class="ln"> 9</span><span class="cl"><span class="s">  hostname: smtp.zyria.de
+</span></span></span><span class="line"><span class="ln">10</span><span class="cl"><span class="s">  port: 587
+</span></span></span><span class="line"><span class="ln">11</span><span class="cl"><span class="s">  username: matrix@zyria.de
+</span></span></span><span class="line"><span class="ln">12</span><span class="cl"><span class="s">  password: &#34;${PW}&#34;
+</span></span></span><span class="line"><span class="ln">13</span><span class="cl"><span class="s">YAML</span>
+</span></span><span class="line"><span class="ln">14</span><span class="cl"><span class="nb">unset</span> PW
+</span></span><span class="line"><span class="ln">15</span><span class="cl">kubectl -n matrix create secret generic matrix-mas-mail <span class="se">\
+</span></span></span><span class="line"><span class="ln">16</span><span class="cl">  --from-file<span class="o">=</span>3mail.yaml<span class="o">=</span><span class="s2">&#34;</span><span class="nv">$T</span><span class="s2">/3mail.yaml&#34;</span> --dry-run<span class="o">=</span>client -o yaml <span class="se">\
+</span></span></span><span class="line"><span class="ln">17</span><span class="cl">  <span class="p">|</span> kubectl -n matrix apply -f -
+</span></span><span class="line"><span class="ln">18</span><span class="cl">rm -rf <span class="s2">&#34;</span><span class="nv">$T</span><span class="s2">&#34;</span></span></span></code></pre></div></div>
+
+<h4 class="relative group">Element Call
+    <div id="element-call" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#element-call" aria-label="Anker">#</a>
+    </span>
+    
+</h4>
+<p>Die Medien der SFU brauchen zwei öffentliche Ports und gehen nicht über Traefik. Beide
+Dienste hängen deshalb als <code>LoadBalancer</code> an der gemeinsamen Dienstadresse, die das Gateway
+schon nach außen führt; dort kommen nur die zwei Weiterleitungen dazu, TCP 32401 und UDP
+32402, je IPv4 und IPv6. Von außen sind die Medien noch nicht erreichbar, und die Ports sind
+nicht der Grund: Das Gateway protokolliert die Weiterleitung und erlaubt das Paket, über IPv4
+nach dem DNAT und über IPv6 ohne, aber auf dem Node, der die Adresse ankündigt, kommt nichts
+an, während Pakete an einen anderen Dienst auf derselben Adresse dort ankommen und beantwortet
+werden. Aus dem LAN antworten beide Ports. Die Ursache liegt im Gateway und ist offen
+(gemessen am 26. und 27.11.2026). Die Ports sind bei der Suche von den Chart-Standards 30001
+und 30002 weggezogen und bleiben im NodePort-Bereich, weil das Chart <code>nodePort</code> aus <code>port</code>
+ableitet. Die Adressteilung verlangt MetalLB ausdrücklich
+(<code>metallb.io/allow-shared-ip: services-ip</code>), sonst bleibt der zweite Dienst dauerhaft
+<code>pending</code>.</p>
+<p><code>port</code> und <code>targetPort</code> sind absichtlich gleich: LiveKit kündigt den Port an, auf dem es
+lauscht, als den Port, den Clients nehmen sollen. Eine Abbildung würde Clients an einen Port
+schicken, auf dem niemand antwortet. Die öffentliche Adresse ermittelt LiveKit per STUN
+(<code>useStunToDiscoverPublicIP</code>).</p>
+<p>Geprüft wird das am gerenderten Manifest durch <code>tests/charts/check_matrix_rtc.py</code>: Typ,
+Adresse, Adressteilung, Vollständigkeit beider Dienste und die unveränderten Ports.</p>
+<p>Zwei Einstellungen, die der Autorisierungsdienst 0.10.0 mitbringt und das Chart nicht
+schreibt, stehen als <code>matrixRTC.extraEnv</code>:</p>
+<table>
+	<thead>
+			<tr>
+					<th>Variable</th>
+					<th>Standard</th>
+					<th>Hier</th>
+					<th>Grund</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><code>LIVEKIT_REMOTE_CAN_PUBLISH_HOMESERVERS</code></td>
+					<td><code>*</code></td>
+					<td>eigener Servername</td>
+					<td>Sonst darf ein Client jedes föderierten Servers, der einen Raum mit diesem teilt, über diese SFU senden. Die Raummitgliedschaft prüft der Dienst ohnehin (<code>msc4502_enabled</code>), Fremde ohne gemeinsamen Raum kommen also nicht herein, aber Bandbreite und Rechenzeit sind die eigenen. Gäste aus föderierten Räumen können weiter zuhören</td>
+			</tr>
+			<tr>
+					<td><code>LIVEKIT_SANITY_CHECK_INTERVAL_SECONDS</code></td>
+					<td><code>0</code>, aus</td>
+					<td><code>300</code></td>
+					<td>Die SFU meldet Teilnehmerwechsel über den Webhook, den das Chart verdrahtet. Geht eine Meldung verloren, bleibt ein abgestürzter Teilnehmer dauerhaft als Mitglied der Sitzung stehen; die Nachprüfung holt das verzögerte Verlassen nach</td>
+			</tr>
+	</tbody>
+</table>
 
 <h4 class="relative group">Worker
     <div id="worker" class="anchor"></div>
@@ -1579,9 +1792,10 @@ der Synapse-Dokumentation schlechter beschrieben als das Einschalten, deshalb nu
     </span>
     
 </h3>
-<p>Der eingecheckte Stand ist Stufe 1. Die Stufen 2 und 3 sind die syn2mas-Kette des Charts und
-werden im Wartungsfenster des Umstiegs nacheinander gemergt. Die Deployment-Marker des Charts
-schreiben den erreichten Zustand fest und verhindern einen Rückschritt.</p>
+<p>Die Kette ist durchlaufen: Der eingecheckte Stand ist Stufe 3, der Marker in der ConfigMap
+<code>matrix-markers</code> steht auf <code>delegated_auth</code>. Die Tabelle bleibt als Protokoll stehen, denn die
+Deployment-Marker des Charts schreiben den erreichten Zustand fest und verhindern einen
+Rückschritt; ein zweiter Durchlauf ist damit nicht möglich.</p>
 <table>
 	<thead>
 			<tr>
@@ -1900,14 +2114,14 @@ ServiceMonitore für Synapse, PostgreSQL und HAProxy an.</li>
           
             <a
               class="flex text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
-              href="/posts/homelab/k3s-prod/apps/ucg-dns/readme/">
+              href="/posts/homelab/k3s-prod/apps/vpn-site-a/readme/">
               <span class="leading-6">
-                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;UCG DNS
+                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;VPN Standort A - Tailscale Subnet Router
               </span>
             </a>
             
               <span class="ms-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
-                <time datetime="2026-11-26T00:30:00&#43;01:00">26 November 2026</time>
+                <time datetime="2026-11-26T23:37:51&#43;01:00">26 November 2026</time>
               </span>
             
           

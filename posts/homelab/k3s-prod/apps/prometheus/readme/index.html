@@ -105,7 +105,7 @@
 	<meta property="og:type" content="article">
 		<meta property="article:section" content="posts">
 		<meta property="article:published_time" content="2025-10-17T13:23:29+02:00">
-		<meta property="article:modified_time" content="2026-11-14T12:09:08+01:00">
+		<meta property="article:modified_time" content="2026-11-26T12:51:54+01:00">
 		<meta property="article:tag" content="Kubernetes">
 		<meta property="article:tag" content="Prometheus">
 		<meta property="article:tag" content="Monitoring">
@@ -313,12 +313,12 @@ href="/site.webmanifest.min.e231d7c2a5ac29753d1781895bdd4b9a0e5900e75bcee133bb47
     "dateCreated": "2025-10-17T13:23:29\u002b02:00",
     "datePublished": "2025-10-17T13:23:29\u002b02:00",
     
-    "dateModified": "2026-11-14T12:09:08\u002b01:00",
+    "dateModified": "2026-11-26T12:51:54\u002b01:00",
     
     "keywords": ["kubernetes","prometheus","monitoring","alertmanager","grafana"],
     
     "mainEntityOfPage": "https://zyria.de/posts/homelab/k3s-prod/apps/prometheus/readme/",
-    "wordCount": "2984"
+    "wordCount": "3810"
   }]
   </script>
 
@@ -965,7 +965,7 @@ href="/site.webmanifest.min.e231d7c2a5ac29753d1781895bdd4b9a0e5900e75bcee133bb47
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2025-10-17T13:23:29&#43;02:00">17 Oktober 2025</time><span class="px-2 text-primary-500">&middot;</span><time datetime="2026-11-14T12:09:08&#43;01:00">Aktualisiert: 14 November 2026</time><span class="px-2 text-primary-500">&middot;</span><span>2984 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
+      <time datetime="2025-10-17T13:23:29&#43;02:00">17 Oktober 2025</time><span class="px-2 text-primary-500">&middot;</span><time datetime="2026-11-26T12:51:54&#43;01:00">Aktualisiert: 26 November 2026</time><span class="px-2 text-primary-500">&middot;</span><span>3810 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
 
 
   
@@ -1500,21 +1500,31 @@ href="/site.webmanifest.min.e231d7c2a5ac29753d1781895bdd4b9a0e5900e75bcee133bb47
 	<tbody>
 			<tr>
 					<td><code>critical</code></td>
-					<td>Matrix und Mail</td>
+					<td>Matrix und Mail, sofort, mit Entwarnung, Wiederholung nach 12h</td>
 			</tr>
 			<tr>
-					<td><code>warning</code>, <code>info</code></td>
-					<td>Matrix</td>
+					<td><code>warning</code></td>
+					<td>Matrix als Tagesbericht: nur zwischen 07:30 und 08:00 (Europe/Berlin), nur was dann noch offen ist, ohne Entwarnung (Empfänger <code>matrix-report</code>)</td>
+			</tr>
+			<tr>
+					<td><code>info</code></td>
+					<td>nirgends, nur im Status-Dashboard</td>
 			</tr>
 			<tr>
 					<td><code>Watchdog</code>, <code>InfoInhibitor</code></td>
 					<td>nirgends (Empfänger <code>null</code>)</td>
 			</tr>
+			<tr>
+					<td>ohne Schweregrad</td>
+					<td>Matrix, sofort</td>
+			</tr>
 	</tbody>
 </table>
+<p>Warnungen sind nichts, worauf man in dem Moment handeln kann, in dem sie kommen: ausstehende Neustarts, verschlissene Laufwerke, gescheiterte Jobs, Rollouts. Bis zum 26.11.2026 kam jede sofort und mit Entwarnung, rund 15 Nachrichten am Tag allein in zyria (Modell über die 30 Tage davor). Seitdem ist die Route für <code>warning</code> außerhalb des Fensters stumm (<code>active_time_intervals: [morning-report]</code>). Alertmanager vermerkt in dieser Zeit keine Benachrichtigung, deshalb schickt der erste Durchlauf im Fenster jede Gruppe, die noch feuert; was über Nacht kam und ging, erscheint gar nicht. <code>repeat_interval: 23h</code> statt 24h, damit ein spät im Fenster gesendeter Bericht den nächsten nicht hinausschiebt. Mit den Daten der 30 Tage davor wären es im Schnitt 3,3 Warnungen im Bericht gewesen (höchstens 12) und 1,3 kritische Nachrichten am Tag. Was eilt, aber nur <code>warning</code> trägt, sieht man erst morgens; solche Regeln gehören auf <code>critical</code>. Die Suite <code>alertmanager-routes</code> prüft die Zuordnung mit <code>amtool</code>, das Zeitfenster selbst kann <code>amtool</code> nicht auswerten.</p>
+<p>Dienste, deren Ausfall sofort gemeldet werden soll, obwohl ihre Regeln nur <code>warning</code> tragen, bekommen am Namespace das Label <code>alerting.zyria.de/criticality: critical</code>. Dann meldet <code>CriticalServiceDown</code> (<code>cluster-rules.yaml</code>) als <code>critical</code>, sobald 20 Minuten lang kein Replikat eines Deployments oder StatefulSets dort bereit ist. kube-state-metrics exportiert das Label über <code>metricLabelsAllowlist</code> als <code>label_alerting_zyria_de_criticality</code> an <code>kube_namespace_labels</code>. Markiert sind seit 26.11.2026 <code>vpn-site-a</code>, <code>vpn-site-b</code> und <code>vpn-site-c</code>: Ihre Readiness-Probe prüft den Tunnel zum Standort, und ein Ausfall von 03:03 bis 08:24 an diesem Tag ging unter den Warnungen unter. Die Wartezeit folgt aus 38 Ausfällen der VPN-Deployments vom 27.10. bis 26.11.2026: 34 dauerten höchstens 5 Minuten, 2 dauerten 17 und 18 Minuten, 2 über fünf Stunden.</p>
 <p>Prometheus setzt das externe Label <code>cluster</code> (<code>prometheusSpec.externalLabels</code>). Matrix-Nachricht und Mail nennen es vorne, weil mehrere Cluster in denselben Matrix-Raum melden.</p>
 <p><code>Watchdog</code> feuert absichtlich immer und eignet sich als Totmannschalter für eine externe Prüfung. Mail geht über den Mailstack des Clusters, damit kritische Alarme auch ankommen, wenn Matrix selbst gestört ist. Empfänger, Absender und Smarthost stehen unter <code>alertmanager.config</code>. Alertmanager meldet sich mit einem eigenen AD-Konto an, das nur zum Senden dient. Absender und Anmeldename sind gleich, weil Postfix einen abweichenden Absender ablehnt. Das Kennwort liegt im Secret <code>alertmanager-smtp</code>.</p>
-<p>Alertmanager und Prometheus haben keinen Ingress. Die Mails nutzen deshalb eine eigene Vorlage (<code>alertmanager.templateFiles</code>, <code>mail.tmpl</code>). Ihre Links führen zu Grafana, wo die Datenquelle <code>Alertmanager</code> die Alarme anzeigt und stummschalten kann. Die Standardlinks der Mailvorlage auf die clusterinternen Adressen von Alertmanager und Prometheus entfallen damit. Zeiten stehen in UTC. Die Matrix-Nachricht eines feuernden Alarms führt mit denselben zwei Links zu Grafana (<code>matrix-alertmanager-receiver.yaml</code>), damit man aus der Push-Benachrichtigung am Telefon direkt zum Alarm oder zum Stummschalten kommt.</p>
+<p>Alertmanager und Prometheus haben keinen Ingress. Die Mails nutzen deshalb eine eigene Vorlage (<code>alertmanager.templateFiles</code>, <code>mail.tmpl</code>). Ihre Links führen zu Grafana, wo die Datenquelle <code>Alertmanager</code> die Alarme anzeigt und stummschalten kann. Die Standardlinks der Mailvorlage auf die clusterinternen Adressen von Alertmanager und Prometheus entfallen damit. Zeiten stehen in UTC. Die Matrix-Nachricht eines feuernden Alarms führt mit denselben zwei Links zu Grafana (<code>matrix-alertmanager-receiver.yaml</code>), damit man aus der Push-Benachrichtigung am Telefon direkt zum Alarm oder zum Stummschalten kommt. Ihre erste Zeile nennt hinter dem Alarmnamen das betroffene Objekt aus den Labels: Host (<code>instance</code>), Node, Pod und Container, Workload, CronJob und Job, PVC, Laufwerk, Einhängepunkt oder Name (Argo-CD-App, Zertifikat). <code>instance</code> fehlt dort, wo es nur den Exporter (<code>kube-state-metrics</code>) oder die Pod-Adresse der Annotations-Jobs nennt. Ob die Vorlage das richtig rendert, prüft die Suite <code>matrix-template</code> mit dem echten Receiver-Image gegen einen Matrix-Platzhalter.</p>
 
 <h4 class="relative group">Eigene Regeln
     <div id="eigene-regeln" class="anchor"></div>
@@ -1541,7 +1551,7 @@ href="/site.webmanifest.min.e231d7c2a5ac29753d1781895bdd4b9a0e5900e75bcee133bb47
 			</tr>
 			<tr>
 					<td><code>cluster-workloads</code></td>
-					<td>überfällige Longhorn-Backup-Jobs, CronJobs ohne Erfolg seit acht Tagen, OOMKilled, PVC in Pending, schreibgeschützte Dateisysteme, <code>/</code> eines Nodes eine Stunde lang mit 25 bis 30 % frei (Image-GC ohne Wirkung) oder 30 Minuten unter 25 % frei, 5xx-Anteil je Traefik-Dienst, ohne die Wartungsseite, die absichtlich 503 liefert</td>
+					<td>überfällige Longhorn-Backup-Jobs, CronJobs ohne Erfolg seit acht Tagen, fehlgeschlagene Jobs (<code>KubeJobFailed</code>, siehe unten), OOMKilled, PVC in Pending, schreibgeschützte Dateisysteme, <code>/</code> eines Nodes eine Stunde lang mit 25 bis 30 % frei (Image-GC ohne Wirkung) oder 30 Minuten unter 25 % frei, 5xx-Anteil je Traefik-Dienst, ohne die Wartungsseite, die absichtlich 503 liefert</td>
 			</tr>
 			<tr>
 					<td><code>cluster-longhorn</code></td>
@@ -1569,6 +1579,71 @@ href="/site.webmanifest.min.e231d7c2a5ac29753d1781895bdd4b9a0e5900e75bcee133bb47
 			</tr>
 	</tbody>
 </table>
+<p><code>KubeJobFailed</code> aus dem Chart ist abgeschaltet (<code>defaultRules.disabled</code>) und durch eine gleichnamige Regel in <code>cluster-workloads</code> ersetzt. Die Chart-Regel feuerte, solange das fehlgeschlagene Job-Objekt existierte, und <code>failedJobsHistoryLimit</code> hält es auch nach späteren erfolgreichen Läufen; der Alarm wiederholte sich dann tagelang alle 12 Stunden (26.11.2026: fünf offene Alarme in zyria, vier davon zu CronJobs, deren nächster Lauf schon gelungen war). Die eigene Regel ignoriert einen fehlgeschlagenen Job, wenn der CronJob, zu dem er gehört, seit dessen Start einen Erfolg meldet (<code>kube_cronjob_status_last_successful_time</code>). Verglichen wird mit dem CronJob, nicht mit neueren Job-Objekten, weil die erfolgreichen Läufe bei <code>successfulJobsHistoryLimit: 0</code> gar nicht stehen bleiben. Die Regel wartet 20 Minuten (die Chart-Regel 15). So gleicht der nächste Lauf eines CronJobs im Takt von 5 oder 15 Minuten (<code>mailstack-aclsync</code>, in cdp die Shop-Crons) einen einzelnen Fehlschlag aus, ohne dass eine Meldung und ihre Entwarnung kommen; vorher war jeder solche Fehlschlag ein Paar aus firing und resolved. Was der nächste Lauf nicht repariert, meldet sich weiter und endet mit dem ersten erfolgreichen Lauf. Eine gescheiterte Reparatur der Log-Wächter in cdp meldet dadurch erst <code>MSSQLSicherungsjobAbgeschaltet</code> nach zwei Stunden, denn deren nächster Lauf endet mit „nichts zu tun“ erfolgreich (Entscheidung vom 26.11.2026). Jobs ohne CronJob feuern wie bisher, bis der Job gelöscht ist. Dass ein CronJob dauerhaft scheitert, meldet weiterhin <code>CronJobNoSuccess</code>.</p>
+<p>Wartezeiten gegen Pendeln (26.11.2026): Ein Drittel aller Auslösungen vom 27.10. bis 26.11.2026 dauerte unter 15 Minuten, jede kam als firing und resolved. <code>customRules</code> in <code>values.yaml</code> hebt deshalb die Wartezeit von Chart-Regeln, die bei Rollouts und k3s-Neustarts kurz anschlagen. Gemessen über die 30 Tage, Auslösungen vorher und mit der neuen Wartezeit:</p>
+<table>
+	<thead>
+			<tr>
+					<th>Regel</th>
+					<th>vorher</th>
+					<th>neu</th>
+					<th>zyria</th>
+					<th>cdp</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><code>KubePodNotReady</code></td>
+					<td>15m</td>
+					<td>30m</td>
+					<td>14 → 7</td>
+					<td>3 → 0</td>
+			</tr>
+			<tr>
+					<td><code>KubeDeploymentReplicasMismatch</code></td>
+					<td>15m</td>
+					<td>30m</td>
+					<td>10 → 4</td>
+					<td>3 → 0</td>
+			</tr>
+			<tr>
+					<td><code>KubeStatefulSetReplicasMismatch</code></td>
+					<td>15m</td>
+					<td>30m</td>
+					<td>1 → 1</td>
+					<td>0</td>
+			</tr>
+			<tr>
+					<td><code>KubePodCrashLooping</code></td>
+					<td>15m</td>
+					<td>30m</td>
+					<td>8 → 4</td>
+					<td>4 → 0</td>
+			</tr>
+			<tr>
+					<td><code>KubeDeploymentRolloutStuck</code></td>
+					<td>15m</td>
+					<td>30m</td>
+					<td>5 → 2</td>
+					<td>0</td>
+			</tr>
+			<tr>
+					<td><code>TargetDown</code></td>
+					<td>10m</td>
+					<td>15m</td>
+					<td>10 → 5</td>
+					<td>7 → 7 (eigene Regel)</td>
+			</tr>
+			<tr>
+					<td><code>KubeAggregatedAPIDown</code></td>
+					<td>5m</td>
+					<td>15m</td>
+					<td>4 → 1</td>
+					<td>0</td>
+			</tr>
+	</tbody>
+</table>
+<p>Was bleibt, waren Ausfälle von einer Stunde und mehr. Die Regeln in <code>host-rules.yaml</code>, <code>proxmox-rules.yaml</code> und <code>samba-rules.yaml</code> tragen <code>keep_firing_for: 1h</code>: Liefert ein Host kurz keine Daten (Neustart, Netzumzug), löste sich ein Dauerbefund auf und feuerte nach seiner Wartezeit neu, die verschlissene NVMe von abe so fünfmal vom 14. bis 26.11.2026. Die längste Datenlücke eines Hosts in den 30 Tagen waren 38 Minuten (24.11.2026). Eine echte Entwarnung kommt dadurch eine Stunde später.</p>
 <p>Regeln, die nur eine App betreffen, liegen in deren Verzeichnis, etwa <code>apps/ansible-semaphore/prometheus-rules.yaml</code> (gescheiterte und lange laufende Semaphore-Tasks) und <code>apps/mailstack/prometheus-rules.yaml</code> (rspamd, Postfix-Queue und Dovecot, Liste in der README des Mailstacks).</p>
 <p>Kritisch, also zusätzlich per Mail, sind nur <code>NodeFilesystemReadOnly</code>, <code>LonghornVolumeFaulted</code>, <code>RspamdDown</code>, <code>RspamdNoMailScanned</code>, <code>HostRebootOverdue</code>, <code>HostFilesystemFull</code>, <code>HostDriveFailed</code>, <code>HostDriveNvmeCritical</code>, <code>ProxmoxZfsPoolFull</code>, <code>SambaDomainBackupOverdue</code> und <code>MatrixZustellungGescheitert</code>. Abfragen über lange Zeiträume enthalten einen <code>offset</code>-Teil, der sie stumm hält, bis genug Verlauf vorliegt. Vor einer Änderung lassen sich die Regeln mit <code>promtool check rules</code> prüfen, nachdem die <code>groups</code> aus den PrometheusRule-Objekten in eine eigene Datei übernommen wurden.</p>
 
@@ -1583,7 +1658,7 @@ href="/site.webmanifest.min.e231d7c2a5ac29753d1781895bdd4b9a0e5900e75bcee133bb47
 </h3>
 <p>Grafana ist über einen Ingress mit Zertifikat aus <code>certs.yaml</code> erreichbar, die DNS-Einträge legt der corenetworks-dns-operator aus <code>dns-records.yaml</code> an. Angemeldet wird über Authentik (OAuth2/OIDC). Mitglieder der Gruppe <code>authentik Admins</code> werden Admin, alle anderen Viewer. Der lokale Admin aus dem Secret <code>grafana-admin</code> bleibt als Zugang, falls Authentik ausfällt. Ohne Authentik ist er über <code>/login?disableAutoLogin=true</code> erreichbar.</p>
 <p>In Authentik wird dafür ein OAuth2/OpenID-Provider mit Application-Slug <code>grafana</code> angelegt. Redirect-URI ist <code>https://&lt;grafana-host&gt;/login/generic_oauth</code>. Der Provider muss den Claim <code>groups</code> liefern.</p>
-<p>Fällt die Zustellung nach Matrix aus, meldet der Receiver Alertmanager trotzdem Erfolg; <code>alertmanager_notifications_failed_total</code> zeigt das nicht. Die Regel <code>MatrixZustellungGescheitert</code> in <code>matrix-receiver-rules.yaml</code> wertet deshalb die Zähler des Receivers aus (gescheiterter Raumbeitritt, Senden oder Vorlage, oder Alarme empfangen ohne erfolgreiche Nachricht) und meldet mit Schweregrad <code>critical</code>.</p>
+<p>Fällt die Zustellung nach Matrix aus, meldet der Receiver Alertmanager trotzdem Erfolg; <code>alertmanager_notifications_failed_total</code> zeigt das nicht. Die Regel <code>MatrixZustellungGescheitert</code> in <code>matrix-receiver-rules.yaml</code> wertet deshalb die Zähler des Receivers aus (gescheiterter Raumbeitritt, Senden oder Vorlage, oder Alarme empfangen ohne erfolgreiche Nachricht) und meldet mit Schweregrad <code>critical</code>. Sie wartet 5 Minuten (<code>for: 5m</code>). Gemessen vom 25.10. bis 26.11.2026 in zyria, cdp und hfmdk: 20 Auslösungen, davon 14 genau eine Minute lang (ein Alarm schon gezählt, die Erfolgsmeldung erst eine Auswertung später, oder ein neuer Receiver-Pod), die übrigen 6 zwischen 14 und 40 Minuten. Ohne Wartezeit ging jeder dieser Ausschläge als kritische Mail hinaus; mit ihr bleiben alle echten Ausfälle sichtbar. Ein ganzes Jahr ließ sich nicht messen, Prometheus hält 30 Tage.</p>
 <p>Die Datenquellen heißen <code>Prometheus</code> und <code>Alertmanager</code>. Links in die Alarmansicht von Grafana geben die Alertmanager-Datenquelle mit ihrem Namen an (<code>/alerting/groups?alertmanager=Alertmanager</code>). Mit der UID <code>alertmanager</code> zeigt Grafana stattdessen seinen eigenen, leeren Alertmanager an.</p>
 
 <h4 class="relative group">Dashboards, Ordner und Navigation

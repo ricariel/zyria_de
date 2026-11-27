@@ -105,7 +105,7 @@
 	<meta property="og:type" content="article">
 		<meta property="article:section" content="posts">
 		<meta property="article:published_time" content="2026-11-26T00:30:00+01:00">
-		<meta property="article:modified_time" content="2026-11-26T01:24:56+01:00">
+		<meta property="article:modified_time" content="2026-11-26T23:28:01+01:00">
 		<meta property="article:tag" content="Unifi">
 		<meta property="article:tag" content="Dns">
 		<meta property="article:tag" content="Cronjob">
@@ -311,12 +311,12 @@ href="/site.webmanifest.min.e231d7c2a5ac29753d1781895bdd4b9a0e5900e75bcee133bb47
     "dateCreated": "2026-11-26T00:30:00\u002b01:00",
     "datePublished": "2026-11-26T00:30:00\u002b01:00",
     
-    "dateModified": "2026-11-26T01:24:56\u002b01:00",
+    "dateModified": "2026-11-26T23:28:01\u002b01:00",
     
     "keywords": ["unifi","dns","cronjob"],
     
     "mainEntityOfPage": "https://zyria.de/posts/homelab/k3s-prod/apps/ucg-dns/readme/",
-    "wordCount": "660"
+    "wordCount": "742"
   }]
   </script>
 
@@ -961,7 +961,7 @@ href="/site.webmanifest.min.e231d7c2a5ac29753d1781895bdd4b9a0e5900e75bcee133bb47
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2026-11-26T00:30:00&#43;01:00">26 November 2026</time><span class="px-2 text-primary-500">&middot;</span><span>660 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
+      <time datetime="2026-11-26T00:30:00&#43;01:00">26 November 2026</time><span class="px-2 text-primary-500">&middot;</span><span>742 Wörter</span><span class="px-2 text-primary-500">&middot;</span>
 
 
   
@@ -1374,17 +1374,26 @@ Datei.</p>
 einer größeren Änderung an <code>policies.yaml</code> empfiehlt sich derselbe Weg wie
 damals: anhalten, einen Job von Hand mit <code>DRY_RUN=1</code> erzeugen, das Ergebnis
 ansehen, dann wieder scharf schalten.</p>
-<p><strong><code>suspend: true</code> verhindert keinen Lauf von Hand.</strong> Ein Job, der aus dem
-CronJob erzeugt wird, etwa über die Aktion „Create Job&quot; in Argo CD oder mit
-<code>kubectl create job --from=cronjob/ucg-dns</code>, läuft trotzdem, und er läuft den
-normalen Weg, also ohne <code>DRY_RUN</code> und damit schreibend. Beim Scharfschalten
-dieser App stand der Bestand am Gateway schon richtig, weil genau das um 00:43
-passiert ist, ohne dass sich der Urheber feststellen ließ (pyrox/ops#67). Wer
-einen Lauf nur ansehen will, setzt <code>DRY_RUN=1</code> in die Umgebung des erzeugten
-Jobs.</p>
-<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl">kubectl --kubeconfig ~/.kube/prod.zyria.de create job --from<span class="o">=</span>cronjob/ucg-dns <span class="se">\
-</span></span></span><span class="line"><span class="ln">2</span><span class="cl">  ucg-dns-dryrun -n ucg-dns --dry-run<span class="o">=</span>client -o yaml &gt; /tmp/job.yaml
-</span></span><span class="line"><span class="ln">3</span><span class="cl"><span class="c1"># DRY_RUN=1 in die Umgebung des Containers eintragen, dann anwenden</span></span></span></code></pre></div></div>
+<p><strong><code>suspend: true</code> ist keine Sicherung.</strong> Reloader läuft in diesem Cluster im
+Auto-Modus und erzeugt aus diesem CronJob sofort einen Job, sobald eine seiner
+ConfigMaps sich ändert, auch wenn er angehalten ist. Das ist so gewollt: Die
+Datei trägt den Soll-Zustand, ein Merge soll ihn anwenden und nicht bis zur
+nächsten Stunde warten, und der Lauf legt nur an und korrigiert. Belegt am
+26.11.2026, zweimal: um 00:43 nach einer Änderung am Skript und um 01:47 nach
+einer an <code>policies.json</code>, beide Male im Protokoll von Reloader als „Changes
+detected in &hellip; updated &lsquo;ucg-dns&rsquo; of type &lsquo;CronJob&rsquo;&quot;.</p>
+<p>Wer vor dem Schreiben sehen will, was entstehen würde, fährt deshalb den
+Trockenlauf <strong>vor dem Merge</strong> aus dem Branch, nicht nach dem Merge aus dem
+angehaltenen CronJob:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="ln">1</span><span class="cl"><span class="nv">DRY_RUN</span><span class="o">=</span><span class="m">1</span> <span class="nv">UCG_ADDRESS</span><span class="o">=</span>&lt;Adresse&gt; <span class="nv">UCG_HOSTNAME</span><span class="o">=</span>ucg.zyria.de <span class="se">\
+</span></span></span><span class="line"><span class="ln">2</span><span class="cl">  <span class="nv">API_KEY_FILE</span><span class="o">=</span>&lt;Datei mit dem Schlüssel&gt; <span class="se">\
+</span></span></span><span class="line"><span class="ln">3</span><span class="cl">  <span class="nv">POLICIES_FILE</span><span class="o">=</span>apps/ucg-dns/policies.json python3 -I apps/ucg-dns/sync_dns_policies.py</span></span></code></pre></div></div>
+<p>Eine Bedingung hängt daran: Solange <code>DELETE_EXTRA</code> auf <code>false</code> steht, kann ein
+unerwarteter Lauf nur anlegen und korrigieren, und das ist harmlos. Wird es je
+eingeschaltet, könnte ein Merge am Gateway löschen, bevor jemand hinsieht. Dann
+gehört <code>reloader.stakater.com/ignore: &quot;true&quot;</code> an beide ConfigMaps und
+<code>reloader.stakater.com/auto: &quot;false&quot;</code> an den CronJob, wie es die Anweisungen
+für Jobs mit Nebenwirkungen vorsehen.</p>
 
 <h3 class="relative group">Verhalten des Jobs
     <div id="verhalten-des-jobs" class="anchor"></div>
@@ -1720,14 +1729,14 @@ der LAN-Adresse des Gateways (NetworkPolicy lässt nur diese zu).</p>
           
             <a
               class="flex text-right text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
-              href="/posts/homelab/k3s-prod/apps/matrix/readme/">
+              href="/posts/homelab/k3s-prod/apps/ucg-cert/readme/">
               <span class="leading-6">
-                Matrix&ensp;<span class="inline-block rtl:rotate-180">&rarr;</span>
+                UCG-Zertifikat&ensp;<span class="inline-block rtl:rotate-180">&rarr;</span>
               </span>
             </a>
             
               <span class="me-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
-                <time datetime="2026-11-26T00:56:09&#43;01:00">26 November 2026</time>
+                <time datetime="2026-11-26T09:24:19&#43;01:00">26 November 2026</time>
               </span>
             
           
